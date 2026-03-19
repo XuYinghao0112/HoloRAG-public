@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual env / local env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Outputs / cache
+outputs/
+.cache/
+tmp/
+temp/
+
+# Model directories
+hf_models/
+models/
+checkpoints/
+weights/
+
+# Large datasets / private data
+data/
+private/
+secret/
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+*.env
+.env.*
+
+# OS files
+.DS_Store
+
+# If reproduce/dataset contains private or huge files, ignore selectively
+# reproduce/dataset/*.jsonl
+# reproduce/dataset/*.pkl
+
+# Keep bin scripts tracked
+!bin/
+!bin/*.sh
+
+# Project-specific ignores
+reproduce/test_outputs/
+reproduce/cache/
+reproduce/tmp/
+
+# If these are generated
+*.pkl
+*.pt
+*.bin
+*.safetensors
+
+# Optional: ignore large jsonl datasets
+# reproduce/dataset/*.jsonl
