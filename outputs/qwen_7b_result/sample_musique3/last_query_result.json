@@ -1,0 +1,981 @@
+{
+  "query": "How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?",
+  "alpha": {
+    "entity": 0.1,
+    "sentence": 0.4,
+    "chunk": 0.5
+  },
+  "query_entities": [
+    "Iran",
+    "Iraq War",
+    "Iranian Khuzestan"
+  ],
+  "raw_query_entities": [
+    "Iran",
+    "Iraq War",
+    "Ivan Koumaev"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Iran",
+      "node_id": "entity:iran",
+      "resolved_text": "Iran",
+      "score": 0.7716000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.52,
+      "compatibility_score": 0.75,
+      "score_margin": 0.0484,
+      "confident": true
+    },
+    {
+      "mention": "Iraq War",
+      "node_id": "entity:iraq_war",
+      "resolved_text": "Iraq War",
+      "score": 0.7216,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.52,
+      "compatibility_score": 0.5,
+      "score_margin": 0.15000000000000002,
+      "confident": true
+    },
+    {
+      "mention": "Ivan Koumaev",
+      "node_id": "entity:iranian_khuzestan",
+      "resolved_text": "Iranian Khuzestan",
+      "score": 0.7216,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.52,
+      "compatibility_score": 0.5,
+      "score_margin": 0.3436,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who mediated the truce ending the Iran-Iraq War?",
+    "In which continent was Ivan Koumaev born?",
+    "How many states are there in that continent?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:iraq_war",
+      "score": 0.8021224484773402,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:iran",
+      "score": 0.8021159305878846,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:iranian_khuzestan",
+      "score": 0.8021094327144075,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_khabarovsk",
+      "score": 0.415424958530905,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:khabarovsk_russia",
+      "score": 0.3833385316905735,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:koumaev",
+      "score": 0.2686049534226508,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ekbatan_area",
+      "score": 0.2679228135326207,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:west_asia",
+      "score": 0.25951085468087887,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+      "score": 0.2421558966319314,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:mesopotamia",
+      "score": 0.24007066138432961,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ekbatan_area_of_tehran_iran",
+      "score": 0.22537385265910376,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_shahid_dastgerdi_stadium",
+      "score": 0.22536099624064007,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:koumaev_was_born_in_khabarovsk_russia_sentence_ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_",
+      "text": "Koumaev was born in Khabarovsk Russia",
+      "head_id": "entity:koumaev",
+      "tail_id": "entity:khabarovsk_russia",
+      "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+      "chunk_id": "chunk:ivan_koumaev_0",
+      "document_index": 6,
+      "score": 0.26650922139917044
+    },
+    {
+      "fact_id": "fact:mesopotamia_is_located_in_west_asia_sentence_mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_wi",
+      "text": "Mesopotamia is located in West Asia",
+      "head_id": "entity:title_anchor_mesopotamia",
+      "tail_id": "entity:west_asia",
+      "sentence_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+      "chunk_id": "chunk:mesopotamia_0",
+      "document_index": 17,
+      "score": 0.25741835566385796
+    },
+    {
+      "fact_id": "fact:shahid_dastgerdi_stadium_located_in_ekbatan_area_of_tehran_iran_sentence_shahid_dastgerdi_stadium_0_0_the_shahid_dastger",
+      "text": "Shahid Dastgerdi Stadium located in Ekbatan area of Tehran Iran",
+      "head_id": "entity:title_anchor_shahid_dastgerdi_stadium",
+      "tail_id": "entity:ekbatan_area_of_tehran_iran",
+      "sentence_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
+      "chunk_id": "chunk:shahid_dastgerdi_stadium_0",
+      "document_index": 13,
+      "score": 0.22326901127718393
+    },
+    {
+      "fact_id": "fact:mesopotamia_corresponds_to_most_of_iraq_plus_kuwait_the_eastern_parts_of_syria_southeastern_turkey_and_regions_along_the",
+      "text": "Mesopotamia corresponds to most of Iraq plus Kuwait the eastern parts of Syria Southeastern Turkey and regions along the Turkish Syrian and Iran Iraq borders",
+      "head_id": "entity:title_anchor_mesopotamia",
+      "tail_id": "entity:most_of_iraq_plus_kuwait_the_eastern_parts_of_syria_southeastern_turkey_and_regions_along_the_turkish_syrian_and_iran_ir",
+      "sentence_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+      "chunk_id": "chunk:mesopotamia_0",
+      "document_index": 17,
+      "score": 0.2205734021111702
+    },
+    {
+      "fact_id": "fact:mesopotamia_situated_within_tigris_euphrates_river_system_sentence_mesopotamia_0_0_mesopotamia_is_a_historical_region_in",
+      "text": "Mesopotamia situated within Tigris Euphrates river system",
+      "head_id": "entity:title_anchor_mesopotamia",
+      "tail_id": "entity:tigris_euphrates_river_system",
+      "sentence_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+      "chunk_id": "chunk:mesopotamia_0",
+      "document_index": 17,
+      "score": 0.1221848956857959
+    },
+    {
+      "fact_id": "fact:khabarovsk_novy_airport_has_international_flights_to_central_asia_sentence_khabarovsk_0_0_khabarovsk_is_served_by_the_kh",
+      "text": "Khabarovsk Novy Airport has international flights to Central Asia",
+      "head_id": "entity:khabarovsk_novy_airport",
+      "tail_id": "entity:central_asia",
+      "sentence_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
+      "chunk_id": "chunk:khabarovsk_0",
+      "document_index": 9,
+      "score": 0.11248693276694172
+    },
+    {
+      "fact_id": "fact:khabarovsk_is_served_by_khabarovsk_novy_airport_sentence_khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airp",
+      "text": "Khabarovsk is served by Khabarovsk Novy Airport",
+      "head_id": "entity:title_anchor_khabarovsk",
+      "tail_id": "entity:khabarovsk_novy_airport",
+      "sentence_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
+      "chunk_id": "chunk:khabarovsk_0",
+      "document_index": 9,
+      "score": 0.09561389285190046
+    },
+    {
+      "fact_id": "fact:khabarovsk_novy_airport_has_international_flights_to_european_russia_sentence_khabarovsk_0_0_khabarovsk_is_served_by_the",
+      "text": "Khabarovsk Novy Airport has international flights to European Russia",
+      "head_id": "entity:khabarovsk_novy_airport",
+      "tail_id": "entity:european_russia",
+      "sentence_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
+      "chunk_id": "chunk:khabarovsk_0",
+      "document_index": 9,
+      "score": 0.07252646084462791
+    }
+  ],
+  "bridge_entities": [
+    "Iraq",
+    "Mesopotamia",
+    "Kuwait",
+    "Syria",
+    "Turkey",
+    "West Asia"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who mediated the truce ending the Iran-Iraq War?",
+      "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+      "sentence": "It was named after a casualty of the Iran–Iraq War.",
+      "score": 0.551
+    },
+    {
+      "sub_question": "In which continent was Ivan Koumaev born?",
+      "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+      "sentence": "It was named after a casualty of the Iran–Iraq War.",
+      "score": 0.5748333333333333
+    },
+    {
+      "sub_question": "How many states are there in that continent?",
+      "sentence_id": "sentence:united_states_support_for_iraq_during_the_iran_iraq_war_0_0_united_states_support_for_ba_athist_iraq_during_the_iran_ira",
+      "sentence": "United States support for Ba'athist Iraq during the Iran -- Iraq War, against post-revolutionary Iran, included several billion dollars' worth of economic aid, the sale of dual - use technology, non-U.S. origin weaponry, military intelligence, and special operations training.",
+      "score": 0.5700714285714286
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+      "score": 0.05631044809368728,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
+      "score": 0.046958554652172094,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+      "score": 0.036460252908642216,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
+      "score": 0.035868108289377636,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:iran",
+      "score": 0.03550408851428251,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mesopotamia",
+      "score": 0.0280120473218014,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:iraq_war",
+      "score": 0.026155280573429144,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:khabarovsk_novy_airport",
+      "score": 0.025068137183589252,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:iranian_khuzestan",
+      "score": 0.024091146701158143,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
+      "score": 0.02210713927750558,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:khabarovsk_russia",
+      "score": 0.021984053588146167,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:koumaev",
+      "score": 0.021412660108257722,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ancient_near_east_0_0_the_ancient_near_east_was_the_home_of_early_civilizations_within_a_region_roughl",
+      "score": 0.021233981906294146,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_khabarovsk",
+      "score": 0.019972976641857876,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_shahid_dastgerdi_stadium",
+      "score": 0.01904558894570847,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ekbatan_area_of_tehran_iran",
+      "score": 0.01634727429038396,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:west_asia",
+      "score": 0.014376022742974505,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:united_states_support_for_iraq_during_the_iran_iraq_war_0_0_united_states_support_for_ba_athist_iraq_during_the_iran_ira",
+      "score": 0.013492259037337495,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ekbatan_area",
+      "score": 0.013103081806979737,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ivan_koumaev_0_1_he_started_dancing_at_age_11_training_under_kimera_lewis_after_watching_the_fil",
+      "score": 0.01301085668991427,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:ivan_koumaev_0",
+      "passage_index": 6,
+      "title": "Ivan Koumaev",
+      "score": 0.08273039806498933,
+      "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
+      "score_breakdown": {
+        "dense": 0.05045413437773146,
+        "graph": 0.05189324387297572,
+        "fact": 0.2627510066356288
+      }
+    },
+    {
+      "node_id": "chunk:mesopotamia_0",
+      "passage_index": 17,
+      "title": "Mesopotamia",
+      "score": 0.08224620242717112,
+      "text": "Mesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
+      "score_breakdown": {
+        "dense": 0.04997251229021588,
+        "graph": 0.05235113702741077,
+        "fact": 0.2603731970621944
+      }
+    },
+    {
+      "node_id": "chunk:shahid_dastgerdi_stadium_0",
+      "passage_index": 13,
+      "title": "Shahid Dastgerdi Stadium",
+      "score": 0.08091158770106208,
+      "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
+      "score_breakdown": {
+        "dense": 0.049868229255662956,
+        "graph": 0.052464340238680546,
+        "fact": 0.25163173025895524
+      }
+    },
+    {
+      "node_id": "chunk:khabarovsk_0",
+      "passage_index": 9,
+      "title": "Khabarovsk",
+      "score": 0.07677657925189858,
+      "text": "Khabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
+      "score_breakdown": {
+        "dense": 0.049908966146723126,
+        "graph": 0.05180012654905881,
+        "fact": 0.22524406604322145
+      }
+    },
+    {
+      "node_id": "chunk:iran_0",
+      "passage_index": 12,
+      "title": "Iran",
+      "score": 0.04318442809681095,
+      "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
+      "score_breakdown": {
+        "dense": 0.050380911417905475,
+        "graph": 0.05158308938987647,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:history_of_the_united_states_navy_0",
+      "passage_index": 3,
+      "title": "History of the United States Navy",
+      "score": 0.04264234221587651,
+      "text": "History of the United States Navy\nIn March 2007, the U.S. Navy reached its smallest fleet size, with 274 ships, since World War I. Since the end of the Cold War, the Navy has shifted its focus from preparations for large - scale war with the Soviet Union to special operations and strike missions in regional conflicts. The Navy participated in the Iraq War and is a major participant in the ongoing War on Terror, largely in this capacity. Development continues on new ships and weapons, including the Gerald R. Ford - class aircraft carrier and the Littoral combat ship. One hundred and three U.S. Navy personnel died in the Iraq War. U.S. Navy warships launched cruise missiles into military targets in Libya during Operation Odyssey Dawn to enforce a UN resolution.",
+      "score_breakdown": {
+        "dense": 0.049924826879052274,
+        "graph": 0.050612291441325875,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ancient_near_east_0",
+      "passage_index": 7,
+      "title": "Ancient Near East",
+      "score": 0.04257852957148303,
+      "text": "Ancient Near East\nThe ancient Near East was the home of early civilizations within a region roughly corresponding to the modern Middle East: Mesopotamia (modern Iraq, southeast Turkey, southwest Iran, northeastern Syria and Kuwait), ancient Egypt, ancient Iran (Elam, Media, Parthia and Persia), Anatolia / Asia Minor and Armenian Highlands (Turkey's Eastern Anatolia Region, Armenia, northwestern Iran, southern Georgia, and western Azerbaijan), the Levant (modern Syria, Lebanon, Palestine, Israel, and Jordan), Cyprus and the Arabian Peninsula. The ancient Near East is studied in the fields of Near Eastern archaeology and ancient history.",
+      "score_breakdown": {
+        "dense": 0.050021749364753794,
+        "graph": 0.05022189140289482,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:near_east_0",
+      "passage_index": 1,
+      "title": "Near East",
+      "score": 0.042488206572492436,
+      "text": "Near East\nThe term middle east as a noun and adjective was common in the 19th century in nearly every context except diplomacy and archaeology. An uncountable number of places appear to have had their middle easts from gardens to regions, including the United States. The innovation of the term \"Near East\" to mean the holdings of the Ottoman Empire as early as the Crimean War had left a geographical gap. The East Indies, or \"Far East,\" derived ultimately from Ptolemy's \"India Beyond the Ganges.\" The Ottoman Empire ended at the eastern border of Iraq. \"India This Side of the Ganges\" and Iran had been omitted. The archaeologists counted Iran as \"the Near East\" because Old Persian cuneiform had been found there. This usage did not sit well with the diplomats; India was left in an equivocal state. They needed a regional term.",
+      "score_breakdown": {
+        "dense": 0.049979678404910986,
+        "graph": 0.049997944832637975,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:united_states_support_for_iraq_during_the_iran_iraq_war_0",
+      "passage_index": 5,
+      "title": "United States support for Iraq during the Iran–Iraq War",
+      "score": 0.04246926259957697,
+      "text": "United States support for Iraq during the Iran–Iraq War\nUnited States support for Ba'athist Iraq during the Iran -- Iraq War, against post-revolutionary Iran, included several billion dollars' worth of economic aid, the sale of dual - use technology, non-U.S. origin weaponry, military intelligence, and special operations training. At no point, however, did the U.S. directly supply arms to Iraq. Of particular interest for contemporary Iran -- United States relations are the repeated accusations that the U.S. government actively encouraged Iraqi leader Saddam Hussein to invade Iran (proponents of this theory frequently describe the U.S. as having given Saddam a ``green light ''), supported by a considerable amount of circumstantial evidence, but the U.S. government officially denies that any such collusion occurred, and no conclusive proof of it has been found by scholars that have studied the issue.",
+      "score_breakdown": {
+        "dense": 0.04996292944354961,
+        "graph": 0.04996550468541561,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:masoud_barzani_0",
+      "passage_index": 0,
+      "title": "Masoud Barzani",
+      "score": 0.04230124855031335,
+      "text": "Masoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.",
+      "score_breakdown": {
+        "dense": 0.04999899932243371,
+        "graph": 0.04933932974324938,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:iran",
+        "score": 0.03550408851428251,
+        "text": "Iran",
+        "metadata": {
+          "canonical_name": "Iran",
+          "aliases": [
+            "Iran"
+          ],
+          "surface_forms": [
+            "Iran"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:mesopotamia_0_0_mesopotamia_is_a_historical_region_in_west_asia_situated_within_the_tigris_eu",
+        "score": 0.05631044809368728,
+        "text": "Mesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
+        "metadata": {
+          "title": "Mesopotamia",
+          "chunk_id": "chunk:mesopotamia_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Mesopotamia",
+              "relation": "is located in",
+              "tail": "West Asia"
+            },
+            {
+              "head": "Mesopotamia",
+              "relation": "situated within",
+              "tail": "Tigris Euphrates river system"
+            },
+            {
+              "head": "Mesopotamia",
+              "relation": "corresponds to",
+              "tail": "most of Iraq plus Kuwait the eastern parts of Syria Southeastern Turkey and regions along the Turkish Syrian and Iran Iraq borders"
+            }
+          ],
+          "entities": [
+            "Mesopotamia",
+            "West Asia",
+            "Tigris Euphrates river system",
+            "Iraq",
+            "Kuwait",
+            "Syria",
+            "Southeastern Turkey",
+            "Iran",
+            "Turkey",
+            "Syrian"
+          ],
+          "entity_ids": [
+            "entity:iran",
+            "entity:iraq",
+            "entity:kuwait",
+            "entity:most_of_iraq_plus_kuwait_the_eastern_parts_of_syria_southeastern_turkey_and_regions_along_the_turkish_syrian_and_iran_ir",
+            "entity:southeastern_turkey",
+            "entity:syria",
+            "entity:syrian",
+            "entity:tigris_euphrates_river_system",
+            "entity:title_anchor_mesopotamia",
+            "entity:turkey",
+            "entity:west_asia"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
+        "score": 0.046958554652172094,
+        "text": "Khabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
+        "metadata": {
+          "title": "Khabarovsk",
+          "chunk_id": "chunk:khabarovsk_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Khabarovsk",
+              "relation": "is served by",
+              "tail": "Khabarovsk Novy Airport"
+            },
+            {
+              "head": "Khabarovsk Novy Airport",
+              "relation": "has international flights to",
+              "tail": "East Asia"
+            },
+            {
+              "head": "Khabarovsk Novy Airport",
+              "relation": "has international flights to",
+              "tail": "Southeast Asia"
+            },
+            {
+              "head": "Khabarovsk Novy Airport",
+              "relation": "has international flights to",
+              "tail": "European Russia"
+            },
+            {
+              "head": "Khabarovsk Novy Airport",
+              "relation": "has international flights to",
+              "tail": "Central Asia"
+            }
+          ],
+          "entities": [
+            "Khabarovsk",
+            "Khabarovsk Novy Airport",
+            "East Asia",
+            "Southeast Asia",
+            "European Russia",
+            "Central Asia"
+          ],
+          "entity_ids": [
+            "entity:central_asia",
+            "entity:east_asia",
+            "entity:european_russia",
+            "entity:khabarovsk_novy_airport",
+            "entity:southeast_asia",
+            "entity:title_anchor_khabarovsk"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+        "score": 0.036460252908642216,
+        "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
+        "metadata": {
+          "title": "Ivan Koumaev",
+          "chunk_id": "chunk:ivan_koumaev_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Koumaev",
+              "relation": "was born in",
+              "tail": "Khabarovsk Russia"
+            },
+            {
+              "head": "Koumaev",
+              "relation": "moved to",
+              "tail": "Mill Creek Washington"
+            }
+          ],
+          "entities": [
+            "Koumaev",
+            "Khabarovsk Russia",
+            "Mill Creek Washington"
+          ],
+          "entity_ids": [
+            "entity:khabarovsk_russia",
+            "entity:koumaev",
+            "entity:mill_creek_washington"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
+        "score": 0.035868108289377636,
+        "text": "The Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran.",
+        "metadata": {
+          "title": "Shahid Dastgerdi Stadium",
+          "chunk_id": "chunk:shahid_dastgerdi_stadium_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Shahid Dastgerdi Stadium",
+              "relation": "also known as",
+              "tail": "PAS Tehran Stadium"
+            },
+            {
+              "head": "Shahid Dastgerdi Stadium",
+              "relation": "located in",
+              "tail": "Ekbatan area of Tehran Iran"
+            }
+          ],
+          "entities": [
+            "Shahid Dastgerdi Stadium",
+            "PAS Tehran Stadium",
+            "Ekbatan area",
+            "Tehran",
+            "Iran"
+          ],
+          "entity_ids": [
+            "entity:ekbatan_area",
+            "entity:ekbatan_area_of_tehran_iran",
+            "entity:iran",
+            "entity:pas_tehran_stadium",
+            "entity:tehran",
+            "entity:title_anchor_shahid_dastgerdi_stadium"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
+        "score": 0.02210713927750558,
+        "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
+        "metadata": {
+          "title": "Iran",
+          "chunk_id": "chunk:iran_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Iraq army",
+              "relation": "invaded",
+              "tail": "Iranian Khuzestan"
+            }
+          ],
+          "entities": [
+            "Iraqi army",
+            "Iranian Khuzestan",
+            "Iran Iraq War",
+            "September 22 1980"
+          ],
+          "entity_ids": [
+            "entity:iran_iraq_war",
+            "entity:iranian_khuzestan",
+            "entity:iraq_army",
+            "entity:iraqi_army",
+            "entity:september_22_1980"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:shahid_dastgerdi_stadium_0",
+        "score": 0.011056511978318412,
+        "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
+        "metadata": {
+          "title": "Shahid Dastgerdi Stadium",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:ekbatan_area",
+            "entity:ekbatan_area_of_tehran_iran",
+            "entity:iran",
+            "entity:iran_iraq_war",
+            "entity:iran_national_under_20_football_team",
+            "entity:iraq_war",
+            "entity:pas_tehran_f_c",
+            "entity:pas_tehran_stadium",
+            "entity:tehran",
+            "entity:title_anchor_shahid_dastgerdi_stadium"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ivan_koumaev_0",
+        "score": 0.009672729485120185,
+        "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
+        "metadata": {
+          "title": "Ivan Koumaev",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:breakin",
+            "entity:khabarovsk_russia",
+            "entity:kimera_lewis",
+            "entity:koumaev",
+            "entity:mill_creek_washington"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mesopotamia_0",
+        "score": 0.008541479727627357,
+        "text": "Mesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
+        "metadata": {
+          "title": "Mesopotamia",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:iran",
+            "entity:iraq",
+            "entity:kuwait",
+            "entity:most_of_iraq_plus_kuwait_the_eastern_parts_of_syria_southeastern_turkey_and_regions_along_the_turkish_syrian_and_iran_ir",
+            "entity:southeastern_turkey",
+            "entity:syria",
+            "entity:syrian",
+            "entity:tigris_euphrates_river_system",
+            "entity:title_anchor_mesopotamia",
+            "entity:turkey",
+            "entity:west_asia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:iran_0",
+        "score": 0.007459548305920647,
+        "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
+        "metadata": {
+          "title": "Iran",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:123_220_160_000_kia",
+            "entity:60_711_mia",
+            "entity:basra",
+            "entity:conquer_iraqi_territory_and_capture_cities",
+            "entity:invade_iraq",
+            "entity:iran_iraq_war",
+            "entity:iranian",
+            "entity:iranian_forces",
+            "entity:iranian_forces_inside_iraq",
+            "entity:iranian_khuzestan",
+            "entity:iranian_troops",
+            "entity:iraq",
+            "entity:iraq_army",
+            "entity:iraqi_army",
+            "entity:iraqi_army_back_into_iraq",
+            "entity:july_1982",
+            "entity:khomeini",
+            "entity:remaining_iranian_troops_across_the_border",
+            "entity:saddam_hussein",
+            "entity:september_22_1980",
+            "entity:subsequently",
+            "entity:title_anchor_iran",
+            "entity:total_iranian_casualties",
+            "entity:un"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:history_of_the_united_states_navy_0",
+        "score": 0.0066757367189129255,
+        "text": "History of the United States Navy\nIn March 2007, the U.S. Navy reached its smallest fleet size, with 274 ships, since World War I. Since the end of the Cold War, the Navy has shifted its focus from preparations for large - scale war with the Soviet Union to special operations and strike missions in regional conflicts. The Navy participated in the Iraq War and is a major participant in the ongoing War on Terror, largely in this capacity. Development continues on new ships and weapons, including the Gerald R. Ford - class aircraft carrier and the Littoral combat ship. One hundred and three U.S. Navy personnel died in the Iraq War. U.S. Navy warships launched cruise missiles into military targets in Libya during Operation Odyssey Dawn to enforce a UN resolution.",
+        "metadata": {
+          "title": "History of the United States Navy",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:cold_war",
+            "entity:development",
+            "entity:ford",
+            "entity:gerald",
+            "entity:gerald_r",
+            "entity:iraq_war",
+            "entity:libya",
+            "entity:littoral_combat_ship",
+            "entity:march",
+            "entity:navy",
+            "entity:navy_personnel",
+            "entity:navy_warships",
+            "entity:one_hundred_and_three",
+            "entity:operation_odyssey_dawn",
+            "entity:preparations_for_large_scale_war_with_the_soviet_union",
+            "entity:soviet_union",
+            "entity:un_resolution",
+            "entity:war_on_terror",
+            "entity:world_war",
+            "entity:world_war_i"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:khabarovsk_0",
+        "score": 0.00572865153207826,
+        "text": "Khabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
+        "metadata": {
+          "title": "Khabarovsk",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:central_asia",
+            "entity:east_asia",
+            "entity:european_russia",
+            "entity:khabarovsk_novy_airport",
+            "entity:southeast_asia",
+            "entity:title_anchor_khabarovsk"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ivan Koumaev\nIvan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".\n\nMesopotamia\nMesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.\n\nShahid Dastgerdi Stadium\nShahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.\n\nKhabarovsk\nKhabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.\n\nIran\nIran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:ivan_koumaev_0",
+        "passage_index": 6,
+        "title": "Ivan Koumaev",
+        "score": 0.08273039806498933,
+        "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
+        "score_breakdown": {
+          "dense": 0.05045413437773146,
+          "graph": 0.05189324387297572,
+          "fact": 0.2627510066356288
+        }
+      },
+      {
+        "node_id": "chunk:mesopotamia_0",
+        "passage_index": 17,
+        "title": "Mesopotamia",
+        "score": 0.08224620242717112,
+        "text": "Mesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
+        "score_breakdown": {
+          "dense": 0.04997251229021588,
+          "graph": 0.05235113702741077,
+          "fact": 0.2603731970621944
+        }
+      },
+      {
+        "node_id": "chunk:shahid_dastgerdi_stadium_0",
+        "passage_index": 13,
+        "title": "Shahid Dastgerdi Stadium",
+        "score": 0.08091158770106208,
+        "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
+        "score_breakdown": {
+          "dense": 0.049868229255662956,
+          "graph": 0.052464340238680546,
+          "fact": 0.25163173025895524
+        }
+      },
+      {
+        "node_id": "chunk:khabarovsk_0",
+        "passage_index": 9,
+        "title": "Khabarovsk",
+        "score": 0.07677657925189858,
+        "text": "Khabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
+        "score_breakdown": {
+          "dense": 0.049908966146723126,
+          "graph": 0.05180012654905881,
+          "fact": 0.22524406604322145
+        }
+      },
+      {
+        "node_id": "chunk:iran_0",
+        "passage_index": 12,
+        "title": "Iran",
+        "score": 0.04318442809681095,
+        "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
+        "score_breakdown": {
+          "dense": 0.050380911417905475,
+          "graph": 0.05158308938987647,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:history_of_the_united_states_navy_0",
+        "passage_index": 3,
+        "title": "History of the United States Navy",
+        "score": 0.04264234221587651,
+        "text": "History of the United States Navy\nIn March 2007, the U.S. Navy reached its smallest fleet size, with 274 ships, since World War I. Since the end of the Cold War, the Navy has shifted its focus from preparations for large - scale war with the Soviet Union to special operations and strike missions in regional conflicts. The Navy participated in the Iraq War and is a major participant in the ongoing War on Terror, largely in this capacity. Development continues on new ships and weapons, including the Gerald R. Ford - class aircraft carrier and the Littoral combat ship. One hundred and three U.S. Navy personnel died in the Iraq War. U.S. Navy warships launched cruise missiles into military targets in Libya during Operation Odyssey Dawn to enforce a UN resolution.",
+        "score_breakdown": {
+          "dense": 0.049924826879052274,
+          "graph": 0.050612291441325875,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ancient_near_east_0",
+        "passage_index": 7,
+        "title": "Ancient Near East",
+        "score": 0.04257852957148303,
+        "text": "Ancient Near East\nThe ancient Near East was the home of early civilizations within a region roughly corresponding to the modern Middle East: Mesopotamia (modern Iraq, southeast Turkey, southwest Iran, northeastern Syria and Kuwait), ancient Egypt, ancient Iran (Elam, Media, Parthia and Persia), Anatolia / Asia Minor and Armenian Highlands (Turkey's Eastern Anatolia Region, Armenia, northwestern Iran, southern Georgia, and western Azerbaijan), the Levant (modern Syria, Lebanon, Palestine, Israel, and Jordan), Cyprus and the Arabian Peninsula. The ancient Near East is studied in the fields of Near Eastern archaeology and ancient history.",
+        "score_breakdown": {
+          "dense": 0.050021749364753794,
+          "graph": 0.05022189140289482,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:near_east_0",
+        "passage_index": 1,
+        "title": "Near East",
+        "score": 0.042488206572492436,
+        "text": "Near East\nThe term middle east as a noun and adjective was common in the 19th century in nearly every context except diplomacy and archaeology. An uncountable number of places appear to have had their middle easts from gardens to regions, including the United States. The innovation of the term \"Near East\" to mean the holdings of the Ottoman Empire as early as the Crimean War had left a geographical gap. The East Indies, or \"Far East,\" derived ultimately from Ptolemy's \"India Beyond the Ganges.\" The Ottoman Empire ended at the eastern border of Iraq. \"India This Side of the Ganges\" and Iran had been omitted. The archaeologists counted Iran as \"the Near East\" because Old Persian cuneiform had been found there. This usage did not sit well with the diplomats; India was left in an equivocal state. They needed a regional term.",
+        "score_breakdown": {
+          "dense": 0.049979678404910986,
+          "graph": 0.049997944832637975,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:united_states_support_for_iraq_during_the_iran_iraq_war_0",
+        "passage_index": 5,
+        "title": "United States support for Iraq during the Iran–Iraq War",
+        "score": 0.04246926259957697,
+        "text": "United States support for Iraq during the Iran–Iraq War\nUnited States support for Ba'athist Iraq during the Iran -- Iraq War, against post-revolutionary Iran, included several billion dollars' worth of economic aid, the sale of dual - use technology, non-U.S. origin weaponry, military intelligence, and special operations training. At no point, however, did the U.S. directly supply arms to Iraq. Of particular interest for contemporary Iran -- United States relations are the repeated accusations that the U.S. government actively encouraged Iraqi leader Saddam Hussein to invade Iran (proponents of this theory frequently describe the U.S. as having given Saddam a ``green light ''), supported by a considerable amount of circumstantial evidence, but the U.S. government officially denies that any such collusion occurred, and no conclusive proof of it has been found by scholars that have studied the issue.",
+        "score_breakdown": {
+          "dense": 0.04996292944354961,
+          "graph": 0.04996550468541561,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:masoud_barzani_0",
+        "passage_index": 0,
+        "title": "Masoud Barzani",
+        "score": 0.04230124855031335,
+        "text": "Masoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.",
+        "score_breakdown": {
+          "dense": 0.04999899932243371,
+          "graph": 0.04933932974324938,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who mediated the truce ending the Iran-Iraq War?",
+        "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+        "sentence": "It was named after a casualty of the Iran–Iraq War.",
+        "score": 0.551
+      },
+      {
+        "sub_question": "In which continent was Ivan Koumaev born?",
+        "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+        "sentence": "It was named after a casualty of the Iran–Iraq War.",
+        "score": 0.5748333333333333
+      },
+      {
+        "sub_question": "How many states are there in that continent?",
+        "sentence_id": "sentence:united_states_support_for_iraq_during_the_iran_iraq_war_0_0_united_states_support_for_ba_athist_iraq_during_the_iran_ira",
+        "sentence": "United States support for Ba'athist Iraq during the Iran -- Iraq War, against post-revolutionary Iran, included several billion dollars' worth of economic aid, the sale of dual - use technology, non-U.S. origin weaponry, military intelligence, and special operations training.",
+        "score": 0.5700714285714286
+      }
+    ]
+  }
+}

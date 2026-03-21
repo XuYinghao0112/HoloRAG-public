@@ -126,6 +126,7 @@ def build_config(args: argparse.Namespace) -> "HoloRAGConfig":
         chunk_max_length=args.chunk_max_length,
         query_max_length=args.query_max_length,
         linking_top_k=args.linking_top_k,
+        fact_candidate_top_k=args.fact_candidate_top_k,
         retrieval_top_k=args.retrieval_top_k,
         fact_top_k=args.fact_top_k,
         fact_rerank_top_k=args.fact_rerank_top_k,
@@ -155,7 +156,7 @@ def main() -> None:
     parser.add_argument("--query_text", type=str, default=None)
     parser.add_argument("--output_dir", type=str, default="outputs/holorag_demo")
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
-    parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-7B-Instruct")
+    parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-72B-Instruct")
     parser.add_argument("--embedding_name", type=str, default="nvidia/NV-Embed-v2")
     parser.add_argument("--embedding_device", type=str, default="gpu1")
     parser.add_argument("--embedding_batch_size", type=int, default=4)
@@ -166,6 +167,7 @@ def main() -> None:
     parser.add_argument("--chunk_max_length", type=int, default=512)
     parser.add_argument("--query_max_length", type=int, default=128)
     parser.add_argument("--linking_top_k", type=int, default=5)
+    parser.add_argument("--fact_candidate_top_k", type=int, default=24)
     parser.add_argument("--retrieval_top_k", type=int, default=20)
     parser.add_argument("--fact_top_k", type=int, default=12)
     parser.add_argument("--fact_rerank_top_k", type=int, default=8)
@@ -210,6 +212,9 @@ def main() -> None:
     if metadata:
         result["sample_metadata"] = metadata
         result["answer_match"] = build_answer_match(result, metadata)
+        result_path = os.path.join(args.output_dir, "last_query_result.json")
+        with open(result_path, "w", encoding="utf-8") as handle:
+            json.dump(result, handle, indent=2, ensure_ascii=False)
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
 

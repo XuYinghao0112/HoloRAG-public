@@ -1,0 +1,878 @@
+{
+  "query": "What field does the author of Parallel Worlds work in?",
+  "alpha": {
+    "entity": 0.1,
+    "sentence": 0.8,
+    "chunk": 0.1
+  },
+  "query_entities": [
+    "Parallel Worlds"
+  ],
+  "raw_query_entities": [
+    "Parallel Worlds"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Parallel Worlds",
+      "node_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+      "resolved_text": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+      "score": 0.48112727272727274,
+      "alias_score": 0.18181818181818182,
+      "relation_score": 1.0,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.5,
+      "score_margin": 0.026193939393939436,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is the author of Parallel Worlds?",
+    "What field does this author work in?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+      "score": 0.3076683378737621,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:michio_kaku",
+      "score": 0.30760644036049595,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_corner_of_emona_harbour",
+      "score": 0.25190350220048163,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_memoirs_of_a_geisha",
+      "score": 0.24987481709807852,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:arthur_golden",
+      "score": 0.24987481709807852,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_pimpirev_ice_wall",
+      "score": 0.21201551319623813,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:northwest_coast_of_emona_harbour",
+      "score": 0.21201551319623813,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mechanical_and_industrial_engineering",
+      "score": 0.18493088874475203,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_kim_vicente",
+      "score": 0.17121820397724308,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "score": 0.17056585219619433,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:physics",
+      "score": 0.1554188622344268,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:university_of_toronto",
+      "score": 0.15541042736510136,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos_author_michio_kaku_sentence_pa",
+      "text": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos author Michio Kaku",
+      "head_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+      "tail_id": "entity:michio_kaku",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "chunk_id": "chunk:parallel_worlds_book_0",
+      "document_index": 5,
+      "score": 0.30550896441826586
+    },
+    {
+      "fact_id": "fact:memoirs_of_a_geisha_has_author_arthur_golden_sentence_memoirs_of_a_geisha_0_0_memoirs_of_a_geisha_is_a_historical_novel_",
+      "text": "Memoirs of a Geisha has author Arthur Golden",
+      "head_id": "entity:title_anchor_memoirs_of_a_geisha",
+      "tail_id": "entity:arthur_golden",
+      "sentence_id": "sentence:memoirs_of_a_geisha_0_0_memoirs_of_a_geisha_is_a_historical_novel_by_american_author_arthur_golden_publ",
+      "chunk_id": "chunk:memoirs_of_a_geisha_0",
+      "document_index": 18,
+      "score": 0.24777849992414
+    },
+    {
+      "fact_id": "fact:pimpirev_ice_wall_runs_parallel_to_northwest_coast_of_emona_harbour_sentence_pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_",
+      "text": "Pimpirev Ice Wall runs parallel to northwest coast of Emona Harbour",
+      "head_id": "entity:title_anchor_pimpirev_ice_wall",
+      "tail_id": "entity:northwest_coast_of_emona_harbour",
+      "sentence_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "chunk_id": "chunk:pimpirev_ice_wall_0",
+      "document_index": 17,
+      "score": 0.22761117950936463
+    },
+    {
+      "fact_id": "fact:pimpirev_ice_wall_is_some_distance_inland_from_northwest_coast_of_emona_harbour_sentence_pimpirev_ice_wall_0_0_pimpirev_",
+      "text": "Pimpirev Ice Wall is some distance inland from northwest coast of Emona Harbour",
+      "head_id": "entity:title_anchor_pimpirev_ice_wall",
+      "tail_id": "entity:northwest_coast_of_emona_harbour",
+      "sentence_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "chunk_id": "chunk:pimpirev_ice_wall_0",
+      "document_index": 17,
+      "score": 0.1922279908247715
+    },
+    {
+      "fact_id": "fact:kim_vicente_teaches_mechanical_and_industrial_engineering_sentence_kim_vicente_0_0_kim_vicente_is_an_inactive_professor_",
+      "text": "Kim Vicente teaches Mechanical and Industrial Engineering",
+      "head_id": "entity:title_anchor_kim_vicente",
+      "tail_id": "entity:mechanical_and_industrial_engineering",
+      "sentence_id": "sentence:kim_vicente_0_0_kim_vicente_is_an_inactive_professor_of_mechanical_and_industrial_engineering_at",
+      "chunk_id": "chunk:kim_vicente_0",
+      "document_index": 6,
+      "score": 0.18283579690011925
+    },
+    {
+      "fact_id": "fact:kim_vicente_works_at_university_of_toronto_sentence_kim_vicente_0_0_kim_vicente_is_an_inactive_professor_of_mechanical_a",
+      "text": "Kim Vicente works at University of Toronto",
+      "head_id": "entity:title_anchor_kim_vicente",
+      "tail_id": "entity:university_of_toronto",
+      "sentence_id": "sentence:kim_vicente_0_0_kim_vicente_is_an_inactive_professor_of_mechanical_and_industrial_engineering_at",
+      "chunk_id": "chunk:kim_vicente_0",
+      "document_index": 6,
+      "score": 0.15541042736510136
+    },
+    {
+      "fact_id": "fact:physics_related_to_future_sentence_physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_",
+      "text": "Physics related_to Future",
+      "head_id": "entity:physics",
+      "tail_id": "entity:future",
+      "sentence_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "chunk_id": "chunk:physics_of_the_future_0",
+      "document_index": 3,
+      "score": 0.15332037837317208
+    }
+  ],
+  "bridge_entities": [
+    "Michio Kaku",
+    "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the author of Parallel Worlds?",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score": 0.5521363475322723
+    },
+    {
+      "sub_question": "What field does this author work in?",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score": 0.5235357016324997
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "score": 0.07005115246984762,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:kim_vicente_0_0_kim_vicente_is_an_inactive_professor_of_mechanical_and_industrial_engineering_at",
+      "score": 0.06369657507766575,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "score": 0.0618977954596243,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "score": 0.0552527447418771,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:memoirs_of_a_geisha_0_0_memoirs_of_a_geisha_is_a_historical_novel_by_american_author_arthur_golden_publ",
+      "score": 0.04932764657966258,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+      "score": 0.04230215223867805,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:michio_kaku",
+      "score": 0.03949962914948448,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_pimpirev_ice_wall",
+      "score": 0.032242700052868334,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_kim_vicente",
+      "score": 0.029448888941003688,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:northwest_coast_of_emona_harbour",
+      "score": 0.026724365683608635,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_memoirs_of_a_geisha",
+      "score": 0.025999552634434837,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:arthur_golden",
+      "score": 0.025999552634434837,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:memoirs_of_a_geisha_0_1_the_novel_told_in_first_person_perspective_tells_the_story_of_a_fictional_geis",
+      "score": 0.023935855714293356,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:kim_vicente_0_1_he_was_previously_a_researcher_teacher_and_author_in_the_field_of_human_factor",
+      "score": 0.021015418950772122,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:mechanical_and_industrial_engineering",
+      "score": 0.020847300783600323,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:university_of_toronto",
+      "score": 0.019726595080634023,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_2_50_m_high_extending_from_the_north_corner_of_emona_harbour_3_700_m_in_west_sout",
+      "score": 0.019508600631582305,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_1_approx",
+      "score": 0.018714902686541583,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:parallel_worlds_book_0",
+      "score": 0.017470394067576864,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:future",
+      "score": 0.017332468690170404,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:parallel_worlds_book_0",
+      "passage_index": 5,
+      "title": "Parallel Worlds (book)",
+      "score": 0.07650347535643004,
+      "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score_breakdown": {
+        "dense": 0.05110932366054256,
+        "graph": 0.05290636804270766,
+        "fact": 0.21680957953546226
+      }
+    },
+    {
+      "node_id": "chunk:pimpirev_ice_wall_0",
+      "passage_index": 17,
+      "title": "Pimpirev Ice Wall",
+      "score": 0.07408246046096806,
+      "text": "Pimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+      "score_breakdown": {
+        "dense": 0.04982973909989018,
+        "graph": 0.05530618929497503,
+        "fact": 0.200561647783573
+      }
+    },
+    {
+      "node_id": "chunk:memoirs_of_a_geisha_0",
+      "passage_index": 18,
+      "title": "Memoirs of a Geisha",
+      "score": 0.07396747588100755,
+      "text": "Memoirs of a Geisha\nMemoirs of a Geisha is a historical novel by American author Arthur Golden, published in 1997. The novel, told in first person perspective, tells the story of a fictional geisha working in Kyoto, Japan, before and after World War II.",
+      "score_breakdown": {
+        "dense": 0.04987024523848044,
+        "graph": 0.05280571966599696,
+        "fact": 0.2046475006669614
+      }
+    },
+    {
+      "node_id": "chunk:kim_vicente_0",
+      "passage_index": 6,
+      "title": "Kim Vicente",
+      "score": 0.07255898398299894,
+      "text": "Kim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".",
+      "score_breakdown": {
+        "dense": 0.0501254655649757,
+        "graph": 0.054076841870576105,
+        "fact": 0.19177950240726313
+      }
+    },
+    {
+      "node_id": "chunk:physics_of_the_future_0",
+      "passage_index": 3,
+      "title": "Physics of the Future",
+      "score": 0.07152330942387891,
+      "text": "Physics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+      "score_breakdown": {
+        "dense": 0.0503184005308959,
+        "graph": 0.05305974563625048,
+        "fact": 0.18620176960674015
+      }
+    },
+    {
+      "node_id": "chunk:jos_antunes_sobrinho_0",
+      "passage_index": 4,
+      "title": "José Antunes Sobrinho",
+      "score": 0.04221588229074268,
+      "text": "José Antunes Sobrinho\nBrasília has also been the focus of modern-day literature. Published in 2008, The World In Grey: Dom Bosco's Prophecy, by author Ryan J. Lucero, tells an apocalypticle story based on the famous prophecy from the late 19th century by the Italian saint Don Bosco. According to Don Bosco's prophecy: \"Between parallels 15 and 20, around a lake which shall be formed; A great civilization will thrive, and that will be the Promised Land.\" Brasília lies between the parallels 15° S and 20° S, where an artificial lake (Paranoá Lake) was formed. Don Bosco is Brasília's patron saint.",
+      "score_breakdown": {
+        "dense": 0.05014905805098774,
+        "graph": 0.04877966787566475,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fictional_universe_of_harry_potter_0",
+      "passage_index": 11,
+      "title": "Fictional universe of Harry Potter",
+      "score": 0.042206480243572694,
+      "text": "Fictional universe of Harry Potter\nThe fictional universe of British author J.K. Rowling's Harry Potter series of fantasy novels comprises two distinct societies: the Wizarding World and the Muggle world. In the novels, the Muggle world is the world inhabited by the non-magical majority, with which the Wizarding world exists coextensively, albeit mostly remaining hidden from the non-magical humans. The plot of the series is set in 1990s Britain, but in a veiled and separate shadow society wherein magic is commonly used and practised, and those who can use it live in self - enforced seclusion, hiding their abilities from the rest of the world. The term ``Wizarding World ''refers to the global wizard community that lives hidden in parallel with the Muggle world; the different terms refer to different communities within the same area rather than separate planets or worlds. Any new works taking place in this universe are released under the`` J.K. Rowling's Wizarding World'' brand.",
+      "score_breakdown": {
+        "dense": 0.05011690436890089,
+        "graph": 0.04880727613559067,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:michael_lambert_snowboarder_0",
+      "passage_index": 2,
+      "title": "Michael Lambert (snowboarder)",
+      "score": 0.04217511349927157,
+      "text": "Michael Lambert (snowboarder)\nMichael Lambert (born June 25, 1986) is a Canadian snowboarder who currently resides in Toronto, Ontario. Michael competes in the Alpine disciplines, Parallel GS and Parallel Slalom. Lambert has been on the Canadian National Team since 2002 and is currently working with coaches Mark Fawcett and Sylvain Jean. He is also the Slap cup champion of Stoney island",
+      "score_breakdown": {
+        "dense": 0.0500683244351228,
+        "graph": 0.04879178353318008,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:timothy_gallwey_0",
+      "passage_index": 7,
+      "title": "Timothy Gallwey",
+      "score": 0.04212122400159867,
+      "text": "Timothy Gallwey\nW. Timothy Gallwey (born 1938 in San Francisco) is an author who has written a series of books in which he has set forth a new methodology for coaching and for the development of personal and professional excellence in a variety of fields that he calls \"the Inner Game\". Since he began writing in the 1970s, his books include \"The Inner Game of Tennis\", \"The Inner Game of Golf\", \"The Inner Game of Music\" (with Barry Green), \"Inner Skiing\" and \"The Inner Game of Work\". Gallwey's seminal work is \"The Inner Game of Tennis\", with more than one million copies in print. Besides sports, his training methods have been applied to the fields of business, health, and education.",
+      "score_breakdown": {
+        "dense": 0.04996453900456819,
+        "graph": 0.048802425163620544,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:asima_chatterjee_0",
+      "passage_index": 9,
+      "title": "Asima Chatterjee",
+      "score": 0.04211290162268787,
+      "text": "Asima Chatterjee\nAsima Chatterjee (23 September 1917 – 22 November 2006) was an Indian organic chemist noted for her work in the fields of organic chemistry and phytomedicine. Her most notable work includes research on vinca alkaloids, the development of anti-epileptic drugs, and development of anti-malarial drugs. She also authored a considerable volume of work on medicinal plants of the Indian subcontinent. She was the first woman to receive a Doctorate of Science from an Indian university.",
+      "score_breakdown": {
+        "dense": 0.049978420676520106,
+        "graph": 0.048749234168672696,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+        "score": 0.04230215223867805,
+        "text": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+        "metadata": {
+          "canonical_name": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+          "aliases": [
+            "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos"
+          ],
+          "surface_forms": [
+            "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "score": 0.07005115246984762,
+        "text": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "metadata": {
+          "title": "Parallel Worlds (book)",
+          "chunk_id": "chunk:parallel_worlds_book_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+              "relation": "author",
+              "tail": "Michio Kaku"
+            }
+          ],
+          "entities": [
+            "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+            "Michio Kaku"
+          ],
+          "entity_ids": [
+            "entity:michio_kaku",
+            "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:kim_vicente_0_0_kim_vicente_is_an_inactive_professor_of_mechanical_and_industrial_engineering_at",
+        "score": 0.06369657507766575,
+        "text": "Kim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto.",
+        "metadata": {
+          "title": "Kim Vicente",
+          "chunk_id": "chunk:kim_vicente_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Kim Vicente",
+              "relation": "teaches",
+              "tail": "Mechanical and Industrial Engineering"
+            },
+            {
+              "head": "Kim Vicente",
+              "relation": "works at",
+              "tail": "University of Toronto"
+            }
+          ],
+          "entities": [
+            "Kim Vicente",
+            "University of Toronto",
+            "Mechanical and Industrial Engineering"
+          ],
+          "entity_ids": [
+            "entity:mechanical_and_industrial_engineering",
+            "entity:title_anchor_kim_vicente",
+            "entity:university_of_toronto"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+        "score": 0.0618977954596243,
+        "text": "Pimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_id": "chunk:pimpirev_ice_wall_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "is located at",
+              "tail": "Emona Harbour Livingston Island Antarctica"
+            },
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "runs parallel to",
+              "tail": "northwest coast of Emona Harbour"
+            },
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "is some distance inland from",
+              "tail": "northwest coast of Emona Harbour"
+            }
+          ],
+          "entities": [
+            "Pimpirev Ice Wall",
+            "Emona Harbour",
+            "Livingston Island",
+            "Antarctica"
+          ],
+          "entity_ids": [
+            "entity:antarctica",
+            "entity:emona_harbour",
+            "entity:emona_harbour_livingston_island_antarctica",
+            "entity:livingston_island",
+            "entity:northwest_coast_of_emona_harbour",
+            "entity:title_anchor_pimpirev_ice_wall"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+        "score": 0.0552527447418771,
+        "text": "Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\".",
+        "metadata": {
+          "title": "Physics of the Future",
+          "chunk_id": "chunk:physics_of_the_future_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Physics",
+              "relation": "related_to",
+              "tail": "Future"
+            },
+            {
+              "head": "Future",
+              "relation": "related_to",
+              "tail": "Science Will Shape"
+            },
+            {
+              "head": "Science Will Shape",
+              "relation": "related_to",
+              "tail": "Human Destiny"
+            }
+          ],
+          "entities": [
+            "Physics",
+            "Future",
+            "Science Will Shape",
+            "Human Destiny",
+            "Our Daily Lives",
+            "Year",
+            "Michio Kaku",
+            "Hyperspace",
+            "Impossible"
+          ],
+          "entity_ids": [
+            "entity:future",
+            "entity:human_destiny",
+            "entity:hyperspace",
+            "entity:impossible",
+            "entity:michio_kaku",
+            "entity:our_daily_lives",
+            "entity:physics",
+            "entity:science_will_shape",
+            "entity:year"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:memoirs_of_a_geisha_0_0_memoirs_of_a_geisha_is_a_historical_novel_by_american_author_arthur_golden_publ",
+        "score": 0.04932764657966258,
+        "text": "Memoirs of a Geisha is a historical novel by American author Arthur Golden, published in 1997.",
+        "metadata": {
+          "title": "Memoirs of a Geisha",
+          "chunk_id": "chunk:memoirs_of_a_geisha_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Memoirs of a Geisha",
+              "relation": "has author",
+              "tail": "Arthur Golden"
+            }
+          ],
+          "entities": [
+            "Memoirs of a Geisha",
+            "Arthur Golden"
+          ],
+          "entity_ids": [
+            "entity:arthur_golden",
+            "entity:title_anchor_memoirs_of_a_geisha"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:memoirs_of_a_geisha_0_1_the_novel_told_in_first_person_perspective_tells_the_story_of_a_fictional_geis",
+        "score": 0.023935855714293356,
+        "text": "The novel, told in first person perspective, tells the story of a fictional geisha working in Kyoto, Japan, before and after World War II.",
+        "metadata": {
+          "title": "Memoirs of a Geisha",
+          "chunk_id": "chunk:memoirs_of_a_geisha_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Kyoto",
+              "relation": "related_to",
+              "tail": "Japan"
+            },
+            {
+              "head": "Japan",
+              "relation": "related_to",
+              "tail": "World War"
+            }
+          ],
+          "entities": [
+            "Kyoto Japan",
+            "World War II"
+          ],
+          "entity_ids": [
+            "entity:japan",
+            "entity:kyoto",
+            "entity:kyoto_japan",
+            "entity:world_war",
+            "entity:world_war_ii"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:kim_vicente_0_1_he_was_previously_a_researcher_teacher_and_author_in_the_field_of_human_factor",
+        "score": 0.021015418950772122,
+        "text": "He was previously a researcher, teacher, and author in the field of human factors.",
+        "metadata": {
+          "title": "Kim Vicente",
+          "chunk_id": "chunk:kim_vicente_0",
+          "sentence_index": 1,
+          "document_index": 6,
+          "triples": [],
+          "entities": []
+        }
+      },
+      {
+        "node_id": "sentence:pimpirev_ice_wall_0_2_50_m_high_extending_from_the_north_corner_of_emona_harbour_3_700_m_in_west_sout",
+        "score": 0.019508600631582305,
+        "text": "50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_id": "chunk:pimpirev_ice_wall_0",
+          "sentence_index": 2,
+          "document_index": 17,
+          "triples": [],
+          "entities": [
+            "north corner of Emona Harbour"
+          ],
+          "entity_ids": [
+            "entity:north_corner_of_emona_harbour"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pimpirev_ice_wall_0_1_approx",
+        "score": 0.018714902686541583,
+        "text": "Approx.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_id": "chunk:pimpirev_ice_wall_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [],
+          "entities": [
+            "Approx"
+          ],
+          "entity_ids": [
+            "entity:approx"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pimpirev_ice_wall_0_3_named_for_christo_pimpirev_leader_of_the_bulgarian_antarctic_campaigns_during_t",
+        "score": 0.016834580072821913,
+        "text": "Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_id": "chunk:pimpirev_ice_wall_0",
+          "sentence_index": 3,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Christo Pimpirev",
+              "relation": "named_for",
+              "tail": "leader of Bulgarian Antarctic campaigns"
+            },
+            {
+              "head": "Christo Pimpirev",
+              "relation": "conducted_field_work",
+              "tail": "geological field work on Alexander Island"
+            }
+          ],
+          "entities": [
+            "Christo Pimpirev",
+            "Bulgarian Antarctic campaigns",
+            "Alexander Island"
+          ],
+          "entity_ids": [
+            "entity:alexander_island",
+            "entity:bulgarian_antarctic_campaigns",
+            "entity:christo_pimpirev",
+            "entity:geological_field_work_on_alexander_island",
+            "entity:leader_of_bulgarian_antarctic_campaigns"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:parallel_worlds_book_0",
+        "score": 0.017470394067576864,
+        "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "metadata": {
+          "title": "Parallel Worlds (book)",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:michio_kaku",
+            "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Parallel Worlds (book)\nParallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.\n\nPimpirev Ice Wall\nPimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.\n\nMemoirs of a Geisha\nMemoirs of a Geisha\nMemoirs of a Geisha is a historical novel by American author Arthur Golden, published in 1997. The novel, told in first person perspective, tells the story of a fictional geisha working in Kyoto, Japan, before and after World War II.\n\nKim Vicente\nKim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".\n\nPhysics of the Future\nPhysics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:parallel_worlds_book_0",
+        "passage_index": 5,
+        "title": "Parallel Worlds (book)",
+        "score": 0.07650347535643004,
+        "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score_breakdown": {
+          "dense": 0.05110932366054256,
+          "graph": 0.05290636804270766,
+          "fact": 0.21680957953546226
+        }
+      },
+      {
+        "node_id": "chunk:pimpirev_ice_wall_0",
+        "passage_index": 17,
+        "title": "Pimpirev Ice Wall",
+        "score": 0.07408246046096806,
+        "text": "Pimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+        "score_breakdown": {
+          "dense": 0.04982973909989018,
+          "graph": 0.05530618929497503,
+          "fact": 0.200561647783573
+        }
+      },
+      {
+        "node_id": "chunk:memoirs_of_a_geisha_0",
+        "passage_index": 18,
+        "title": "Memoirs of a Geisha",
+        "score": 0.07396747588100755,
+        "text": "Memoirs of a Geisha\nMemoirs of a Geisha is a historical novel by American author Arthur Golden, published in 1997. The novel, told in first person perspective, tells the story of a fictional geisha working in Kyoto, Japan, before and after World War II.",
+        "score_breakdown": {
+          "dense": 0.04987024523848044,
+          "graph": 0.05280571966599696,
+          "fact": 0.2046475006669614
+        }
+      },
+      {
+        "node_id": "chunk:kim_vicente_0",
+        "passage_index": 6,
+        "title": "Kim Vicente",
+        "score": 0.07255898398299894,
+        "text": "Kim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".",
+        "score_breakdown": {
+          "dense": 0.0501254655649757,
+          "graph": 0.054076841870576105,
+          "fact": 0.19177950240726313
+        }
+      },
+      {
+        "node_id": "chunk:physics_of_the_future_0",
+        "passage_index": 3,
+        "title": "Physics of the Future",
+        "score": 0.07152330942387891,
+        "text": "Physics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+        "score_breakdown": {
+          "dense": 0.0503184005308959,
+          "graph": 0.05305974563625048,
+          "fact": 0.18620176960674015
+        }
+      },
+      {
+        "node_id": "chunk:jos_antunes_sobrinho_0",
+        "passage_index": 4,
+        "title": "José Antunes Sobrinho",
+        "score": 0.04221588229074268,
+        "text": "José Antunes Sobrinho\nBrasília has also been the focus of modern-day literature. Published in 2008, The World In Grey: Dom Bosco's Prophecy, by author Ryan J. Lucero, tells an apocalypticle story based on the famous prophecy from the late 19th century by the Italian saint Don Bosco. According to Don Bosco's prophecy: \"Between parallels 15 and 20, around a lake which shall be formed; A great civilization will thrive, and that will be the Promised Land.\" Brasília lies between the parallels 15° S and 20° S, where an artificial lake (Paranoá Lake) was formed. Don Bosco is Brasília's patron saint.",
+        "score_breakdown": {
+          "dense": 0.05014905805098774,
+          "graph": 0.04877966787566475,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fictional_universe_of_harry_potter_0",
+        "passage_index": 11,
+        "title": "Fictional universe of Harry Potter",
+        "score": 0.042206480243572694,
+        "text": "Fictional universe of Harry Potter\nThe fictional universe of British author J.K. Rowling's Harry Potter series of fantasy novels comprises two distinct societies: the Wizarding World and the Muggle world. In the novels, the Muggle world is the world inhabited by the non-magical majority, with which the Wizarding world exists coextensively, albeit mostly remaining hidden from the non-magical humans. The plot of the series is set in 1990s Britain, but in a veiled and separate shadow society wherein magic is commonly used and practised, and those who can use it live in self - enforced seclusion, hiding their abilities from the rest of the world. The term ``Wizarding World ''refers to the global wizard community that lives hidden in parallel with the Muggle world; the different terms refer to different communities within the same area rather than separate planets or worlds. Any new works taking place in this universe are released under the`` J.K. Rowling's Wizarding World'' brand.",
+        "score_breakdown": {
+          "dense": 0.05011690436890089,
+          "graph": 0.04880727613559067,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:michael_lambert_snowboarder_0",
+        "passage_index": 2,
+        "title": "Michael Lambert (snowboarder)",
+        "score": 0.04217511349927157,
+        "text": "Michael Lambert (snowboarder)\nMichael Lambert (born June 25, 1986) is a Canadian snowboarder who currently resides in Toronto, Ontario. Michael competes in the Alpine disciplines, Parallel GS and Parallel Slalom. Lambert has been on the Canadian National Team since 2002 and is currently working with coaches Mark Fawcett and Sylvain Jean. He is also the Slap cup champion of Stoney island",
+        "score_breakdown": {
+          "dense": 0.0500683244351228,
+          "graph": 0.04879178353318008,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:timothy_gallwey_0",
+        "passage_index": 7,
+        "title": "Timothy Gallwey",
+        "score": 0.04212122400159867,
+        "text": "Timothy Gallwey\nW. Timothy Gallwey (born 1938 in San Francisco) is an author who has written a series of books in which he has set forth a new methodology for coaching and for the development of personal and professional excellence in a variety of fields that he calls \"the Inner Game\". Since he began writing in the 1970s, his books include \"The Inner Game of Tennis\", \"The Inner Game of Golf\", \"The Inner Game of Music\" (with Barry Green), \"Inner Skiing\" and \"The Inner Game of Work\". Gallwey's seminal work is \"The Inner Game of Tennis\", with more than one million copies in print. Besides sports, his training methods have been applied to the fields of business, health, and education.",
+        "score_breakdown": {
+          "dense": 0.04996453900456819,
+          "graph": 0.048802425163620544,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:asima_chatterjee_0",
+        "passage_index": 9,
+        "title": "Asima Chatterjee",
+        "score": 0.04211290162268787,
+        "text": "Asima Chatterjee\nAsima Chatterjee (23 September 1917 – 22 November 2006) was an Indian organic chemist noted for her work in the fields of organic chemistry and phytomedicine. Her most notable work includes research on vinca alkaloids, the development of anti-epileptic drugs, and development of anti-malarial drugs. She also authored a considerable volume of work on medicinal plants of the Indian subcontinent. She was the first woman to receive a Doctorate of Science from an Indian university.",
+        "score_breakdown": {
+          "dense": 0.049978420676520106,
+          "graph": 0.048749234168672696,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the author of Parallel Worlds?",
+        "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score": 0.5521363475322723
+      },
+      {
+        "sub_question": "What field does this author work in?",
+        "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score": 0.5235357016324997
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@ from typing import Dict
 @dataclass
 class HoloRAGConfig:
     llm_base_url: str = "http://127.0.0.1:8000/v1"
-    llm_model_name: str = "/data/xyh/models/Qwen2.5-7B-Instruct"
+    llm_model_name: str = "/data/xyh/models/Qwen2.5-72B-Instruct"
     embedding_model_name: str = "nvidia/NV-Embed-v2"
     save_dir: str = "outputs/holorag"
     embedding_device: str = "cuda:1"
@@ -26,6 +26,7 @@ class HoloRAGConfig:
     entity_alias_threshold: float = 0.86
     entity_alias_top_k: int = 3
     linking_top_k: int = 5
+    fact_candidate_top_k: int = 24
     retrieval_top_k: int = 20
     entity_top_k: int = 12
     fact_top_k: int = 12

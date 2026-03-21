@@ -1,0 +1,902 @@
+2026-03-20 20:48:11,504 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading weights:   0%|          | 0/304 [00:00<?, ?it/s]Loading weights:   9%|▉         | 27/304 [00:00<00:01, 242.36it/s]Loading weights:  19%|█▉        | 57/304 [00:00<00:00, 262.22it/s]Loading weights:  28%|██▊       | 84/304 [00:00<00:00, 265.12it/s]Loading weights:  37%|███▋      | 112/304 [00:00<00:00, 266.61it/s]Loading weights:  46%|████▌     | 139/304 [00:00<00:00, 262.40it/s]Loading weights:  55%|█████▍    | 167/304 [00:00<00:00, 258.23it/s]Loading weights:  63%|██████▎   | 193/304 [00:00<00:00, 248.48it/s]Loading weights:  75%|███████▌  | 228/304 [00:00<00:00, 259.72it/s]Loading weights:  85%|████████▍ | 258/304 [00:00<00:00, 271.17it/s]Loading weights:  94%|█████████▍| 286/304 [00:01<00:00, 268.84it/s]Loading weights: 100%|██████████| 304/304 [00:01<00:00, 259.51it/s]
+2026-03-20 20:48:26,403 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-20 20:48:27,228 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-20 20:48:28,869 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-20 20:48:30,710 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/site-packages/transformers/modeling_attn_mask_utils.py:202: FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-03-20 20:48:33,339 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "What field does the author of Parallel Worlds work in?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.3,
+    "chunk": 0.5
+  },
+  "query_entities": [
+    "Parallel Worlds (book)"
+  ],
+  "raw_query_entities": [
+    "Parallel Worlds"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Parallel Worlds",
+      "node_id": "entity:title_anchor_parallel_worlds_book",
+      "resolved_text": "Parallel Worlds (book)",
+      "score": 0.7984,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.35,
+      "score_margin": 0.3434666666666667,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the author of the book Parallel Worlds?",
+    "What field does this author work in?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_parallel_worlds_book",
+      "score": 1.0925899798141427,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_physics_of_the_future",
+      "score": 0.5100792707308515,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:physics_of_the_impossible",
+      "score": 0.49804609564441293,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "score": 0.2744340918239521,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:northwest_coast_of_emona_harbour",
+      "score": 0.24921427378690533,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:michio_kaku",
+      "score": 0.24467037020122132,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hyperspace",
+      "score": 0.22539301385701976,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:detroit_michigan",
+      "score": 0.21915669945097843,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_pimpirev_ice_wall",
+      "score": 0.19404182643351275,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_joel_feinberg",
+      "score": 0.1716869531203787,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:physics_of_the_future_0",
+      "score": 0.15799496524399922,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "score": 0.15613584660953864,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:parallel_worlds_author_michio_kaku_sentence_parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_d",
+      "text": "Parallel Worlds author Michio Kaku",
+      "head_id": "entity:title_anchor_parallel_worlds_book",
+      "tail_id": "entity:michio_kaku",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "chunk_id": "chunk:parallel_worlds_book_0",
+      "document_index": 5,
+      "score": 0.2901702114879885
+    },
+    {
+      "fact_id": "fact:michio_kaku_authored_physics_of_the_impossible_sentence_physics_of_the_future_0_0_physics_of_the_future_how_science_will",
+      "text": "Michio Kaku authored Physics of the Impossible",
+      "head_id": "entity:michio_kaku",
+      "tail_id": "entity:physics_of_the_impossible",
+      "sentence_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "chunk_id": "chunk:physics_of_the_future_0",
+      "document_index": 3,
+      "score": 0.25813345668000487
+    },
+    {
+      "fact_id": "fact:pimpirev_ice_wall_runs_parallel_to_northwest_coast_of_emona_harbour_sentence_pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_",
+      "text": "Pimpirev Ice Wall runs parallel to northwest coast of Emona Harbour",
+      "head_id": "entity:title_anchor_pimpirev_ice_wall",
+      "tail_id": "entity:northwest_coast_of_emona_harbour",
+      "sentence_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "chunk_id": "chunk:pimpirev_ice_wall_0",
+      "document_index": 17,
+      "score": 0.24687246625155687
+    },
+    {
+      "fact_id": "fact:michio_kaku_authored_hyperspace_sentence_physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_de",
+      "text": "Michio Kaku authored Hyperspace",
+      "head_id": "entity:michio_kaku",
+      "tail_id": "entity:hyperspace",
+      "sentence_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "chunk_id": "chunk:physics_of_the_future_0",
+      "document_index": 3,
+      "score": 0.2230483480367017
+    },
+    {
+      "fact_id": "fact:joel_feinberg_born_in_detroit_michigan_sentence_joel_feinberg_0_0_joel_feinberg_october_19_1926_in_detroit_michigan_marc",
+      "text": "Joel Feinberg born in Detroit Michigan",
+      "head_id": "entity:title_anchor_joel_feinberg",
+      "tail_id": "entity:detroit_michigan",
+      "sentence_id": "sentence:joel_feinberg_0_0_joel_feinberg_october_19_1926_in_detroit_michigan_march_29_2004_in_tucson",
+      "chunk_id": "chunk:joel_feinberg_0",
+      "document_index": 15,
+      "score": 0.21681559110798496
+    },
+    {
+      "fact_id": "fact:physics_of_the_future_is_a_book_by_michio_kaku_sentence_physics_of_the_future_0_0_physics_of_the_future_how_science_will",
+      "text": "Physics of the Future is a book by Michio Kaku",
+      "head_id": "entity:title_anchor_physics_of_the_future",
+      "tail_id": "entity:michio_kaku",
+      "sentence_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "chunk_id": "chunk:physics_of_the_future_0",
+      "document_index": 3,
+      "score": 0.19795805340079936
+    },
+    {
+      "fact_id": "fact:pimpirev_ice_wall_is_situated_100_m_inland_from_the_northwest_coast_of_emona_harbour_sentence_pimpirev_ice_wall_0_0_pimp",
+      "text": "Pimpirev Ice Wall is situated 100 m inland from the northwest coast of Emona Harbour",
+      "head_id": "entity:title_anchor_pimpirev_ice_wall",
+      "tail_id": "entity:100_m_inland_from_the_northwest_coast_of_emona_harbour",
+      "sentence_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "chunk_id": "chunk:pimpirev_ice_wall_0",
+      "document_index": 17,
+      "score": 0.1365275715447717
+    },
+    {
+      "fact_id": "fact:joel_feinberg_was_american_political_and_legal_philosopher_sentence_joel_feinberg_0_0_joel_feinberg_october_19_1926_in_d",
+      "text": "Joel Feinberg was American political and legal philosopher",
+      "head_id": "entity:title_anchor_joel_feinberg",
+      "tail_id": "entity:american_political_and_legal_philosopher",
+      "sentence_id": "sentence:joel_feinberg_0_0_joel_feinberg_october_19_1926_in_detroit_michigan_march_29_2004_in_tucson",
+      "chunk_id": "chunk:joel_feinberg_0",
+      "document_index": 15,
+      "score": 0.1218760984467855
+    }
+  ],
+  "bridge_entities": [
+    "Michio Kaku"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the author of the book Parallel Worlds?",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score": 0.7625
+    },
+    {
+      "sub_question": "What field does this author work in?",
+      "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score": 0.67625
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+      "score": 0.11674185208636662,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:michio_kaku",
+      "score": 0.10445855988437268,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+      "score": 0.08535931877935438,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_parallel_worlds_book",
+      "score": 0.06951253325364995,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_physics_of_the_future",
+      "score": 0.05119274768500564,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:physics_of_the_impossible",
+      "score": 0.050909808108525315,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+      "score": 0.04514655697359316,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:joel_feinberg_0_0_joel_feinberg_october_19_1926_in_detroit_michigan_march_29_2004_in_tucson",
+      "score": 0.044009328331056356,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:physics_of_the_future_0",
+      "score": 0.03243408919734904,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_joel_feinberg",
+      "score": 0.03210117940391887,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hyperspace",
+      "score": 0.03177559914782759,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_pimpirev_ice_wall",
+      "score": 0.0310118843951776,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:parallel_worlds_book_0",
+      "score": 0.025316123969564168,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:physics_of_the_future_0_1_in_it_kaku_speculates_about_possible_future_technological_development_over_the_n",
+      "score": 0.021268586804724657,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:physics_of_the_future_0_2_he_interviews_notable_scientists_about_their_fields_of_research_and_lays_out_his",
+      "score": 0.014439014451759855,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:northwest_coast_of_emona_harbour",
+      "score": 0.014414536993246664,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:detroit_michigan",
+      "score": 0.013590132716120557,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:physics_of_the_future_0_3_the_book_was_on_the_new_york_times_bestseller_list_for_five_weeks",
+      "score": 0.0133396739593721,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:pimpirev_ice_wall_0",
+      "score": 0.012537299258866116,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:100_m_inland_from_the_northwest_coast_of_emona_harbour",
+      "score": 0.011124046705560027,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:parallel_worlds_book_0",
+      "passage_index": 5,
+      "title": "Parallel Worlds (book)",
+      "score": 0.08349079029272136,
+      "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+      "score_breakdown": {
+        "dense": 0.05110932366054256,
+        "graph": 0.05491291639140686,
+        "fact": 0.2593785824133393
+      }
+    },
+    {
+      "node_id": "chunk:physics_of_the_future_0",
+      "passage_index": 3,
+      "title": "Physics of the Future",
+      "score": 0.08328925170189191,
+      "text": "Physics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+      "score_breakdown": {
+        "dense": 0.0503184005308959,
+        "graph": 0.05978012237447534,
+        "fact": 0.25120063131704373
+      }
+    },
+    {
+      "node_id": "chunk:pimpirev_ice_wall_0",
+      "passage_index": 17,
+      "title": "Pimpirev Ice Wall",
+      "score": 0.08052900684170758,
+      "text": "Pimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+      "score_breakdown": {
+        "dense": 0.04982973909989018,
+        "graph": 0.052881635543419,
+        "fact": 0.24838773115828183
+      }
+    },
+    {
+      "node_id": "chunk:joel_feinberg_0",
+      "passage_index": 15,
+      "title": "Joel Feinberg",
+      "score": 0.07930486300747985,
+      "text": "Joel Feinberg\nJoel Feinberg (October 19, 1926 in Detroit, Michigan – March 29, 2004 in Tucson, Arizona) was an American political and legal philosopher. He is known for his work in the fields of ethics, action theory, philosophy of law, and political philosophy as well as individual rights and the authority of the state. Feinberg was one of the most influential figures in American jurisprudence of the last fifty years.",
+      "score_breakdown": {
+        "dense": 0.049921078231180305,
+        "graph": 0.05231103904543469,
+        "fact": 0.2410330551113351
+      }
+    },
+    {
+      "node_id": "chunk:jos_antunes_sobrinho_0",
+      "passage_index": 4,
+      "title": "José Antunes Sobrinho",
+      "score": 0.04221234036043433,
+      "text": "José Antunes Sobrinho\nBrasília has also been the focus of modern-day literature. Published in 2008, The World In Grey: Dom Bosco's Prophecy, by author Ryan J. Lucero, tells an apocalypticle story based on the famous prophecy from the late 19th century by the Italian saint Don Bosco. According to Don Bosco's prophecy: \"Between parallels 15 and 20, around a lake which shall be formed; A great civilization will thrive, and that will be the Promised Land.\" Brasília lies between the parallels 15° S and 20° S, where an artificial lake (Paranoá Lake) was formed. Don Bosco is Brasília's patron saint.",
+      "score_breakdown": {
+        "dense": 0.05014905805098774,
+        "graph": 0.048767861441303566,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:kim_vicente_0",
+      "passage_index": 6,
+      "title": "Kim Vicente",
+      "score": 0.042206073203931584,
+      "text": "Kim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".",
+      "score_breakdown": {
+        "dense": 0.0501254655649757,
+        "graph": 0.04879022381064982,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fictional_universe_of_harry_potter_0",
+      "passage_index": 11,
+      "title": "Fictional universe of Harry Potter",
+      "score": 0.042195308236099,
+      "text": "Fictional universe of Harry Potter\nThe fictional universe of British author J.K. Rowling's Harry Potter series of fantasy novels comprises two distinct societies: the Wizarding World and the Muggle world. In the novels, the Muggle world is the world inhabited by the non-magical majority, with which the Wizarding world exists coextensively, albeit mostly remaining hidden from the non-magical humans. The plot of the series is set in 1990s Britain, but in a veiled and separate shadow society wherein magic is commonly used and practised, and those who can use it live in self - enforced seclusion, hiding their abilities from the rest of the world. The term ``Wizarding World ''refers to the global wizard community that lives hidden in parallel with the Muggle world; the different terms refer to different communities within the same area rather than separate planets or worlds. Any new works taking place in this universe are released under the`` J.K. Rowling's Wizarding World'' brand.",
+      "score_breakdown": {
+        "dense": 0.05011690436890089,
+        "graph": 0.048770036110678365,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:michael_lambert_snowboarder_0",
+      "passage_index": 2,
+      "title": "Michael Lambert (snowboarder)",
+      "score": 0.04216989802654968,
+      "text": "Michael Lambert (snowboarder)\nMichael Lambert (born June 25, 1986) is a Canadian snowboarder who currently resides in Toronto, Ontario. Michael competes in the Alpine disciplines, Parallel GS and Parallel Slalom. Lambert has been on the Canadian National Team since 2002 and is currently working with coaches Mark Fawcett and Sylvain Jean. He is also the Slap cup champion of Stoney island",
+      "score_breakdown": {
+        "dense": 0.0500683244351228,
+        "graph": 0.04877439862410714,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:timothy_gallwey_0",
+      "passage_index": 7,
+      "title": "Timothy Gallwey",
+      "score": 0.04212177195177359,
+      "text": "Timothy Gallwey\nW. Timothy Gallwey (born 1938 in San Francisco) is an author who has written a series of books in which he has set forth a new methodology for coaching and for the development of personal and professional excellence in a variety of fields that he calls \"the Inner Game\". Since he began writing in the 1970s, his books include \"The Inner Game of Tennis\", \"The Inner Game of Golf\", \"The Inner Game of Music\" (with Barry Green), \"Inner Skiing\" and \"The Inner Game of Work\". Gallwey's seminal work is \"The Inner Game of Tennis\", with more than one million copies in print. Besides sports, his training methods have been applied to the fields of business, health, and education.",
+      "score_breakdown": {
+        "dense": 0.04996453900456819,
+        "graph": 0.04880425166420363,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:asima_chatterjee_0",
+      "passage_index": 9,
+      "title": "Asima Chatterjee",
+      "score": 0.04211201970622093,
+      "text": "Asima Chatterjee\nAsima Chatterjee (23 September 1917 – 22 November 2006) was an Indian organic chemist noted for her work in the fields of organic chemistry and phytomedicine. Her most notable work includes research on vinca alkaloids, the development of anti-epileptic drugs, and development of anti-malarial drugs. She also authored a considerable volume of work on medicinal plants of the Indian subcontinent. She was the first woman to receive a Doctorate of Science from an Indian university.",
+      "score_breakdown": {
+        "dense": 0.049978420676520106,
+        "graph": 0.048746294447116235,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:michio_kaku",
+        "score": 0.10445855988437268,
+        "text": "Michio Kaku",
+        "metadata": {
+          "canonical_name": "Michio Kaku",
+          "aliases": [
+            "MK",
+            "Michio Kaku"
+          ],
+          "surface_forms": [
+            "MK",
+            "Michio Kaku"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_parallel_worlds_book",
+        "score": 0.06951253325364995,
+        "text": "Parallel Worlds (book)",
+        "metadata": {
+          "canonical_name": "Parallel Worlds (book)",
+          "aliases": [
+            "PW",
+            "Parallel Worlds"
+          ],
+          "surface_forms": [
+            "PW",
+            "Parallel Worlds"
+          ],
+          "title_anchor": "Parallel Worlds (book)"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:physics_of_the_future_0_0_physics_of_the_future_how_science_will_shape_human_destiny_and_our_daily_lives",
+        "score": 0.11674185208636662,
+        "text": "Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\".",
+        "metadata": {
+          "title": "Physics of the Future",
+          "chunk_id": "chunk:physics_of_the_future_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Physics of the Future",
+              "relation": "is a book by",
+              "tail": "Michio Kaku"
+            },
+            {
+              "head": "Michio Kaku",
+              "relation": "authored",
+              "tail": "Hyperspace"
+            },
+            {
+              "head": "Michio Kaku",
+              "relation": "authored",
+              "tail": "Physics of the Impossible"
+            }
+          ],
+          "entities": [
+            "Physics of the Future",
+            "Michio Kaku",
+            "Hyperspace",
+            "Physics of the Impossible"
+          ],
+          "entity_ids": [
+            "entity:hyperspace",
+            "entity:michio_kaku",
+            "entity:physics_of_the_impossible",
+            "entity:title_anchor_physics_of_the_future"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "score": 0.08535931877935438,
+        "text": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "metadata": {
+          "title": "Parallel Worlds (book)",
+          "chunk_id": "chunk:parallel_worlds_book_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Parallel Worlds",
+              "relation": "author",
+              "tail": "Michio Kaku"
+            }
+          ],
+          "entities": [
+            "Parallel Worlds",
+            "Michio Kaku"
+          ],
+          "entity_ids": [
+            "entity:michio_kaku",
+            "entity:title_anchor_parallel_worlds_book"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pimpirev_ice_wall_0_0_pimpirev_ice_wall_is_the_rectilinear_ice_slope_running_parallel_to_and_some_1",
+        "score": 0.04514655697359316,
+        "text": "Pimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_id": "chunk:pimpirev_ice_wall_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "is located on",
+              "tail": "Livingston Island"
+            },
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "runs parallel to",
+              "tail": "northwest coast of Emona Harbour"
+            },
+            {
+              "head": "Pimpirev Ice Wall",
+              "relation": "is situated",
+              "tail": "100 m inland from the northwest coast of Emona Harbour"
+            }
+          ],
+          "entities": [
+            "Pimpirev Ice Wall",
+            "Emona Harbour",
+            "Livingston Island",
+            "Antarctica"
+          ],
+          "entity_ids": [
+            "entity:100_m_inland_from_the_northwest_coast_of_emona_harbour",
+            "entity:antarctica",
+            "entity:emona_harbour",
+            "entity:livingston_island",
+            "entity:northwest_coast_of_emona_harbour",
+            "entity:title_anchor_pimpirev_ice_wall"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:joel_feinberg_0_0_joel_feinberg_october_19_1926_in_detroit_michigan_march_29_2004_in_tucson",
+        "score": 0.044009328331056356,
+        "text": "Joel Feinberg (October 19, 1926 in Detroit, Michigan – March 29, 2004 in Tucson, Arizona) was an American political and legal philosopher.",
+        "metadata": {
+          "title": "Joel Feinberg",
+          "chunk_id": "chunk:joel_feinberg_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Joel Feinberg",
+              "relation": "born on",
+              "tail": "October 19 1926"
+            },
+            {
+              "head": "Joel Feinberg",
+              "relation": "born in",
+              "tail": "Detroit Michigan"
+            },
+            {
+              "head": "Joel Feinberg",
+              "relation": "died on",
+              "tail": "March 29 2004"
+            },
+            {
+              "head": "Joel Feinberg",
+              "relation": "died in",
+              "tail": "Tucson Arizona"
+            },
+            {
+              "head": "Joel Feinberg",
+              "relation": "was",
+              "tail": "American political and legal philosopher"
+            }
+          ],
+          "entities": [
+            "Joel Feinberg",
+            "Detroit Michigan",
+            "Tucson Arizona"
+          ],
+          "entity_ids": [
+            "entity:american_political_and_legal_philosopher",
+            "entity:detroit_michigan",
+            "entity:march_29_2004",
+            "entity:october_19_1926",
+            "entity:title_anchor_joel_feinberg",
+            "entity:tucson_arizona"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:physics_of_the_future_0",
+        "score": 0.03243408919734904,
+        "text": "Physics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+        "metadata": {
+          "title": "Physics of the Future",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:hyperspace",
+            "entity:kaku",
+            "entity:michio_kaku",
+            "entity:new_york_times_bestseller",
+            "entity:physics_of_the_impossible",
+            "entity:title_anchor_physics_of_the_future"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:parallel_worlds_book_0",
+        "score": 0.025316123969564168,
+        "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "metadata": {
+          "title": "Parallel Worlds (book)",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:michio_kaku",
+            "entity:title_anchor_parallel_worlds_book"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:pimpirev_ice_wall_0",
+        "score": 0.012537299258866116,
+        "text": "Pimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+        "metadata": {
+          "title": "Pimpirev Ice Wall",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:100_m_inland_from_the_northwest_coast_of_emona_harbour",
+            "entity:alexander_island",
+            "entity:antarctica",
+            "entity:approx",
+            "entity:bulgarian_antarctic_campaigns",
+            "entity:christo_pimpirev",
+            "entity:emona_harbour",
+            "entity:geological_field_work_on_alexander_island",
+            "entity:livingston_island",
+            "entity:northwest_coast_of_emona_harbour",
+            "entity:title_anchor_pimpirev_ice_wall"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:joel_feinberg_0",
+        "score": 0.009710465265886304,
+        "text": "Joel Feinberg\nJoel Feinberg (October 19, 1926 in Detroit, Michigan – March 29, 2004 in Tucson, Arizona) was an American political and legal philosopher. He is known for his work in the fields of ethics, action theory, philosophy of law, and political philosophy as well as individual rights and the authority of the state. Feinberg was one of the most influential figures in American jurisprudence of the last fifty years.",
+        "metadata": {
+          "title": "Joel Feinberg",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:american_jurisprudence",
+            "entity:american_political_and_legal_philosopher",
+            "entity:detroit_michigan",
+            "entity:feinberg",
+            "entity:march_29_2004",
+            "entity:october_19_1926",
+            "entity:title_anchor_joel_feinberg",
+            "entity:tucson_arizona"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:kim_vicente_0",
+        "score": 0.0012793096644965248,
+        "text": "Kim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".",
+        "metadata": {
+          "title": "Kim Vicente",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:cognitive_work_analysis",
+            "entity:mechanical_and_industrial_engineering",
+            "entity:title_anchor_kim_vicente",
+            "entity:university_of_toronto"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:nobel_prize_in_literature_0",
+        "score": 0.0012019350040061477,
+        "text": "Nobel Prize in Literature\nThe Nobel Prize in Literature (Swedish: Nobelpriset i litteratur) is a Swedish literature prize that is awarded annually, since 1901, to an author from any country who has, in the words of the will of Swedish industrialist Alfred Nobel, produced ``in the field of literature the most outstanding work in an ideal direction ''(original Swedish:`` den som inom litteraturen har producerat det mest framstående verket i en idealisk riktning''). Though individual works are sometimes cited as being particularly noteworthy, the award is based on an author's body of work as a whole. The Swedish Academy decides who, if anyone, will receive the prize. The academy announces the name of the laureate in early October. It is one of the five Nobel Prizes established by the will of Alfred Nobel in 1895. It will not be awarded in 2018, but two names will be awarded in 2019.",
+        "metadata": {
+          "title": "Nobel Prize in Literature",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:alfred_nobel",
+            "entity:five_nobel_prizes",
+            "entity:nobel_prizes",
+            "entity:october",
+            "entity:swedish",
+            "entity:swedish_academy",
+            "entity:though",
+            "entity:title_anchor_nobel_prize_in_literature",
+            "entity:will_of_alfred_nobel"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Parallel Worlds (book)\nParallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.\n\nPhysics of the Future\nPhysics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.\n\nPimpirev Ice Wall\nPimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.\n\nJoel Feinberg\nJoel Feinberg\nJoel Feinberg (October 19, 1926 in Detroit, Michigan – March 29, 2004 in Tucson, Arizona) was an American political and legal philosopher. He is known for his work in the fields of ethics, action theory, philosophy of law, and political philosophy as well as individual rights and the authority of the state. Feinberg was one of the most influential figures in American jurisprudence of the last fifty years.\n\nJosé Antunes Sobrinho\nJosé Antunes Sobrinho\nBrasília has also been the focus of modern-day literature. Published in 2008, The World In Grey: Dom Bosco's Prophecy, by author Ryan J. Lucero, tells an apocalypticle story based on the famous prophecy from the late 19th century by the Italian saint Don Bosco. According to Don Bosco's prophecy: \"Between parallels 15 and 20, around a lake which shall be formed; A great civilization will thrive, and that will be the Promised Land.\" Brasília lies between the parallels 15° S and 20° S, where an artificial lake (Paranoá Lake) was formed. Don Bosco is Brasília's patron saint.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:parallel_worlds_book_0",
+        "passage_index": 5,
+        "title": "Parallel Worlds (book)",
+        "score": 0.08349079029272136,
+        "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score_breakdown": {
+          "dense": 0.05110932366054256,
+          "graph": 0.05491291639140686,
+          "fact": 0.2593785824133393
+        }
+      },
+      {
+        "node_id": "chunk:physics_of_the_future_0",
+        "passage_index": 3,
+        "title": "Physics of the Future",
+        "score": 0.08328925170189191,
+        "text": "Physics of the Future\nPhysics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\". In it Kaku speculates about possible future technological development over the next 100 years. He interviews notable scientists about their fields of research and lays out his vision of coming developments in medicine, computing, artificial intelligence, nanotechnology, and energy production. The book was on the New York Times Bestseller List for five weeks.",
+        "score_breakdown": {
+          "dense": 0.0503184005308959,
+          "graph": 0.05978012237447534,
+          "fact": 0.25120063131704373
+        }
+      },
+      {
+        "node_id": "chunk:pimpirev_ice_wall_0",
+        "passage_index": 17,
+        "title": "Pimpirev Ice Wall",
+        "score": 0.08052900684170758,
+        "text": "Pimpirev Ice Wall\nPimpirev Ice Wall () is the rectilinear ice slope running parallel to and some 100 m inland from the northwest coast of Emona Harbour in Livingston Island, Antarctica. Approx. 50 m high, extending from the north corner of Emona Harbour 3,700 m in west-southwest direction. Named for Christo Pimpirev, leader of the Bulgarian Antarctic campaigns during the 1993/94, 1994/95, 1995/96, and subsequent seasons, who also conducted geological field work on Alexander Island during the summer of 1987/88.",
+        "score_breakdown": {
+          "dense": 0.04982973909989018,
+          "graph": 0.052881635543419,
+          "fact": 0.24838773115828183
+        }
+      },
+      {
+        "node_id": "chunk:joel_feinberg_0",
+        "passage_index": 15,
+        "title": "Joel Feinberg",
+        "score": 0.07930486300747985,
+        "text": "Joel Feinberg\nJoel Feinberg (October 19, 1926 in Detroit, Michigan – March 29, 2004 in Tucson, Arizona) was an American political and legal philosopher. He is known for his work in the fields of ethics, action theory, philosophy of law, and political philosophy as well as individual rights and the authority of the state. Feinberg was one of the most influential figures in American jurisprudence of the last fifty years.",
+        "score_breakdown": {
+          "dense": 0.049921078231180305,
+          "graph": 0.05231103904543469,
+          "fact": 0.2410330551113351
+        }
+      },
+      {
+        "node_id": "chunk:jos_antunes_sobrinho_0",
+        "passage_index": 4,
+        "title": "José Antunes Sobrinho",
+        "score": 0.04221234036043433,
+        "text": "José Antunes Sobrinho\nBrasília has also been the focus of modern-day literature. Published in 2008, The World In Grey: Dom Bosco's Prophecy, by author Ryan J. Lucero, tells an apocalypticle story based on the famous prophecy from the late 19th century by the Italian saint Don Bosco. According to Don Bosco's prophecy: \"Between parallels 15 and 20, around a lake which shall be formed; A great civilization will thrive, and that will be the Promised Land.\" Brasília lies between the parallels 15° S and 20° S, where an artificial lake (Paranoá Lake) was formed. Don Bosco is Brasília's patron saint.",
+        "score_breakdown": {
+          "dense": 0.05014905805098774,
+          "graph": 0.048767861441303566,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:kim_vicente_0",
+        "passage_index": 6,
+        "title": "Kim Vicente",
+        "score": 0.042206073203931584,
+        "text": "Kim Vicente\nKim Vicente is an inactive professor of Mechanical and Industrial Engineering at the University of Toronto. He was previously a researcher, teacher, and author in the field of human factors. He is best known for his two books: \"\" and \"Cognitive Work Analysis\".",
+        "score_breakdown": {
+          "dense": 0.0501254655649757,
+          "graph": 0.04879022381064982,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fictional_universe_of_harry_potter_0",
+        "passage_index": 11,
+        "title": "Fictional universe of Harry Potter",
+        "score": 0.042195308236099,
+        "text": "Fictional universe of Harry Potter\nThe fictional universe of British author J.K. Rowling's Harry Potter series of fantasy novels comprises two distinct societies: the Wizarding World and the Muggle world. In the novels, the Muggle world is the world inhabited by the non-magical majority, with which the Wizarding world exists coextensively, albeit mostly remaining hidden from the non-magical humans. The plot of the series is set in 1990s Britain, but in a veiled and separate shadow society wherein magic is commonly used and practised, and those who can use it live in self - enforced seclusion, hiding their abilities from the rest of the world. The term ``Wizarding World ''refers to the global wizard community that lives hidden in parallel with the Muggle world; the different terms refer to different communities within the same area rather than separate planets or worlds. Any new works taking place in this universe are released under the`` J.K. Rowling's Wizarding World'' brand.",
+        "score_breakdown": {
+          "dense": 0.05011690436890089,
+          "graph": 0.048770036110678365,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:michael_lambert_snowboarder_0",
+        "passage_index": 2,
+        "title": "Michael Lambert (snowboarder)",
+        "score": 0.04216989802654968,
+        "text": "Michael Lambert (snowboarder)\nMichael Lambert (born June 25, 1986) is a Canadian snowboarder who currently resides in Toronto, Ontario. Michael competes in the Alpine disciplines, Parallel GS and Parallel Slalom. Lambert has been on the Canadian National Team since 2002 and is currently working with coaches Mark Fawcett and Sylvain Jean. He is also the Slap cup champion of Stoney island",
+        "score_breakdown": {
+          "dense": 0.0500683244351228,
+          "graph": 0.04877439862410714,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:timothy_gallwey_0",
+        "passage_index": 7,
+        "title": "Timothy Gallwey",
+        "score": 0.04212177195177359,
+        "text": "Timothy Gallwey\nW. Timothy Gallwey (born 1938 in San Francisco) is an author who has written a series of books in which he has set forth a new methodology for coaching and for the development of personal and professional excellence in a variety of fields that he calls \"the Inner Game\". Since he began writing in the 1970s, his books include \"The Inner Game of Tennis\", \"The Inner Game of Golf\", \"The Inner Game of Music\" (with Barry Green), \"Inner Skiing\" and \"The Inner Game of Work\". Gallwey's seminal work is \"The Inner Game of Tennis\", with more than one million copies in print. Besides sports, his training methods have been applied to the fields of business, health, and education.",
+        "score_breakdown": {
+          "dense": 0.04996453900456819,
+          "graph": 0.04880425166420363,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:asima_chatterjee_0",
+        "passage_index": 9,
+        "title": "Asima Chatterjee",
+        "score": 0.04211201970622093,
+        "text": "Asima Chatterjee\nAsima Chatterjee (23 September 1917 – 22 November 2006) was an Indian organic chemist noted for her work in the fields of organic chemistry and phytomedicine. Her most notable work includes research on vinca alkaloids, the development of anti-epileptic drugs, and development of anti-malarial drugs. She also authored a considerable volume of work on medicinal plants of the Indian subcontinent. She was the first woman to receive a Doctorate of Science from an Indian university.",
+        "score_breakdown": {
+          "dense": 0.049978420676520106,
+          "graph": 0.048746294447116235,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the author of the book Parallel Worlds?",
+        "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score": 0.7625
+      },
+      {
+        "sub_question": "What field does this author work in?",
+        "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+        "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+        "score": 0.67625
+      }
+    ]
+  },
+  "sample_metadata": {
+    "sample_id": "2hop__682872_516436",
+    "question": "What field does the author of Parallel Worlds work in?",
+    "answer": "physic",
+    "answer_aliases": [
+      "Physic"
+    ],
+    "question_decomposition": [
+      "Parallel Worlds >> author",
+      "#1 >> field of work"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "physic",
+    "gold_aliases": [
+      "Physic"
+    ],
+    "matched": true,
+    "matched_candidates": [
+      "physic",
+      "Physic"
+    ]
+  }
+}

@@ -1,0 +1,933 @@
+{
+  "query": "Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?",
+  "alpha": {
+    "entity": 0.1,
+    "sentence": 0.3,
+    "chunk": 0.6
+  },
+  "query_entities": [
+    "August"
+  ],
+  "raw_query_entities": [
+    "Tsarevich Ivan Ivanovich",
+    "August",
+    "Fili"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Tsarevich Ivan Ivanovich",
+      "node_id": "entity:title_anchor_ivan_ivanovich_artobolevski",
+      "resolved_text": "Ivan Ivanovich Artobolevski",
+      "score": 0.5197142857142857,
+      "alias_score": 0.5,
+      "relation_score": 0.7,
+      "context_score": 0.38461538461538464,
+      "compatibility_score": 0.5,
+      "score_margin": 0.0077142857142856736,
+      "confident": false
+    },
+    {
+      "mention": "August",
+      "node_id": "entity:august",
+      "resolved_text": "August",
+      "score": 0.6846666666666666,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.35,
+      "score_margin": 0.2,
+      "confident": true
+    },
+    {
+      "mention": "Fili",
+      "node_id": "entity:fili",
+      "resolved_text": "Fili",
+      "score": 0.6000000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.38461538461538464,
+      "compatibility_score": 0.75,
+      "score_margin": 0.03803174603174608,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "In which country did a bombing occur in Fili in August 2004?",
+    "Who is the mother of Tsarevich Ivan Ivanovich in that country?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:august",
+      "score": 1.0030491280153975,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:london",
+      "score": 0.24794593416522473,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+      "score": 0.22933146377800495,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:ira_nelson_morris",
+      "score": 0.2290618804357526,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:david_frasier_and_craig_wiseman",
+      "score": 0.21846607045032934,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chikovani",
+      "score": 0.2030188031410372,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ira_victor_morris",
+      "score": 0.19287384261337553,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ivan_morris",
+      "score": 0.19121793126487582,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:fili",
+      "score": 0.18289002808133822,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kili",
+      "score": 0.1828854890002481,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_woman_with_you",
+      "score": 0.17096223850652864,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:count_ivan_ivanovich_tolstoy",
+      "score": 0.16941992929923205,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:ivan_morris_born_in_london_sentence_ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parenta",
+      "text": "Ivan Morris born in London",
+      "head_id": "entity:title_anchor_ivan_morris",
+      "tail_id": "entity:london",
+      "sentence_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+      "chunk_id": "chunk:ivan_morris_0",
+      "document_index": 18,
+      "score": 0.24595608419814988
+    },
+    {
+      "fact_id": "fact:woman_with_you_written_by_david_frasier_and_craig_wiseman_sentence_the_woman_with_you_0_0_the_woman_with_you_is_a_song_w",
+      "text": "Woman with You written by David Frasier and Craig Wiseman",
+      "head_id": "entity:title_anchor_the_woman_with_you",
+      "tail_id": "entity:david_frasier_and_craig_wiseman",
+      "sentence_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+      "chunk_id": "chunk:the_woman_with_you_0",
+      "document_index": 13,
+      "score": 0.2164767126447051
+    },
+    {
+      "fact_id": "fact:chikovani_related_to_august_sentence_giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surnam",
+      "text": "Chikovani related_to August",
+      "head_id": "entity:chikovani",
+      "tail_id": "entity:august",
+      "sentence_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+      "chunk_id": "chunk:giorgi_kvinitadze_0",
+      "document_index": 0,
+      "score": 0.2010296974428527
+    },
+    {
+      "fact_id": "fact:ira_victor_morris_father_of_ivan_morris_sentence_ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_sw",
+      "text": "Ira Victor Morris father of Ivan Morris",
+      "head_id": "entity:ira_victor_morris",
+      "tail_id": "entity:title_anchor_ivan_morris",
+      "sentence_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+      "chunk_id": "chunk:ivan_morris_0",
+      "document_index": 18,
+      "score": 0.19088490036312716
+    },
+    {
+      "fact_id": "fact:fili_with_his_brother_kili_sentence_list_of_the_hobbit_characters_0_0_fili_who_with_his_brother_kili_was_the_youngest_dw",
+      "text": "Fili with his brother Kili",
+      "head_id": "entity:fili",
+      "tail_id": "entity:kili",
+      "sentence_id": "sentence:list_of_the_hobbit_characters_0_0_fili_who_with_his_brother_kili_was_the_youngest_dwarf_in_the_company_and_theref",
+      "chunk_id": "chunk:list_of_the_hobbit_characters_0",
+      "document_index": 10,
+      "score": 0.18089670605006064
+    },
+    {
+      "fact_id": "fact:count_ivan_ivanovich_tolstoy_was_imperial_russian_politician_sentence_ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_to",
+      "text": "Count Ivan Ivanovich Tolstoy was Imperial Russian politician",
+      "head_id": "entity:count_ivan_ivanovich_tolstoy",
+      "tail_id": "entity:imperial_russian_politician",
+      "sentence_id": "sentence:ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_tolstoy_1858_1916_was_an_imperial_russian_politician",
+      "chunk_id": "chunk:ivan_ivanovich_tolstoy_0",
+      "document_index": 16,
+      "score": 0.16941992929923205
+    },
+    {
+      "fact_id": "fact:ivan_morris_parentage_mixed_american_and_swedish_sentence_ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_americ",
+      "text": "Ivan Morris parentage mixed American and Swedish",
+      "head_id": "entity:title_anchor_ivan_morris",
+      "tail_id": "entity:mixed_american_and_swedish",
+      "sentence_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+      "chunk_id": "chunk:ivan_morris_0",
+      "document_index": 18,
+      "score": 0.13082871779354144
+    },
+    {
+      "fact_id": "fact:woman_with_you_recorded_by_kenny_chesney_sentence_the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_f",
+      "text": "Woman with You recorded by Kenny Chesney",
+      "head_id": "entity:title_anchor_the_woman_with_you",
+      "tail_id": "entity:kenny_chesney",
+      "sentence_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+      "chunk_id": "chunk:the_woman_with_you_0",
+      "document_index": 13,
+      "score": 0.12145963867117252
+    }
+  ],
+  "bridge_entities": [
+    "Chikovani",
+    "Giorgi Kvinitadze",
+    "Georgy Ivanovich Kvinitadze",
+    "Georgian",
+    "Imperial Russian",
+    "Democratic Republic"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "In which country did a bombing occur in Fili in August 2004?",
+      "sentence_id": "sentence:the_woman_with_you_0_1_it_was_released_in_august_2004_as_the_fourth_single_from_chesney_s_2004_album_w",
+      "sentence": "It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\".",
+      "score": 0.482
+    },
+    {
+      "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich in that country?",
+      "sentence_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+      "sentence": "Giorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia.",
+      "score": 0.6235714285714287
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+      "score": 0.0570293314504305,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:august",
+      "score": 0.04707625025152205,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+      "score": 0.04634874162173754,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+      "score": 0.04542460225089079,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ira_victor_morris",
+      "score": 0.02933545611589935,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_woman_with_you_0_1_it_was_released_in_august_2004_as_the_fourth_single_from_chesney_s_2004_album_w",
+      "score": 0.028030752343470747,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_ivan_morris",
+      "score": 0.02788281315218845,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_woman_with_you",
+      "score": 0.026025582294399656,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_tolstoy_1858_1916_was_an_imperial_russian_politician",
+      "score": 0.025107219102878883,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:list_of_the_hobbit_characters_0_0_fili_who_with_his_brother_kili_was_the_youngest_dwarf_in_the_company_and_theref",
+      "score": 0.021317662287328905,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:chikovani",
+      "score": 0.020500403157701654,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:fili",
+      "score": 0.01856562667734754,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:ivan_morris_0",
+      "score": 0.01827184580562897,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:ira_nelson_morris",
+      "score": 0.018120212127766877,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:the_woman_with_you_0",
+      "score": 0.01806811430344183,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:songs_of_the_american_spirit_0_1_the_album_was_released_august_24_2004_just_six_days_after_the_death_of_charlie",
+      "score": 0.01803773404462056,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:london",
+      "score": 0.016513711003334847,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:count_ivan_ivanovich_tolstoy",
+      "score": 0.015543769925005075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:imperial_russian_politician",
+      "score": 0.015543769925005075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kenny_chesney",
+      "score": 0.015221924227056854,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:ivan_morris_0",
+      "passage_index": 18,
+      "title": "Ivan Morris",
+      "score": 0.07541989458695925,
+      "text": "Ivan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.",
+      "score_breakdown": {
+        "dense": 0.05009704569447256,
+        "graph": 0.05517855816563268,
+        "fact": 0.20875301336873026
+      }
+    },
+    {
+      "node_id": "chunk:the_woman_with_you_0",
+      "passage_index": 13,
+      "title": "The Woman with You",
+      "score": 0.07416182791388978,
+      "text": "The Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.",
+      "score_breakdown": {
+        "dense": 0.04976549514239528,
+        "graph": 0.05462488815444276,
+        "fact": 0.20268892759493035
+      }
+    },
+    {
+      "node_id": "chunk:giorgi_kvinitadze_0",
+      "passage_index": 0,
+      "title": "Giorgi Kvinitadze",
+      "score": 0.07312850389630346,
+      "text": "Giorgi Kvinitadze\nGiorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia. After sovietization of Georgia, Kvinitadze went into exile to France, where he wrote his memoirs of the 1917–1921 events in Georgia.",
+      "score_breakdown": {
+        "dense": 0.04993426346296815,
+        "graph": 0.05242450674880875,
+        "fact": 0.19958204644685565
+      }
+    },
+    {
+      "node_id": "chunk:list_of_the_hobbit_characters_0",
+      "passage_index": 10,
+      "title": "List of The Hobbit characters",
+      "score": 0.0719785271196099,
+      "text": "List of The Hobbit characters\nFili, who with his brother Kili was the youngest dwarf in the company and therefore useful for his keen eyesight. He wore a blue hood and grew a yellow beard.",
+      "score_breakdown": {
+        "dense": 0.04994581277379199,
+        "graph": 0.050559079433797824,
+        "fact": 0.1956040417592331
+      }
+    },
+    {
+      "node_id": "chunk:ivan_ivanovich_tolstoy_0",
+      "passage_index": 16,
+      "title": "Ivan Ivanovich Tolstoy",
+      "score": 0.0719175705490957,
+      "text": "Ivan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+      "score_breakdown": {
+        "dense": 0.04999126219347287,
+        "graph": 0.05138860239382674,
+        "fact": 0.1933719708302506
+      }
+    },
+    {
+      "node_id": "chunk:songs_of_the_american_spirit_0",
+      "passage_index": 2,
+      "title": "Songs of the American Spirit",
+      "score": 0.04248093600847867,
+      "text": "Songs of the American Spirit\nSongs of the American Spirit is the last studio album by the progressive bluegrass band Country Gentlemen. The album was released August 24, 2004, just six days after the death of Charlie Waller.",
+      "score_breakdown": {
+        "dense": 0.04969811903300144,
+        "graph": 0.05048990180109292,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0",
+      "passage_index": 8,
+      "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+      "score": 0.04239538205507081,
+      "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy.",
+      "score_breakdown": {
+        "dense": 0.0504471568187392,
+        "graph": 0.04883148601588084,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:patrick_cobbold_0",
+      "passage_index": 11,
+      "title": "Patrick Cobbold",
+      "score": 0.042381626944109574,
+      "text": "Patrick Cobbold\nHe was educated with his elder brother John at Wellesley House and Eton College. He was 10 when their father, Lieutenant Colonel Ivan Cobbold, was killed in the Guards Chapel, London, on 19 June 1944 when a flying bomb (V1) hit the Chapel during the Sunday morning service.",
+      "score_breakdown": {
+        "dense": 0.05004028954202246,
+        "graph": 0.0495315589866574,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:andre_fili_0",
+      "passage_index": 12,
+      "title": "Andre Fili",
+      "score": 0.04237567297278241,
+      "text": "Andre Fili\nAndre Fili (born June 25, 1990) is an American mixed martial artist who competes in the Featherweight division. Fili is of Samoan and Native Hawaiian descent and is currently signed with the Ultimate Fighting Championship (UFC).",
+      "score_breakdown": {
+        "dense": 0.04984139659734845,
+        "graph": 0.04987634948080254,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:august_2004_moscow_metro_bombing_0",
+      "passage_index": 19,
+      "title": "August 2004 Moscow Metro bombing",
+      "score": 0.042373430906756854,
+      "text": "August 2004 Moscow Metro bombing\nThe official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004. The deaths included the bomber and her accomplice, Nikolay Kipkeev (Kipkeyev), the head of an Islamic militant group Karachay Jamaat from the republic of Karachay–Cherkessia, as the bomb apparently exploded prematurely while the two were standing in the entrance hall of the metro station.",
+      "score_breakdown": {
+        "dense": 0.05040166090504771,
+        "graph": 0.04884172469660205,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:august",
+        "score": 0.04707625025152205,
+        "text": "August",
+        "metadata": {
+          "canonical_name": "August",
+          "aliases": [
+            "August"
+          ],
+          "surface_forms": [
+            "August"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:ivan_morris_0_0_ivan_morris_was_born_in_london_of_mixed_american_and_swedish_parentage_to_edita",
+        "score": 0.0570293314504305,
+        "text": "Ivan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris).",
+        "metadata": {
+          "title": "Ivan Morris",
+          "chunk_id": "chunk:ivan_morris_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Ivan Morris",
+              "relation": "born in",
+              "tail": "London"
+            },
+            {
+              "head": "Ivan Morris",
+              "relation": "parentage",
+              "tail": "mixed American and Swedish"
+            },
+            {
+              "head": "Ira Victor Morris",
+              "relation": "father of",
+              "tail": "Ivan Morris"
+            },
+            {
+              "head": "Ira Nelson Morris",
+              "relation": "father of",
+              "tail": "Ira Victor Morris"
+            },
+            {
+              "head": "Nelson Morris",
+              "relation": "grandfather of",
+              "tail": "Ira Victor Morris"
+            }
+          ],
+          "entities": [
+            "Ivan Morris",
+            "London",
+            "Edita Morris",
+            "Ira Victor Morris",
+            "Ira Nelson Morris",
+            "Nelson Morris"
+          ],
+          "entity_ids": [
+            "entity:edita_morris",
+            "entity:ira_nelson_morris",
+            "entity:ira_victor_morris",
+            "entity:london",
+            "entity:mixed_american_and_swedish",
+            "entity:nelson_morris",
+            "entity:title_anchor_ivan_morris"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+        "score": 0.04634874162173754,
+        "text": "\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney.",
+        "metadata": {
+          "title": "The Woman with You",
+          "chunk_id": "chunk:the_woman_with_you_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Woman with You",
+              "relation": "written by",
+              "tail": "David Frasier and Craig Wiseman"
+            },
+            {
+              "head": "Woman with You",
+              "relation": "recorded by",
+              "tail": "Kenny Chesney"
+            }
+          ],
+          "entities": [
+            "Woman with You",
+            "David Frasier",
+            "Craig Wiseman",
+            "Kenny Chesney"
+          ],
+          "entity_ids": [
+            "entity:craig_wiseman",
+            "entity:david_frasier",
+            "entity:david_frasier_and_craig_wiseman",
+            "entity:kenny_chesney",
+            "entity:title_anchor_the_woman_with_you"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+        "score": 0.04542460225089079,
+        "text": "Giorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia.",
+        "metadata": {
+          "title": "Giorgi Kvinitadze",
+          "chunk_id": "chunk:giorgi_kvinitadze_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Giorgi Kvinitadze",
+              "relation": "related_to",
+              "tail": "Georgy Ivanovich Kvinitadze"
+            },
+            {
+              "head": "Georgy Ivanovich Kvinitadze",
+              "relation": "related_to",
+              "tail": "Chikovani"
+            },
+            {
+              "head": "Chikovani",
+              "relation": "related_to",
+              "tail": "August"
+            }
+          ],
+          "entities": [
+            "Giorgi Kvinitadze",
+            "Georgy Ivanovich Kvinitadze",
+            "Chikovani",
+            "August",
+            "Georgian",
+            "Imperial Russian",
+            "Democratic Republic",
+            "Georgia"
+          ],
+          "entity_ids": [
+            "entity:august",
+            "entity:chikovani",
+            "entity:democratic_republic",
+            "entity:georgia",
+            "entity:georgian",
+            "entity:georgy_ivanovich_kvinitadze",
+            "entity:imperial_russian",
+            "entity:title_anchor_giorgi_kvinitadze"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_woman_with_you_0_1_it_was_released_in_august_2004_as_the_fourth_single_from_chesney_s_2004_album_w",
+        "score": 0.028030752343470747,
+        "text": "It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\".",
+        "metadata": {
+          "title": "The Woman with You",
+          "chunk_id": "chunk:the_woman_with_you_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "August",
+              "relation": "related_to",
+              "tail": "Chesney"
+            },
+            {
+              "head": "Chesney",
+              "relation": "related_to",
+              "tail": "Sun Goes Down"
+            }
+          ],
+          "entities": [
+            "August 2004",
+            "Sun Goes Down",
+            "Chesney s 2004 album"
+          ],
+          "entity_ids": [
+            "entity:august",
+            "entity:august_2004",
+            "entity:chesney",
+            "entity:chesney_s_2004_album",
+            "entity:sun_goes_down"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:ivan_morris_0",
+        "score": 0.01827184580562897,
+        "text": "Ivan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.",
+        "metadata": {
+          "title": "Ivan Morris",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:african_studies",
+            "entity:ba",
+            "entity:edita_morris",
+            "entity:gordonstoun",
+            "entity:harvard_university",
+            "entity:hiroshima",
+            "entity:interpreters_sent_into_hiroshima",
+            "entity:ira_nelson_morris",
+            "entity:ira_victor_morris",
+            "entity:japanese",
+            "entity:japanese_language_and_culture",
+            "entity:london",
+            "entity:mixed_american_and_swedish",
+            "entity:modern_and_ancient_japan",
+            "entity:nelson_morris",
+            "entity:oriental",
+            "entity:phillips_academy",
+            "entity:school",
+            "entity:school_of_oriental_and_african_studies_in_london",
+            "entity:title_anchor_ivan_morris"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_woman_with_you_0",
+        "score": 0.01806811430344183,
+        "text": "The Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.",
+        "metadata": {
+          "title": "The Woman with You",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:august",
+            "entity:august_2004",
+            "entity:billboard_hot_country_singles_tracks",
+            "entity:chesney",
+            "entity:chesney_s_2004_album",
+            "entity:craig_wiseman",
+            "entity:david_frasier",
+            "entity:david_frasier_and_craig_wiseman",
+            "entity:hot_country_singles",
+            "entity:kenny_chesney",
+            "entity:sun_goes_down",
+            "entity:title_anchor_the_woman_with_you",
+            "entity:tracks"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:list_of_the_hobbit_characters_0",
+        "score": 0.011055560674991877,
+        "text": "List of The Hobbit characters\nFili, who with his brother Kili was the youngest dwarf in the company and therefore useful for his keen eyesight. He wore a blue hood and grew a yellow beard.",
+        "metadata": {
+          "title": "List of The Hobbit characters",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:fili",
+            "entity:kili"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ivan_ivanovich_tolstoy_0",
+        "score": 0.01100226978291885,
+        "text": "Ivan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+        "metadata": {
+          "title": "Ivan Ivanovich Tolstoy",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:academy_president",
+            "entity:count_ivan_ivanovich_tolstoy",
+            "entity:imperial_minister_of_education",
+            "entity:imperial_russian_politician",
+            "entity:vice_president_of_the_russian_imperial_academy_of_arts",
+            "entity:vladimir_alexandrovich",
+            "entity:witte_government"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:giorgi_kvinitadze_0",
+        "score": 0.008805679978651953,
+        "text": "Giorgi Kvinitadze\nGiorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia. After sovietization of Georgia, Kvinitadze went into exile to France, where he wrote his memoirs of the 1917–1921 events in Georgia.",
+        "metadata": {
+          "title": "Giorgi Kvinitadze",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:august",
+            "entity:chikovani",
+            "entity:democratic_republic",
+            "entity:france",
+            "entity:georgia",
+            "entity:georgian",
+            "entity:georgy_ivanovich_kvinitadze",
+            "entity:imperial_russian",
+            "entity:kvinitadze",
+            "entity:memoirs_of_the_1917_1921_events_in_georgia",
+            "entity:title_anchor_giorgi_kvinitadze"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:songs_of_the_american_spirit_0",
+        "score": 0.007126575792153622,
+        "text": "Songs of the American Spirit\nSongs of the American Spirit is the last studio album by the progressive bluegrass band Country Gentlemen. The album was released August 24, 2004, just six days after the death of Charlie Waller.",
+        "metadata": {
+          "title": "Songs of the American Spirit",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:august",
+            "entity:august_24_2004",
+            "entity:charlie_waller",
+            "entity:country_gentlemen",
+            "entity:title_anchor_songs_of_the_american_spirit"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:andre_fili_0",
+        "score": 0.003738890703994264,
+        "text": "Andre Fili\nAndre Fili (born June 25, 1990) is an American mixed martial artist who competes in the Featherweight division. Fili is of Samoan and Native Hawaiian descent and is currently signed with the Ultimate Fighting Championship (UFC).",
+        "metadata": {
+          "title": "Andre Fili",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:featherweight_division",
+            "entity:fili",
+            "entity:june_25_1990",
+            "entity:native_hawaiian",
+            "entity:samoan",
+            "entity:samoan_and_native_hawaiian",
+            "entity:title_anchor_andre_fili",
+            "entity:ultimate_fighting_championship_ufc"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ivan Morris\nIvan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.\n\nThe Woman with You\nThe Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.\n\nGiorgi Kvinitadze\nGiorgi Kvinitadze\nGiorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia. After sovietization of Georgia, Kvinitadze went into exile to France, where he wrote his memoirs of the 1917–1921 events in Georgia.\n\nList of The Hobbit characters\nList of The Hobbit characters\nFili, who with his brother Kili was the youngest dwarf in the company and therefore useful for his keen eyesight. He wore a blue hood and grew a yellow beard.\n\nIvan Ivanovich Tolstoy\nIvan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:ivan_morris_0",
+        "passage_index": 18,
+        "title": "Ivan Morris",
+        "score": 0.07541989458695925,
+        "text": "Ivan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.",
+        "score_breakdown": {
+          "dense": 0.05009704569447256,
+          "graph": 0.05517855816563268,
+          "fact": 0.20875301336873026
+        }
+      },
+      {
+        "node_id": "chunk:the_woman_with_you_0",
+        "passage_index": 13,
+        "title": "The Woman with You",
+        "score": 0.07416182791388978,
+        "text": "The Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.",
+        "score_breakdown": {
+          "dense": 0.04976549514239528,
+          "graph": 0.05462488815444276,
+          "fact": 0.20268892759493035
+        }
+      },
+      {
+        "node_id": "chunk:giorgi_kvinitadze_0",
+        "passage_index": 0,
+        "title": "Giorgi Kvinitadze",
+        "score": 0.07312850389630346,
+        "text": "Giorgi Kvinitadze\nGiorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia. After sovietization of Georgia, Kvinitadze went into exile to France, where he wrote his memoirs of the 1917–1921 events in Georgia.",
+        "score_breakdown": {
+          "dense": 0.04993426346296815,
+          "graph": 0.05242450674880875,
+          "fact": 0.19958204644685565
+        }
+      },
+      {
+        "node_id": "chunk:list_of_the_hobbit_characters_0",
+        "passage_index": 10,
+        "title": "List of The Hobbit characters",
+        "score": 0.0719785271196099,
+        "text": "List of The Hobbit characters\nFili, who with his brother Kili was the youngest dwarf in the company and therefore useful for his keen eyesight. He wore a blue hood and grew a yellow beard.",
+        "score_breakdown": {
+          "dense": 0.04994581277379199,
+          "graph": 0.050559079433797824,
+          "fact": 0.1956040417592331
+        }
+      },
+      {
+        "node_id": "chunk:ivan_ivanovich_tolstoy_0",
+        "passage_index": 16,
+        "title": "Ivan Ivanovich Tolstoy",
+        "score": 0.0719175705490957,
+        "text": "Ivan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+        "score_breakdown": {
+          "dense": 0.04999126219347287,
+          "graph": 0.05138860239382674,
+          "fact": 0.1933719708302506
+        }
+      },
+      {
+        "node_id": "chunk:songs_of_the_american_spirit_0",
+        "passage_index": 2,
+        "title": "Songs of the American Spirit",
+        "score": 0.04248093600847867,
+        "text": "Songs of the American Spirit\nSongs of the American Spirit is the last studio album by the progressive bluegrass band Country Gentlemen. The album was released August 24, 2004, just six days after the death of Charlie Waller.",
+        "score_breakdown": {
+          "dense": 0.04969811903300144,
+          "graph": 0.05048990180109292,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0",
+        "passage_index": 8,
+        "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+        "score": 0.04239538205507081,
+        "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy.",
+        "score_breakdown": {
+          "dense": 0.0504471568187392,
+          "graph": 0.04883148601588084,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:patrick_cobbold_0",
+        "passage_index": 11,
+        "title": "Patrick Cobbold",
+        "score": 0.042381626944109574,
+        "text": "Patrick Cobbold\nHe was educated with his elder brother John at Wellesley House and Eton College. He was 10 when their father, Lieutenant Colonel Ivan Cobbold, was killed in the Guards Chapel, London, on 19 June 1944 when a flying bomb (V1) hit the Chapel during the Sunday morning service.",
+        "score_breakdown": {
+          "dense": 0.05004028954202246,
+          "graph": 0.0495315589866574,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:andre_fili_0",
+        "passage_index": 12,
+        "title": "Andre Fili",
+        "score": 0.04237567297278241,
+        "text": "Andre Fili\nAndre Fili (born June 25, 1990) is an American mixed martial artist who competes in the Featherweight division. Fili is of Samoan and Native Hawaiian descent and is currently signed with the Ultimate Fighting Championship (UFC).",
+        "score_breakdown": {
+          "dense": 0.04984139659734845,
+          "graph": 0.04987634948080254,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:august_2004_moscow_metro_bombing_0",
+        "passage_index": 19,
+        "title": "August 2004 Moscow Metro bombing",
+        "score": 0.042373430906756854,
+        "text": "August 2004 Moscow Metro bombing\nThe official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004. The deaths included the bomber and her accomplice, Nikolay Kipkeev (Kipkeyev), the head of an Islamic militant group Karachay Jamaat from the republic of Karachay–Cherkessia, as the bomb apparently exploded prematurely while the two were standing in the entrance hall of the metro station.",
+        "score_breakdown": {
+          "dense": 0.05040166090504771,
+          "graph": 0.04884172469660205,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "In which country did a bombing occur in Fili in August 2004?",
+        "sentence_id": "sentence:the_woman_with_you_0_1_it_was_released_in_august_2004_as_the_fourth_single_from_chesney_s_2004_album_w",
+        "sentence": "It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\".",
+        "score": 0.482
+      },
+      {
+        "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich in that country?",
+        "sentence_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+        "sentence": "Giorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia.",
+        "score": 0.6235714285714287
+      }
+    ]
+  }
+}

@@ -1,0 +1,1400 @@
+{
+  "summary": {
+    "num_examples": 10,
+    "passage_recall_at_5": 0.75,
+    "passage_hit_at_5": 0.9,
+    "context_contains_answer_rate": 0.8,
+    "answer_match_rate": 0.8,
+    "avg_qa_context_words": 396.7,
+    "avg_ranked_facts": 7.4,
+    "avg_reasoning_chain_count": 2.3,
+    "qa_exact_match": 0.2,
+    "qa_f1": 0.25,
+    "qa_non_empty_prediction_rate": 1.0
+  },
+  "settings": {
+    "samples_glob": "/data/xyh/code/HoloRAG/reproduce/test/sample_musique*.json",
+    "outputs_dir": "/data/xyh/code/HoloRAG/outputs",
+    "result_filename": "last_query_result.json",
+    "retrieval_k": 5,
+    "qa_generation_enabled": true,
+    "llm_base_url": "http://127.0.0.1:8000/v1",
+    "llm_name": "/data/xyh/models/Qwen2.5-7B-Instruct"
+  },
+  "per_example": [
+    {
+      "sample_file": "sample_musique1.json",
+      "sample_id": "3hop1__22527_146265_68918",
+      "question": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
+      "gold_answers": [
+        "November 21, 1789"
+      ],
+      "predicted_answer": "1789",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.5,
+      "passage_recall_at_5": 0.6666666666666666,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Raleigh, North Carolina",
+        "Zebulon Baird Vance",
+        "North Carolina"
+      ],
+      "retrieved_titles_top5": [
+        "North Carolina",
+        "Readmission of states",
+        "Beriah Magoffin",
+        "Thomas Clement Fletcher",
+        "Raleigh, North Carolina"
+      ],
+      "matched_support_titles": [
+        "North Carolina",
+        "Raleigh, North Carolina"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "November 21, 1789"
+      ],
+      "qa_context_words": 503,
+      "qa_context_chars": 3097,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [],
+      "query_entities": [],
+      "query_entity_resolutions": [],
+      "sub_questions": [
+        "Which state had its governor die during the Civil War?",
+        "In which year did this state become part of the U.S.?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Which state had its governor die during the Civil War?",
+          "sentence_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+          "sentence": "West Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state.",
+          "score": 0.4933683646917343
+        },
+        {
+          "sub_question": "In which year did this state become part of the U.S.?",
+          "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+          "sentence": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution.",
+          "score": 0.36040989406579205
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "North Carolina",
+          "score": 0.08643443422993788,
+          "words": 177,
+          "score_breakdown": {
+            "dense": 0.05240629087664138,
+            "graph": 0.05578909581934742,
+            "fact": 0.272494970013206
+          }
+        },
+        {
+          "title": "Readmission of states",
+          "score": 0.08250431159136497,
+          "words": 28,
+          "score_breakdown": {
+            "dense": 0.052744799006446345,
+            "graph": 0.05707980458788967,
+            "fact": 0.2424715384096838
+          }
+        },
+        {
+          "title": "Beriah Magoffin",
+          "score": 0.08245929283129005,
+          "words": 82,
+          "score_breakdown": {
+            "dense": 0.052897257224944476,
+            "graph": 0.05541462565218518,
+            "fact": 0.24494275774610022
+          }
+        },
+        {
+          "title": "Thomas Clement Fletcher",
+          "score": 0.08198529258027201,
+          "words": 60,
+          "score_breakdown": {
+            "dense": 0.05295266505190794,
+            "graph": 0.056159055756903824,
+            "fact": 0.24009073383101004
+          }
+        },
+        {
+          "title": "Raleigh, North Carolina",
+          "score": 0.04524390158381829,
+          "words": 143,
+          "score_breakdown": {
+            "dense": 0.05248698227557585,
+            "graph": 0.05458687110750523,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique2.json",
+      "sample_id": "3hop1__10725_695397_69808",
+      "question": "When did education become free in the government phonology popular?",
+      "gold_answers": [
+        "1891"
+      ],
+      "predicted_answer": "1891",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 0.3333333333333333,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Boys' Brigade Gazette",
+        "History of education in England",
+        "Phonology"
+      ],
+      "retrieved_titles_top5": [
+        "AMA Computer University",
+        "Right of Children to Free and Compulsory Education Act, 2009",
+        "Abul Kalam Azad",
+        "Right of Children to Free and Compulsory Education Act, 2009",
+        "History of education in England"
+      ],
+      "matched_support_titles": [
+        "History of education in England"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "1891"
+      ],
+      "qa_context_words": 486,
+      "qa_context_chars": 3024,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 6,
+      "bridge_entities": [],
+      "query_entities": [],
+      "query_entity_resolutions": [],
+      "sub_questions": [
+        "In which country is 'government phonology popular' referring to?",
+        "When did education become free in that country?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which country is 'government phonology popular' referring to?",
+          "sentence_id": "sentence:phonology_0_0_government_phonology_which_originated_in_the_early_1980s_as_an_attempt_to_unify",
+          "sentence": "Government phonology, which originated in the early 1980s as an attempt to unify theoretical notions of syntactic and phonological structures, is based on the notion that all languages necessarily follow a small set of principles and vary according to their selection of certain binary parameters.",
+          "score": 0.43848708438873285
+        },
+        {
+          "sub_question": "When did education become free in that country?",
+          "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_2_the_title_of_the_rte_act_incorporates_the_words_free_and",
+          "sentence": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
+          "score": 0.36198604627734143
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "AMA Computer University",
+          "score": 0.10191241952099542,
+          "words": 32,
+          "score_breakdown": {
+            "dense": 0.06661404141761221,
+            "graph": 0.07767841577420731,
+            "fact": 0.2798078133936434
+          }
+        },
+        {
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "score": 0.09598631745037532,
+          "words": 190,
+          "score_breakdown": {
+            "dense": 0.06716627958672929,
+            "graph": 0.07261205207980327,
+            "fact": 0.24840832035822155
+          }
+        },
+        {
+          "title": "Abul Kalam Azad",
+          "score": 0.09340673165213519,
+          "words": 101,
+          "score_breakdown": {
+            "dense": 0.06658712668582822,
+            "graph": 0.06935503701865194,
+            "fact": 0.2398486724622272
+          }
+        },
+        {
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "score": 0.09243257936600038,
+          "words": 103,
+          "score_breakdown": {
+            "dense": 0.0670893779022432,
+            "graph": 0.06914380817293483,
+            "fact": 0.23193519378590785
+          }
+        },
+        {
+          "title": "History of education in England",
+          "score": 0.05665006786038783,
+          "words": 29,
+          "score_breakdown": {
+            "dense": 0.06769729891029175,
+            "graph": 0.06472184486575787,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique3.json",
+      "sample_id": "4hop3__401611_100414_35260_54090",
+      "question": "How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?",
+      "gold_answers": [
+        "53 member states"
+      ],
+      "predicted_answer": "7",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.75,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Ivan Koumaev",
+        "Khabarovsk",
+        "United Nations Regional Groups",
+        "Iran"
+      ],
+      "retrieved_titles_top5": [
+        "Ivan Koumaev",
+        "Mesopotamia",
+        "Shahid Dastgerdi Stadium",
+        "Khabarovsk",
+        "Iran"
+      ],
+      "matched_support_titles": [
+        "Iran",
+        "Ivan Koumaev",
+        "Khabarovsk"
+      ],
+      "context_contains_answer": 0.0,
+      "answer_match_flag": false,
+      "answer_match_candidates": [],
+      "qa_context_words": 295,
+      "qa_context_chars": 1838,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Iraq",
+        "Mesopotamia",
+        "Kuwait",
+        "Syria",
+        "Turkey",
+        "West Asia"
+      ],
+      "query_entities": [
+        "Iran",
+        "Iraq War",
+        "Iranian Khuzestan"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Iran",
+          "node_id": "entity:iran",
+          "resolved_text": "Iran",
+          "score": 0.7716000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.52,
+          "compatibility_score": 0.75,
+          "score_margin": 0.0484,
+          "confident": true
+        },
+        {
+          "mention": "Iraq War",
+          "node_id": "entity:iraq_war",
+          "resolved_text": "Iraq War",
+          "score": 0.7216,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.52,
+          "compatibility_score": 0.5,
+          "score_margin": 0.15000000000000002,
+          "confident": true
+        },
+        {
+          "mention": "Ivan Koumaev",
+          "node_id": "entity:iranian_khuzestan",
+          "resolved_text": "Iranian Khuzestan",
+          "score": 0.7216,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.52,
+          "compatibility_score": 0.5,
+          "score_margin": 0.3436,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who mediated the truce ending the Iran-Iraq War?",
+        "In which continent was Ivan Koumaev born?",
+        "How many states are there in that continent?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who mediated the truce ending the Iran-Iraq War?",
+          "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+          "sentence": "It was named after a casualty of the Iran–Iraq War.",
+          "score": 0.551
+        },
+        {
+          "sub_question": "In which continent was Ivan Koumaev born?",
+          "sentence_id": "sentence:shahid_dastgerdi_stadium_0_1_it_was_named_after_a_casualty_of_the_iran_iraq_war",
+          "sentence": "It was named after a casualty of the Iran–Iraq War.",
+          "score": 0.5748333333333333
+        },
+        {
+          "sub_question": "How many states are there in that continent?",
+          "sentence_id": "sentence:united_states_support_for_iraq_during_the_iran_iraq_war_0_0_united_states_support_for_ba_athist_iraq_during_the_iran_ira",
+          "sentence": "United States support for Ba'athist Iraq during the Iran -- Iraq War, against post-revolutionary Iran, included several billion dollars' worth of economic aid, the sale of dual - use technology, non-U.S. origin weaponry, military intelligence, and special operations training.",
+          "score": 0.5700714285714286
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Ivan Koumaev",
+          "score": 0.08273039806498933,
+          "words": 35,
+          "score_breakdown": {
+            "dense": 0.05045413437773146,
+            "graph": 0.05189324387297572,
+            "fact": 0.2627510066356288
+          }
+        },
+        {
+          "title": "Mesopotamia",
+          "score": 0.08224620242717112,
+          "words": 47,
+          "score_breakdown": {
+            "dense": 0.04997251229021588,
+            "graph": 0.05235113702741077,
+            "fact": 0.2603731970621944
+          }
+        },
+        {
+          "title": "Shahid Dastgerdi Stadium",
+          "score": 0.08091158770106208,
+          "words": 54,
+          "score_breakdown": {
+            "dense": 0.049868229255662956,
+            "graph": 0.052464340238680546,
+            "fact": 0.25163173025895524
+          }
+        },
+        {
+          "title": "Khabarovsk",
+          "score": 0.07677657925189858,
+          "words": 22,
+          "score_breakdown": {
+            "dense": 0.049908966146723126,
+            "graph": 0.05180012654905881,
+            "fact": 0.22524406604322145
+          }
+        },
+        {
+          "title": "Iran",
+          "score": 0.04318442809681095,
+          "words": 129,
+          "score_breakdown": {
+            "dense": 0.050380911417905475,
+            "graph": 0.05158308938987647,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique4.json",
+      "sample_id": "3hop1__131745_517267_451901",
+      "question": "What is the capital of the county that includes the city of Walnut Grove in the state where Star Lite Motel is located?",
+      "gold_answers": [
+        "Redwood Falls",
+        "Redwood Falls, Minnesota"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Walnut Grove, Minnesota",
+        "Star Lite Motel",
+        "Redwood County Poor Farm"
+      ],
+      "retrieved_titles_top5": [
+        "Star Lite Motel",
+        "Walnut Grove, Minnesota",
+        "Walnut Grove, Washington",
+        "Kingston Powerhouse",
+        "Redwood County Poor Farm"
+      ],
+      "matched_support_titles": [
+        "Redwood County Poor Farm",
+        "Star Lite Motel",
+        "Walnut Grove, Minnesota"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Redwood Falls",
+        "Redwood Falls, Minnesota"
+      ],
+      "qa_context_words": 329,
+      "qa_context_chars": 1836,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [
+        "Minnesota",
+        "Redwood County",
+        "Washington",
+        "Clark County",
+        "Dilworth Minnesota",
+        "Dilworth"
+      ],
+      "query_entities": [
+        "Walnut Grove",
+        "Star Lite Motel"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Walnut Grove",
+          "node_id": "entity:walnut_grove",
+          "resolved_text": "Walnut Grove",
+          "score": 0.7262222222222222,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.5555555555555556,
+          "compatibility_score": 0.5,
+          "score_margin": 0.004622222222222194,
+          "confident": false
+        },
+        {
+          "mention": "Star Lite Motel",
+          "node_id": "entity:title_anchor_star_lite_motel",
+          "resolved_text": "Star Lite Motel",
+          "score": 0.6034285714285714,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.6571428571428571,
+          "compatibility_score": 0.5,
+          "score_margin": 0.3292380952380952,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "In which state is the Star Lite Motel located?",
+        "What is the county that includes the city of Walnut Grove in that state?",
+        "What is the capital of that county?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which state is the Star Lite Motel located?",
+          "sentence_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+          "sentence": "The Star Lite Motel is a historic motel in Dilworth, Minnesota.",
+          "score": 0.5300474969114576
+        },
+        {
+          "sub_question": "What is the county that includes the city of Walnut Grove in that state?",
+          "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+          "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+          "score": 0.628516778951221
+        },
+        {
+          "sub_question": "What is the capital of that county?",
+          "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+          "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+          "score": 0.5796278900623322
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Star Lite Motel",
+          "score": 0.07824482107484379,
+          "words": 53,
+          "score_breakdown": {
+            "dense": 0.053603483127070486,
+            "graph": 0.058093448311256624,
+            "fact": 0.2088991390771869
+          }
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "score": 0.07759325401193148,
+          "words": 158,
+          "score_breakdown": {
+            "dense": 0.053352025895509025,
+            "graph": 0.058197743051384,
+            "fact": 0.2052687790265755
+          }
+        },
+        {
+          "title": "Walnut Grove, Washington",
+          "score": 0.07602443931786818,
+          "words": 31,
+          "score_breakdown": {
+            "dense": 0.05312757357265758,
+            "graph": 0.05462679761279509,
+            "fact": 0.2027748971271199
+          }
+        },
+        {
+          "title": "Kingston Powerhouse",
+          "score": 0.07436145637907376,
+          "words": 27,
+          "score_breakdown": {
+            "dense": 0.05230949835079461,
+            "graph": 0.05305513598912432,
+            "fact": 0.1978312765959962
+          }
+        },
+        {
+          "title": "Redwood County Poor Farm",
+          "score": 0.07328413597624911,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.05272929711638233,
+            "graph": 0.054997121120902014,
+            "fact": 0.18522590817312154
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique5.json",
+      "sample_id": "3hop1__248015_809999_533791",
+      "question": "Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?",
+      "gold_answers": [
+        "Anastasia Romanovna"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.0,
+      "passage_hit_at_5": 0.0,
+      "support_titles": [
+        "Fili (Moscow Metro)",
+        "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+        "August 2004 Moscow Metro bombing"
+      ],
+      "retrieved_titles_top5": [
+        "Ivan Morris",
+        "The Woman with You",
+        "Giorgi Kvinitadze",
+        "List of The Hobbit characters",
+        "Ivan Ivanovich Tolstoy"
+      ],
+      "matched_support_titles": [],
+      "context_contains_answer": 0.0,
+      "answer_match_flag": false,
+      "answer_match_candidates": [],
+      "qa_context_words": 332,
+      "qa_context_chars": 2038,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Chikovani",
+        "Giorgi Kvinitadze",
+        "Georgy Ivanovich Kvinitadze",
+        "Georgian",
+        "Imperial Russian",
+        "Democratic Republic"
+      ],
+      "query_entities": [
+        "August"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Tsarevich Ivan Ivanovich",
+          "node_id": "entity:title_anchor_ivan_ivanovich_artobolevski",
+          "resolved_text": "Ivan Ivanovich Artobolevski",
+          "score": 0.5197142857142857,
+          "alias_score": 0.5,
+          "relation_score": 0.7,
+          "context_score": 0.38461538461538464,
+          "compatibility_score": 0.5,
+          "score_margin": 0.0077142857142856736,
+          "confident": false
+        },
+        {
+          "mention": "August",
+          "node_id": "entity:august",
+          "resolved_text": "August",
+          "score": 0.6846666666666666,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.4666666666666667,
+          "compatibility_score": 0.35,
+          "score_margin": 0.2,
+          "confident": true
+        },
+        {
+          "mention": "Fili",
+          "node_id": "entity:fili",
+          "resolved_text": "Fili",
+          "score": 0.6000000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.38461538461538464,
+          "compatibility_score": 0.75,
+          "score_margin": 0.03803174603174608,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "In which country did a bombing occur in Fili in August 2004?",
+        "Who is the mother of Tsarevich Ivan Ivanovich in that country?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which country did a bombing occur in Fili in August 2004?",
+          "sentence_id": "sentence:the_woman_with_you_0_1_it_was_released_in_august_2004_as_the_fourth_single_from_chesney_s_2004_album_w",
+          "sentence": "It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\".",
+          "score": 0.482
+        },
+        {
+          "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich in that country?",
+          "sentence_id": "sentence:giorgi_kvinitadze_0_0_giorgi_kvinitadze_georgy_ivanovich_kvinitadze_his_real_surname_was_chiko",
+          "sentence": "Giorgi Kvinitadze (; , \"Georgy Ivanovich Kvinitadze\"; his real surname was Chikovani, ჩიქოვანი) (August 21, 1874 – August 7, 1970) was a Georgian military commander who rose from an officer in the Imperial Russian army to commander-in-chief of the Democratic Republic of Georgia.",
+          "score": 0.6235714285714287
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Ivan Morris",
+          "score": 0.07541989458695925,
+          "words": 106,
+          "score_breakdown": {
+            "dense": 0.05009704569447256,
+            "graph": 0.05517855816563268,
+            "fact": 0.20875301336873026
+          }
+        },
+        {
+          "title": "The Woman with You",
+          "score": 0.07416182791388978,
+          "words": 64,
+          "score_breakdown": {
+            "dense": 0.04976549514239528,
+            "graph": 0.05462488815444276,
+            "fact": 0.20268892759493035
+          }
+        },
+        {
+          "title": "Giorgi Kvinitadze",
+          "score": 0.07312850389630346,
+          "words": 66,
+          "score_breakdown": {
+            "dense": 0.04993426346296815,
+            "graph": 0.05242450674880875,
+            "fact": 0.19958204644685565
+          }
+        },
+        {
+          "title": "List of The Hobbit characters",
+          "score": 0.0719785271196099,
+          "words": 35,
+          "score_breakdown": {
+            "dense": 0.04994581277379199,
+            "graph": 0.050559079433797824,
+            "fact": 0.1956040417592331
+          }
+        },
+        {
+          "title": "Ivan Ivanovich Tolstoy",
+          "score": 0.0719175705490957,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.04999126219347287,
+            "graph": 0.05138860239382674,
+            "fact": 0.1933719708302506
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique6.json",
+      "sample_id": "2hop__42464_718451",
+      "question": "The field of work of the physicist making the first to measure value of the Newton Universal Gravitation Constant is what?",
+      "gold_answers": [
+        "physic"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Cavendish Professor of Physics",
+        "Force"
+      ],
+      "retrieved_titles_top5": [
+        "Carlos Newton",
+        "European Gravitational Observatory",
+        "Force",
+        "Josiah Parsons Cooke",
+        "Cavendish Professor of Physics"
+      ],
+      "matched_support_titles": [
+        "Cavendish Professor of Physics",
+        "Force"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "physic",
+        "Physic"
+      ],
+      "qa_context_words": 595,
+      "qa_context_chars": 3847,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [
+        "Newton"
+      ],
+      "query_entities": [
+        "Newton's Universal Gravitation Constant"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Newton Universal Gravitation Constant",
+          "node_id": "entity:newton_s_universal_gravitation_constant",
+          "resolved_text": "Newton's Universal Gravitation Constant",
+          "score": 0.7200000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.5076923076923077,
+          "compatibility_score": 0.5,
+          "score_margin": 0.10000000000000009,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who was the physicist that made the first measurement of the Newton's Universal Gravitation Constant?",
+        "What is the field of work of the aforementioned physicist?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who was the physicist that made the first measurement of the Newton's Universal Gravitation Constant?",
+          "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+          "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+          "score": 0.5649230769230769
+        },
+        {
+          "sub_question": "What is the field of work of the aforementioned physicist?",
+          "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+          "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+          "score": 0.5681538461538462
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Carlos Newton",
+          "score": 0.07793138042338765,
+          "words": 173,
+          "score_breakdown": {
+            "dense": 0.05270891687354957,
+            "graph": 0.05652178785857231,
+            "fact": 0.21323293190242468
+          }
+        },
+        {
+          "title": "European Gravitational Observatory",
+          "score": 0.07701735756250985,
+          "words": 78,
+          "score_breakdown": {
+            "dense": 0.052505115367403224,
+            "graph": 0.05798644947797195,
+            "fact": 0.20495739511364328
+          }
+        },
+        {
+          "title": "Force",
+          "score": 0.07676860546942774,
+          "words": 181,
+          "score_breakdown": {
+            "dense": 0.052719198762893014,
+            "graph": 0.05836209731874068,
+            "fact": 0.2017627796947625
+          }
+        },
+        {
+          "title": "Josiah Parsons Cooke",
+          "score": 0.07387580436440314,
+          "words": 89,
+          "score_breakdown": {
+            "dense": 0.05280487545021166,
+            "graph": 0.054576110536136695,
+            "fact": 0.1897352647063048
+          }
+        },
+        {
+          "title": "Cavendish Professor of Physics",
+          "score": 0.0737180331405029,
+          "words": 61,
+          "score_breakdown": {
+            "dense": 0.05280304205137442,
+            "graph": 0.0537653857493909,
+            "fact": 0.19031162858286474
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique7.json",
+      "sample_id": "2hop__673655_316668",
+      "question": "What instrument is played by the person from The Blackout All-Stars?",
+      "gold_answers": [
+        "conga"
+      ],
+      "predicted_answer": "conga",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "The Blackout All-Stars",
+        "Midnight Blue (Kenny Burrell album)"
+      ],
+      "retrieved_titles_top5": [
+        "The Blackout All-Stars",
+        "Dog Star Man",
+        "Midnight Blue (Kenny Burrell album)",
+        "Northeast blackout of 2003",
+        "Radar (song)"
+      ],
+      "matched_support_titles": [
+        "Midnight Blue (Kenny Burrell album)",
+        "The Blackout All-Stars"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "conga",
+        "Conga"
+      ],
+      "qa_context_words": 385,
+      "qa_context_chars": 2312,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Ray Barretto",
+        "Sheila E",
+        "Tito Puente",
+        "Tito Nieves",
+        "Paquito D'Rivera",
+        "Dave Valentin"
+      ],
+      "query_entities": [
+        "Blackout All",
+        "Stars"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Blackout All",
+          "node_id": "entity:title_anchor_the_blackout_all_stars",
+          "resolved_text": "The Blackout All-Stars",
+          "score": 0.7771111111111112,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.7333333333333334,
+          "compatibility_score": 0.5,
+          "score_margin": 0.062444444444444525,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who is from The Blackout All-Stars?",
+        "What instrument is played by the person from The Blackout All-Stars?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is from The Blackout All-Stars?",
+          "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+          "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+          "score": 0.5606203905741374
+        },
+        {
+          "sub_question": "What instrument is played by the person from The Blackout All-Stars?",
+          "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+          "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+          "score": 0.6065191957685683
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Blackout All-Stars",
+          "score": 0.1237977201018884,
+          "words": 32,
+          "score_breakdown": {
+            "dense": 0.05115437661290522,
+            "graph": 0.0654615302988591,
+            "fact": 0.5068290258342187
+          }
+        },
+        {
+          "title": "Dog Star Man",
+          "score": 0.1175965957867475,
+          "words": 35,
+          "score_breakdown": {
+            "dense": 0.049783627587473296,
+            "graph": 0.054133181629233376,
+            "fact": 0.49317097416578115
+          }
+        },
+        {
+          "title": "Midnight Blue (Kenny Burrell album)",
+          "score": 0.042504613392531435,
+          "words": 108,
+          "score_breakdown": {
+            "dense": 0.049872335150277,
+            "graph": 0.050249430199596934,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Northeast blackout of 2003",
+          "score": 0.04223376496846337,
+          "words": 40,
+          "score_breakdown": {
+            "dense": 0.05014279431946326,
+            "graph": 0.048850760309195274,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Radar (song)",
+          "score": 0.042215701495832744,
+          "words": 153,
+          "score_breakdown": {
+            "dense": 0.05011659149066153,
+            "graph": 0.04883858725322967,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique8.json",
+      "sample_id": "4hop1__76111_624859_355213_203322",
+      "question": "What county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+      "gold_answers": [
+        "Cabarrus County"
+      ],
+      "predicted_answer": "Lublin",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.75,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Gold Hill, North Carolina",
+        "The Definitive Collection (Eric Carmen album)",
+        "Hungry Eyes",
+        "Cleveland, North Carolina"
+      ],
+      "retrieved_titles_top5": [
+        "Hungry Eyes",
+        "Gmina Włodawa",
+        "Gold Hill, North Carolina",
+        "She's Like the Wind",
+        "The Definitive Collection (Eric Carmen album)"
+      ],
+      "matched_support_titles": [
+        "Gold Hill, North Carolina",
+        "Hungry Eyes",
+        "The Definitive Collection (Eric Carmen album)"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Cabarrus County"
+      ],
+      "qa_context_words": 355,
+      "qa_context_chars": 2073,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Raspberries",
+        "Eric Carmen",
+        "film Dirty Dancing",
+        "American artist"
+      ],
+      "query_entities": [
+        "Hungry Eyes",
+        "Dirty Dancing"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Hungry Eyes",
+          "node_id": "entity:title_anchor_hungry_eyes",
+          "resolved_text": "Hungry Eyes",
+          "score": 0.7071818181818181,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.7090909090909092,
+          "compatibility_score": 1.0,
+          "score_margin": 0.2951818181818181,
+          "confident": true
+        },
+        {
+          "mention": "Dirty Dancing",
+          "node_id": "entity:dirty_dancing",
+          "resolved_text": "Dirty Dancing",
+          "score": 0.6921818181818182,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.7090909090909092,
+          "compatibility_score": 1.0,
+          "score_margin": 0.1333333333333333,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who is the singer of the song Hungry Eyes from the movie Dirty Dancing?",
+        "Where was the singer of Hungry Eyes from the movie Dirty Dancing born?",
+        "Which county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the singer of the song Hungry Eyes from the movie Dirty Dancing?",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.5556948401927948
+        },
+        {
+          "sub_question": "Where was the singer of Hungry Eyes from the movie Dirty Dancing born?",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.6354225692423907
+        },
+        {
+          "sub_question": "Which county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.6013316601514817
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Hungry Eyes",
+          "score": 0.08241199306823473,
+          "words": 90,
+          "score_breakdown": {
+            "dense": 0.0510040395964147,
+            "graph": 0.05270537104307117,
+            "fact": 0.25698773318190193
+          }
+        },
+        {
+          "title": "Gmina Włodawa",
+          "score": 0.08154444701573169,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.05007121370386662,
+            "graph": 0.05176617649938227,
+            "fact": 0.25650284352526903
+          }
+        },
+        {
+          "title": "Gold Hill, North Carolina",
+          "score": 0.07977843057785378,
+          "words": 54,
+          "score_breakdown": {
+            "dense": 0.049921598304262245,
+            "graph": 0.04897484537571337,
+            "fact": 0.2508606526519702
+          }
+        },
+        {
+          "title": "She's Like the Wind",
+          "score": 0.07844939449621463,
+          "words": 74,
+          "score_breakdown": {
+            "dense": 0.05036445223341472,
+            "graph": 0.05133876723902572,
+            "fact": 0.23564877064085882
+          }
+        },
+        {
+          "title": "The Definitive Collection (Eric Carmen album)",
+          "score": 0.04240413663030061,
+          "words": 75,
+          "score_breakdown": {
+            "dense": 0.0503188583978596,
+            "graph": 0.0490958817049261,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique9.json",
+      "sample_id": "2hop__132472_684936",
+      "question": "The company making ALARM follows which company?",
+      "gold_answers": [
+        "BAC"
+      ],
+      "predicted_answer": "British Aerospace Dynamics",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Sea Wolf (missile)",
+        "ALARM"
+      ],
+      "retrieved_titles_top5": [
+        "Hirox",
+        "Sea Wolf (missile)",
+        "Saint Helena",
+        "ALARM",
+        "The Alarm (film)"
+      ],
+      "matched_support_titles": [
+        "ALARM",
+        "Sea Wolf (missile)"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "BAC"
+      ],
+      "qa_context_words": 381,
+      "qa_context_chars": 2342,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [],
+      "query_entities": [
+        "ALARM"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "ALARM",
+          "node_id": "entity:title_anchor_alarm",
+          "resolved_text": "ALARM",
+          "score": 0.8313333333333335,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.4666666666666667,
+          "compatibility_score": 1.0,
+          "score_margin": 0.11666666666666681,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Which company makes ALARM?",
+        "The company that makes ALARM follows which company?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Which company makes ALARM?",
+          "sentence_id": "sentence:alarm_0_1_defence_secretary_michael_heseltine_announced_the_selection_of_alarm_on_29_july",
+          "sentence": "Defence Secretary Michael Heseltine announced the selection of ALARM on 29 July 1983.",
+          "score": 0.512
+        },
+        {
+          "sub_question": "The company that makes ALARM follows which company?",
+          "sentence_id": "sentence:alarm_0_1_defence_secretary_michael_heseltine_announced_the_selection_of_alarm_on_29_july",
+          "sentence": "Defence Secretary Michael Heseltine announced the selection of ALARM on 29 July 1983.",
+          "score": 0.4151428571428572
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Hirox",
+          "score": 0.09330561196635076,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.04986627343234323,
+            "graph": 0.050101382091833166,
+            "fact": 0.33899164634008017
+          }
+        },
+        {
+          "title": "Sea Wolf (missile)",
+          "score": 0.09148914178569367,
+          "words": 84,
+          "score_breakdown": {
+            "dense": 0.049852620469207194,
+            "graph": 0.0546471922074308,
+            "fact": 0.31784028576933654
+          }
+        },
+        {
+          "title": "Saint Helena",
+          "score": 0.0666438156686005,
+          "words": 113,
+          "score_breakdown": {
+            "dense": 0.0,
+            "graph": 0.050562018283376683,
+            "fact": 0.3431680678905833
+          }
+        },
+        {
+          "title": "ALARM",
+          "score": 0.04319668164261824,
+          "words": 85,
+          "score_breakdown": {
+            "dense": 0.050496265467339506,
+            "graph": 0.05141245211860502,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "The Alarm (film)",
+          "score": 0.04188494858909793,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.05056152474296772,
+            "graph": 0.046920366601552285,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique10.json",
+      "sample_id": "2hop__682872_516436",
+      "question": "What field does the author of Parallel Worlds work in?",
+      "gold_answers": [
+        "physic"
+      ],
+      "predicted_answer": "Theoretical physics",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Physics of the Future",
+        "Parallel Worlds (book)"
+      ],
+      "retrieved_titles_top5": [
+        "Parallel Worlds (book)",
+        "Pimpirev Ice Wall",
+        "Memoirs of a Geisha",
+        "Kim Vicente",
+        "Physics of the Future"
+      ],
+      "matched_support_titles": [
+        "Parallel Worlds (book)",
+        "Physics of the Future"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "physic",
+        "Physic"
+      ],
+      "qa_context_words": 306,
+      "qa_context_chars": 1912,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [
+        "Michio Kaku",
+        "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos"
+      ],
+      "query_entities": [
+        "Parallel Worlds"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Parallel Worlds",
+          "node_id": "entity:parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_of_the_cosmos",
+          "resolved_text": "Parallel Worlds A Journey Through Creation Higher Dimensions and the Future of the Cosmos",
+          "score": 0.48112727272727274,
+          "alias_score": 0.18181818181818182,
+          "relation_score": 1.0,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.5,
+          "score_margin": 0.026193939393939436,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who is the author of Parallel Worlds?",
+        "What field does this author work in?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the author of Parallel Worlds?",
+          "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+          "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+          "score": 0.5521363475322723
+        },
+        {
+          "sub_question": "What field does this author work in?",
+          "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+          "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+          "score": 0.5235357016324997
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Parallel Worlds (book)",
+          "score": 0.07650347535643004,
+          "words": 29,
+          "score_breakdown": {
+            "dense": 0.05110932366054256,
+            "graph": 0.05290636804270766,
+            "fact": 0.21680957953546226
+          }
+        },
+        {
+          "title": "Pimpirev Ice Wall",
+          "score": 0.07408246046096806,
+          "words": 80,
+          "score_breakdown": {
+            "dense": 0.04982973909989018,
+            "graph": 0.05530618929497503,
+            "fact": 0.200561647783573
+          }
+        },
+        {
+          "title": "Memoirs of a Geisha",
+          "score": 0.07396747588100755,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.04987024523848044,
+            "graph": 0.05280571966599696,
+            "fact": 0.2046475006669614
+          }
+        },
+        {
+          "title": "Kim Vicente",
+          "score": 0.07255898398299894,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.0501254655649757,
+            "graph": 0.054076841870576105,
+            "fact": 0.19177950240726313
+          }
+        },
+        {
+          "title": "Physics of the Future",
+          "score": 0.07152330942387891,
+          "words": 92,
+          "score_breakdown": {
+            "dense": 0.0503184005308959,
+            "graph": 0.05305974563625048,
+            "fact": 0.18620176960674015
+          }
+        }
+      ]
+    }
+  ]
+}

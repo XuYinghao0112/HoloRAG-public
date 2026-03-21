@@ -1,0 +1,894 @@
+{
+  "query": "The field of work of the physicist making the first to measure value of the Newton Universal Gravitation Constant is what?",
+  "alpha": {
+    "entity": 0.1,
+    "sentence": 0.4,
+    "chunk": 0.5
+  },
+  "query_entities": [
+    "Newton's Universal Gravitation Constant"
+  ],
+  "raw_query_entities": [
+    "Newton Universal Gravitation Constant"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Newton Universal Gravitation Constant",
+      "node_id": "entity:newton_s_universal_gravitation_constant",
+      "resolved_text": "Newton's Universal Gravitation Constant",
+      "score": 0.7200000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.5076923076923077,
+      "compatibility_score": 0.5,
+      "score_margin": 0.10000000000000009,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who was the physicist that made the first measurement of the Newton's Universal Gravitation Constant?",
+    "What is the field of work of the aforementioned physicist?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:newton_s_universal_gravitation_constant",
+      "score": 1.0798134190229856,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_carlos_newton",
+      "score": 0.28878368467595583,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:anguilla",
+      "score": 0.28877744799685373,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+      "score": 0.2704996164046399,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:cascina",
+      "score": 0.24919364622936438,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:universal_gravitation_constant",
+      "score": 0.23353227877717112,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:newton",
+      "score": 0.2334967941940536,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:santo_stefano_a_macerata",
+      "score": 0.22918361734080392,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_european_gravitational_observatory",
+      "score": 0.22614017035365835,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry_in_the_united_states",
+      "score": 0.20377674222584422,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:countryside_near_pisa",
+      "score": 0.2000419296558317,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cavendish_professorship",
+      "score": 0.1728470739701042,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:carlos_newton_was_born_in_anguilla_sentence_carlos_newton_0_0_carlos_newton_was_born_in_anguilla_and_moved_to_canada_at_",
+      "text": "Carlos Newton was born in Anguilla",
+      "head_id": "entity:title_anchor_carlos_newton",
+      "tail_id": "entity:anguilla",
+      "sentence_id": "sentence:carlos_newton_0_0_carlos_newton_was_born_in_anguilla_and_moved_to_canada_at_a_young_age",
+      "chunk_id": "chunk:carlos_newton_0",
+      "document_index": 0,
+      "score": 0.2865693401476636
+    },
+    {
+      "fact_id": "fact:european_gravitational_observatory_is_in_the_comune_cascina_sentence_european_gravitational_observatory_0_0_the_european",
+      "text": "European Gravitational Observatory is in the comune Cascina",
+      "head_id": "entity:title_anchor_european_gravitational_observatory",
+      "tail_id": "entity:cascina",
+      "sentence_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+      "chunk_id": "chunk:european_gravitational_observatory_0",
+      "document_index": 4,
+      "score": 0.24698632377639493
+    },
+    {
+      "fact_id": "fact:newton_related_to_universal_gravitation_constant_sentence_force_0_1_this_constant_has_come_to_be_known_as_newton_s_unive",
+      "text": "Newton related_to Universal Gravitation Constant",
+      "head_id": "entity:newton",
+      "tail_id": "entity:universal_gravitation_constant",
+      "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+      "chunk_id": "chunk:force_0",
+      "document_index": 11,
+      "score": 0.23127684430715792
+    },
+    {
+      "fact_id": "fact:european_gravitational_observatory_is_located_in_the_hamlet_santo_stefano_a_macerata_sentence_european_gravitational_obs",
+      "text": "European Gravitational Observatory is located in the hamlet Santo Stefano a Macerata",
+      "head_id": "entity:title_anchor_european_gravitational_observatory",
+      "tail_id": "entity:santo_stefano_a_macerata",
+      "sentence_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+      "chunk_id": "chunk:european_gravitational_observatory_0",
+      "document_index": 4,
+      "score": 0.22697668013782088
+    },
+    {
+      "fact_id": "fact:european_gravitational_observatory_is_located_in_countryside_near_pisa_sentence_european_gravitational_observatory_0_0_t",
+      "text": "European Gravitational Observatory is located in countryside near Pisa",
+      "head_id": "entity:title_anchor_european_gravitational_observatory",
+      "tail_id": "entity:countryside_near_pisa",
+      "sentence_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+      "chunk_id": "chunk:european_gravitational_observatory_0",
+      "document_index": 4,
+      "score": 0.19783553978785084
+    },
+    {
+      "fact_id": "fact:cavendish_professorship_at_university_of_cambridge_sentence_cavendish_professor_of_physics_0_0_the_cavendish_professorsh",
+      "text": "Cavendish Professorship at University of Cambridge",
+      "head_id": "entity:cavendish_professorship",
+      "tail_id": "entity:university_of_cambridge",
+      "sentence_id": "sentence:cavendish_professor_of_physics_0_0_the_cavendish_professorship_is_one_of_the_senior_faculty_positions_in_physics_at",
+      "chunk_id": "chunk:cavendish_professor_of_physics_0",
+      "document_index": 10,
+      "score": 0.1728470739701042
+    },
+    {
+      "fact_id": "fact:bernard_cohen_described_cooke_as_the_first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry_s",
+      "text": "Bernard Cohen described Cooke as the first university chemist to do truly distinguished work in the field of chemistry",
+      "head_id": "entity:bernard_cohen",
+      "tail_id": "entity:cooke_as_the_first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry",
+      "sentence_id": "sentence:josiah_parsons_cooke_0_3_bernard_cohen_described_cooke_as_the_first_university_chemist_to_do_truly_disti",
+      "chunk_id": "chunk:josiah_parsons_cooke_0",
+      "document_index": 7,
+      "score": 0.1698139518548702
+    }
+  ],
+  "bridge_entities": [
+    "Newton"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was the physicist that made the first measurement of the Newton's Universal Gravitation Constant?",
+      "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+      "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+      "score": 0.5649230769230769
+    },
+    {
+      "sub_question": "What is the field of work of the aforementioned physicist?",
+      "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+      "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+      "score": 0.5681538461538462
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+      "score": 0.07878839594744812,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:newton_s_universal_gravitation_constant",
+      "score": 0.04521115950693138,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_european_gravitational_observatory",
+      "score": 0.042824901480495975,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+      "score": 0.0394636733156175,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:newton",
+      "score": 0.0328857267369456,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:universal_gravitation_constant",
+      "score": 0.03272413617786762,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:carlos_newton_0_0_carlos_newton_was_born_in_anguilla_and_moved_to_canada_at_a_young_age",
+      "score": 0.03225770626899363,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:european_gravitational_observatory_0_1_in_order_to_ensure_the_long_term_scientific_exploitation_of_the_virgo_interferom",
+      "score": 0.029944936332701653,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:josiah_parsons_cooke_0_3_bernard_cohen_described_cooke_as_the_first_university_chemist_to_do_truly_disti",
+      "score": 0.028122618351195595,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:force_0",
+      "score": 0.02584850150097406,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:cavendish_professor_of_physics_0_0_the_cavendish_professorship_is_one_of_the_senior_faculty_positions_in_physics_at",
+      "score": 0.023454089126645362,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_carlos_newton",
+      "score": 0.02223981796452574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cascina",
+      "score": 0.02146702860595371,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:santo_stefano_a_macerata",
+      "score": 0.020900433167052167,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:countryside_near_pisa",
+      "score": 0.020075269574527915,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:european_gravitational_observatory_0",
+      "score": 0.018365821952674288,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:anguilla",
+      "score": 0.01716163015106243,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cooke_as_the_first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry",
+      "score": 0.014557465374393147,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bernard_cohen",
+      "score": 0.014191371363188661,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cavendish_professorship",
+      "score": 0.01408851036778493,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:carlos_newton_0",
+      "passage_index": 0,
+      "title": "Carlos Newton",
+      "score": 0.07793138042338765,
+      "text": "Carlos Newton\nCarlos Newton was born in Anguilla and moved to Canada at a young age. He attended Westview Centennial Secondary School in the Jane and Finch area of Toronto, Ontario. Newton competed in numerous Jiu-Jitsu and BJJ competitions in Canada and across the world, starting under the legendary Tom Sharkey. Notably the prestigious Abu Dhabi Combat Club in Abu Dhabi, United Arab Emirates against Rodrigo Gracie of the legendary Gracie family. Newton started his Jiu-Jitsu competing career out of the Samurai Club in Toronto. Shortly after, in 1996, Terry Riggs founded Warrior Mixed Martial Arts in Newmarket, Ontario, which was Canada's first official MMA Academy; Newton followed his long time training partner and made it his home. Out of Warrior MMA, Newton's legendary career flourished under the coaching of Terry Riggs and Everton McEwan. Newton, a Toronto's York University student, did his study on geriatric medicine, having done research at Baycrest Hospital, one of the world leaders in geriatric care. However, he now has a full-time job in the field of architecture.",
+      "score_breakdown": {
+        "dense": 0.05270891687354957,
+        "graph": 0.05652178785857231,
+        "fact": 0.21323293190242468
+      }
+    },
+    {
+      "node_id": "chunk:european_gravitational_observatory_0",
+      "passage_index": 4,
+      "title": "European Gravitational Observatory",
+      "score": 0.07701735756250985,
+      "text": "European Gravitational Observatory\nThe European Gravitational Observatory or EGO is located in the countryside near Pisa, in the hamlet of Santo Stefano a Macerata in the \"comune\" of Cascina. In order to ensure the long term scientific exploitation of the Virgo interferometric antenna for gravitational waves detection as well as to foster European collaboration in this upcoming field, the Virgo funding institutions (CNRS for France and INFN for Italy) have created a consortium called EGO (European Gravitational Observatory).",
+      "score_breakdown": {
+        "dense": 0.052505115367403224,
+        "graph": 0.05798644947797195,
+        "fact": 0.20495739511364328
+      }
+    },
+    {
+      "node_id": "chunk:force_0",
+      "passage_index": 13,
+      "title": "Force",
+      "score": 0.07676860546942774,
+      "text": "Force\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,",
+      "score_breakdown": {
+        "dense": 0.052719198762893014,
+        "graph": 0.05836209731874068,
+        "fact": 0.2017627796947625
+      }
+    },
+    {
+      "node_id": "chunk:josiah_parsons_cooke_0",
+      "passage_index": 7,
+      "title": "Josiah Parsons Cooke",
+      "score": 0.07387580436440314,
+      "text": "Josiah Parsons Cooke\nJosiah Parsons Cooke (October 12, 1827 – September 3, 1894) was an American scientist who worked at Harvard University and was instrumental in the measurement of atomic weights, inspiring America's first Nobel laureate in chemistry, Theodore Richards, to pursue similar research. Cooke's 1854 paper on atomic weights has been said to foreshadow the periodic law developed later by Mendeleev and others. Historian I. Bernard Cohen described Cooke \"as the first university chemist to do truly distinguished work in the field of chemistry\" in the United States.",
+      "score_breakdown": {
+        "dense": 0.05280487545021166,
+        "graph": 0.054576110536136695,
+        "fact": 0.1897352647063048
+      }
+    },
+    {
+      "node_id": "chunk:cavendish_professor_of_physics_0",
+      "passage_index": 10,
+      "title": "Cavendish Professor of Physics",
+      "score": 0.0737180331405029,
+      "text": "Cavendish Professor of Physics\nThe Cavendish Professorship is one of the senior faculty positions in physics at the University of Cambridge. It was founded on 9 February 1871 alongside the famous Cavendish Laboratory, which was completed three years later. William Cavendish, 7th Duke of Devonshire endowed both the professorship and laboratory in honor of his relative, chemist and physicist Henry Cavendish.",
+      "score_breakdown": {
+        "dense": 0.05280304205137442,
+        "graph": 0.0537653857493909,
+        "fact": 0.19031162858286474
+      }
+    },
+    {
+      "node_id": "chunk:isaac_newton_0",
+      "passage_index": 12,
+      "title": "Isaac Newton",
+      "score": 0.044541977689769835,
+      "text": "Isaac Newton\nNewton built the first practical reflecting telescope and developed a sophisticated theory of colour based on the observation that a prism separates white light into the colours of the visible spectrum. His work on light was collected in his highly influential book Opticks, published in 1704. He also formulated an empirical law of cooling, made the first theoretical calculation of the speed of sound, and introduced the notion of a Newtonian fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series, generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a function, and classified most of the cubic plane curves.",
+      "score_breakdown": {
+        "dense": 0.05282476232343447,
+        "graph": 0.051627861372936255,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:gravity_probe_a_0",
+      "passage_index": 18,
+      "title": "Gravity Probe A",
+      "score": 0.0445387253819136,
+      "text": "Gravity Probe A\nGravity Probe A (GP-A) was a space-based experiment to test the equivalence principle, a feature of Einstein's theory of relativity. It was performed jointly by the Smithsonian Astrophysical Observatory and the National Aeronautics and Space Administration. The experiment sent a hydrogen maser, a highly accurate frequency standard, into space to measure with high precision the rate at which time passes in a weaker gravitational field. Masses cause distortions in spacetime, which leads to the effects of length contraction and time dilation, both predicted results of Albert Einstein's theory of general relativity. Because of the bending of spacetime, an observer on Earth (in a lower gravitational potential) should measure a different rate at which time passes than an observer that is sufficiently high up in Earth's atmosphere (at higher gravitational potential). This effect is known as gravitational time dilation.",
+      "score_breakdown": {
+        "dense": 0.05295723166598446,
+        "graph": 0.05137415988540713,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:weight_0",
+      "passage_index": 2,
+      "title": "Weight",
+      "score": 0.04451263052740454,
+      "text": "Weight\nIn science and engineering, the weight of an object is usually taken to be the force on the object due to gravity. Weight is a vector whose magnitude (a scalar quantity), often denoted by an italic letter W, is the product of the mass m of the object and the magnitude of the local gravitational acceleration g; thus: W = mg. The unit of measurement for weight is that of force, which in the International System of Units (SI) is the newton. For example, an object with a mass of one kilogram has a weight of about 9.8 newtons on the surface of the Earth, and about one - sixth as much on the Moon. In this sense of weight, a body can be weightless only if it is distant (in principle infinitely far away) from any other mass. Although weight and mass are scientifically distinct quantities, the terms are often confused with each other in everyday use (i.e. comparing and converting force weight in pounds to mass in kilograms and vice versa).",
+      "score_breakdown": {
+        "dense": 0.05288206594193578,
+        "graph": 0.0514249808644662,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:robert_kennicutt_0",
+      "passage_index": 5,
+      "title": "Robert Kennicutt",
+      "score": 0.04450197465198645,
+      "text": "Robert Kennicutt\nHe received his bachelor's degree in physics from Rensselaer Polytechnic Institute in 1973. He was a graduate student in astronomy at the University of Washington, where he received his master's degree in 1976 and his Ph.D. in 1978. He was awarded the Dannie Heineman Prize for Astrophysics in 2007 by the American Astronomical Society. He shared the 2009 Gruber Prize in Cosmology with Wendy Freedman of the Carnegie Institution of Washington and Jeremy Mould of the University of Melbourne School of Physics, for their leadership in the definitive measurement of the value of the constant of proportionality in Hubble's Law. He was made a fellow of the American Academy of Arts and Sciences in 2001 and appointed a Fellow of the Royal Society in 2011.",
+      "score_breakdown": {
+        "dense": 0.05292972166102695,
+        "graph": 0.051302092461405435,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:allan_blaer_0",
+      "passage_index": 6,
+      "title": "Allan Blaer",
+      "score": 0.04437811829091573,
+      "text": "Allan Blaer\nAllan Blaer (born 1942) is a physicist, Professor Emeritus and Special Lecturer at Columbia University in New York City. He received his undergraduate degree from Columbia University in 1964, where he was the valedictorian. He later went on to obtain his PhD in physics at the same institution. He has done research in both theoretical and experimental physics. In quantum field theory, he worked on phase transitions in low-temperature bosonic and fermionic systems, quantum field theory anomalies, dyons and magnetic monopoles in non-abelian gauge theories, and renormalization theory. In experimental physics, he has worked on precision measurement of vacuum polarization in muonic atoms to test quantum electrodynamics.",
+      "score_breakdown": {
+        "dense": 0.052698153769284314,
+        "graph": 0.05131377905936452,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:newton_s_universal_gravitation_constant",
+        "score": 0.04521115950693138,
+        "text": "Newton's Universal Gravitation Constant",
+        "metadata": {
+          "canonical_name": "Newton's Universal Gravitation Constant",
+          "aliases": [
+            "NUGC",
+            "Newton's Universal Gravitation Constant"
+          ],
+          "surface_forms": [
+            "NUGC",
+            "Newton's Universal Gravitation Constant"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:european_gravitational_observatory_0_0_the_european_gravitational_observatory_or_ego_is_located_in_the_countryside_near",
+        "score": 0.07878839594744812,
+        "text": "The European Gravitational Observatory or EGO is located in the countryside near Pisa, in the hamlet of Santo Stefano a Macerata in the \"comune\" of Cascina.",
+        "metadata": {
+          "title": "European Gravitational Observatory",
+          "chunk_id": "chunk:european_gravitational_observatory_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "European Gravitational Observatory",
+              "relation": "is located in",
+              "tail": "countryside near Pisa"
+            },
+            {
+              "head": "European Gravitational Observatory",
+              "relation": "is located in the hamlet",
+              "tail": "Santo Stefano a Macerata"
+            },
+            {
+              "head": "European Gravitational Observatory",
+              "relation": "is in the comune",
+              "tail": "Cascina"
+            }
+          ],
+          "entities": [
+            "European Gravitational Observatory",
+            "countryside near Pisa",
+            "Santo Stefano a Macerata",
+            "Cascina"
+          ],
+          "entity_ids": [
+            "entity:cascina",
+            "entity:countryside_near_pisa",
+            "entity:santo_stefano_a_macerata",
+            "entity:title_anchor_european_gravitational_observatory"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+        "score": 0.0394636733156175,
+        "text": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+        "metadata": {
+          "title": "Force",
+          "chunk_id": "chunk:force_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Newton",
+              "relation": "related_to",
+              "tail": "Universal Gravitation Constant"
+            }
+          ],
+          "entities": [
+            "Newton's Universal Gravitation Constant",
+            "Newton"
+          ],
+          "entity_ids": [
+            "entity:newton",
+            "entity:newton_s_universal_gravitation_constant",
+            "entity:universal_gravitation_constant"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:carlos_newton_0_0_carlos_newton_was_born_in_anguilla_and_moved_to_canada_at_a_young_age",
+        "score": 0.03225770626899363,
+        "text": "Carlos Newton was born in Anguilla and moved to Canada at a young age.",
+        "metadata": {
+          "title": "Carlos Newton",
+          "chunk_id": "chunk:carlos_newton_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Carlos Newton",
+              "relation": "was born in",
+              "tail": "Anguilla"
+            },
+            {
+              "head": "Carlos Newton",
+              "relation": "moved to",
+              "tail": "Canada"
+            }
+          ],
+          "entities": [
+            "Carlos Newton",
+            "Anguilla",
+            "Canada"
+          ],
+          "entity_ids": [
+            "entity:anguilla",
+            "entity:canada",
+            "entity:title_anchor_carlos_newton"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:european_gravitational_observatory_0_1_in_order_to_ensure_the_long_term_scientific_exploitation_of_the_virgo_interferom",
+        "score": 0.029944936332701653,
+        "text": "In order to ensure the long term scientific exploitation of the Virgo interferometric antenna for gravitational waves detection as well as to foster European collaboration in this upcoming field, the Virgo funding institutions (CNRS for France and INFN for Italy) have created a consortium called EGO (European Gravitational Observatory).",
+        "metadata": {
+          "title": "European Gravitational Observatory",
+          "chunk_id": "chunk:european_gravitational_observatory_0",
+          "sentence_index": 1,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Virgo funding institutions",
+              "relation": "includes",
+              "tail": "CNRS for France and INFN for Italy"
+            }
+          ],
+          "entities": [
+            "Virgo interferometric antenna",
+            "CNRS for France",
+            "INFN for Italy",
+            "EGO European Gravitational Observatory"
+          ],
+          "entity_ids": [
+            "entity:cnrs_for_france",
+            "entity:cnrs_for_france_and_infn_for_italy",
+            "entity:infn_for_italy",
+            "entity:title_anchor_european_gravitational_observatory",
+            "entity:virgo_funding_institutions",
+            "entity:virgo_interferometric_antenna"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:josiah_parsons_cooke_0_3_bernard_cohen_described_cooke_as_the_first_university_chemist_to_do_truly_disti",
+        "score": 0.028122618351195595,
+        "text": "Bernard Cohen described Cooke \"as the first university chemist to do truly distinguished work in the field of chemistry\" in the United States.",
+        "metadata": {
+          "title": "Josiah Parsons Cooke",
+          "chunk_id": "chunk:josiah_parsons_cooke_0",
+          "sentence_index": 3,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Bernard Cohen",
+              "relation": "described",
+              "tail": "Cooke as the first university chemist to do truly distinguished work in the field of chemistry"
+            },
+            {
+              "head": "Cooke",
+              "relation": "status",
+              "tail": "first university chemist to do truly distinguished work in the field of chemistry in the United States"
+            }
+          ],
+          "entities": [
+            "Bernard Cohen",
+            "Cooke"
+          ],
+          "entity_ids": [
+            "entity:bernard_cohen",
+            "entity:cooke",
+            "entity:cooke_as_the_first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry",
+            "entity:first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry_in_the_united_states"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:force_0",
+        "score": 0.02584850150097406,
+        "text": "Force\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,",
+        "metadata": {
+          "title": "Force",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:aristotelian",
+            "entity:aristotelian_belief",
+            "entity:aristotelian_idea",
+            "entity:by",
+            "entity:earth",
+            "entity:earth_s_mass",
+            "entity:first_law",
+            "entity:galileo_s_insight",
+            "entity:gravitation",
+            "entity:henry_cavendish",
+            "entity:law",
+            "entity:mass_of_the_earth",
+            "entity:motion",
+            "entity:newton",
+            "entity:newton_s_first_law",
+            "entity:newton_s_first_law_of_motion",
+            "entity:newton_s_law_of_gravitation",
+            "entity:newton_s_universal_gravitation_constant",
+            "entity:not",
+            "entity:specifically",
+            "entity:succinctly",
+            "entity:universal_gravitation_constant"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:european_gravitational_observatory_0",
+        "score": 0.018365821952674288,
+        "text": "European Gravitational Observatory\nThe European Gravitational Observatory or EGO is located in the countryside near Pisa, in the hamlet of Santo Stefano a Macerata in the \"comune\" of Cascina. In order to ensure the long term scientific exploitation of the Virgo interferometric antenna for gravitational waves detection as well as to foster European collaboration in this upcoming field, the Virgo funding institutions (CNRS for France and INFN for Italy) have created a consortium called EGO (European Gravitational Observatory).",
+        "metadata": {
+          "title": "European Gravitational Observatory",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:cascina",
+            "entity:cnrs_for_france",
+            "entity:cnrs_for_france_and_infn_for_italy",
+            "entity:countryside_near_pisa",
+            "entity:infn_for_italy",
+            "entity:santo_stefano_a_macerata",
+            "entity:title_anchor_european_gravitational_observatory",
+            "entity:virgo_funding_institutions",
+            "entity:virgo_interferometric_antenna"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:carlos_newton_0",
+        "score": 0.013061534005939476,
+        "text": "Carlos Newton\nCarlos Newton was born in Anguilla and moved to Canada at a young age. He attended Westview Centennial Secondary School in the Jane and Finch area of Toronto, Ontario. Newton competed in numerous Jiu-Jitsu and BJJ competitions in Canada and across the world, starting under the legendary Tom Sharkey. Notably the prestigious Abu Dhabi Combat Club in Abu Dhabi, United Arab Emirates against Rodrigo Gracie of the legendary Gracie family. Newton started his Jiu-Jitsu competing career out of the Samurai Club in Toronto. Shortly after, in 1996, Terry Riggs founded Warrior Mixed Martial Arts in Newmarket, Ontario, which was Canada's first official MMA Academy; Newton followed his long time training partner and made it his home. Out of Warrior MMA, Newton's legendary career flourished under the coaching of Terry Riggs and Everton McEwan. Newton, a Toronto's York University student, did his study on geriatric medicine, having done research at Baycrest Hospital, one of the world leaders in geriatric care. However, he now has a full-time job in the field of architecture.",
+        "metadata": {
+          "title": "Carlos Newton",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:abu_dhabi",
+            "entity:abu_dhabi_combat_club",
+            "entity:anguilla",
+            "entity:baycrest_hospital",
+            "entity:canada",
+            "entity:canada_s_first_official_mma_academy",
+            "entity:everton_mcewan",
+            "entity:gracie_family",
+            "entity:however",
+            "entity:jane_and_finch_area",
+            "entity:newmarket_ontario",
+            "entity:newton",
+            "entity:newton_s_career",
+            "entity:numerous_jiu_jitsu_and_bjj_competitions",
+            "entity:ontario",
+            "entity:rodrigo_gracie",
+            "entity:samurai_club",
+            "entity:terry_riggs",
+            "entity:terry_riggs_and_everton_mcewan",
+            "entity:terry_riggs_long_time_training_partner",
+            "entity:title_anchor_carlos_newton",
+            "entity:tom_sharkey",
+            "entity:toronto",
+            "entity:toronto_s_york_university",
+            "entity:toronto_s_york_university_student",
+            "entity:united_arab_emirates",
+            "entity:warrior_mixed_martial_arts",
+            "entity:warrior_mma",
+            "entity:westview_centennial_secondary_school"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:josiah_parsons_cooke_0",
+        "score": 0.010443313956700354,
+        "text": "Josiah Parsons Cooke\nJosiah Parsons Cooke (October 12, 1827 – September 3, 1894) was an American scientist who worked at Harvard University and was instrumental in the measurement of atomic weights, inspiring America's first Nobel laureate in chemistry, Theodore Richards, to pursue similar research. Cooke's 1854 paper on atomic weights has been said to foreshadow the periodic law developed later by Mendeleev and others. Historian I. Bernard Cohen described Cooke \"as the first university chemist to do truly distinguished work in the field of chemistry\" in the United States.",
+        "metadata": {
+          "title": "Josiah Parsons Cooke",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:america",
+            "entity:bernard_cohen",
+            "entity:cooke",
+            "entity:cooke_as_the_first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry",
+            "entity:cooke_s_1854_paper",
+            "entity:first_university_chemist_to_do_truly_distinguished_work_in_the_field_of_chemistry_in_the_united_states",
+            "entity:harvard_university",
+            "entity:historian",
+            "entity:mendeleev",
+            "entity:mendeleev_and_others",
+            "entity:nobel",
+            "entity:october",
+            "entity:september",
+            "entity:theodore_richards",
+            "entity:title_anchor_josiah_parsons_cooke"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:cavendish_professor_of_physics_0",
+        "score": 0.009569798120551419,
+        "text": "Cavendish Professor of Physics\nThe Cavendish Professorship is one of the senior faculty positions in physics at the University of Cambridge. It was founded on 9 February 1871 alongside the famous Cavendish Laboratory, which was completed three years later. William Cavendish, 7th Duke of Devonshire endowed both the professorship and laboratory in honor of his relative, chemist and physicist Henry Cavendish.",
+        "metadata": {
+          "title": "Cavendish Professor of Physics",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:9_february_1871",
+            "entity:cavendish_laboratory",
+            "entity:cavendish_professorship",
+            "entity:february",
+            "entity:henry_cavendish",
+            "entity:university_of_cambridge",
+            "entity:william_cavendish_7th_duke_of_devonshire"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:isaac_newton_0",
+        "score": 0.002910413298887111,
+        "text": "Isaac Newton\nNewton built the first practical reflecting telescope and developed a sophisticated theory of colour based on the observation that a prism separates white light into the colours of the visible spectrum. His work on light was collected in his highly influential book Opticks, published in 1704. He also formulated an empirical law of cooling, made the first theoretical calculation of the speed of sound, and introduced the notion of a Newtonian fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series, generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a function, and classified most of the cubic plane curves.",
+        "metadata": {
+          "title": "Isaac Newton",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:his_highly_influential_book_opticks",
+            "entity:his_work_on_light",
+            "entity:newton",
+            "entity:newtonian_fluid",
+            "entity:opticks"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Carlos Newton\nCarlos Newton\nCarlos Newton was born in Anguilla and moved to Canada at a young age. He attended Westview Centennial Secondary School in the Jane and Finch area of Toronto, Ontario. Newton competed in numerous Jiu-Jitsu and BJJ competitions in Canada and across the world, starting under the legendary Tom Sharkey. Notably the prestigious Abu Dhabi Combat Club in Abu Dhabi, United Arab Emirates against Rodrigo Gracie of the legendary Gracie family. Newton started his Jiu-Jitsu competing career out of the Samurai Club in Toronto. Shortly after, in 1996, Terry Riggs founded Warrior Mixed Martial Arts in Newmarket, Ontario, which was Canada's first official MMA Academy; Newton followed his long time training partner and made it his home. Out of Warrior MMA, Newton's legendary career flourished under the coaching of Terry Riggs and Everton McEwan. Newton, a Toronto's York University student, did his study on geriatric medicine, having done research at Baycrest Hospital, one of the world leaders in geriatric care. However, he now has a full-time job in the field of architecture.\n\nEuropean Gravitational Observatory\nEuropean Gravitational Observatory\nThe European Gravitational Observatory or EGO is located in the countryside near Pisa, in the hamlet of Santo Stefano a Macerata in the \"comune\" of Cascina. In order to ensure the long term scientific exploitation of the Virgo interferometric antenna for gravitational waves detection as well as to foster European collaboration in this upcoming field, the Virgo funding institutions (CNRS for France and INFN for Italy) have created a consortium called EGO (European Gravitational Observatory).\n\nForce\nForce\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,\n\nJosiah Parsons Cooke\nJosiah Parsons Cooke\nJosiah Parsons Cooke (October 12, 1827 – September 3, 1894) was an American scientist who worked at Harvard University and was instrumental in the measurement of atomic weights, inspiring America's first Nobel laureate in chemistry, Theodore Richards, to pursue similar research. Cooke's 1854 paper on atomic weights has been said to foreshadow the periodic law developed later by Mendeleev and others. Historian I. Bernard Cohen described Cooke \"as the first university chemist to do truly distinguished work in the field of chemistry\" in the United States.\n\nCavendish Professor of Physics\nCavendish Professor of Physics\nThe Cavendish Professorship is one of the senior faculty positions in physics at the University of Cambridge. It was founded on 9 February 1871 alongside the famous Cavendish Laboratory, which was completed three years later. William Cavendish, 7th Duke of Devonshire endowed both the professorship and laboratory in honor of his relative, chemist and physicist Henry Cavendish.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:carlos_newton_0",
+        "passage_index": 0,
+        "title": "Carlos Newton",
+        "score": 0.07793138042338765,
+        "text": "Carlos Newton\nCarlos Newton was born in Anguilla and moved to Canada at a young age. He attended Westview Centennial Secondary School in the Jane and Finch area of Toronto, Ontario. Newton competed in numerous Jiu-Jitsu and BJJ competitions in Canada and across the world, starting under the legendary Tom Sharkey. Notably the prestigious Abu Dhabi Combat Club in Abu Dhabi, United Arab Emirates against Rodrigo Gracie of the legendary Gracie family. Newton started his Jiu-Jitsu competing career out of the Samurai Club in Toronto. Shortly after, in 1996, Terry Riggs founded Warrior Mixed Martial Arts in Newmarket, Ontario, which was Canada's first official MMA Academy; Newton followed his long time training partner and made it his home. Out of Warrior MMA, Newton's legendary career flourished under the coaching of Terry Riggs and Everton McEwan. Newton, a Toronto's York University student, did his study on geriatric medicine, having done research at Baycrest Hospital, one of the world leaders in geriatric care. However, he now has a full-time job in the field of architecture.",
+        "score_breakdown": {
+          "dense": 0.05270891687354957,
+          "graph": 0.05652178785857231,
+          "fact": 0.21323293190242468
+        }
+      },
+      {
+        "node_id": "chunk:european_gravitational_observatory_0",
+        "passage_index": 4,
+        "title": "European Gravitational Observatory",
+        "score": 0.07701735756250985,
+        "text": "European Gravitational Observatory\nThe European Gravitational Observatory or EGO is located in the countryside near Pisa, in the hamlet of Santo Stefano a Macerata in the \"comune\" of Cascina. In order to ensure the long term scientific exploitation of the Virgo interferometric antenna for gravitational waves detection as well as to foster European collaboration in this upcoming field, the Virgo funding institutions (CNRS for France and INFN for Italy) have created a consortium called EGO (European Gravitational Observatory).",
+        "score_breakdown": {
+          "dense": 0.052505115367403224,
+          "graph": 0.05798644947797195,
+          "fact": 0.20495739511364328
+        }
+      },
+      {
+        "node_id": "chunk:force_0",
+        "passage_index": 13,
+        "title": "Force",
+        "score": 0.07676860546942774,
+        "text": "Force\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,",
+        "score_breakdown": {
+          "dense": 0.052719198762893014,
+          "graph": 0.05836209731874068,
+          "fact": 0.2017627796947625
+        }
+      },
+      {
+        "node_id": "chunk:josiah_parsons_cooke_0",
+        "passage_index": 7,
+        "title": "Josiah Parsons Cooke",
+        "score": 0.07387580436440314,
+        "text": "Josiah Parsons Cooke\nJosiah Parsons Cooke (October 12, 1827 – September 3, 1894) was an American scientist who worked at Harvard University and was instrumental in the measurement of atomic weights, inspiring America's first Nobel laureate in chemistry, Theodore Richards, to pursue similar research. Cooke's 1854 paper on atomic weights has been said to foreshadow the periodic law developed later by Mendeleev and others. Historian I. Bernard Cohen described Cooke \"as the first university chemist to do truly distinguished work in the field of chemistry\" in the United States.",
+        "score_breakdown": {
+          "dense": 0.05280487545021166,
+          "graph": 0.054576110536136695,
+          "fact": 0.1897352647063048
+        }
+      },
+      {
+        "node_id": "chunk:cavendish_professor_of_physics_0",
+        "passage_index": 10,
+        "title": "Cavendish Professor of Physics",
+        "score": 0.0737180331405029,
+        "text": "Cavendish Professor of Physics\nThe Cavendish Professorship is one of the senior faculty positions in physics at the University of Cambridge. It was founded on 9 February 1871 alongside the famous Cavendish Laboratory, which was completed three years later. William Cavendish, 7th Duke of Devonshire endowed both the professorship and laboratory in honor of his relative, chemist and physicist Henry Cavendish.",
+        "score_breakdown": {
+          "dense": 0.05280304205137442,
+          "graph": 0.0537653857493909,
+          "fact": 0.19031162858286474
+        }
+      },
+      {
+        "node_id": "chunk:isaac_newton_0",
+        "passage_index": 12,
+        "title": "Isaac Newton",
+        "score": 0.044541977689769835,
+        "text": "Isaac Newton\nNewton built the first practical reflecting telescope and developed a sophisticated theory of colour based on the observation that a prism separates white light into the colours of the visible spectrum. His work on light was collected in his highly influential book Opticks, published in 1704. He also formulated an empirical law of cooling, made the first theoretical calculation of the speed of sound, and introduced the notion of a Newtonian fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series, generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a function, and classified most of the cubic plane curves.",
+        "score_breakdown": {
+          "dense": 0.05282476232343447,
+          "graph": 0.051627861372936255,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:gravity_probe_a_0",
+        "passage_index": 18,
+        "title": "Gravity Probe A",
+        "score": 0.0445387253819136,
+        "text": "Gravity Probe A\nGravity Probe A (GP-A) was a space-based experiment to test the equivalence principle, a feature of Einstein's theory of relativity. It was performed jointly by the Smithsonian Astrophysical Observatory and the National Aeronautics and Space Administration. The experiment sent a hydrogen maser, a highly accurate frequency standard, into space to measure with high precision the rate at which time passes in a weaker gravitational field. Masses cause distortions in spacetime, which leads to the effects of length contraction and time dilation, both predicted results of Albert Einstein's theory of general relativity. Because of the bending of spacetime, an observer on Earth (in a lower gravitational potential) should measure a different rate at which time passes than an observer that is sufficiently high up in Earth's atmosphere (at higher gravitational potential). This effect is known as gravitational time dilation.",
+        "score_breakdown": {
+          "dense": 0.05295723166598446,
+          "graph": 0.05137415988540713,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:weight_0",
+        "passage_index": 2,
+        "title": "Weight",
+        "score": 0.04451263052740454,
+        "text": "Weight\nIn science and engineering, the weight of an object is usually taken to be the force on the object due to gravity. Weight is a vector whose magnitude (a scalar quantity), often denoted by an italic letter W, is the product of the mass m of the object and the magnitude of the local gravitational acceleration g; thus: W = mg. The unit of measurement for weight is that of force, which in the International System of Units (SI) is the newton. For example, an object with a mass of one kilogram has a weight of about 9.8 newtons on the surface of the Earth, and about one - sixth as much on the Moon. In this sense of weight, a body can be weightless only if it is distant (in principle infinitely far away) from any other mass. Although weight and mass are scientifically distinct quantities, the terms are often confused with each other in everyday use (i.e. comparing and converting force weight in pounds to mass in kilograms and vice versa).",
+        "score_breakdown": {
+          "dense": 0.05288206594193578,
+          "graph": 0.0514249808644662,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:robert_kennicutt_0",
+        "passage_index": 5,
+        "title": "Robert Kennicutt",
+        "score": 0.04450197465198645,
+        "text": "Robert Kennicutt\nHe received his bachelor's degree in physics from Rensselaer Polytechnic Institute in 1973. He was a graduate student in astronomy at the University of Washington, where he received his master's degree in 1976 and his Ph.D. in 1978. He was awarded the Dannie Heineman Prize for Astrophysics in 2007 by the American Astronomical Society. He shared the 2009 Gruber Prize in Cosmology with Wendy Freedman of the Carnegie Institution of Washington and Jeremy Mould of the University of Melbourne School of Physics, for their leadership in the definitive measurement of the value of the constant of proportionality in Hubble's Law. He was made a fellow of the American Academy of Arts and Sciences in 2001 and appointed a Fellow of the Royal Society in 2011.",
+        "score_breakdown": {
+          "dense": 0.05292972166102695,
+          "graph": 0.051302092461405435,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:allan_blaer_0",
+        "passage_index": 6,
+        "title": "Allan Blaer",
+        "score": 0.04437811829091573,
+        "text": "Allan Blaer\nAllan Blaer (born 1942) is a physicist, Professor Emeritus and Special Lecturer at Columbia University in New York City. He received his undergraduate degree from Columbia University in 1964, where he was the valedictorian. He later went on to obtain his PhD in physics at the same institution. He has done research in both theoretical and experimental physics. In quantum field theory, he worked on phase transitions in low-temperature bosonic and fermionic systems, quantum field theory anomalies, dyons and magnetic monopoles in non-abelian gauge theories, and renormalization theory. In experimental physics, he has worked on precision measurement of vacuum polarization in muonic atoms to test quantum electrodynamics.",
+        "score_breakdown": {
+          "dense": 0.052698153769284314,
+          "graph": 0.05131377905936452,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was the physicist that made the first measurement of the Newton's Universal Gravitation Constant?",
+        "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+        "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+        "score": 0.5649230769230769
+      },
+      {
+        "sub_question": "What is the field of work of the aforementioned physicist?",
+        "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+        "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+        "score": 0.5681538461538462
+      }
+    ]
+  }
+}

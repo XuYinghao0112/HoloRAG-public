@@ -1,0 +1,986 @@
+{
+  "query": "What instrument is played by the person from The Blackout All-Stars?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.4,
+    "chunk": 0.4
+  },
+  "query_entities": [
+    "Blackout All",
+    "Stars"
+  ],
+  "raw_query_entities": [
+    "Blackout All",
+    "Stars"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Blackout All",
+      "node_id": "entity:title_anchor_the_blackout_all_stars",
+      "resolved_text": "The Blackout All-Stars",
+      "score": 0.7771111111111112,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7333333333333334,
+      "compatibility_score": 0.5,
+      "score_margin": 0.062444444444444525,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is from The Blackout All-Stars?",
+    "What instrument is played by the person from The Blackout All-Stars?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "score": 0.5390296350128656,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "chunk:the_blackout_all_stars_0",
+      "score": 0.29443548154337323,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_washington_jr_and_tony_pabon",
+      "score": 0.24482821779370334,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_dog_star_man",
+      "score": 0.23774386125577562,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:stan_brakhage",
+      "score": 0.23774386125577562,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sheila_e",
+      "score": 0.2150898189407685,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_blackout_all_stars",
+      "score": 0.19371650187976755,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:grover_washington_jr",
+      "score": 0.1851863280415424,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:paquito_d_rivera",
+      "score": 0.16516864725957578,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:dave_valentin",
+      "score": 0.1628861562471643,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ray_barretto",
+      "score": 0.16288519513937488,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:dog_star_man_0_0_dog_star_man_is_a_series_of_short_experimental_films_all_directed_by_stan_brakh",
+      "score": 0.09714031116893286,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:blackout_all_stars_has_member_sheila_e_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_lat",
+      "text": "Blackout All-Stars has_member Sheila E",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:sheila_e",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.26285137775383716
+    },
+    {
+      "fact_id": "fact:blackout_all_stars_consisted_of_ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_wash",
+      "text": "Blackout All-Stars consisted of Ray Barretto Sheila E Tito Puente Tito Nieves Paquito D'Rivera Dave Valentin Grover Washington Jr and Tony Pabon",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_washington_jr_and_tony_pabon",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.24261778687090935
+    },
+    {
+      "fact_id": "fact:dog_star_man_directed_by_stan_brakhage_sentence_dog_star_man_0_0_dog_star_man_is_a_series_of_short_experimental_films_al",
+      "text": "Dog Star Man directed by Stan Brakhage",
+      "head_id": "entity:title_anchor_dog_star_man",
+      "tail_id": "entity:stan_brakhage",
+      "sentence_id": "sentence:dog_star_man_0_0_dog_star_man_is_a_series_of_short_experimental_films_all_directed_by_stan_brakh",
+      "chunk_id": "chunk:dog_star_man_0",
+      "document_index": 13,
+      "score": 0.23553357568989294
+    },
+    {
+      "fact_id": "fact:blackout_all_stars_has_member_grover_washington_jr_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_",
+      "text": "Blackout All-Stars has_member Grover Washington Jr",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:grover_washington_jr",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.18297708900560108
+    },
+    {
+      "fact_id": "fact:blackout_all_stars_has_member_paquito_d_rivera_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_",
+      "text": "Blackout All-Stars has_member Paquito D'Rivera",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:paquito_d_rivera",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.16295979245093106
+    },
+    {
+      "fact_id": "fact:sheila_e_member_of_blackout_all_stars_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_lati",
+      "text": "Sheila E member_of Blackout All-Stars",
+      "head_id": "entity:sheila_e",
+      "tail_id": "entity:title_anchor_the_blackout_all_stars",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.16290655641942636
+    },
+    {
+      "fact_id": "fact:blackout_all_stars_has_member_dave_valentin_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_199",
+      "text": "Blackout All-Stars has_member Dave Valentin",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:dave_valentin",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.1628861562471643
+    },
+    {
+      "fact_id": "fact:blackout_all_stars_has_member_ray_barretto_sentence_the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994",
+      "text": "Blackout All-Stars has_member Ray Barretto",
+      "head_id": "entity:title_anchor_the_blackout_all_stars",
+      "tail_id": "entity:ray_barretto",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "chunk_id": "chunk:the_blackout_all_stars_0",
+      "document_index": 12,
+      "score": 0.16288519513937488
+    }
+  ],
+  "bridge_entities": [
+    "Ray Barretto",
+    "Sheila E",
+    "Tito Puente",
+    "Tito Nieves",
+    "Paquito D'Rivera",
+    "Dave Valentin"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is from The Blackout All-Stars?",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+      "score": 0.5606203905741374
+    },
+    {
+      "sub_question": "What instrument is played by the person from The Blackout All-Stars?",
+      "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+      "score": 0.6065191957685683
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+      "score": 0.25342530106260347,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_the_blackout_all_stars",
+      "score": 0.13152523736216457,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:dog_star_man_0_0_dog_star_man_is_a_series_of_short_experimental_films_all_directed_by_stan_brakh",
+      "score": 0.07132751440969862,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_dog_star_man",
+      "score": 0.04300968840403334,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:stan_brakhage",
+      "score": 0.03044611549374579,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sheila_e",
+      "score": 0.02791033775758011,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:grover_washington_jr",
+      "score": 0.026515187670667947,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ray_barretto",
+      "score": 0.025810874722040588,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:paquito_d_rivera",
+      "score": 0.025581260953655004,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:dave_valentin",
+      "score": 0.025474771127932866,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:the_blackout_all_stars_0",
+      "score": 0.020443157554810732,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_washington_jr_and_tony_pabon",
+      "score": 0.0202205486455012,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:midnight_blue_kenny_burrell_album_0_0_midnight_blue_is_a_1963_album_by_jazz_guitarist_kenny_burrell_featuring_stanley",
+      "score": 0.019949807820663187,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:jane_wodening",
+      "score": 0.019354154029727795,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:dog_star_man_0",
+      "score": 0.019040923089317045,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:tito_puente",
+      "score": 0.017875302697613223,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tito_nieves",
+      "score": 0.017875302697613223,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tony_pabon",
+      "score": 0.017875302697613223,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:dog_star_man_0_1_it_was_released_during_1961_to_1964_and_comprises_a_prelude_and_four_parts",
+      "score": 0.015399163461358034,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_midnight_blue_kenny_burrell_album",
+      "score": 0.009501197944557959,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:the_blackout_all_stars_0",
+      "passage_index": 12,
+      "title": "The Blackout All-Stars",
+      "score": 0.1237977201018884,
+      "text": "The Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+      "score_breakdown": {
+        "dense": 0.05115437661290522,
+        "graph": 0.0654615302988591,
+        "fact": 0.5068290258342187
+      }
+    },
+    {
+      "node_id": "chunk:dog_star_man_0",
+      "passage_index": 13,
+      "title": "Dog Star Man",
+      "score": 0.1175965957867475,
+      "text": "Dog Star Man\nDog Star Man is a series of short experimental films, all directed by Stan Brakhage, featuring Jane Wodening. It was released during 1961 to 1964 and comprises a prelude and four parts.",
+      "score_breakdown": {
+        "dense": 0.049783627587473296,
+        "graph": 0.054133181629233376,
+        "fact": 0.49317097416578115
+      }
+    },
+    {
+      "node_id": "chunk:midnight_blue_kenny_burrell_album_0",
+      "passage_index": 16,
+      "title": "Midnight Blue (Kenny Burrell album)",
+      "score": 0.042504613392531435,
+      "text": "Midnight Blue (Kenny Burrell album)\nMidnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note. \"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\". In 2005, NPR included the album in its \"Basic Jazz Library\", describing it as \"one of the great jazzy blues records\". The album has been re-issued by Blue Note and the French label Classics.",
+      "score_breakdown": {
+        "dense": 0.049872335150277,
+        "graph": 0.050249430199596934,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:northeast_blackout_of_2003_0",
+      "passage_index": 4,
+      "title": "Northeast blackout of 2003",
+      "score": 0.04223376496846337,
+      "text": "Northeast blackout of 2003\nThe Northeast blackout of 2003 was a widespread power outage throughout parts of the Northeastern and Midwestern United States and the Canadian province of Ontario on Thursday, August 14, 2003, just after 4: 10 p.m. EDT.",
+      "score_breakdown": {
+        "dense": 0.05014279431946326,
+        "graph": 0.048850760309195274,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:radar_song_0",
+      "passage_index": 0,
+      "title": "Radar (song)",
+      "score": 0.042215701495832744,
+      "text": "Radar (song)\n\"Radar\" is a song recorded by American singer Britney Spears for her fifth studio album, \"Blackout\" (2007). It was written and produced by Bloodshy & Avant and The Clutch, with additional writing from Henrik Jonback, as a record that did not relate to any of her personal problems at the time. The recording sessions took place the day after Spears filed for divorce from Kevin Federline, and members of The Clutch claimed to be surprised by her work ethic. \"Radar\" was originally planned to be released as the third single from \"Blackout\", but \"Break the Ice\" was chosen instead. The song was then planned as the fourth single, but the release was cancelled as Spears began recording her sixth studio album, \"Circus\" (2008). \"Radar\" was later included as a bonus track on \"Circus\", and released as the fourth and final single from the album on June 22, 2009 by Jive Records.",
+      "score_breakdown": {
+        "dense": 0.05011659149066153,
+        "graph": 0.04883858725322967,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:transformers_film_0",
+      "passage_index": 7,
+      "title": "Transformers (film)",
+      "score": 0.04221163508449078,
+      "text": "Transformers (film)\nIn the present, Blackout attacks and destroys a United States military base in Qatar in a failed attempt to hack the military network to find information on Megatron and the AllSpark. A surviving team of Army Rangers led by Captain William Lennox escape across the desert, pursued by Blackout's drone Scorponok. They fight Scorponok off, aided by aerial reinforcements, and travel home with Scorponok's stinger, discovering sabot rounds damaged its armor. At the Pentagon, Secretary of Defense John Keller leads the investigation into the attack. Sound analyst Maggie Madsen catches another Decepticon, Frenzy, hacking into the military network while onboard Air Force One. While the hack is thwarted, Frenzy downloads files on Archibald's glasses, tracking down Sam with Barricade, disguised as a police car.",
+      "score_breakdown": {
+        "dense": 0.05009484592685413,
+        "graph": 0.04886489941573669,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:a_cappella_0",
+      "passage_index": 19,
+      "title": "A cappella",
+      "score": 0.04219199935788928,
+      "text": "A cappella\nIn addition to singing words, some a cappella singers also emulate instrumentation by reproducing instrumental sounds with their vocal cords and mouth. One of the earliest 20th century practitioners of this method were The Mills Brothers whose early recordings of the 1930s clearly stated on the label that all instrumentation was done vocally. More recently, \"Twilight Zone\" by 2 Unlimited was sung a cappella to the instrumentation on the comedy television series Tompkins Square. Another famous example of emulating instrumentation instead of singing the words is the theme song for The New Addams Family series on Fox Family Channel (now ABC Family). Groups such as Vocal Sampling and Undivided emulate Latin rhythms a cappella. In the 1960s, the Swingle Singers used their voices to emulate musical instruments to Baroque and Classical music. Vocal artist Bobby McFerrin is famous for his instrumental emulation. A cappella group Naturally Seven recreates entire songs using vocal tones for every instrument.",
+      "score_breakdown": {
+        "dense": 0.050074857066709666,
+        "graph": 0.04883609323732989,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:phonograph_record_0",
+      "passage_index": 14,
+      "title": "Phonograph record",
+      "score": 0.04219093199982878,
+      "text": "Phonograph record\nContrary to popular belief, if placed properly and prepared-for, drums could be effectively used and heard on even the earliest jazz and military band recordings. The loudest instruments such as the drums and trumpets were positioned the farthest away from the collecting horn. Lillian Hardin Armstrong, a member of King Oliver's Creole Jazz Band, which recorded at Gennett Records in 1923, remembered that at first Oliver and his young second trumpet, Louis Armstrong, stood next to each other and Oliver's horn could not be heard. \"They put Louis about fifteen feet over in the corner, looking all sad.\" For fading instrumental parts in and out while recording, some performers were placed on a moveable platform, which could draw the performer(s) nearer or further away as required.[citation needed]",
+      "score_breakdown": {
+        "dense": 0.05007337294468062,
+        "graph": 0.048835256267514796,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_horse_0",
+      "passage_index": 2,
+      "title": "The Horse",
+      "score": 0.04218085732782856,
+      "text": "The Horse\n\"The Horse\" is an American instrumental song by Cliff Nobles and Company. It was released as the B-side of the single \"Love is All Right\" and is simply an instrumental version of that song. It peaked at #2 on both the US \"Billboard\" Hot 100 chart (in June 1968) and the US \"Billboard\" R&B chart.",
+      "score_breakdown": {
+        "dense": 0.05005800191030168,
+        "graph": 0.048829854257208774,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_blitz_0",
+      "passage_index": 3,
+      "title": "The Blitz",
+      "score": 0.04217495333424685,
+      "text": "The Blitz\nThe government planned to voluntarily evacuate four million people—mostly women and children—from urban areas, including 1.4 million from London. It expected about 90% of evacuees to stay in private homes, and conducted an extensive survey to determine available space. Detailed preparations for transporting them were developed. A trial blackout was held on 10 August 1939, and when Germany invaded Poland on 1 September a blackout began at sunset. Lights would not be allowed after dark for almost six years, and the blackout became by far the most unpopular aspect of the war for civilians, more than rationing.:51,106 The relocation of the government and the civil service was also planned, but would only have occurred if necessary so as not to damage civilian morale.:33",
+      "score_breakdown": {
+        "dense": 0.05002842198945676,
+        "graph": 0.048864404133485424,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_the_blackout_all_stars",
+        "score": 0.13152523736216457,
+        "text": "The Blackout All-Stars",
+        "metadata": {
+          "canonical_name": "The Blackout All-Stars",
+          "aliases": [
+            "BA",
+            "Blackout All-Stars"
+          ],
+          "surface_forms": [
+            "BA",
+            "Blackout All-Stars"
+          ],
+          "title_anchor": "The Blackout All-Stars"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_dog_star_man",
+        "score": 0.04300968840403334,
+        "text": "Dog Star Man",
+        "metadata": {
+          "canonical_name": "Dog Star Man",
+          "aliases": [
+            "DSM",
+            "Dog Star Man"
+          ],
+          "surface_forms": [
+            "DSM",
+            "Dog Star Man"
+          ],
+          "title_anchor": "Dog Star Man"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+        "score": 0.25342530106260347,
+        "text": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+        "metadata": {
+          "title": "The Blackout All-Stars",
+          "chunk_id": "chunk:the_blackout_all_stars_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Blackout All-Stars",
+              "relation": "consisted of",
+              "tail": "Ray Barretto Sheila E Tito Puente Tito Nieves Paquito D'Rivera Dave Valentin Grover Washington Jr and Tony Pabon"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "type",
+              "tail": "one-off 1994 Latin supergroup"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Ray Barretto"
+            },
+            {
+              "head": "Ray Barretto",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Sheila E"
+            },
+            {
+              "head": "Sheila E",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Tito Puente"
+            },
+            {
+              "head": "Tito Puente",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Tito Nieves"
+            },
+            {
+              "head": "Tito Nieves",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Paquito D'Rivera"
+            },
+            {
+              "head": "Paquito D'Rivera",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Dave Valentin"
+            },
+            {
+              "head": "Dave Valentin",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Grover Washington Jr"
+            },
+            {
+              "head": "Grover Washington Jr",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            },
+            {
+              "head": "Blackout All-Stars",
+              "relation": "has_member",
+              "tail": "Tony Pabon"
+            },
+            {
+              "head": "Tony Pabon",
+              "relation": "member_of",
+              "tail": "Blackout All-Stars"
+            }
+          ],
+          "entities": [
+            "Blackout All-Stars",
+            "Ray Barretto",
+            "Sheila E",
+            "Tito Puente",
+            "Tito Nieves",
+            "Paquito D'Rivera",
+            "Dave Valentin",
+            "Grover Washington Jr",
+            "Tony Pabon"
+          ],
+          "entity_ids": [
+            "entity:dave_valentin",
+            "entity:grover_washington_jr",
+            "entity:one_off_1994_latin_supergroup",
+            "entity:paquito_d_rivera",
+            "entity:ray_barretto",
+            "entity:ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_washington_jr_and_tony_pabon",
+            "entity:sheila_e",
+            "entity:title_anchor_the_blackout_all_stars",
+            "entity:tito_nieves",
+            "entity:tito_puente",
+            "entity:tony_pabon"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:dog_star_man_0_0_dog_star_man_is_a_series_of_short_experimental_films_all_directed_by_stan_brakh",
+        "score": 0.07132751440969862,
+        "text": "Dog Star Man is a series of short experimental films, all directed by Stan Brakhage, featuring Jane Wodening.",
+        "metadata": {
+          "title": "Dog Star Man",
+          "chunk_id": "chunk:dog_star_man_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Dog Star Man",
+              "relation": "directed by",
+              "tail": "Stan Brakhage"
+            },
+            {
+              "head": "Dog Star Man",
+              "relation": "featuring",
+              "tail": "Jane Wodening"
+            }
+          ],
+          "entities": [
+            "Dog Star Man",
+            "Stan Brakhage",
+            "Jane Wodening"
+          ],
+          "entity_ids": [
+            "entity:jane_wodening",
+            "entity:stan_brakhage",
+            "entity:title_anchor_dog_star_man"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:midnight_blue_kenny_burrell_album_0_0_midnight_blue_is_a_1963_album_by_jazz_guitarist_kenny_burrell_featuring_stanley",
+        "score": 0.019949807820663187,
+        "text": "Midnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note.",
+        "metadata": {
+          "title": "Midnight Blue (Kenny Burrell album)",
+          "chunk_id": "chunk:midnight_blue_kenny_burrell_album_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Midnight Blue",
+              "relation": "related_to",
+              "tail": "Jazz"
+            },
+            {
+              "head": "Jazz",
+              "relation": "related_to",
+              "tail": "Kenny Burrell"
+            },
+            {
+              "head": "Kenny Burrell",
+              "relation": "related_to",
+              "tail": "Stanley Turrentine"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Stanley Turrentine"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Major Holley"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Bill English"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Ray Barretto"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Burrell's"
+            },
+            {
+              "head": "Midnight Blue",
+              "relation": "featuring",
+              "tail": "Blue Note"
+            }
+          ],
+          "entities": [
+            "Midnight Blue",
+            "Jazz",
+            "Kenny Burrell",
+            "Stanley Turrentine",
+            "Major Holley",
+            "Bill English",
+            "Ray Barretto",
+            "Burrell",
+            "Blue Note",
+            "Burrell's"
+          ],
+          "entity_ids": [
+            "entity:bill_english",
+            "entity:blue_note",
+            "entity:burrell",
+            "entity:burrell_s",
+            "entity:jazz",
+            "entity:kenny_burrell",
+            "entity:major_holley",
+            "entity:ray_barretto",
+            "entity:stanley_turrentine",
+            "entity:title_anchor_midnight_blue_kenny_burrell_album"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:dog_star_man_0_1_it_was_released_during_1961_to_1964_and_comprises_a_prelude_and_four_parts",
+        "score": 0.015399163461358034,
+        "text": "It was released during 1961 to 1964 and comprises a prelude and four parts.",
+        "metadata": {
+          "title": "Dog Star Man",
+          "chunk_id": "chunk:dog_star_man_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [],
+          "entities": []
+        }
+      },
+      {
+        "node_id": "sentence:midnight_blue_kenny_burrell_album_0_1_jazz_improv_magazine_lists_the_album_among_its_top_five_recommended_recordings",
+        "score": 0.002854690644678108,
+        "text": "\"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\".",
+        "metadata": {
+          "title": "Midnight Blue (Kenny Burrell album)",
+          "chunk_id": "chunk:midnight_blue_kenny_burrell_album_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Jazz Improv",
+              "relation": "related_to",
+              "tail": "Burrell"
+            },
+            {
+              "head": "Burrell",
+              "relation": "related_to",
+              "tail": "Blue Note"
+            }
+          ],
+          "entities": [
+            "Jazz Improv",
+            "Blue Note"
+          ],
+          "entity_ids": [
+            "entity:blue_note",
+            "entity:burrell",
+            "entity:jazz_improv"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_blackout_all_stars_0",
+        "score": 0.020443157554810732,
+        "text": "The Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+        "metadata": {
+          "title": "The Blackout All-Stars",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:dave_valentin",
+            "entity:grover_washington_jr",
+            "entity:one_off_1994_latin_supergroup",
+            "entity:paquito_d_rivera",
+            "entity:ray_barretto",
+            "entity:ray_barretto_sheila_e_tito_puente_tito_nieves_paquito_d_rivera_dave_valentin_grover_washington_jr_and_tony_pabon",
+            "entity:sheila_e",
+            "entity:title_anchor_the_blackout_all_stars",
+            "entity:tito_nieves",
+            "entity:tito_puente",
+            "entity:tony_pabon"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:dog_star_man_0",
+        "score": 0.019040923089317045,
+        "text": "Dog Star Man\nDog Star Man is a series of short experimental films, all directed by Stan Brakhage, featuring Jane Wodening. It was released during 1961 to 1964 and comprises a prelude and four parts.",
+        "metadata": {
+          "title": "Dog Star Man",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:jane_wodening",
+            "entity:stan_brakhage",
+            "entity:title_anchor_dog_star_man"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:midnight_blue_kenny_burrell_album_0",
+        "score": 0.0024910925403916337,
+        "text": "Midnight Blue (Kenny Burrell album)\nMidnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note. \"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\". In 2005, NPR included the album in its \"Basic Jazz Library\", describing it as \"one of the great jazzy blues records\". The album has been re-issued by Blue Note and the French label Classics.",
+        "metadata": {
+          "title": "Midnight Blue (Kenny Burrell album)",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:album_in_its_basic_jazz_library",
+            "entity:basic_jazz_library",
+            "entity:bill_english",
+            "entity:blue_note",
+            "entity:burrell",
+            "entity:burrell_s",
+            "entity:classics",
+            "entity:french",
+            "entity:jazz",
+            "entity:jazz_improv",
+            "entity:kenny_burrell",
+            "entity:major_holley",
+            "entity:npr",
+            "entity:ray_barretto",
+            "entity:stanley_turrentine",
+            "entity:title_anchor_midnight_blue_kenny_burrell_album"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:kamryn_belle_0",
+        "score": 0.0021898852550929796,
+        "text": "Kamryn Belle\nFor the most part she was raised in the Netherlands, where she currently lives. Kamryn is the youngest of six children and comes from a musical family. Her dad was a singer in a band and her three brothers all played an instrument. When she was growing up Kamryn started singing more often and gained more experience. She now writes and records songs in her home studio.",
+        "metadata": {
+          "title": "Kamryn Belle",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:kamryn",
+            "entity:netherlands"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:chapman_stick_0",
+        "score": 0.0018183145112692417,
+        "text": "Chapman Stick\nThe Chapman Stick is an electric musical instrument devised by Emmett Chapman in the early 1970s. A member of the guitar family, the Chapman Stick usually has ten or twelve individually tuned strings and has been used on music recordings to play bass lines, melody lines, chords, or textures. Designed as a fully polyphonic chordal instrument, it can also cover several of these musical parts simultaneously.",
+        "metadata": {
+          "title": "Chapman Stick",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:designed",
+            "entity:emmett_chapman",
+            "entity:title_anchor_chapman_stick"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Blackout All-Stars\nThe Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.\n\nDog Star Man\nDog Star Man\nDog Star Man is a series of short experimental films, all directed by Stan Brakhage, featuring Jane Wodening. It was released during 1961 to 1964 and comprises a prelude and four parts.\n\nMidnight Blue (Kenny Burrell album)\nMidnight Blue (Kenny Burrell album)\nMidnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note. \"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\". In 2005, NPR included the album in its \"Basic Jazz Library\", describing it as \"one of the great jazzy blues records\". The album has been re-issued by Blue Note and the French label Classics.\n\nNortheast blackout of 2003\nNortheast blackout of 2003\nThe Northeast blackout of 2003 was a widespread power outage throughout parts of the Northeastern and Midwestern United States and the Canadian province of Ontario on Thursday, August 14, 2003, just after 4: 10 p.m. EDT.\n\nRadar (song)\nRadar (song)\n\"Radar\" is a song recorded by American singer Britney Spears for her fifth studio album, \"Blackout\" (2007). It was written and produced by Bloodshy & Avant and The Clutch, with additional writing from Henrik Jonback, as a record that did not relate to any of her personal problems at the time. The recording sessions took place the day after Spears filed for divorce from Kevin Federline, and members of The Clutch claimed to be surprised by her work ethic. \"Radar\" was originally planned to be released as the third single from \"Blackout\", but \"Break the Ice\" was chosen instead. The song was then planned as the fourth single, but the release was cancelled as Spears began recording her sixth studio album, \"Circus\" (2008). \"Radar\" was later included as a bonus track on \"Circus\", and released as the fourth and final single from the album on June 22, 2009 by Jive Records.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:the_blackout_all_stars_0",
+        "passage_index": 12,
+        "title": "The Blackout All-Stars",
+        "score": 0.1237977201018884,
+        "text": "The Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+        "score_breakdown": {
+          "dense": 0.05115437661290522,
+          "graph": 0.0654615302988591,
+          "fact": 0.5068290258342187
+        }
+      },
+      {
+        "node_id": "chunk:dog_star_man_0",
+        "passage_index": 13,
+        "title": "Dog Star Man",
+        "score": 0.1175965957867475,
+        "text": "Dog Star Man\nDog Star Man is a series of short experimental films, all directed by Stan Brakhage, featuring Jane Wodening. It was released during 1961 to 1964 and comprises a prelude and four parts.",
+        "score_breakdown": {
+          "dense": 0.049783627587473296,
+          "graph": 0.054133181629233376,
+          "fact": 0.49317097416578115
+        }
+      },
+      {
+        "node_id": "chunk:midnight_blue_kenny_burrell_album_0",
+        "passage_index": 16,
+        "title": "Midnight Blue (Kenny Burrell album)",
+        "score": 0.042504613392531435,
+        "text": "Midnight Blue (Kenny Burrell album)\nMidnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note. \"Jazz Improv\" magazine lists the album among its top five recommended recordings for Burrell, indicating that \"[i]f you need to know 'the Blue Note sound', here it is\". In 2005, NPR included the album in its \"Basic Jazz Library\", describing it as \"one of the great jazzy blues records\". The album has been re-issued by Blue Note and the French label Classics.",
+        "score_breakdown": {
+          "dense": 0.049872335150277,
+          "graph": 0.050249430199596934,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:northeast_blackout_of_2003_0",
+        "passage_index": 4,
+        "title": "Northeast blackout of 2003",
+        "score": 0.04223376496846337,
+        "text": "Northeast blackout of 2003\nThe Northeast blackout of 2003 was a widespread power outage throughout parts of the Northeastern and Midwestern United States and the Canadian province of Ontario on Thursday, August 14, 2003, just after 4: 10 p.m. EDT.",
+        "score_breakdown": {
+          "dense": 0.05014279431946326,
+          "graph": 0.048850760309195274,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:radar_song_0",
+        "passage_index": 0,
+        "title": "Radar (song)",
+        "score": 0.042215701495832744,
+        "text": "Radar (song)\n\"Radar\" is a song recorded by American singer Britney Spears for her fifth studio album, \"Blackout\" (2007). It was written and produced by Bloodshy & Avant and The Clutch, with additional writing from Henrik Jonback, as a record that did not relate to any of her personal problems at the time. The recording sessions took place the day after Spears filed for divorce from Kevin Federline, and members of The Clutch claimed to be surprised by her work ethic. \"Radar\" was originally planned to be released as the third single from \"Blackout\", but \"Break the Ice\" was chosen instead. The song was then planned as the fourth single, but the release was cancelled as Spears began recording her sixth studio album, \"Circus\" (2008). \"Radar\" was later included as a bonus track on \"Circus\", and released as the fourth and final single from the album on June 22, 2009 by Jive Records.",
+        "score_breakdown": {
+          "dense": 0.05011659149066153,
+          "graph": 0.04883858725322967,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:transformers_film_0",
+        "passage_index": 7,
+        "title": "Transformers (film)",
+        "score": 0.04221163508449078,
+        "text": "Transformers (film)\nIn the present, Blackout attacks and destroys a United States military base in Qatar in a failed attempt to hack the military network to find information on Megatron and the AllSpark. A surviving team of Army Rangers led by Captain William Lennox escape across the desert, pursued by Blackout's drone Scorponok. They fight Scorponok off, aided by aerial reinforcements, and travel home with Scorponok's stinger, discovering sabot rounds damaged its armor. At the Pentagon, Secretary of Defense John Keller leads the investigation into the attack. Sound analyst Maggie Madsen catches another Decepticon, Frenzy, hacking into the military network while onboard Air Force One. While the hack is thwarted, Frenzy downloads files on Archibald's glasses, tracking down Sam with Barricade, disguised as a police car.",
+        "score_breakdown": {
+          "dense": 0.05009484592685413,
+          "graph": 0.04886489941573669,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:a_cappella_0",
+        "passage_index": 19,
+        "title": "A cappella",
+        "score": 0.04219199935788928,
+        "text": "A cappella\nIn addition to singing words, some a cappella singers also emulate instrumentation by reproducing instrumental sounds with their vocal cords and mouth. One of the earliest 20th century practitioners of this method were The Mills Brothers whose early recordings of the 1930s clearly stated on the label that all instrumentation was done vocally. More recently, \"Twilight Zone\" by 2 Unlimited was sung a cappella to the instrumentation on the comedy television series Tompkins Square. Another famous example of emulating instrumentation instead of singing the words is the theme song for The New Addams Family series on Fox Family Channel (now ABC Family). Groups such as Vocal Sampling and Undivided emulate Latin rhythms a cappella. In the 1960s, the Swingle Singers used their voices to emulate musical instruments to Baroque and Classical music. Vocal artist Bobby McFerrin is famous for his instrumental emulation. A cappella group Naturally Seven recreates entire songs using vocal tones for every instrument.",
+        "score_breakdown": {
+          "dense": 0.050074857066709666,
+          "graph": 0.04883609323732989,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:phonograph_record_0",
+        "passage_index": 14,
+        "title": "Phonograph record",
+        "score": 0.04219093199982878,
+        "text": "Phonograph record\nContrary to popular belief, if placed properly and prepared-for, drums could be effectively used and heard on even the earliest jazz and military band recordings. The loudest instruments such as the drums and trumpets were positioned the farthest away from the collecting horn. Lillian Hardin Armstrong, a member of King Oliver's Creole Jazz Band, which recorded at Gennett Records in 1923, remembered that at first Oliver and his young second trumpet, Louis Armstrong, stood next to each other and Oliver's horn could not be heard. \"They put Louis about fifteen feet over in the corner, looking all sad.\" For fading instrumental parts in and out while recording, some performers were placed on a moveable platform, which could draw the performer(s) nearer or further away as required.[citation needed]",
+        "score_breakdown": {
+          "dense": 0.05007337294468062,
+          "graph": 0.048835256267514796,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_horse_0",
+        "passage_index": 2,
+        "title": "The Horse",
+        "score": 0.04218085732782856,
+        "text": "The Horse\n\"The Horse\" is an American instrumental song by Cliff Nobles and Company. It was released as the B-side of the single \"Love is All Right\" and is simply an instrumental version of that song. It peaked at #2 on both the US \"Billboard\" Hot 100 chart (in June 1968) and the US \"Billboard\" R&B chart.",
+        "score_breakdown": {
+          "dense": 0.05005800191030168,
+          "graph": 0.048829854257208774,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_blitz_0",
+        "passage_index": 3,
+        "title": "The Blitz",
+        "score": 0.04217495333424685,
+        "text": "The Blitz\nThe government planned to voluntarily evacuate four million people—mostly women and children—from urban areas, including 1.4 million from London. It expected about 90% of evacuees to stay in private homes, and conducted an extensive survey to determine available space. Detailed preparations for transporting them were developed. A trial blackout was held on 10 August 1939, and when Germany invaded Poland on 1 September a blackout began at sunset. Lights would not be allowed after dark for almost six years, and the blackout became by far the most unpopular aspect of the war for civilians, more than rationing.:51,106 The relocation of the government and the civil service was also planned, but would only have occurred if necessary so as not to damage civilian morale.:33",
+        "score_breakdown": {
+          "dense": 0.05002842198945676,
+          "graph": 0.048864404133485424,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is from The Blackout All-Stars?",
+        "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+        "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+        "score": 0.5606203905741374
+      },
+      {
+        "sub_question": "What instrument is played by the person from The Blackout All-Stars?",
+        "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+        "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+        "score": 0.6065191957685683
+      }
+    ]
+  }
+}

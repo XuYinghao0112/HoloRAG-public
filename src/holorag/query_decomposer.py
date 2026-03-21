@@ -26,6 +26,8 @@ class QueryDecomposer:
                 "Preserve multi-hop dependency order. "
                 "For nested or relative-clause questions, first resolve the inner referent, "
                 "then identify the linked entity, then ask for the final target attribute. "
+                "Do not rewrite, reinterpret, or correct the query into a different task. "
+                "Keep each sub-question close to the original wording unless the resolved entity context disambiguates a mention. "
                 "Use the resolved entity context to avoid mixing different entities that share surface forms. "
                 "Return JSON with key sub_questions."
             ),

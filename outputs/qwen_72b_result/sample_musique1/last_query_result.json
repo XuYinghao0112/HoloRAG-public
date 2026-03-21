@@ -1,0 +1,956 @@
+{
+  "query": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [],
+  "raw_query_entities": [],
+  "query_entity_resolutions": [],
+  "sub_questions": [
+    "Who was the governor of which state during the Civil War?",
+    "When did this governor die?",
+    "Which state was this governor from?",
+    "When did this state become a part of the U.S.?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "score": 0.3901010875322745,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:north_carolina",
+      "score": 0.3876122344452809,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kentucky",
+      "score": 0.3725996952397139,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:twelfth_state_to_ratify_the_constitution",
+      "score": 0.36462197073485364,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:november_21_1789",
+      "score": 0.36457098915300334,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_north_carolina",
+      "score": 0.3286844299307106,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_beriah_magoffin",
+      "score": 0.31022016177998607,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:constitution",
+      "score": 0.25695561592654675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:early_part_of_the_civil_war",
+      "score": 0.24802166698246736,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "score": 0.2461617478474028,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:seceding_from_a_confederate_state",
+      "score": 0.23186606850364422,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:north_carolina_0",
+      "score": 0.21555367174095005,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:beriah_magoffin_governor_of_kentucky_sentence_beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the",
+      "text": "Beriah Magoffin governor_of Kentucky",
+      "head_id": "entity:title_anchor_beriah_magoffin",
+      "tail_id": "entity:kentucky",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "chunk_id": "chunk:beriah_magoffin_0",
+      "document_index": 18,
+      "score": 0.3669241162140652
+    },
+    {
+      "fact_id": "fact:north_carolina_statehood_date_november_21_1789_sentence_north_carolina_0_0_on_november_21_1789_north_carolina_became_the",
+      "text": "North Carolina statehood_date November 21 1789",
+      "head_id": "entity:title_anchor_north_carolina",
+      "tail_id": "entity:november_21_1789",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "chunk_id": "chunk:north_carolina_0",
+      "document_index": 16,
+      "score": 0.3588967545933602
+    },
+    {
+      "fact_id": "fact:north_carolina_became_twelfth_state_to_ratify_the_constitution_sentence_north_carolina_0_0_on_november_21_1789_north_car",
+      "text": "North Carolina became twelfth state to ratify the Constitution",
+      "head_id": "entity:title_anchor_north_carolina",
+      "tail_id": "entity:twelfth_state_to_ratify_the_constitution",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "chunk_id": "chunk:north_carolina_0",
+      "document_index": 16,
+      "score": 0.3588354606443335
+    },
+    {
+      "fact_id": "fact:north_carolina_ratified_constitution_sentence_north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_s",
+      "text": "North Carolina ratified Constitution",
+      "head_id": "entity:title_anchor_north_carolina",
+      "tail_id": "entity:constitution",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "chunk_id": "chunk:north_carolina_0",
+      "document_index": 16,
+      "score": 0.2512983708755086
+    },
+    {
+      "fact_id": "fact:beriah_magoffin_served_during_early_part_of_the_civil_war_sentence_beriah_magoffin_0_0_beriah_magoffin_april_18_1815_feb",
+      "text": "Beriah Magoffin served during early part of the Civil War",
+      "head_id": "entity:title_anchor_beriah_magoffin",
+      "tail_id": "entity:early_part_of_the_civil_war",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "chunk_id": "chunk:beriah_magoffin_0",
+      "document_index": 18,
+      "score": 0.24216504929460947
+    },
+    {
+      "fact_id": "fact:west_virginia_only_state_to_form_by_seceding_from_a_confederate_state_sentence_history_of_west_virginia_0_0_west_virgini",
+      "text": "West Virginia only state to form by seceding from a Confederate state",
+      "head_id": "entity:west_virginia",
+      "tail_id": "entity:seceding_from_a_confederate_state",
+      "sentence_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+      "chunk_id": "chunk:history_of_west_virginia_0",
+      "document_index": 2,
+      "score": 0.23186606850364422
+    },
+    {
+      "fact_id": "fact:west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war_sentence_history_of_west_virginia_0_0_w",
+      "text": "West Virginia is one of two American states formed during the American Civil War",
+      "head_id": "entity:west_virginia",
+      "tail_id": "entity:two_american_states_formed_during_the_american_civil_war",
+      "sentence_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+      "chunk_id": "chunk:history_of_west_virginia_0",
+      "document_index": 2,
+      "score": 0.1722210695039628
+    }
+  ],
+  "bridge_entities": [],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was the governor of which state during the Civil War?",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+      "score": 0.541058601687307
+    },
+    {
+      "sub_question": "When did this governor die?",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+      "score": 0.3422603298971698
+    },
+    {
+      "sub_question": "Which state was this governor from?",
+      "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+      "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+      "score": 0.3802150171399117
+    },
+    {
+      "sub_question": "When did this state become a part of the U.S.?",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+      "score": 0.35940318704002694
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_north_carolina",
+      "score": 0.07872346240588697,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "score": 0.0756072638714434,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "score": 0.07054695031770525,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_beriah_magoffin",
+      "score": 0.06762742721437273,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:west_virginia",
+      "score": 0.03351344724698347,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+      "score": 0.030426636030701268,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:november_21_1789",
+      "score": 0.02753502213352777,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kentucky",
+      "score": 0.02643204346048244,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_3_although_north_carolina_s_plantation_system_was_smaller_and_less_cohesive_than_t",
+      "score": 0.026359731316448684,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:constitution",
+      "score": 0.02421952353170183,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:twelfth_state_to_ratify_the_constitution",
+      "score": 0.022312616786005726,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:north_carolina_0",
+      "score": 0.022126593849267066,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:north_carolina",
+      "score": 0.021175333777320587,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:early_part_of_the_civil_war",
+      "score": 0.018498820693866387,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_2_most_of_north_carolina_s_slave_owners_and_large_plantations_were_located_in_the",
+      "score": 0.017059156021808578,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_4_planters_owning_large_estates_wielded_significant_political_and_socio_economic",
+      "score": 0.016327882901736545,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:zebulon_baird_vance_0_0_zebulon_baird_vance_may_13_1830_april_14_1894_was_a_confederate_military_o",
+      "score": 0.015254021989387287,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:seceding_from_a_confederate_state",
+      "score": 0.012211591755354655,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:beriah_magoffin_0_1_personally_magoffin_adhered_to_a_states_rights_position_including_the_right_o",
+      "score": 0.011569719234277985,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:beriah_magoffin_0",
+      "score": 0.011057067828409997,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:north_carolina_0",
+      "passage_index": 16,
+      "title": "North Carolina",
+      "score": 0.09904857152217847,
+      "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+      "score_breakdown": {
+        "dense": 0.05240629087664138,
+        "graph": 0.06099943813173968,
+        "fact": 0.34616853400335873
+      }
+    },
+    {
+      "node_id": "chunk:beriah_magoffin_0",
+      "passage_index": 18,
+      "title": "Beriah Magoffin",
+      "score": 0.09888868627487074,
+      "text": "Beriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.",
+      "score_breakdown": {
+        "dense": 0.052897257224944476,
+        "graph": 0.058171380733233295,
+        "fact": 0.34895853720787534
+      }
+    },
+    {
+      "node_id": "chunk:history_of_west_virginia_0",
+      "passage_index": 2,
+      "title": "History of West Virginia",
+      "score": 0.0912268126830216,
+      "text": "History of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.",
+      "score_breakdown": {
+        "dense": 0.05303801925519455,
+        "graph": 0.054416542581165676,
+        "fact": 0.304872928788766
+      }
+    },
+    {
+      "node_id": "chunk:zebulon_baird_vance_0",
+      "passage_index": 15,
+      "title": "Zebulon Baird Vance",
+      "score": 0.044823059746553484,
+      "text": "Zebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.",
+      "score_breakdown": {
+        "dense": 0.05273967067850411,
+        "graph": 0.05272080291125407,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:isaac_h_duval_0",
+      "passage_index": 14,
+      "title": "Isaac H. Duval",
+      "score": 0.0446121922278115,
+      "text": "Isaac H. Duval\nIsaac Harding Duval (September 1, 1824 – July 10, 1902) was an adventurer and businessman prior to becoming a brigadier general in the Union Army during the American Civil War. He was a postbellum U.S. Representative from West Virginia in the 41st United States Congress.",
+      "score_breakdown": {
+        "dense": 0.05263405172185971,
+        "graph": 0.052211545935962195,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:thomas_clement_fletcher_0",
+      "passage_index": 8,
+      "title": "Thomas Clement Fletcher",
+      "score": 0.04457490010775196,
+      "text": "Thomas Clement Fletcher\nThomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction. He was the first Missouri governor to be born in the state. The Thomas C. Fletcher House was listed on the National Register of Historic Places in 1974.",
+      "score_breakdown": {
+        "dense": 0.05295266505190794,
+        "graph": 0.051503114430675304,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:william_henry_harman_0",
+      "passage_index": 3,
+      "title": "William Henry Harman",
+      "score": 0.04451626369254495,
+      "text": "William Henry Harman\nWilliam Henry Harman (February 17, 1828 – March 2, 1865) was a brigadier general in the Virginia militia and colonel in the Confederate States Army during the American Civil War (Civil War). Prior to the war, Harman had served as a second lieutenant in the 1st Virginia Infantry Regiment during the Mexican–American War, after which he had become a lawyer. He was commonwealth's attorney for Augusta County, Virginia from 1851 until the beginning of the Civil War, when he was appointed a brigadier general in the state militia.",
+      "score_breakdown": {
+        "dense": 0.05276906806381573,
+        "graph": 0.05164425419148767,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:charles_smith_olden_0",
+      "passage_index": 9,
+      "title": "Charles Smith Olden",
+      "score": 0.044500699575633226,
+      "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+      "score_breakdown": {
+        "dense": 0.052841397698619785,
+        "graph": 0.051459769471307815,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:john_milton_thayer_0",
+      "passage_index": 19,
+      "title": "John Milton Thayer",
+      "score": 0.04447365340731564,
+      "text": "John Milton Thayer\nJohn Milton Thayer (January 24, 1820March 19, 1906) was a general in the Union Army during the American Civil War and a postbellum United States Senator from Nebraska. Thayer served as Governor of Wyoming Territory and Governor of Nebraska.",
+      "score_breakdown": {
+        "dense": 0.05277494567846066,
+        "graph": 0.051491444280540914,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:readmission_of_states_0",
+      "passage_index": 17,
+      "title": "Readmission of states",
+      "score": 0.04447124783023884,
+      "text": "Readmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+      "score_breakdown": {
+        "dense": 0.052744799006446345,
+        "graph": 0.05153869458897782,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_north_carolina",
+        "score": 0.07872346240588697,
+        "text": "North Carolina",
+        "metadata": {
+          "canonical_name": "North Carolina",
+          "aliases": [
+            "NC",
+            "North Carolina"
+          ],
+          "surface_forms": [
+            "NC",
+            "North Carolina"
+          ],
+          "title_anchor": "North Carolina"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_beriah_magoffin",
+        "score": 0.06762742721437273,
+        "text": "Beriah Magoffin",
+        "metadata": {
+          "canonical_name": "Beriah Magoffin",
+          "aliases": [
+            "BM",
+            "Beriah Magoffin"
+          ],
+          "surface_forms": [
+            "BM",
+            "Beriah Magoffin"
+          ],
+          "title_anchor": "Beriah Magoffin"
+        }
+      },
+      {
+        "node_id": "entity:west_virginia",
+        "score": 0.03351344724698347,
+        "text": "West Virginia",
+        "metadata": {
+          "canonical_name": "West Virginia",
+          "aliases": [
+            "WV",
+            "West Virginia"
+          ],
+          "surface_forms": [
+            "WV",
+            "West Virginia"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:november_21_1789",
+        "score": 0.02753502213352777,
+        "text": "November 21 1789",
+        "metadata": {
+          "canonical_name": "November 21 1789",
+          "aliases": [
+            "N21",
+            "November 21 1789"
+          ],
+          "surface_forms": [
+            "N21",
+            "November 21 1789"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:kentucky",
+        "score": 0.02643204346048244,
+        "text": "Kentucky",
+        "metadata": {
+          "canonical_name": "Kentucky",
+          "aliases": [
+            "Kentucky"
+          ],
+          "surface_forms": [
+            "Kentucky"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+        "score": 0.0756072638714434,
+        "text": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+        "metadata": {
+          "title": "Beriah Magoffin",
+          "chunk_id": "chunk:beriah_magoffin_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Beriah Magoffin",
+              "relation": "born on",
+              "tail": "April 18 1815"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "died on",
+              "tail": "February 28 1885"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "was",
+              "tail": "21st Governor of Kentucky"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "served during",
+              "tail": "early part of the Civil War"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "governor_of",
+              "tail": "Kentucky"
+            }
+          ],
+          "entities": [
+            "Beriah Magoffin",
+            "Kentucky"
+          ],
+          "entity_ids": [
+            "entity:21st_governor_of_kentucky",
+            "entity:april_18_1815",
+            "entity:early_part_of_the_civil_war",
+            "entity:february_28_1885",
+            "entity:kentucky",
+            "entity:title_anchor_beriah_magoffin"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+        "score": 0.07054695031770525,
+        "text": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution.",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_id": "chunk:north_carolina_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "North Carolina",
+              "relation": "became",
+              "tail": "twelfth state to ratify the Constitution"
+            },
+            {
+              "head": "North Carolina",
+              "relation": "ratified",
+              "tail": "Constitution"
+            },
+            {
+              "head": "North Carolina",
+              "relation": "statehood_date",
+              "tail": "November 21 1789"
+            }
+          ],
+          "entities": [
+            "North Carolina",
+            "Constitution",
+            "November 21 1789"
+          ],
+          "entity_ids": [
+            "entity:constitution",
+            "entity:november_21_1789",
+            "entity:title_anchor_north_carolina",
+            "entity:twelfth_state_to_ratify_the_constitution"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+        "score": 0.030426636030701268,
+        "text": "West Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state.",
+        "metadata": {
+          "title": "History of West Virginia",
+          "chunk_id": "chunk:history_of_west_virginia_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "West Virginia",
+              "relation": "is one of",
+              "tail": "two American states formed during the American Civil War"
+            },
+            {
+              "head": "West Virginia",
+              "relation": "formed with",
+              "tail": "Nevada"
+            },
+            {
+              "head": "West Virginia",
+              "relation": "only state to form by",
+              "tail": "seceding from a Confederate state"
+            }
+          ],
+          "entities": [
+            "West Virginia",
+            "American Civil War",
+            "Nevada",
+            "Confederate state"
+          ],
+          "entity_ids": [
+            "entity:american_civil_war",
+            "entity:confederate_state",
+            "entity:nevada",
+            "entity:seceding_from_a_confederate_state",
+            "entity:two_american_states_formed_during_the_american_civil_war",
+            "entity:west_virginia"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:north_carolina_0_3_although_north_carolina_s_plantation_system_was_smaller_and_less_cohesive_than_t",
+        "score": 0.026359731316448684,
+        "text": "Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont.",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_id": "chunk:north_carolina_0",
+          "sentence_index": 3,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "North Carolina",
+              "relation": "had smaller and less cohesive plantation system than",
+              "tail": "Virginia Georgia South Carolina"
+            }
+          ],
+          "entities": [
+            "North Carolina",
+            "Virginia",
+            "Georgia",
+            "South Carolina",
+            "Wilmington",
+            "Edenton",
+            "Raleigh",
+            "Charlotte",
+            "Durham",
+            "Piedmont"
+          ],
+          "entity_ids": [
+            "entity:charlotte",
+            "entity:durham",
+            "entity:edenton",
+            "entity:georgia",
+            "entity:piedmont",
+            "entity:raleigh",
+            "entity:south_carolina",
+            "entity:title_anchor_north_carolina",
+            "entity:virginia",
+            "entity:virginia_georgia_south_carolina",
+            "entity:wilmington"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:north_carolina_0",
+        "score": 0.022126593849267066,
+        "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:antebellum_north_carolina",
+            "entity:bethania",
+            "entity:charlotte",
+            "entity:constitution",
+            "entity:durham",
+            "entity:edenton",
+            "entity:fayetteville",
+            "entity:georgia",
+            "entity:most",
+            "entity:northwest_of_winston_salem",
+            "entity:november_21_1789",
+            "entity:piedmont",
+            "entity:planters",
+            "entity:raleigh",
+            "entity:south_carolina",
+            "entity:title_anchor_north_carolina",
+            "entity:twelfth_state_to_ratify_the_constitution",
+            "entity:virginia",
+            "entity:virginia_georgia_south_carolina",
+            "entity:western_north_carolina",
+            "entity:wilmington",
+            "entity:winston_salem"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:beriah_magoffin_0",
+        "score": 0.011057067828409997,
+        "text": "Beriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.",
+        "metadata": {
+          "title": "Beriah Magoffin",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:21st_governor_of_kentucky",
+            "entity:april_18_1815",
+            "entity:calls_for_aid_from_union_and_confederate_governments",
+            "entity:confederate_cause",
+            "entity:confederate_governments",
+            "entity:early_part_of_the_civil_war",
+            "entity:february_28_1885",
+            "entity:kentucky",
+            "entity:kentucky_general_assembly",
+            "entity:magoffin",
+            "entity:title_anchor_beriah_magoffin"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:history_of_west_virginia_0",
+        "score": 0.007815006668686598,
+        "text": "History of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.",
+        "metadata": {
+          "title": "History of West Virginia",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:american_civil_war",
+            "entity:british_virginia_colony",
+            "entity:civil_war_border_states",
+            "entity:confederate_state",
+            "entity:nevada",
+            "entity:seceding_from_a_confederate_state",
+            "entity:state_of_virginia",
+            "entity:two_american_states_formed_during_the_american_civil_war",
+            "entity:virginia",
+            "entity:west_virginia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:isaac_h_duval_0",
+        "score": 0.002214880412993122,
+        "text": "Isaac H. Duval\nIsaac Harding Duval (September 1, 1824 – July 10, 1902) was an adventurer and businessman prior to becoming a brigadier general in the Union Army during the American Civil War. He was a postbellum U.S. Representative from West Virginia in the 41st United States Congress.",
+        "metadata": {
+          "title": "Isaac H. Duval",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:41st_united_states_congress",
+            "entity:american_civil_war",
+            "entity:july",
+            "entity:representative",
+            "entity:september",
+            "entity:title_anchor_isaac_h_duval",
+            "entity:union_army",
+            "entity:west_virginia"
+          ]
+        }
+      }
+    ],
+    "qa_context": "North Carolina\nNorth Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).\n\nBeriah Magoffin\nBeriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.\n\nHistory of West Virginia\nHistory of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.\n\nZebulon Baird Vance\nZebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.\n\nIsaac H. Duval\nIsaac H. Duval\nIsaac Harding Duval (September 1, 1824 – July 10, 1902) was an adventurer and businessman prior to becoming a brigadier general in the Union Army during the American Civil War. He was a postbellum U.S. Representative from West Virginia in the 41st United States Congress.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:north_carolina_0",
+        "passage_index": 16,
+        "title": "North Carolina",
+        "score": 0.09904857152217847,
+        "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+        "score_breakdown": {
+          "dense": 0.05240629087664138,
+          "graph": 0.06099943813173968,
+          "fact": 0.34616853400335873
+        }
+      },
+      {
+        "node_id": "chunk:beriah_magoffin_0",
+        "passage_index": 18,
+        "title": "Beriah Magoffin",
+        "score": 0.09888868627487074,
+        "text": "Beriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.",
+        "score_breakdown": {
+          "dense": 0.052897257224944476,
+          "graph": 0.058171380733233295,
+          "fact": 0.34895853720787534
+        }
+      },
+      {
+        "node_id": "chunk:history_of_west_virginia_0",
+        "passage_index": 2,
+        "title": "History of West Virginia",
+        "score": 0.0912268126830216,
+        "text": "History of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.",
+        "score_breakdown": {
+          "dense": 0.05303801925519455,
+          "graph": 0.054416542581165676,
+          "fact": 0.304872928788766
+        }
+      },
+      {
+        "node_id": "chunk:zebulon_baird_vance_0",
+        "passage_index": 15,
+        "title": "Zebulon Baird Vance",
+        "score": 0.044823059746553484,
+        "text": "Zebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.",
+        "score_breakdown": {
+          "dense": 0.05273967067850411,
+          "graph": 0.05272080291125407,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:isaac_h_duval_0",
+        "passage_index": 14,
+        "title": "Isaac H. Duval",
+        "score": 0.0446121922278115,
+        "text": "Isaac H. Duval\nIsaac Harding Duval (September 1, 1824 – July 10, 1902) was an adventurer and businessman prior to becoming a brigadier general in the Union Army during the American Civil War. He was a postbellum U.S. Representative from West Virginia in the 41st United States Congress.",
+        "score_breakdown": {
+          "dense": 0.05263405172185971,
+          "graph": 0.052211545935962195,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:thomas_clement_fletcher_0",
+        "passage_index": 8,
+        "title": "Thomas Clement Fletcher",
+        "score": 0.04457490010775196,
+        "text": "Thomas Clement Fletcher\nThomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction. He was the first Missouri governor to be born in the state. The Thomas C. Fletcher House was listed on the National Register of Historic Places in 1974.",
+        "score_breakdown": {
+          "dense": 0.05295266505190794,
+          "graph": 0.051503114430675304,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:william_henry_harman_0",
+        "passage_index": 3,
+        "title": "William Henry Harman",
+        "score": 0.04451626369254495,
+        "text": "William Henry Harman\nWilliam Henry Harman (February 17, 1828 – March 2, 1865) was a brigadier general in the Virginia militia and colonel in the Confederate States Army during the American Civil War (Civil War). Prior to the war, Harman had served as a second lieutenant in the 1st Virginia Infantry Regiment during the Mexican–American War, after which he had become a lawyer. He was commonwealth's attorney for Augusta County, Virginia from 1851 until the beginning of the Civil War, when he was appointed a brigadier general in the state militia.",
+        "score_breakdown": {
+          "dense": 0.05276906806381573,
+          "graph": 0.05164425419148767,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:charles_smith_olden_0",
+        "passage_index": 9,
+        "title": "Charles Smith Olden",
+        "score": 0.044500699575633226,
+        "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+        "score_breakdown": {
+          "dense": 0.052841397698619785,
+          "graph": 0.051459769471307815,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:john_milton_thayer_0",
+        "passage_index": 19,
+        "title": "John Milton Thayer",
+        "score": 0.04447365340731564,
+        "text": "John Milton Thayer\nJohn Milton Thayer (January 24, 1820March 19, 1906) was a general in the Union Army during the American Civil War and a postbellum United States Senator from Nebraska. Thayer served as Governor of Wyoming Territory and Governor of Nebraska.",
+        "score_breakdown": {
+          "dense": 0.05277494567846066,
+          "graph": 0.051491444280540914,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:readmission_of_states_0",
+        "passage_index": 17,
+        "title": "Readmission of states",
+        "score": 0.04447124783023884,
+        "text": "Readmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+        "score_breakdown": {
+          "dense": 0.052744799006446345,
+          "graph": 0.05153869458897782,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was the governor of which state during the Civil War?",
+        "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+        "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+        "score": 0.541058601687307
+      },
+      {
+        "sub_question": "When did this governor die?",
+        "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+        "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+        "score": 0.3422603298971698
+      },
+      {
+        "sub_question": "Which state was this governor from?",
+        "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+        "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+        "score": 0.3802150171399117
+      },
+      {
+        "sub_question": "When did this state become a part of the U.S.?",
+        "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+        "sentence": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+        "score": 0.35940318704002694
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze the provided passages and question carefully. Start your response after 'Thought: ' with a concise reasoning process grounded in the passages. Then conclude with 'Answer: ' followed by a short, definitive answer. If the answer cannot be found in the passages, output 'Answer: Unknown'."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: North Carolina\nNorth Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).\n\nWikipedia Title: Beriah Magoffin\nBeriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.\n\nWikipedia Title: History of West Virginia\nHistory of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.\n\nWikipedia Title: Zebulon Baird Vance\nZebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.\n\nWikipedia Title: Isaac H. Duval\nIsaac H. Duval\nIsaac Harding Duval (September 1, 1824 – July 10, 1902) was an adventurer and businessman prior to becoming a brigadier general in the Union Army during the American Civil War. He was a postbellum U.S. Representative from West Virginia in the 41st United States Congress.\n\nQuestion: When did the state in which the governor during the Civil War died, become a part of the U.S.?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The passage about Beriah Magoffin indicates he was the Governor of Kentucky during the Civil War. To find when Kentucky became a part of the U.S., we need to refer to historical records not explicitly provided in the given text. However, based on common knowledge, Kentucky was admitted to the Union as the 15th state on June 1, 1792. Since this information is not directly stated in the provided passages, I must conclude with:",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The passage about Beriah Magoffin indicates he was the Governor of Kentucky during the Civil War. To find when Kentucky became a part of the U.S., we need to refer to historical records not explicitly provided in the given text. However, based on common knowledge, Kentucky was admitted to the Union as the 15th state on June 1, 1792. Since this information is not directly stated in the provided passages, I must conclude with:\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "3hop1__22527_146265_68918",
+    "question": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
+    "answer": "November 21, 1789",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Who was the governor during the Civil War?",
+      "In what city did #1 die?",
+      "when did #2 become a part of the united states"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "November 21, 1789",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "November 21, 1789"
+    ]
+  }
+}

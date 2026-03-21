@@ -1,0 +1,930 @@
+{
+  "query": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [],
+  "raw_query_entities": [],
+  "query_entity_resolutions": [],
+  "sub_questions": [
+    "Which state had its governor die during the Civil War?",
+    "In which year did this state become part of the U.S.?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:post_civil_war_era_of_reconstruction",
+      "score": 0.8718649305071086,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:reconstruction_era",
+      "score": 0.6166425144773492,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:latter_stages_of_the_american_civil_war_and_the_early_part_of_reconstruction",
+      "score": 0.5717255424211816,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:reconstruction_era_of_the_united_states",
+      "score": 0.5662772037790498,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_carolina",
+      "score": 0.4306256168604902,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_north_carolina",
+      "score": 0.3638101430101605,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:november_21_1789",
+      "score": 0.3638101430101605,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "score": 0.28957371305234,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:early_part_of_the_civil_war",
+      "score": 0.27728830130466614,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+      "score": 0.2619150813299622,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_beriah_magoffin",
+      "score": 0.25671056051032437,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_thomas_clement_fletcher",
+      "score": 0.23820110382728918,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:north_carolina_became_the_twelfth_state_to_ratify_the_constitution_november_21_1789_sentence_north_carolina_0_0_on_novem",
+      "text": "North Carolina became the twelfth state to ratify the Constitution November 21 1789",
+      "head_id": "entity:title_anchor_north_carolina",
+      "tail_id": "entity:november_21_1789",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "chunk_id": "chunk:north_carolina_0",
+      "document_index": 16,
+      "score": 0.3787780277320612
+    },
+    {
+      "fact_id": "fact:north_carolina_statehood_date_november_21_1789_sentence_north_carolina_0_0_on_november_21_1789_north_carolina_became_the",
+      "text": "North Carolina statehood_date November 21 1789",
+      "head_id": "entity:title_anchor_north_carolina",
+      "tail_id": "entity:november_21_1789",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "chunk_id": "chunk:north_carolina_0",
+      "document_index": 16,
+      "score": 0.3389313337020892
+    },
+    {
+      "fact_id": "fact:beriah_magoffin_termtime_early_part_of_the_civil_war_sentence_beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february",
+      "text": "Beriah Magoffin termTime early part of the Civil War",
+      "head_id": "entity:title_anchor_beriah_magoffin",
+      "tail_id": "entity:early_part_of_the_civil_war",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "chunk_id": "chunk:beriah_magoffin_0",
+      "document_index": 18,
+      "score": 0.2721824138598248
+    },
+    {
+      "fact_id": "fact:readmission_of_confederate_states_as_states_of_the_united_states_occurred_during_post_civil_war_era_of_reconstruction_se",
+      "text": "readmission of Confederate states as states of the United States occurred during post-Civil War era of Reconstruction",
+      "head_id": "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+      "tail_id": "entity:post_civil_war_era_of_reconstruction",
+      "sentence_id": "sentence:readmission_of_states_0_0_reconstruction_era_of_the_united_states_readmission_of_confederate_states_as_st",
+      "chunk_id": "chunk:readmission_of_states_0",
+      "document_index": 17,
+      "score": 0.2620422085729602
+    },
+    {
+      "fact_id": "fact:thomas_clement_fletcher_timeinoffice_latter_stages_of_the_american_civil_war_and_the_early_part_of_reconstruction_senten",
+      "text": "Thomas Clement Fletcher timeInOffice latter stages of the American Civil War and the early part of Reconstruction",
+      "head_id": "entity:title_anchor_thomas_clement_fletcher",
+      "tail_id": "entity:latter_stages_of_the_american_civil_war_and_the_early_part_of_reconstruction",
+      "sentence_id": "sentence:thomas_clement_fletcher_0_0_thomas_clement_fletcher_january_21_1827march_25_1899_was_the_18th_governor_o",
+      "chunk_id": "chunk:thomas_clement_fletcher_0",
+      "document_index": 8,
+      "score": 0.25217478199168053
+    },
+    {
+      "fact_id": "fact:reconstruction_era_of_the_united_states_includes_readmission_of_confederate_states_as_states_of_the_united_states_senten",
+      "text": "Reconstruction era of the United States includes readmission of Confederate states as states of the United States",
+      "head_id": "entity:reconstruction_era_of_the_united_states",
+      "tail_id": "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+      "sentence_id": "sentence:readmission_of_states_0_0_reconstruction_era_of_the_united_states_readmission_of_confederate_states_as_st",
+      "chunk_id": "chunk:readmission_of_states_0",
+      "document_index": 17,
+      "score": 0.2518265534914975
+    },
+    {
+      "fact_id": "fact:beriah_magoffin_governor_of_kentucky_sentence_beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the",
+      "text": "Beriah Magoffin governor_of Kentucky",
+      "head_id": "entity:title_anchor_beriah_magoffin",
+      "tail_id": "entity:kentucky",
+      "sentence_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "chunk_id": "chunk:beriah_magoffin_0",
+      "document_index": 18,
+      "score": 0.23135505178085106
+    },
+    {
+      "fact_id": "fact:thomas_clement_fletcher_governor_of_missouri_sentence_thomas_clement_fletcher_0_0_thomas_clement_fletcher_january_21_182",
+      "text": "Thomas Clement Fletcher governor_of Missouri",
+      "head_id": "entity:title_anchor_thomas_clement_fletcher",
+      "tail_id": "entity:missouri",
+      "sentence_id": "sentence:thomas_clement_fletcher_0_0_thomas_clement_fletcher_january_21_1827march_25_1899_was_the_18th_governor_o",
+      "chunk_id": "chunk:thomas_clement_fletcher_0",
+      "document_index": 8,
+      "score": 0.21434856469292846
+    }
+  ],
+  "bridge_entities": [],
+  "reasoning_chain": [
+    {
+      "sub_question": "Which state had its governor die during the Civil War?",
+      "sentence_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+      "sentence": "West Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state.",
+      "score": 0.4933683646917343
+    },
+    {
+      "sub_question": "In which year did this state become part of the U.S.?",
+      "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "sentence": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution.",
+      "score": 0.36040989406579205
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:readmission_of_states_0_0_reconstruction_era_of_the_united_states_readmission_of_confederate_states_as_st",
+      "score": 0.07419910516372599,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:post_civil_war_era_of_reconstruction",
+      "score": 0.05716820074383243,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:thomas_clement_fletcher_0_0_thomas_clement_fletcher_january_21_1827march_25_1899_was_the_18th_governor_o",
+      "score": 0.055525006016357396,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+      "score": 0.04826424073367741,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:reconstruction_era_of_the_united_states",
+      "score": 0.04571688672574015,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+      "score": 0.03560225971299486,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:reconstruction_era",
+      "score": 0.03413731562030579,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_thomas_clement_fletcher",
+      "score": 0.03223151149512948,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+      "score": 0.03178806015818989,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_beriah_magoffin",
+      "score": 0.029144522255817124,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_north_carolina",
+      "score": 0.028539539592585792,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:raleigh_north_carolina_0_2_in_the_united_states_civil_war_the_city_was_spared_from_any_significant_battle",
+      "score": 0.027099213976248194,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:latter_stages_of_the_american_civil_war_and_the_early_part_of_reconstruction",
+      "score": 0.02432269082629748,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:november_21_1789",
+      "score": 0.020276265825063366,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:north_carolina",
+      "score": 0.0133134751311703,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:missouri",
+      "score": 0.012675096555661325,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_south",
+      "score": 0.012313147369742402,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:zebulon_baird_vance_0_0_zebulon_baird_vance_may_13_1830_april_14_1894_was_a_confederate_military_o",
+      "score": 0.012116273790446743,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:north_carolina_0_3_although_north_carolina_s_plantation_system_was_smaller_and_less_cohesive_than_t",
+      "score": 0.012097929208624377,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:north_carolina_0",
+      "score": 0.012083521477136126,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:north_carolina_0",
+      "passage_index": 16,
+      "title": "North Carolina",
+      "score": 0.08643443422993788,
+      "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+      "score_breakdown": {
+        "dense": 0.05240629087664138,
+        "graph": 0.05578909581934742,
+        "fact": 0.272494970013206
+      }
+    },
+    {
+      "node_id": "chunk:readmission_of_states_0",
+      "passage_index": 17,
+      "title": "Readmission of states",
+      "score": 0.08250431159136497,
+      "text": "Readmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+      "score_breakdown": {
+        "dense": 0.052744799006446345,
+        "graph": 0.05707980458788967,
+        "fact": 0.2424715384096838
+      }
+    },
+    {
+      "node_id": "chunk:beriah_magoffin_0",
+      "passage_index": 18,
+      "title": "Beriah Magoffin",
+      "score": 0.08245929283129005,
+      "text": "Beriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.",
+      "score_breakdown": {
+        "dense": 0.052897257224944476,
+        "graph": 0.05541462565218518,
+        "fact": 0.24494275774610022
+      }
+    },
+    {
+      "node_id": "chunk:thomas_clement_fletcher_0",
+      "passage_index": 8,
+      "title": "Thomas Clement Fletcher",
+      "score": 0.08198529258027201,
+      "text": "Thomas Clement Fletcher\nThomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction. He was the first Missouri governor to be born in the state. The Thomas C. Fletcher House was listed on the National Register of Historic Places in 1974.",
+      "score_breakdown": {
+        "dense": 0.05295266505190794,
+        "graph": 0.056159055756903824,
+        "fact": 0.24009073383101004
+      }
+    },
+    {
+      "node_id": "chunk:raleigh_north_carolina_0",
+      "passage_index": 6,
+      "title": "Raleigh, North Carolina",
+      "score": 0.04524390158381829,
+      "text": "Raleigh, North Carolina\nRaleigh is an early example in the United States of a planned city, chosen as the site of the state capital in 1788 and incorporated in 1792 as such. The city was originally laid out in a grid pattern with the North Carolina State Capitol in Union Square at the center. In the United States Civil War the city was spared from any significant battle, only falling in the closing days of the war, though it did not escape the economic hardships that plagued the rest of the American South during the Reconstruction Era. The twentieth century saw the opening of the Research Triangle Park in 1959, and with the jobs it created the region and city saw a large influx of population, making it one of the fastest growing communities in the United States by the early 21st century.",
+      "score_breakdown": {
+        "dense": 0.05248698227557585,
+        "graph": 0.05458687110750523,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:zebulon_baird_vance_0",
+      "passage_index": 15,
+      "title": "Zebulon Baird Vance",
+      "score": 0.04470524626987673,
+      "text": "Zebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.",
+      "score_breakdown": {
+        "dense": 0.05273967067850411,
+        "graph": 0.05232809132233156,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:history_of_west_virginia_0",
+      "passage_index": 2,
+      "title": "History of West Virginia",
+      "score": 0.04466588008873189,
+      "text": "History of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.",
+      "score_breakdown": {
+        "dense": 0.05303801925519455,
+        "graph": 0.051649898327916284,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:charles_smith_olden_0",
+      "passage_index": 9,
+      "title": "Charles Smith Olden",
+      "score": 0.04447791768814445,
+      "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+      "score_breakdown": {
+        "dense": 0.052841397698619785,
+        "graph": 0.05138382984634522,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:william_henry_harman_0",
+      "passage_index": 3,
+      "title": "William Henry Harman",
+      "score": 0.04446491768560374,
+      "text": "William Henry Harman\nWilliam Henry Harman (February 17, 1828 – March 2, 1865) was a brigadier general in the Virginia militia and colonel in the Confederate States Army during the American Civil War (Civil War). Prior to the war, Harman had served as a second lieutenant in the 1st Virginia Infantry Regiment during the Mexican–American War, after which he had become a lawyer. He was commonwealth's attorney for Augusta County, Virginia from 1851 until the beginning of the Civil War, when he was appointed a brigadier general in the state militia.",
+      "score_breakdown": {
+        "dense": 0.05276906806381573,
+        "graph": 0.05147310083501696,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:john_milton_thayer_0",
+      "passage_index": 19,
+      "title": "John Milton Thayer",
+      "score": 0.044451623550853775,
+      "text": "John Milton Thayer\nJohn Milton Thayer (January 24, 1820March 19, 1906) was a general in the Union Army during the American Civil War and a postbellum United States Senator from Nebraska. Thayer served as Governor of Wyoming Territory and Governor of Nebraska.",
+      "score_breakdown": {
+        "dense": 0.05277494567846066,
+        "graph": 0.05141801142566803,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:post_civil_war_era_of_reconstruction",
+        "score": 0.05716820074383243,
+        "text": "post-Civil War era of Reconstruction",
+        "metadata": {
+          "canonical_name": "post-Civil War era of Reconstruction",
+          "aliases": [
+            "PWEOR",
+            "post-Civil War era of Reconstruction"
+          ],
+          "surface_forms": [
+            "PWEOR",
+            "post-Civil War era of Reconstruction"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:reconstruction_era_of_the_united_states",
+        "score": 0.04571688672574015,
+        "text": "Reconstruction era of the United States",
+        "metadata": {
+          "canonical_name": "Reconstruction era of the United States",
+          "aliases": [
+            "REOTUS",
+            "Reconstruction era of the United States"
+          ],
+          "surface_forms": [
+            "REOTUS",
+            "Reconstruction era of the United States"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:readmission_of_states_0_0_reconstruction_era_of_the_united_states_readmission_of_confederate_states_as_st",
+        "score": 0.07419910516372599,
+        "text": "Reconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+        "metadata": {
+          "title": "Readmission of states",
+          "chunk_id": "chunk:readmission_of_states_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Reconstruction era of the United States",
+              "relation": "includes",
+              "tail": "readmission of Confederate states as states of the United States"
+            },
+            {
+              "head": "readmission of Confederate states as states of the United States",
+              "relation": "occurred during",
+              "tail": "post-Civil War era of Reconstruction"
+            }
+          ],
+          "entities": [
+            "Reconstruction era of the United States",
+            "Confederate states",
+            "post-Civil War era of Reconstruction"
+          ],
+          "entity_ids": [
+            "entity:confederate_states",
+            "entity:post_civil_war_era_of_reconstruction",
+            "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+            "entity:reconstruction_era_of_the_united_states"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:thomas_clement_fletcher_0_0_thomas_clement_fletcher_january_21_1827march_25_1899_was_the_18th_governor_o",
+        "score": 0.055525006016357396,
+        "text": "Thomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction.",
+        "metadata": {
+          "title": "Thomas Clement Fletcher",
+          "chunk_id": "chunk:thomas_clement_fletcher_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Thomas Clement Fletcher",
+              "relation": "dateOfBirth",
+              "tail": "January 21 1827"
+            },
+            {
+              "head": "Thomas Clement Fletcher",
+              "relation": "dateOfDeath",
+              "tail": "March 25 1899"
+            },
+            {
+              "head": "Thomas Clement Fletcher",
+              "relation": "positionHeld",
+              "tail": "18th Governor of Missouri"
+            },
+            {
+              "head": "Thomas Clement Fletcher",
+              "relation": "timeInOffice",
+              "tail": "latter stages of the American Civil War and the early part of Reconstruction"
+            },
+            {
+              "head": "Thomas Clement Fletcher",
+              "relation": "governor_of",
+              "tail": "Missouri"
+            }
+          ],
+          "entities": [
+            "Thomas Clement Fletcher",
+            "January 21 1827",
+            "March 25 1899",
+            "18th Governor of Missouri",
+            "American Civil War",
+            "Reconstruction",
+            "Missouri"
+          ],
+          "entity_ids": [
+            "entity:18th_governor_of_missouri",
+            "entity:american_civil_war",
+            "entity:january_21_1827",
+            "entity:latter_stages_of_the_american_civil_war_and_the_early_part_of_reconstruction",
+            "entity:march_25_1899",
+            "entity:missouri",
+            "entity:reconstruction",
+            "entity:title_anchor_thomas_clement_fletcher"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:beriah_magoffin_0_0_beriah_magoffin_april_18_1815_february_28_1885_was_the_21st_governor_of_ke",
+        "score": 0.04826424073367741,
+        "text": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War.",
+        "metadata": {
+          "title": "Beriah Magoffin",
+          "chunk_id": "chunk:beriah_magoffin_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Beriah Magoffin",
+              "relation": "dateOfBirth",
+              "tail": "April 18 1815"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "dateOfDeath",
+              "tail": "February 28 1885"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "position",
+              "tail": "21st Governor of Kentucky"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "termTime",
+              "tail": "early part of the Civil War"
+            },
+            {
+              "head": "Beriah Magoffin",
+              "relation": "governor_of",
+              "tail": "Kentucky"
+            }
+          ],
+          "entities": [
+            "Beriah Magoffin",
+            "April 18 1815",
+            "February 28 1885",
+            "21st Governor of Kentucky",
+            "Kentucky"
+          ],
+          "entity_ids": [
+            "entity:21st_governor_of_kentucky",
+            "entity:april_18_1815",
+            "entity:early_part_of_the_civil_war",
+            "entity:february_28_1885",
+            "entity:kentucky",
+            "entity:title_anchor_beriah_magoffin"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+        "score": 0.03178806015818989,
+        "text": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution.",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_id": "chunk:north_carolina_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "North Carolina",
+              "relation": "became the twelfth state to ratify the Constitution",
+              "tail": "November 21 1789"
+            },
+            {
+              "head": "North Carolina",
+              "relation": "statehood_date",
+              "tail": "November 21 1789"
+            }
+          ],
+          "entities": [
+            "November 21 1789",
+            "North Carolina",
+            "Constitution"
+          ],
+          "entity_ids": [
+            "entity:constitution",
+            "entity:november_21_1789",
+            "entity:title_anchor_north_carolina"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:raleigh_north_carolina_0_2_in_the_united_states_civil_war_the_city_was_spared_from_any_significant_battle",
+        "score": 0.027099213976248194,
+        "text": "In the United States Civil War the city was spared from any significant battle, only falling in the closing days of the war, though it did not escape the economic hardships that plagued the rest of the American South during the Reconstruction Era.",
+        "metadata": {
+          "title": "Raleigh, North Carolina",
+          "chunk_id": "chunk:raleigh_north_carolina_0",
+          "sentence_index": 2,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "United States Civil War",
+              "relation": "related_to",
+              "tail": "American South"
+            },
+            {
+              "head": "American South",
+              "relation": "related_to",
+              "tail": "Reconstruction Era"
+            }
+          ],
+          "entities": [
+            "United States Civil War",
+            "Reconstruction Era",
+            "American South"
+          ],
+          "entity_ids": [
+            "entity:american_south",
+            "entity:reconstruction_era",
+            "entity:united_states_civil_war"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:zebulon_baird_vance_0_0_zebulon_baird_vance_may_13_1830_april_14_1894_was_a_confederate_military_o",
+        "score": 0.012116273790446743,
+        "text": "Zebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S.",
+        "metadata": {
+          "title": "Zebulon Baird Vance",
+          "chunk_id": "chunk:zebulon_baird_vance_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Zebulon Baird Vance",
+              "relation": "related_to",
+              "tail": "May"
+            },
+            {
+              "head": "May",
+              "relation": "related_to",
+              "tail": "April"
+            },
+            {
+              "head": "April",
+              "relation": "related_to",
+              "tail": "American Civil War"
+            },
+            {
+              "head": "Zebulon Baird Vance",
+              "relation": "governor_of",
+              "tail": "North Carolina"
+            }
+          ],
+          "entities": [
+            "Zebulon Baird Vance",
+            "May",
+            "April",
+            "American Civil War",
+            "North Carolina"
+          ],
+          "entity_ids": [
+            "entity:american_civil_war",
+            "entity:april",
+            "entity:may",
+            "entity:north_carolina",
+            "entity:title_anchor_zebulon_baird_vance"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:north_carolina_0_3_although_north_carolina_s_plantation_system_was_smaller_and_less_cohesive_than_t",
+        "score": 0.012097929208624377,
+        "text": "Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont.",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_id": "chunk:north_carolina_0",
+          "sentence_index": 3,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "North Carolina's plantation system",
+              "relation": "was smaller and less cohesive than",
+              "tail": "Virginia Georgia or South Carolina's plantation systems"
+            }
+          ],
+          "entities": [
+            "North Carolina",
+            "Virginia",
+            "Georgia",
+            "South Carolina",
+            "Wilmington",
+            "Edenton",
+            "Raleigh",
+            "Charlotte",
+            "Durham",
+            "Piedmont"
+          ],
+          "entity_ids": [
+            "entity:charlotte",
+            "entity:durham",
+            "entity:edenton",
+            "entity:georgia",
+            "entity:north_carolina_s_plantation_system",
+            "entity:piedmont",
+            "entity:raleigh",
+            "entity:south_carolina",
+            "entity:title_anchor_north_carolina",
+            "entity:virginia",
+            "entity:virginia_georgia_or_south_carolina_s_plantation_systems",
+            "entity:wilmington"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:north_carolina_0",
+        "score": 0.012083521477136126,
+        "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+        "metadata": {
+          "title": "North Carolina",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:antebellum_north_carolina",
+            "entity:bethania",
+            "entity:charlotte",
+            "entity:constitution",
+            "entity:durham",
+            "entity:edenton",
+            "entity:fayetteville",
+            "entity:georgia",
+            "entity:most",
+            "entity:north_carolina_s_plantation_system",
+            "entity:november_21_1789",
+            "entity:piedmont",
+            "entity:planters",
+            "entity:raleigh",
+            "entity:salem",
+            "entity:south_carolina",
+            "entity:title_anchor_north_carolina",
+            "entity:virginia",
+            "entity:virginia_georgia_or_south_carolina_s_plantation_systems",
+            "entity:western_north_carolina",
+            "entity:wilmington",
+            "entity:winston",
+            "entity:winston_salem"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:readmission_of_states_0",
+        "score": 0.011649448203012041,
+        "text": "Readmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+        "metadata": {
+          "title": "Readmission of states",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:confederate_states",
+            "entity:post_civil_war_era_of_reconstruction",
+            "entity:readmission_of_confederate_states_as_states_of_the_united_states",
+            "entity:reconstruction_era_of_the_united_states"
+          ]
+        }
+      }
+    ],
+    "qa_context": "North Carolina\nNorth Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).\n\nReadmission of states\nReadmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70\n\nBeriah Magoffin\nBeriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.\n\nThomas Clement Fletcher\nThomas Clement Fletcher\nThomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction. He was the first Missouri governor to be born in the state. The Thomas C. Fletcher House was listed on the National Register of Historic Places in 1974.\n\nRaleigh, North Carolina\nRaleigh, North Carolina\nRaleigh is an early example in the United States of a planned city, chosen as the site of the state capital in 1788 and incorporated in 1792 as such. The city was originally laid out in a grid pattern with the North Carolina State Capitol in Union Square at the center. In the United States Civil War the city was spared from any significant battle, only falling in the closing days of the war, though it did not escape the economic hardships that plagued the rest of the American South during the Reconstruction Era. The twentieth century saw the opening of the Research Triangle Park in 1959, and with the jobs it created the region and city saw a large influx of population, making it one of the fastest growing communities in the United States by the early 21st century.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:north_carolina_0",
+        "passage_index": 16,
+        "title": "North Carolina",
+        "score": 0.08643443422993788,
+        "text": "North Carolina\nOn November 21, 1789, North Carolina became the twelfth state to ratify the Constitution. In 1840, it completed the state capitol building in Raleigh, still standing today. Most of North Carolina's slave owners and large plantations were located in the eastern portion of the state. Although North Carolina's plantation system was smaller and less cohesive than that of Virginia, Georgia, or South Carolina, significant numbers of planters were concentrated in the counties around the port cities of Wilmington and Edenton, as well as suburban planters around the cities of Raleigh, Charlotte, and Durham in the Piedmont. Planters owning large estates wielded significant political and socio - economic power in antebellum North Carolina, which was a slave society. They placed their interests above those of the generally non-slave - holding ``yeoman ''farmers of western North Carolina. In mid-century, the state's rural and commercial areas were connected by the construction of a 129 - mile (208 km) wooden plank road, known as a`` farmer's railroad'', from Fayetteville in the east to Bethania (northwest of Winston - Salem).",
+        "score_breakdown": {
+          "dense": 0.05240629087664138,
+          "graph": 0.05578909581934742,
+          "fact": 0.272494970013206
+        }
+      },
+      {
+        "node_id": "chunk:readmission_of_states_0",
+        "passage_index": 17,
+        "title": "Readmission of states",
+        "score": 0.08250431159136497,
+        "text": "Readmission of states\nReconstruction era of the United States, readmission of Confederate states as states of the United States in post-Civil War era of Reconstruction, 1868 - '70",
+        "score_breakdown": {
+          "dense": 0.052744799006446345,
+          "graph": 0.05707980458788967,
+          "fact": 0.2424715384096838
+        }
+      },
+      {
+        "node_id": "chunk:beriah_magoffin_0",
+        "passage_index": 18,
+        "title": "Beriah Magoffin",
+        "score": 0.08245929283129005,
+        "text": "Beriah Magoffin\nBeriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War. Personally, Magoffin adhered to a states' rights position, including the right of a state to secede from the Union, and he sympathized with the Confederate cause. Nevertheless, when the Kentucky General Assembly adopted a position of neutrality in the war, Magoffin ardently held to it, refusing calls for aid from both the Union and Confederate governments.",
+        "score_breakdown": {
+          "dense": 0.052897257224944476,
+          "graph": 0.05541462565218518,
+          "fact": 0.24494275774610022
+        }
+      },
+      {
+        "node_id": "chunk:thomas_clement_fletcher_0",
+        "passage_index": 8,
+        "title": "Thomas Clement Fletcher",
+        "score": 0.08198529258027201,
+        "text": "Thomas Clement Fletcher\nThomas Clement Fletcher (January 21, 1827March 25, 1899) was the 18th Governor of Missouri during the latter stages of the American Civil War and the early part of Reconstruction. He was the first Missouri governor to be born in the state. The Thomas C. Fletcher House was listed on the National Register of Historic Places in 1974.",
+        "score_breakdown": {
+          "dense": 0.05295266505190794,
+          "graph": 0.056159055756903824,
+          "fact": 0.24009073383101004
+        }
+      },
+      {
+        "node_id": "chunk:raleigh_north_carolina_0",
+        "passage_index": 6,
+        "title": "Raleigh, North Carolina",
+        "score": 0.04524390158381829,
+        "text": "Raleigh, North Carolina\nRaleigh is an early example in the United States of a planned city, chosen as the site of the state capital in 1788 and incorporated in 1792 as such. The city was originally laid out in a grid pattern with the North Carolina State Capitol in Union Square at the center. In the United States Civil War the city was spared from any significant battle, only falling in the closing days of the war, though it did not escape the economic hardships that plagued the rest of the American South during the Reconstruction Era. The twentieth century saw the opening of the Research Triangle Park in 1959, and with the jobs it created the region and city saw a large influx of population, making it one of the fastest growing communities in the United States by the early 21st century.",
+        "score_breakdown": {
+          "dense": 0.05248698227557585,
+          "graph": 0.05458687110750523,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:zebulon_baird_vance_0",
+        "passage_index": 15,
+        "title": "Zebulon Baird Vance",
+        "score": 0.04470524626987673,
+        "text": "Zebulon Baird Vance\nZebulon Baird Vance (May 13, 1830 – April 14, 1894) was a Confederate military officer in the American Civil War, the 37th and 43rd Governor of North Carolina, and U.S. Senator. A prolific writer, Vance became one of the most influential Southern leaders of the Civil War and postbellum periods. As a leader of the \"New South\", Vance favored the rapid modernization of the southern economy, railroad expansion, school construction, and reconciliation with the North.",
+        "score_breakdown": {
+          "dense": 0.05273967067850411,
+          "graph": 0.05232809132233156,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:history_of_west_virginia_0",
+        "passage_index": 2,
+        "title": "History of West Virginia",
+        "score": 0.04466588008873189,
+        "text": "History of West Virginia\nWest Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state. It was originally part of the British Virginia Colony (1607 -- 1776) and the western part of the state of Virginia (1776 -- 1863), whose population became sharply divided over the issue of secession from the Union and in the separation from Virginia, formalized by admittance to the Union as a new state in 1863. West Virginia was one of the Civil War Border states.",
+        "score_breakdown": {
+          "dense": 0.05303801925519455,
+          "graph": 0.051649898327916284,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:charles_smith_olden_0",
+        "passage_index": 9,
+        "title": "Charles Smith Olden",
+        "score": 0.04447791768814445,
+        "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+        "score_breakdown": {
+          "dense": 0.052841397698619785,
+          "graph": 0.05138382984634522,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:william_henry_harman_0",
+        "passage_index": 3,
+        "title": "William Henry Harman",
+        "score": 0.04446491768560374,
+        "text": "William Henry Harman\nWilliam Henry Harman (February 17, 1828 – March 2, 1865) was a brigadier general in the Virginia militia and colonel in the Confederate States Army during the American Civil War (Civil War). Prior to the war, Harman had served as a second lieutenant in the 1st Virginia Infantry Regiment during the Mexican–American War, after which he had become a lawyer. He was commonwealth's attorney for Augusta County, Virginia from 1851 until the beginning of the Civil War, when he was appointed a brigadier general in the state militia.",
+        "score_breakdown": {
+          "dense": 0.05276906806381573,
+          "graph": 0.05147310083501696,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:john_milton_thayer_0",
+        "passage_index": 19,
+        "title": "John Milton Thayer",
+        "score": 0.044451623550853775,
+        "text": "John Milton Thayer\nJohn Milton Thayer (January 24, 1820March 19, 1906) was a general in the Union Army during the American Civil War and a postbellum United States Senator from Nebraska. Thayer served as Governor of Wyoming Territory and Governor of Nebraska.",
+        "score_breakdown": {
+          "dense": 0.05277494567846066,
+          "graph": 0.05141801142566803,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Which state had its governor die during the Civil War?",
+        "sentence_id": "sentence:history_of_west_virginia_0_0_west_virginia_is_one_of_two_american_states_formed_during_the_american_civil_war",
+        "sentence": "West Virginia is one of two American states formed during the American Civil War (1861 -- 1865), along with Nevada, and is the only state to form by seceding from a Confederate state.",
+        "score": 0.4933683646917343
+      },
+      {
+        "sub_question": "In which year did this state become part of the U.S.?",
+        "sentence_id": "sentence:north_carolina_0_0_on_november_21_1789_north_carolina_became_the_twelfth_state_to_ratify_the_cons",
+        "sentence": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution.",
+        "score": 0.36040989406579205
+      }
+    ]
+  }
+}

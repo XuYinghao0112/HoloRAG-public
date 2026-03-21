@@ -1,5 +1,7 @@
 import logging
 import os
+
+import httpx
 from typing import Any, Dict, List, Optional, Tuple
 
 from openai import OpenAI
@@ -14,7 +16,7 @@ class LocalLLMClient:
     def __init__(self, config: HoloRAGConfig) -> None:
         api_key = os.getenv("OPENAI_API_KEY", "sk-")
         self.config = config
-        self.client = OpenAI(base_url=config.llm_base_url, api_key=api_key, max_retries=3)
+        self.client = OpenAI(base_url=config.llm_base_url, api_key=api_key, max_retries=3, http_client=httpx.Client(trust_env=False))
         self.stats = {
             "completion_calls": 0,
             "json_calls": 0,
@@ -88,11 +90,19 @@ class LocalLLMClient:
         fallback: str = "",
         max_tokens: Optional[int] = None,
     ) -> str:
-        self.stats["text_calls"] += 1
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ]
+        return self.infer_messages_text(messages=messages, fallback=fallback, max_tokens=max_tokens)
+
+    def infer_messages_text(
+        self,
+        messages: List[Dict[str, str]],
+        fallback: str = "",
+        max_tokens: Optional[int] = None,
+    ) -> str:
+        self.stats["text_calls"] += 1
         try:
             response = self._create_completion(messages=messages, max_tokens=max_tokens)
             return self._extract_content(response).strip()

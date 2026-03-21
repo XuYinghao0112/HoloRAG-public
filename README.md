@@ -30,8 +30,30 @@ If you use a local OpenAI-compatible server, no real OpenAI key is required. The
 ## Local Models
 
 - LLM endpoint: `http://127.0.0.1:8000/v1`
-- LLM model: `/data/xyh/models/Qwen2.5-7B-Instruct`
+- LLM model: `/data/xyh/models/Qwen2.5-72B-Instruct`
 - Embedding model: `nvidia/NV-Embed-v2`
+
+## Start Qwen2.5-72B-Instruct on 2 GPUs
+
+If the model is not downloaded yet, place it under `/data/xyh/models/Qwen2.5-72B-Instruct` first.
+
+Start a local OpenAI-compatible vLLM server on GPU 0 and 1:
+
+```bash
+/data/xyh/bin/start_llm.sh qwen72b 0,1 2
+```
+
+Check the server:
+
+```bash
+curl http://127.0.0.1:8000/v1/models
+```
+
+Stop it when needed:
+
+```bash
+/data/xyh/bin/stop_llm.sh qwen72b
+```
 
 ## Run HoloRAG
 
@@ -42,7 +64,7 @@ python main_holorag.py index \
   --corpus_file reproduce/dataset/sample_corpus.json \
   --output_dir outputs/holorag_demo \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-7B-Instruct \
+  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
   --embedding_device auto \
   --embedding_batch_size 4 \
   --embedding_name nvidia/NV-Embed-v2
@@ -55,7 +77,7 @@ python main_holorag.py query \
   --output_dir outputs/holorag_demo \
   --query_text "Which Stanford neuroscientist is also a CEO and what context connects him to the others?" \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-7B-Instruct \
+  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
   --embedding_name nvidia/NV-Embed-v2
 ```
 
@@ -80,7 +102,7 @@ python main_holorag.py index \
   --corpus_file reproduce/dataset/sample_musique1.json \
   --output_dir outputs/sample_musique1 \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-7B-Instruct \
+  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
   --embedding_device cpu \
   --embedding_batch_size 1 \
   --embedding_max_seq_len 512 \
@@ -94,6 +116,6 @@ python main_holorag.py query \
   --corpus_file reproduce/dataset/sample_musique1.json \
   --output_dir outputs/sample_musique1 \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-7B-Instruct \
+  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
   --embedding_name nvidia/NV-Embed-v2
 ```

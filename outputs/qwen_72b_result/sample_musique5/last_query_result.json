@@ -1,0 +1,926 @@
+{
+  "query": "Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.5,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Tsarevich Ivan Ivanovich",
+    "Fili"
+  ],
+  "raw_query_entities": [
+    "Tsarevich Ivan Ivanovich",
+    "Fili"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Tsarevich Ivan Ivanovich",
+      "node_id": "entity:title_anchor_ivan_ivanovich_artobolevski",
+      "resolved_text": "Ivan Ivanovich Artobolevski",
+      "score": 0.5477142857142857,
+      "alias_score": 0.5,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.5,
+      "score_margin": 0.01571428571428568,
+      "confident": false
+    },
+    {
+      "mention": "Fili",
+      "node_id": "entity:fili",
+      "resolved_text": "Fili",
+      "score": 0.6106666666666667,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.75,
+      "score_margin": 0.048698412698412685,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Where did a bombing occur in August 2004 at the location Fili?",
+    "What country is associated with the location of the bombing at Fili in August 2004?",
+    "Who is Tsarevich Ivan Ivanovich of this country?",
+    "Who is the mother of Tsarevich Ivan Ivanovich?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_fili_moscow_metro",
+      "score": 0.5374520760855369,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:filyovskaya_line",
+      "score": 0.5374391708865319,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:craig_wiseman",
+      "score": 0.2842666257085894,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_woman_with_you",
+      "score": 0.2389888832280872,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:david_frasier_craig_wiseman",
+      "score": 0.23898384341218915,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:russian_politician",
+      "score": 0.19241290248747348,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+      "score": 0.1897087132766878,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:first_vice_chairman_of_the_state_duma",
+      "score": 0.1808375597302393,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:school_of_oriental_and_african_studies",
+      "score": 0.16921376620307577,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:london",
+      "score": 0.16921376620307577,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ivan_ivanovich_melnikov",
+      "score": 0.15800193842901322,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:count_ivan_ivanovich_tolstoy",
+      "score": 0.15206647980127733,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:filyovskaya_line_is_part_of_moscow_metro_sentence_fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovska",
+      "text": "Filyovskaya Line is part of Moscow Metro",
+      "head_id": "entity:filyovskaya_line",
+      "tail_id": "entity:title_anchor_fili_moscow_metro",
+      "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+      "chunk_id": "chunk:fili_moscow_metro_0",
+      "document_index": 1,
+      "score": 0.2433382128342273
+    },
+    {
+      "fact_id": "fact:woman_with_you_is_a_song_written_by_david_frasier_craig_wiseman_sentence_the_woman_with_you_0_0_the_woman_with_you_is_a_",
+      "text": "Woman with You is a song written by David Frasier Craig Wiseman",
+      "head_id": "entity:title_anchor_the_woman_with_you",
+      "tail_id": "entity:david_frasier_craig_wiseman",
+      "sentence_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+      "chunk_id": "chunk:the_woman_with_you_0",
+      "document_index": 13,
+      "score": 0.23688885475715785
+    },
+    {
+      "fact_id": "fact:ivan_ivanovich_melnikov_is_a_russian_politician_sentence_ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_aug",
+      "text": "Ivan Ivanovich Melnikov is a Russian politician",
+      "head_id": "entity:ivan_ivanovich_melnikov",
+      "tail_id": "entity:russian_politician",
+      "sentence_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+      "chunk_id": "chunk:ivan_melnikov_politician_0",
+      "document_index": 9,
+      "score": 0.1903187153480299
+    },
+    {
+      "fact_id": "fact:ivan_ivanovich_melnikov_holds_position_first_vice_chairman_of_the_state_duma_sentence_ivan_melnikov_politician_0_0_ivan_",
+      "text": "Ivan Ivanovich Melnikov holds position First Vice-Chairman of the State Duma",
+      "head_id": "entity:ivan_ivanovich_melnikov",
+      "tail_id": "entity:first_vice_chairman_of_the_state_duma",
+      "sentence_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+      "chunk_id": "chunk:ivan_melnikov_politician_0",
+      "document_index": 9,
+      "score": 0.17873881359077365
+    },
+    {
+      "fact_id": "fact:school_of_oriental_and_african_studies_located_in_london_sentence_ivan_morris_0_3_he_received_a_doctorate_at_the_school_",
+      "text": "School of Oriental and African Studies located in London",
+      "head_id": "entity:school_of_oriental_and_african_studies",
+      "tail_id": "entity:london",
+      "sentence_id": "sentence:ivan_morris_0_3_he_received_a_doctorate_at_the_school_of_oriental_and_african_studies_in_london",
+      "chunk_id": "chunk:ivan_morris_0",
+      "document_index": 18,
+      "score": 0.16711996451211505
+    },
+    {
+      "fact_id": "fact:count_ivan_ivanovich_tolstoy_was_imperial_russian_politician_sentence_ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_to",
+      "text": "Count Ivan Ivanovich Tolstoy was Imperial Russian politician",
+      "head_id": "entity:count_ivan_ivanovich_tolstoy",
+      "tail_id": "entity:imperial_russian_politician",
+      "sentence_id": "sentence:ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_tolstoy_1858_1916_was_an_imperial_russian_politician",
+      "chunk_id": "chunk:ivan_ivanovich_tolstoy_0",
+      "document_index": 16,
+      "score": 0.14995038756679682
+    },
+    {
+      "fact_id": "fact:ivan_ivanovich_melnikov_holds_position_vice_chairman_of_the_communist_party_of_the_russian_federation_sentence_ivan_meln",
+      "text": "Ivan Ivanovich Melnikov holds position Vice-Chairman of the Communist Party of the Russian Federation",
+      "head_id": "entity:ivan_ivanovich_melnikov",
+      "tail_id": "entity:vice_chairman_of_the_communist_party_of_the_russian_federation",
+      "sentence_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+      "chunk_id": "chunk:ivan_melnikov_politician_0",
+      "document_index": 9,
+      "score": 0.09859860433717771
+    }
+  ],
+  "bridge_entities": [
+    "Filyovskaya Line",
+    "Moscow Metro"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where did a bombing occur in August 2004 at the location Fili?",
+      "sentence_id": "sentence:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0_0_dmitri_ivanovich_11_october_155226_june_1553_was_the_first_tsarevich_",
+      "sentence": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna.",
+      "score": 0.3584724048773448
+    },
+    {
+      "sub_question": "What country is associated with the location of the bombing at Fili in August 2004?",
+      "sentence_id": "sentence:august_2004_moscow_metro_bombing_0_0_the_official_investigation_concluded_that_it_was_organized_by_the_same_group_as",
+      "sentence": "The official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004.",
+      "score": 0.47741035409484595
+    },
+    {
+      "sub_question": "Who is Tsarevich Ivan Ivanovich of this country?",
+      "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+      "sentence": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+      "score": 0.4301027047250952
+    },
+    {
+      "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich?",
+      "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+      "sentence": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+      "score": 0.46343603805842853
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+      "score": 0.07901674672622344,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+      "score": 0.07792475730513672,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_fili_moscow_metro",
+      "score": 0.06957723874151678,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:filyovskaya_line",
+      "score": 0.06214062062256877,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+      "score": 0.056665160266336875,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ivan_ivanovich_melnikov",
+      "score": 0.051491157513279935,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_woman_with_you",
+      "score": 0.02860085785698664,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:david_frasier_craig_wiseman",
+      "score": 0.026094697271567567,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_tolstoy_1858_1916_was_an_imperial_russian_politician",
+      "score": 0.02522930080047146,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:craig_wiseman",
+      "score": 0.02082645931135551,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kenny_chesney",
+      "score": 0.018546364196336398,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:russian_politician",
+      "score": 0.016633788794292746,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:count_ivan_ivanovich_tolstoy",
+      "score": 0.016617605439761037,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:imperial_russian_politician",
+      "score": 0.016560492641340956,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:fili_moscow_metro_0",
+      "score": 0.0164353465891222,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:first_vice_chairman_of_the_state_duma",
+      "score": 0.016243055980711525,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:vice_chairman_of_the_communist_party_of_the_russian_federation",
+      "score": 0.01621210413558431,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:fili_moscow_metro_0_1_the_station_was_opened_on_7_november_1959_as_the_last_surface_side_platform_sta",
+      "score": 0.014769996845804762,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ivan_melnikov_politician_0_1_he_is_a_professor_at_moscow_state_university",
+      "score": 0.01445139235029348,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:london",
+      "score": 0.014265723203381007,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:fili_moscow_metro_0",
+      "passage_index": 1,
+      "title": "Fili (Moscow Metro)",
+      "score": 0.07584723460201855,
+      "text": "Fili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100.",
+      "score_breakdown": {
+        "dense": 0.05017728963331068,
+        "graph": 0.056216492163892226,
+        "fact": 0.2092318510302
+      }
+    },
+    {
+      "node_id": "chunk:the_woman_with_you_0",
+      "passage_index": 13,
+      "title": "The Woman with You",
+      "score": 0.07465661523233169,
+      "text": "The Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.",
+      "score_breakdown": {
+        "dense": 0.04976549514239528,
+        "graph": 0.05367525202337865,
+        "fact": 0.20788678198000463
+      }
+    },
+    {
+      "node_id": "chunk:ivan_melnikov_politician_0",
+      "passage_index": 9,
+      "title": "Ivan Melnikov (politician)",
+      "score": 0.07374650355405427,
+      "text": "Ivan Melnikov (politician)\nIvan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma. He is a professor at Moscow State University.",
+      "score_breakdown": {
+        "dense": 0.05009775644119086,
+        "graph": 0.054762073395768204,
+        "fact": 0.19842743661779225
+      }
+    },
+    {
+      "node_id": "chunk:ivan_morris_0",
+      "passage_index": 18,
+      "title": "Ivan Morris",
+      "score": 0.07186749694940259,
+      "text": "Ivan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.",
+      "score_breakdown": {
+        "dense": 0.05009704569447256,
+        "graph": 0.05077516315035741,
+        "fact": 0.1938771524822364
+      }
+    },
+    {
+      "node_id": "chunk:ivan_ivanovich_tolstoy_0",
+      "passage_index": 16,
+      "title": "Ivan Ivanovich Tolstoy",
+      "score": 0.07143175024401469,
+      "text": "Ivan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+      "score_breakdown": {
+        "dense": 0.04999126219347287,
+        "graph": 0.051166797847132,
+        "fact": 0.19057677788976674
+      }
+    },
+    {
+      "node_id": "chunk:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0",
+      "passage_index": 8,
+      "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+      "score": 0.042430029092187356,
+      "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy.",
+      "score_breakdown": {
+        "dense": 0.0504471568187392,
+        "graph": 0.048946976139602645,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:august_2004_moscow_metro_bombing_0",
+      "passage_index": 19,
+      "title": "August 2004 Moscow Metro bombing",
+      "score": 0.04238248536016966,
+      "text": "August 2004 Moscow Metro bombing\nThe official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004. The deaths included the bomber and her accomplice, Nikolay Kipkeev (Kipkeyev), the head of an Islamic militant group Karachay Jamaat from the republic of Karachay–Cherkessia, as the bomb apparently exploded prematurely while the two were standing in the entrance hall of the metro station.",
+      "score_breakdown": {
+        "dense": 0.05040166090504771,
+        "graph": 0.04887190620797806,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:patrick_cobbold_0",
+      "passage_index": 11,
+      "title": "Patrick Cobbold",
+      "score": 0.04230924678278264,
+      "text": "Patrick Cobbold\nHe was educated with his elder brother John at Wellesley House and Eton College. He was 10 when their father, Lieutenant Colonel Ivan Cobbold, was killed in the Guards Chapel, London, on 19 June 1944 when a flying bomb (V1) hit the Chapel during the Sunday morning service.",
+      "score_breakdown": {
+        "dense": 0.05004028954202246,
+        "graph": 0.04929029178223427,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:14_september_2004_baghdad_bombing_0",
+      "passage_index": 5,
+      "title": "14 September 2004 Baghdad bombing",
+      "score": 0.042222569982478746,
+      "text": "14 September 2004 Baghdad bombing\nThe 14 September 2004 Baghdad bombing was a suicide car bomb attack on a market, near a police headquarters, in Baghdad, the capital city of Iraq, on 14 September 2004, killing 47 people and wounding 114.",
+      "score_breakdown": {
+        "dense": 0.05013213723905691,
+        "graph": 0.04883298166999147,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:2004_sinai_bombings_0",
+      "passage_index": 3,
+      "title": "2004 Sinai bombings",
+      "score": 0.042203871442204735,
+      "text": "2004 Sinai bombings\nThe 2004 Sinai bombings were three bomb attacks targeting tourist hotels in the Sinai Peninsula, Egypt, on 7 October 2004. The attacks left 34 people dead and 171 injured.",
+      "score_breakdown": {
+        "dense": 0.05008583966106996,
+        "graph": 0.04885553209538752,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_fili_moscow_metro",
+        "score": 0.06957723874151678,
+        "text": "Fili (Moscow Metro)",
+        "metadata": {
+          "canonical_name": "Fili (Moscow Metro)",
+          "aliases": [
+            "Fili",
+            "Fili Moscow Metro",
+            "Moscow Metro",
+            "MM"
+          ],
+          "surface_forms": [
+            "Fili",
+            "Moscow Metro",
+            "MM"
+          ],
+          "title_anchor": "Fili (Moscow Metro)"
+        }
+      },
+      {
+        "node_id": "entity:filyovskaya_line",
+        "score": 0.06214062062256877,
+        "text": "Filyovskaya Line",
+        "metadata": {
+          "canonical_name": "Filyovskaya Line",
+          "aliases": [
+            "FL",
+            "Filyovskaya Line"
+          ],
+          "surface_forms": [
+            "FL",
+            "Filyovskaya Line"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ivan_ivanovich_melnikov",
+        "score": 0.051491157513279935,
+        "text": "Ivan Ivanovich Melnikov",
+        "metadata": {
+          "canonical_name": "Ivan Ivanovich Melnikov",
+          "aliases": [
+            "IIM",
+            "Ivan Ivanovich Melnikov"
+          ],
+          "surface_forms": [
+            "IIM",
+            "Ivan Ivanovich Melnikov"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_woman_with_you",
+        "score": 0.02860085785698664,
+        "text": "The Woman with You",
+        "metadata": {
+          "canonical_name": "The Woman with You",
+          "aliases": [
+            "WWY",
+            "Woman with You"
+          ],
+          "surface_forms": [
+            "WWY",
+            "Woman with You"
+          ],
+          "title_anchor": "The Woman with You"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:ivan_melnikov_politician_0_0_ivan_ivanovich_melnikov_born_7_august_1950_is_a_russian_politician_vice_cha",
+        "score": 0.07901674672622344,
+        "text": "Ivan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma.",
+        "metadata": {
+          "title": "Ivan Melnikov (politician)",
+          "chunk_id": "chunk:ivan_melnikov_politician_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Ivan Ivanovich Melnikov",
+              "relation": "born on",
+              "tail": "7 August 1950"
+            },
+            {
+              "head": "Ivan Ivanovich Melnikov",
+              "relation": "is a",
+              "tail": "Russian politician"
+            },
+            {
+              "head": "Ivan Ivanovich Melnikov",
+              "relation": "holds position",
+              "tail": "Vice-Chairman of the Communist Party of the Russian Federation"
+            },
+            {
+              "head": "Ivan Ivanovich Melnikov",
+              "relation": "holds position",
+              "tail": "First Vice-Chairman of the State Duma"
+            }
+          ],
+          "entities": [
+            "Ivan Ivanovich Melnikov",
+            "Communist Party of the Russian Federation",
+            "State Duma"
+          ],
+          "entity_ids": [
+            "entity:7_august_1950",
+            "entity:communist_party_of_the_russian_federation",
+            "entity:first_vice_chairman_of_the_state_duma",
+            "entity:ivan_ivanovich_melnikov",
+            "entity:russian_politician",
+            "entity:state_duma",
+            "entity:vice_chairman_of_the_communist_party_of_the_russian_federation"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+        "score": 0.07792475730513672,
+        "text": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+        "metadata": {
+          "title": "Fili (Moscow Metro)",
+          "chunk_id": "chunk:fili_moscow_metro_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Fili",
+              "relation": "is on",
+              "tail": "Filyovskaya Line"
+            },
+            {
+              "head": "Filyovskaya Line",
+              "relation": "is part of",
+              "tail": "Moscow Metro"
+            }
+          ],
+          "entities": [
+            "Fili",
+            "Filyovskaya Line",
+            "Moscow Metro"
+          ],
+          "entity_ids": [
+            "entity:filyovskaya_line",
+            "entity:title_anchor_fili_moscow_metro"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_woman_with_you_0_0_the_woman_with_you_is_a_song_written_by_david_frasier_and_craig_wiseman_and_re",
+        "score": 0.056665160266336875,
+        "text": "\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney.",
+        "metadata": {
+          "title": "The Woman with You",
+          "chunk_id": "chunk:the_woman_with_you_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Woman with You",
+              "relation": "is a song written by",
+              "tail": "David Frasier Craig Wiseman"
+            },
+            {
+              "head": "Woman with You",
+              "relation": "recorded by",
+              "tail": "Kenny Chesney"
+            },
+            {
+              "head": "Kenny Chesney",
+              "relation": "is an",
+              "tail": "American country music artist"
+            }
+          ],
+          "entities": [
+            "Woman with You",
+            "David Frasier",
+            "Craig Wiseman",
+            "Kenny Chesney",
+            "American country music artist"
+          ],
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:craig_wiseman",
+            "entity:david_frasier",
+            "entity:david_frasier_craig_wiseman",
+            "entity:kenny_chesney",
+            "entity:title_anchor_the_woman_with_you"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ivan_ivanovich_tolstoy_0_0_count_ivan_ivanovich_tolstoy_1858_1916_was_an_imperial_russian_politician",
+        "score": 0.02522930080047146,
+        "text": "Count Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician.",
+        "metadata": {
+          "title": "Ivan Ivanovich Tolstoy",
+          "chunk_id": "chunk:ivan_ivanovich_tolstoy_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Count Ivan Ivanovich Tolstoy",
+              "relation": "was",
+              "tail": "Imperial Russian politician"
+            }
+          ],
+          "entities": [
+            "Count Ivan Ivanovich Tolstoy",
+            "Imperial Russian politician"
+          ],
+          "entity_ids": [
+            "entity:count_ivan_ivanovich_tolstoy",
+            "entity:imperial_russian_politician"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:fili_moscow_metro_0_1_the_station_was_opened_on_7_november_1959_as_the_last_surface_side_platform_sta",
+        "score": 0.014769996845804762,
+        "text": "The station was opened on 7 November 1959, as the last surface side platform station on the line.",
+        "metadata": {
+          "title": "Fili (Moscow Metro)",
+          "chunk_id": "chunk:fili_moscow_metro_0",
+          "sentence_index": 1,
+          "document_index": 1,
+          "triples": [],
+          "entities": [
+            "November"
+          ],
+          "entity_ids": [
+            "entity:november"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ivan_melnikov_politician_0_1_he_is_a_professor_at_moscow_state_university",
+        "score": 0.01445139235029348,
+        "text": "He is a professor at Moscow State University.",
+        "metadata": {
+          "title": "Ivan Melnikov (politician)",
+          "chunk_id": "chunk:ivan_melnikov_politician_0",
+          "sentence_index": 1,
+          "document_index": 9,
+          "triples": [],
+          "entities": [
+            "Moscow State University"
+          ],
+          "entity_ids": [
+            "entity:moscow_state_university"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:fili_moscow_metro_0",
+        "score": 0.0164353465891222,
+        "text": "Fili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100.",
+        "metadata": {
+          "title": "Fili (Moscow Metro)",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:daily",
+            "entity:filyovskaya_line",
+            "entity:november",
+            "entity:robert_pogrebnoi",
+            "entity:title_anchor_fili_moscow_metro",
+            "entity:two_glazed_upper_level_entrance_vestibule",
+            "entity:yuriy_zenkevich"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ivan_melnikov_politician_0",
+        "score": 0.012649550720030295,
+        "text": "Ivan Melnikov (politician)\nIvan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma. He is a professor at Moscow State University.",
+        "metadata": {
+          "title": "Ivan Melnikov (politician)",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:7_august_1950",
+            "entity:communist_party_of_the_russian_federation",
+            "entity:first_vice_chairman_of_the_state_duma",
+            "entity:ivan_ivanovich_melnikov",
+            "entity:moscow_state_university",
+            "entity:russian_politician",
+            "entity:state_duma",
+            "entity:vice_chairman_of_the_communist_party_of_the_russian_federation"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Fili (Moscow Metro)\nFili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100.\n\nThe Woman with You\nThe Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.\n\nIvan Melnikov (politician)\nIvan Melnikov (politician)\nIvan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma. He is a professor at Moscow State University.\n\nIvan Morris\nIvan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.\n\nIvan Ivanovich Tolstoy\nIvan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:fili_moscow_metro_0",
+        "passage_index": 1,
+        "title": "Fili (Moscow Metro)",
+        "score": 0.07584723460201855,
+        "text": "Fili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100.",
+        "score_breakdown": {
+          "dense": 0.05017728963331068,
+          "graph": 0.056216492163892226,
+          "fact": 0.2092318510302
+        }
+      },
+      {
+        "node_id": "chunk:the_woman_with_you_0",
+        "passage_index": 13,
+        "title": "The Woman with You",
+        "score": 0.07465661523233169,
+        "text": "The Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.",
+        "score_breakdown": {
+          "dense": 0.04976549514239528,
+          "graph": 0.05367525202337865,
+          "fact": 0.20788678198000463
+        }
+      },
+      {
+        "node_id": "chunk:ivan_melnikov_politician_0",
+        "passage_index": 9,
+        "title": "Ivan Melnikov (politician)",
+        "score": 0.07374650355405427,
+        "text": "Ivan Melnikov (politician)\nIvan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma. He is a professor at Moscow State University.",
+        "score_breakdown": {
+          "dense": 0.05009775644119086,
+          "graph": 0.054762073395768204,
+          "fact": 0.19842743661779225
+        }
+      },
+      {
+        "node_id": "chunk:ivan_morris_0",
+        "passage_index": 18,
+        "title": "Ivan Morris",
+        "score": 0.07186749694940259,
+        "text": "Ivan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.",
+        "score_breakdown": {
+          "dense": 0.05009704569447256,
+          "graph": 0.05077516315035741,
+          "fact": 0.1938771524822364
+        }
+      },
+      {
+        "node_id": "chunk:ivan_ivanovich_tolstoy_0",
+        "passage_index": 16,
+        "title": "Ivan Ivanovich Tolstoy",
+        "score": 0.07143175024401469,
+        "text": "Ivan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.",
+        "score_breakdown": {
+          "dense": 0.04999126219347287,
+          "graph": 0.051166797847132,
+          "fact": 0.19057677788976674
+        }
+      },
+      {
+        "node_id": "chunk:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0",
+        "passage_index": 8,
+        "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+        "score": 0.042430029092187356,
+        "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy.",
+        "score_breakdown": {
+          "dense": 0.0504471568187392,
+          "graph": 0.048946976139602645,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:august_2004_moscow_metro_bombing_0",
+        "passage_index": 19,
+        "title": "August 2004 Moscow Metro bombing",
+        "score": 0.04238248536016966,
+        "text": "August 2004 Moscow Metro bombing\nThe official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004. The deaths included the bomber and her accomplice, Nikolay Kipkeev (Kipkeyev), the head of an Islamic militant group Karachay Jamaat from the republic of Karachay–Cherkessia, as the bomb apparently exploded prematurely while the two were standing in the entrance hall of the metro station.",
+        "score_breakdown": {
+          "dense": 0.05040166090504771,
+          "graph": 0.04887190620797806,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:patrick_cobbold_0",
+        "passage_index": 11,
+        "title": "Patrick Cobbold",
+        "score": 0.04230924678278264,
+        "text": "Patrick Cobbold\nHe was educated with his elder brother John at Wellesley House and Eton College. He was 10 when their father, Lieutenant Colonel Ivan Cobbold, was killed in the Guards Chapel, London, on 19 June 1944 when a flying bomb (V1) hit the Chapel during the Sunday morning service.",
+        "score_breakdown": {
+          "dense": 0.05004028954202246,
+          "graph": 0.04929029178223427,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:14_september_2004_baghdad_bombing_0",
+        "passage_index": 5,
+        "title": "14 September 2004 Baghdad bombing",
+        "score": 0.042222569982478746,
+        "text": "14 September 2004 Baghdad bombing\nThe 14 September 2004 Baghdad bombing was a suicide car bomb attack on a market, near a police headquarters, in Baghdad, the capital city of Iraq, on 14 September 2004, killing 47 people and wounding 114.",
+        "score_breakdown": {
+          "dense": 0.05013213723905691,
+          "graph": 0.04883298166999147,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:2004_sinai_bombings_0",
+        "passage_index": 3,
+        "title": "2004 Sinai bombings",
+        "score": 0.042203871442204735,
+        "text": "2004 Sinai bombings\nThe 2004 Sinai bombings were three bomb attacks targeting tourist hotels in the Sinai Peninsula, Egypt, on 7 October 2004. The attacks left 34 people dead and 171 injured.",
+        "score_breakdown": {
+          "dense": 0.05008583966106996,
+          "graph": 0.04885553209538752,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where did a bombing occur in August 2004 at the location Fili?",
+        "sentence_id": "sentence:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0_0_dmitri_ivanovich_11_october_155226_june_1553_was_the_first_tsarevich_",
+        "sentence": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna.",
+        "score": 0.3584724048773448
+      },
+      {
+        "sub_question": "What country is associated with the location of the bombing at Fili in August 2004?",
+        "sentence_id": "sentence:august_2004_moscow_metro_bombing_0_0_the_official_investigation_concluded_that_it_was_organized_by_the_same_group_as",
+        "sentence": "The official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004.",
+        "score": 0.47741035409484595
+      },
+      {
+        "sub_question": "Who is Tsarevich Ivan Ivanovich of this country?",
+        "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+        "sentence": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+        "score": 0.4301027047250952
+      },
+      {
+        "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich?",
+        "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+        "sentence": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+        "score": 0.46343603805842853
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze the provided passages and question carefully. Start your response after 'Thought: ' with a concise reasoning process grounded in the passages. Then conclude with 'Answer: ' followed by a short, definitive answer. If the answer cannot be found in the passages, output 'Answer: Unknown'."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: Fili (Moscow Metro)\nFili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100.\n\nWikipedia Title: The Woman with You\nThe Woman with You\n\"The Woman with You\" is a song written by David Frasier and Craig Wiseman and recorded by American country music artist Kenny Chesney. It was released in August 2004 as the fourth single from Chesney’s 2004 album \"When the Sun Goes Down\". The song peaked at number 2 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart in 2004.\n\nWikipedia Title: Ivan Melnikov (politician)\nIvan Melnikov (politician)\nIvan Ivanovich Melnikov (; born 7 August 1950) is a Russian politician, Vice-Chairman of the Communist Party of the Russian Federation (CPRF), and First Vice-Chairman of the State Duma. He is a professor at Moscow State University.\n\nWikipedia Title: Ivan Morris\nIvan Morris\nIvan Morris was born in London, of mixed American and Swedish parentage to Edita Morris and Ira Victor Morris (son of diplomat Ira Nelson Morris and grandson of meat-packer Nelson Morris). He studied at Gordonstoun, before graduating from Phillips Academy. He began his study of Japanese language and culture at Harvard University, where he received a BA. He received a doctorate at the School of Oriental and African Studies in London. He wrote widely on modern and ancient Japan and translated numerous classical and modern literary works. Ivan Morris was one of the first interpreters sent into Hiroshima after the explosion of the bomb.\n\nWikipedia Title: Ivan Ivanovich Tolstoy\nIvan Ivanovich Tolstoy\nCount Ivan Ivanovich Tolstoy (1858—1916) was an Imperial Russian politician. He served as Vice President of the Russian Imperial Academy of Arts while Grand Duke Vladimir Alexandrovich was Academy President. He later served as Imperial Minister of Education in the Witte Government.\n\nQuestion: Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The question contains several elements that need to be addressed to find the correct answer. However, there are inconsistencies and inaccuracies in the question itself:\n\n1. **Location of Fili**: Fili is a station on the Filyovskaya Line of the Moscow Metro, located in Russia.\n2. **Bombing in August 2004**: There is no mention of a bombing at the Fili station in August 2004 in the provided passage. The only event mentioned in August 2004 is the release of the song \"The Woman with You\" by Kenny Chesney.\n3. **Tsarevich Ivan Ivanovich**: The provided passage mentions Ivan Ivanovich Tolstoy, who was a Russian politician, but not a tsarevich (crown prince).\n\nGiven these points, the question as stated does not have a coherent answer based on the information provided. Therefore, the answer is:",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The question contains several elements that need to be addressed to find the correct answer. However, there are inconsistencies and inaccuracies in the question itself:\n\n1. **Location of Fili**: Fili is a station on the Filyovskaya Line of the Moscow Metro, located in Russia.\n2. **Bombing in August 2004**: There is no mention of a bombing at the Fili station in August 2004 in the provided passage. The only event mentioned in August 2004 is the release of the song \"The Woman with You\" by Kenny Chesney.\n3. **Tsarevich Ivan Ivanovich**: The provided passage mentions Ivan Ivanovich Tolstoy, who was a Russian politician, but not a tsarevich (crown prince).\n\nGiven these points, the question as stated does not have a coherent answer based on the information provided. Therefore, the answer is:\n\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "3hop1__248015_809999_533791",
+    "question": "Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?",
+    "answer": "Anastasia Romanovna",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Fili >> part of",
+      "August 2004 #1 bombing >> country",
+      "Tsarevich Ivan Ivanovich of #2 >> mother"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Anastasia Romanovna",
+    "gold_aliases": [],
+    "matched": false,
+    "matched_candidates": []
+  }
+}

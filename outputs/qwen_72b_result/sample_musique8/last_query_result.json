@@ -1,0 +1,989 @@
+{
+  "query": "What county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.3,
+    "chunk": 0.5
+  },
+  "query_entities": [
+    "Hungry Eyes",
+    "Dirty Dancing"
+  ],
+  "raw_query_entities": [
+    "Hungry Eyes",
+    "Dirty Dancing"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Hungry Eyes",
+      "node_id": "entity:title_anchor_hungry_eyes",
+      "resolved_text": "Hungry Eyes",
+      "score": 0.6987777777777778,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.6444444444444445,
+      "compatibility_score": 1.0,
+      "score_margin": 0.28027777777777785,
+      "confident": true
+    },
+    {
+      "mention": "Dirty Dancing",
+      "node_id": "entity:dirty_dancing",
+      "resolved_text": "Dirty Dancing",
+      "score": 0.6837777777777778,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.6444444444444445,
+      "compatibility_score": 1.0,
+      "score_margin": 0.4013333333333334,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who sang Hungry Eyes in the movie Dirty Dancing?",
+    "In which county was the singer of Hungry Eyes from the movie Dirty Dancing born?",
+    "What counties share a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_hungry_eyes",
+      "score": 1.011943459481166,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:dirty_dancing",
+      "score": 0.9633677519348784,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hungry_jack_s_pty_ltd",
+      "score": 0.2713119364854344,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:burger_king_hungry_jack_s_restaurants_in_australia",
+      "score": 0.2713110651843057,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+      "score": 0.2601536479477868,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:w_odawa_county",
+      "score": 0.24655365006906374,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hungry_jack_s",
+      "score": 0.2264443479352594,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.22643558849605644,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:eric_carmen",
+      "score": 0.2211197110480008,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gmina_w_odawa",
+      "score": 0.21656867779970007,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rowan_county",
+      "score": 0.21654810676636355,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_carolina",
+      "score": 0.21654361439743475,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:hungry_eyes_is_a_song_performed_by_eric_carmen_sentence_hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_arti",
+      "text": "Hungry Eyes is a song performed by Eric Carmen",
+      "head_id": "entity:title_anchor_hungry_eyes",
+      "tail_id": "entity:eric_carmen",
+      "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "chunk_id": "chunk:hungry_eyes_0",
+      "document_index": 12,
+      "score": 0.2583808154206244
+    },
+    {
+      "fact_id": "fact:gmina_w_odawa_is_located_in_w_odawa_county_sentence_gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_dist",
+      "text": "Gmina W odawa is located in W odawa County",
+      "head_id": "entity:title_anchor_gmina_w_odawa",
+      "tail_id": "entity:w_odawa_county",
+      "sentence_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+      "chunk_id": "chunk:gmina_w_odawa_0",
+      "document_index": 11,
+      "score": 0.24445164059421284
+    },
+    {
+      "fact_id": "fact:hungry_jack_s_is_located_in_australia_sentence_hungry_jack_s_0_4_with_over_390_locations_across_australia_hungry_jack_s_",
+      "text": "Hungry Jack's is located in Australia",
+      "head_id": "entity:title_anchor_hungry_jack_s",
+      "tail_id": "entity:australia",
+      "sentence_id": "sentence:hungry_jack_s_0_4_with_over_390_locations_across_australia_hungry_jack_s_is_the_second_largest_fr",
+      "chunk_id": "chunk:hungry_jack_s_0",
+      "document_index": 4,
+      "score": 0.22433857796268117
+    },
+    {
+      "fact_id": "fact:rowan_county_is_located_in_north_carolina_sentence_cleveland_north_carolina_0_0_cleveland_is_a_town_in_the_cleveland_tow",
+      "text": "Rowan County is located in North Carolina",
+      "head_id": "entity:rowan_county",
+      "tail_id": "entity:north_carolina",
+      "sentence_id": "sentence:cleveland_north_carolina_0_0_cleveland_is_a_town_in_the_cleveland_township_of_rowan_county_north_carolina_u",
+      "chunk_id": "chunk:cleveland_north_carolina_0",
+      "document_index": 13,
+      "score": 0.21444678231299213
+    },
+    {
+      "fact_id": "fact:gmina_w_odawa_borders_with_ukraine_sentence_gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_",
+      "text": "Gmina W odawa borders with Ukraine",
+      "head_id": "entity:title_anchor_gmina_w_odawa",
+      "tail_id": "entity:ukraine",
+      "sentence_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+      "chunk_id": "chunk:gmina_w_odawa_0",
+      "document_index": 11,
+      "score": 0.19950804725226956
+    },
+    {
+      "fact_id": "fact:gmina_w_odawa_borders_with_belarus_sentence_gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_",
+      "text": "Gmina W odawa borders with Belarus",
+      "head_id": "entity:title_anchor_gmina_w_odawa",
+      "tail_id": "entity:belarus",
+      "sentence_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+      "chunk_id": "chunk:gmina_w_odawa_0",
+      "document_index": 11,
+      "score": 0.19945420881598952
+    },
+    {
+      "fact_id": "fact:eric_carmen_from_cleveland_ohio_sentence_the_definitive_collection_eric_carmen_album_0_0_the_definitive_collection_is_a_",
+      "text": "Eric Carmen from Cleveland Ohio",
+      "head_id": "entity:eric_carmen",
+      "tail_id": "entity:cleveland_ohio",
+      "sentence_id": "sentence:the_definitive_collection_eric_carmen_album_0_0_the_definitive_collection_is_a_1997_greatest_hits_compilation_album_of_a",
+      "chunk_id": "chunk:the_definitive_collection_eric_carmen_album_0",
+      "document_index": 7,
+      "score": 0.17966332978179703
+    },
+    {
+      "fact_id": "fact:hungry_eyes_was_featured_in_dirty_dancing_sentence_hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_er",
+      "text": "Hungry Eyes was featured in Dirty Dancing",
+      "head_id": "entity:title_anchor_hungry_eyes",
+      "tail_id": "entity:dirty_dancing",
+      "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "chunk_id": "chunk:hungry_eyes_0",
+      "document_index": 12,
+      "score": 0.16122940032804917
+    }
+  ],
+  "bridge_entities": [
+    "Raspberries",
+    "Eric Carmen"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who sang Hungry Eyes in the movie Dirty Dancing?",
+      "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+      "score": 0.5616948401927948
+    },
+    {
+      "sub_question": "In which county was the singer of Hungry Eyes from the movie Dirty Dancing born?",
+      "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+      "score": 0.6263316601514817
+    },
+    {
+      "sub_question": "What counties share a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+      "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+      "score": 0.5969198954455993
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+      "score": 0.06595220531845838,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hungry_eyes",
+      "score": 0.0590673116386667,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+      "score": 0.05427936535228375,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:dirty_dancing",
+      "score": 0.05110914803719424,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gmina_w_odawa",
+      "score": 0.03279279827906712,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:cleveland_north_carolina_0_0_cleveland_is_a_town_in_the_cleveland_township_of_rowan_county_north_carolina_u",
+      "score": 0.029919176629034986,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:hungry_eyes_0_1_the_song_was_recorded_at_beachwood_studios_in_beachwood_ohio_in_1987_hungry",
+      "score": 0.02792215580583597,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hungry_jack_s",
+      "score": 0.02443864816431706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:eric_carmen",
+      "score": 0.02417364467287677,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_definitive_collection_eric_carmen_album_0_2_it_also_contains_his_versions_of_two_major_hits_which_he_wrote_for_shaun",
+      "score": 0.023064908285449066,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_definitive_collection_eric_carmen_album_0_0_the_definitive_collection_is_a_1997_greatest_hits_compilation_album_of_a",
+      "score": 0.022242426124469226,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:hungry_jack_s_0_4_with_over_390_locations_across_australia_hungry_jack_s_is_the_second_largest_fr",
+      "score": 0.02096778799502308,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:hungry_jack_s_0_2_hungry_jack_s_owns_and_operates_or_sub_licences_all_of_the_burger_king_hungry",
+      "score": 0.019168192700003434,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:raspberries",
+      "score": 0.017125405815332027,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:rowan_county",
+      "score": 0.016903991923035037,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hungry_jack_s_0_0_hungry_jack_s_pty_ltd_is_the_exclusive_australian_master_fast_food_franchise_of",
+      "score": 0.01583130561770907,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:hungry_jack_s_pty_ltd",
+      "score": 0.015355236601335576,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:burger_king_hungry_jack_s_restaurants_in_australia",
+      "score": 0.015221637665179378,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cleveland",
+      "score": 0.01494442029862181,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.014412171305200729,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:hungry_eyes_0",
+      "passage_index": 12,
+      "title": "Hungry Eyes",
+      "score": 0.07467171848087374,
+      "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales.",
+      "score_breakdown": {
+        "dense": 0.0510040395964147,
+        "graph": 0.051964659230928086,
+        "fact": 0.20686732622378154
+      }
+    },
+    {
+      "node_id": "chunk:gmina_w_odawa_0",
+      "passage_index": 11,
+      "title": "Gmina Włodawa",
+      "score": 0.07326287210389586,
+      "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
+      "score_breakdown": {
+        "dense": 0.05007121370386662,
+        "graph": 0.05040944324950261,
+        "fact": 0.20400581061278958
+      }
+    },
+    {
+      "node_id": "chunk:hungry_jack_s_0",
+      "passage_index": 4,
+      "title": "Hungry Jack's",
+      "score": 0.07259513373813743,
+      "text": "Hungry Jack's\nHungry Jack's Pty Ltd is the exclusive Australian master fast food franchise of Burger King Corporation. It is a wholly owned subsidiary of Competitive Foods Australia, a privately held company owned by Jack Cowin. Hungry Jack's owns and operates or sub-licences all of the Burger King / Hungry Jack's restaurants in Australia. As the master franchise for the country, the company is responsible for licensing new operators, opening its own stores and performing standards oversight of franchised locations in that country. With over 390 locations across Australia, Hungry Jack's is the second largest franchise of Burger King in the world (second to Carrols Corporation).",
+      "score_breakdown": {
+        "dense": 0.04996325035172524,
+        "graph": 0.05041267807564268,
+        "fact": 0.1999436174799716
+      }
+    },
+    {
+      "node_id": "chunk:cleveland_north_carolina_0",
+      "passage_index": 13,
+      "title": "Cleveland, North Carolina",
+      "score": 0.07178376094800848,
+      "text": "Cleveland, North Carolina\nCleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States. The population was 871 at the 2010 census.",
+      "score_breakdown": {
+        "dense": 0.049992368223829346,
+        "graph": 0.048638745131100745,
+        "fact": 0.1979755659038141
+      }
+    },
+    {
+      "node_id": "chunk:the_definitive_collection_eric_carmen_album_0",
+      "passage_index": 7,
+      "title": "The Definitive Collection (Eric Carmen album)",
+      "score": 0.0713255940349248,
+      "text": "The Definitive Collection (Eric Carmen album)\nThe Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen. It features five hits by the Raspberries, a power pop group which he led in the early 1970s. It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\".",
+      "score_breakdown": {
+        "dense": 0.0503188583978596,
+        "graph": 0.04989689983051844,
+        "fact": 0.19120767977964329
+      }
+    },
+    {
+      "node_id": "chunk:she_s_like_the_wind_0",
+      "passage_index": 14,
+      "title": "She's Like the Wind",
+      "score": 0.04209212354106898,
+      "text": "She's Like the Wind\n\"She's Like the Wind\" is a 1987 power ballad from the film \"Dirty Dancing\", performed by Patrick Swayze. Though Swayze is the primary vocalist on the single, it was billed as being performed by \"Patrick Swayze & Wendy Fraser”. Fraser is heard throughout much of the song, specifically in the final chorus. The single reached number three on the \"Billboard\" Hot 100 and number one on the Adult Contemporary chart.",
+      "score_breakdown": {
+        "dense": 0.05036445223341472,
+        "graph": 0.04797224937563628,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:gold_hill_north_carolina_0",
+      "passage_index": 0,
+      "title": "Gold Hill, North Carolina",
+      "score": 0.041715763533744024,
+      "text": "Gold Hill, North Carolina\nGold Hill is a small unincorporated community in southeastern Rowan County, North Carolina near the Cabarrus County line. It is situated near the Yadkin River and is served by U.S. Highway 52 and Old Beatty Ford Road. Gold was found in this small town outside Salisbury in the 19th century.",
+      "score_breakdown": {
+        "dense": 0.049921598304262245,
+        "graph": 0.0475296148879993,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:minsk_region_0",
+      "passage_index": 16,
+      "title": "Minsk Region",
+      "score": 0.041624771387543225,
+      "text": "Minsk Region\nMinsk Region or Minsk Voblasć or Minsk Oblast (, \"Minskaja vobłasć\" ; , \"Minskaja oblastj\") is one of the regions of Belarus. Its administrative center is Minsk, although it is a separate administrative territorial entity of Belarus. As of 2011, the region's population is 1,411,500.",
+      "score_breakdown": {
+        "dense": 0.04980423834596714,
+        "graph": 0.047441467657537664,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cheikha_rimitti_0",
+      "passage_index": 8,
+      "title": "Cheikha Rimitti",
+      "score": 0.04146614547069577,
+      "text": "Cheikha Rimitti\nAt age 15, she joined a troupe of traditional Algerian musicians and learnt to sing and dance. In 1943 she moved to the rural town of Relizane and began writing her own songs. Her songs described the tough life endured by the Algerian poor, focusing on everyday struggle of living, pleasures of sex, love, alcohol and friendship and the realities of war.",
+      "score_breakdown": {
+        "dense": 0.04997599084085414,
+        "graph": 0.046597835027419966,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:geography_of_the_united_states_0",
+      "passage_index": 10,
+      "title": "Geography of the United States",
+      "score": 0.04146479647462494,
+      "text": "Geography of the United States\nThe United States shares land borders with Canada (to the north) and Mexico (to the south), and a territorial water border with Russia in the northwest, and two territorial water borders in the southeast between Florida and Cuba, and Florida and the Bahamas. The contiguous forty-eight states are otherwise bounded by the Pacific Ocean on the west, the Atlantic Ocean on the east, and the Gulf of Mexico to the southeast. Alaska borders the Pacific Ocean to the south, the Bering Strait to the west, and the Arctic Ocean to the north, while Hawaii lies far to the southwest of the mainland in the Pacific Ocean.",
+      "score_breakdown": {
+        "dense": 0.04998006257133844,
+        "graph": 0.04658587353462933,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_hungry_eyes",
+        "score": 0.0590673116386667,
+        "text": "Hungry Eyes",
+        "metadata": {
+          "canonical_name": "Hungry Eyes",
+          "aliases": [
+            "HE",
+            "Hungry Eyes"
+          ],
+          "surface_forms": [
+            "HE",
+            "Hungry Eyes"
+          ],
+          "title_anchor": "Hungry Eyes"
+        }
+      },
+      {
+        "node_id": "entity:dirty_dancing",
+        "score": 0.05110914803719424,
+        "text": "Dirty Dancing",
+        "metadata": {
+          "canonical_name": "Dirty Dancing",
+          "aliases": [
+            "DD",
+            "Dirty Dancing"
+          ],
+          "surface_forms": [
+            "DD",
+            "Dirty Dancing"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+        "score": 0.06595220531845838,
+        "text": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+        "metadata": {
+          "title": "Hungry Eyes",
+          "chunk_id": "chunk:hungry_eyes_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Hungry Eyes",
+              "relation": "is a song performed by",
+              "tail": "Eric Carmen"
+            },
+            {
+              "head": "Eric Carmen",
+              "relation": "is a former member of",
+              "tail": "Raspberries"
+            },
+            {
+              "head": "Hungry Eyes",
+              "relation": "was featured in",
+              "tail": "Dirty Dancing"
+            },
+            {
+              "head": "Hungry Eyes",
+              "relation": "has_member",
+              "tail": "Raspberries"
+            },
+            {
+              "head": "Raspberries",
+              "relation": "member_of",
+              "tail": "Hungry Eyes"
+            },
+            {
+              "head": "Hungry Eyes",
+              "relation": "has_member",
+              "tail": "Dirty Dancing"
+            },
+            {
+              "head": "Dirty Dancing",
+              "relation": "member_of",
+              "tail": "Hungry Eyes"
+            }
+          ],
+          "entities": [
+            "Hungry Eyes",
+            "Eric Carmen",
+            "Raspberries",
+            "Dirty Dancing"
+          ],
+          "entity_ids": [
+            "entity:dirty_dancing",
+            "entity:eric_carmen",
+            "entity:raspberries",
+            "entity:title_anchor_hungry_eyes"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
+        "score": 0.05427936535228375,
+        "text": "Gmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine.",
+        "metadata": {
+          "title": "Gmina Włodawa",
+          "chunk_id": "chunk:gmina_w_odawa_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Gmina W odawa",
+              "relation": "is located in",
+              "tail": "W odawa County"
+            },
+            {
+              "head": "Gmina W odawa",
+              "relation": "is part of",
+              "tail": "Lublin Voivodeship"
+            },
+            {
+              "head": "Gmina W odawa",
+              "relation": "is situated in",
+              "tail": "eastern Poland"
+            },
+            {
+              "head": "Gmina W odawa",
+              "relation": "borders with",
+              "tail": "Belarus"
+            },
+            {
+              "head": "Gmina W odawa",
+              "relation": "borders with",
+              "tail": "Ukraine"
+            }
+          ],
+          "entities": [
+            "Gmina W odawa",
+            "W odawa County",
+            "Lublin Voivodeship",
+            "eastern Poland",
+            "Belarus",
+            "Ukraine"
+          ],
+          "entity_ids": [
+            "entity:belarus",
+            "entity:eastern_poland",
+            "entity:lublin_voivodeship",
+            "entity:title_anchor_gmina_w_odawa",
+            "entity:ukraine",
+            "entity:w_odawa_county"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:cleveland_north_carolina_0_0_cleveland_is_a_town_in_the_cleveland_township_of_rowan_county_north_carolina_u",
+        "score": 0.029919176629034986,
+        "text": "Cleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States.",
+        "metadata": {
+          "title": "Cleveland, North Carolina",
+          "chunk_id": "chunk:cleveland_north_carolina_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Cleveland",
+              "relation": "is a town in",
+              "tail": "Cleveland Township"
+            },
+            {
+              "head": "Cleveland Township",
+              "relation": "is part of",
+              "tail": "Rowan County"
+            },
+            {
+              "head": "Rowan County",
+              "relation": "is located in",
+              "tail": "North Carolina"
+            }
+          ],
+          "entities": [
+            "Cleveland",
+            "Cleveland Township",
+            "Rowan County",
+            "North Carolina"
+          ],
+          "entity_ids": [
+            "entity:cleveland",
+            "entity:cleveland_township",
+            "entity:north_carolina",
+            "entity:rowan_county"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hungry_eyes_0_1_the_song_was_recorded_at_beachwood_studios_in_beachwood_ohio_in_1987_hungry",
+        "score": 0.02792215580583597,
+        "text": "The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988.",
+        "metadata": {
+          "title": "Hungry Eyes",
+          "chunk_id": "chunk:hungry_eyes_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Beachwood Studios",
+              "relation": "related_to",
+              "tail": "Beachwood"
+            },
+            {
+              "head": "Beachwood",
+              "relation": "related_to",
+              "tail": "Ohio"
+            },
+            {
+              "head": "Ohio",
+              "relation": "related_to",
+              "tail": "Hungry Eyes"
+            }
+          ],
+          "entities": [
+            "Beachwood Studios",
+            "Beachwood",
+            "Ohio",
+            "Hungry Eyes",
+            "Billboard Hot",
+            "Cash Box Top"
+          ],
+          "entity_ids": [
+            "entity:beachwood",
+            "entity:beachwood_studios",
+            "entity:billboard_hot",
+            "entity:cash_box_top",
+            "entity:ohio",
+            "entity:title_anchor_hungry_eyes"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:hungry_eyes_0",
+        "score": 0.011634907271180061,
+        "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales.",
+        "metadata": {
+          "title": "Hungry Eyes",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:beachwood",
+            "entity:beachwood_studios",
+            "entity:billboard_hot",
+            "entity:cash_box_top",
+            "entity:dirty_dancing",
+            "entity:eric_carmen",
+            "entity:january_1988",
+            "entity:ohio",
+            "entity:raspberries",
+            "entity:title_anchor_hungry_eyes",
+            "entity:uk"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:hungry_jack_s_0",
+        "score": 0.010593132604951708,
+        "text": "Hungry Jack's\nHungry Jack's Pty Ltd is the exclusive Australian master fast food franchise of Burger King Corporation. It is a wholly owned subsidiary of Competitive Foods Australia, a privately held company owned by Jack Cowin. Hungry Jack's owns and operates or sub-licences all of the Burger King / Hungry Jack's restaurants in Australia. As the master franchise for the country, the company is responsible for licensing new operators, opening its own stores and performing standards oversight of franchised locations in that country. With over 390 locations across Australia, Hungry Jack's is the second largest franchise of Burger King in the world (second to Carrols Corporation).",
+        "metadata": {
+          "title": "Hungry Jack's",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:as",
+            "entity:australia",
+            "entity:burger_king",
+            "entity:burger_king_corporation",
+            "entity:burger_king_hungry_jack_s_restaurants_in_australia",
+            "entity:carrols_corporation",
+            "entity:competitive_foods_australia",
+            "entity:hungry_jack_s_pty_ltd",
+            "entity:jack_cowin",
+            "entity:largest_franchise_of_burger_king",
+            "entity:second_largest_franchise_of_burger_king",
+            "entity:title_anchor_hungry_jack_s"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_definitive_collection_eric_carmen_album_0",
+        "score": 0.009957855051920915,
+        "text": "The Definitive Collection (Eric Carmen album)\nThe Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen. It features five hits by the Raspberries, a power pop group which he led in the early 1970s. It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\".",
+        "metadata": {
+          "title": "The Definitive Collection (Eric Carmen album)",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:all_by_myself",
+            "entity:cleveland_ohio",
+            "entity:dirty_dancing",
+            "entity:eric_carmen",
+            "entity:raspberries",
+            "entity:shaun_cassidy",
+            "entity:singles_released_by_eric_carmen",
+            "entity:title_anchor_the_definitive_collection_eric_carmen_album"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:gmina_w_odawa_0",
+        "score": 0.0097329048622317,
+        "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
+        "metadata": {
+          "title": "Gmina Włodawa",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:belarus",
+            "entity:eastern_poland",
+            "entity:its_seat",
+            "entity:lublin_voivodeship",
+            "entity:title_anchor_gmina_w_odawa",
+            "entity:ukraine",
+            "entity:w_odawa",
+            "entity:w_odawa_county"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:cleveland_north_carolina_0",
+        "score": 0.007948056714624632,
+        "text": "Cleveland, North Carolina\nCleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States. The population was 871 at the 2010 census.",
+        "metadata": {
+          "title": "Cleveland, North Carolina",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:cleveland",
+            "entity:cleveland_township",
+            "entity:north_carolina",
+            "entity:rowan_county"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:she_s_like_the_wind_0",
+        "score": 0.003958500523361242,
+        "text": "She's Like the Wind\n\"She's Like the Wind\" is a 1987 power ballad from the film \"Dirty Dancing\", performed by Patrick Swayze. Though Swayze is the primary vocalist on the single, it was billed as being performed by \"Patrick Swayze & Wendy Fraser”. Fraser is heard throughout much of the song, specifically in the final chorus. The single reached number three on the \"Billboard\" Hot 100 and number one on the Adult Contemporary chart.",
+        "metadata": {
+          "title": "She's Like the Wind",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:adult_contemporary",
+            "entity:adult_contemporary_chart",
+            "entity:billboard",
+            "entity:billboard_hot_100",
+            "entity:dirty_dancing",
+            "entity:fraser",
+            "entity:hot",
+            "entity:patrick_swayze",
+            "entity:swayze",
+            "entity:though_swayze",
+            "entity:title_anchor_she_s_like_the_wind",
+            "entity:wendy_fraser"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Hungry Eyes\nHungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales.\n\nGmina Włodawa\nGmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.\n\nHungry Jack's\nHungry Jack's\nHungry Jack's Pty Ltd is the exclusive Australian master fast food franchise of Burger King Corporation. It is a wholly owned subsidiary of Competitive Foods Australia, a privately held company owned by Jack Cowin. Hungry Jack's owns and operates or sub-licences all of the Burger King / Hungry Jack's restaurants in Australia. As the master franchise for the country, the company is responsible for licensing new operators, opening its own stores and performing standards oversight of franchised locations in that country. With over 390 locations across Australia, Hungry Jack's is the second largest franchise of Burger King in the world (second to Carrols Corporation).\n\nCleveland, North Carolina\nCleveland, North Carolina\nCleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States. The population was 871 at the 2010 census.\n\nThe Definitive Collection (Eric Carmen album)\nThe Definitive Collection (Eric Carmen album)\nThe Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen. It features five hits by the Raspberries, a power pop group which he led in the early 1970s. It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\".",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:hungry_eyes_0",
+        "passage_index": 12,
+        "title": "Hungry Eyes",
+        "score": 0.07467171848087374,
+        "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales.",
+        "score_breakdown": {
+          "dense": 0.0510040395964147,
+          "graph": 0.051964659230928086,
+          "fact": 0.20686732622378154
+        }
+      },
+      {
+        "node_id": "chunk:gmina_w_odawa_0",
+        "passage_index": 11,
+        "title": "Gmina Włodawa",
+        "score": 0.07326287210389586,
+        "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
+        "score_breakdown": {
+          "dense": 0.05007121370386662,
+          "graph": 0.05040944324950261,
+          "fact": 0.20400581061278958
+        }
+      },
+      {
+        "node_id": "chunk:hungry_jack_s_0",
+        "passage_index": 4,
+        "title": "Hungry Jack's",
+        "score": 0.07259513373813743,
+        "text": "Hungry Jack's\nHungry Jack's Pty Ltd is the exclusive Australian master fast food franchise of Burger King Corporation. It is a wholly owned subsidiary of Competitive Foods Australia, a privately held company owned by Jack Cowin. Hungry Jack's owns and operates or sub-licences all of the Burger King / Hungry Jack's restaurants in Australia. As the master franchise for the country, the company is responsible for licensing new operators, opening its own stores and performing standards oversight of franchised locations in that country. With over 390 locations across Australia, Hungry Jack's is the second largest franchise of Burger King in the world (second to Carrols Corporation).",
+        "score_breakdown": {
+          "dense": 0.04996325035172524,
+          "graph": 0.05041267807564268,
+          "fact": 0.1999436174799716
+        }
+      },
+      {
+        "node_id": "chunk:cleveland_north_carolina_0",
+        "passage_index": 13,
+        "title": "Cleveland, North Carolina",
+        "score": 0.07178376094800848,
+        "text": "Cleveland, North Carolina\nCleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States. The population was 871 at the 2010 census.",
+        "score_breakdown": {
+          "dense": 0.049992368223829346,
+          "graph": 0.048638745131100745,
+          "fact": 0.1979755659038141
+        }
+      },
+      {
+        "node_id": "chunk:the_definitive_collection_eric_carmen_album_0",
+        "passage_index": 7,
+        "title": "The Definitive Collection (Eric Carmen album)",
+        "score": 0.0713255940349248,
+        "text": "The Definitive Collection (Eric Carmen album)\nThe Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen. It features five hits by the Raspberries, a power pop group which he led in the early 1970s. It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\".",
+        "score_breakdown": {
+          "dense": 0.0503188583978596,
+          "graph": 0.04989689983051844,
+          "fact": 0.19120767977964329
+        }
+      },
+      {
+        "node_id": "chunk:she_s_like_the_wind_0",
+        "passage_index": 14,
+        "title": "She's Like the Wind",
+        "score": 0.04209212354106898,
+        "text": "She's Like the Wind\n\"She's Like the Wind\" is a 1987 power ballad from the film \"Dirty Dancing\", performed by Patrick Swayze. Though Swayze is the primary vocalist on the single, it was billed as being performed by \"Patrick Swayze & Wendy Fraser”. Fraser is heard throughout much of the song, specifically in the final chorus. The single reached number three on the \"Billboard\" Hot 100 and number one on the Adult Contemporary chart.",
+        "score_breakdown": {
+          "dense": 0.05036445223341472,
+          "graph": 0.04797224937563628,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:gold_hill_north_carolina_0",
+        "passage_index": 0,
+        "title": "Gold Hill, North Carolina",
+        "score": 0.041715763533744024,
+        "text": "Gold Hill, North Carolina\nGold Hill is a small unincorporated community in southeastern Rowan County, North Carolina near the Cabarrus County line. It is situated near the Yadkin River and is served by U.S. Highway 52 and Old Beatty Ford Road. Gold was found in this small town outside Salisbury in the 19th century.",
+        "score_breakdown": {
+          "dense": 0.049921598304262245,
+          "graph": 0.0475296148879993,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:minsk_region_0",
+        "passage_index": 16,
+        "title": "Minsk Region",
+        "score": 0.041624771387543225,
+        "text": "Minsk Region\nMinsk Region or Minsk Voblasć or Minsk Oblast (, \"Minskaja vobłasć\" ; , \"Minskaja oblastj\") is one of the regions of Belarus. Its administrative center is Minsk, although it is a separate administrative territorial entity of Belarus. As of 2011, the region's population is 1,411,500.",
+        "score_breakdown": {
+          "dense": 0.04980423834596714,
+          "graph": 0.047441467657537664,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cheikha_rimitti_0",
+        "passage_index": 8,
+        "title": "Cheikha Rimitti",
+        "score": 0.04146614547069577,
+        "text": "Cheikha Rimitti\nAt age 15, she joined a troupe of traditional Algerian musicians and learnt to sing and dance. In 1943 she moved to the rural town of Relizane and began writing her own songs. Her songs described the tough life endured by the Algerian poor, focusing on everyday struggle of living, pleasures of sex, love, alcohol and friendship and the realities of war.",
+        "score_breakdown": {
+          "dense": 0.04997599084085414,
+          "graph": 0.046597835027419966,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:geography_of_the_united_states_0",
+        "passage_index": 10,
+        "title": "Geography of the United States",
+        "score": 0.04146479647462494,
+        "text": "Geography of the United States\nThe United States shares land borders with Canada (to the north) and Mexico (to the south), and a territorial water border with Russia in the northwest, and two territorial water borders in the southeast between Florida and Cuba, and Florida and the Bahamas. The contiguous forty-eight states are otherwise bounded by the Pacific Ocean on the west, the Atlantic Ocean on the east, and the Gulf of Mexico to the southeast. Alaska borders the Pacific Ocean to the south, the Bering Strait to the west, and the Arctic Ocean to the north, while Hawaii lies far to the southwest of the mainland in the Pacific Ocean.",
+        "score_breakdown": {
+          "dense": 0.04998006257133844,
+          "graph": 0.04658587353462933,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who sang Hungry Eyes in the movie Dirty Dancing?",
+        "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+        "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+        "score": 0.5616948401927948
+      },
+      {
+        "sub_question": "In which county was the singer of Hungry Eyes from the movie Dirty Dancing born?",
+        "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+        "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+        "score": 0.6263316601514817
+      },
+      {
+        "sub_question": "What counties share a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+        "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+        "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+        "score": 0.5969198954455993
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze the provided passages and question carefully. Start your response after 'Thought: ' with a concise reasoning process grounded in the passages. Then conclude with 'Answer: ' followed by a short, definitive answer. If the answer cannot be found in the passages, output 'Answer: Unknown'."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: Hungry Eyes\nHungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales.\n\nWikipedia Title: Gmina Włodawa\nGmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.\n\nWikipedia Title: Hungry Jack's\nHungry Jack's\nHungry Jack's Pty Ltd is the exclusive Australian master fast food franchise of Burger King Corporation. It is a wholly owned subsidiary of Competitive Foods Australia, a privately held company owned by Jack Cowin. Hungry Jack's owns and operates or sub-licences all of the Burger King / Hungry Jack's restaurants in Australia. As the master franchise for the country, the company is responsible for licensing new operators, opening its own stores and performing standards oversight of franchised locations in that country. With over 390 locations across Australia, Hungry Jack's is the second largest franchise of Burger King in the world (second to Carrols Corporation).\n\nWikipedia Title: Cleveland, North Carolina\nCleveland, North Carolina\nCleveland is a town in the Cleveland Township of Rowan County, North Carolina, United States. The population was 871 at the 2010 census.\n\nWikipedia Title: The Definitive Collection (Eric Carmen album)\nThe Definitive Collection (Eric Carmen album)\nThe Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen. It features five hits by the Raspberries, a power pop group which he led in the early 1970s. It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\".\n\nQuestion: What county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "To determine the county that shares a border with the county where the singer of \"Hungry Eyes\" from the movie \"Dirty Dancing\" was born, we need to identify the singer and his birthplace. From the passage about \"Hungry Eyes,\" we know that the song was performed by Eric Carmen, who is from Cleveland, Ohio. The passage from \"The Definitive Collection (Eric Carmen album)\" confirms that Eric Carmen is from Cleveland, Ohio. However, the information about the specific county in Ohio where Cleveland is located and the counties that border it are not provided in the given passages. Therefore, we cannot definitively answer the question based on the information available.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "To determine the county that shares a border with the county where the singer of \"Hungry Eyes\" from the movie \"Dirty Dancing\" was born, we need to identify the singer and his birthplace. From the passage about \"Hungry Eyes,\" we know that the song was performed by Eric Carmen, who is from Cleveland, Ohio. The passage from \"The Definitive Collection (Eric Carmen album)\" confirms that Eric Carmen is from Cleveland, Ohio. However, the information about the specific county in Ohio where Cleveland is located and the counties that border it are not provided in the given passages. Therefore, we cannot definitively answer the question based on the information available.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "4hop1__76111_624859_355213_203322",
+    "question": "What county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+    "answer": "Cabarrus County",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "who sings the song hungry eyes in the movie dirty dancing",
+      "#1 >> place of birth",
+      "#2 >> located in the administrative territorial entity",
+      "#3 >> shares border with"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Cabarrus County",
+    "gold_aliases": [],
+    "matched": false,
+    "matched_candidates": []
+  }
+}

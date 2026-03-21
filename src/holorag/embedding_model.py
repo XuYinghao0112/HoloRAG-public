@@ -21,15 +21,30 @@ class NVEmbedV2Encoder:
         model_kwargs = {
             "pretrained_model_name_or_path": config.embedding_model_name,
             "trust_remote_code": True,
-            "torch_dtype": self.torch_dtype,
         }
         if normalized_device == "auto":
             model_kwargs["device_map"] = "auto"
 
-        self.model = AutoModel.from_pretrained(**model_kwargs)
+        self.model = self._load_model(model_kwargs)
         self.model.eval()
         if normalized_device != "auto":
             self.model.to(normalized_device)
+
+    def _load_model(self, model_kwargs: dict):
+        preferred_kwargs = {
+            **model_kwargs,
+            "dtype": self.torch_dtype,
+        }
+        try:
+            return AutoModel.from_pretrained(**preferred_kwargs)
+        except TypeError as exc:
+            if "dtype" not in str(exc):
+                raise
+        fallback_kwargs = {
+            **model_kwargs,
+            "torch_dtype": self.torch_dtype,
+        }
+        return AutoModel.from_pretrained(**fallback_kwargs)
 
     def encode(self, texts: List[str], instruction: str = "", text_type: str = "query", max_length: int | None = None) -> np.ndarray:
         if not texts:
