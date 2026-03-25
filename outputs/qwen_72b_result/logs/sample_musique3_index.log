@@ -1,96 +1,0 @@
-2026-03-20 19:27:08,912 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
-Loading weights:   0%|          | 0/304 [00:00<?, ?it/s]Loading weights:  10%|█         | 31/304 [00:00<00:00, 308.95it/s]Loading weights:  20%|██        | 62/304 [00:00<00:00, 293.45it/s]Loading weights:  30%|███       | 92/304 [00:00<00:00, 274.32it/s]Loading weights:  39%|███▉      | 120/304 [00:00<00:00, 242.66it/s]Loading weights:  48%|████▊     | 147/304 [00:00<00:00, 246.27it/s]Loading weights:  57%|█████▋    | 174/304 [00:00<00:00, 252.24it/s]Loading weights:  66%|██████▋   | 202/304 [00:00<00:00, 257.82it/s]Loading weights:  77%|███████▋  | 234/304 [00:00<00:00, 262.08it/s]Loading weights:  87%|████████▋ | 264/304 [00:01<00:00, 262.59it/s]Loading weights:  96%|█████████▌| 291/304 [00:01<00:00, 225.27it/s]Loading weights: 100%|██████████| 304/304 [00:01<00:00, 257.43it/s]
-2026-03-20 19:27:21,578 INFO src.holorag.pipeline: Building HoloRAG hierarchical graph for 20 documents
-2026-03-20 19:27:32,790 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:27:45,218 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:27:48,334 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:27:55,474 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:02,211 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:10,478 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:16,816 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:21,262 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:26,175 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:30,322 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:32,574 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:41,530 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:54,577 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:28:59,697 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:02,568 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:08,762 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:14,037 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:18,954 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:24,481 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:29,346 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:30,476 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:33,547 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:34,677 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:43,584 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:46,401 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:53,264 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:29:58,285 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:10,978 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:13,953 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:23,081 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:30,296 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:36,337 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:49,509 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:54,846 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:30:59,815 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:31:12,972 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:31:22,007 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:31:33,772 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:31:46,928 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:00,045 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:05,499 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:10,974 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:21,357 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:28,063 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:32,416 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:40,915 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:49,357 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:52,433 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:32:57,706 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:33:07,272 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:33:15,155 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:33:21,095 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:33:34,255 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:33:47,379 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:00,518 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:13,660 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:23,206 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:28,786 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:31,095 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:39,790 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:42,868 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:46,195 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:34:59,354 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-03-20 19:35:12,487 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/site-packages/transformers/modeling_attn_mask_utils.py:202: FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
-  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
-/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
-  self.gen = func(*args, **kwds)
-2026-03-20 19:36:15,210 INFO src.holorag.pipeline: Saved HoloRAG index to /data/xyh/code/HoloRAG/outputs/qwen_72b_result/sample_musique3/holorag_index.pkl
-{
-  "index_path": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result/sample_musique3/holorag_index.pkl",
-  "stats": {
-    "nodes": 303,
-    "edges": 897,
-    "layer_counts": {
-      "entity": 219,
-      "sentence": 64,
-      "chunk": 20
-    }
-  },
-  "sample_metadata": {
-    "sample_id": "4hop3__401611_100414_35260_54090",
-    "question": "How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?",
-    "answer": "53 member states",
-    "answer_aliases": [],
-    "question_decomposition": [
-      "Ivan Koumaev >> place of birth",
-      "What continent is #1 found on?",
-      "Who mediated the truce which ended the Iran-Iraq War?",
-      "the #3 recognises how many regions in #2"
-    ]
-  }
-}

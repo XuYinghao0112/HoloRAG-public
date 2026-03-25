@@ -1,0 +1,991 @@
+{
+  "query": "Which company owns the manufacturer of Learjet 60?",
+  "alpha": {
+    "entity": 0.5,
+    "sentence": 0.3,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Learjet 60"
+  ],
+  "raw_query_entities": [
+    "Learjet 60"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Learjet 60",
+      "node_id": "entity:title_anchor_learjet_60",
+      "resolved_text": "Learjet 60",
+      "score": 0.7649333333333334,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.615,
+      "score_margin": 0.20333333333333337,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the manufacturer of Learjet 60?",
+    "Which company owns this manufacturer?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_learjet_60",
+      "score": 1.0562798206248498,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bombardier_inc",
+      "score": 0.3786028557166358,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bombardier_aerospace",
+      "score": 0.37226733126038836,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:learjet",
+      "score": 0.3070081689724811,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:electro_motive_corporation",
+      "score": 0.30536152503885394,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:general_motors_electro_motive_division",
+      "score": 0.30230079177369884,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "score": 0.2220580619056207,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:wichita_kansas",
+      "score": 0.17116421223482312,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "score": 0.17098392164348483,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:canadian",
+      "score": 0.14616292686771684,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:la_grange_illinois",
+      "score": 0.14160972956593348,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_emd_e6",
+      "score": 0.13949698416168188,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:learjet_60_manufactured_by_bombardier_aerospace_sentence_learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_",
+      "text": "Learjet 60 manufactured by Bombardier Aerospace",
+      "head_id": "entity:title_anchor_learjet_60",
+      "tail_id": "entity:bombardier_aerospace",
+      "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "chunk_id": "chunk:learjet_60_0",
+      "document_index": 10,
+      "score": 0.25372685435683406
+    },
+    {
+      "fact_id": "fact:bombardier_aerospace_located_in_wichita_kansas_sentence_learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_b",
+      "text": "Bombardier Aerospace located in Wichita Kansas",
+      "head_id": "entity:bombardier_aerospace",
+      "tail_id": "entity:wichita_kansas",
+      "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "chunk_id": "chunk:learjet_60_0",
+      "document_index": 10,
+      "score": 0.16868015157567426
+    },
+    {
+      "fact_id": "fact:emd_e6_was_also_manufactured_by_general_motors_electro_motive_division_sentence_emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_pass",
+      "text": "EMD E6 was also manufactured by General Motors Electro-Motive Division",
+      "head_id": "entity:title_anchor_emd_e6",
+      "tail_id": "entity:general_motors_electro_motive_division",
+      "sentence_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "chunk_id": "chunk:emd_e6_0",
+      "document_index": 8,
+      "score": 0.1636780810442745
+    },
+    {
+      "fact_id": "fact:canadian_related_to_bombardier_inc_sentence_list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_aerosp",
+      "text": "Canadian related_to Bombardier Inc",
+      "head_id": "entity:canadian",
+      "tail_id": "entity:bombardier_inc",
+      "sentence_id": "sentence:list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_aerospace_division_of_the_canadian_aerospace_a",
+      "chunk_id": "chunk:list_of_bombardier_crj_operators_0",
+      "document_index": 5,
+      "score": 0.1536796306937318
+    },
+    {
+      "fact_id": "fact:general_motors_electro_motive_division_is_located_in_la_grange_illinois_sentence_emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_pas",
+      "text": "General Motors Electro-Motive Division is located in La Grange Illinois",
+      "head_id": "entity:general_motors_electro_motive_division",
+      "tail_id": "entity:la_grange_illinois",
+      "sentence_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "chunk_id": "chunk:emd_e6_0",
+      "document_index": 8,
+      "score": 0.13912636888763333
+    },
+    {
+      "fact_id": "fact:bombardier_aerospace_related_to_canadian_sentence_list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_",
+      "text": "Bombardier Aerospace related_to Canadian",
+      "head_id": "entity:bombardier_aerospace",
+      "tail_id": "entity:canadian",
+      "sentence_id": "sentence:list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_aerospace_division_of_the_canadian_aerospace_a",
+      "chunk_id": "chunk:list_of_bombardier_crj_operators_0",
+      "document_index": 5,
+      "score": 0.1336788175169767
+    },
+    {
+      "fact_id": "fact:emd_e6_was_manufactured_by_electro_motive_corporation_sentence_emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locom",
+      "text": "EMD E6 was manufactured by Electro-Motive Corporation",
+      "head_id": "entity:title_anchor_emd_e6",
+      "tail_id": "entity:electro_motive_corporation",
+      "sentence_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "chunk_id": "chunk:emd_e6_0",
+      "document_index": 8,
+      "score": 0.12367885507970923
+    },
+    {
+      "fact_id": "fact:emd_e6_has_wheel_arrangement_a1a_a1a_sentence_emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufacture",
+      "text": "EMD E6 has wheel arrangement A1A-A1A",
+      "head_id": "entity:title_anchor_emd_e6",
+      "tail_id": "entity:a1a_a1a",
+      "sentence_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "chunk_id": "chunk:emd_e6_0",
+      "document_index": 8,
+      "score": 0.12366856889640175
+    }
+  ],
+  "bridge_entities": [
+    "Bombardier Aerospace",
+    "Wichita Kansas",
+    "Bombardier Inc"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the manufacturer of Learjet 60?",
+      "resolved_sub_question": "Who is the manufacturer of Learjet 60?",
+      "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
+      "score": 0.5274140815650941,
+      "source_title": "Learjet 60",
+      "hop_answer": "Bombardier Aerospace",
+      "hop_thought": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.",
+      "hop_raw_response": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.\nAnswer: Bombardier Aerospace",
+      "evidence_passages": [
+        {
+          "title": "Learjet 60",
+          "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
+        },
+        {
+          "title": "Learjet 60",
+          "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+        },
+        {
+          "title": "Learjet 60",
+          "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which company owns this manufacturer?",
+      "resolved_sub_question": "Which company owns this manufacturer? Context: Bombardier Aerospace.",
+      "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
+      "score": 0.46531026563644406,
+      "source_title": "Learjet 60",
+      "hop_answer": "Bombardier Inc",
+      "hop_thought": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.",
+      "hop_raw_response": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.\nAnswer: Bombardier Inc.",
+      "evidence_passages": [
+        {
+          "title": "Learjet 60",
+          "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
+        },
+        {
+          "title": "Learjet 60",
+          "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+        },
+        {
+          "title": "Learjet 60",
+          "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:bombardier_aerospace",
+      "score": 0.09999012535321389,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+      "score": 0.07023010750491746,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_learjet_60",
+      "score": 0.062190197692139286,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_aerospace_division_of_the_canadian_aerospace_a",
+      "score": 0.060536311437969476,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+      "score": 0.056707688563487665,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:general_motors_electro_motive_division",
+      "score": 0.04517365433687266,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_emd_e6",
+      "score": 0.04482503149813593,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:learjet",
+      "score": 0.044194430994095944,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:learjet_60_0_2_in_july_2012_bombardier_aerospace_announced_a_temporary_production_pause_of_th",
+      "score": 0.03648429979256477,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:bombardier_inc",
+      "score": 0.03576402853791327,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:canadian",
+      "score": 0.03427828254212554,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:electro_motive_corporation",
+      "score": 0.03292384149020179,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:david_copperfield_illusionist_0_2_his_illusions_have_included_the_disappearance_of_a_learjet_1981_the_vanishing",
+      "score": 0.03030491448858974,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:wichita_kansas",
+      "score": 0.025102569630657767,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:learjet_60_0_1_powered_by_two_pratt_whitney_canada_pw305a_engines_it_has_a_range_with_4_pas",
+      "score": 0.02169472865224703,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:la_grange_illinois",
+      "score": 0.020935775584661007,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:produced",
+      "score": 0.01613936604102233,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:a1a_a1a",
+      "score": 0.014929614145032098,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:learjet_60_0",
+      "score": 0.013089797819530853,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:emd_e6_0",
+      "score": 0.012479161902719582,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:learjet_60_0",
+      "passage_index": 10,
+      "title": "Learjet 60",
+      "score": 0.09822611519622962,
+      "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.",
+      "score_breakdown": {
+        "dense": 0.051263201199918354,
+        "graph": 0.05604993306205001,
+        "fact": 0.3547758307843968
+      }
+    },
+    {
+      "node_id": "chunk:emd_e6_0",
+      "passage_index": 8,
+      "title": "EMD E6",
+      "score": 0.09293896587217075,
+      "text": "EMD E6\nThe EMD E6 was a , A1A-A1A, passenger train locomotive manufactured by Electro-Motive Corporation, and its corporate successor, General Motors Electro-Motive Division, of La Grange, Illinois. The cab version, E6A, was manufactured from November 1939 to September 1942; 91 were produced. The booster version, E6B, was manufactured from April 1940 to February 1942; 26 were produced. The was achieved by putting two , 12-cylinder, model 567 engines in the engine compartment. Each engine drove its own electrical generator to power the traction motors. The E6 was the seventh model in a long line of passenger diesels of similar design known as EMD E-units.",
+      "score_breakdown": {
+        "dense": 0.05012122537511192,
+        "graph": 0.055795198905914625,
+        "fact": 0.32422488162723206
+      }
+    },
+    {
+      "node_id": "chunk:list_of_bombardier_crj_operators_0",
+      "passage_index": 5,
+      "title": "List of Bombardier CRJ operators",
+      "score": 0.09178389866464264,
+      "text": "List of Bombardier CRJ operators\nProduced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.",
+      "score_breakdown": {
+        "dense": 0.05033699433787494,
+        "graph": 0.053162195468519156,
+        "fact": 0.32099928758837115
+      }
+    },
+    {
+      "node_id": "chunk:david_copperfield_illusionist_0",
+      "passage_index": 18,
+      "title": "David Copperfield (illusionist)",
+      "score": 0.0427715914498457,
+      "text": "David Copperfield (illusionist)\nCopperfield also played the character The Magician in the 1980s horror film Terror Train and had an uncredited appearance in the 1994 film Prêt - à - Porter. Most of his media appearances have been through television specials and guest spots on television programs. His illusions have included the disappearance of a Learjet (1981), the vanishing and reappearance of the Statue of Liberty (1983), levitating over the Grand Canyon (1984), walking through the Great Wall of China (1986), escaping from Alcatraz prison (1987), the disappearance of an Orient Express dining car (1991) and flying on stage for several minutes (1992).",
+      "score_breakdown": {
+        "dense": 0.04983398257988058,
+        "graph": 0.05120967010303793,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tip_top_bakeries_0",
+      "passage_index": 3,
+      "title": "Tip Top Bakeries",
+      "score": 0.0422563582270882,
+      "text": "Tip Top Bakeries\nTip Top Bakeries is an Australasian manufacturer of bread products owned by George Weston Foods, a subsidiary of multinational food giant Associated British Foods.",
+      "score_breakdown": {
+        "dense": 0.05011345545759407,
+        "graph": 0.048979859084704896,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:aerojet_0",
+      "passage_index": 14,
+      "title": "Aerojet",
+      "score": 0.04220772172474124,
+      "text": "Aerojet\nAerojet was an American rocket and missile propulsion manufacturer based primarily in Rancho Cordova, California, with divisions in Redmond, Washington, Orange and Gainesville in Virginia, and Camden, Arkansas. Aerojet was owned by GenCorp. In 2013, Aerojet was merged by GenCorp with the former Pratt & Whitney Rocketdyne to form Aerojet Rocketdyne.",
+      "score_breakdown": {
+        "dense": 0.05001839298674267,
+        "graph": 0.04899201860677591,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_nascar_manufacturers_champions_0",
+      "passage_index": 17,
+      "title": "List of NASCAR Manufacturers' champions",
+      "score": 0.04219724605785499,
+      "text": "List of NASCAR Manufacturers' champions\nIn the 60 seasons the Championship has been awarded, only nine different manufacturers have won it. Chevrolet has been the most successful, with 39 titles. The second most successful is Ford, with 15 titles.",
+      "score_breakdown": {
+        "dense": 0.049994233630791224,
+        "graph": 0.049001391869732736,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:rosenlew_0",
+      "passage_index": 2,
+      "title": "Rosenlew",
+      "score": 0.04219179026777839,
+      "text": "Rosenlew\nElectrolux owns the brand in home appliances and uses it in Finland. Electrolux stopped the manufacturing of fridges in Pori, Finland, in 1998.",
+      "score_breakdown": {
+        "dense": 0.049996280405598094,
+        "graph": 0.04897945348233146,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:studio_60_on_the_sunset_strip_0",
+      "passage_index": 19,
+      "title": "Studio 60 on the Sunset Strip",
+      "score": 0.04218148722370785,
+      "text": "Studio 60 on the Sunset Strip\nThe series takes place behind the scenes of a live sketch comedy show (also called \"Studio 60 on the Sunset Strip\" or \"Studio 60\") on the fictional television network NBS (National Broadcasting System), whose format is similar to that of NBC's \"Saturday Night Live\". National Broadcasting System is owned by the TMG Corporation. The show-within-a-show is run by executive producers Matt Albie (Matthew Perry) and Danny Tripp (Bradley Whitford). Matt serves as the head writer and Danny produces the show.",
+      "score_breakdown": {
+        "dense": 0.04997755542468882,
+        "graph": 0.04897943913376331,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:piping_technology_and_products_0",
+      "passage_index": 9,
+      "title": "Piping Technology and Products",
+      "score": 0.04217897715268009,
+      "text": "Piping Technology and Products\nPiping Technology and Products is a privately owned pipe support manufacturing and engineering company headquartered in Houston, Texas, United States. Its wholly owned subsidiaries are US Bellows, Sweco Fab, Fronek Anchor/Darling Enterprise, and Pipe Shields. These companies provide pipe supports, expansion joints, shock and vibration controls, and pre-insulated supports to a variety of industries including LNG, chemical, petrochemical, pulp & paper, and aerospace.",
+      "score_breakdown": {
+        "dense": 0.04996206390952191,
+        "graph": 0.048999473341476786,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:bombardier_aerospace",
+        "score": 0.09999012535321389,
+        "text": "Bombardier Aerospace",
+        "metadata": {
+          "canonical_name": "Bombardier Aerospace",
+          "aliases": [
+            "BA",
+            "Bombardier Aerospace"
+          ],
+          "surface_forms": [
+            "BA",
+            "Bombardier Aerospace"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_learjet_60",
+        "score": 0.062190197692139286,
+        "text": "Learjet 60",
+        "metadata": {
+          "canonical_name": "Learjet 60",
+          "aliases": [
+            "L6",
+            "Learjet 60",
+            "Learjet 60XR"
+          ],
+          "surface_forms": [
+            "L6",
+            "Learjet 60",
+            "Learjet 60XR"
+          ],
+          "title_anchor": "Learjet 60"
+        }
+      },
+      {
+        "node_id": "entity:general_motors_electro_motive_division",
+        "score": 0.04517365433687266,
+        "text": "General Motors Electro-Motive Division",
+        "metadata": {
+          "canonical_name": "General Motors Electro-Motive Division",
+          "aliases": [
+            "GMED",
+            "General Motors Electro-Motive Division"
+          ],
+          "surface_forms": [
+            "GMED",
+            "General Motors Electro-Motive Division"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_emd_e6",
+        "score": 0.04482503149813593,
+        "text": "EMD E6",
+        "metadata": {
+          "canonical_name": "EMD E6",
+          "aliases": [
+            "EE",
+            "EMD E6",
+            "EMD E-units"
+          ],
+          "surface_forms": [
+            "EE",
+            "EMD E6",
+            "EMD E-units"
+          ],
+          "title_anchor": "EMD E6"
+        }
+      },
+      {
+        "node_id": "entity:learjet",
+        "score": 0.044194430994095944,
+        "text": "Learjet",
+        "metadata": {
+          "canonical_name": "Learjet",
+          "aliases": [
+            "Learjet"
+          ],
+          "surface_forms": [
+            "Learjet"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:bombardier_inc",
+        "score": 0.03576402853791327,
+        "text": "Bombardier Inc",
+        "metadata": {
+          "canonical_name": "Bombardier Inc",
+          "aliases": [
+            "BI",
+            "Bombardier Inc"
+          ],
+          "surface_forms": [
+            "BI",
+            "Bombardier Inc"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:emd_e6_0_0_the_emd_e6_was_a_a1a_a1a_passenger_train_locomotive_manufactured_by_electro_m",
+        "score": 0.07023010750491746,
+        "text": "The EMD E6 was a , A1A-A1A, passenger train locomotive manufactured by Electro-Motive Corporation, and its corporate successor, General Motors Electro-Motive Division, of La Grange, Illinois.",
+        "metadata": {
+          "title": "EMD E6",
+          "chunk_id": "chunk:emd_e6_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "EMD E6",
+              "relation": "was manufactured by",
+              "tail": "Electro-Motive Corporation"
+            },
+            {
+              "head": "EMD E6",
+              "relation": "was also manufactured by",
+              "tail": "General Motors Electro-Motive Division"
+            },
+            {
+              "head": "General Motors Electro-Motive Division",
+              "relation": "is located in",
+              "tail": "La Grange Illinois"
+            },
+            {
+              "head": "EMD E6",
+              "relation": "has wheel arrangement",
+              "tail": "A1A-A1A"
+            }
+          ],
+          "entities": [
+            "EMD E6",
+            "Electro-Motive Corporation",
+            "General Motors Electro-Motive Division",
+            "La Grange Illinois"
+          ],
+          "entity_ids": [
+            "entity:a1a_a1a",
+            "entity:electro_motive_corporation",
+            "entity:general_motors_electro_motive_division",
+            "entity:la_grange_illinois",
+            "entity:title_anchor_emd_e6"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:list_of_bombardier_crj_operators_0_0_produced_by_bombardier_aerospace_aerospace_division_of_the_canadian_aerospace_a",
+        "score": 0.060536311437969476,
+        "text": "Produced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.",
+        "metadata": {
+          "title": "List of Bombardier CRJ operators",
+          "chunk_id": "chunk:list_of_bombardier_crj_operators_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Produced",
+              "relation": "related_to",
+              "tail": "Bombardier Aerospace"
+            },
+            {
+              "head": "Bombardier Aerospace",
+              "relation": "related_to",
+              "tail": "Canadian"
+            },
+            {
+              "head": "Canadian",
+              "relation": "related_to",
+              "tail": "Bombardier Inc"
+            }
+          ],
+          "entities": [
+            "Produced",
+            "Bombardier Aerospace",
+            "Canadian",
+            "Bombardier Inc"
+          ],
+          "entity_ids": [
+            "entity:bombardier_aerospace",
+            "entity:bombardier_inc",
+            "entity:canadian",
+            "entity:produced"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+        "score": 0.056707688563487665,
+        "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
+        "metadata": {
+          "title": "Learjet 60",
+          "chunk_id": "chunk:learjet_60_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Learjet 60",
+              "relation": "manufactured by",
+              "tail": "Bombardier Aerospace"
+            },
+            {
+              "head": "Bombardier Aerospace",
+              "relation": "located in",
+              "tail": "Wichita Kansas"
+            }
+          ],
+          "entities": [
+            "Learjet 60",
+            "Bombardier Aerospace",
+            "Wichita Kansas"
+          ],
+          "entity_ids": [
+            "entity:bombardier_aerospace",
+            "entity:title_anchor_learjet_60",
+            "entity:wichita_kansas"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:learjet_60_0_2_in_july_2012_bombardier_aerospace_announced_a_temporary_production_pause_of_th",
+        "score": 0.03648429979256477,
+        "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.",
+        "metadata": {
+          "title": "Learjet 60",
+          "chunk_id": "chunk:learjet_60_0",
+          "sentence_index": 2,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "July",
+              "relation": "related_to",
+              "tail": "Bombardier Aerospace"
+            },
+            {
+              "head": "Bombardier Aerospace",
+              "relation": "related_to",
+              "tail": "Learjet"
+            }
+          ],
+          "entities": [
+            "Bombardier Aerospace",
+            "Learjet 60XR"
+          ],
+          "entity_ids": [
+            "entity:bombardier_aerospace",
+            "entity:july",
+            "entity:learjet",
+            "entity:title_anchor_learjet_60"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:learjet_60_0",
+        "score": 0.013089797819530853,
+        "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.",
+        "metadata": {
+          "title": "Learjet 60",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:bombardier_aerospace",
+            "entity:isa",
+            "entity:july",
+            "entity:learjet",
+            "entity:nbaa",
+            "entity:powered",
+            "entity:pratt",
+            "entity:pratt_whitney_canada_pw305a_engines",
+            "entity:title_anchor_learjet_60",
+            "entity:whitney_canada",
+            "entity:wichita_kansas"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:emd_e6_0",
+        "score": 0.012479161902719582,
+        "text": "EMD E6\nThe EMD E6 was a , A1A-A1A, passenger train locomotive manufactured by Electro-Motive Corporation, and its corporate successor, General Motors Electro-Motive Division, of La Grange, Illinois. The cab version, E6A, was manufactured from November 1939 to September 1942; 91 were produced. The booster version, E6B, was manufactured from April 1940 to February 1942; 26 were produced. The was achieved by putting two , 12-cylinder, model 567 engines in the engine compartment. Each engine drove its own electrical generator to power the traction motors. The E6 was the seventh model in a long line of passenger diesels of similar design known as EMD E-units.",
+        "metadata": {
+          "title": "EMD E6",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:a1a_a1a",
+            "entity:april_1940",
+            "entity:april_1940_to_february_1942",
+            "entity:e6",
+            "entity:e6a",
+            "entity:e6b",
+            "entity:each",
+            "entity:electro_motive_corporation",
+            "entity:february_1942",
+            "entity:general_motors_electro_motive_division",
+            "entity:la_grange_illinois",
+            "entity:november_1939",
+            "entity:november_1939_to_september_1942",
+            "entity:september_1942",
+            "entity:title_anchor_emd_e6"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Learjet 60\nLearjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.\n\nEMD E6\nEMD E6\nThe EMD E6 was a , A1A-A1A, passenger train locomotive manufactured by Electro-Motive Corporation, and its corporate successor, General Motors Electro-Motive Division, of La Grange, Illinois. The cab version, E6A, was manufactured from November 1939 to September 1942; 91 were produced. The booster version, E6B, was manufactured from April 1940 to February 1942; 26 were produced. The was achieved by putting two , 12-cylinder, model 567 engines in the engine compartment. Each engine drove its own electrical generator to power the traction motors. The E6 was the seventh model in a long line of passenger diesels of similar design known as EMD E-units.\n\nList of Bombardier CRJ operators\nList of Bombardier CRJ operators\nProduced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.\n\nDavid Copperfield (illusionist)\nDavid Copperfield (illusionist)\nCopperfield also played the character The Magician in the 1980s horror film Terror Train and had an uncredited appearance in the 1994 film Prêt - à - Porter. Most of his media appearances have been through television specials and guest spots on television programs. His illusions have included the disappearance of a Learjet (1981), the vanishing and reappearance of the Statue of Liberty (1983), levitating over the Grand Canyon (1984), walking through the Great Wall of China (1986), escaping from Alcatraz prison (1987), the disappearance of an Orient Express dining car (1991) and flying on stage for several minutes (1992).\n\nTip Top Bakeries\nTip Top Bakeries\nTip Top Bakeries is an Australasian manufacturer of bread products owned by George Weston Foods, a subsidiary of multinational food giant Associated British Foods.\n\nLearjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.\n\nLearjet 60\nIn July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.\n\nCommer\nCommer\nCommer was a British manufacturer of commercial vehicles from 1905 until 1979. Commer vehicles included car-derived vans, light vans, medium to heavy commercial trucks, military vehicles and buses. The company also designed and built some of its own diesel engines for its heavy commercial vehicles.\n\nWagner Manufacturing Company\nWagner Manufacturing Company\nThe Wagner Manufacturing Company was a family - owned manufacturer of cast iron and aluminum products based in Sidney, Ohio, US. It made products for domestic use such as frying pans, casseroles, kettles and baking trays, and also made metal products other than cookware. Wagner was active between 1891 and 1952, and at one time dominated the cookware market, selling in Europe and the US. The purchasers of the company in 1952 continued the brand, and Wagner products are still manufactured today. The original items are prized by collectors.\n\nPlansee SE\nPlansee SE\nPlansee SE is a corporation which has its head office in Reutte, Austria, and is a fully owned division of the Plansee Group. This privately owned company manufactures products based on high-performance materials made from refractory metals such as molybdenum, tungsten, tantalum, niobium, chromium and their alloys. Its products are used in the lighting, electronics, medical, coatings, energy transmission and distribution, system and furnace construction sectors.\n\nMarket Square (High Point, North Carolina)\nMarket Square (High Point, North Carolina)\nMarket Square is a furniture showroom complex in High Point, North Carolina, owned by International Market Centers which is the largest building in North Carolina on the National Register of Historic Places (NRHP), and the sixth largest in the United States. Known also as Tomlinson Chair Manufacturing Company Complex, it was listed on the NRHP under that name. The former manufacturing complex includes the oldest factory building in the city, and its renovation has been credited with making High Point a successful furniture exhibition center. A 16-story addition in 1990 is one of the city's tallest buildings.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:learjet_60_0",
+        "passage_index": 10,
+        "title": "Learjet 60",
+        "score": 0.09822611519622962,
+        "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012.",
+        "score_breakdown": {
+          "dense": 0.051263201199918354,
+          "graph": 0.05604993306205001,
+          "fact": 0.3547758307843968
+        }
+      },
+      {
+        "node_id": "chunk:emd_e6_0",
+        "passage_index": 8,
+        "title": "EMD E6",
+        "score": 0.09293896587217075,
+        "text": "EMD E6\nThe EMD E6 was a , A1A-A1A, passenger train locomotive manufactured by Electro-Motive Corporation, and its corporate successor, General Motors Electro-Motive Division, of La Grange, Illinois. The cab version, E6A, was manufactured from November 1939 to September 1942; 91 were produced. The booster version, E6B, was manufactured from April 1940 to February 1942; 26 were produced. The was achieved by putting two , 12-cylinder, model 567 engines in the engine compartment. Each engine drove its own electrical generator to power the traction motors. The E6 was the seventh model in a long line of passenger diesels of similar design known as EMD E-units.",
+        "score_breakdown": {
+          "dense": 0.05012122537511192,
+          "graph": 0.055795198905914625,
+          "fact": 0.32422488162723206
+        }
+      },
+      {
+        "node_id": "chunk:list_of_bombardier_crj_operators_0",
+        "passage_index": 5,
+        "title": "List of Bombardier CRJ operators",
+        "score": 0.09178389866464264,
+        "text": "List of Bombardier CRJ operators\nProduced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.",
+        "score_breakdown": {
+          "dense": 0.05033699433787494,
+          "graph": 0.053162195468519156,
+          "fact": 0.32099928758837115
+        }
+      },
+      {
+        "node_id": "chunk:david_copperfield_illusionist_0",
+        "passage_index": 18,
+        "title": "David Copperfield (illusionist)",
+        "score": 0.0427715914498457,
+        "text": "David Copperfield (illusionist)\nCopperfield also played the character The Magician in the 1980s horror film Terror Train and had an uncredited appearance in the 1994 film Prêt - à - Porter. Most of his media appearances have been through television specials and guest spots on television programs. His illusions have included the disappearance of a Learjet (1981), the vanishing and reappearance of the Statue of Liberty (1983), levitating over the Grand Canyon (1984), walking through the Great Wall of China (1986), escaping from Alcatraz prison (1987), the disappearance of an Orient Express dining car (1991) and flying on stage for several minutes (1992).",
+        "score_breakdown": {
+          "dense": 0.04983398257988058,
+          "graph": 0.05120967010303793,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tip_top_bakeries_0",
+        "passage_index": 3,
+        "title": "Tip Top Bakeries",
+        "score": 0.0422563582270882,
+        "text": "Tip Top Bakeries\nTip Top Bakeries is an Australasian manufacturer of bread products owned by George Weston Foods, a subsidiary of multinational food giant Associated British Foods.",
+        "score_breakdown": {
+          "dense": 0.05011345545759407,
+          "graph": 0.048979859084704896,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:aerojet_0",
+        "passage_index": 14,
+        "title": "Aerojet",
+        "score": 0.04220772172474124,
+        "text": "Aerojet\nAerojet was an American rocket and missile propulsion manufacturer based primarily in Rancho Cordova, California, with divisions in Redmond, Washington, Orange and Gainesville in Virginia, and Camden, Arkansas. Aerojet was owned by GenCorp. In 2013, Aerojet was merged by GenCorp with the former Pratt & Whitney Rocketdyne to form Aerojet Rocketdyne.",
+        "score_breakdown": {
+          "dense": 0.05001839298674267,
+          "graph": 0.04899201860677591,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_nascar_manufacturers_champions_0",
+        "passage_index": 17,
+        "title": "List of NASCAR Manufacturers' champions",
+        "score": 0.04219724605785499,
+        "text": "List of NASCAR Manufacturers' champions\nIn the 60 seasons the Championship has been awarded, only nine different manufacturers have won it. Chevrolet has been the most successful, with 39 titles. The second most successful is Ford, with 15 titles.",
+        "score_breakdown": {
+          "dense": 0.049994233630791224,
+          "graph": 0.049001391869732736,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:rosenlew_0",
+        "passage_index": 2,
+        "title": "Rosenlew",
+        "score": 0.04219179026777839,
+        "text": "Rosenlew\nElectrolux owns the brand in home appliances and uses it in Finland. Electrolux stopped the manufacturing of fridges in Pori, Finland, in 1998.",
+        "score_breakdown": {
+          "dense": 0.049996280405598094,
+          "graph": 0.04897945348233146,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:studio_60_on_the_sunset_strip_0",
+        "passage_index": 19,
+        "title": "Studio 60 on the Sunset Strip",
+        "score": 0.04218148722370785,
+        "text": "Studio 60 on the Sunset Strip\nThe series takes place behind the scenes of a live sketch comedy show (also called \"Studio 60 on the Sunset Strip\" or \"Studio 60\") on the fictional television network NBS (National Broadcasting System), whose format is similar to that of NBC's \"Saturday Night Live\". National Broadcasting System is owned by the TMG Corporation. The show-within-a-show is run by executive producers Matt Albie (Matthew Perry) and Danny Tripp (Bradley Whitford). Matt serves as the head writer and Danny produces the show.",
+        "score_breakdown": {
+          "dense": 0.04997755542468882,
+          "graph": 0.04897943913376331,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:piping_technology_and_products_0",
+        "passage_index": 9,
+        "title": "Piping Technology and Products",
+        "score": 0.04217897715268009,
+        "text": "Piping Technology and Products\nPiping Technology and Products is a privately owned pipe support manufacturing and engineering company headquartered in Houston, Texas, United States. Its wholly owned subsidiaries are US Bellows, Sweco Fab, Fronek Anchor/Darling Enterprise, and Pipe Shields. These companies provide pipe supports, expansion joints, shock and vibration controls, and pre-insulated supports to a variety of industries including LNG, chemical, petrochemical, pulp & paper, and aerospace.",
+        "score_breakdown": {
+          "dense": 0.04996206390952191,
+          "graph": 0.048999473341476786,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the manufacturer of Learjet 60?",
+        "resolved_sub_question": "Who is the manufacturer of Learjet 60?",
+        "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+        "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
+        "score": 0.5274140815650941,
+        "source_title": "Learjet 60",
+        "hop_answer": "Bombardier Aerospace",
+        "hop_thought": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.",
+        "hop_raw_response": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.\nAnswer: Bombardier Aerospace",
+        "evidence_passages": [
+          {
+            "title": "Learjet 60",
+            "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
+          },
+          {
+            "title": "Learjet 60",
+            "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+          },
+          {
+            "title": "Learjet 60",
+            "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which company owns this manufacturer?",
+        "resolved_sub_question": "Which company owns this manufacturer? Context: Bombardier Aerospace.",
+        "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
+        "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
+        "score": 0.46531026563644406,
+        "source_title": "Learjet 60",
+        "hop_answer": "Bombardier Inc",
+        "hop_thought": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.",
+        "hop_raw_response": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.\nAnswer: Bombardier Inc.",
+        "evidence_passages": [
+          {
+            "title": "Learjet 60",
+            "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
+          },
+          {
+            "title": "Learjet 60",
+            "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+          },
+          {
+            "title": "Learjet 60",
+            "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the manufacturer of Learjet 60? => Bombardier Aerospace (source: Learjet 60)\n2. Which company owns this manufacturer? => Bombardier Inc (source: Learjet 60)\n\nFact hints:\n- Canadian related_to Bombardier Inc\n- Learjet 60 manufactured by Bombardier Aerospace\n- Bombardier Aerospace located in Wichita Kansas\n- Bombardier Aerospace related_to Canadian\n\nWikipedia Title: List of Bombardier CRJ operators\nList of Bombardier CRJ operators Produced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc. the former CRJ100 and CRJ200 series are no longer in production but still in active airline service, while the more recent CRJ700, CRJ900 and CRJ1000 series are in production and in service.\n\nWikipedia Title: Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.\n\nWikipedia Title: Commer\nThe company also designed and built some of its own diesel engines for its heavy commercial vehicles. Commer Commer was a British manufacturer of commercial vehicles from 1905 until 1979.\n\nWikipedia Title: Wagner Manufacturing Company\nWagner Manufacturing Company The Wagner Manufacturing Company was a family - owned manufacturer of cast iron and aluminum products based in Sidney, Ohio, US. The original items are prized by collectors.\n\nWikipedia Title: Plansee SE\nPlansee SE Plansee SE is a corporation which has its head office in Reutte, Austria, and is a fully owned division of the Plansee Group. This privately owned company manufactures products based on high-performance materials made from refractory metals such as molybdenum, tungsten, tantalum, niobium, chromium and their alloys.\n\nQuestion: Which company owns the manufacturer of Learjet 60?\nDraft Answer: Bombardier Inc\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The manufacturer of Learjet 60 is Bombardier Aerospace, which is an aerospace division of Bombardier Inc.",
+  "predicted_answer": "Bombardier Inc",
+  "qa_raw_response": "{\n  \"thought\": \"The manufacturer of Learjet 60 is Bombardier Aerospace, which is an aerospace division of Bombardier Inc.\",\n  \"answer\": \"Bombardier Inc\",\n  \"support\": \"Produced by Bombardier Aerospace, aerospace division of the Canadian aerospace and defence company Bombardier Inc.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__481349_302087",
+    "question": "Which company owns the manufacturer of Learjet 60?",
+    "answer": "Bombardier Inc.",
+    "answer_aliases": [
+      "Bombardier"
+    ],
+    "question_decomposition": [
+      "Learjet 60 >> manufacturer",
+      "#1 >> owned by"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Bombardier Inc.",
+    "gold_aliases": [
+      "Bombardier"
+    ],
+    "matched": true,
+    "matched_candidates": [
+      "Bombardier Inc.",
+      "Bombardier"
+    ]
+  }
+}

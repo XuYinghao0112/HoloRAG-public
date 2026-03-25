@@ -1,0 +1,1945 @@
+{
+  "summary": {
+    "num_examples": 10,
+    "passage_recall_at_5": 0.8167,
+    "passage_hit_at_5": 1.0,
+    "context_contains_answer_rate": 0.9,
+    "answer_match_rate": 0.9,
+    "avg_qa_context_words": 796.4,
+    "avg_ranked_facts": 7.3,
+    "avg_reasoning_chain_count": 2.8,
+    "qa_exact_match": 0.7,
+    "qa_f1": 0.6167,
+    "qa_non_empty_prediction_rate": 1.0
+  },
+  "settings": {
+    "samples_glob": "/data/xyh/code/HoloRAG/reproduce/test/groups/musique_01_10/sample_musique*.json",
+    "outputs_dir": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result",
+    "result_filename": "last_query_result.json",
+    "retrieval_k": 5,
+    "qa_generation_enabled": true,
+    "llm_base_url": "http://127.0.0.1:8000/v1",
+    "llm_name": "/data/xyh/models/Qwen2.5-72B-Instruct"
+  },
+  "per_example": [
+    {
+      "sample_file": "sample_musique1.json",
+      "sample_id": "3hop1__22527_146265_68918",
+      "question": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
+      "gold_answers": [
+        "November 21, 1789"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.6666666666666666,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Raleigh, North Carolina",
+        "Zebulon Baird Vance",
+        "North Carolina"
+      ],
+      "retrieved_titles_top5": [
+        "North Carolina",
+        "Beriah Magoffin",
+        "History of West Virginia",
+        "Zebulon Baird Vance",
+        "Readmission of states"
+      ],
+      "matched_support_titles": [
+        "North Carolina",
+        "Zebulon Baird Vance"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "November 21, 1789"
+      ],
+      "qa_context_words": 761,
+      "qa_context_chars": 4698,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "New Jersey",
+        "April 7 1876"
+      ],
+      "query_entities": [],
+      "query_entity_resolutions": [],
+      "sub_questions": [
+        "Who was the governor of which state during the Civil War?",
+        "When did this governor die?",
+        "Which state was this governor from?",
+        "When did this state become a part of the U.S.?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who was the governor of which state during the Civil War?",
+          "resolved_sub_question": "Who was the governor of which state during the Civil War?",
+          "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+          "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+          "score": 0.5462830538287693,
+          "source_title": "Charles Smith Olden",
+          "hop_answer": "New Jersey",
+          "hop_thought": "Both Charles Smith Olden and Beriah Magoffin were governors during the Civil War, but they governed different states. Charles Smith Olden was the Governor of New Jersey.",
+          "hop_raw_response": "Both Charles Smith Olden and Beriah Magoffin were governors during the Civil War, but they governed different states. Charles Smith Olden was the Governor of New Jersey.\nAnswer: New Jersey",
+          "evidence_passages": [
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Beriah Magoffin",
+              "text": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War."
+            }
+          ]
+        },
+        {
+          "sub_question": "When did this governor die?",
+          "resolved_sub_question": "When did this governor die? Context: New Jersey.",
+          "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+          "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+          "score": 0.7898720000000001,
+          "source_title": "Charles Smith Olden",
+          "hop_answer": "April 7, 1876",
+          "hop_thought": "The context specifies the governor of New Jersey, which is Charles Smith Olden. The evidence states that Charles Smith Olden died on April 7, 1876.",
+          "hop_raw_response": "The context specifies the governor of New Jersey, which is Charles Smith Olden. The evidence states that Charles Smith Olden died on April 7, 1876.\nAnswer: April 7, 1876",
+          "evidence_passages": [
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Beriah Magoffin",
+              "text": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War."
+            }
+          ]
+        },
+        {
+          "sub_question": "Which state was this governor from?",
+          "resolved_sub_question": "Which state was this governor from? Context: New Jersey; April 7, 1876.",
+          "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+          "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+          "score": 0.7880938181818182,
+          "source_title": "Charles Smith Olden",
+          "hop_answer": "New Jersey",
+          "hop_thought": "The context mentions that the governor in question served as the 19th Governor of New Jersey.",
+          "hop_raw_response": "The context mentions that the governor in question served as the 19th Governor of New Jersey.\nAnswer: New Jersey",
+          "evidence_passages": [
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "North Carolina",
+              "text": "On November 21, 1789, North Carolina became the twelfth state to ratify the Constitution."
+            }
+          ]
+        },
+        {
+          "sub_question": "When did this state become a part of the U.S.?",
+          "resolved_sub_question": "When did this state become a part of the U.S.? Context: April 7, 1876; New Jersey.",
+          "sentence_id": "sentence:charles_smith_olden_0_0_charles_smith_olden_february_19_1799april_7_1876_was_an_american_republican",
+          "sentence": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.",
+          "score": 0.6893333333333334,
+          "source_title": "Charles Smith Olden",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided does not contain information about when New Jersey became a part of the U.S. The date given, April 7, 1876, refers to the death of Charles Smith Olden, and there is no mention of New Jersey's admission to the Union.",
+          "hop_raw_response": "The context provided does not contain information about when New Jersey became a part of the U.S. The date given, April 7, 1876, refers to the death of Charles Smith Olden, and there is no mention of New Jersey's admission to the Union.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Charles Smith Olden",
+              "text": "Charles Smith Olden\nCharles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War."
+            },
+            {
+              "title": "Beriah Magoffin",
+              "text": "Beriah Magoffin (April 18, 1815 – February 28, 1885) was the 21st Governor of Kentucky, serving during the early part of the Civil War."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 4,
+      "retrieved_passages_top5": [
+        {
+          "title": "North Carolina",
+          "score": 0.10035203137689866,
+          "words": 177,
+          "score_breakdown": {
+            "dense": 0.05241274660729543,
+            "graph": 0.06018824269230165,
+            "fact": 0.3564569862346378
+          }
+        },
+        {
+          "title": "Beriah Magoffin",
+          "score": 0.09845976771724751,
+          "words": 82,
+          "score_breakdown": {
+            "dense": 0.052896921257822055,
+            "graph": 0.05869194870199049,
+            "fact": 0.3450591760989883
+          }
+        },
+        {
+          "title": "History of West Virginia",
+          "score": 0.09019969821181004,
+          "words": 102,
+          "score_breakdown": {
+            "dense": 0.05303770181033574,
+            "graph": 0.05418795522056428,
+            "fact": 0.29848383766637404
+          }
+        },
+        {
+          "title": "Zebulon Baird Vance",
+          "score": 0.04479920874750577,
+          "words": 78,
+          "score_breakdown": {
+            "dense": 0.05273944225818495,
+            "graph": 0.052641718351680175,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Readmission of states",
+          "score": 0.04467122904633781,
+          "words": 28,
+          "score_breakdown": {
+            "dense": 0.05274433498965731,
+            "graph": 0.05220614934008761,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique2.json",
+      "sample_id": "3hop1__10725_695397_69808",
+      "question": "When did education become free in the government phonology popular?",
+      "gold_answers": [
+        "1891"
+      ],
+      "predicted_answer": "1891",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 0.6666666666666666,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Boys' Brigade Gazette",
+        "History of education in England",
+        "Phonology"
+      ],
+      "retrieved_titles_top5": [
+        "AMA Computer University",
+        "Leon Belleth",
+        "Abul Kalam Azad",
+        "Phonology",
+        "History of education in England"
+      ],
+      "matched_support_titles": [
+        "History of education in England",
+        "Phonology"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "1891"
+      ],
+      "qa_context_words": 848,
+      "qa_context_chars": 5287,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [],
+      "query_entities": [],
+      "query_entity_resolutions": [],
+      "sub_questions": [
+        "In which country or region is this term 'government phonology popular' used?",
+        "When did education become free in this country or region?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which country or region is this term 'government phonology popular' used?",
+          "resolved_sub_question": "In which country or region is this term 'government phonology popular' used?",
+          "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_2_the_title_of_the_rte_act_incorporates_the_words_free_and",
+          "sentence": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
+          "score": 0.3346211862282223,
+          "source_title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "hop_answer": "Unknown",
+          "hop_thought": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.",
+          "hop_raw_response": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Right of Children to Free and Compulsory Education Act, 2009",
+              "text": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
+            },
+            {
+              "title": "Right of Children to Free and Compulsory Education Act, 2009",
+              "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
+            },
+            {
+              "title": "AMA Computer University",
+              "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
+            }
+          ]
+        },
+        {
+          "sub_question": "When did education become free in this country or region?",
+          "resolved_sub_question": "When did education become free in this country or region?",
+          "sentence_id": "sentence:history_of_education_in_england_0_0_the_1891_elementary_education_act_provided_for_the_state_payment_of_school_fees",
+          "sentence": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
+          "score": 0.3041291306972504,
+          "source_title": "History of education in England",
+          "hop_answer": "1891",
+          "hop_thought": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.",
+          "hop_raw_response": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.\nAnswer: 1891",
+          "evidence_passages": [
+            {
+              "title": "History of education in England",
+              "text": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
+            },
+            {
+              "title": "History of education in England",
+              "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
+            },
+            {
+              "title": "AMA Computer University",
+              "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "AMA Computer University",
+          "score": 0.11806886166974412,
+          "words": 32,
+          "score_breakdown": {
+            "dense": 0.06657926238806908,
+            "graph": 0.08507446750487993,
+            "fact": 0.37285284736561425
+          }
+        },
+        {
+          "title": "Leon Belleth",
+          "score": 0.10537109118148488,
+          "words": 73,
+          "score_breakdown": {
+            "dense": 0.06636198986441243,
+            "graph": 0.0697823011710147,
+            "fact": 0.31958204269835766
+          }
+        },
+        {
+          "title": "Abul Kalam Azad",
+          "score": 0.1033007914746357,
+          "words": 101,
+          "score_breakdown": {
+            "dense": 0.06655259189774296,
+            "graph": 0.06854033146824286,
+            "fact": 0.30756510993602815
+          }
+        },
+        {
+          "title": "Phonology",
+          "score": 0.05679958923634225,
+          "words": 28,
+          "score_breakdown": {
+            "dense": 0.06784587665170078,
+            "graph": 0.06494785692635606,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "History of education in England",
+          "score": 0.0566288117084606,
+          "words": 29,
+          "score_breakdown": {
+            "dense": 0.06766183677915012,
+            "graph": 0.0647160049330934,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique3.json",
+      "sample_id": "4hop3__401611_100414_35260_54090",
+      "question": "How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?",
+      "gold_answers": [
+        "53 member states"
+      ],
+      "predicted_answer": "53",
+      "qa_exact_match": 1.0,
+      "qa_f1": 0.5,
+      "passage_recall_at_5": 0.75,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Ivan Koumaev",
+        "Khabarovsk",
+        "United Nations Regional Groups",
+        "Iran"
+      ],
+      "retrieved_titles_top5": [
+        "Ivan Koumaev",
+        "Shahid Dastgerdi Stadium",
+        "Masoud Barzani",
+        "Iran",
+        "Khabarovsk"
+      ],
+      "matched_support_titles": [
+        "Iran",
+        "Ivan Koumaev",
+        "Khabarovsk"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "53 member states"
+      ],
+      "qa_context_words": 600,
+      "qa_context_chars": 3800,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 5,
+      "bridge_entities": [
+        "Iraqi army",
+        "Iran Iraq War",
+        "Khabarovsk Russia",
+        "UN",
+        "Asia"
+      ],
+      "query_entities": [
+        "Iranian Khuzestan"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Iran-Iraq War",
+          "node_id": "entity:iran_iraq_war",
+          "resolved_text": "Iran Iraq War",
+          "score": 0.79,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.775,
+          "score_margin": 0.02774999999999994,
+          "confident": false
+        },
+        {
+          "mention": "Ivan Koumaev",
+          "node_id": "entity:iranian_khuzestan",
+          "resolved_text": "Iranian Khuzestan",
+          "score": 0.7592000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.6466666666666667,
+          "score_margin": 0.3188000000000001,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Where was Ivan Koumaev born?",
+        "Which organization mediated the truce ending the Iran-Iraq War?",
+        "What continent is Khuzestan located in?",
+        "How many states does this organization recognize in this continent?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Where was Ivan Koumaev born?",
+          "resolved_sub_question": "Where was Ivan Koumaev born?",
+          "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+          "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
+          "score": 0.4444173220178604,
+          "source_title": "Ivan Koumaev",
+          "hop_answer": "Khabarovsk, Russia",
+          "hop_thought": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.",
+          "hop_raw_response": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.\nAnswer: Khabarovsk, Russia",
+          "evidence_passages": [
+            {
+              "title": "Ivan Koumaev",
+              "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
+            },
+            {
+              "title": "Ivan Koumaev",
+              "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
+            },
+            {
+              "title": "Iran",
+              "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+            }
+          ]
+        },
+        {
+          "sub_question": "Which organization mediated the truce ending the Iran-Iraq War?",
+          "resolved_sub_question": "Which organization mediated the truce ending the Iran-Iraq War? Context: Khabarovsk, Russia.",
+          "sentence_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
+          "sentence": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
+          "score": 0.48754266666666674,
+          "source_title": "Iran",
+          "hop_answer": "UN",
+          "hop_thought": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.",
+          "hop_raw_response": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.\nAnswer: UN",
+          "evidence_passages": [
+            {
+              "title": "Iran",
+              "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+            },
+            {
+              "title": "Iran",
+              "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed."
+            },
+            {
+              "title": "Masoud Barzani",
+              "text": "Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War."
+            }
+          ]
+        },
+        {
+          "sub_question": "What continent is Khuzestan located in?",
+          "resolved_sub_question": "What continent is Khuzestan located in? Context: Khabarovsk, Russia; UN.",
+          "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+          "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
+          "score": 0.4230977734208703,
+          "source_title": "Ivan Koumaev",
+          "hop_answer": "Asia",
+          "hop_thought": "Khuzestan is a province in Iran, and Iran is located in Asia.",
+          "hop_raw_response": "Khuzestan is a province in Iran, and Iran is located in Asia.\nAnswer: Asia",
+          "evidence_passages": [
+            {
+              "title": "Ivan Koumaev",
+              "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
+            },
+            {
+              "title": "Ivan Koumaev",
+              "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
+            },
+            {
+              "title": "Iran",
+              "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+            }
+          ]
+        },
+        {
+          "sub_question": "How many states does this organization recognize in this continent?",
+          "resolved_sub_question": "How many states does this organization recognize in this continent? Context: UN; Asia.",
+          "sentence_id": "sentence:united_nations_regional_groups_0_0_the_african_group_with_54_member_states_the_asia_pacific_group_with_53_membe",
+          "sentence": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.",
+          "score": 0.3519733794530868,
+          "source_title": "United Nations Regional Groups",
+          "hop_answer": "53",
+          "hop_thought": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.",
+          "hop_raw_response": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.\nAnswer: 53",
+          "evidence_passages": [
+            {
+              "title": "United Nations Regional Groups",
+              "text": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
+            },
+            {
+              "title": "United Nations Regional Groups",
+              "text": "United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
+            },
+            {
+              "title": "Iran",
+              "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 4,
+      "retrieved_passages_top5": [
+        {
+          "title": "Ivan Koumaev",
+          "score": 0.084229600487494,
+          "words": 35,
+          "score_breakdown": {
+            "dense": 0.05084179892597836,
+            "graph": 0.05261987839822653,
+            "fact": 0.26987098372491963
+          }
+        },
+        {
+          "title": "Shahid Dastgerdi Stadium",
+          "score": 0.0809263766339606,
+          "words": 54,
+          "score_breakdown": {
+            "dense": 0.04983189862019524,
+            "graph": 0.052837334576889015,
+            "fact": 0.2511175467985768
+          }
+        },
+        {
+          "title": "Masoud Barzani",
+          "score": 0.07963694471374824,
+          "words": 62,
+          "score_breakdown": {
+            "dense": 0.049962571834073884,
+            "graph": 0.05201039200433465,
+            "fact": 0.24369608402471477
+          }
+        },
+        {
+          "title": "Iran",
+          "score": 0.07950452150183232,
+          "words": 129,
+          "score_breakdown": {
+            "dense": 0.050344032152274794,
+            "graph": 0.05505998666770953,
+            "fact": 0.23531538545178884
+          }
+        },
+        {
+          "title": "Khabarovsk",
+          "score": 0.04264017817549999,
+          "words": 22,
+          "score_breakdown": {
+            "dense": 0.049872808865026444,
+            "graph": 0.050700444332451494,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique4.json",
+      "sample_id": "3hop1__131745_517267_451901",
+      "question": "What is the capital of the county that includes the city of Walnut Grove in the state where Star Lite Motel is located?",
+      "gold_answers": [
+        "Redwood Falls",
+        "Redwood Falls, Minnesota"
+      ],
+      "predicted_answer": "Redwood Falls",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Walnut Grove, Minnesota",
+        "Star Lite Motel",
+        "Redwood County Poor Farm"
+      ],
+      "retrieved_titles_top5": [
+        "Star Lite Motel",
+        "Kingston Powerhouse",
+        "Walnut Grove, Minnesota",
+        "Redwood County Poor Farm",
+        "Walnut Grove, Washington"
+      ],
+      "matched_support_titles": [
+        "Redwood County Poor Farm",
+        "Star Lite Motel",
+        "Walnut Grove, Minnesota"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Redwood Falls",
+        "Redwood Falls, Minnesota"
+      ],
+      "qa_context_words": 657,
+      "qa_context_chars": 3703,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 6,
+      "bridge_entities": [
+        "Redwood County",
+        "Dilworth",
+        "Minnesota"
+      ],
+      "query_entities": [
+        "Walnut Grove",
+        "Star Lite Motel"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Walnut Grove",
+          "node_id": "entity:walnut_grove",
+          "resolved_text": "Walnut Grove",
+          "score": 0.7837777777777779,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.5555555555555556,
+          "compatibility_score": 0.775,
+          "score_margin": 0.00497777777777797,
+          "confident": false
+        },
+        {
+          "mention": "Star Lite Motel",
+          "node_id": "entity:title_anchor_star_lite_motel",
+          "resolved_text": "Star Lite Motel",
+          "score": 0.6724000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.6571428571428571,
+          "compatibility_score": 0.775,
+          "score_margin": 0.3157333333333334,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "In which state is the Star Lite Motel located?",
+        "Which county in this state includes the city of Walnut Grove?",
+        "What is the capital of this county?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which state is the Star Lite Motel located?",
+          "resolved_sub_question": "In which state is the Star Lite Motel located?",
+          "sentence_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+          "sentence": "The Star Lite Motel is a historic motel in Dilworth, Minnesota.",
+          "score": 0.5264713315808434,
+          "source_title": "Star Lite Motel",
+          "hop_answer": "Minnesota",
+          "hop_thought": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.",
+          "hop_raw_response": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.\nAnswer: Minnesota",
+          "evidence_passages": [
+            {
+              "title": "Star Lite Motel",
+              "text": "The Star Lite Motel is a historic motel in Dilworth, Minnesota."
+            },
+            {
+              "title": "Star Lite Motel",
+              "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature."
+            },
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+            }
+          ]
+        },
+        {
+          "sub_question": "Which county in this state includes the city of Walnut Grove?",
+          "resolved_sub_question": "Which county in this state includes the city of Walnut Grove? Context: Minnesota.",
+          "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+          "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+          "score": 0.5906701687894649,
+          "source_title": "Walnut Grove, Minnesota",
+          "hop_answer": "Redwood County",
+          "hop_thought": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.",
+          "hop_raw_response": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.\nAnswer: Redwood County",
+          "evidence_passages": [
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+            },
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+            },
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+            }
+          ]
+        },
+        {
+          "sub_question": "What is the capital of this county?",
+          "resolved_sub_question": "What is the capital of this county? Context: Minnesota; Redwood County.",
+          "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+          "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+          "score": 0.4717023120498657,
+          "source_title": "Walnut Grove, Minnesota",
+          "hop_answer": "Unknown",
+          "hop_thought": "The provided information does not specify the capital of Redwood County, Minnesota.",
+          "hop_raw_response": "The provided information does not specify the capital of Redwood County, Minnesota.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+            },
+            {
+              "title": "Walnut Grove, Minnesota",
+              "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+            },
+            {
+              "title": "Redwood County Poor Farm",
+              "text": "The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Star Lite Motel",
+          "score": 0.08684787726169158,
+          "words": 53,
+          "score_breakdown": {
+            "dense": 0.05361190675772828,
+            "graph": 0.05648600268638456,
+            "fact": 0.26943685159350433
+          }
+        },
+        {
+          "title": "Kingston Powerhouse",
+          "score": 0.08242933421438127,
+          "words": 27,
+          "score_breakdown": {
+            "dense": 0.05230619642368757,
+            "graph": 0.054584041198350496,
+            "fact": 0.24857142547898636
+          }
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "score": 0.08235523479812662,
+          "words": 158,
+          "score_breakdown": {
+            "dense": 0.0533483910963393,
+            "graph": 0.05705628282992724,
+            "fact": 0.2393115656410789
+          }
+        },
+        {
+          "title": "Redwood County Poor Farm",
+          "score": 0.08225369796947044,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.052725771611450555,
+            "graph": 0.05617499996736017,
+            "fact": 0.24268015728643044
+          }
+        },
+        {
+          "title": "Walnut Grove, Washington",
+          "score": 0.04489147269103633,
+          "words": 31,
+          "score_breakdown": {
+            "dense": 0.05312424073630972,
+            "graph": 0.05224380095355328,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique5.json",
+      "sample_id": "3hop1__248015_809999_533791",
+      "question": "Who is the mother of Tsarevich Ivan Ivanovich of the country where in August 2004 a bombing occurred in the location Fili is?",
+      "gold_answers": [
+        "Anastasia Romanovna"
+      ],
+      "predicted_answer": "Anastasia Romanovna",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 0.3333333333333333,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Fili (Moscow Metro)",
+        "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+        "August 2004 Moscow Metro bombing"
+      ],
+      "retrieved_titles_top5": [
+        "The Woman with You",
+        "Fili (Moscow Metro)",
+        "Ivan Melnikov (politician)",
+        "Ivan Ivanovich Tolstoy",
+        "Ivan Ivanovich Artobolevski"
+      ],
+      "matched_support_titles": [
+        "Fili (Moscow Metro)"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Anastasia Romanovna"
+      ],
+      "qa_context_words": 604,
+      "qa_context_chars": 3750,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Filyovskaya Line",
+        "Moscow Metro",
+        "Fili station",
+        "Russia"
+      ],
+      "query_entities": [
+        "Tsarevich Ivan Ivanovich",
+        "Fili"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Tsarevich Ivan Ivanovich",
+          "node_id": "entity:ivan_ivanovich_melnikov",
+          "resolved_text": "Ivan Ivanovich Melnikov",
+          "score": 0.6,
+          "alias_score": 0.5,
+          "relation_score": 0.7,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.775,
+          "score_margin": 0.04466666666666674,
+          "confident": false
+        },
+        {
+          "mention": "Fili",
+          "node_id": "entity:title_anchor_fili_moscow_metro",
+          "resolved_text": "Fili (Moscow Metro)",
+          "score": 0.6060746031746032,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.37777777777777777,
+          "compatibility_score": 0.67875,
+          "score_margin": 0.07314126984126978,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Where did a bombing occur in August 2004 in the location Fili?",
+        "What country is associated with the location of the bombing in Fili in August 2004?",
+        "Who is Tsarevich Ivan Ivanovich of this country?",
+        "Who is the mother of Tsarevich Ivan Ivanovich?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Where did a bombing occur in August 2004 in the location Fili?",
+          "resolved_sub_question": "Where did a bombing occur in August 2004 in the location Fili?",
+          "sentence_id": "sentence:august_2004_moscow_metro_bombing_0_0_the_official_investigation_concluded_that_it_was_organized_by_the_same_group_as",
+          "sentence": "The official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004.",
+          "score": 0.39079094994254343,
+          "source_title": "August 2004 Moscow Metro bombing",
+          "hop_answer": "Fili station",
+          "hop_thought": "The bombing occurred at the Fili station of the Moscow Metro in August 2004.",
+          "hop_raw_response": "The bombing occurred at the Fili station of the Moscow Metro in August 2004.\nAnswer: Fili station",
+          "evidence_passages": [
+            {
+              "title": "August 2004 Moscow Metro bombing",
+              "text": "The official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004."
+            },
+            {
+              "title": "August 2004 Moscow Metro bombing",
+              "text": "August 2004 Moscow Metro bombing\nThe official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004. The deaths included the bomber and her accomplice, Nikolay Kipkeev (Kipkeyev), the head of an Islamic militant group Karachay Jamaat from the republic of Karachay–Cherkessia, as the bomb apparently exploded prematurely while the two were standing in the entrance hall of the metro station."
+            },
+            {
+              "title": "Fili (Moscow Metro)",
+              "text": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro."
+            }
+          ]
+        },
+        {
+          "sub_question": "What country is associated with the location of the bombing in Fili in August 2004?",
+          "resolved_sub_question": "What country is associated with the location of the bombing in Fili in August 2004? Context: Fili station.",
+          "sentence_id": "sentence:fili_moscow_metro_0_0_fili_is_a_surface_level_station_on_the_filyovskaya_line_of_the_moscow_metro",
+          "sentence": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro.",
+          "score": 0.4053011975793839,
+          "source_title": "Fili (Moscow Metro)",
+          "hop_answer": "Russia",
+          "hop_thought": "The bombing occurred at Fili station, which is part of the Moscow Metro. Moscow is the capital city of Russia.",
+          "hop_raw_response": "The bombing occurred at Fili station, which is part of the Moscow Metro. Moscow is the capital city of Russia.\nAnswer: Russia",
+          "evidence_passages": [
+            {
+              "title": "Fili (Moscow Metro)",
+              "text": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro."
+            },
+            {
+              "title": "Fili (Moscow Metro)",
+              "text": "Fili (Moscow Metro)\nFili () is a surface-level station on the Filyovskaya Line of the Moscow Metro. The station was opened on 7 November 1959, as the last surface side platform station on the line. The dual platforms are protected by canopies and are intersected at either end by road overpasses that provide additional shelter for waiting passengers. Two glazed upper-level entrance vestibule at both end of the station allow passengers to change platforms. Robert Pogrebnoi and Yuriy Zenkevich were the main architects for the station's design. Daily passenger volume is approximately 30,100."
+            },
+            {
+              "title": "August 2004 Moscow Metro bombing",
+              "text": "The official investigation concluded that it was organized by the same group as the February 2004 Moscow metro bombing, as well as two previous terrorist attacks on bus stops in Voronezh, southern Russia, in 2004."
+            }
+          ]
+        },
+        {
+          "sub_question": "Who is Tsarevich Ivan Ivanovich of this country?",
+          "resolved_sub_question": "Who is Tsarevich Ivan Ivanovich of this country? Context: Fili station; Russia.",
+          "sentence_id": "sentence:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0_0_dmitri_ivanovich_11_october_155226_june_1553_was_the_first_tsarevich_",
+          "sentence": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna.",
+          "score": 0.5137361558101654,
+          "source_title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided does not contain information about a Tsarevich named Ivan Ivanovich. The previous context is related to a bombing in Russia and the station Fili, but it does not mention any Tsarevich. The evidence from the Wikipedia titles about Tsarevich Dmitry Ivanovich of Russia does not provide information about a Tsarevich Ivan Ivanovich either.",
+          "hop_raw_response": "The context provided does not contain information about a Tsarevich named Ivan Ivanovich. The previous context is related to a bombing in Russia and the station Fili, but it does not mention any Tsarevich. The evidence from the Wikipedia titles about Tsarevich Dmitry Ivanovich of Russia does not provide information about a Tsarevich Ivan Ivanovich either.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+              "text": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna."
+            },
+            {
+              "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+              "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy."
+            },
+            {
+              "title": "Fili (Moscow Metro)",
+              "text": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro."
+            }
+          ]
+        },
+        {
+          "sub_question": "Who is the mother of Tsarevich Ivan Ivanovich?",
+          "resolved_sub_question": "Who is the mother of Tsarevich Ivan Ivanovich? Context: Fili station; Russia.",
+          "sentence_id": "sentence:tsarevich_dmitry_ivanovich_of_russia_1552_1553_0_0_dmitri_ivanovich_11_october_155226_june_1553_was_the_first_tsarevich_",
+          "sentence": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna.",
+          "score": 0.47042837520504,
+          "source_title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided about Fili station and Russia is not relevant to the question about Tsarevich Ivan Ivanovich's mother. However, based on the information given in the previous step, Tsarevich Dmitry Ivanovich's mother is mentioned, but we need to find the mother of Tsarevich Ivan Ivanovich. Since no specific information is provided about Tsarevich Ivan Ivanovich, and the name is similar to Tsarevich Dmitry Ivanovich, it can be inferred that they might be from the same family. However, without explicit information, the answer should be 'Unknown'.",
+          "hop_raw_response": "The context provided about Fili station and Russia is not relevant to the question about Tsarevich Ivan Ivanovich's mother. However, based on the information given in the previous step, Tsarevich Dmitry Ivanovich's mother is mentioned, but we need to find the mother of Tsarevich Ivan Ivanovich. Since no specific information is provided about Tsarevich Ivan Ivanovich, and the name is similar to Tsarevich Dmitry Ivanovich, it can be inferred that they might be from the same family. However, without explicit information, the answer should be 'Unknown'.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+              "text": "Dmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna."
+            },
+            {
+              "title": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)",
+              "text": "Tsarevich Dmitry Ivanovich of Russia (1552–1553)\nDmitri Ivanovich (; 11 October 155226 June 1553) was the first Tsarevich or Tsesarevich - the heir apparent - of the Tsardom of Russia, as the eldest son of Ivan the Terrible, or \"Ivan IV of Russia\" and his first Tsaritsa, Anastasia Romanovna. He was the third child and first son of the couple and died in infancy."
+            },
+            {
+              "title": "Fili (Moscow Metro)",
+              "text": "Fili () is a surface-level station on the Filyovskaya Line of the Moscow Metro."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 4,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Woman with You",
+          "score": 0.07008244617800838,
+          "words": 64,
+          "score_breakdown": {
+            "dense": 0.04976188845104686,
+            "graph": 0.05406575712136929,
+            "fact": 0.17662453595681213
+          }
+        },
+        {
+          "title": "Fili (Moscow Metro)",
+          "score": 0.06989552197997581,
+          "words": 93,
+          "score_breakdown": {
+            "dense": 0.05017360956566587,
+            "graph": 0.055038951166728585,
+            "fact": 0.17192234245894006
+          }
+        },
+        {
+          "title": "Ivan Melnikov (politician)",
+          "score": 0.06840270564644338,
+          "words": 40,
+          "score_breakdown": {
+            "dense": 0.05009428571897369,
+            "graph": 0.05274901614054979,
+            "fact": 0.16684095772561944
+          }
+        },
+        {
+          "title": "Ivan Ivanovich Tolstoy",
+          "score": 0.06756983219445599,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.05005952784496644,
+            "graph": 0.051688676942550936,
+            "fact": 0.1635365919797278
+          }
+        },
+        {
+          "title": "Ivan Ivanovich Artobolevski",
+          "score": 0.06743522296757576,
+          "words": 41,
+          "score_breakdown": {
+            "dense": 0.049912229944160294,
+            "graph": 0.05068795593266238,
+            "fact": 0.16518073145659262
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique6.json",
+      "sample_id": "2hop__42464_718451",
+      "question": "The field of work of the physicist making the first to measure value of the Newton Universal Gravitation Constant is what?",
+      "gold_answers": [
+        "physic"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Cavendish Professor of Physics",
+        "Force"
+      ],
+      "retrieved_titles_top5": [
+        "Carlos Newton",
+        "European Gravitational Observatory",
+        "Force",
+        "Cavendish Professor of Physics",
+        "Gravity Probe A"
+      ],
+      "matched_support_titles": [
+        "Cavendish Professor of Physics",
+        "Force"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "physic",
+        "Physic"
+      ],
+      "qa_context_words": 1129,
+      "qa_context_chars": 7138,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [],
+      "query_entities": [
+        "Newton Universal Gravitation Constant"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Newton Universal Gravitation Constant",
+          "node_id": "entity:newton_s_universal_gravitation_constant",
+          "resolved_text": "Newton's Universal Gravitation Constant",
+          "score": 0.7028,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.36500000000000005,
+          "score_margin": 0.09499999999999997,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who was the first to measure the value of the Newton Universal Gravitation Constant?",
+        "What is the field of work of this physicist?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who was the first to measure the value of the Newton Universal Gravitation Constant?",
+          "resolved_sub_question": "Who was the first to measure the value of the Newton Universal Gravitation Constant?",
+          "sentence_id": "sentence:force_0_1_this_constant_has_come_to_be_known_as_newton_s_universal_gravitation_constant_t",
+          "sentence": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime.",
+          "score": 0.44953993956584926,
+          "source_title": "Force",
+          "hop_answer": "Unknown",
+          "hop_thought": "The evidence provided does not contain information about who first measured the value of Newton's Universal Gravitation Constant.",
+          "hop_raw_response": "The evidence provided does not contain information about who first measured the value of Newton's Universal Gravitation Constant.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Force",
+              "text": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime."
+            },
+            {
+              "title": "Force",
+              "text": "Force\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,"
+            },
+            {
+              "title": "Planck constant",
+              "text": "In principle, the Planck constant could be determined by examining the spectrum of a black-body radiator or the kinetic energy of photoelectrons, and this is how its value was first calculated in the early twentieth century."
+            }
+          ]
+        },
+        {
+          "sub_question": "What is the field of work of this physicist?",
+          "resolved_sub_question": "What is the field of work of this physicist?",
+          "sentence_id": "sentence:force_0_0_in_this_equation_a_dimensional_constant_is_used_to_describe_the_relative_streng",
+          "sentence": "In this equation, a dimensional constant is used to describe the relative strength of gravity.",
+          "score": 0.29905510683732156,
+          "source_title": "Force",
+          "hop_answer": "Unknown",
+          "hop_thought": "The question asks about the field of work of the physicist who first measured the value of the Newton Universal Gravitation Constant. However, the provided evidence does not mention any specific physicist who made this measurement. It only states that the value of the constant was unknown during Newton's lifetime. There is no information about who first measured it or their field of work.",
+          "hop_raw_response": "The question asks about the field of work of the physicist who first measured the value of the Newton Universal Gravitation Constant. However, the provided evidence does not mention any specific physicist who made this measurement. It only states that the value of the constant was unknown during Newton's lifetime. There is no information about who first measured it or their field of work.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Force",
+              "text": "In this equation, a dimensional constant is used to describe the relative strength of gravity."
+            },
+            {
+              "title": "Force",
+              "text": "Force\nNewton's First Law of Motion states that objects continue to move in a state of constant velocity unless acted upon by an external net force or resultant force. This law is an extension of Galileo's insight that constant velocity was associated with a lack of net force (see a more detailed description of this below). Newton proposed that every object with mass has an innate inertia that functions as the fundamental equilibrium \"natural state\" in place of the Aristotelian idea of the \"natural state of rest\". That is, the first law contradicts the intuitive Aristotelian belief that a net force is required to keep an object moving with constant velocity. By making rest physically indistinguishable from non-zero constant velocity, Newton's First Law directly connects inertia with the concept of relative velocities. Specifically, in systems where objects are moving with different velocities, it is impossible to determine which object is \"in motion\" and which object is \"at rest\". In other words, to phrase matters more technically, the laws of physics are the same in every inertial frame of reference, that is,"
+            },
+            {
+              "title": "Force",
+              "text": "This constant has come to be known as Newton's Universal Gravitation Constant, though its value was unknown in Newton's lifetime."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Carlos Newton",
+          "score": 0.08595243899775537,
+          "words": 173,
+          "score_breakdown": {
+            "dense": 0.05270862700529556,
+            "graph": 0.05709703109148942,
+            "fact": 0.2655572321159732
+          }
+        },
+        {
+          "title": "European Gravitational Observatory",
+          "score": 0.08497069765423265,
+          "words": 78,
+          "score_breakdown": {
+            "dense": 0.052505164962049246,
+            "graph": 0.05837855304943793,
+            "fact": 0.25719527340182785
+          }
+        },
+        {
+          "title": "Force",
+          "score": 0.08191155420721913,
+          "words": 181,
+          "score_breakdown": {
+            "dense": 0.05271916044737421,
+            "graph": 0.055881455609274884,
+            "fact": 0.24101052852253907
+          }
+        },
+        {
+          "title": "Cavendish Professor of Physics",
+          "score": 0.08100757999300781,
+          "words": 61,
+          "score_breakdown": {
+            "dense": 0.05280328243265686,
+            "graph": 0.05510076587032517,
+            "fact": 0.23623696595965987
+          }
+        },
+        {
+          "title": "Gravity Probe A",
+          "score": 0.0447651250794522,
+          "words": 141,
+          "score_breakdown": {
+            "dense": 0.052957317508723144,
+            "graph": 0.052128668165514896,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique7.json",
+      "sample_id": "2hop__673655_316668",
+      "question": "What instrument is played by the person from The Blackout All-Stars?",
+      "gold_answers": [
+        "conga"
+      ],
+      "predicted_answer": "conga",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "The Blackout All-Stars",
+        "Midnight Blue (Kenny Burrell album)"
+      ],
+      "retrieved_titles_top5": [
+        "The Blackout All-Stars",
+        "Midnight Blue (Kenny Burrell album)",
+        "Northeast blackout of 2003",
+        "Radar (song)",
+        "A cappella"
+      ],
+      "matched_support_titles": [
+        "Midnight Blue (Kenny Burrell album)",
+        "The Blackout All-Stars"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "conga",
+        "Conga"
+      ],
+      "qa_context_words": 939,
+      "qa_context_chars": 5735,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Ray Barretto",
+        "Sheila E",
+        "Tito Puente",
+        "Tito Nieves",
+        "Paquito D'Rivera",
+        "Dave Valentin"
+      ],
+      "query_entities": [
+        "Blackout All-Stars"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Blackout All-Stars",
+          "node_id": "entity:bloodshy_avant",
+          "resolved_text": "Bloodshy Avant",
+          "score": 0.758888888888889,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.37777777777777777,
+          "compatibility_score": 0.775,
+          "score_margin": 0.0534,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who is a member of The Blackout All-Stars?",
+        "What instrument does this member play?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is a member of The Blackout All-Stars?",
+          "resolved_sub_question": "Who is a member of The Blackout All-Stars?",
+          "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+          "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+          "score": 0.5731735788370769,
+          "source_title": "The Blackout All-Stars",
+          "hop_answer": "Ray Barretto",
+          "hop_thought": "The Blackout All-Stars included several musicians, one of whom is Ray Barretto.",
+          "hop_raw_response": "The Blackout All-Stars included several musicians, one of whom is Ray Barretto.\nAnswer: Ray Barretto",
+          "evidence_passages": [
+            {
+              "title": "The Blackout All-Stars",
+              "text": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon."
+            },
+            {
+              "title": "The Blackout All-Stars",
+              "text": "The Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon."
+            },
+            {
+              "title": "Landkjenning",
+              "text": "All instruments and vocals were done by Torbjørn Sandvik and Geirmund Simonsen except the following instruments handled by session members: Harding fiddle by Erlend Viken, flutes by Stefan Theofilakis and cello by Kaja Fjellberg Pettersen."
+            }
+          ]
+        },
+        {
+          "sub_question": "What instrument does this member play?",
+          "resolved_sub_question": "What instrument does this member play? Context: Ray Barretto.",
+          "sentence_id": "sentence:the_blackout_all_stars_0_0_the_blackout_all_stars_was_a_one_off_1994_latin_supergroup_consisting_of_ray_bar",
+          "sentence": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon.",
+          "score": 0.43559365837215636,
+          "source_title": "The Blackout All-Stars",
+          "hop_answer": "conga",
+          "hop_thought": "Ray Barretto is mentioned in the context of playing conga in the Midnight Blue album.",
+          "hop_raw_response": "Ray Barretto is mentioned in the context of playing conga in the Midnight Blue album.\nAnswer: conga",
+          "evidence_passages": [
+            {
+              "title": "The Blackout All-Stars",
+              "text": "The Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon."
+            },
+            {
+              "title": "The Blackout All-Stars",
+              "text": "The Blackout All-Stars\nThe Blackout All-Stars was a one-off 1994 Latin supergroup consisting of Ray Barretto, Sheila E., Tito Puente, Tito Nieves, Paquito D'Rivera, Dave Valentin, Grover Washington, Jr., and Tony Pabon."
+            },
+            {
+              "title": "Midnight Blue (Kenny Burrell album)",
+              "text": "Midnight Blue is a 1963 album by Jazz guitarist Kenny Burrell featuring Stanley Turrentine on tenor saxophone, Major Holley on double bass, Bill English on drums and Ray Barretto on conga, and is one of Burrell's best-known works for Blue Note."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Blackout All-Stars",
+          "score": 0.19959927256901705,
+          "words": 32,
+          "score_breakdown": {
+            "dense": 0.051154102045791544,
+            "graph": 0.07154838814610563,
+            "fact": 1.0
+          }
+        },
+        {
+          "title": "Midnight Blue (Kenny Burrell album)",
+          "score": 0.04264615214182402,
+          "words": 108,
+          "score_breakdown": {
+            "dense": 0.04987237599064574,
+            "graph": 0.050721151156562866,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Northeast blackout of 2003",
+          "score": 0.04220329347370751,
+          "words": 40,
+          "score_breakdown": {
+            "dense": 0.0501426567171117,
+            "graph": 0.048749440930986904,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Radar (song)",
+          "score": 0.0421951302576178,
+          "words": 153,
+          "score_breakdown": {
+            "dense": 0.05011654957046117,
+            "graph": 0.048770093312880514,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "A cappella",
+          "score": 0.04219500830168825,
+          "words": 158,
+          "score_breakdown": {
+            "dense": 0.050074923287558144,
+            "graph": 0.04884600164510423,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique8.json",
+      "sample_id": "4hop1__76111_624859_355213_203322",
+      "question": "What county shares a border with the county where the singer of Hungry Eyes from the movie Dirty Dancing was born?",
+      "gold_answers": [
+        "Cabarrus County"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.75,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Gold Hill, North Carolina",
+        "The Definitive Collection (Eric Carmen album)",
+        "Hungry Eyes",
+        "Cleveland, North Carolina"
+      ],
+      "retrieved_titles_top5": [
+        "Hungry Eyes",
+        "Gmina Włodawa",
+        "Norman Langen",
+        "Cleveland, North Carolina",
+        "The Definitive Collection (Eric Carmen album)"
+      ],
+      "matched_support_titles": [
+        "Cleveland, North Carolina",
+        "Hungry Eyes",
+        "The Definitive Collection (Eric Carmen album)"
+      ],
+      "context_contains_answer": 0.0,
+      "answer_match_flag": false,
+      "answer_match_candidates": [],
+      "qa_context_words": 606,
+      "qa_context_chars": 3571,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Raspberries",
+        "Eric Carmen"
+      ],
+      "query_entities": [
+        "Hungry Eyes",
+        "Dirty Dancing"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Hungry Eyes",
+          "node_id": "entity:title_anchor_hungry_eyes",
+          "resolved_text": "Hungry Eyes",
+          "score": 0.6914222222222223,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.6444444444444445,
+          "compatibility_score": 0.8716666666666668,
+          "score_margin": 0.2761333333333334,
+          "confident": true
+        },
+        {
+          "mention": "Dirty Dancing",
+          "node_id": "entity:dirty_dancing",
+          "resolved_text": "Dirty Dancing",
+          "score": 0.6948222222222222,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.6444444444444445,
+          "compatibility_score": 0.9358333333333333,
+          "score_margin": 0.4216666666666667,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who is the singer of Hungry Eyes from the movie Dirty Dancing?",
+        "In which county was this singer born?",
+        "What counties share a border with this county?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the singer of Hungry Eyes from the movie Dirty Dancing?",
+          "resolved_sub_question": "Who is the singer of Hungry Eyes from the movie Dirty Dancing?",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.571221144396888,
+          "source_title": "Hungry Eyes",
+          "hop_answer": "Eric Carmen",
+          "hop_thought": "The evidence states that \"Hungry Eyes\" is a song performed by American artist Eric Carmen and was featured in the film Dirty Dancing.",
+          "hop_raw_response": "The evidence states that \"Hungry Eyes\" is a song performed by American artist Eric Carmen and was featured in the film Dirty Dancing.\nAnswer: Eric Carmen",
+          "evidence_passages": [
+            {
+              "title": "Hungry Eyes",
+              "text": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing."
+            },
+            {
+              "title": "Hungry Eyes",
+              "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales."
+            },
+            {
+              "title": "The Definitive Collection (Eric Carmen album)",
+              "text": "It also contains his versions of two major hits which he wrote for Shaun Cassidy, two popular songs from the movie \"Dirty Dancing\", and his greatest hit, \"All By Myself\"."
+            }
+          ]
+        },
+        {
+          "sub_question": "In which county was this singer born?",
+          "resolved_sub_question": "In which county was this singer born? Context: Eric Carmen.",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.479415994787852,
+          "source_title": "Hungry Eyes",
+          "hop_answer": "Unknown",
+          "hop_thought": "The provided evidence does not contain information about the county where Eric Carmen was born.",
+          "hop_raw_response": "The provided evidence does not contain information about the county where Eric Carmen was born.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Hungry Eyes",
+              "text": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing."
+            },
+            {
+              "title": "Hungry Eyes",
+              "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales."
+            },
+            {
+              "title": "The Definitive Collection (Eric Carmen album)",
+              "text": "The Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen."
+            }
+          ]
+        },
+        {
+          "sub_question": "What counties share a border with this county?",
+          "resolved_sub_question": "What counties share a border with this county? Context: Eric Carmen.",
+          "sentence_id": "sentence:hungry_eyes_0_0_hungry_eyes_is_a_song_performed_by_american_artist_eric_carmen_a_former_mem",
+          "sentence": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing.",
+          "score": 0.4218653281211854,
+          "source_title": "Hungry Eyes",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided does not contain information about the specific county where Eric Carmen was born or any counties that share a border with it.",
+          "hop_raw_response": "The context provided does not contain information about the specific county where Eric Carmen was born or any counties that share a border with it.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Hungry Eyes",
+              "text": "``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing."
+            },
+            {
+              "title": "Hungry Eyes",
+              "text": "Hungry Eyes\n``Hungry Eyes ''is a song performed by American artist Eric Carmen, a former member of the band Raspberries, and was featured in the film Dirty Dancing. The song was recorded at Beachwood Studios in Beachwood, Ohio in 1987.`` Hungry Eyes'' peaked at # 4 on the Billboard Hot 100 chart and # 3 on the Cash Box Top 100 in 1988. The power ballad was not released commercially in the UK, but it managed to peak at # 82 in January 1988, having charted purely on import sales."
+            },
+            {
+              "title": "The Definitive Collection (Eric Carmen album)",
+              "text": "The Definitive Collection is a 1997 greatest hits compilation album of all the singles released by Cleveland, Ohio singer-songwriter Eric Carmen."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Hungry Eyes",
+          "score": 0.06977784061042333,
+          "words": 90,
+          "score_breakdown": {
+            "dense": 0.051051157149242424,
+            "graph": 0.052001398176617225,
+            "fact": 0.17399523150236557
+          }
+        },
+        {
+          "title": "Gmina Włodawa",
+          "score": 0.06851031193507312,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.05006872584026216,
+            "graph": 0.05058786275361211,
+            "fact": 0.171974359312302
+          }
+        },
+        {
+          "title": "Norman Langen",
+          "score": 0.06747398158502636,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.04992679868186747,
+            "graph": 0.04909650235673022,
+            "fact": 0.1685686106865346
+          }
+        },
+        {
+          "title": "Cleveland, North Carolina",
+          "score": 0.06718247256367746,
+          "words": 26,
+          "score_breakdown": {
+            "dense": 0.04998999199965453,
+            "graph": 0.04884738608151843,
+            "fact": 0.16689174092941286
+          }
+        },
+        {
+          "title": "The Definitive Collection (Eric Carmen album)",
+          "score": 0.06671919404128385,
+          "words": 75,
+          "score_breakdown": {
+            "dense": 0.05031641222487059,
+            "graph": 0.05010999205335389,
+            "fact": 0.16008113134399238
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique9.json",
+      "sample_id": "2hop__132472_684936",
+      "question": "The company making ALARM follows which company?",
+      "gold_answers": [
+        "BAC"
+      ],
+      "predicted_answer": "BAC",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Sea Wolf (missile)",
+        "ALARM"
+      ],
+      "retrieved_titles_top5": [
+        "ALARM",
+        "Sea Wolf (missile)",
+        "Hirox",
+        "Ring the Alarm",
+        "The Alarm (film)"
+      ],
+      "matched_support_titles": [
+        "ALARM",
+        "Sea Wolf (missile)"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "BAC"
+      ],
+      "qa_context_words": 958,
+      "qa_context_chars": 6014,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "British Aerospace Dynamics",
+        "Ministry of Defence",
+        "Texas Instruments",
+        "Lucas Aerospace",
+        "HARM missile",
+        "Columbia Records"
+      ],
+      "query_entities": [
+        "ALARM"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "ALARM",
+          "node_id": "entity:title_anchor_alarm",
+          "resolved_text": "ALARM",
+          "score": 0.8386666666666667,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.4666666666666667,
+          "compatibility_score": 1.0,
+          "score_margin": 0.10266666666666657,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "What company makes ALARM?",
+        "Which company does the company making ALARM follow?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "What company makes ALARM?",
+          "resolved_sub_question": "What company makes ALARM?",
+          "sentence_id": "sentence:alarm_0_0_the_ministry_of_defence_received_bids_for_a_new_anti_radiation_missile_in_late_1",
+          "sentence": "The Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile.",
+          "score": 0.48493542857142863,
+          "source_title": "ALARM",
+          "hop_answer": "British Aerospace Dynamics",
+          "hop_thought": "The passage states that British Aerospace Dynamics offered ALARM in response to the Ministry of Defence's request for bids.",
+          "hop_raw_response": "The passage states that British Aerospace Dynamics offered ALARM in response to the Ministry of Defence's request for bids.\nAnswer: British Aerospace Dynamics",
+          "evidence_passages": [
+            {
+              "title": "ALARM",
+              "text": "The Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile."
+            },
+            {
+              "title": "ALARM",
+              "text": "ALARM\nThe Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile. Defence Secretary Michael Heseltine announced the selection of ALARM on 29 July 1983. The initial order was 750 missiles for the RAF. The selection process was controversial; the battle between the contractors was bitter, the Ministry of Defence favoured ALARM to retain UK industrial capabilities while the Treasury favoured the cheaper and proven HARM."
+            },
+            {
+              "title": "ALARM",
+              "text": "The selection process was controversial; the battle between the contractors was bitter, the Ministry of Defence favoured ALARM to retain UK industrial capabilities while the Treasury favoured the cheaper and proven HARM."
+            }
+          ]
+        },
+        {
+          "sub_question": "Which company does the company making ALARM follow?",
+          "resolved_sub_question": "Which company does the company making ALARM follow? Context: British Aerospace Dynamics.",
+          "sentence_id": "sentence:alarm_0_0_the_ministry_of_defence_received_bids_for_a_new_anti_radiation_missile_in_late_1",
+          "sentence": "The Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile.",
+          "score": 0.5042181818181819,
+          "source_title": "ALARM",
+          "hop_answer": "Unknown",
+          "hop_thought": "British Aerospace Dynamics is the company that makes ALARM, and there is no indication in the text that it follows another company.",
+          "hop_raw_response": "British Aerospace Dynamics is the company that makes ALARM, and there is no indication in the text that it follows another company.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "ALARM",
+              "text": "The Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile."
+            },
+            {
+              "title": "ALARM",
+              "text": "ALARM\nThe Ministry of Defence received bids for a new anti-radiation missile in late 1982; British Aerospace Dynamics offered ALARM while Texas Instruments teamed with Lucas Aerospace offered its HARM missile. Defence Secretary Michael Heseltine announced the selection of ALARM on 29 July 1983. The initial order was 750 missiles for the RAF. The selection process was controversial; the battle between the contractors was bitter, the Ministry of Defence favoured ALARM to retain UK industrial capabilities while the Treasury favoured the cheaper and proven HARM."
+            },
+            {
+              "title": "ALARM",
+              "text": "The selection process was controversial; the battle between the contractors was bitter, the Ministry of Defence favoured ALARM to retain UK industrial capabilities while the Treasury favoured the cheaper and proven HARM."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "ALARM",
+          "score": 0.08300119871076284,
+          "words": 85,
+          "score_breakdown": {
+            "dense": 0.050496340299328944,
+            "graph": 0.053489083651822325,
+            "fact": 0.2612099096705681
+          }
+        },
+        {
+          "title": "Sea Wolf (missile)",
+          "score": 0.08063381589869165,
+          "words": 84,
+          "score_breakdown": {
+            "dense": 0.04985265667525637,
+            "graph": 0.053460112605366886,
+            "fact": 0.24784547297127058
+          }
+        },
+        {
+          "title": "Hirox",
+          "score": 0.07992919915875257,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.049866181369748096,
+            "graph": 0.048899434690877056,
+            "fact": 0.25221979332085337
+          }
+        },
+        {
+          "title": "Ring the Alarm",
+          "score": 0.07837673112259838,
+          "words": 114,
+          "score_breakdown": {
+            "dense": 0.050111489536777895,
+            "graph": 0.050022294239247776,
+            "fact": 0.23872482403730796
+          }
+        },
+        {
+          "title": "The Alarm (film)",
+          "score": 0.04213073516006208,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.05056160487627791,
+            "graph": 0.0477395082603641,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique10.json",
+      "sample_id": "2hop__682872_516436",
+      "question": "What field does the author of Parallel Worlds work in?",
+      "gold_answers": [
+        "physic"
+      ],
+      "predicted_answer": "theoretical physics",
+      "qa_exact_match": 1.0,
+      "qa_f1": 0.6666666666666666,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Physics of the Future",
+        "Parallel Worlds (book)"
+      ],
+      "retrieved_titles_top5": [
+        "Parallel Worlds (book)",
+        "Physics of the Future",
+        "Pimpirev Ice Wall",
+        "Joel Feinberg",
+        "José Antunes Sobrinho"
+      ],
+      "matched_support_titles": [
+        "Parallel Worlds (book)",
+        "Physics of the Future"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "physic",
+        "Physic"
+      ],
+      "qa_context_words": 862,
+      "qa_context_chars": 5437,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Michio Kaku"
+      ],
+      "query_entities": [
+        "Parallel Worlds (book)"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Parallel Worlds",
+          "node_id": "entity:title_anchor_parallel_worlds_book",
+          "resolved_text": "Parallel Worlds (book)",
+          "score": 0.8379000000000001,
+          "alias_score": 1.0,
+          "relation_score": 1.0,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.61125,
+          "score_margin": 0.4048333333333335,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who is the author of Parallel Worlds?",
+        "What field does this author work in?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the author of Parallel Worlds?",
+          "resolved_sub_question": "Who is the author of Parallel Worlds?",
+          "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+          "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+          "score": 0.681632,
+          "source_title": "Parallel Worlds (book)",
+          "hop_answer": "Michio Kaku",
+          "hop_thought": "The author of Parallel Worlds is mentioned in the evidence provided.",
+          "hop_raw_response": "The author of Parallel Worlds is mentioned in the evidence provided.\nAnswer: Michio Kaku",
+          "evidence_passages": [
+            {
+              "title": "Parallel Worlds (book)",
+              "text": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004."
+            },
+            {
+              "title": "Parallel Worlds (book)",
+              "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004."
+            },
+            {
+              "title": "Physics of the Future",
+              "text": "Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\"."
+            }
+          ]
+        },
+        {
+          "sub_question": "What field does this author work in?",
+          "resolved_sub_question": "What field does this author work in? Context: Michio Kaku.",
+          "sentence_id": "sentence:parallel_worlds_book_0_0_parallel_worlds_a_journey_through_creation_higher_dimensions_and_the_future_o",
+          "sentence": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004.",
+          "score": 0.5467777777777778,
+          "source_title": "Parallel Worlds (book)",
+          "hop_answer": "theoretical physics",
+          "hop_thought": "Michio Kaku is a theoretical physicist, as mentioned in the context of his book \"Physics of the Future\".",
+          "hop_raw_response": "Michio Kaku is a theoretical physicist, as mentioned in the context of his book \"Physics of the Future\".\nAnswer: theoretical physics",
+          "evidence_passages": [
+            {
+              "title": "Parallel Worlds (book)",
+              "text": "Parallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004."
+            },
+            {
+              "title": "Parallel Worlds (book)",
+              "text": "Parallel Worlds (book)\nParallel Worlds: A Journey Through Creation, Higher Dimensions, and the Future of the Cosmos is a popular science book by Michio Kaku first published in 2004."
+            },
+            {
+              "title": "Physics of the Future",
+              "text": "Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 is a 2011 book by theoretical physicist Michio Kaku, author of \"Hyperspace\" and \"Physics of the Impossible\"."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Parallel Worlds (book)",
+          "score": 0.08402335593727837,
+          "words": 29,
+          "score_breakdown": {
+            "dense": 0.05110932764507353,
+            "graph": 0.05494573677168119,
+            "fact": 0.2628633646732238
+          }
+        },
+        {
+          "title": "Physics of the Future",
+          "score": 0.08319238519778502,
+          "words": 92,
+          "score_breakdown": {
+            "dense": 0.050318293117574485,
+            "graph": 0.059788354645351656,
+            "fact": 0.2505387839300904
+          }
+        },
+        {
+          "title": "Pimpirev Ice Wall",
+          "score": 0.0805036359264658,
+          "words": 80,
+          "score_breakdown": {
+            "dense": 0.04982980563210126,
+            "graph": 0.0529694482170855,
+            "fact": 0.24804272242456304
+          }
+        },
+        {
+          "title": "Joel Feinberg",
+          "score": 0.07890319070743827,
+          "words": 70,
+          "score_breakdown": {
+            "dense": 0.049921126049691615,
+            "graph": 0.05221100678096489,
+            "fact": 0.2385551289721228
+          }
+        },
+        {
+          "title": "José Antunes Sobrinho",
+          "score": 0.04221032363062964,
+          "words": 100,
+          "score_breakdown": {
+            "dense": 0.050149192391922115,
+            "graph": 0.04876089271690826,
+            "fact": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

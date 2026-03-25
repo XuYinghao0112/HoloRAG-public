@@ -1,0 +1,1021 @@
+{
+  "query": "What league does the team that plays in Stadio Ciro Vigorito play for?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Stadio Ciro Vigorito"
+  ],
+  "raw_query_entities": [
+    "Stadio Ciro Vigorito"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Stadio Ciro Vigorito",
+      "node_id": "entity:title_anchor_stadio_ciro_vigorito",
+      "resolved_text": "Stadio Ciro Vigorito",
+      "score": 0.7400000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.5,
+      "score_margin": 0.2880000000000001,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Which team plays in Stadio Ciro Vigorito?",
+    "What league does this team play for?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_stadio_ciro_vigorito",
+      "score": 1.161025481700085,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:isola_del_liri",
+      "score": 0.48355534325872107,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:isola_liri",
+      "score": 0.47255296140001896,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:benevento",
+      "score": 0.43064991005119496,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:benevento_italy",
+      "score": 0.36097063442708976,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:serie_b",
+      "score": 0.29262282857536576,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_stadio_francesco_gabrielli",
+      "score": 0.2609387869899199,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rovigo",
+      "score": 0.260932946335112,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:serie_d",
+      "score": 0.24594596453231582,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:fuorigrotta",
+      "score": 0.24094341798320304,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:stadio_arduino_mangoni",
+      "score": 0.23094917679866322,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+      "score": 0.21247294721639096,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:stadio_ciro_vigorito_located_in_benevento_italy_sentence_stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_s",
+      "text": "Stadio Ciro Vigorito located in Benevento Italy",
+      "head_id": "entity:title_anchor_stadio_ciro_vigorito",
+      "tail_id": "entity:benevento_italy",
+      "sentence_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+      "chunk_id": "chunk:stadio_ciro_vigorito_0",
+      "document_index": 11,
+      "score": 0.3588749250426625
+    },
+    {
+      "fact_id": "fact:stadio_francesco_gabrielli_is_located_in_rovigo_sentence_stadio_francesco_gabrielli_0_0_stadio_francesco_gabrielli_is_an",
+      "text": "Stadio Francesco Gabrielli is located in Rovigo",
+      "head_id": "entity:title_anchor_stadio_francesco_gabrielli",
+      "tail_id": "entity:rovigo",
+      "sentence_id": "sentence:stadio_francesco_gabrielli_0_0_stadio_francesco_gabrielli_is_an_arena_in_rovigo_italy",
+      "chunk_id": "chunk:stadio_francesco_gabrielli_0",
+      "document_index": 6,
+      "score": 0.2588390786890876
+    },
+    {
+      "fact_id": "fact:isola_liri_plays_in_serie_d_sentence_conte_arduino_mangoni_0_1_it_is_mainly_used_mostly_for_football_matches_and_hosts_t",
+      "text": "Isola Liri plays in Serie D",
+      "head_id": "entity:isola_liri",
+      "tail_id": "entity:serie_d",
+      "sentence_id": "sentence:conte_arduino_mangoni_0_1_it_is_mainly_used_mostly_for_football_matches_and_hosts_the_home_matches_of_isol",
+      "chunk_id": "chunk:conte_arduino_mangoni_0",
+      "document_index": 10,
+      "score": 0.24385235714613812
+    },
+    {
+      "fact_id": "fact:stadio_san_paolo_is_located_in_fuorigrotta_sentence_stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_su",
+      "text": "Stadio San Paolo is located in Fuorigrotta",
+      "head_id": "entity:title_anchor_stadio_san_paolo",
+      "tail_id": "entity:fuorigrotta",
+      "sentence_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+      "chunk_id": "chunk:stadio_san_paolo_0",
+      "document_index": 18,
+      "score": 0.23884989659814074
+    },
+    {
+      "fact_id": "fact:stadio_arduino_mangoni_is_located_in_isola_del_liri_sentence_conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi",
+      "text": "Stadio Arduino Mangoni is located in Isola del Liri",
+      "head_id": "entity:stadio_arduino_mangoni",
+      "tail_id": "entity:isola_del_liri",
+      "sentence_id": "sentence:conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi_purpose_stadium_in_isola_del_liri_italy",
+      "chunk_id": "chunk:conte_arduino_mangoni_0",
+      "document_index": 10,
+      "score": 0.22884193306994557
+    },
+    {
+      "fact_id": "fact:isola_del_liri_is_in_italy_sentence_conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi_purpose_stadium_in_isola",
+      "text": "Isola del Liri is in Italy",
+      "head_id": "entity:isola_del_liri",
+      "tail_id": "entity:italy",
+      "sentence_id": "sentence:conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi_purpose_stadium_in_isola_del_liri_italy",
+      "chunk_id": "chunk:conte_arduino_mangoni_0",
+      "document_index": 10,
+      "score": 0.14883639504289292
+    },
+    {
+      "fact_id": "fact:stadio_san_paolo_is_the_third_largest_football_stadium_in_italy_sentence_stadio_san_paolo_0_0_stadio_san_paolo_is_a_stad",
+      "text": "Stadio San Paolo is the third largest football stadium in Italy",
+      "head_id": "entity:title_anchor_stadio_san_paolo",
+      "tail_id": "entity:italy",
+      "sentence_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+      "chunk_id": "chunk:stadio_san_paolo_0",
+      "document_index": 18,
+      "score": 0.14385002026856675
+    },
+    {
+      "fact_id": "fact:stadio_san_paolo_is_smaller_than_san_siro_sentence_stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_sub",
+      "text": "Stadio San Paolo is smaller than San Siro",
+      "head_id": "entity:title_anchor_stadio_san_paolo",
+      "tail_id": "entity:san_siro",
+      "sentence_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+      "chunk_id": "chunk:stadio_san_paolo_0",
+      "document_index": 18,
+      "score": 0.14384574466914143
+    }
+  ],
+  "bridge_entities": [
+    "Stadio Santa Colomba",
+    "Benevento Italy",
+    "Benevento",
+    "Italy",
+    "Benevento Calcio"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Which team plays in Stadio Ciro Vigorito?",
+      "resolved_sub_question": "Which team plays in Stadio Ciro Vigorito?",
+      "sentence_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+      "sentence": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.",
+      "score": 0.5124920000000001,
+      "source_title": "Stadio Ciro Vigorito",
+      "hop_answer": "Benevento Calcio",
+      "hop_thought": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.",
+      "hop_raw_response": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.\nAnswer: Benevento Calcio",
+      "evidence_passages": [
+        {
+          "title": "Stadio Ciro Vigorito",
+          "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+        },
+        {
+          "title": "Stadio Ciro Vigorito",
+          "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+        },
+        {
+          "title": "Stadio San Paolo",
+          "text": "Stadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico."
+        }
+      ]
+    },
+    {
+      "sub_question": "What league does this team play for?",
+      "resolved_sub_question": "What league does this team play for? Context: Benevento Calcio.",
+      "sentence_id": "sentence:stadio_ciro_vigorito_0_1_it_is_currently_used_mostly_for_football_matches_and_is_the_home_stadium_of_bene",
+      "sentence": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio.",
+      "score": 0.4333115400634766,
+      "source_title": "Stadio Ciro Vigorito",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not specify the current league in which Benevento Calcio plays.",
+      "hop_raw_response": "The context provided does not specify the current league in which Benevento Calcio plays.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Stadio Ciro Vigorito",
+          "text": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio."
+        },
+        {
+          "title": "Stadio Ciro Vigorito",
+          "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+        },
+        {
+          "title": "Stadio Ciro Vigorito",
+          "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+      "score": 0.07346141892865714,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_stadio_ciro_vigorito",
+      "score": 0.05803299085346218,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi_purpose_stadium_in_isola_del_liri_italy",
+      "score": 0.04541269656126855,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+      "score": 0.04044715148669632,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:conte_arduino_mangoni_0_1_it_is_mainly_used_mostly_for_football_matches_and_hosts_the_home_matches_of_isol",
+      "score": 0.03648901771598406,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:isola_del_liri",
+      "score": 0.036052393795400074,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:italy",
+      "score": 0.03007479944735007,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:stadio_francesco_gabrielli_0_0_stadio_francesco_gabrielli_is_an_arena_in_rovigo_italy",
+      "score": 0.0292431380845386,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:benevento_italy",
+      "score": 0.028123491697172313,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:isola_liri",
+      "score": 0.027988169469141018,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:serie_d",
+      "score": 0.02756981620604391,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:benevento",
+      "score": 0.027335018391707572,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:carmelo_imbriani_0_0_carmelo_imbriani_10_february_1976_15_february_2013_was_an_italian_footballer",
+      "score": 0.023882442204815203,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:stadio_santa_colomba",
+      "score": 0.0212665507852055,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:stadio_francesco_gabrielli_0_1_it_is_primarily_used_for_football_and_is_the_home_to_the_rovigo_calcio_of_the_s",
+      "score": 0.020960373993483578,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:stadio_ciro_vigorito_0_1_it_is_currently_used_mostly_for_football_matches_and_is_the_home_stadium_of_bene",
+      "score": 0.019878781244343658,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:rovigo",
+      "score": 0.01901560940549637,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:stadio_arduino_mangoni",
+      "score": 0.01884994234140707,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_stadio_san_paolo",
+      "score": 0.018813698770340587,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:stadio_ciro_vigorito_0",
+      "score": 0.018108806239069117,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:stadio_ciro_vigorito_0",
+      "passage_index": 11,
+      "title": "Stadio Ciro Vigorito",
+      "score": 0.0852882550121523,
+      "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979.",
+      "score_breakdown": {
+        "dense": 0.05082228323837851,
+        "graph": 0.05536292061171639,
+        "fact": 0.2715141536501947
+      }
+    },
+    {
+      "node_id": "chunk:conte_arduino_mangoni_0",
+      "passage_index": 10,
+      "title": "Conte Arduino Mangoni",
+      "score": 0.0802191272130009,
+      "text": "Conte Arduino Mangoni\nStadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy. It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D. The stadium has a capacity of 3,000 spectators and meets Lega Pro criteria.",
+      "score_breakdown": {
+        "dense": 0.05007096838524962,
+        "graph": 0.05459378415308457,
+        "fact": 0.24201306236792164
+      }
+    },
+    {
+      "node_id": "chunk:stadio_francesco_gabrielli_0",
+      "passage_index": 6,
+      "title": "Stadio Francesco Gabrielli",
+      "score": 0.0799542689152834,
+      "text": "Stadio Francesco Gabrielli\nStadio Francesco Gabrielli is an arena in Rovigo, Italy. It is primarily used for football, and is the home to the Rovigo Calcio of the Serie D. It opened in 1893 and holds 3,500 spectators.",
+      "score_breakdown": {
+        "dense": 0.050063644065463736,
+        "graph": 0.05189720260816169,
+        "fact": 0.24566735931219894
+      }
+    },
+    {
+      "node_id": "chunk:stadio_san_paolo_0",
+      "passage_index": 18,
+      "title": "Stadio San Paolo",
+      "score": 0.0793013807691749,
+      "text": "Stadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico. For the 1960 Summer Olympics in Rome, it hosted the football preliminaries. It is currently used mostly for football matches and is the home of Napoli. The stadium was built in 1959 and underwent extensive renovations in 1989 for the 1990 World Cup. The present capacity of the San Paolo is 60,240.",
+      "score_breakdown": {
+        "dense": 0.05011772957628085,
+        "graph": 0.05205271933922578,
+        "fact": 0.24080542466968458
+      }
+    },
+    {
+      "node_id": "chunk:f_c_crotone_0",
+      "passage_index": 16,
+      "title": "F.C. Crotone",
+      "score": 0.04260718765824594,
+      "text": "F.C. Crotone\nFootball Club Crotone is an Italian football club based in Crotone, Calabria. Founded in 1910, holding home games at Stadio Ezio Scida, which has a 16,547 - seat capacity. The club plays in Serie A after being promoted from Serie B in 2016.",
+      "score_breakdown": {
+        "dense": 0.050408985935127194,
+        "graph": 0.04960748464641993,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:carmelo_imbriani_0",
+      "passage_index": 13,
+      "title": "Carmelo Imbriani",
+      "score": 0.04250561881119665,
+      "text": "Carmelo Imbriani\nCarmelo Imbriani (10 February 1976 – 15 February 2013) was an Italian footballer and former coach of Benevento in Lega Pro Prima Divisione.",
+      "score_breakdown": {
+        "dense": 0.04996822067264552,
+        "graph": 0.05007699147080536,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:stadio_is_arenas_0",
+      "passage_index": 4,
+      "title": "Stadio Is Arenas",
+      "score": 0.042391391870357634,
+      "text": "Stadio Is Arenas\nStadio Comunale \"Is Arenas\" is a sports stadium in Quartu Sant'Elena, Sardinia, Italy. It is mostly used for football games and was the home venue of Serie A club Cagliari Calcio for the 2012–13 season.",
+      "score_breakdown": {
+        "dense": 0.05017949241179788,
+        "graph": 0.04930890347956267,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:italy_national_rugby_union_team_0",
+      "passage_index": 7,
+      "title": "Italy national rugby union team",
+      "score": 0.04231360525568064,
+      "text": "Italy national rugby union team\nDate Home Score Away Place 24 October 1978 Italy 19 - 6 Argentina Stadio Mario Battaglini, Rovigo 6 May 1995 Italy 22 - 12 Ireland Stadio Comunale di Monigo, Treviso 4 June 1995 Argentina 25 - 31 Italy Buffalo City Stadium, East London, South Africa 4 January 1997 Ireland 29 - 37 Italy Lansdowne Road, Dublin 22 March 1997 France 32 - 40 Italy Stade Lesdiguières, Grenoble 20 December 1997 Italy 37 - 22 Ireland Stadio Renato Dall'Ara, Bologna 24 January 1998 Italy 25 - 21 Scotland Stadio Comunale Monigo, Treviso 7 November 1998 Italy 23 - 19 Argentina Stadio Comunale Beltrametti, Piacenza 5 February 2000 Italy 34 - 20 Scotland Stadio Flaminio, Rome 15 February 2003 Italy 30 - 22 Wales Stadio Flaminio, Rome 6 March 2004 Italy 20 - 14 Scotland Stadio Flaminio, Rome 11 June 2005 Argentina 29 - 30 Italy Estadio Olímpico, Córdoba 24 February 2007 Scotland 17 - 37 Italy Murrayfield, Edinburgh 10 March 2007 Italy 23 - 20 Wales Stadio Flaminio, Rome 15 March 2008 Italy 23 - 20 Scotland Stadio Flaminio, Rome 28",
+      "score_breakdown": {
+        "dense": 0.04980188451142787,
+        "graph": 0.04974189591465104,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:1975_76_coppa_italia_0",
+      "passage_index": 8,
+      "title": "1975–76 Coppa Italia",
+      "score": 0.04230469986728415,
+      "text": "1975–76 Coppa Italia\nThe 1975–76 Coppa Italia was the 29th season of Coppa Italia, the major Italian domestic association football cup. The competition was won by Napoli, who defeated Verona in a one-legged final played at the Stadio Olimpico in Rome.",
+      "score_breakdown": {
+        "dense": 0.05001550295956564,
+        "graph": 0.04932057746507682,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:stadio_erasmo_iacovone_0",
+      "passage_index": 14,
+      "title": "Stadio Erasmo Iacovone",
+      "score": 0.04230178990113094,
+      "text": "Stadio Erasmo Iacovone\nStadio Erasmo Iacovone is a multi-use stadium in Taranto, Italy. It is currently used mostly for football matches and is the home ground of Taranto Sport. The stadium holds 27,584 people.",
+      "score_breakdown": {
+        "dense": 0.05016969115978455,
+        "graph": 0.049028199210831444,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_stadio_ciro_vigorito",
+        "score": 0.05803299085346218,
+        "text": "Stadio Ciro Vigorito",
+        "metadata": {
+          "canonical_name": "Stadio Ciro Vigorito",
+          "aliases": [
+            "SCV",
+            "Stadio Ciro Vigorito"
+          ],
+          "surface_forms": [
+            "SCV",
+            "Stadio Ciro Vigorito"
+          ],
+          "title_anchor": "Stadio Ciro Vigorito"
+        }
+      },
+      {
+        "node_id": "entity:isola_del_liri",
+        "score": 0.036052393795400074,
+        "text": "Isola del Liri",
+        "metadata": {
+          "canonical_name": "Isola del Liri",
+          "aliases": [
+            "IDL",
+            "Isola del Liri"
+          ],
+          "surface_forms": [
+            "IDL",
+            "Isola del Liri"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+        "score": 0.07346141892865714,
+        "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.",
+        "metadata": {
+          "title": "Stadio Ciro Vigorito",
+          "chunk_id": "chunk:stadio_ciro_vigorito_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Stadio Ciro Vigorito",
+              "relation": "formerly known as",
+              "tail": "Stadio Santa Colomba"
+            },
+            {
+              "head": "Stadio Ciro Vigorito",
+              "relation": "located in",
+              "tail": "Benevento Italy"
+            }
+          ],
+          "entities": [
+            "Stadio Ciro Vigorito",
+            "Stadio Santa Colomba",
+            "Benevento",
+            "Italy"
+          ],
+          "entity_ids": [
+            "entity:benevento",
+            "entity:benevento_italy",
+            "entity:italy",
+            "entity:stadio_santa_colomba",
+            "entity:title_anchor_stadio_ciro_vigorito"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:conte_arduino_mangoni_0_0_stadio_arduino_mangoni_is_a_multi_purpose_stadium_in_isola_del_liri_italy",
+        "score": 0.04541269656126855,
+        "text": "Stadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy.",
+        "metadata": {
+          "title": "Conte Arduino Mangoni",
+          "chunk_id": "chunk:conte_arduino_mangoni_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Stadio Arduino Mangoni",
+              "relation": "is located in",
+              "tail": "Isola del Liri"
+            },
+            {
+              "head": "Isola del Liri",
+              "relation": "is in",
+              "tail": "Italy"
+            }
+          ],
+          "entities": [
+            "Stadio Arduino Mangoni",
+            "Isola del Liri",
+            "Italy"
+          ],
+          "entity_ids": [
+            "entity:isola_del_liri",
+            "entity:italy",
+            "entity:stadio_arduino_mangoni"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:stadio_san_paolo_0_0_stadio_san_paolo_is_a_stadium_in_the_western_suburb_of_fuorigrotta_in_naples",
+        "score": 0.04044715148669632,
+        "text": "Stadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico.",
+        "metadata": {
+          "title": "Stadio San Paolo",
+          "chunk_id": "chunk:stadio_san_paolo_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Stadio San Paolo",
+              "relation": "is located in",
+              "tail": "Fuorigrotta"
+            },
+            {
+              "head": "Fuorigrotta",
+              "relation": "is part of",
+              "tail": "Naples"
+            },
+            {
+              "head": "Naples",
+              "relation": "is in",
+              "tail": "Italy"
+            },
+            {
+              "head": "Stadio San Paolo",
+              "relation": "is the third largest football stadium in",
+              "tail": "Italy"
+            },
+            {
+              "head": "Stadio San Paolo",
+              "relation": "is smaller than",
+              "tail": "San Siro"
+            },
+            {
+              "head": "Stadio San Paolo",
+              "relation": "is smaller than",
+              "tail": "Stadio Olimpico"
+            }
+          ],
+          "entities": [
+            "Stadio San Paolo",
+            "Fuorigrotta",
+            "Naples",
+            "Italy",
+            "San Siro",
+            "Stadio Olimpico"
+          ],
+          "entity_ids": [
+            "entity:fuorigrotta",
+            "entity:italy",
+            "entity:naples",
+            "entity:san_siro",
+            "entity:stadio_olimpico",
+            "entity:title_anchor_stadio_san_paolo"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:conte_arduino_mangoni_0_1_it_is_mainly_used_mostly_for_football_matches_and_hosts_the_home_matches_of_isol",
+        "score": 0.03648901771598406,
+        "text": "It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D.",
+        "metadata": {
+          "title": "Conte Arduino Mangoni",
+          "chunk_id": "chunk:conte_arduino_mangoni_0",
+          "sentence_index": 1,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Isola Liri",
+              "relation": "plays in",
+              "tail": "Serie D"
+            }
+          ],
+          "entities": [
+            "Isola Liri",
+            "Serie D"
+          ],
+          "entity_ids": [
+            "entity:isola_liri",
+            "entity:serie_d"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:stadio_francesco_gabrielli_0_0_stadio_francesco_gabrielli_is_an_arena_in_rovigo_italy",
+        "score": 0.0292431380845386,
+        "text": "Stadio Francesco Gabrielli is an arena in Rovigo, Italy.",
+        "metadata": {
+          "title": "Stadio Francesco Gabrielli",
+          "chunk_id": "chunk:stadio_francesco_gabrielli_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Stadio Francesco Gabrielli",
+              "relation": "is located in",
+              "tail": "Rovigo"
+            },
+            {
+              "head": "Rovigo",
+              "relation": "is part of",
+              "tail": "Italy"
+            }
+          ],
+          "entities": [
+            "Stadio Francesco Gabrielli",
+            "Rovigo",
+            "Italy"
+          ],
+          "entity_ids": [
+            "entity:italy",
+            "entity:rovigo",
+            "entity:title_anchor_stadio_francesco_gabrielli"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:carmelo_imbriani_0_0_carmelo_imbriani_10_february_1976_15_february_2013_was_an_italian_footballer",
+        "score": 0.023882442204815203,
+        "text": "Carmelo Imbriani (10 February 1976 – 15 February 2013) was an Italian footballer and former coach of Benevento in Lega Pro Prima Divisione.",
+        "metadata": {
+          "title": "Carmelo Imbriani",
+          "chunk_id": "chunk:carmelo_imbriani_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Carmelo Imbriani",
+              "relation": "related_to",
+              "tail": "February"
+            },
+            {
+              "head": "February",
+              "relation": "related_to",
+              "tail": "Italian"
+            },
+            {
+              "head": "Italian",
+              "relation": "related_to",
+              "tail": "Benevento"
+            }
+          ],
+          "entities": [
+            "Carmelo Imbriani",
+            "February",
+            "Italian",
+            "Benevento",
+            "Lega Pro Prima Divisione"
+          ],
+          "entity_ids": [
+            "entity:benevento",
+            "entity:february",
+            "entity:italian",
+            "entity:lega_pro_prima_divisione",
+            "entity:title_anchor_carmelo_imbriani"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:stadio_ciro_vigorito_0",
+        "score": 0.018108806239069117,
+        "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979.",
+        "metadata": {
+          "title": "Stadio Ciro Vigorito",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:benevento",
+            "entity:benevento_calcio",
+            "entity:benevento_italy",
+            "entity:italy",
+            "entity:stadio_santa_colomba",
+            "entity:title_anchor_stadio_ciro_vigorito"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:conte_arduino_mangoni_0",
+        "score": 0.017547870062491807,
+        "text": "Conte Arduino Mangoni\nStadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy. It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D. The stadium has a capacity of 3,000 spectators and meets Lega Pro criteria.",
+        "metadata": {
+          "title": "Conte Arduino Mangoni",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:isola_del_liri",
+            "entity:isola_liri",
+            "entity:italy",
+            "entity:lega_pro",
+            "entity:serie_d",
+            "entity:stadio_arduino_mangoni"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:stadio_francesco_gabrielli_0",
+        "score": 0.010338505080813472,
+        "text": "Stadio Francesco Gabrielli\nStadio Francesco Gabrielli is an arena in Rovigo, Italy. It is primarily used for football, and is the home to the Rovigo Calcio of the Serie D. It opened in 1893 and holds 3,500 spectators.",
+        "metadata": {
+          "title": "Stadio Francesco Gabrielli",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:italy",
+            "entity:rovigo",
+            "entity:rovigo_calcio",
+            "entity:serie_d",
+            "entity:title_anchor_stadio_francesco_gabrielli"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:stadio_san_paolo_0",
+        "score": 0.008384013358137505,
+        "text": "Stadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico. For the 1960 Summer Olympics in Rome, it hosted the football preliminaries. It is currently used mostly for football matches and is the home of Napoli. The stadium was built in 1959 and underwent extensive renovations in 1989 for the 1990 World Cup. The present capacity of the San Paolo is 60,240.",
+        "metadata": {
+          "title": "Stadio San Paolo",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:1960_summer_olympics",
+            "entity:1990_world_cup",
+            "entity:fuorigrotta",
+            "entity:italy",
+            "entity:naples",
+            "entity:napoli",
+            "entity:rome",
+            "entity:san_paolo",
+            "entity:san_siro",
+            "entity:stadio_olimpico",
+            "entity:title_anchor_stadio_san_paolo"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Stadio Ciro Vigorito\nStadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979.\n\nConte Arduino Mangoni\nConte Arduino Mangoni\nStadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy. It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D. The stadium has a capacity of 3,000 spectators and meets Lega Pro criteria.\n\nStadio Francesco Gabrielli\nStadio Francesco Gabrielli\nStadio Francesco Gabrielli is an arena in Rovigo, Italy. It is primarily used for football, and is the home to the Rovigo Calcio of the Serie D. It opened in 1893 and holds 3,500 spectators.\n\nStadio San Paolo\nStadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico. For the 1960 Summer Olympics in Rome, it hosted the football preliminaries. It is currently used mostly for football matches and is the home of Napoli. The stadium was built in 1959 and underwent extensive renovations in 1989 for the 1990 World Cup. The present capacity of the San Paolo is 60,240.\n\nF.C. Crotone\nF.C. Crotone\nFootball Club Crotone is an Italian football club based in Crotone, Calabria. Founded in 1910, holding home games at Stadio Ezio Scida, which has a 16,547 - seat capacity. The club plays in Serie A after being promoted from Serie B in 2016.\n\nStadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.\n\nStadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico.\n\nStadio Ciro Vigorito\nIt is currently used mostly for football matches and is the home stadium of Benevento Calcio.\n\nPiacenza Calcio 1919\nPiacenza Calcio 1919\nPiacenza Calcio 1919 and Piacenza Calcio play their home matches at the 21,668 capacity, Stadio Leonardo Garilli, located in the city of Piacenza.\n\nStadio Erasmo Iacovone\nStadio Erasmo Iacovone\nStadio Erasmo Iacovone is a multi-use stadium in Taranto, Italy. It is currently used mostly for football matches and is the home ground of Taranto Sport. The stadium holds 27,584 people.\n\nStadio Antonio Bianco\nStadio Antonio Bianco\nStadio Antonio Bianco is a multi-use stadium in Gallipoli, Italy. It is currently used mostly for football matches and is the home ground of Gallipoli Calcio. The stadium holds 5,000 people.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:stadio_ciro_vigorito_0",
+        "passage_index": 11,
+        "title": "Stadio Ciro Vigorito",
+        "score": 0.0852882550121523,
+        "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979.",
+        "score_breakdown": {
+          "dense": 0.05082228323837851,
+          "graph": 0.05536292061171639,
+          "fact": 0.2715141536501947
+        }
+      },
+      {
+        "node_id": "chunk:conte_arduino_mangoni_0",
+        "passage_index": 10,
+        "title": "Conte Arduino Mangoni",
+        "score": 0.0802191272130009,
+        "text": "Conte Arduino Mangoni\nStadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy. It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D. The stadium has a capacity of 3,000 spectators and meets Lega Pro criteria.",
+        "score_breakdown": {
+          "dense": 0.05007096838524962,
+          "graph": 0.05459378415308457,
+          "fact": 0.24201306236792164
+        }
+      },
+      {
+        "node_id": "chunk:stadio_francesco_gabrielli_0",
+        "passage_index": 6,
+        "title": "Stadio Francesco Gabrielli",
+        "score": 0.0799542689152834,
+        "text": "Stadio Francesco Gabrielli\nStadio Francesco Gabrielli is an arena in Rovigo, Italy. It is primarily used for football, and is the home to the Rovigo Calcio of the Serie D. It opened in 1893 and holds 3,500 spectators.",
+        "score_breakdown": {
+          "dense": 0.050063644065463736,
+          "graph": 0.05189720260816169,
+          "fact": 0.24566735931219894
+        }
+      },
+      {
+        "node_id": "chunk:stadio_san_paolo_0",
+        "passage_index": 18,
+        "title": "Stadio San Paolo",
+        "score": 0.0793013807691749,
+        "text": "Stadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico. For the 1960 Summer Olympics in Rome, it hosted the football preliminaries. It is currently used mostly for football matches and is the home of Napoli. The stadium was built in 1959 and underwent extensive renovations in 1989 for the 1990 World Cup. The present capacity of the San Paolo is 60,240.",
+        "score_breakdown": {
+          "dense": 0.05011772957628085,
+          "graph": 0.05205271933922578,
+          "fact": 0.24080542466968458
+        }
+      },
+      {
+        "node_id": "chunk:f_c_crotone_0",
+        "passage_index": 16,
+        "title": "F.C. Crotone",
+        "score": 0.04260718765824594,
+        "text": "F.C. Crotone\nFootball Club Crotone is an Italian football club based in Crotone, Calabria. Founded in 1910, holding home games at Stadio Ezio Scida, which has a 16,547 - seat capacity. The club plays in Serie A after being promoted from Serie B in 2016.",
+        "score_breakdown": {
+          "dense": 0.050408985935127194,
+          "graph": 0.04960748464641993,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:carmelo_imbriani_0",
+        "passage_index": 13,
+        "title": "Carmelo Imbriani",
+        "score": 0.04250561881119665,
+        "text": "Carmelo Imbriani\nCarmelo Imbriani (10 February 1976 – 15 February 2013) was an Italian footballer and former coach of Benevento in Lega Pro Prima Divisione.",
+        "score_breakdown": {
+          "dense": 0.04996822067264552,
+          "graph": 0.05007699147080536,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:stadio_is_arenas_0",
+        "passage_index": 4,
+        "title": "Stadio Is Arenas",
+        "score": 0.042391391870357634,
+        "text": "Stadio Is Arenas\nStadio Comunale \"Is Arenas\" is a sports stadium in Quartu Sant'Elena, Sardinia, Italy. It is mostly used for football games and was the home venue of Serie A club Cagliari Calcio for the 2012–13 season.",
+        "score_breakdown": {
+          "dense": 0.05017949241179788,
+          "graph": 0.04930890347956267,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:italy_national_rugby_union_team_0",
+        "passage_index": 7,
+        "title": "Italy national rugby union team",
+        "score": 0.04231360525568064,
+        "text": "Italy national rugby union team\nDate Home Score Away Place 24 October 1978 Italy 19 - 6 Argentina Stadio Mario Battaglini, Rovigo 6 May 1995 Italy 22 - 12 Ireland Stadio Comunale di Monigo, Treviso 4 June 1995 Argentina 25 - 31 Italy Buffalo City Stadium, East London, South Africa 4 January 1997 Ireland 29 - 37 Italy Lansdowne Road, Dublin 22 March 1997 France 32 - 40 Italy Stade Lesdiguières, Grenoble 20 December 1997 Italy 37 - 22 Ireland Stadio Renato Dall'Ara, Bologna 24 January 1998 Italy 25 - 21 Scotland Stadio Comunale Monigo, Treviso 7 November 1998 Italy 23 - 19 Argentina Stadio Comunale Beltrametti, Piacenza 5 February 2000 Italy 34 - 20 Scotland Stadio Flaminio, Rome 15 February 2003 Italy 30 - 22 Wales Stadio Flaminio, Rome 6 March 2004 Italy 20 - 14 Scotland Stadio Flaminio, Rome 11 June 2005 Argentina 29 - 30 Italy Estadio Olímpico, Córdoba 24 February 2007 Scotland 17 - 37 Italy Murrayfield, Edinburgh 10 March 2007 Italy 23 - 20 Wales Stadio Flaminio, Rome 15 March 2008 Italy 23 - 20 Scotland Stadio Flaminio, Rome 28",
+        "score_breakdown": {
+          "dense": 0.04980188451142787,
+          "graph": 0.04974189591465104,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:1975_76_coppa_italia_0",
+        "passage_index": 8,
+        "title": "1975–76 Coppa Italia",
+        "score": 0.04230469986728415,
+        "text": "1975–76 Coppa Italia\nThe 1975–76 Coppa Italia was the 29th season of Coppa Italia, the major Italian domestic association football cup. The competition was won by Napoli, who defeated Verona in a one-legged final played at the Stadio Olimpico in Rome.",
+        "score_breakdown": {
+          "dense": 0.05001550295956564,
+          "graph": 0.04932057746507682,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:stadio_erasmo_iacovone_0",
+        "passage_index": 14,
+        "title": "Stadio Erasmo Iacovone",
+        "score": 0.04230178990113094,
+        "text": "Stadio Erasmo Iacovone\nStadio Erasmo Iacovone is a multi-use stadium in Taranto, Italy. It is currently used mostly for football matches and is the home ground of Taranto Sport. The stadium holds 27,584 people.",
+        "score_breakdown": {
+          "dense": 0.05016969115978455,
+          "graph": 0.049028199210831444,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Which team plays in Stadio Ciro Vigorito?",
+        "resolved_sub_question": "Which team plays in Stadio Ciro Vigorito?",
+        "sentence_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+        "sentence": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.",
+        "score": 0.5124920000000001,
+        "source_title": "Stadio Ciro Vigorito",
+        "hop_answer": "Benevento Calcio",
+        "hop_thought": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.",
+        "hop_raw_response": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.\nAnswer: Benevento Calcio",
+        "evidence_passages": [
+          {
+            "title": "Stadio Ciro Vigorito",
+            "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+          },
+          {
+            "title": "Stadio Ciro Vigorito",
+            "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+          },
+          {
+            "title": "Stadio San Paolo",
+            "text": "Stadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico."
+          }
+        ]
+      },
+      {
+        "sub_question": "What league does this team play for?",
+        "resolved_sub_question": "What league does this team play for? Context: Benevento Calcio.",
+        "sentence_id": "sentence:stadio_ciro_vigorito_0_1_it_is_currently_used_mostly_for_football_matches_and_is_the_home_stadium_of_bene",
+        "sentence": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio.",
+        "score": 0.4333115400634766,
+        "source_title": "Stadio Ciro Vigorito",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not specify the current league in which Benevento Calcio plays.",
+        "hop_raw_response": "The context provided does not specify the current league in which Benevento Calcio plays.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Stadio Ciro Vigorito",
+            "text": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio."
+          },
+          {
+            "title": "Stadio Ciro Vigorito",
+            "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+          },
+          {
+            "title": "Stadio Ciro Vigorito",
+            "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Which team plays in Stadio Ciro Vigorito? => Benevento Calcio (source: Stadio Ciro Vigorito)\n2. What league does this team play for? (source: Stadio Ciro Vigorito)\n\nFact hints:\n- Stadio Ciro Vigorito located in Benevento Italy\n\nWikipedia Title: Stadio Ciro Vigorito\nIt is currently used mostly for football matches and is the home stadium of Benevento Calcio.\n\nWikipedia Title: Stadio Ciro Vigorito\nIt is currently used mostly for football matches and is the home stadium of Benevento Calcio. Stadio Ciro Vigorito Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.\n\nWikipedia Title: Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.\n\nWikipedia Title: Piacenza Calcio 1919\nPiacenza Calcio 1919 Piacenza Calcio 1919 and Piacenza Calcio play their home matches at the 21,668 capacity, Stadio Leonardo Garilli, located in the city of Piacenza.\n\nWikipedia Title: Conte Arduino Mangoni\nConte Arduino Mangoni Stadio Arduino Mangoni, is a multi-purpose stadium in Isola del Liri, Italy. It is mainly used mostly for football matches and hosts the home matches of Isola Liri in Serie D.\n\nWikipedia Title: Stadio San Paolo\nFor the 1960 Summer Olympics in Rome, it hosted the football preliminaries. Stadio San Paolo Stadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico.\n\nWikipedia Title: Stadio San Paolo\nStadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico.\n\nWikipedia Title: Stadio Erasmo Iacovone\nThe stadium holds 27,584 people. It is currently used mostly for football matches and is the home ground of Taranto Sport.\n\nWikipedia Title: Stadio Antonio Bianco\nThe stadium holds 5,000 people. It is currently used mostly for football matches and is the home ground of Gallipoli Calcio.\n\nWikipedia Title: Stadio Francesco Gabrielli\nIt is primarily used for football, and is the home to the Rovigo Calcio of the Serie D. It opened in 1893 and holds 3,500 spectators.\n\nWikipedia Title: F.C. Crotone\nThe club plays in Serie A after being promoted from Serie B in 2016. F.C.\n\nQuestion: What league does the team that plays in Stadio Ciro Vigorito play for?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The team that plays in Stadio Ciro Vigorito is Benevento Calcio. However, the provided passages do not specify the current league in which Benevento Calcio plays.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The team that plays in Stadio Ciro Vigorito is Benevento Calcio. However, the provided passages do not specify the current league in which Benevento Calcio plays.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "2hop__166824_185403",
+    "question": "What league does the team that plays in Stadio Ciro Vigorito play for?",
+    "answer": "Lega Pro Prima Divisione",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Stadio Ciro Vigorito >> occupant",
+      "#1 >> league"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Lega Pro Prima Divisione",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Lega Pro Prima Divisione"
+    ]
+  }
+}

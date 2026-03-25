@@ -1,0 +1,1016 @@
+{
+  "query": "Who is the spouse of the Rabbit Hole's producer?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Rabbit Hole"
+  ],
+  "raw_query_entities": [
+    "Rabbit Hole"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Rabbit Hole",
+      "node_id": "entity:title_anchor_rabbit_hole_film",
+      "resolved_text": "Rabbit Hole (film)",
+      "score": 0.6782666666666667,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.185,
+      "score_margin": 0.0894666666666667,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is the producer of the Rabbit Hole?",
+    "Who is the spouse of this producer?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:margery_williams_bianco",
+      "score": 0.33754564625112743,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_velveteen_rabbit",
+      "score": 0.28330343438316435,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:margery_williams",
+      "score": 0.2832729055284098,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:michael_maltese",
+      "score": 0.23927012765122707,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lowell_d",
+      "score": 0.22427843938885758,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_baby_buggy_bunny",
+      "score": 0.2192697091186064,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_down_the_rabbit_hole_novel",
+      "score": 0.2163403706748801,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:echo_falls_mystery_series",
+      "score": 0.21627755880685673,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chuck_jones",
+      "score": 0.1972851792070371,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_heartbeat_in_the_brain",
+      "score": 0.18828448806116393,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:amanda_feilding",
+      "score": 0.18827338463741866,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_short_directed_by_chuck_jones_a",
+      "score": 0.17504283135897336,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:velveteen_rabbit_written_by_margery_williams_sentence_the_velveteen_rabbit_0_0_the_velveteen_rabbit_or_how_toys_become_r",
+      "text": "Velveteen Rabbit written by Margery Williams",
+      "head_id": "entity:title_anchor_the_velveteen_rabbit",
+      "tail_id": "entity:margery_williams",
+      "sentence_id": "sentence:the_velveteen_rabbit_0_0_the_velveteen_rabbit_or_how_toys_become_real_is_a_british_children_s_book_writ",
+      "chunk_id": "chunk:the_velveteen_rabbit_0",
+      "document_index": 10,
+      "score": 0.2812880385426062
+    },
+    {
+      "fact_id": "fact:baby_buggy_bunny_written_by_michael_maltese_sentence_baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated",
+      "text": "Baby Buggy Bunny written by Michael Maltese",
+      "head_id": "entity:title_anchor_baby_buggy_bunny",
+      "tail_id": "entity:michael_maltese",
+      "sentence_id": "sentence:baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_short_directed_by_chuck_jones_a",
+      "chunk_id": "chunk:baby_buggy_bunny_0",
+      "document_index": 18,
+      "score": 0.23728601627227844
+    },
+    {
+      "fact_id": "fact:amanda_feilding_produced_heartbeat_in_the_brain_sentence_heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_doc",
+      "text": "Amanda Feilding produced Heartbeat in the Brain",
+      "head_id": "entity:amanda_feilding",
+      "tail_id": "entity:title_anchor_heartbeat_in_the_brain",
+      "sentence_id": "sentence:heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_documentary_film_produced_and_directed_by_amand",
+      "chunk_id": "chunk:heartbeat_in_the_brain_0",
+      "document_index": 13,
+      "score": 0.22629179192981103
+    },
+    {
+      "fact_id": "fact:holes_produced_by_lowell_d_sentence_holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_andr",
+      "text": "Holes produced by Lowell D",
+      "head_id": "entity:title_anchor_holes_film",
+      "tail_id": "entity:lowell_d",
+      "sentence_id": "sentence:holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_andrew_davis",
+      "chunk_id": "chunk:holes_film_0",
+      "document_index": 8,
+      "score": 0.222294577880584
+    },
+    {
+      "fact_id": "fact:down_the_rabbit_hole_is_first_book_in_echo_falls_mystery_series_sentence_down_the_rabbit_hole_novel_0_0_down_the_rabbit_",
+      "text": "Down The Rabbit Hole is first book in Echo Falls mystery series",
+      "head_id": "entity:title_anchor_down_the_rabbit_hole_novel",
+      "tail_id": "entity:echo_falls_mystery_series",
+      "sentence_id": "sentence:down_the_rabbit_hole_novel_0_0_down_the_rabbit_hole_is_the_first_book_in_the_echo_falls_mystery_series_by_best",
+      "chunk_id": "chunk:down_the_rabbit_hole_novel_0",
+      "document_index": 6,
+      "score": 0.2142938291137074
+    },
+    {
+      "fact_id": "fact:baby_buggy_bunny_directed_by_chuck_jones_sentence_baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_sh",
+      "text": "Baby Buggy Bunny directed by Chuck Jones",
+      "head_id": "entity:title_anchor_baby_buggy_bunny",
+      "tail_id": "entity:chuck_jones",
+      "sentence_id": "sentence:baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_short_directed_by_chuck_jones_a",
+      "chunk_id": "chunk:baby_buggy_bunny_0",
+      "document_index": 18,
+      "score": 0.1972851792070371
+    },
+    {
+      "fact_id": "fact:amanda_feilding_directed_heartbeat_in_the_brain_sentence_heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_doc",
+      "text": "Amanda Feilding directed Heartbeat in the Brain",
+      "head_id": "entity:amanda_feilding",
+      "tail_id": "entity:title_anchor_heartbeat_in_the_brain",
+      "sentence_id": "sentence:heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_documentary_film_produced_and_directed_by_amand",
+      "chunk_id": "chunk:heartbeat_in_the_brain_0",
+      "document_index": 13,
+      "score": 0.1462871218186339
+    },
+    {
+      "fact_id": "fact:holes_directed_by_andrew_davis_sentence_holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_",
+      "text": "Holes directed by Andrew Davis",
+      "head_id": "entity:title_anchor_holes_film",
+      "tail_id": "entity:andrew_davis",
+      "sentence_id": "sentence:holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_andrew_davis",
+      "chunk_id": "chunk:holes_film_0",
+      "document_index": 8,
+      "score": 0.12228735925840344
+    }
+  ],
+  "bridge_entities": [
+    "Down The Rabbit Hole",
+    "Echo Falls mystery series",
+    "Peter Abrahams",
+    "Nicole Kidman"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the producer of the Rabbit Hole?",
+      "resolved_sub_question": "Who is the producer of the Rabbit Hole?",
+      "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+      "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+      "score": 0.46430290131130214,
+      "source_title": "Rabbit Hole (film)",
+      "hop_answer": "Nicole Kidman",
+      "hop_thought": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.",
+      "hop_raw_response": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.\nAnswer: Nicole Kidman",
+      "evidence_passages": [
+        {
+          "title": "Rabbit Hole (film)",
+          "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+        },
+        {
+          "title": "Rabbit Hole (film)",
+          "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+        },
+        {
+          "title": "White Rabbit",
+          "text": "I shall be too late!\" Alice follows him down the rabbit hole into Wonderland."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the spouse of this producer?",
+      "resolved_sub_question": "Who is the spouse of this producer? Context: Nicole Kidman.",
+      "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+      "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+      "score": 0.4141174311161041,
+      "source_title": "Rabbit Hole (film)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.",
+      "hop_raw_response": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Rabbit Hole (film)",
+          "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+        },
+        {
+          "title": "Rabbit Hole (film)",
+          "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+        },
+        {
+          "title": "Planet Cake",
+          "text": "Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:the_velveteen_rabbit_0_0_the_velveteen_rabbit_or_how_toys_become_real_is_a_british_children_s_book_writ",
+      "score": 0.0856580491136609,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_short_directed_by_chuck_jones_a",
+      "score": 0.0722651755188837,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_andrew_davis",
+      "score": 0.05397679758440066,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_documentary_film_produced_and_directed_by_amand",
+      "score": 0.04368158444518474,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_the_velveteen_rabbit",
+      "score": 0.03976035034945638,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_baby_buggy_bunny",
+      "score": 0.03949189048717983,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:down_the_rabbit_hole_novel_0_0_down_the_rabbit_hole_is_the_first_book_in_the_echo_falls_mystery_series_by_best",
+      "score": 0.03822997959371171,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:margery_williams",
+      "score": 0.03193823414636347,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_holes_film",
+      "score": 0.031677565853785804,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:margery_williams_bianco",
+      "score": 0.028792959807921605,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_heartbeat_in_the_brain",
+      "score": 0.026901433603113194,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:amanda_feilding",
+      "score": 0.026901127142064944,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:echo_falls_mystery_series",
+      "score": 0.023936804094861663,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:michael_maltese",
+      "score": 0.021930081324778458,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:baby_buggy_bunny_0_1_the_story_is_about_a_dwarf_gangster_named_babyface_finster_based_on_gangster",
+      "score": 0.0214443343758893,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:chuck_jones",
+      "score": 0.020478455596521613,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:holes_film_0_1_blank_mike_medavoy_and_teresa_tucker_davies_with_music_by_joel_mcneely_and_ba",
+      "score": 0.019296957082896592,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lowell_d",
+      "score": 0.01875928722778873,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_down_the_rabbit_hole_novel",
+      "score": 0.017589393376736,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:andrew_davis",
+      "score": 0.015232955019309836,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:the_velveteen_rabbit_0",
+      "passage_index": 10,
+      "title": "The Velveteen Rabbit",
+      "score": 0.07538209558264974,
+      "text": "The Velveteen Rabbit\nThe Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson. It chronicles the story of a stuffed rabbit's desire to become real through the love of his owner. The book was first published in 1922 and has been republished many times since.",
+      "score_breakdown": {
+        "dense": 0.04988330860893772,
+        "graph": 0.055248036701484045,
+        "fact": 0.2091457655819252
+      }
+    },
+    {
+      "node_id": "chunk:baby_buggy_bunny_0",
+      "passage_index": 18,
+      "title": "Baby Buggy Bunny",
+      "score": 0.07371720353164565,
+      "text": "Baby Buggy Bunny\nBaby Buggy Bunny is a \"Merrie Melodies\" animated short directed by Chuck Jones and written by Michael Maltese, released in 1954. The story is about a dwarf gangster named \"Babyface\" Finster (based on gangster Baby Face Nelson) who, after a clever bank robbery, loses his ill-gotten gains down Bugs Bunny's rabbit hole, forcing him to don the disguise of an orphan baby to get it back.",
+      "score_breakdown": {
+        "dense": 0.04980809182673329,
+        "graph": 0.05433794509658485,
+        "fact": 0.2001424633197793
+      }
+    },
+    {
+      "node_id": "chunk:holes_film_0",
+      "passage_index": 8,
+      "title": "Holes (film)",
+      "score": 0.07299798571915,
+      "text": "Holes (film)\nHoles is a 2003 American adventure comedy - drama film directed by Andrew Davis, produced by Lowell D. Blank, Mike Medavoy and Teresa Tucker - Davies with music by Joel McNeely and based on the 1998 eponymous novel by Louis Sachar (who also wrote the screenplay).",
+      "score_breakdown": {
+        "dense": 0.04999280947194448,
+        "graph": 0.053090925894346386,
+        "fact": 0.19716441827517753
+      }
+    },
+    {
+      "node_id": "chunk:heartbeat_in_the_brain_0",
+      "passage_index": 13,
+      "title": "Heartbeat in the Brain",
+      "score": 0.07295561959041719,
+      "text": "Heartbeat in the Brain\nHeartbeat in the Brain is a 1970 documentary film produced and directed by Amanda Feilding, an advocate of trepanation. In the film, Feilding, a 27-year-old student at the time, drills a hole in her forehead with a dentist's drill. In the documentary, surgical scenes alternate with motion studies of Feilding's pet pigeon Birdie.",
+      "score_breakdown": {
+        "dense": 0.049981522320892854,
+        "graph": 0.05257555577425733,
+        "fact": 0.1979541038776594
+      }
+    },
+    {
+      "node_id": "chunk:down_the_rabbit_hole_novel_0",
+      "passage_index": 6,
+      "title": "Down the Rabbit Hole (novel)",
+      "score": 0.0726453745450418,
+      "text": "Down the Rabbit Hole (novel)\nDown The Rabbit Hole is the first book in the Echo Falls mystery series by best selling crime novelist Peter Abrahams. Ingrid is in the wrong place at the wrong time. Or at least her shoes are. And getting them back will mean getting tangled up in a murder investigation as complicated as the mysteries solved by her idol, Sherlock Holmes. With soccer practice, schoolwork, and the lead role in her town's production of Alice in Wonderland, Ingrid is swamped. But as things in Echo Falls keep getting curiouser and curiouser Ingrid realizes she must solve the murder on her own before it's too late!",
+      "score_breakdown": {
+        "dense": 0.05020589570837812,
+        "graph": 0.05231048187871687,
+        "fact": 0.19559324894545857
+      }
+    },
+    {
+      "node_id": "chunk:rabbit_hole_film_0",
+      "passage_index": 9,
+      "title": "Rabbit Hole (film)",
+      "score": 0.042432048630382704,
+      "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget.",
+      "score_breakdown": {
+        "dense": 0.0504725766713582,
+        "graph": 0.04890710487045231,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:rabbit_ears_productions_0",
+      "passage_index": 2,
+      "title": "Rabbit Ears Productions",
+      "score": 0.04227054732753317,
+      "text": "Rabbit Ears Productions\nRabbit Ears Productions is a production company best known for producing three TV series that feature individual episodes adapting popular pieces of children's literature, all of which aired from 1984-1995 on PBS. The series features actors such as Robin Williams, Raul Julia, Laura Dern, Denzel Washington, Meryl Streep, John Hurt, Danny Glover, and others narrating children's books either well known in the United States or from around the world. The series made use of a limited animation technique whereby still images were moved throughout the scene, similar to modern motion comics. Rabbit Ears Productions has also won numerous awards, including Parents' Choice Awards and Grammy Awards.",
+      "score_breakdown": {
+        "dense": 0.05022052941826801,
+        "graph": 0.04883085382495256,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:rabbit_run_film_0",
+      "passage_index": 7,
+      "title": "Rabbit, Run (film)",
+      "score": 0.04226134457927496,
+      "text": "Rabbit, Run (film)\nRabbit, Run is a 1970 American independent film directed by Jack Smight. The film was adapted from John Updike's 1960 novel by screenplay writer Howard B. Kreitsek, who also served as producer. The film starred James Caan as Rabbit Angstrom, Carrie Snodgress as Rabbit's wife Janice, and Anjanette Comer as his girlfriend Ruth. The movie co-starred Jack Albertson as Coach Marty Tothero, Arthur Hill as Rev. Jack Eccles, and Henry Jones and Josephine Hutchinson as Rabbit's parents.",
+      "score_breakdown": {
+        "dense": 0.050176892621493586,
+        "graph": 0.048880178791511616,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:white_rabbit_0",
+      "passage_index": 15,
+      "title": "White Rabbit",
+      "score": 0.042214236748383496,
+      "text": "White Rabbit\nThe White Rabbit is a fictional character in Lewis Carroll's book \"Alice's Adventures in Wonderland\". He appears at the very beginning of the book, in chapter one, wearing a waistcoat, and muttering \"Oh dear! Oh dear! I shall be too late!\" Alice follows him down the rabbit hole into Wonderland. Alice encounters him again when he mistakes her for his housemaid Mary Ann and she becomes trapped in his house after growing too large. The Rabbit shows up again in the last few chapters, as a herald-like servant of the King and Queen of Hearts.",
+      "score_breakdown": {
+        "dense": 0.05009931747915523,
+        "graph": 0.04886537378282705,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:teletubbies_0",
+      "passage_index": 11,
+      "title": "Teletubbies",
+      "score": 0.04216909387096553,
+      "text": "Teletubbies\nThe programme takes place in a grassy, floral landscape populated by rabbits with bird calls audible in the background. The main shelter of the four Teletubbies is an earth house known as the ``Tubbytronic Superdome ''implanted in the ground and accessed through a hole at the top or an especially large semicircular door at the dome's foot. The creatures co-exist with a number of strange contraptions such as the Noo - noo, the group's anthropomorphic blue vacuum cleaner, and the Voice Trumpets. The show's colourful, psychedelic setting was designed specifically to appeal to the attention spans of infants and unlock different sections of the mind while also educating young children of transitions that can be expected in life.",
+      "score_breakdown": {
+        "dense": 0.05003814795539054,
+        "graph": 0.048827041651669095,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_the_velveteen_rabbit",
+        "score": 0.03976035034945638,
+        "text": "The Velveteen Rabbit",
+        "metadata": {
+          "canonical_name": "The Velveteen Rabbit",
+          "aliases": [
+            "VR",
+            "Velveteen Rabbit"
+          ],
+          "surface_forms": [
+            "VR",
+            "Velveteen Rabbit"
+          ],
+          "title_anchor": "The Velveteen Rabbit"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_baby_buggy_bunny",
+        "score": 0.03949189048717983,
+        "text": "Baby Buggy Bunny",
+        "metadata": {
+          "canonical_name": "Baby Buggy Bunny",
+          "aliases": [
+            "BBB",
+            "Baby Buggy Bunny"
+          ],
+          "surface_forms": [
+            "BBB",
+            "Baby Buggy Bunny"
+          ],
+          "title_anchor": "Baby Buggy Bunny"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_velveteen_rabbit_0_0_the_velveteen_rabbit_or_how_toys_become_real_is_a_british_children_s_book_writ",
+        "score": 0.0856580491136609,
+        "text": "The Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson.",
+        "metadata": {
+          "title": "The Velveteen Rabbit",
+          "chunk_id": "chunk:the_velveteen_rabbit_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Velveteen Rabbit",
+              "relation": "is also known as",
+              "tail": "Toys Become Real"
+            },
+            {
+              "head": "Velveteen Rabbit",
+              "relation": "is a",
+              "tail": "British children's book"
+            },
+            {
+              "head": "Velveteen Rabbit",
+              "relation": "written by",
+              "tail": "Margery Williams"
+            },
+            {
+              "head": "Margery Williams",
+              "relation": "also known as",
+              "tail": "Margery Williams Bianco"
+            },
+            {
+              "head": "Velveteen Rabbit",
+              "relation": "illustrated by",
+              "tail": "William Nicholson"
+            }
+          ],
+          "entities": [
+            "Velveteen Rabbit",
+            "Toys Become Real",
+            "British children's book",
+            "Margery Williams",
+            "Margery Williams Bianco",
+            "William Nicholson"
+          ],
+          "entity_ids": [
+            "entity:british_children_s_book",
+            "entity:margery_williams",
+            "entity:margery_williams_bianco",
+            "entity:title_anchor_the_velveteen_rabbit",
+            "entity:toys_become_real",
+            "entity:william_nicholson"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:baby_buggy_bunny_0_0_baby_buggy_bunny_is_a_merrie_melodies_animated_short_directed_by_chuck_jones_a",
+        "score": 0.0722651755188837,
+        "text": "Baby Buggy Bunny is a \"Merrie Melodies\" animated short directed by Chuck Jones and written by Michael Maltese, released in 1954.",
+        "metadata": {
+          "title": "Baby Buggy Bunny",
+          "chunk_id": "chunk:baby_buggy_bunny_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Baby Buggy Bunny",
+              "relation": "is a",
+              "tail": "Merrie Melodies animated short"
+            },
+            {
+              "head": "Baby Buggy Bunny",
+              "relation": "directed by",
+              "tail": "Chuck Jones"
+            },
+            {
+              "head": "Baby Buggy Bunny",
+              "relation": "written by",
+              "tail": "Michael Maltese"
+            }
+          ],
+          "entities": [
+            "Baby Buggy Bunny",
+            "Merrie Melodies",
+            "Chuck Jones",
+            "Michael Maltese"
+          ],
+          "entity_ids": [
+            "entity:chuck_jones",
+            "entity:merrie_melodies",
+            "entity:merrie_melodies_animated_short",
+            "entity:michael_maltese",
+            "entity:title_anchor_baby_buggy_bunny"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:holes_film_0_0_holes_is_a_2003_american_adventure_comedy_drama_film_directed_by_andrew_davis",
+        "score": 0.05397679758440066,
+        "text": "Holes is a 2003 American adventure comedy - drama film directed by Andrew Davis, produced by Lowell D.",
+        "metadata": {
+          "title": "Holes (film)",
+          "chunk_id": "chunk:holes_film_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Holes",
+              "relation": "is a",
+              "tail": "2003 American adventure comedy-drama film"
+            },
+            {
+              "head": "Holes",
+              "relation": "directed by",
+              "tail": "Andrew Davis"
+            },
+            {
+              "head": "Holes",
+              "relation": "produced by",
+              "tail": "Lowell D"
+            }
+          ],
+          "entities": [
+            "Holes",
+            "Andrew Davis",
+            "Lowell D"
+          ],
+          "entity_ids": [
+            "entity:2003_american_adventure_comedy_drama_film",
+            "entity:andrew_davis",
+            "entity:lowell_d",
+            "entity:title_anchor_holes_film"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:heartbeat_in_the_brain_0_0_heartbeat_in_the_brain_is_a_1970_documentary_film_produced_and_directed_by_amand",
+        "score": 0.04368158444518474,
+        "text": "Heartbeat in the Brain is a 1970 documentary film produced and directed by Amanda Feilding, an advocate of trepanation.",
+        "metadata": {
+          "title": "Heartbeat in the Brain",
+          "chunk_id": "chunk:heartbeat_in_the_brain_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Amanda Feilding",
+              "relation": "produced",
+              "tail": "Heartbeat in the Brain"
+            },
+            {
+              "head": "Amanda Feilding",
+              "relation": "directed",
+              "tail": "Heartbeat in the Brain"
+            }
+          ],
+          "entities": [
+            "Heartbeat in the Brain",
+            "Amanda Feilding"
+          ],
+          "entity_ids": [
+            "entity:amanda_feilding",
+            "entity:title_anchor_heartbeat_in_the_brain"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:down_the_rabbit_hole_novel_0_0_down_the_rabbit_hole_is_the_first_book_in_the_echo_falls_mystery_series_by_best",
+        "score": 0.03822997959371171,
+        "text": "Down The Rabbit Hole is the first book in the Echo Falls mystery series by best selling crime novelist Peter Abrahams.",
+        "metadata": {
+          "title": "Down the Rabbit Hole (novel)",
+          "chunk_id": "chunk:down_the_rabbit_hole_novel_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Down The Rabbit Hole",
+              "relation": "is first book in",
+              "tail": "Echo Falls mystery series"
+            },
+            {
+              "head": "Echo Falls mystery series",
+              "relation": "authored by",
+              "tail": "Peter Abrahams"
+            }
+          ],
+          "entities": [
+            "Down The Rabbit Hole",
+            "Echo Falls mystery series",
+            "Peter Abrahams"
+          ],
+          "entity_ids": [
+            "entity:echo_falls_mystery_series",
+            "entity:peter_abrahams",
+            "entity:title_anchor_down_the_rabbit_hole_novel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:baby_buggy_bunny_0_1_the_story_is_about_a_dwarf_gangster_named_babyface_finster_based_on_gangster",
+        "score": 0.0214443343758893,
+        "text": "The story is about a dwarf gangster named \"Babyface\" Finster (based on gangster Baby Face Nelson) who, after a clever bank robbery, loses his ill-gotten gains down Bugs Bunny's rabbit hole, forcing him to don the disguise of an orphan baby to get it back.",
+        "metadata": {
+          "title": "Baby Buggy Bunny",
+          "chunk_id": "chunk:baby_buggy_bunny_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Babyface Finster",
+              "relation": "based on",
+              "tail": "Baby Face Nelson"
+            }
+          ],
+          "entities": [
+            "Babyface Finster",
+            "Baby Face Nelson",
+            "Bugs Bunny"
+          ],
+          "entity_ids": [
+            "entity:baby_face_nelson",
+            "entity:babyface_finster",
+            "entity:bugs_bunny"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:holes_film_0_1_blank_mike_medavoy_and_teresa_tucker_davies_with_music_by_joel_mcneely_and_ba",
+        "score": 0.019296957082896592,
+        "text": "Blank, Mike Medavoy and Teresa Tucker - Davies with music by Joel McNeely and based on the 1998 eponymous novel by Louis Sachar (who also wrote the screenplay).",
+        "metadata": {
+          "title": "Holes (film)",
+          "chunk_id": "chunk:holes_film_0",
+          "sentence_index": 1,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Mike Medavoy",
+              "relation": "worked_with",
+              "tail": "Teresa Tucker Davies"
+            },
+            {
+              "head": "Joel McNeely",
+              "relation": "composed_music_for",
+              "tail": "Blank"
+            },
+            {
+              "head": "Louis Sachar",
+              "relation": "wrote_screenplay_for",
+              "tail": "Blank"
+            }
+          ],
+          "entities": [
+            "Mike Medavoy",
+            "Teresa Tucker Davies",
+            "Joel McNeely",
+            "Louis Sachar"
+          ],
+          "entity_ids": [
+            "entity:blank",
+            "entity:joel_mcneely",
+            "entity:louis_sachar",
+            "entity:mike_medavoy",
+            "entity:teresa_tucker_davies"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_velveteen_rabbit_0",
+        "score": 0.012524782403508575,
+        "text": "The Velveteen Rabbit\nThe Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson. It chronicles the story of a stuffed rabbit's desire to become real through the love of his owner. The book was first published in 1922 and has been republished many times since.",
+        "metadata": {
+          "title": "The Velveteen Rabbit",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:british_children_s_book",
+            "entity:margery_williams",
+            "entity:margery_williams_bianco",
+            "entity:title_anchor_the_velveteen_rabbit",
+            "entity:toys_become_real",
+            "entity:william_nicholson"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:heartbeat_in_the_brain_0",
+        "score": 0.01169091218805686,
+        "text": "Heartbeat in the Brain\nHeartbeat in the Brain is a 1970 documentary film produced and directed by Amanda Feilding, an advocate of trepanation. In the film, Feilding, a 27-year-old student at the time, drills a hole in her forehead with a dentist's drill. In the documentary, surgical scenes alternate with motion studies of Feilding's pet pigeon Birdie.",
+        "metadata": {
+          "title": "Heartbeat in the Brain",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:amanda_feilding",
+            "entity:birdie",
+            "entity:feilding",
+            "entity:title_anchor_heartbeat_in_the_brain"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Velveteen Rabbit\nThe Velveteen Rabbit\nThe Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson. It chronicles the story of a stuffed rabbit's desire to become real through the love of his owner. The book was first published in 1922 and has been republished many times since.\n\nBaby Buggy Bunny\nBaby Buggy Bunny\nBaby Buggy Bunny is a \"Merrie Melodies\" animated short directed by Chuck Jones and written by Michael Maltese, released in 1954. The story is about a dwarf gangster named \"Babyface\" Finster (based on gangster Baby Face Nelson) who, after a clever bank robbery, loses his ill-gotten gains down Bugs Bunny's rabbit hole, forcing him to don the disguise of an orphan baby to get it back.\n\nHoles (film)\nHoles (film)\nHoles is a 2003 American adventure comedy - drama film directed by Andrew Davis, produced by Lowell D. Blank, Mike Medavoy and Teresa Tucker - Davies with music by Joel McNeely and based on the 1998 eponymous novel by Louis Sachar (who also wrote the screenplay).\n\nHeartbeat in the Brain\nHeartbeat in the Brain\nHeartbeat in the Brain is a 1970 documentary film produced and directed by Amanda Feilding, an advocate of trepanation. In the film, Feilding, a 27-year-old student at the time, drills a hole in her forehead with a dentist's drill. In the documentary, surgical scenes alternate with motion studies of Feilding's pet pigeon Birdie.\n\nDown the Rabbit Hole (novel)\nDown the Rabbit Hole (novel)\nDown The Rabbit Hole is the first book in the Echo Falls mystery series by best selling crime novelist Peter Abrahams. Ingrid is in the wrong place at the wrong time. Or at least her shoes are. And getting them back will mean getting tangled up in a murder investigation as complicated as the mysteries solved by her idol, Sherlock Holmes. With soccer practice, schoolwork, and the lead role in her town's production of Alice in Wonderland, Ingrid is swamped. But as things in Echo Falls keep getting curiouser and curiouser Ingrid realizes she must solve the murder on her own before it's too late!\n\nRabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.\n\nRabbit Hole (film)\nRabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget.\n\nWhite Rabbit\nI shall be too late!\" Alice follows him down the rabbit hole into Wonderland.\n\nPlanet Cake\nPlanet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines.\n\nPlanet Cake\nPlanet Cake\nPlanet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines. They have also created a host of ‘stunt’ cakes, the most famous being a realistic replica of the Sydney Opera House for Australia Day 2011, which weighed over 1.3 tons and required 32 cake decorators to make.\n\nRabbit, Run (film)\nRabbit, Run (film)\nRabbit, Run is a 1970 American independent film directed by Jack Smight. The film was adapted from John Updike's 1960 novel by screenplay writer Howard B. Kreitsek, who also served as producer. The film starred James Caan as Rabbit Angstrom, Carrie Snodgress as Rabbit's wife Janice, and Anjanette Comer as his girlfriend Ruth. The movie co-starred Jack Albertson as Coach Marty Tothero, Arthur Hill as Rev. Jack Eccles, and Henry Jones and Josephine Hutchinson as Rabbit's parents.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:the_velveteen_rabbit_0",
+        "passage_index": 10,
+        "title": "The Velveteen Rabbit",
+        "score": 0.07538209558264974,
+        "text": "The Velveteen Rabbit\nThe Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson. It chronicles the story of a stuffed rabbit's desire to become real through the love of his owner. The book was first published in 1922 and has been republished many times since.",
+        "score_breakdown": {
+          "dense": 0.04988330860893772,
+          "graph": 0.055248036701484045,
+          "fact": 0.2091457655819252
+        }
+      },
+      {
+        "node_id": "chunk:baby_buggy_bunny_0",
+        "passage_index": 18,
+        "title": "Baby Buggy Bunny",
+        "score": 0.07371720353164565,
+        "text": "Baby Buggy Bunny\nBaby Buggy Bunny is a \"Merrie Melodies\" animated short directed by Chuck Jones and written by Michael Maltese, released in 1954. The story is about a dwarf gangster named \"Babyface\" Finster (based on gangster Baby Face Nelson) who, after a clever bank robbery, loses his ill-gotten gains down Bugs Bunny's rabbit hole, forcing him to don the disguise of an orphan baby to get it back.",
+        "score_breakdown": {
+          "dense": 0.04980809182673329,
+          "graph": 0.05433794509658485,
+          "fact": 0.2001424633197793
+        }
+      },
+      {
+        "node_id": "chunk:holes_film_0",
+        "passage_index": 8,
+        "title": "Holes (film)",
+        "score": 0.07299798571915,
+        "text": "Holes (film)\nHoles is a 2003 American adventure comedy - drama film directed by Andrew Davis, produced by Lowell D. Blank, Mike Medavoy and Teresa Tucker - Davies with music by Joel McNeely and based on the 1998 eponymous novel by Louis Sachar (who also wrote the screenplay).",
+        "score_breakdown": {
+          "dense": 0.04999280947194448,
+          "graph": 0.053090925894346386,
+          "fact": 0.19716441827517753
+        }
+      },
+      {
+        "node_id": "chunk:heartbeat_in_the_brain_0",
+        "passage_index": 13,
+        "title": "Heartbeat in the Brain",
+        "score": 0.07295561959041719,
+        "text": "Heartbeat in the Brain\nHeartbeat in the Brain is a 1970 documentary film produced and directed by Amanda Feilding, an advocate of trepanation. In the film, Feilding, a 27-year-old student at the time, drills a hole in her forehead with a dentist's drill. In the documentary, surgical scenes alternate with motion studies of Feilding's pet pigeon Birdie.",
+        "score_breakdown": {
+          "dense": 0.049981522320892854,
+          "graph": 0.05257555577425733,
+          "fact": 0.1979541038776594
+        }
+      },
+      {
+        "node_id": "chunk:down_the_rabbit_hole_novel_0",
+        "passage_index": 6,
+        "title": "Down the Rabbit Hole (novel)",
+        "score": 0.0726453745450418,
+        "text": "Down the Rabbit Hole (novel)\nDown The Rabbit Hole is the first book in the Echo Falls mystery series by best selling crime novelist Peter Abrahams. Ingrid is in the wrong place at the wrong time. Or at least her shoes are. And getting them back will mean getting tangled up in a murder investigation as complicated as the mysteries solved by her idol, Sherlock Holmes. With soccer practice, schoolwork, and the lead role in her town's production of Alice in Wonderland, Ingrid is swamped. But as things in Echo Falls keep getting curiouser and curiouser Ingrid realizes she must solve the murder on her own before it's too late!",
+        "score_breakdown": {
+          "dense": 0.05020589570837812,
+          "graph": 0.05231048187871687,
+          "fact": 0.19559324894545857
+        }
+      },
+      {
+        "node_id": "chunk:rabbit_hole_film_0",
+        "passage_index": 9,
+        "title": "Rabbit Hole (film)",
+        "score": 0.042432048630382704,
+        "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget.",
+        "score_breakdown": {
+          "dense": 0.0504725766713582,
+          "graph": 0.04890710487045231,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:rabbit_ears_productions_0",
+        "passage_index": 2,
+        "title": "Rabbit Ears Productions",
+        "score": 0.04227054732753317,
+        "text": "Rabbit Ears Productions\nRabbit Ears Productions is a production company best known for producing three TV series that feature individual episodes adapting popular pieces of children's literature, all of which aired from 1984-1995 on PBS. The series features actors such as Robin Williams, Raul Julia, Laura Dern, Denzel Washington, Meryl Streep, John Hurt, Danny Glover, and others narrating children's books either well known in the United States or from around the world. The series made use of a limited animation technique whereby still images were moved throughout the scene, similar to modern motion comics. Rabbit Ears Productions has also won numerous awards, including Parents' Choice Awards and Grammy Awards.",
+        "score_breakdown": {
+          "dense": 0.05022052941826801,
+          "graph": 0.04883085382495256,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:rabbit_run_film_0",
+        "passage_index": 7,
+        "title": "Rabbit, Run (film)",
+        "score": 0.04226134457927496,
+        "text": "Rabbit, Run (film)\nRabbit, Run is a 1970 American independent film directed by Jack Smight. The film was adapted from John Updike's 1960 novel by screenplay writer Howard B. Kreitsek, who also served as producer. The film starred James Caan as Rabbit Angstrom, Carrie Snodgress as Rabbit's wife Janice, and Anjanette Comer as his girlfriend Ruth. The movie co-starred Jack Albertson as Coach Marty Tothero, Arthur Hill as Rev. Jack Eccles, and Henry Jones and Josephine Hutchinson as Rabbit's parents.",
+        "score_breakdown": {
+          "dense": 0.050176892621493586,
+          "graph": 0.048880178791511616,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:white_rabbit_0",
+        "passage_index": 15,
+        "title": "White Rabbit",
+        "score": 0.042214236748383496,
+        "text": "White Rabbit\nThe White Rabbit is a fictional character in Lewis Carroll's book \"Alice's Adventures in Wonderland\". He appears at the very beginning of the book, in chapter one, wearing a waistcoat, and muttering \"Oh dear! Oh dear! I shall be too late!\" Alice follows him down the rabbit hole into Wonderland. Alice encounters him again when he mistakes her for his housemaid Mary Ann and she becomes trapped in his house after growing too large. The Rabbit shows up again in the last few chapters, as a herald-like servant of the King and Queen of Hearts.",
+        "score_breakdown": {
+          "dense": 0.05009931747915523,
+          "graph": 0.04886537378282705,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:teletubbies_0",
+        "passage_index": 11,
+        "title": "Teletubbies",
+        "score": 0.04216909387096553,
+        "text": "Teletubbies\nThe programme takes place in a grassy, floral landscape populated by rabbits with bird calls audible in the background. The main shelter of the four Teletubbies is an earth house known as the ``Tubbytronic Superdome ''implanted in the ground and accessed through a hole at the top or an especially large semicircular door at the dome's foot. The creatures co-exist with a number of strange contraptions such as the Noo - noo, the group's anthropomorphic blue vacuum cleaner, and the Voice Trumpets. The show's colourful, psychedelic setting was designed specifically to appeal to the attention spans of infants and unlock different sections of the mind while also educating young children of transitions that can be expected in life.",
+        "score_breakdown": {
+          "dense": 0.05003814795539054,
+          "graph": 0.048827041651669095,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the producer of the Rabbit Hole?",
+        "resolved_sub_question": "Who is the producer of the Rabbit Hole?",
+        "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+        "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+        "score": 0.46430290131130214,
+        "source_title": "Rabbit Hole (film)",
+        "hop_answer": "Nicole Kidman",
+        "hop_thought": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.",
+        "hop_raw_response": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.\nAnswer: Nicole Kidman",
+        "evidence_passages": [
+          {
+            "title": "Rabbit Hole (film)",
+            "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+          },
+          {
+            "title": "Rabbit Hole (film)",
+            "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+          },
+          {
+            "title": "White Rabbit",
+            "text": "I shall be too late!\" Alice follows him down the rabbit hole into Wonderland."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the spouse of this producer?",
+        "resolved_sub_question": "Who is the spouse of this producer? Context: Nicole Kidman.",
+        "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+        "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+        "score": 0.4141174311161041,
+        "source_title": "Rabbit Hole (film)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.",
+        "hop_raw_response": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Rabbit Hole (film)",
+            "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+          },
+          {
+            "title": "Rabbit Hole (film)",
+            "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+          },
+          {
+            "title": "Planet Cake",
+            "text": "Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the producer of the Rabbit Hole? => Nicole Kidman (source: Rabbit Hole (film))\n2. Who is the spouse of this producer? (source: Rabbit Hole (film))\n\nWikipedia Title: Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.\n\nWikipedia Title: Rabbit Hole (film)\nRabbit Hole (film) Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Lionsgate distributed the film.\n\nWikipedia Title: Planet Cake\nPlanet Cake Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines. They have also created a host of ‘stunt’ cakes, the most famous being a realistic replica of the Sydney Opera House for Australia Day 2011, which weighed over 1.3 tons and required 32 cake decorators to make.\n\nWikipedia Title: Planet Cake\nPlanet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines.\n\nWikipedia Title: Rabbit, Run (film)\nKreitsek, who also served as producer. The movie co-starred Jack Albertson as Coach Marty Tothero, Arthur Hill as Rev.\n\nWikipedia Title: Baby Buggy Bunny\nThe story is about a dwarf gangster named \"Babyface\" Finster (based on gangster Baby Face Nelson) who, after a clever bank robbery, loses his ill-gotten gains down Bugs Bunny's rabbit hole, forcing him to don the disguise of an orphan baby to get it back. Baby Buggy Bunny Baby Buggy Bunny is a \"Merrie Melodies\" animated short directed by Chuck Jones and written by Michael Maltese, released in 1954.\n\nWikipedia Title: White Rabbit\nI shall be too late!\" Alice follows him down the rabbit hole into Wonderland.\n\nWikipedia Title: Down the Rabbit Hole (novel)\nOr at least her shoes are. Ingrid is in the wrong place at the wrong time.\n\nWikipedia Title: Heartbeat in the Brain\nIn the film, Feilding, a 27-year-old student at the time, drills a hole in her forehead with a dentist's drill. In the documentary, surgical scenes alternate with motion studies of Feilding's pet pigeon Birdie.\n\nWikipedia Title: The Velveteen Rabbit\nThe book was first published in 1922 and has been republished many times since. The Velveteen Rabbit The Velveteen Rabbit (or How Toys Become Real) is a British children's book written by Margery Williams (also known as Margery Williams Bianco) and illustrated by William Nicholson.\n\nWikipedia Title: Holes (film)\nBlank, Mike Medavoy and Teresa Tucker - Davies with music by Joel McNeely and based on the 1998 eponymous novel by Louis Sachar (who also wrote the screenplay). Holes (film) Holes is a 2003 American adventure comedy - drama film directed by Andrew Davis, produced by Lowell D.\n\nQuestion: Who is the spouse of the Rabbit Hole's producer?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. However, the provided passages do not contain information about Nicole Kidman's spouse.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. However, the provided passages do not contain information about Nicole Kidman's spouse.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "2hop__458131_174974",
+    "question": "Who is the spouse of the Rabbit Hole's producer?",
+    "answer": "Keith Urban",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Rabbit Hole >> producer",
+      "#1 >> spouse"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Keith Urban",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Keith Urban"
+    ]
+  }
+}

@@ -1,0 +1,988 @@
+{
+  "query": "What is the goal of the group that European Movement Germany is a member of?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "European Movement Germany"
+  ],
+  "raw_query_entities": [
+    "European Movement Germany"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "European Movement Germany",
+      "node_id": "entity:european_movement_germany",
+      "resolved_text": "European Movement Germany",
+      "score": 0.6976000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.39,
+      "score_margin": 0.11393333333333333,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What group is European Movement Germany a member of?",
+    "What is the goal of this group?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:european_movement_germany",
+      "score": 1.0035362910279961,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_movement",
+      "score": 0.7387795402079533,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_movement_france",
+      "score": 0.49726600231094736,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_movement_international",
+      "score": 0.46501392004829417,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_european_movement_international",
+      "score": 0.4470135183696928,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_parliament_mep",
+      "score": 0.3495014779740256,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_parliament",
+      "score": 0.2934617429374603,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ignazio_corrao",
+      "score": 0.29345314902364267,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:european_integration",
+      "score": 0.2634739031218259,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_constitutional_movement",
+      "score": 0.25847033591536867,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:united_kingdom",
+      "score": 0.25845427658130665,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:information_about_european_integration",
+      "score": 0.24346933845606267,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:ignazio_corrao_is_a_member_of_european_parliament_sentence_ignazio_corrao_0_0_ignazio_corrao_born_14_january_1984_is_an_",
+      "text": "Ignazio Corrao is a member of European Parliament",
+      "head_id": "entity:title_anchor_ignazio_corrao",
+      "tail_id": "entity:european_parliament",
+      "sentence_id": "sentence:ignazio_corrao_0_0_ignazio_corrao_born_14_january_1984_is_an_italian_politician_for_the_five_star",
+      "chunk_id": "chunk:ignazio_corrao_0",
+      "document_index": 5,
+      "score": 0.2912512316450213
+    },
+    {
+      "fact_id": "fact:european_movement_international_promotes_european_integration_sentence_european_movement_international_0_0_the_european_",
+      "text": "European Movement International promotes European integration",
+      "head_id": "entity:title_anchor_european_movement_international",
+      "tail_id": "entity:european_integration",
+      "sentence_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+      "chunk_id": "chunk:european_movement_international_0",
+      "document_index": 17,
+      "score": 0.26126421839363545
+    },
+    {
+      "fact_id": "fact:constitutional_movement_located_in_united_kingdom_sentence_constitutional_movement_0_0_the_constitutional_movement_was_a",
+      "text": "Constitutional Movement located in United Kingdom",
+      "head_id": "entity:title_anchor_constitutional_movement",
+      "tail_id": "entity:united_kingdom",
+      "sentence_id": "sentence:constitutional_movement_0_0_the_constitutional_movement_was_a_right_wing_political_group_in_the_united_kingd",
+      "chunk_id": "chunk:constitutional_movement_0",
+      "document_index": 10,
+      "score": 0.2562530228389987
+    },
+    {
+      "fact_id": "fact:european_movement_international_disseminates_information_about_european_integration_sentence_european_movement_internati",
+      "text": "European Movement International disseminates information about European integration",
+      "head_id": "entity:title_anchor_european_movement_international",
+      "tail_id": "entity:information_about_european_integration",
+      "sentence_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+      "chunk_id": "chunk:european_movement_international_0",
+      "document_index": 17,
+      "score": 0.24126019133168608
+    },
+    {
+      "fact_id": "fact:bernd_h_ttemann_is_secretary_general_of_european_movement_germany_sentence_bernd_h_ttemann_0_0_bernd_h_ttemann_born_dece",
+      "text": "Bernd H ttemann is Secretary General of European Movement Germany",
+      "head_id": "entity:title_anchor_bernd_h_ttemann",
+      "tail_id": "entity:european_movement_germany",
+      "sentence_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+      "chunk_id": "chunk:bernd_h_ttemann_0",
+      "document_index": 4,
+      "score": 0.2012609997429893
+    },
+    {
+      "fact_id": "fact:bernd_h_ttemann_born_in_paderborn_sentence_bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice",
+      "text": "Bernd H ttemann born in Paderborn",
+      "head_id": "entity:title_anchor_bernd_h_ttemann",
+      "tail_id": "entity:paderborn",
+      "sentence_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+      "chunk_id": "chunk:bernd_h_ttemann_0",
+      "document_index": 4,
+      "score": 0.1710718497815409
+    },
+    {
+      "fact_id": "fact:bernd_h_ttemann_is_vice_president_of_european_movement_international_sentence_bernd_h_ttemann_0_0_bernd_h_ttemann_born_d",
+      "text": "Bernd H ttemann is Vice President of European Movement International",
+      "head_id": "entity:title_anchor_bernd_h_ttemann",
+      "tail_id": "entity:european_movement_international",
+      "sentence_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+      "chunk_id": "chunk:bernd_h_ttemann_0",
+      "document_index": 4,
+      "score": 0.16126019633862948
+    }
+  ],
+  "bridge_entities": [
+    "Bernd H ttemann",
+    "European Movement International",
+    "December 8 1970",
+    "Paderborn"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What group is European Movement Germany a member of?",
+      "resolved_sub_question": "What group is European Movement Germany a member of?",
+      "sentence_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+      "sentence": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+      "score": 0.5474824,
+      "source_title": "Bernd Hüttemann",
+      "hop_answer": "European Movement International",
+      "hop_thought": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.",
+      "hop_raw_response": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.\nAnswer: European Movement International",
+      "evidence_passages": [
+        {
+          "title": "Bernd Hüttemann",
+          "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+        },
+        {
+          "title": "Bernd Hüttemann",
+          "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+        },
+        {
+          "title": "European Movement International",
+          "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the goal of this group?",
+      "resolved_sub_question": "What is the goal of this group? Context: European Movement International.",
+      "sentence_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+      "sentence": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+      "score": 0.5338809576884377,
+      "source_title": "European Movement International",
+      "hop_answer": "Unknown",
+      "hop_thought": "The goal of the European Movement International is to promote European integration and disseminate information about it.",
+      "hop_raw_response": "The goal of the European Movement International is to promote European integration and disseminate information about it.\nAnswer: promoting European integration and disseminating information about it",
+      "evidence_passages": [
+        {
+          "title": "European Movement International",
+          "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+        },
+        {
+          "title": "European Movement International",
+          "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+        },
+        {
+          "title": "Bernd Hüttemann",
+          "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+      "score": 0.08962589351350506,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_european_movement_international",
+      "score": 0.06534416806552548,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_bernd_h_ttemann",
+      "score": 0.06122901788007042,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+      "score": 0.05264008549662009,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:european_movement",
+      "score": 0.049891769055502966,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:european_movement_international",
+      "score": 0.0481046564640898,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:european_movement_germany",
+      "score": 0.04240569669337159,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:european_movement_france",
+      "score": 0.03654549695495523,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ivo_viskovi_0_0_he_was_a_member_of_the_civic_alliance_of_serbia_1990_1996_and_of_social_democr",
+      "score": 0.03281349147772144,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:european_integration",
+      "score": 0.025680941439571267,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:paderborn",
+      "score": 0.021294553722585798,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_constitutional_movement",
+      "score": 0.020890707457599446,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ignazio_corrao_0_0_ignazio_corrao_born_14_january_1984_is_an_italian_politician_for_the_five_star",
+      "score": 0.02025772152460365,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:information_about_european_integration",
+      "score": 0.019440437960492274,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:constitutional_movement_0_0_the_constitutional_movement_was_a_right_wing_political_group_in_the_united_kingd",
+      "score": 0.01848808547485594,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_ignazio_corrao",
+      "score": 0.017808187020639906,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:december_8_1970",
+      "score": 0.017557467945417984,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:european_parliament",
+      "score": 0.01590707276399566,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:united_kingdom",
+      "score": 0.014765476653695528,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:social_democratic_union",
+      "score": 0.0141481901645863,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:european_movement_international_0",
+      "passage_index": 17,
+      "title": "European Movement International",
+      "score": 0.0816599779918287,
+      "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+      "score_breakdown": {
+        "dense": 0.050890394831998746,
+        "graph": 0.052867521831923364,
+        "fact": 0.2520666952310158
+      }
+    },
+    {
+      "node_id": "chunk:ignazio_corrao_0",
+      "passage_index": 5,
+      "title": "Ignazio Corrao",
+      "score": 0.0815204596962735,
+      "text": "Ignazio Corrao\nIgnazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.",
+      "score_breakdown": {
+        "dense": 0.04999627014369526,
+        "graph": 0.0502050891770479,
+        "fact": 0.2597398957608449
+      }
+    },
+    {
+      "node_id": "chunk:constitutional_movement_0",
+      "passage_index": 10,
+      "title": "Constitutional Movement",
+      "score": 0.08053070535050219,
+      "text": "Constitutional Movement\nThe Constitutional Movement was a right wing political group in the United Kingdom. It was formed in 1979 by Andrew Fountaine as the National Front Constitutional Movement, a splinter group from the National Front. Offering a more moderate alternative to the NF, the Constitutional Movement claimed to have 2000 members by 1980.",
+      "score_breakdown": {
+        "dense": 0.050051495427948345,
+        "graph": 0.05127125984648805,
+        "fact": 0.25080669940789463
+      }
+    },
+    {
+      "node_id": "chunk:bernd_h_ttemann_0",
+      "passage_index": 4,
+      "title": "Bernd Hüttemann",
+      "score": 0.0800424202345222,
+      "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+      "score_breakdown": {
+        "dense": 0.05050088696661073,
+        "graph": 0.055529753209498635,
+        "fact": 0.2373867096002447
+      }
+    },
+    {
+      "node_id": "chunk:ivo_viskovi_0",
+      "passage_index": 2,
+      "title": "Ivo Visković",
+      "score": 0.04300562934932047,
+      "text": "Ivo Visković\nHe was a member of the Civic Alliance of Serbia (1990-1996) and of Social Democratic Union from its foundation in 1996 until the beginning of his diplomatic career in 2001, and has been member of the European Movement in Serbia and its Forum on International Relations (he was Forum's chairman from 2006 to 2008)",
+      "score_breakdown": {
+        "dense": 0.05013684092973635,
+        "graph": 0.05143455612655158,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jean_marie_cavada_0",
+      "passage_index": 8,
+      "title": "Jean-Marie Cavada",
+      "score": 0.04281744687114648,
+      "text": "Jean-Marie Cavada\nJean-Marie Cavada (born 24 February 1940 in Épinal, Vosges) is a French politician who served as a Member of the European Parliament for Ile de France from 2004 until 2019. Since 3 December 2011 he is president of the European Movement France.",
+      "score_breakdown": {
+        "dense": 0.050182276548515696,
+        "graph": 0.050723982564876154,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:christophe_b_chu_0",
+      "passage_index": 11,
+      "title": "Christophe Béchu",
+      "score": 0.04241297843680117,
+      "text": "Christophe Béchu\nChristophe Béchu (born 11 June 1974 in Angers, Maine-et-Loire) is a French politician, President of the General Council of the Maine-et-Loire department since 2004 and Member of the European Parliament (MEP) elected in the 2009 European election to 2011 for the West France constituency. A former member of DL, he was a member of the leading centre-right Union for a Popular Movement, later The Republicans, until leaving the party in early December 2017.",
+      "score_breakdown": {
+        "dense": 0.0498662385808148,
+        "graph": 0.04995515739117677,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:franck_proust_0",
+      "passage_index": 18,
+      "title": "Franck Proust",
+      "score": 0.0423099105505701,
+      "text": "Franck Proust\nFranck Proust (born 2 May 1963, in Poitiers) is a French politician of the Union for a Popular Movement and member of the European Parliament since 2011, first vice-chair of the French EPP Group delegation in the European Parliament. He is first deputy mayor of Nîmes. Being originally an entrepreneur, he is also an insurance agent in Nîmes.",
+      "score_breakdown": {
+        "dense": 0.04993632819907539,
+        "graph": 0.04948310013692878,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:antonia_parvanova_0",
+      "passage_index": 13,
+      "title": "Antonia Parvanova",
+      "score": 0.042279546084762684,
+      "text": "Antonia Parvanova\nAntonyia Parvanova (; born 26 April 1962 in Dobrich) is a Bulgarian politician and Member of the European Parliament. She is a member of the National Movement Simeon II, part of the Alliance of Liberals and Democrats for Europe, and became an MEP on 1 January 2007 with the accession of Bulgaria to the European Union.",
+      "score_breakdown": {
+        "dense": 0.050056925048789315,
+        "graph": 0.049160791026428535,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:roselyne_bachelot_0",
+      "passage_index": 14,
+      "title": "Roselyne Bachelot",
+      "score": 0.04221774831836414,
+      "text": "Roselyne Bachelot\nRoselyne Bachelot-Narquin, generally known as Roselyne Bachelot (born 24 December 1946 in Nevers, Nièvre), is a French politician, former Minister of Solidarity and Social Cohesion, and a member of the Union for a Popular Movement, which is part of the European People's Party.",
+      "score_breakdown": {
+        "dense": 0.049872130072928025,
+        "graph": 0.04929358926084574,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_european_movement_international",
+        "score": 0.06534416806552548,
+        "text": "European Movement International",
+        "metadata": {
+          "canonical_name": "European Movement International",
+          "aliases": [
+            "EMI",
+            "European Movement International"
+          ],
+          "surface_forms": [
+            "EMI",
+            "European Movement International"
+          ],
+          "title_anchor": "European Movement International"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_bernd_h_ttemann",
+        "score": 0.06122901788007042,
+        "text": "Bernd Hüttemann",
+        "metadata": {
+          "canonical_name": "Bernd Hüttemann",
+          "aliases": [
+            "BHT",
+            "Bernd H ttemann"
+          ],
+          "surface_forms": [
+            "BHT",
+            "Bernd H ttemann"
+          ],
+          "title_anchor": "Bernd Hüttemann"
+        }
+      },
+      {
+        "node_id": "entity:european_movement",
+        "score": 0.049891769055502966,
+        "text": "European Movement",
+        "metadata": {
+          "canonical_name": "European Movement",
+          "aliases": [
+            "EM",
+            "European Movement"
+          ],
+          "surface_forms": [
+            "EM",
+            "European Movement"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:european_movement_international",
+        "score": 0.0481046564640898,
+        "text": "European Movement International",
+        "metadata": {
+          "canonical_name": "European Movement International",
+          "aliases": [
+            "EMI",
+            "European Movement International"
+          ],
+          "surface_forms": [
+            "EMI",
+            "European Movement International"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:european_movement_germany",
+        "score": 0.04240569669337159,
+        "text": "European Movement Germany",
+        "metadata": {
+          "canonical_name": "European Movement Germany",
+          "aliases": [
+            "EMG",
+            "European Movement Germany"
+          ],
+          "surface_forms": [
+            "EMG",
+            "European Movement Germany"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+        "score": 0.08962589351350506,
+        "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+        "metadata": {
+          "title": "Bernd Hüttemann",
+          "chunk_id": "chunk:bernd_h_ttemann_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Bernd H ttemann",
+              "relation": "born on",
+              "tail": "December 8 1970"
+            },
+            {
+              "head": "Bernd H ttemann",
+              "relation": "born in",
+              "tail": "Paderborn"
+            },
+            {
+              "head": "Bernd H ttemann",
+              "relation": "is Vice President of",
+              "tail": "European Movement International"
+            },
+            {
+              "head": "Bernd H ttemann",
+              "relation": "is Secretary General of",
+              "tail": "European Movement Germany"
+            }
+          ],
+          "entities": [
+            "Bernd H ttemann",
+            "December 8 1970",
+            "Paderborn",
+            "European Movement International",
+            "European Movement Germany"
+          ],
+          "entity_ids": [
+            "entity:december_8_1970",
+            "entity:european_movement_germany",
+            "entity:european_movement_international",
+            "entity:paderborn",
+            "entity:title_anchor_bernd_h_ttemann"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+        "score": 0.05264008549662009,
+        "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+        "metadata": {
+          "title": "European Movement International",
+          "chunk_id": "chunk:european_movement_international_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "European Movement International",
+              "relation": "promotes",
+              "tail": "European integration"
+            },
+            {
+              "head": "European Movement International",
+              "relation": "disseminates",
+              "tail": "information about European integration"
+            }
+          ],
+          "entities": [
+            "European Movement International",
+            "European integration"
+          ],
+          "entity_ids": [
+            "entity:european_integration",
+            "entity:information_about_european_integration",
+            "entity:title_anchor_european_movement_international"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ivo_viskovi_0_0_he_was_a_member_of_the_civic_alliance_of_serbia_1990_1996_and_of_social_democr",
+        "score": 0.03281349147772144,
+        "text": "He was a member of the Civic Alliance of Serbia (1990-1996) and of Social Democratic Union from its foundation in 1996 until the beginning of his diplomatic career in 2001, and has been member of the European Movement in Serbia and its Forum on International Relations (he was Forum's chairman from 2006 to 2008)",
+        "metadata": {
+          "title": "Ivo Visković",
+          "chunk_id": "chunk:ivo_viskovi_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Civic Alliance",
+              "relation": "related_to",
+              "tail": "Serbia"
+            },
+            {
+              "head": "Serbia",
+              "relation": "related_to",
+              "tail": "Social Democratic Union"
+            },
+            {
+              "head": "Social Democratic Union",
+              "relation": "related_to",
+              "tail": "European Movement"
+            }
+          ],
+          "entities": [
+            "Civic Alliance",
+            "Serbia",
+            "Social Democratic Union",
+            "European Movement",
+            "Forum",
+            "International Relations",
+            "Serbia 1990-1996",
+            "International Relations he was Forum's chairman from 2006 to 2008"
+          ],
+          "entity_ids": [
+            "entity:civic_alliance",
+            "entity:european_movement",
+            "entity:forum",
+            "entity:international_relations",
+            "entity:international_relations_he_was_forum_s_chairman_from_2006_to_2008",
+            "entity:serbia",
+            "entity:serbia_1990_1996",
+            "entity:social_democratic_union"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ignazio_corrao_0_0_ignazio_corrao_born_14_january_1984_is_an_italian_politician_for_the_five_star",
+        "score": 0.02025772152460365,
+        "text": "Ignazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.",
+        "metadata": {
+          "title": "Ignazio Corrao",
+          "chunk_id": "chunk:ignazio_corrao_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Ignazio Corrao",
+              "relation": "born on",
+              "tail": "14 January 1984"
+            },
+            {
+              "head": "Ignazio Corrao",
+              "relation": "is a politician for",
+              "tail": "Five Star Movement"
+            },
+            {
+              "head": "Ignazio Corrao",
+              "relation": "is a member of",
+              "tail": "European Parliament"
+            }
+          ],
+          "entities": [
+            "Ignazio Corrao",
+            "Five Star Movement",
+            "European Parliament"
+          ],
+          "entity_ids": [
+            "entity:14_january_1984",
+            "entity:european_parliament",
+            "entity:five_star_movement",
+            "entity:title_anchor_ignazio_corrao"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:european_movement_international_0",
+        "score": 0.009060416129551996,
+        "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+        "metadata": {
+          "title": "European Movement International",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:european_integration",
+            "entity:information_about_european_integration",
+            "entity:title_anchor_european_movement_international"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:bernd_h_ttemann_0",
+        "score": 0.00826237162660919,
+        "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+        "metadata": {
+          "title": "Bernd Hüttemann",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:december_8_1970",
+            "entity:european_movement_germany",
+            "entity:european_movement_international",
+            "entity:paderborn",
+            "entity:title_anchor_bernd_h_ttemann"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:constitutional_movement_0",
+        "score": 0.006768568675063235,
+        "text": "Constitutional Movement\nThe Constitutional Movement was a right wing political group in the United Kingdom. It was formed in 1979 by Andrew Fountaine as the National Front Constitutional Movement, a splinter group from the National Front. Offering a more moderate alternative to the NF, the Constitutional Movement claimed to have 2000 members by 1980.",
+        "metadata": {
+          "title": "Constitutional Movement",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:andrew_fountaine",
+            "entity:national_front",
+            "entity:national_front_constitutional_movement",
+            "entity:nf",
+            "entity:title_anchor_constitutional_movement",
+            "entity:united_kingdom"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ignazio_corrao_0",
+        "score": 0.0034209649984285016,
+        "text": "Ignazio Corrao\nIgnazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.",
+        "metadata": {
+          "title": "Ignazio Corrao",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:14_january_1984",
+            "entity:european_parliament",
+            "entity:five_star_movement",
+            "entity:title_anchor_ignazio_corrao"
+          ]
+        }
+      }
+    ],
+    "qa_context": "European Movement International\nEuropean Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.\n\nIgnazio Corrao\nIgnazio Corrao\nIgnazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.\n\nConstitutional Movement\nConstitutional Movement\nThe Constitutional Movement was a right wing political group in the United Kingdom. It was formed in 1979 by Andrew Fountaine as the National Front Constitutional Movement, a splinter group from the National Front. Offering a more moderate alternative to the NF, the Constitutional Movement claimed to have 2000 members by 1980.\n\nBernd Hüttemann\nBernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\n\nIvo Visković\nIvo Visković\nHe was a member of the Civic Alliance of Serbia (1990-1996) and of Social Democratic Union from its foundation in 1996 until the beginning of his diplomatic career in 2001, and has been member of the European Movement in Serbia and its Forum on International Relations (he was Forum's chairman from 2006 to 2008)\n\nBernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\n\nEuropean Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.\n\nChristophe Béchu\nChristophe Béchu\nChristophe Béchu (born 11 June 1974 in Angers, Maine-et-Loire) is a French politician, President of the General Council of the Maine-et-Loire department since 2004 and Member of the European Parliament (MEP) elected in the 2009 European election to 2011 for the West France constituency. A former member of DL, he was a member of the leading centre-right Union for a Popular Movement, later The Republicans, until leaving the party in early December 2017.\n\nFranck Proust\nFranck Proust\nFranck Proust (born 2 May 1963, in Poitiers) is a French politician of the Union for a Popular Movement and member of the European Parliament since 2011, first vice-chair of the French EPP Group delegation in the European Parliament. He is first deputy mayor of Nîmes. Being originally an entrepreneur, he is also an insurance agent in Nîmes.\n\nJean-Marie Cavada\nJean-Marie Cavada\nJean-Marie Cavada (born 24 February 1940 in Épinal, Vosges) is a French politician who served as a Member of the European Parliament for Ile de France from 2004 until 2019. Since 3 December 2011 he is president of the European Movement France.\n\nDaniel Marsin\nDaniel Marsin\nDaniel Marsin (born November 13, 1951 in Pointe-à-Pitre, Guadeloupe) is a member of the Senate of France, representing the island of Guadeloupe. He is locally a member of \"Guadeloupe unie, socialisme et réalités\", and at the national level of the Modern Left, a satellite organisation of Nicolas Sarkozy' Union for a Popular Movement. He is a member of the parliamentary group European Democratic and Social Rally in the French Senate.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:european_movement_international_0",
+        "passage_index": 17,
+        "title": "European Movement International",
+        "score": 0.0816599779918287,
+        "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+        "score_breakdown": {
+          "dense": 0.050890394831998746,
+          "graph": 0.052867521831923364,
+          "fact": 0.2520666952310158
+        }
+      },
+      {
+        "node_id": "chunk:ignazio_corrao_0",
+        "passage_index": 5,
+        "title": "Ignazio Corrao",
+        "score": 0.0815204596962735,
+        "text": "Ignazio Corrao\nIgnazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.",
+        "score_breakdown": {
+          "dense": 0.04999627014369526,
+          "graph": 0.0502050891770479,
+          "fact": 0.2597398957608449
+        }
+      },
+      {
+        "node_id": "chunk:constitutional_movement_0",
+        "passage_index": 10,
+        "title": "Constitutional Movement",
+        "score": 0.08053070535050219,
+        "text": "Constitutional Movement\nThe Constitutional Movement was a right wing political group in the United Kingdom. It was formed in 1979 by Andrew Fountaine as the National Front Constitutional Movement, a splinter group from the National Front. Offering a more moderate alternative to the NF, the Constitutional Movement claimed to have 2000 members by 1980.",
+        "score_breakdown": {
+          "dense": 0.050051495427948345,
+          "graph": 0.05127125984648805,
+          "fact": 0.25080669940789463
+        }
+      },
+      {
+        "node_id": "chunk:bernd_h_ttemann_0",
+        "passage_index": 4,
+        "title": "Bernd Hüttemann",
+        "score": 0.0800424202345222,
+        "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+        "score_breakdown": {
+          "dense": 0.05050088696661073,
+          "graph": 0.055529753209498635,
+          "fact": 0.2373867096002447
+        }
+      },
+      {
+        "node_id": "chunk:ivo_viskovi_0",
+        "passage_index": 2,
+        "title": "Ivo Visković",
+        "score": 0.04300562934932047,
+        "text": "Ivo Visković\nHe was a member of the Civic Alliance of Serbia (1990-1996) and of Social Democratic Union from its foundation in 1996 until the beginning of his diplomatic career in 2001, and has been member of the European Movement in Serbia and its Forum on International Relations (he was Forum's chairman from 2006 to 2008)",
+        "score_breakdown": {
+          "dense": 0.05013684092973635,
+          "graph": 0.05143455612655158,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jean_marie_cavada_0",
+        "passage_index": 8,
+        "title": "Jean-Marie Cavada",
+        "score": 0.04281744687114648,
+        "text": "Jean-Marie Cavada\nJean-Marie Cavada (born 24 February 1940 in Épinal, Vosges) is a French politician who served as a Member of the European Parliament for Ile de France from 2004 until 2019. Since 3 December 2011 he is president of the European Movement France.",
+        "score_breakdown": {
+          "dense": 0.050182276548515696,
+          "graph": 0.050723982564876154,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:christophe_b_chu_0",
+        "passage_index": 11,
+        "title": "Christophe Béchu",
+        "score": 0.04241297843680117,
+        "text": "Christophe Béchu\nChristophe Béchu (born 11 June 1974 in Angers, Maine-et-Loire) is a French politician, President of the General Council of the Maine-et-Loire department since 2004 and Member of the European Parliament (MEP) elected in the 2009 European election to 2011 for the West France constituency. A former member of DL, he was a member of the leading centre-right Union for a Popular Movement, later The Republicans, until leaving the party in early December 2017.",
+        "score_breakdown": {
+          "dense": 0.0498662385808148,
+          "graph": 0.04995515739117677,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:franck_proust_0",
+        "passage_index": 18,
+        "title": "Franck Proust",
+        "score": 0.0423099105505701,
+        "text": "Franck Proust\nFranck Proust (born 2 May 1963, in Poitiers) is a French politician of the Union for a Popular Movement and member of the European Parliament since 2011, first vice-chair of the French EPP Group delegation in the European Parliament. He is first deputy mayor of Nîmes. Being originally an entrepreneur, he is also an insurance agent in Nîmes.",
+        "score_breakdown": {
+          "dense": 0.04993632819907539,
+          "graph": 0.04948310013692878,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:antonia_parvanova_0",
+        "passage_index": 13,
+        "title": "Antonia Parvanova",
+        "score": 0.042279546084762684,
+        "text": "Antonia Parvanova\nAntonyia Parvanova (; born 26 April 1962 in Dobrich) is a Bulgarian politician and Member of the European Parliament. She is a member of the National Movement Simeon II, part of the Alliance of Liberals and Democrats for Europe, and became an MEP on 1 January 2007 with the accession of Bulgaria to the European Union.",
+        "score_breakdown": {
+          "dense": 0.050056925048789315,
+          "graph": 0.049160791026428535,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:roselyne_bachelot_0",
+        "passage_index": 14,
+        "title": "Roselyne Bachelot",
+        "score": 0.04221774831836414,
+        "text": "Roselyne Bachelot\nRoselyne Bachelot-Narquin, generally known as Roselyne Bachelot (born 24 December 1946 in Nevers, Nièvre), is a French politician, former Minister of Solidarity and Social Cohesion, and a member of the Union for a Popular Movement, which is part of the European People's Party.",
+        "score_breakdown": {
+          "dense": 0.049872130072928025,
+          "graph": 0.04929358926084574,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What group is European Movement Germany a member of?",
+        "resolved_sub_question": "What group is European Movement Germany a member of?",
+        "sentence_id": "sentence:bernd_h_ttemann_0_0_bernd_h_ttemann_born_december_8_1970_in_paderborn_is_vice_president_of_the_eu",
+        "sentence": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.",
+        "score": 0.5474824,
+        "source_title": "Bernd Hüttemann",
+        "hop_answer": "European Movement International",
+        "hop_thought": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.",
+        "hop_raw_response": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.\nAnswer: European Movement International",
+        "evidence_passages": [
+          {
+            "title": "Bernd Hüttemann",
+            "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+          },
+          {
+            "title": "Bernd Hüttemann",
+            "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+          },
+          {
+            "title": "European Movement International",
+            "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the goal of this group?",
+        "resolved_sub_question": "What is the goal of this group? Context: European Movement International.",
+        "sentence_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
+        "sentence": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
+        "score": 0.5338809576884377,
+        "source_title": "European Movement International",
+        "hop_answer": "Unknown",
+        "hop_thought": "The goal of the European Movement International is to promote European integration and disseminate information about it.",
+        "hop_raw_response": "The goal of the European Movement International is to promote European integration and disseminate information about it.\nAnswer: promoting European integration and disseminating information about it",
+        "evidence_passages": [
+          {
+            "title": "European Movement International",
+            "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+          },
+          {
+            "title": "European Movement International",
+            "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
+          },
+          {
+            "title": "Bernd Hüttemann",
+            "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What group is European Movement Germany a member of? => European Movement International (source: Bernd Hüttemann)\n2. What is the goal of this group? (source: European Movement International)\n\nFact hints:\n- Bernd H ttemann is Vice President of European Movement International\n- European Movement International promotes European integration\n- European Movement International disseminates information about European integration\n- Bernd H ttemann is Secretary General of European Movement Germany\n- Bernd H ttemann born in Paderborn\n\nWikipedia Title: Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\n\nWikipedia Title: Bernd Hüttemann\nBernd Hüttemann Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany.\n\nWikipedia Title: European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.\n\nWikipedia Title: European Movement International\nEuropean Movement International The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.\n\nWikipedia Title: Ivo Visković\nIvo Visković He was a member of the Civic Alliance of Serbia (1990-1996) and of Social Democratic Union from its foundation in 1996 until the beginning of his diplomatic career in 2001, and has been member of the European Movement in Serbia and its Forum on International Relations (he was Forum's chairman from 2006 to 2008)\n\nWikipedia Title: Christophe Béchu\nA former member of DL, he was a member of the leading centre-right Union for a Popular Movement, later The Republicans, until leaving the party in early December 2017. Christophe Béchu Christophe Béchu (born 11 June 1974 in Angers, Maine-et-Loire) is a French politician, President of the General Council of the Maine-et-Loire department since 2004 and Member of the European Parliament (MEP) elected in the 2009 European election to 2011 for the West France constituency.\n\nWikipedia Title: Franck Proust\nFranck Proust Franck Proust (born 2 May 1963, in Poitiers) is a French politician of the Union for a Popular Movement and member of the European Parliament since 2011, first vice-chair of the French EPP Group delegation in the European Parliament. He is first deputy mayor of Nîmes.\n\nWikipedia Title: Jean-Marie Cavada\nSince 3 December 2011 he is president of the European Movement France. Jean-Marie Cavada Jean-Marie Cavada (born 24 February 1940 in Épinal, Vosges) is a French politician who served as a Member of the European Parliament for Ile de France from 2004 until 2019.\n\nWikipedia Title: Daniel Marsin\nHe is a member of the parliamentary group European Democratic and Social Rally in the French Senate. He is locally a member of \"Guadeloupe unie, socialisme et réalités\", and at the national level of the Modern Left, a satellite organisation of Nicolas Sarkozy' Union for a Popular Movement.\n\nWikipedia Title: Ignazio Corrao\nIgnazio Corrao Ignazio Corrao (born 14 January 1984) is an Italian politician for the Five Star Movement and he is a member of the European Parliament since 2014.\n\nWikipedia Title: Constitutional Movement\nConstitutional Movement The Constitutional Movement was a right wing political group in the United Kingdom. It was formed in 1979 by Andrew Fountaine as the National Front Constitutional Movement, a splinter group from the National Front.\n\nQuestion: What is the goal of the group that European Movement Germany is a member of?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The European Movement Germany is a member of the European Movement International. The goal of the European Movement International is to promote European integration and disseminate information about it.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The European Movement Germany is a member of the European Movement International. The goal of the European Movement International is to promote European integration and disseminate information about it.\nAnswer: Promoting European integration and disseminating information about it.",
+  "sample_metadata": {
+    "sample_id": "2hop__390947_232243",
+    "question": "What is the goal of the group that European Movement Germany is a member of?",
+    "answer": "European integration",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "European Movement Germany >> member of",
+      "#1 >> movement"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "European integration",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "European integration"
+    ]
+  }
+}

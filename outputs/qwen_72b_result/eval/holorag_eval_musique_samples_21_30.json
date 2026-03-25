@@ -1,0 +1,1704 @@
+{
+  "summary": {
+    "num_examples": 10,
+    "passage_recall_at_5": 0.85,
+    "passage_hit_at_5": 0.9,
+    "context_contains_answer_rate": 0.8,
+    "answer_match_rate": 1.0,
+    "avg_qa_context_words": 663.4,
+    "avg_ranked_facts": 6.1,
+    "avg_reasoning_chain_count": 2,
+    "qa_exact_match": 0.6,
+    "qa_f1": 0.6571,
+    "qa_non_empty_prediction_rate": 1.0
+  },
+  "settings": {
+    "samples_glob": "/data/xyh/code/HoloRAG/reproduce/test/groups/musique_21_30/sample_musique*.json",
+    "outputs_dir": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result",
+    "result_filename": "last_query_result.json",
+    "retrieval_k": 5,
+    "qa_generation_enabled": true,
+    "llm_base_url": "http://127.0.0.1:8000/v1",
+    "llm_name": "/data/xyh/models/Qwen2.5-72B-Instruct"
+  },
+  "per_example": [
+    {
+      "sample_file": "sample_musique21.json",
+      "sample_id": "2hop__166824_185403",
+      "question": "What league does the team that plays in Stadio Ciro Vigorito play for?",
+      "gold_answers": [
+        "Lega Pro Prima Divisione"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.5,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Stadio Ciro Vigorito",
+        "Carmelo Imbriani"
+      ],
+      "retrieved_titles_top5": [
+        "Stadio Ciro Vigorito",
+        "Conte Arduino Mangoni",
+        "Stadio Francesco Gabrielli",
+        "Stadio San Paolo",
+        "F.C. Crotone"
+      ],
+      "matched_support_titles": [
+        "Stadio Ciro Vigorito"
+      ],
+      "context_contains_answer": 0.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Lega Pro Prima Divisione"
+      ],
+      "qa_context_words": 451,
+      "qa_context_chars": 2715,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Stadio Santa Colomba",
+        "Benevento Italy",
+        "Benevento",
+        "Italy",
+        "Benevento Calcio"
+      ],
+      "query_entities": [
+        "Stadio Ciro Vigorito"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Stadio Ciro Vigorito",
+          "node_id": "entity:title_anchor_stadio_ciro_vigorito",
+          "resolved_text": "Stadio Ciro Vigorito",
+          "score": 0.7400000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.5,
+          "score_margin": 0.2880000000000001,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Which team plays in Stadio Ciro Vigorito?",
+        "What league does this team play for?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Which team plays in Stadio Ciro Vigorito?",
+          "resolved_sub_question": "Which team plays in Stadio Ciro Vigorito?",
+          "sentence_id": "sentence:stadio_ciro_vigorito_0_0_stadio_ciro_vigorito_formerly_stadio_santa_colomba_is_a_multi_use_stadium_in_b",
+          "sentence": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy.",
+          "score": 0.5124920000000001,
+          "source_title": "Stadio Ciro Vigorito",
+          "hop_answer": "Benevento Calcio",
+          "hop_thought": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.",
+          "hop_raw_response": "The text states that Stadio Ciro Vigorito is the home stadium of Benevento Calcio.\nAnswer: Benevento Calcio",
+          "evidence_passages": [
+            {
+              "title": "Stadio Ciro Vigorito",
+              "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+            },
+            {
+              "title": "Stadio Ciro Vigorito",
+              "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+            },
+            {
+              "title": "Stadio San Paolo",
+              "text": "Stadio San Paolo () is a stadium in the western suburb of Fuorigrotta in Naples, Italy, and is the third largest football stadium in Italy after the San Siro and Stadio Olimpico."
+            }
+          ]
+        },
+        {
+          "sub_question": "What league does this team play for?",
+          "resolved_sub_question": "What league does this team play for? Context: Benevento Calcio.",
+          "sentence_id": "sentence:stadio_ciro_vigorito_0_1_it_is_currently_used_mostly_for_football_matches_and_is_the_home_stadium_of_bene",
+          "sentence": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio.",
+          "score": 0.4333115400634766,
+          "source_title": "Stadio Ciro Vigorito",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided does not specify the current league in which Benevento Calcio plays.",
+          "hop_raw_response": "The context provided does not specify the current league in which Benevento Calcio plays.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Stadio Ciro Vigorito",
+              "text": "It is currently used mostly for football matches and is the home stadium of Benevento Calcio."
+            },
+            {
+              "title": "Stadio Ciro Vigorito",
+              "text": "Stadio Ciro Vigorito\nStadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy. It is currently used mostly for football matches and is the home stadium of Benevento Calcio. The stadium is able to hold 25,000 people and was opened in 1979."
+            },
+            {
+              "title": "Stadio Ciro Vigorito",
+              "text": "Stadio Ciro Vigorito (formerly Stadio Santa Colomba) is a multi-use stadium in Benevento, Italy."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Stadio Ciro Vigorito",
+          "score": 0.0852882550121523,
+          "words": 46,
+          "score_breakdown": {
+            "dense": 0.05082228323837851,
+            "graph": 0.05536292061171639,
+            "fact": 0.2715141536501947
+          }
+        },
+        {
+          "title": "Conte Arduino Mangoni",
+          "score": 0.0802191272130009,
+          "words": 47,
+          "score_breakdown": {
+            "dense": 0.05007096838524962,
+            "graph": 0.05459378415308457,
+            "fact": 0.24201306236792164
+          }
+        },
+        {
+          "title": "Stadio Francesco Gabrielli",
+          "score": 0.0799542689152834,
+          "words": 38,
+          "score_breakdown": {
+            "dense": 0.050063644065463736,
+            "graph": 0.05189720260816169,
+            "fact": 0.24566735931219894
+          }
+        },
+        {
+          "title": "Stadio San Paolo",
+          "score": 0.0793013807691749,
+          "words": 87,
+          "score_breakdown": {
+            "dense": 0.05011772957628085,
+            "graph": 0.05205271933922578,
+            "fact": 0.24080542466968458
+          }
+        },
+        {
+          "title": "F.C. Crotone",
+          "score": 0.04260718765824594,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.050408985935127194,
+            "graph": 0.04960748464641993,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique22.json",
+      "sample_id": "2hop__698577_851686",
+      "question": "What is a notable work written by the author of The Timothy files?",
+      "gold_answers": [
+        "Anderson Tapes"
+      ],
+      "predicted_answer": "The Anderson Tapes",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "The Timothy Files",
+        "The Anderson Tapes (novel)"
+      ],
+      "retrieved_titles_top5": [
+        "The Timothy Files",
+        "The Anderson Tapes (novel)",
+        "The Boys on the Bus",
+        "Timothy P. Williams",
+        "Martine Blanc"
+      ],
+      "matched_support_titles": [
+        "The Anderson Tapes (novel)",
+        "The Timothy Files"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Anderson Tapes",
+        "The Anderson Tapes"
+      ],
+      "qa_context_words": 698,
+      "qa_context_chars": 4339,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 5,
+      "bridge_entities": [
+        "Lawrence Sanders",
+        "Anderson Tapes"
+      ],
+      "query_entities": [
+        "The Timothy Files"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Timothy files",
+          "node_id": "entity:title_anchor_the_timothy_files",
+          "resolved_text": "The Timothy Files",
+          "score": 0.7888000000000001,
+          "alias_score": 1.0,
+          "relation_score": 1.0,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.39,
+          "score_margin": 0.19380000000000008,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who is the author of The Timothy Files?",
+        "What is a notable work written by this author?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the author of The Timothy Files?",
+          "resolved_sub_question": "Who is the author of The Timothy Files?",
+          "sentence_id": "sentence:the_timothy_files_0_0_the_timothy_files_is_a_1987_best_selling_work_of_fiction_by_lawrence_sanders",
+          "sentence": "The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders.",
+          "score": 0.7150160000000001,
+          "source_title": "The Timothy Files",
+          "hop_answer": "Lawrence Sanders",
+          "hop_thought": "The text clearly states that The Timothy Files is a 1987 best-selling work of fiction by Lawrence Sanders.",
+          "hop_raw_response": "The text clearly states that The Timothy Files is a 1987 best-selling work of fiction by Lawrence Sanders.\nAnswer: Lawrence Sanders",
+          "evidence_passages": [
+            {
+              "title": "The Timothy Files",
+              "text": "The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders."
+            },
+            {
+              "title": "The Timothy Files",
+              "text": "The Timothy Files\nThe Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders. It consists of linked stories featuring Timothy Cone, who works as a hard-boiled type investigator. He is a scruffy character, rough of mouth and demeanor but pure of heart. Cone has trouble with relationships, surviving on a rough-edged on-going affair with his supervisor, and an only slightly softer relationship with his cat Cleo. The stories in the book deal with his successful attempts to find out the truth and put villains behind bars."
+            },
+            {
+              "title": "Ellen Steiber",
+              "text": "Ellen Steiber is an American novelist and author of books for young readers, including some based on single episodes of \"The X-Files\" and \"Full House\" series."
+            }
+          ]
+        },
+        {
+          "sub_question": "What is a notable work written by this author?",
+          "resolved_sub_question": "What is a notable work written by this author? Context: Lawrence Sanders.",
+          "sentence_id": "sentence:the_timothy_files_0_0_the_timothy_files_is_a_1987_best_selling_work_of_fiction_by_lawrence_sanders",
+          "sentence": "The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders.",
+          "score": 0.5914666666666668,
+          "source_title": "The Timothy Files",
+          "hop_answer": "The Anderson Tapes",
+          "hop_thought": "Lawrence Sanders wrote \"The Anderson Tapes,\" which is noted as his debut crime fiction novel.",
+          "hop_raw_response": "Lawrence Sanders wrote \"The Anderson Tapes,\" which is noted as his debut crime fiction novel.\nAnswer: The Anderson Tapes",
+          "evidence_passages": [
+            {
+              "title": "The Timothy Files",
+              "text": "The Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders."
+            },
+            {
+              "title": "The Timothy Files",
+              "text": "The Timothy Files\nThe Timothy Files is a 1987 best selling work of fiction by Lawrence Sanders. It consists of linked stories featuring Timothy Cone, who works as a hard-boiled type investigator. He is a scruffy character, rough of mouth and demeanor but pure of heart. Cone has trouble with relationships, surviving on a rough-edged on-going affair with his supervisor, and an only slightly softer relationship with his cat Cleo. The stories in the book deal with his successful attempts to find out the truth and put villains behind bars."
+            },
+            {
+              "title": "The Anderson Tapes (novel)",
+              "text": "The Anderson Tapes is the debut crime fiction novel by Lawrence Sanders, published in 1970."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Timothy Files",
+          "score": 0.09747550430293282,
+          "words": 90,
+          "score_breakdown": {
+            "dense": 0.05084425883607383,
+            "graph": 0.053880409490757335,
+            "fact": 0.35564692730576675
+          }
+        },
+        {
+          "title": "The Anderson Tapes (novel)",
+          "score": 0.09206759618393745,
+          "words": 116,
+          "score_breakdown": {
+            "dense": 0.04983985164829922,
+            "graph": 0.057491466593752226,
+            "fact": 0.3160549186616481
+          }
+        },
+        {
+          "title": "The Boys on the Bus",
+          "score": 0.09196808041999982,
+          "words": 32,
+          "score_breakdown": {
+            "dense": 0.050129403543876905,
+            "graph": 0.05050728455326586,
+            "fact": 0.32829815403258505
+          }
+        },
+        {
+          "title": "Timothy P. Williams",
+          "score": 0.041639402402470174,
+          "words": 49,
+          "score_breakdown": {
+            "dense": 0.05030082907994006,
+            "graph": 0.046579821361677126,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Martine Blanc",
+          "score": 0.04163221121088036,
+          "words": 40,
+          "score_breakdown": {
+            "dense": 0.05029523277454993,
+            "graph": 0.04656611061625963,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique23.json",
+      "sample_id": "2hop__362107_652514",
+      "question": "In which borough was Callum McManaman born?",
+      "gold_answers": [
+        "Knowsley",
+        "Metropolitan Borough of Knowsley"
+      ],
+      "predicted_answer": "Metropolitan Borough of Knowsley",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Callum McManaman",
+        "Whiston, Merseyside"
+      ],
+      "retrieved_titles_top5": [
+        "Callum McManaman",
+        "Essex County Park Commission Administration Building",
+        "Whiston, Merseyside",
+        "Callum Kane",
+        "Dunbar Hospital"
+      ],
+      "matched_support_titles": [
+        "Callum McManaman",
+        "Whiston, Merseyside"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Knowsley",
+        "Metropolitan Borough of Knowsley"
+      ],
+      "qa_context_words": 544,
+      "qa_context_chars": 3328,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 5,
+      "bridge_entities": [
+        "Whiston Merseyside"
+      ],
+      "query_entities": [
+        "Callum McManaman"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Callum McManaman",
+          "node_id": "entity:chief_minister",
+          "resolved_text": "Chief Minister",
+          "score": 0.5940000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.0,
+          "context_score": 0.2,
+          "compatibility_score": 0.775,
+          "score_margin": 0.07060000000000011,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Where was Callum McManaman born?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Where was Callum McManaman born?",
+          "resolved_sub_question": "Where was Callum McManaman born?",
+          "sentence_id": "sentence:callum_mcmanaman_0_0_born_in_whiston_merseyside_lived_and_brought_up_in_rainhill_merseyside_mcman",
+          "sentence": "Born in Whiston, Merseyside, lived and brought up in Rainhill, Merseyside, McManaman began his youth career at Everton before being released in 2007 and joining Wigan Athletic.",
+          "score": 0.34611426867202877,
+          "source_title": "Callum McManaman",
+          "hop_answer": "Whiston, Merseyside",
+          "hop_thought": "The evidence states that Callum McManaman was born in Whiston, Merseyside.",
+          "hop_raw_response": "The evidence states that Callum McManaman was born in Whiston, Merseyside.\nAnswer: Whiston, Merseyside",
+          "evidence_passages": [
+            {
+              "title": "Callum McManaman",
+              "text": "Born in Whiston, Merseyside, lived and brought up in Rainhill, Merseyside, McManaman began his youth career at Everton before being released in 2007 and joining Wigan Athletic."
+            },
+            {
+              "title": "Callum McManaman",
+              "text": "Callum McManaman\nBorn in Whiston, Merseyside, lived and brought up in Rainhill, Merseyside, McManaman began his youth career at Everton before being released in 2007 and joining Wigan Athletic. He made his first team debut in 2009, and was the man of the match as they won the FA Cup in 2013. In January 2015, he joined West Bromwich Albion for £4.75 million."
+            },
+            {
+              "title": "Callum Kane",
+              "text": "While appearing in the sixth series of \"Hollyoaks Later\" in October 2013, Callum was killed off."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 1,
+      "retrieved_passages_top5": [
+        {
+          "title": "Callum McManaman",
+          "score": 0.10007158345759994,
+          "words": 63,
+          "score_breakdown": {
+            "dense": 0.0515626376949261,
+            "graph": 0.05295190646117709,
+            "fact": 0.372177071913583
+          }
+        },
+        {
+          "title": "Essex County Park Commission Administration Building",
+          "score": 0.09031482031548568,
+          "words": 43,
+          "score_breakdown": {
+            "dense": 0.04996475637355786,
+            "graph": 0.048961258767364395,
+            "fact": 0.32097217786546356
+          }
+        },
+        {
+          "title": "Whiston, Merseyside",
+          "score": 0.08926505509115548,
+          "words": 41,
+          "score_breakdown": {
+            "dense": 0.050280934617731386,
+            "graph": 0.05194309506086736,
+            "fact": 0.3068507502209534
+          }
+        },
+        {
+          "title": "Callum Kane",
+          "score": 0.04105325765638582,
+          "words": 117,
+          "score_breakdown": {
+            "dense": 0.050290921082560475,
+            "graph": 0.04464417020325854,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Dunbar Hospital",
+          "score": 0.040901454206220246,
+          "words": 46,
+          "score_breakdown": {
+            "dense": 0.04992300382809422,
+            "graph": 0.04481267366922807,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique24.json",
+      "sample_id": "2hop__402530_774333",
+      "question": "What other county does the county where Imperial is located share a border with?",
+      "gold_answers": [
+        "Crockett County"
+      ],
+      "predicted_answer": "Crockett County",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Lancaster Crossing",
+        "Imperial, Texas"
+      ],
+      "retrieved_titles_top5": [
+        "Imperial, Texas",
+        "Gmina Włodawa",
+        "Lancaster Crossing",
+        "Virginia, Lempira",
+        "Canada–United States border"
+      ],
+      "matched_support_titles": [
+        "Imperial, Texas",
+        "Lancaster Crossing"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Crockett County"
+      ],
+      "qa_context_words": 543,
+      "qa_context_chars": 3532,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 5,
+      "bridge_entities": [
+        "Pecos County",
+        "Texas",
+        "Crockett County"
+      ],
+      "query_entities": [
+        "Imperial"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Imperial",
+          "node_id": "entity:imperial",
+          "resolved_text": "Imperial",
+          "score": 0.8500000000000001,
+          "alias_score": 1.0,
+          "relation_score": 1.0,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.775,
+          "score_margin": 0.3413333333333335,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "What county is Imperial located in?",
+        "What counties does this county share a border with?",
+        "What other county besides this one does the county where Imperial is located share a border with?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "What county is Imperial located in?",
+          "resolved_sub_question": "What county is Imperial located in?",
+          "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
+          "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
+          "score": 0.5903502857142859,
+          "source_title": "Imperial, Texas",
+          "hop_answer": "Pecos County",
+          "hop_thought": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.",
+          "hop_raw_response": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.\nAnswer: Pecos County",
+          "evidence_passages": [
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
+            },
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
+            },
+            {
+              "title": "Gmina Włodawa",
+              "text": "Gmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine."
+            }
+          ]
+        },
+        {
+          "sub_question": "What counties does this county share a border with?",
+          "resolved_sub_question": "What counties does this county share a border with? Context: Pecos County.",
+          "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
+          "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
+          "score": 0.5531502857142858,
+          "source_title": "Imperial, Texas",
+          "hop_answer": "Crockett County",
+          "hop_thought": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.",
+          "hop_raw_response": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.\nAnswer: Crockett County",
+          "evidence_passages": [
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
+            },
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
+            },
+            {
+              "title": "Lancaster Crossing",
+              "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
+            }
+          ]
+        },
+        {
+          "sub_question": "What other county besides this one does the county where Imperial is located share a border with?",
+          "resolved_sub_question": "What other county besides this one does the county where Imperial is located share a border with? Context: Pecos County; Crockett County.",
+          "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
+          "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
+          "score": 0.505929411764706,
+          "source_title": "Imperial, Texas",
+          "hop_answer": "Crockett County",
+          "hop_thought": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.",
+          "hop_raw_response": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.\nAnswer: Crockett County",
+          "evidence_passages": [
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
+            },
+            {
+              "title": "Imperial, Texas",
+              "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
+            },
+            {
+              "title": "Lancaster Crossing",
+              "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 3,
+      "retrieved_passages_top5": [
+        {
+          "title": "Imperial, Texas",
+          "score": 0.10032929032289643,
+          "words": 22,
+          "score_breakdown": {
+            "dense": 0.0509115106106087,
+            "graph": 0.05756930530728303,
+            "fact": 0.3670477859658449
+          }
+        },
+        {
+          "title": "Gmina Włodawa",
+          "score": 0.09479465367097797,
+          "words": 44,
+          "score_breakdown": {
+            "dense": 0.05014050734011276,
+            "graph": 0.051224200441909166,
+            "fact": 0.3456674300089548
+          }
+        },
+        {
+          "title": "Lancaster Crossing",
+          "score": 0.08656771657690593,
+          "words": 76,
+          "score_breakdown": {
+            "dense": 0.04998334991615928,
+            "graph": 0.053280521730794304,
+            "fact": 0.2872847840252002
+          }
+        },
+        {
+          "title": "Virginia, Lempira",
+          "score": 0.04157966196619174,
+          "words": 34,
+          "score_breakdown": {
+            "dense": 0.05023471062408874,
+            "graph": 0.0465019037431431,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Canada–United States border",
+          "score": 0.04152680436112858,
+          "words": 135,
+          "score_breakdown": {
+            "dense": 0.050100866935382765,
+            "graph": 0.046571091822226865,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique25.json",
+      "sample_id": "2hop__195917_575657",
+      "question": "In what county is William W. Blair's birthplace located?",
+      "gold_answers": [
+        "Orleans County",
+        "Orleans County, New York"
+      ],
+      "predicted_answer": "Orleans County",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "William W. Blair",
+        "Holley, New York"
+      ],
+      "retrieved_titles_top5": [
+        "Holley, New York",
+        "William W. Blair",
+        "John Blair Smith Todd",
+        "Blair Athol, New South Wales",
+        "Port Blair"
+      ],
+      "matched_support_titles": [
+        "Holley, New York",
+        "William W. Blair"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Orleans County",
+        "Orleans County, New York"
+      ],
+      "qa_context_words": 542,
+      "qa_context_chars": 3282,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 6,
+      "bridge_entities": [
+        "Holley New York",
+        "Orleans County"
+      ],
+      "query_entities": [
+        "William W Blair"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "William W Blair",
+          "node_id": "entity:blair_athol",
+          "resolved_text": "Blair Athol",
+          "score": 0.5463333333333333,
+          "alias_score": 0.25,
+          "relation_score": 1.0,
+          "context_score": 0.4666666666666667,
+          "compatibility_score": 0.775,
+          "score_margin": 0.009333333333333305,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "What is William W. Blair's birthplace?",
+        "In what county is this birthplace located?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "What is William W. Blair's birthplace?",
+          "resolved_sub_question": "What is William W. Blair's birthplace?",
+          "sentence_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+          "sentence": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+          "score": 0.3843621923488617,
+          "source_title": "William W. Blair",
+          "hop_answer": "Holley, New York",
+          "hop_thought": "The evidence states that William W. Blair was born in Holley, New York.",
+          "hop_raw_response": "The evidence states that William W. Blair was born in Holley, New York.\nAnswer: Holley, New York",
+          "evidence_passages": [
+            {
+              "title": "William W. Blair",
+              "text": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement."
+            },
+            {
+              "title": "William W. Blair",
+              "text": "William W. Blair\nBlair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement."
+            },
+            {
+              "title": "William W. Blair",
+              "text": "Blair was born in Holley, New York."
+            }
+          ]
+        },
+        {
+          "sub_question": "In what county is this birthplace located?",
+          "resolved_sub_question": "In what county is this birthplace located? Context: Holley, New York.",
+          "sentence_id": "sentence:william_w_blair_0_0_blair_was_born_in_holley_new_york",
+          "sentence": "Blair was born in Holley, New York.",
+          "score": 0.4670426671206157,
+          "source_title": "William W. Blair",
+          "hop_answer": "Orleans County",
+          "hop_thought": "Holley, New York, is located in Orleans County, according to the information provided.",
+          "hop_raw_response": "Holley, New York, is located in Orleans County, according to the information provided.\nAnswer: Orleans County",
+          "evidence_passages": [
+            {
+              "title": "William W. Blair",
+              "text": "Blair was born in Holley, New York."
+            },
+            {
+              "title": "William W. Blair",
+              "text": "William W. Blair\nBlair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement."
+            },
+            {
+              "title": "Holley, New York",
+              "text": "Holley is a village in the town of Murray in Orleans County, New York, United States."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Holley, New York",
+          "score": 0.12297508774329982,
+          "words": 36,
+          "score_breakdown": {
+            "dense": 0.050048113539021465,
+            "graph": 0.05966723795262612,
+            "fact": 0.5169896927403346
+          }
+        },
+        {
+          "title": "William W. Blair",
+          "score": 0.11620756681939066,
+          "words": 54,
+          "score_breakdown": {
+            "dense": 0.05119723583303588,
+            "graph": 0.05199180340757039,
+            "fact": 0.48301030725966543
+          }
+        },
+        {
+          "title": "John Blair Smith Todd",
+          "score": 0.040987041658643204,
+          "words": 40,
+          "score_breakdown": {
+            "dense": 0.050292000902965144,
+            "graph": 0.044421470540041245,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Blair Athol, New South Wales",
+          "score": 0.04098140808435444,
+          "words": 50,
+          "score_breakdown": {
+            "dense": 0.050282206010807025,
+            "graph": 0.044420649261368586,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Port Blair",
+          "score": 0.040906916701443904,
+          "words": 79,
+          "score_breakdown": {
+            "dense": 0.050138984746212076,
+            "graph": 0.04443491697009086,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique26.json",
+      "sample_id": "2hop__683835_709167",
+      "question": "What award did the author of The Red Tree receive?",
+      "gold_answers": [
+        "Academy Award for Best Animated Short Film"
+      ],
+      "predicted_answer": "Academy Award for Best Animated Short Film",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Passion Pictures",
+        "The Red Tree (Shaun Tan)"
+      ],
+      "retrieved_titles_top5": [
+        "The Red Tree (Shaun Tan)",
+        "PEN/Diamonstein-Spielvogel Award for the Art of the Essay",
+        "Passion Pictures",
+        "Red Ochre Award",
+        "Penelope Tree"
+      ],
+      "matched_support_titles": [
+        "Passion Pictures",
+        "The Red Tree (Shaun Tan)"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Academy Award for Best Animated Short Film"
+      ],
+      "qa_context_words": 668,
+      "qa_context_chars": 4157,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 6,
+      "bridge_entities": [
+        "Shaun Tan",
+        "Academy Award for Best Animated Short Film"
+      ],
+      "query_entities": [
+        "Red Tree"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Red Tree",
+          "node_id": "entity:title_anchor_the_red_tree_shaun_tan",
+          "resolved_text": "The Red Tree (Shaun Tan)",
+          "score": 0.6796,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.185,
+          "score_margin": 0.10699999999999998,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who is the author of The Red Tree?",
+        "What award did this author receive?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the author of The Red Tree?",
+          "resolved_sub_question": "Who is the author of The Red Tree?",
+          "sentence_id": "sentence:the_red_tree_shaun_tan_0_0_the_red_tree_2001_written_and_illustrated_by_shaun_tan_is_a_picture_book_tha",
+          "sentence": "The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world.",
+          "score": 0.5077892660514831,
+          "source_title": "The Red Tree (Shaun Tan)",
+          "hop_answer": "Shaun Tan",
+          "hop_thought": "The evidence states that The Red Tree (2001) was written and illustrated by Shaun Tan.",
+          "hop_raw_response": "The evidence states that The Red Tree (2001) was written and illustrated by Shaun Tan.\nAnswer: Shaun Tan",
+          "evidence_passages": [
+            {
+              "title": "The Red Tree (Shaun Tan)",
+              "text": "The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world."
+            },
+            {
+              "title": "The Red Tree (Shaun Tan)",
+              "text": "The Red Tree (Shaun Tan)\nThe Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world. The illustrations are surreal. The text is sparse and matches the dark illustrations."
+            },
+            {
+              "title": "Penelope Tree",
+              "text": "She is the half-sister of both the racehorse trainer Jeremy Tree and the author Frances FitzGerald and a niece of former Massachusetts governor Endicott Peabody."
+            }
+          ]
+        },
+        {
+          "sub_question": "What award did this author receive?",
+          "resolved_sub_question": "What award did this author receive? Context: Shaun Tan.",
+          "sentence_id": "sentence:the_red_tree_shaun_tan_0_0_the_red_tree_2001_written_and_illustrated_by_shaun_tan_is_a_picture_book_tha",
+          "sentence": "The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world.",
+          "score": 0.4176028944121467,
+          "source_title": "The Red Tree (Shaun Tan)",
+          "hop_answer": "Academy Award for Best Animated Short Film",
+          "hop_thought": "The context mentions that \"The Lost Thing,\" directed by Andrew Ruhemann and Shaun Tan, won an Academy Award for Best Animated Short Film in 2011.",
+          "hop_raw_response": "The context mentions that \"The Lost Thing,\" directed by Andrew Ruhemann and Shaun Tan, won an Academy Award for Best Animated Short Film in 2011.\nAnswer: Academy Award for Best Animated Short Film",
+          "evidence_passages": [
+            {
+              "title": "The Red Tree (Shaun Tan)",
+              "text": "The Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world."
+            },
+            {
+              "title": "The Red Tree (Shaun Tan)",
+              "text": "The Red Tree (Shaun Tan)\nThe Red Tree (2001), written and illustrated by Shaun Tan, is a picture book that presents a fragmented journey through a dark world. The illustrations are surreal. The text is sparse and matches the dark illustrations."
+            },
+            {
+              "title": "Passion Pictures",
+              "text": "Passion Australia produced \"The Lost Thing\", directed by Andrew Ruhemann and Shaun Tan, which won an Academy Award for Best Animated Short Film in 2011."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Red Tree (Shaun Tan)",
+          "score": 0.0980174540947289,
+          "words": 41,
+          "score_breakdown": {
+            "dense": 0.05095160617638037,
+            "graph": 0.057056951788164646,
+            "fact": 0.3525132344084686
+          }
+        },
+        {
+          "title": "PEN/Diamonstein-Spielvogel Award for the Art of the Essay",
+          "score": 0.09366302216456279,
+          "words": 74,
+          "score_breakdown": {
+            "dense": 0.04997639989460315,
+            "graph": 0.05426457335883224,
+            "fact": 0.3326442014325426
+          }
+        },
+        {
+          "title": "Passion Pictures",
+          "score": 0.09228417434775274,
+          "words": 58,
+          "score_breakdown": {
+            "dense": 0.049821377228866905,
+            "graph": 0.058853440826758696,
+            "fact": 0.3148425641589888
+          }
+        },
+        {
+          "title": "Red Ochre Award",
+          "score": 0.04227263821381669,
+          "words": 34,
+          "score_breakdown": {
+            "dense": 0.05022050011650737,
+            "graph": 0.04883787716579211,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Penelope Tree",
+          "score": 0.04221894786414852,
+          "words": 67,
+          "score_breakdown": {
+            "dense": 0.050115003779265845,
+            "graph": 0.048852319285174355,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique27.json",
+      "sample_id": "2hop__197470_271394",
+      "question": "Where was Tyler MacDuff's child educated?",
+      "gold_answers": [
+        "Blair High School"
+      ],
+      "predicted_answer": "Blair International Baccalaureate School",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.5714285714285715,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Dana MacDuff",
+        "Dana MacDuff"
+      ],
+      "retrieved_titles_top5": [
+        "Dana MacDuff",
+        "Macduff (Macbeth)",
+        "Macbeth, King of Scotland",
+        "Macbeth",
+        "Ralph W. Tyler"
+      ],
+      "matched_support_titles": [
+        "Dana MacDuff"
+      ],
+      "context_contains_answer": 0.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Blair High School"
+      ],
+      "qa_context_words": 966,
+      "qa_context_chars": 5877,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 7,
+      "bridge_entities": [
+        "Dana MacDuff",
+        "Blair International Baccalaureate School"
+      ],
+      "query_entities": [
+        "Tyler MacDuff"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Tyler MacDuff",
+          "node_id": "entity:tyler_macduff",
+          "resolved_text": "Tyler MacDuff",
+          "score": 0.845,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.8,
+          "compatibility_score": 0.8875000000000001,
+          "score_margin": 0.21799999999999997,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "Who is Tyler MacDuff's child?",
+        "Where was this child educated?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is Tyler MacDuff's child?",
+          "resolved_sub_question": "Who is Tyler MacDuff's child?",
+          "sentence_id": "sentence:dana_macduff_0_0_he_was_born_in_pasadena_california_to_the_actor_tyler_macduff_and_the_former_b",
+          "sentence": "He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961.",
+          "score": 0.5368392000000001,
+          "source_title": "Dana MacDuff",
+          "hop_answer": "Dana MacDuff",
+          "hop_thought": "The text mentions that Dana MacDuff was born to Tyler MacDuff, indicating that Dana MacDuff is Tyler MacDuff's child.",
+          "hop_raw_response": "The text mentions that Dana MacDuff was born to Tyler MacDuff, indicating that Dana MacDuff is Tyler MacDuff's child.\nAnswer: Dana MacDuff",
+          "evidence_passages": [
+            {
+              "title": "Dana MacDuff",
+              "text": "He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961."
+            },
+            {
+              "title": "Dana MacDuff",
+              "text": "Dana MacDuff\nHe was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961. He is named for his father's close friend, the actor Dana Andrews. He graduated in 1974 from Blair International Baccalaureate School in Pasadena. Like his father, Dana MacDuff served in the United States Navy, having been on active duty from 1974–1977. He then worked as a page at the American Broadcasting Company. After working in features for a time, he accepted a position as a floor and stage manager with the BBC in Belfast, Northern Ireland. He returned to Hollywood in 1995 to produce films."
+            },
+            {
+              "title": "David Gardiner Tyler",
+              "text": "Democratic Party politician and the ninth child and fourth son of John Tyler, the tenth President of the United States."
+            }
+          ]
+        },
+        {
+          "sub_question": "Where was this child educated?",
+          "resolved_sub_question": "Where was this child educated? Context: Dana MacDuff.",
+          "sentence_id": "sentence:dana_macduff_0_0_he_was_born_in_pasadena_california_to_the_actor_tyler_macduff_and_the_former_b",
+          "sentence": "He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961.",
+          "score": 0.38480000000000003,
+          "source_title": "Dana MacDuff",
+          "hop_answer": "Blair International Baccalaureate School",
+          "hop_thought": "The context mentions that Dana MacDuff graduated from Blair International Baccalaureate School in Pasadena.",
+          "hop_raw_response": "The context mentions that Dana MacDuff graduated from Blair International Baccalaureate School in Pasadena.\nAnswer: Blair International Baccalaureate School",
+          "evidence_passages": [
+            {
+              "title": "Dana MacDuff",
+              "text": "He was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961."
+            },
+            {
+              "title": "Dana MacDuff",
+              "text": "Dana MacDuff\nHe was born in Pasadena, California, to the actor Tyler MacDuff and the former Beverlie May Anderson (born 1930), who divorced in 1961. He is named for his father's close friend, the actor Dana Andrews. He graduated in 1974 from Blair International Baccalaureate School in Pasadena. Like his father, Dana MacDuff served in the United States Navy, having been on active duty from 1974–1977. He then worked as a page at the American Broadcasting Company. After working in features for a time, he accepted a position as a floor and stage manager with the BBC in Belfast, Northern Ireland. He returned to Hollywood in 1995 to produce films."
+            },
+            {
+              "title": "Dana MacDuff",
+              "text": "Like his father, Dana MacDuff served in the United States Navy, having been on active duty from 1974–1977."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Dana MacDuff",
+          "score": 0.12796516662723248,
+          "words": 110,
+          "score_breakdown": {
+            "dense": 0.05647437609225589,
+            "graph": 0.07176366903741739,
+            "fact": 0.5025010604351102
+          }
+        },
+        {
+          "title": "Macduff (Macbeth)",
+          "score": 0.12264586745442904,
+          "words": 85,
+          "score_breakdown": {
+            "dense": 0.05580996832436282,
+            "graph": 0.05775181313765339,
+            "fact": 0.49749893956488983
+          }
+        },
+        {
+          "title": "Macbeth, King of Scotland",
+          "score": 0.047601987038070045,
+          "words": 184,
+          "score_breakdown": {
+            "dense": 0.055669234712216596,
+            "graph": 0.056613026487836386,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Macbeth",
+          "score": 0.04752145893858514,
+          "words": 114,
+          "score_breakdown": {
+            "dense": 0.05558464714794053,
+            "graph": 0.05649967669072617,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Ralph W. Tyler",
+          "score": 0.04691419536753184,
+          "words": 79,
+          "score_breakdown": {
+            "dense": 0.055785844143321696,
+            "graph": 0.054106603629016335,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique28.json",
+      "sample_id": "2hop__458131_174974",
+      "question": "Who is the spouse of the Rabbit Hole's producer?",
+      "gold_answers": [
+        "Keith Urban"
+      ],
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 0.0,
+      "passage_hit_at_5": 0.0,
+      "support_titles": [
+        "Planet Cake",
+        "Rabbit Hole (film)"
+      ],
+      "retrieved_titles_top5": [
+        "The Velveteen Rabbit",
+        "Baby Buggy Bunny",
+        "Holes (film)",
+        "Heartbeat in the Brain",
+        "Down the Rabbit Hole (novel)"
+      ],
+      "matched_support_titles": [],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Keith Urban"
+      ],
+      "qa_context_words": 778,
+      "qa_context_chars": 4683,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 8,
+      "bridge_entities": [
+        "Down The Rabbit Hole",
+        "Echo Falls mystery series",
+        "Peter Abrahams",
+        "Nicole Kidman"
+      ],
+      "query_entities": [
+        "Rabbit Hole"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Rabbit Hole",
+          "node_id": "entity:title_anchor_rabbit_hole_film",
+          "resolved_text": "Rabbit Hole (film)",
+          "score": 0.6782666666666667,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.185,
+          "score_margin": 0.0894666666666667,
+          "confident": false
+        }
+      ],
+      "sub_questions": [
+        "Who is the producer of the Rabbit Hole?",
+        "Who is the spouse of this producer?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "Who is the producer of the Rabbit Hole?",
+          "resolved_sub_question": "Who is the producer of the Rabbit Hole?",
+          "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+          "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+          "score": 0.46430290131130214,
+          "source_title": "Rabbit Hole (film)",
+          "hop_answer": "Nicole Kidman",
+          "hop_thought": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.",
+          "hop_raw_response": "The passage states that Nicole Kidman produced the project via her company, Blossom Films.\nAnswer: Nicole Kidman",
+          "evidence_passages": [
+            {
+              "title": "Rabbit Hole (film)",
+              "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+            },
+            {
+              "title": "Rabbit Hole (film)",
+              "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+            },
+            {
+              "title": "White Rabbit",
+              "text": "I shall be too late!\" Alice follows him down the rabbit hole into Wonderland."
+            }
+          ]
+        },
+        {
+          "sub_question": "Who is the spouse of this producer?",
+          "resolved_sub_question": "Who is the spouse of this producer? Context: Nicole Kidman.",
+          "sentence_id": "sentence:rabbit_hole_film_0_0_rabbit_hole_is_a_2010_american_tragedy_film_starring_nicole_kidman_aaron_eckhar",
+          "sentence": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name.",
+          "score": 0.4141174311161041,
+          "source_title": "Rabbit Hole (film)",
+          "hop_answer": "Unknown",
+          "hop_thought": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.",
+          "hop_raw_response": "The producer of the film \"Rabbit Hole\" is Nicole Kidman. To find her spouse, we need information about Nicole Kidman's personal life. The provided context does not specify who Nicole Kidman's spouse is.\nAnswer: Unknown",
+          "evidence_passages": [
+            {
+              "title": "Rabbit Hole (film)",
+              "text": "Rabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name."
+            },
+            {
+              "title": "Rabbit Hole (film)",
+              "text": "Rabbit Hole (film)\nRabbit Hole is a 2010 American tragedy film starring Nicole Kidman, Aaron Eckhart, and Dianne Wiest, and directed by John Cameron Mitchell; the screenplay is an adaptation by David Lindsay-Abaire of his 2006 play of the same name. Kidman produced the project via her company, Blossom Films. The film premiered at the 2010 Toronto International Film Festival in September 2010. Lionsgate distributed the film. The plot deals with a couple struggling to heal after the death of their young son. It received a limited release in the United States on December 17, 2010 and expanded nationwide on January 14, 2011. Kidman was critically acclaimed for her performance as Becca Corbett and received Academy Award, Golden Globe Award, and Screen Actors Guild Award nominations for Best Actress. However, the film was a box office flop, grossing only $5.1 million against its $3 million budget."
+            },
+            {
+              "title": "Planet Cake",
+              "text": "Planet Cake has created over 12000 couture cakes, including cakes for A-list celebrities such as Nicole Kidman, Celine Dion, Rihanna, Katy Perry, Keith Urban, John Travolta and Lady Gaga to name a few, as well as for television and many magazines."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "The Velveteen Rabbit",
+          "score": 0.07538209558264974,
+          "words": 63,
+          "score_breakdown": {
+            "dense": 0.04988330860893772,
+            "graph": 0.055248036701484045,
+            "fact": 0.2091457655819252
+          }
+        },
+        {
+          "title": "Baby Buggy Bunny",
+          "score": 0.07371720353164565,
+          "words": 69,
+          "score_breakdown": {
+            "dense": 0.04980809182673329,
+            "graph": 0.05433794509658485,
+            "fact": 0.2001424633197793
+          }
+        },
+        {
+          "title": "Holes (film)",
+          "score": 0.07299798571915,
+          "words": 48,
+          "score_breakdown": {
+            "dense": 0.04999280947194448,
+            "graph": 0.053090925894346386,
+            "fact": 0.19716441827517753
+          }
+        },
+        {
+          "title": "Heartbeat in the Brain",
+          "score": 0.07295561959041719,
+          "words": 57,
+          "score_breakdown": {
+            "dense": 0.049981522320892854,
+            "graph": 0.05257555577425733,
+            "fact": 0.1979541038776594
+          }
+        },
+        {
+          "title": "Down the Rabbit Hole (novel)",
+          "score": 0.0726453745450418,
+          "words": 110,
+          "score_breakdown": {
+            "dense": 0.05020589570837812,
+            "graph": 0.05231048187871687,
+            "fact": 0.19559324894545857
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique29.json",
+      "sample_id": "2hop__299142_347613",
+      "question": "Who is the child of Sigrid Eskilsdotter's child?",
+      "gold_answers": [
+        "Svante Stensson Sture"
+      ],
+      "predicted_answer": "King Gustav Vasa of Sweden",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Sigrid Sture",
+        "Sigrid Eskilsdotter (Banér)"
+      ],
+      "retrieved_titles_top5": [
+        "Sigrid Eskilsdotter (Banér)",
+        "Blood Stain Child",
+        "Sigrid Sture",
+        "The Miracle Child",
+        "Loekman Hakim"
+      ],
+      "matched_support_titles": [
+        "Sigrid Eskilsdotter (Banér)",
+        "Sigrid Sture"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Svante Stensson Sture"
+      ],
+      "qa_context_words": 675,
+      "qa_context_chars": 4143,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 6,
+      "bridge_entities": [
+        "Swedish noble",
+        "Christina Gyllenstierna",
+        "King Gustav Vasa of Sweden"
+      ],
+      "query_entities": [
+        "Sigrid Eskilsdotter (Banér)"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Sigrid Eskilsdotter",
+          "node_id": "entity:title_anchor_sigrid_eskilsdotter_ban_r",
+          "resolved_text": "Sigrid Eskilsdotter (Banér)",
+          "score": 0.8220000000000001,
+          "alias_score": 1.0,
+          "relation_score": 0.7,
+          "context_score": 0.6799999999999999,
+          "compatibility_score": 0.775,
+          "score_margin": 0.8220000000000001,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "What is the name of Sigrid Eskilsdotter (Banér)'s child?",
+        "Who is the child of the person named in the previous answer?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "What is the name of Sigrid Eskilsdotter (Banér)'s child?",
+          "resolved_sub_question": "What is the name of Sigrid Eskilsdotter (Banér)'s child?",
+          "sentence_id": "sentence:sigrid_eskilsdotter_ban_r_0_0_sigrid_eskilsdotter_ban_r_died_1527_was_a_swedish_noble_the_mother_of_the",
+          "sentence": "Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden.",
+          "score": 0.5791491428571429,
+          "source_title": "Sigrid Eskilsdotter (Banér)",
+          "hop_answer": "Christina Gyllenstierna",
+          "hop_thought": "The passage states that Sigrid Eskilsdotter (Banér) is the mother of the Swedish regent Christina Gyllenstierna.",
+          "hop_raw_response": "The passage states that Sigrid Eskilsdotter (Banér) is the mother of the Swedish regent Christina Gyllenstierna.\nAnswer: Christina Gyllenstierna",
+          "evidence_passages": [
+            {
+              "title": "Sigrid Eskilsdotter (Banér)",
+              "text": "Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden."
+            },
+            {
+              "title": "Sigrid Eskilsdotter (Banér)",
+              "text": "Sigrid Eskilsdotter (Banér)\nSigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden."
+            },
+            {
+              "title": "Sigrid Sture",
+              "text": "She was the daughter of Svante Stensson Sture and Märta (\"king Martha\") Erikdotter Leijonhufvud, thereby the niece of queen Margaret Leijonhufvud and the granddaughter of regent Christina Gyllenstierna."
+            }
+          ]
+        },
+        {
+          "sub_question": "Who is the child of the person named in the previous answer?",
+          "resolved_sub_question": "Who is the child of the person named in the previous answer? Context: Christina Gyllenstierna.",
+          "sentence_id": "sentence:sigrid_eskilsdotter_ban_r_0_0_sigrid_eskilsdotter_ban_r_died_1527_was_a_swedish_noble_the_mother_of_the",
+          "sentence": "Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden.",
+          "score": 0.6632,
+          "source_title": "Sigrid Eskilsdotter (Banér)",
+          "hop_answer": "King Gustav Vasa of Sweden",
+          "hop_thought": "Christina Gyllenstierna is the child of Sigrid Eskilsdotter (Banér). The question asks for the child of Christina Gyllenstierna, who is mentioned as the maternal grandmother of King Gustav Vasa of Sweden.",
+          "hop_raw_response": "Christina Gyllenstierna is the child of Sigrid Eskilsdotter (Banér). The question asks for the child of Christina Gyllenstierna, who is mentioned as the maternal grandmother of King Gustav Vasa of Sweden.\nAnswer: King Gustav Vasa of Sweden",
+          "evidence_passages": [
+            {
+              "title": "Sigrid Eskilsdotter (Banér)",
+              "text": "Sigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden."
+            },
+            {
+              "title": "Sigrid Eskilsdotter (Banér)",
+              "text": "Sigrid Eskilsdotter (Banér)\nSigrid Eskilsdotter (Banér) (died 1527), was a Swedish noble, the mother of the Swedish regent Christina Gyllenstierna and the maternal grandmother of King Gustav Vasa of Sweden."
+            },
+            {
+              "title": "Sigrid Sture",
+              "text": "She was the daughter of Svante Stensson Sture and Märta (\"king Martha\") Erikdotter Leijonhufvud, thereby the niece of queen Margaret Leijonhufvud and the granddaughter of regent Christina Gyllenstierna."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Sigrid Eskilsdotter (Banér)",
+          "score": 0.14840883453494225,
+          "words": 30,
+          "score_breakdown": {
+            "dense": 0.07964993713745282,
+            "graph": 0.09691430253320694,
+            "fact": 0.5035138556625408
+          }
+        },
+        {
+          "title": "Blood Stain Child",
+          "score": 0.14160371759061802,
+          "words": 56,
+          "score_breakdown": {
+            "dense": 0.07669837750228663,
+            "graph": 0.08315562771247163,
+            "fact": 0.49648614433745913
+          }
+        },
+        {
+          "title": "Sigrid Sture",
+          "score": 0.06662895907010936,
+          "words": 108,
+          "score_breakdown": {
+            "dense": 0.07862566260585056,
+            "graph": 0.07794948212297181,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "The Miracle Child",
+          "score": 0.06462654291400961,
+          "words": 117,
+          "score_breakdown": {
+            "dense": 0.07699402299640029,
+            "graph": 0.07426610088663152,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Loekman Hakim",
+          "score": 0.06437724915449848,
+          "words": 46,
+          "score_breakdown": {
+            "dense": 0.0765940991333723,
+            "graph": 0.07416831543714572,
+            "fact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "sample_file": "sample_musique30.json",
+      "sample_id": "2hop__528263_865831",
+      "question": "In which county is Kimbrough Memorial Stadium located?",
+      "gold_answers": [
+        "Randall County",
+        "Randall County, Texas"
+      ],
+      "predicted_answer": "Randall County",
+      "qa_exact_match": 1.0,
+      "qa_f1": 1.0,
+      "passage_recall_at_5": 1.0,
+      "passage_hit_at_5": 1.0,
+      "support_titles": [
+        "Kimbrough Memorial Stadium",
+        "Canyon, Texas"
+      ],
+      "retrieved_titles_top5": [
+        "Kimbrough Memorial Stadium",
+        "Saulkrasti Municipality",
+        "Canyon, Texas",
+        "Broken Bow Memorial Stadium",
+        "Kiri Territory"
+      ],
+      "matched_support_titles": [
+        "Canyon, Texas",
+        "Kimbrough Memorial Stadium"
+      ],
+      "context_contains_answer": 1.0,
+      "answer_match_flag": true,
+      "answer_match_candidates": [
+        "Randall County",
+        "Randall County, Texas"
+      ],
+      "qa_context_words": 769,
+      "qa_context_chars": 5194,
+      "ranked_passages_count": 10,
+      "ranked_facts_count": 5,
+      "bridge_entities": [
+        "Canyon Texas",
+        "Randall County"
+      ],
+      "query_entities": [
+        "Kimbrough Memorial Stadium"
+      ],
+      "query_entity_resolutions": [
+        {
+          "mention": "Kimbrough Memorial Stadium",
+          "node_id": "entity:title_anchor_kimbrough_memorial_stadium",
+          "resolved_text": "Kimbrough Memorial Stadium",
+          "score": 0.9010000000000001,
+          "alias_score": 1.0,
+          "relation_score": 1.0,
+          "context_score": 0.6000000000000001,
+          "compatibility_score": 0.8875000000000001,
+          "score_margin": 0.3690000000000001,
+          "confident": true
+        }
+      ],
+      "sub_questions": [
+        "In which city is Kimbrough Memorial Stadium located?",
+        "In which county is this city located?"
+      ],
+      "reasoning_chain": [
+        {
+          "sub_question": "In which city is Kimbrough Memorial Stadium located?",
+          "resolved_sub_question": "In which city is Kimbrough Memorial Stadium located?",
+          "sentence_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
+          "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
+          "score": 0.6757824000000001,
+          "source_title": "Kimbrough Memorial Stadium",
+          "hop_answer": "Canyon, Texas",
+          "hop_thought": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
+          "hop_raw_response": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.\nAnswer: Canyon, Texas",
+          "evidence_passages": [
+            {
+              "title": "Kimbrough Memorial Stadium",
+              "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
+            },
+            {
+              "title": "Kimbrough Memorial Stadium",
+              "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
+            },
+            {
+              "title": "Kimbrough Memorial Stadium",
+              "text": "It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
+            }
+          ]
+        },
+        {
+          "sub_question": "In which county is this city located?",
+          "resolved_sub_question": "In which county is this city located? Context: Canyon, Texas.",
+          "sentence_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
+          "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
+          "score": 0.5728,
+          "source_title": "Kimbrough Memorial Stadium",
+          "hop_answer": "Randall County",
+          "hop_thought": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.",
+          "hop_raw_response": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.\nAnswer: Randall County",
+          "evidence_passages": [
+            {
+              "title": "Kimbrough Memorial Stadium",
+              "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
+            },
+            {
+              "title": "Kimbrough Memorial Stadium",
+              "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
+            },
+            {
+              "title": "Canyon, Texas",
+              "text": "Canyon is a city in, and the county seat of, Randall County, Texas, United States."
+            }
+          ]
+        }
+      ],
+      "reasoning_chain_count": 2,
+      "retrieved_passages_top5": [
+        {
+          "title": "Kimbrough Memorial Stadium",
+          "score": 0.09921856432923254,
+          "words": 99,
+          "score_breakdown": {
+            "dense": 0.051336767748616195,
+            "graph": 0.052220590076969005,
+            "fact": 0.36878110029601946
+          }
+        },
+        {
+          "title": "Saulkrasti Municipality",
+          "score": 0.091982421182358,
+          "words": 45,
+          "score_breakdown": {
+            "dense": 0.050035211534653214,
+            "graph": 0.05068463636724757,
+            "fact": 0.3283844261874964
+          }
+        },
+        {
+          "title": "Canyon, Texas",
+          "score": 0.08759060852744754,
+          "words": 55,
+          "score_breakdown": {
+            "dense": 0.050188931534915666,
+            "graph": 0.048538417185904334,
+            "fact": 0.30283447351648424
+          }
+        },
+        {
+          "title": "Broken Bow Memorial Stadium",
+          "score": 0.041171001864465866,
+          "words": 37,
+          "score_breakdown": {
+            "dense": 0.050489654145147146,
+            "graph": 0.044672306948783116,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Kiri Territory",
+          "score": 0.04092047616601648,
+          "words": 27,
+          "score_breakdown": {
+            "dense": 0.05003229892924531,
+            "graph": 0.04467570584977187,
+            "fact": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1075 @@
+{
+  "query": "What is the capital of the county that includes the city of Walnut Grove in the state where Star Lite Motel is located?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.5,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Walnut Grove",
+    "Star Lite Motel"
+  ],
+  "raw_query_entities": [
+    "Walnut Grove",
+    "Star Lite Motel"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Walnut Grove",
+      "node_id": "entity:walnut_grove",
+      "resolved_text": "Walnut Grove",
+      "score": 0.7837777777777779,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.5555555555555556,
+      "compatibility_score": 0.775,
+      "score_margin": 0.00497777777777797,
+      "confident": false
+    },
+    {
+      "mention": "Star Lite Motel",
+      "node_id": "entity:title_anchor_star_lite_motel",
+      "resolved_text": "Star Lite Motel",
+      "score": 0.6724000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.6571428571428571,
+      "compatibility_score": 0.775,
+      "score_margin": 0.3157333333333334,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "In which state is the Star Lite Motel located?",
+    "Which county in this state includes the city of Walnut Grove?",
+    "What is the capital of this county?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_star_lite_motel",
+      "score": 0.3687891256358195,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:dilworth",
+      "score": 0.3687509824696345,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:redwood_falls",
+      "score": 0.3144779322039033,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:federal_capital_of_canberra",
+      "score": 0.30074610599892376,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:walnut_grove_location",
+      "score": 0.2998259866356122,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.28814565195912994,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_redwood_county_poor_farm",
+      "score": 0.2641640469853861,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:redwood_falls_minnesota_united_states",
+      "score": 0.26415934482051046,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:canberra",
+      "score": 0.25271658393922164,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:walnut_grove",
+      "score": 0.25021365566736736,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_kingston_powerhouse",
+      "score": 0.21728628192364427,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:redwood_county",
+      "score": 0.21467733785346083,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:star_lite_motel_is_located_in_dilworth_sentence_star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_",
+      "text": "Star Lite Motel is located in Dilworth",
+      "head_id": "entity:title_anchor_star_lite_motel",
+      "tail_id": "entity:dilworth",
+      "sentence_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+      "chunk_id": "chunk:star_lite_motel_0",
+      "document_index": 16,
+      "score": 0.36665463829194633
+    },
+    {
+      "fact_id": "fact:canberra_is_the_capital_of_australia_sentence_kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_plant_i",
+      "text": "Canberra is the capital of Australia",
+      "head_id": "entity:canberra",
+      "tail_id": "entity:australia",
+      "sentence_id": "sentence:kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_plant_in_canberra_the_capital_of_aus",
+      "chunk_id": "chunk:kingston_powerhouse_0",
+      "document_index": 11,
+      "score": 0.2860508230190114
+    },
+    {
+      "fact_id": "fact:redwood_county_poor_farm_was_located_in_redwood_falls_minnesota_united_states_sentence_redwood_county_poor_farm_0_0_the_",
+      "text": "Redwood County Poor Farm was located in Redwood Falls Minnesota United States",
+      "head_id": "entity:title_anchor_redwood_county_poor_farm",
+      "tail_id": "entity:redwood_falls_minnesota_united_states",
+      "sentence_id": "sentence:redwood_county_poor_farm_0_0_the_redwood_county_poor_farm_or_poorhouse_was_a_county_run_institution_serving",
+      "chunk_id": "chunk:redwood_county_poor_farm_0",
+      "document_index": 19,
+      "score": 0.26206494350325277
+    },
+    {
+      "fact_id": "fact:walnut_grove_is_located_in_redwood_county_sentence_walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_m",
+      "text": "Walnut Grove is located in Redwood County",
+      "head_id": "entity:walnut_grove",
+      "tail_id": "entity:redwood_county",
+      "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+      "chunk_id": "chunk:walnut_grove_minnesota_0",
+      "document_index": 3,
+      "score": 0.24808691719000364
+    },
+    {
+      "fact_id": "fact:kingston_powerhouse_is_located_in_canberra_sentence_kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_p",
+      "text": "Kingston Powerhouse is located in Canberra",
+      "head_id": "entity:title_anchor_kingston_powerhouse",
+      "tail_id": "entity:canberra",
+      "sentence_id": "sentence:kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_plant_in_canberra_the_capital_of_aus",
+      "chunk_id": "chunk:kingston_powerhouse_0",
+      "document_index": 11,
+      "score": 0.21519268697919486
+    },
+    {
+      "fact_id": "fact:redwood_county_is_part_of_minnesota_sentence_walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minneso",
+      "text": "Redwood County is part of Minnesota",
+      "head_id": "entity:redwood_county",
+      "tail_id": "entity:minnesota",
+      "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+      "chunk_id": "chunk:walnut_grove_minnesota_0",
+      "document_index": 3,
+      "score": 0.17707017226492444
+    }
+  ],
+  "bridge_entities": [
+    "Redwood County",
+    "Dilworth",
+    "Minnesota"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "In which state is the Star Lite Motel located?",
+      "resolved_sub_question": "In which state is the Star Lite Motel located?",
+      "sentence_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+      "sentence": "The Star Lite Motel is a historic motel in Dilworth, Minnesota.",
+      "score": 0.5264713315808434,
+      "source_title": "Star Lite Motel",
+      "hop_answer": "Minnesota",
+      "hop_thought": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.",
+      "hop_raw_response": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.\nAnswer: Minnesota",
+      "evidence_passages": [
+        {
+          "title": "Star Lite Motel",
+          "text": "The Star Lite Motel is a historic motel in Dilworth, Minnesota."
+        },
+        {
+          "title": "Star Lite Motel",
+          "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature."
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+        }
+      ]
+    },
+    {
+      "sub_question": "Which county in this state includes the city of Walnut Grove?",
+      "resolved_sub_question": "Which county in this state includes the city of Walnut Grove? Context: Minnesota.",
+      "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+      "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+      "score": 0.5906701687894649,
+      "source_title": "Walnut Grove, Minnesota",
+      "hop_answer": "Redwood County",
+      "hop_thought": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.",
+      "hop_raw_response": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.\nAnswer: Redwood County",
+      "evidence_passages": [
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the capital of this county?",
+      "resolved_sub_question": "What is the capital of this county? Context: Minnesota; Redwood County.",
+      "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+      "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+      "score": 0.4717023120498657,
+      "source_title": "Walnut Grove, Minnesota",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided information does not specify the capital of Redwood County, Minnesota.",
+      "hop_raw_response": "The provided information does not specify the capital of Redwood County, Minnesota.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+        },
+        {
+          "title": "Walnut Grove, Minnesota",
+          "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+        },
+        {
+          "title": "Redwood County Poor Farm",
+          "text": "The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:redwood_county_poor_farm_0_0_the_redwood_county_poor_farm_or_poorhouse_was_a_county_run_institution_serving",
+      "score": 0.06414491281216005,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_plant_in_canberra_the_capital_of_aus",
+      "score": 0.04221901504007404,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:redwood_falls_minnesota_united_states",
+      "score": 0.04173872463903518,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+      "score": 0.04062874871976653,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_redwood_county_poor_farm",
+      "score": 0.037845244182151905,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:walnut_grove_minnesota_0_1_post_office_first_state_bank_building_and_water_tower_in_walnut_grove_location",
+      "score": 0.03543573992632124,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:dilworth",
+      "score": 0.03526311030626207,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+      "score": 0.032666801307180846,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:canberra",
+      "score": 0.03239171585768429,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:walnut_grove",
+      "score": 0.032221993393142176,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:redwood_falls",
+      "score": 0.030499066313372483,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:minnesota",
+      "score": 0.02903345556411769,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_star_lite_motel",
+      "score": 0.026602168456565753,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:star_lite_motel_0_1_it_is_one_of_the_oldest_buildings_in_dilworth_and_the_oldest_motel_in_clay_coun",
+      "score": 0.025999882385953715,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.02257413191014863,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:history_of_australia_0_0_the_federal_capital_territory_fct_was_formed_from_new_south_wales_in_1911_to_p",
+      "score": 0.02189360306054978,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:redwood_county",
+      "score": 0.021205351691955823,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_kingston_powerhouse",
+      "score": 0.018501792689773765,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:federal_capital_of_canberra",
+      "score": 0.01714836429104364,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:walnut_grove_location",
+      "score": 0.017113720729992725,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:star_lite_motel_0",
+      "passage_index": 16,
+      "title": "Star Lite Motel",
+      "score": 0.08684787726169158,
+      "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature.",
+      "score_breakdown": {
+        "dense": 0.05361190675772828,
+        "graph": 0.05648600268638456,
+        "fact": 0.26943685159350433
+      }
+    },
+    {
+      "node_id": "chunk:kingston_powerhouse_0",
+      "passage_index": 11,
+      "title": "Kingston Powerhouse",
+      "score": 0.08242933421438127,
+      "text": "Kingston Powerhouse\nThe Kingston Powerhouse is a disused power plant in Canberra, the capital of Australia. It is located in the suburb of Kingston, Australian Capital Territory.",
+      "score_breakdown": {
+        "dense": 0.05230619642368757,
+        "graph": 0.054584041198350496,
+        "fact": 0.24857142547898636
+      }
+    },
+    {
+      "node_id": "chunk:walnut_grove_minnesota_0",
+      "passage_index": 17,
+      "title": "Walnut Grove, Minnesota",
+      "score": 0.08235523479812662,
+      "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743",
+      "score_breakdown": {
+        "dense": 0.0533483910963393,
+        "graph": 0.05705628282992724,
+        "fact": 0.2393115656410789
+      }
+    },
+    {
+      "node_id": "chunk:redwood_county_poor_farm_0",
+      "passage_index": 19,
+      "title": "Redwood County Poor Farm",
+      "score": 0.08225369796947044,
+      "text": "Redwood County Poor Farm\nThe Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.",
+      "score_breakdown": {
+        "dense": 0.052725771611450555,
+        "graph": 0.05617499996736017,
+        "fact": 0.24268015728643044
+      }
+    },
+    {
+      "node_id": "chunk:walnut_grove_washington_0",
+      "passage_index": 10,
+      "title": "Walnut Grove, Washington",
+      "score": 0.04489147269103633,
+      "text": "Walnut Grove, Washington\nWalnut Grove is a census-designated place (CDP) in Clark County, Washington, United States. The population was 9,790 at the 2010 census, up from 7,164 at the 2000 census.",
+      "score_breakdown": {
+        "dense": 0.05312424073630972,
+        "graph": 0.05224380095355328,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:history_of_australia_0",
+      "passage_index": 12,
+      "title": "History of Australia",
+      "score": 0.04477824721384101,
+      "text": "History of Australia\nThe Federal Capital Territory (FCT) was formed from New South Wales in 1911 to provide a location for the proposed new federal capital of Canberra (Melbourne was the seat of government from 1901 to 1927). The FCT was renamed the Australian Capital Territory (ACT) in 1938. The Northern Territory was transferred from the control of the South Australian government to the Commonwealth in 1911.",
+      "score_breakdown": {
+        "dense": 0.05223542552984765,
+        "graph": 0.053495877241415996,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:walnut_shade_missouri_0",
+      "passage_index": 0,
+      "title": "Walnut Shade, Missouri",
+      "score": 0.044475697777889824,
+      "text": "Walnut Shade, Missouri\nWalnut Shade is an unincorporated community in Taney County, Missouri, United States. It is located approximately six miles northwest of Forsyth on U.S. Route 160. The town sits at the confluence of Bull and Bear Creeks. Walnut Shade is part of the Branson, Missouri Micropolitan Statistical Area.",
+      "score_breakdown": {
+        "dense": 0.052834070373966,
+        "graph": 0.0513898635740284,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:orroral_river_0",
+      "passage_index": 13,
+      "title": "Orroral River",
+      "score": 0.0444428514489947,
+      "text": "Orroral River\nOrroral River, a perennial stream of the Murrumbidgee catchment within the Murray-Darling basin, is located in the Australian Capital Territory, Australia.",
+      "score_breakdown": {
+        "dense": 0.05226456480083667,
+        "graph": 0.05232446936178178,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:waddams_grove_illinois_0",
+      "passage_index": 7,
+      "title": "Waddams Grove, Illinois",
+      "score": 0.04438788466702977,
+      "text": "Waddams Grove, Illinois\nWaddams Grove, previously known as Wadam's, Waddam's Grove, and Sada, is an unincorporated community in the Stephenson County township of West Point, Illinois, United States. Waddams Grove was the first settlement in Stephenson County. It is located northwest of Lena. The community is near the site of the Battle of Waddams Grove which took place during the Black Hawk War.",
+      "score_breakdown": {
+        "dense": 0.05266070429487885,
+        "graph": 0.051414991016154654,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:geography_of_the_united_states_0",
+      "passage_index": 9,
+      "title": "Geography of the United States",
+      "score": 0.04438432346690402,
+      "text": "Geography of the United States\nThe capital city, Washington, District of Columbia, is a federal district located on land donated by the state of Maryland. (Virginia had also donated land, but it was returned in 1849.) The United States also has overseas territories with varying levels of independence and organization: in the Caribbean the territories of Puerto Rico and the U.S. Virgin Islands, and in the Pacific the inhabited territories of Guam, American Samoa, and the Northern Mariana Islands, along with a number of uninhabited island territories.",
+      "score_breakdown": {
+        "dense": 0.05255103324625728,
+        "graph": 0.05160418393820836,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:redwood_falls_minnesota_united_states",
+        "score": 0.04173872463903518,
+        "text": "Redwood Falls Minnesota United States",
+        "metadata": {
+          "canonical_name": "Redwood Falls Minnesota United States",
+          "aliases": [
+            "RFMUS",
+            "Redwood Falls Minnesota United States"
+          ],
+          "surface_forms": [
+            "RFMUS",
+            "Redwood Falls Minnesota United States"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_redwood_county_poor_farm",
+        "score": 0.037845244182151905,
+        "text": "Redwood County Poor Farm",
+        "metadata": {
+          "canonical_name": "Redwood County Poor Farm",
+          "aliases": [
+            "RCPF",
+            "Redwood County Poor Farm"
+          ],
+          "surface_forms": [
+            "RCPF",
+            "Redwood County Poor Farm"
+          ],
+          "title_anchor": "Redwood County Poor Farm"
+        }
+      },
+      {
+        "node_id": "entity:dilworth",
+        "score": 0.03526311030626207,
+        "text": "Dilworth",
+        "metadata": {
+          "canonical_name": "Dilworth",
+          "aliases": [
+            "Dilworth"
+          ],
+          "surface_forms": [
+            "Dilworth"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:canberra",
+        "score": 0.03239171585768429,
+        "text": "Canberra",
+        "metadata": {
+          "canonical_name": "Canberra",
+          "aliases": [
+            "Canberra"
+          ],
+          "surface_forms": [
+            "Canberra"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:redwood_county_poor_farm_0_0_the_redwood_county_poor_farm_or_poorhouse_was_a_county_run_institution_serving",
+        "score": 0.06414491281216005,
+        "text": "The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.",
+        "metadata": {
+          "title": "Redwood County Poor Farm",
+          "chunk_id": "chunk:redwood_county_poor_farm_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Redwood County Poor Farm",
+              "relation": "was located in",
+              "tail": "Redwood Falls Minnesota United States"
+            }
+          ],
+          "entities": [
+            "Redwood County Poor Farm",
+            "Redwood Falls",
+            "Minnesota"
+          ],
+          "entity_ids": [
+            "entity:minnesota",
+            "entity:redwood_falls",
+            "entity:redwood_falls_minnesota_united_states",
+            "entity:title_anchor_redwood_county_poor_farm"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:kingston_powerhouse_0_0_the_kingston_powerhouse_is_a_disused_power_plant_in_canberra_the_capital_of_aus",
+        "score": 0.04221901504007404,
+        "text": "The Kingston Powerhouse is a disused power plant in Canberra, the capital of Australia.",
+        "metadata": {
+          "title": "Kingston Powerhouse",
+          "chunk_id": "chunk:kingston_powerhouse_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Kingston Powerhouse",
+              "relation": "is located in",
+              "tail": "Canberra"
+            },
+            {
+              "head": "Canberra",
+              "relation": "is the capital of",
+              "tail": "Australia"
+            }
+          ],
+          "entities": [
+            "Kingston Powerhouse",
+            "Canberra",
+            "Australia"
+          ],
+          "entity_ids": [
+            "entity:australia",
+            "entity:canberra",
+            "entity:title_anchor_kingston_powerhouse"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+        "score": 0.04062874871976653,
+        "text": "The Star Lite Motel is a historic motel in Dilworth, Minnesota.",
+        "metadata": {
+          "title": "Star Lite Motel",
+          "chunk_id": "chunk:star_lite_motel_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Star Lite Motel",
+              "relation": "is located in",
+              "tail": "Dilworth"
+            }
+          ],
+          "entities": [
+            "Star Lite Motel",
+            "Dilworth",
+            "Minnesota"
+          ],
+          "entity_ids": [
+            "entity:dilworth",
+            "entity:minnesota",
+            "entity:title_anchor_star_lite_motel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:walnut_grove_minnesota_0_1_post_office_first_state_bank_building_and_water_tower_in_walnut_grove_location",
+        "score": 0.03543573992632124,
+        "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743",
+        "metadata": {
+          "title": "Walnut Grove, Minnesota",
+          "chunk_id": "chunk:walnut_grove_minnesota_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Post Office",
+              "relation": "related_to",
+              "tail": "First State Bank Building"
+            },
+            {
+              "head": "First State Bank Building",
+              "relation": "related_to",
+              "tail": "Walnut Grove Location"
+            },
+            {
+              "head": "Walnut Grove Location",
+              "relation": "related_to",
+              "tail": "Walnut Grove"
+            }
+          ],
+          "entities": [
+            "Post Office",
+            "First State Bank Building",
+            "Walnut Grove Location",
+            "Walnut Grove",
+            "Minnesota Coordinates",
+            "Coordinates",
+            "Country United States State",
+            "Minnesota County Redwood Founded",
+            "Incorporated",
+            "Area Total",
+            "Land",
+            "Water",
+            "Elevation",
+            "Population",
+            "Total",
+            "Estimate",
+            "Density",
+            "Time",
+            "Central",
+            "Summer",
+            "Area"
+          ],
+          "entity_ids": [
+            "entity:area",
+            "entity:area_total",
+            "entity:central",
+            "entity:coordinates",
+            "entity:country_united_states_state",
+            "entity:density",
+            "entity:elevation",
+            "entity:estimate",
+            "entity:first_state_bank_building",
+            "entity:incorporated",
+            "entity:land",
+            "entity:minnesota_coordinates",
+            "entity:minnesota_county_redwood_founded",
+            "entity:population",
+            "entity:post_office",
+            "entity:summer",
+            "entity:time",
+            "entity:total",
+            "entity:walnut_grove",
+            "entity:walnut_grove_location",
+            "entity:water"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+        "score": 0.032666801307180846,
+        "text": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+        "metadata": {
+          "title": "Walnut Grove, Minnesota",
+          "chunk_id": "chunk:walnut_grove_minnesota_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Walnut Grove",
+              "relation": "is located in",
+              "tail": "Redwood County"
+            },
+            {
+              "head": "Redwood County",
+              "relation": "is part of",
+              "tail": "Minnesota"
+            }
+          ],
+          "entities": [
+            "Walnut Grove",
+            "Redwood County",
+            "Minnesota"
+          ],
+          "entity_ids": [
+            "entity:minnesota",
+            "entity:redwood_county",
+            "entity:walnut_grove"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:star_lite_motel_0_1_it_is_one_of_the_oldest_buildings_in_dilworth_and_the_oldest_motel_in_clay_coun",
+        "score": 0.025999882385953715,
+        "text": "It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County.",
+        "metadata": {
+          "title": "Star Lite Motel",
+          "chunk_id": "chunk:star_lite_motel_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Dilworth",
+              "relation": "related_to",
+              "tail": "Clay County"
+            }
+          ],
+          "entities": [
+            "Dilworth",
+            "Clay County"
+          ],
+          "entity_ids": [
+            "entity:clay_county",
+            "entity:dilworth"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:star_lite_motel_0",
+        "score": 0.014003214780275119,
+        "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature.",
+        "metadata": {
+          "title": "Star Lite Motel",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:charley",
+            "entity:charley_s_motel",
+            "entity:clay_county",
+            "entity:dilworth",
+            "entity:earlier",
+            "entity:minnesota",
+            "entity:motel",
+            "entity:title_anchor_star_lite_motel"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:walnut_grove_minnesota_0",
+        "score": 0.01400018333839988,
+        "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743",
+        "metadata": {
+          "title": "Walnut Grove, Minnesota",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:another",
+            "entity:area",
+            "entity:area_total",
+            "entity:central",
+            "entity:coordinates",
+            "entity:country_united_states_state",
+            "entity:density",
+            "entity:elevation",
+            "entity:estimate",
+            "entity:first_state_bank_building",
+            "entity:incorporated",
+            "entity:land",
+            "entity:minnesota",
+            "entity:minnesota_coordinates",
+            "entity:minnesota_county_redwood_founded",
+            "entity:population",
+            "entity:post_office",
+            "entity:redwood_county",
+            "entity:summer",
+            "entity:time",
+            "entity:total",
+            "entity:walnut_grove",
+            "entity:walnut_grove_location",
+            "entity:walnut_station",
+            "entity:water"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Star Lite Motel\nStar Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature.\n\nKingston Powerhouse\nKingston Powerhouse\nThe Kingston Powerhouse is a disused power plant in Canberra, the capital of Australia. It is located in the suburb of Kingston, Australian Capital Territory.\n\nWalnut Grove, Minnesota\nWalnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743\n\nRedwood County Poor Farm\nRedwood County Poor Farm\nThe Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.\n\nWalnut Grove, Washington\nWalnut Grove, Washington\nWalnut Grove is a census-designated place (CDP) in Clark County, Washington, United States. The population was 9,790 at the 2010 census, up from 7,164 at the 2000 census.\n\nStar Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota.\n\nWalnut Grove, Minnesota\nPost Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743\n\nWalnut Grove, Minnesota\nWalnut Grove is a city in Redwood County, Minnesota, United States.\n\nRedwood County Poor Farm\nThe Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.\n\nMinnesota Junction, Wisconsin\nMinnesota Junction, Wisconsin\nMinnesota Junction is an unincorporated community located, in the town of Oak Grove, in Dodge County, Wisconsin, United States. Minnesota Junction is located on Wisconsin Highway 26. It is located at latitude 43.452 and longitude -88.697 at 925 feet above mean sea level.\n\nWalnut Shade, Missouri\nWalnut Shade, Missouri\nWalnut Shade is an unincorporated community in Taney County, Missouri, United States. It is located approximately six miles northwest of Forsyth on U.S. Route 160. The town sits at the confluence of Bull and Bear Creeks. Walnut Shade is part of the Branson, Missouri Micropolitan Statistical Area.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:star_lite_motel_0",
+        "passage_index": 16,
+        "title": "Star Lite Motel",
+        "score": 0.08684787726169158,
+        "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature.",
+        "score_breakdown": {
+          "dense": 0.05361190675772828,
+          "graph": 0.05648600268638456,
+          "fact": 0.26943685159350433
+        }
+      },
+      {
+        "node_id": "chunk:kingston_powerhouse_0",
+        "passage_index": 11,
+        "title": "Kingston Powerhouse",
+        "score": 0.08242933421438127,
+        "text": "Kingston Powerhouse\nThe Kingston Powerhouse is a disused power plant in Canberra, the capital of Australia. It is located in the suburb of Kingston, Australian Capital Territory.",
+        "score_breakdown": {
+          "dense": 0.05230619642368757,
+          "graph": 0.054584041198350496,
+          "fact": 0.24857142547898636
+        }
+      },
+      {
+        "node_id": "chunk:walnut_grove_minnesota_0",
+        "passage_index": 17,
+        "title": "Walnut Grove, Minnesota",
+        "score": 0.08235523479812662,
+        "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743",
+        "score_breakdown": {
+          "dense": 0.0533483910963393,
+          "graph": 0.05705628282992724,
+          "fact": 0.2393115656410789
+        }
+      },
+      {
+        "node_id": "chunk:redwood_county_poor_farm_0",
+        "passage_index": 19,
+        "title": "Redwood County Poor Farm",
+        "score": 0.08225369796947044,
+        "text": "Redwood County Poor Farm\nThe Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.",
+        "score_breakdown": {
+          "dense": 0.052725771611450555,
+          "graph": 0.05617499996736017,
+          "fact": 0.24268015728643044
+        }
+      },
+      {
+        "node_id": "chunk:walnut_grove_washington_0",
+        "passage_index": 10,
+        "title": "Walnut Grove, Washington",
+        "score": 0.04489147269103633,
+        "text": "Walnut Grove, Washington\nWalnut Grove is a census-designated place (CDP) in Clark County, Washington, United States. The population was 9,790 at the 2010 census, up from 7,164 at the 2000 census.",
+        "score_breakdown": {
+          "dense": 0.05312424073630972,
+          "graph": 0.05224380095355328,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:history_of_australia_0",
+        "passage_index": 12,
+        "title": "History of Australia",
+        "score": 0.04477824721384101,
+        "text": "History of Australia\nThe Federal Capital Territory (FCT) was formed from New South Wales in 1911 to provide a location for the proposed new federal capital of Canberra (Melbourne was the seat of government from 1901 to 1927). The FCT was renamed the Australian Capital Territory (ACT) in 1938. The Northern Territory was transferred from the control of the South Australian government to the Commonwealth in 1911.",
+        "score_breakdown": {
+          "dense": 0.05223542552984765,
+          "graph": 0.053495877241415996,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:walnut_shade_missouri_0",
+        "passage_index": 0,
+        "title": "Walnut Shade, Missouri",
+        "score": 0.044475697777889824,
+        "text": "Walnut Shade, Missouri\nWalnut Shade is an unincorporated community in Taney County, Missouri, United States. It is located approximately six miles northwest of Forsyth on U.S. Route 160. The town sits at the confluence of Bull and Bear Creeks. Walnut Shade is part of the Branson, Missouri Micropolitan Statistical Area.",
+        "score_breakdown": {
+          "dense": 0.052834070373966,
+          "graph": 0.0513898635740284,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:orroral_river_0",
+        "passage_index": 13,
+        "title": "Orroral River",
+        "score": 0.0444428514489947,
+        "text": "Orroral River\nOrroral River, a perennial stream of the Murrumbidgee catchment within the Murray-Darling basin, is located in the Australian Capital Territory, Australia.",
+        "score_breakdown": {
+          "dense": 0.05226456480083667,
+          "graph": 0.05232446936178178,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:waddams_grove_illinois_0",
+        "passage_index": 7,
+        "title": "Waddams Grove, Illinois",
+        "score": 0.04438788466702977,
+        "text": "Waddams Grove, Illinois\nWaddams Grove, previously known as Wadam's, Waddam's Grove, and Sada, is an unincorporated community in the Stephenson County township of West Point, Illinois, United States. Waddams Grove was the first settlement in Stephenson County. It is located northwest of Lena. The community is near the site of the Battle of Waddams Grove which took place during the Black Hawk War.",
+        "score_breakdown": {
+          "dense": 0.05266070429487885,
+          "graph": 0.051414991016154654,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:geography_of_the_united_states_0",
+        "passage_index": 9,
+        "title": "Geography of the United States",
+        "score": 0.04438432346690402,
+        "text": "Geography of the United States\nThe capital city, Washington, District of Columbia, is a federal district located on land donated by the state of Maryland. (Virginia had also donated land, but it was returned in 1849.) The United States also has overseas territories with varying levels of independence and organization: in the Caribbean the territories of Puerto Rico and the U.S. Virgin Islands, and in the Pacific the inhabited territories of Guam, American Samoa, and the Northern Mariana Islands, along with a number of uninhabited island territories.",
+        "score_breakdown": {
+          "dense": 0.05255103324625728,
+          "graph": 0.05160418393820836,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "In which state is the Star Lite Motel located?",
+        "resolved_sub_question": "In which state is the Star Lite Motel located?",
+        "sentence_id": "sentence:star_lite_motel_0_0_the_star_lite_motel_is_a_historic_motel_in_dilworth_minnesota",
+        "sentence": "The Star Lite Motel is a historic motel in Dilworth, Minnesota.",
+        "score": 0.5264713315808434,
+        "source_title": "Star Lite Motel",
+        "hop_answer": "Minnesota",
+        "hop_thought": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.",
+        "hop_raw_response": "The Star Lite Motel is located in Dilworth, Minnesota, according to the provided information.\nAnswer: Minnesota",
+        "evidence_passages": [
+          {
+            "title": "Star Lite Motel",
+            "text": "The Star Lite Motel is a historic motel in Dilworth, Minnesota."
+          },
+          {
+            "title": "Star Lite Motel",
+            "text": "Star Lite Motel\nThe Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County. Earlier it was known as Charley's Motel. A previous owner created the neon sign that is regarded as the motel's most noteworthy feature."
+          },
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+          }
+        ]
+      },
+      {
+        "sub_question": "Which county in this state includes the city of Walnut Grove?",
+        "resolved_sub_question": "Which county in this state includes the city of Walnut Grove? Context: Minnesota.",
+        "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+        "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+        "score": 0.5906701687894649,
+        "source_title": "Walnut Grove, Minnesota",
+        "hop_answer": "Redwood County",
+        "hop_thought": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.",
+        "hop_raw_response": "The context specifies that we are looking for the county in Minnesota that includes the city of Walnut Grove. The evidence from the Wikipedia entry for Walnut Grove, Minnesota, clearly states that Walnut Grove is located in Redwood County.\nAnswer: Redwood County",
+        "evidence_passages": [
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+          },
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+          },
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the capital of this county?",
+        "resolved_sub_question": "What is the capital of this county? Context: Minnesota; Redwood County.",
+        "sentence_id": "sentence:walnut_grove_minnesota_0_0_walnut_grove_is_a_city_in_redwood_county_minnesota_united_states",
+        "sentence": "Walnut Grove is a city in Redwood County, Minnesota, United States.",
+        "score": 0.4717023120498657,
+        "source_title": "Walnut Grove, Minnesota",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided information does not specify the capital of Redwood County, Minnesota.",
+        "hop_raw_response": "The provided information does not specify the capital of Redwood County, Minnesota.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Walnut Grove is a city in Redwood County, Minnesota, United States."
+          },
+          {
+            "title": "Walnut Grove, Minnesota",
+            "text": "Walnut Grove, Minnesota\nWalnut Grove, Minnesota City U.S. Post Office, First State Bank Building, and water tower in Walnut Grove Location of Walnut Grove, Minnesota Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Coordinates: 44 ° 13 ′ 25 ''N 95 ° 28 ′ 8'' W ﻿ / ﻿ 44.22361 ° N 95.46889 ° W ﻿ / 44.22361; - 95.46889 Country United States State Minnesota County Redwood Founded 1874 Incorporated 1879 Area Total 1.06 sq mi (2.75 km) Land 1.06 sq mi (2.75 km) Water 0 sq mi (0 km) Elevation 1,217 ft (371 m) Population (2010) Total 871 Estimate (2016) 813 Density 820 / sq mi (320 / km) Time zone Central (CST) (UTC - 6) Summer (DST) CDT (UTC - 5) ZIP code 56180 Area code (s) 507 FIPS code 27 - 67846 GNIS feature ID 0653743"
+          },
+          {
+            "title": "Redwood County Poor Farm",
+            "text": "The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. In which state is the Star Lite Motel located? => Minnesota (source: Star Lite Motel)\n2. Which county in this state includes the city of Walnut Grove? => Redwood County (source: Walnut Grove, Minnesota)\n3. What is the capital of this county? (source: Walnut Grove, Minnesota)\n\nFact hints:\n- Redwood County Poor Farm was located in Redwood Falls Minnesota United States\n- Redwood County is part of Minnesota\n- Walnut Grove is located in Redwood County\n- Star Lite Motel is located in Dilworth\n\nWikipedia Title: Redwood County Poor Farm\nRedwood County Poor Farm The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States, from 1884 to 1889 and again from 1909 to 1967, when it was converted to a nursing home.\n\nWikipedia Title: Walnut Grove, Minnesota\nWalnut Grove is a city in Redwood County, Minnesota, United States.\n\nWikipedia Title: Star Lite Motel\nStar Lite Motel The Star Lite Motel is a historic motel in Dilworth, Minnesota. It is one of the oldest buildings in Dilworth, and the oldest motel in Clay County.\n\nWikipedia Title: Minnesota Junction, Wisconsin\nMinnesota Junction, Wisconsin Minnesota Junction is an unincorporated community located, in the town of Oak Grove, in Dodge County, Wisconsin, United States. Minnesota Junction is located on Wisconsin Highway 26.\n\nWikipedia Title: Walnut Grove, Washington\nWalnut Grove, Washington Walnut Grove is a census-designated place (CDP) in Clark County, Washington, United States. The population was 9,790 at the 2010 census, up from 7,164 at the 2000 census.\n\nQuestion: What is the capital of the county that includes the city of Walnut Grove in the state where Star Lite Motel is located?\nDraft Answer: Redwood Falls\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The Star Lite Motel is in Minnesota, and Walnut Grove is in Redwood County, Minnesota. Since the Redwood County Poor Farm was in Redwood Falls, it suggests that Redwood Falls is the capital of Redwood County.",
+  "predicted_answer": "Redwood Falls",
+  "qa_raw_response": "{\n  \"thought\": \"The Star Lite Motel is in Minnesota, and Walnut Grove is in Redwood County, Minnesota. Since the Redwood County Poor Farm was in Redwood Falls, it suggests that Redwood Falls is the capital of Redwood County.\",\n  \"answer\": \"Redwood Falls\",\n  \"support\": \"Redwood County Poor Farm The Redwood County Poor Farm (or Poorhouse) was a county run institution serving impoverished and aged people in Redwood Falls, Minnesota, United States,\"\n}",
+  "sample_metadata": {
+    "sample_id": "3hop1__131745_517267_451901",
+    "question": "What is the capital of the county that includes the city of Walnut Grove in the state where Star Lite Motel is located?",
+    "answer": "Redwood Falls",
+    "answer_aliases": [
+      "Redwood Falls, Minnesota"
+    ],
+    "question_decomposition": [
+      "Which state is Star Lite Motel located?",
+      "Walnut Grove, #1 >> located in the administrative territorial entity",
+      "#2 >> capital"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Redwood Falls",
+    "gold_aliases": [
+      "Redwood Falls, Minnesota"
+    ],
+    "matched": true,
+    "matched_candidates": [
+      "Redwood Falls",
+      "Redwood Falls, Minnesota"
+    ]
+  }
+}

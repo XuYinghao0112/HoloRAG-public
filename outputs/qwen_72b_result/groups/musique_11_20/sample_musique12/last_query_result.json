@@ -1,0 +1,983 @@
+{
+  "query": "Who founded the company that distributed the film UHF?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "UHF"
+  ],
+  "raw_query_entities": [
+    "UHF"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "UHF",
+      "node_id": "entity:uhf_band",
+      "resolved_text": "UHF-band",
+      "score": 0.4799333333333333,
+      "alias_score": 0.5,
+      "relation_score": 0.0,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.9358333333333333,
+      "score_margin": 0.10573333333333329,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What company distributed the film UHF?",
+    "Who founded this company?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:steven_spielberg_kathleen_kennedy_frank_marshall",
+      "score": 0.26410695730508715,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:amblin_partners",
+      "score": 0.25440928040008776,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kevin_smith",
+      "score": 0.2541059727270749,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_smodcast_pictures",
+      "score": 0.2307738504462183,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_amblin_entertainment",
+      "score": 0.2141063379238987,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "score": 0.20354275425073104,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:pictures",
+      "score": 0.19410422797837298,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:american_film_distribution_company",
+      "score": 0.1841252654720462,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:orion_pictures",
+      "score": 0.17410374134043385,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:amblin_entertainment_0_0_amblin_entertainment_is_an_american_film_production_company_founded_by_director",
+      "score": 0.17153982627901157,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:american_film_production_company",
+      "score": 0.16200711428555137,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:smodcast_pictures_0",
+      "score": 0.15817671204542869,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:smodcast_pictures_founded_by_kevin_smith_sentence_smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distributi",
+      "text": "SModcast Pictures founded by Kevin Smith",
+      "head_id": "entity:title_anchor_smodcast_pictures",
+      "tail_id": "entity:kevin_smith",
+      "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "chunk_id": "chunk:smodcast_pictures_0",
+      "document_index": 9,
+      "score": 0.322006512887274
+    },
+    {
+      "fact_id": "fact:amblin_entertainment_founded_by_steven_spielberg_kathleen_kennedy_frank_marshall_sentence_amblin_entertainment_0_0_ambli",
+      "text": "Amblin Entertainment founded by Steven Spielberg Kathleen Kennedy Frank Marshall",
+      "head_id": "entity:title_anchor_amblin_entertainment",
+      "tail_id": "entity:steven_spielberg_kathleen_kennedy_frank_marshall",
+      "sentence_id": "sentence:amblin_entertainment_0_0_amblin_entertainment_is_an_american_film_production_company_founded_by_director",
+      "chunk_id": "chunk:amblin_entertainment_0",
+      "document_index": 18,
+      "score": 0.26200835304792824
+    },
+    {
+      "fact_id": "fact:orion_pictures_related_to_pictures_sentence_mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_fil",
+      "text": "Orion Pictures related_to Pictures",
+      "head_id": "entity:orion_pictures",
+      "tail_id": "entity:pictures",
+      "sentence_id": "sentence:mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_film_producer_and_exe",
+      "chunk_id": "chunk:mike_medavoy_0",
+      "document_index": 6,
+      "score": 0.19200696719514793
+    },
+    {
+      "fact_id": "fact:smodcast_pictures_is_a_american_film_distribution_company_sentence_smodcast_pictures_0_0_smodcast_pictures_is_an_america",
+      "text": "SModcast Pictures is a American film distribution company",
+      "head_id": "entity:title_anchor_smodcast_pictures",
+      "tail_id": "entity:american_film_distribution_company",
+      "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "chunk_id": "chunk:smodcast_pictures_0",
+      "document_index": 9,
+      "score": 0.1820097721167149
+    },
+    {
+      "fact_id": "fact:kevin_smith_under_smodcast_pictures_sentence_smodcast_pictures_0_1_kevin_smith_announced_at_the_2011_sundance_film_festi",
+      "text": "Kevin Smith under SModcast Pictures",
+      "head_id": "entity:kevin_smith",
+      "tail_id": "entity:title_anchor_smodcast_pictures",
+      "sentence_id": "sentence:smodcast_pictures_0_1_kevin_smith_announced_at_the_2011_sundance_film_festival_that_he_would_release_h",
+      "chunk_id": "chunk:smodcast_pictures_0",
+      "document_index": 9,
+      "score": 0.1820057650312959
+    },
+    {
+      "fact_id": "fact:amblin_entertainment_is_a_american_film_production_company_sentence_amblin_entertainment_0_0_amblin_entertainment_is_an_",
+      "text": "Amblin Entertainment is a American film production company",
+      "head_id": "entity:title_anchor_amblin_entertainment",
+      "tail_id": "entity:american_film_production_company",
+      "sentence_id": "sentence:amblin_entertainment_0_0_amblin_entertainment_is_an_american_film_production_company_founded_by_director",
+      "chunk_id": "chunk:amblin_entertainment_0",
+      "document_index": 18,
+      "score": 0.16200711428555137
+    },
+    {
+      "fact_id": "fact:january_related_to_orion_pictures_sentence_mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_film",
+      "text": "January related_to Orion Pictures",
+      "head_id": "entity:january",
+      "tail_id": "entity:orion_pictures",
+      "sentence_id": "sentence:mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_film_producer_and_exe",
+      "chunk_id": "chunk:mike_medavoy_0",
+      "document_index": 6,
+      "score": 0.15200599391926967
+    }
+  ],
+  "bridge_entities": [
+    "Kevin Smith"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What company distributed the film UHF?",
+      "resolved_sub_question": "What company distributed the film UHF?",
+      "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
+      "score": 0.4249862487546674,
+      "source_title": "SModcast Pictures",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".",
+      "hop_raw_response": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "SModcast Pictures",
+          "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
+        },
+        {
+          "title": "SModcast Pictures",
+          "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+        },
+        {
+          "title": "SModcast Pictures",
+          "text": "Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who founded this company?",
+      "resolved_sub_question": "Who founded this company?",
+      "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
+      "score": 0.34510358208800074,
+      "source_title": "SModcast Pictures",
+      "hop_answer": "Kevin Smith",
+      "hop_thought": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.",
+      "hop_raw_response": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.\nAnswer: Kevin Smith",
+      "evidence_passages": [
+        {
+          "title": "SModcast Pictures",
+          "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
+        },
+        {
+          "title": "SModcast Pictures",
+          "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+        },
+        {
+          "title": "Amblin Entertainment",
+          "text": "Amblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_amblin_entertainment",
+      "score": 0.07545366822942934,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_film_producer_and_exe",
+      "score": 0.071884585514891,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:smodcast_pictures_0_1_kevin_smith_announced_at_the_2011_sundance_film_festival_that_he_would_release_h",
+      "score": 0.06941611503384215,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:amblin_entertainment_0_0_amblin_entertainment_is_an_american_film_production_company_founded_by_director",
+      "score": 0.06816933950646278,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+      "score": 0.06074939992726013,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:kevin_smith",
+      "score": 0.059698729534582155,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_smodcast_pictures",
+      "score": 0.05449504457747127,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:amblin_partners",
+      "score": 0.03765066877122007,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:orion_pictures",
+      "score": 0.03618992134615353,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:amblin_entertainment_0_2_the_company_distributes_all_of_the_films_from_amblin_partners_under_the_amblin_e",
+      "score": 0.03319876732818916,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:january",
+      "score": 0.03207437181453911,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:steven_spielberg_kathleen_kennedy_frank_marshall",
+      "score": 0.02647494883338105,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pictures",
+      "score": 0.0240400211015868,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_film_distribution_company",
+      "score": 0.023499385767838922,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:amblin_entertainment_0_1_the_company_s_headquarters_are_located_on_the_backlot_of_universal_studios_in_un",
+      "score": 0.022475615939429518,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:american_film_production_company",
+      "score": 0.021998943115653542,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:smodcast_pictures_0",
+      "score": 0.01872321007925954,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:2011_sundance_film_festival",
+      "score": 0.01811834154015574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:red_state",
+      "score": 0.01811834154015574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:amblin_entertainment_0",
+      "score": 0.017534641623608523,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:smodcast_pictures_0",
+      "passage_index": 9,
+      "title": "SModcast Pictures",
+      "score": 0.09783733296142158,
+      "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.",
+      "score_breakdown": {
+        "dense": 0.05041503564685969,
+        "graph": 0.05638324232616515,
+        "fact": 0.3546272710519947
+      }
+    },
+    {
+      "node_id": "chunk:amblin_entertainment_0",
+      "passage_index": 18,
+      "title": "Amblin Entertainment",
+      "score": 0.09485035829195368,
+      "text": "Amblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981. The company's headquarters are located on the backlot of Universal Studios in Universal City, California. The company distributes all of the films from Amblin Partners under the Amblin Entertainment name.",
+      "score_breakdown": {
+        "dense": 0.05035041422871315,
+        "graph": 0.05687076767680416,
+        "fact": 0.333976001087468
+      }
+    },
+    {
+      "node_id": "chunk:mike_medavoy_0",
+      "passage_index": 6,
+      "title": "Mike Medavoy",
+      "score": 0.09026202253230095,
+      "text": "Mike Medavoy\nMorris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.",
+      "score_breakdown": {
+        "dense": 0.050116674444791766,
+        "graph": 0.053294474695282965,
+        "fact": 0.31139672786053724
+      }
+    },
+    {
+      "node_id": "chunk:uhf_film_0",
+      "passage_index": 10,
+      "title": "UHF (film)",
+      "score": 0.04284547473442599,
+      "text": "UHF (film)\nYankovic and Levey wrote the film after Yankovic's second studio album, looking to apply the musician's parody and comedy to film, and chose the approach of George being a straight man with a vivid imagination to support the inclusion of parodies within the film. They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.",
+      "score_breakdown": {
+        "dense": 0.05066440745515194,
+        "graph": 0.0499335021136414,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:marketwired_0",
+      "passage_index": 15,
+      "title": "Marketwired",
+      "score": 0.0422569015870143,
+      "text": "Marketwired\nMarketwired is a press release distribution service headquartered in Toronto, Ontario, Canada. Marketwired was founded in 1993 and incorporated in the U.S. in 1999. The company distributes press releases via traditional methods (Associated Press, Bloomberg, etc.) as well as new media methods and other services.",
+      "score_breakdown": {
+        "dense": 0.05011366627215358,
+        "graph": 0.04898128379109943,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:videodrome_0",
+      "passage_index": 4,
+      "title": "Videodrome",
+      "score": 0.04223317016606773,
+      "text": "Videodrome\nVideodrome is a 1983 Canadian science fiction body horror film written and directed by David Cronenberg and starring James Woods, Sonja Smits, and Deborah Harry. Set in Toronto during the early 1980s, it follows the CEO of a small UHF television station who stumbles upon a broadcast signal featuring extreme violence and torture. The layers of deception and mind-control conspiracy unfold as he uncovers the signal's source, and loses touch with reality in a series of increasingly bizarre and violent organic hallucinations.",
+      "score_breakdown": {
+        "dense": 0.05006958182518077,
+        "graph": 0.04898300054072768,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:equity_music_group_0",
+      "passage_index": 16,
+      "title": "Equity Music Group",
+      "score": 0.04221393924454908,
+      "text": "Equity Music Group\nEquity Music Group was an American country music record label founded in 2003 by singer Clint Black. The label was distributed by Koch Entertainment (now E1 Entertainment).",
+      "score_breakdown": {
+        "dense": 0.05004398762992497,
+        "graph": 0.04896582016030116,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:three_gut_records_0",
+      "passage_index": 8,
+      "title": "Three Gut Records",
+      "score": 0.04220835759642972,
+      "text": "Three Gut Records\nThree Gut Records was a Guelph, Ontario, Canada based independent record label. It was founded in 1999 by Lisa Moran and Tyler Clarke Burke as a vehicle for releasing albums by their friends; it became an influential player in Canadian music with the breakout success of the Constantines' self-titled 2001 release on the label. Three Gut releases were distributed by Outside Music.",
+      "score_breakdown": {
+        "dense": 0.0500323359404633,
+        "graph": 0.04896857609724967,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:desoto_records_0",
+      "passage_index": 3,
+      "title": "DeSoto Records",
+      "score": 0.042205674085878706,
+      "text": "DeSoto Records\nDeSoto Records is an American record label based in Washington, D.C. Founded in 1989, it is run by Bill Barbot and Kim Coletta, both formerly of the band Jawbox. It was first founded by members of the band Edsel to release their first single, \"My Manacles\". Jawbox next used the name DeSoto for their first EP. It has released over 40 records, 7\" singles, CDs, and LP vinyl records. It is distributed by Fontana Distribution.",
+      "score_breakdown": {
+        "dense": 0.05000926759593725,
+        "graph": 0.049001923027044064,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sleaszy_rider_records_0",
+      "passage_index": 11,
+      "title": "Sleaszy Rider Records",
+      "score": 0.04219387552532173,
+      "text": "Sleaszy Rider Records\nSleaszy Rider Records is an independent record label which was founded in 1999 by Tolis G. Palantzas. The head office of the label is located in Greece. The label is mainly distributed in Europe by Sony Music/EMI. The label also distributes releases in Greece from numerous labels, including Roadrunner Records, SPV, and Pagan Records.",
+      "score_breakdown": {
+        "dense": 0.04999433915399444,
+        "graph": 0.04898996330208261,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_amblin_entertainment",
+        "score": 0.07545366822942934,
+        "text": "Amblin Entertainment",
+        "metadata": {
+          "canonical_name": "Amblin Entertainment",
+          "aliases": [
+            "AE",
+            "Amblin Entertainment"
+          ],
+          "surface_forms": [
+            "AE",
+            "Amblin Entertainment"
+          ],
+          "title_anchor": "Amblin Entertainment"
+        }
+      },
+      {
+        "node_id": "entity:kevin_smith",
+        "score": 0.059698729534582155,
+        "text": "Kevin Smith",
+        "metadata": {
+          "canonical_name": "Kevin Smith",
+          "aliases": [
+            "KS",
+            "Kevin Smith"
+          ],
+          "surface_forms": [
+            "KS",
+            "Kevin Smith"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_smodcast_pictures",
+        "score": 0.05449504457747127,
+        "text": "SModcast Pictures",
+        "metadata": {
+          "canonical_name": "SModcast Pictures",
+          "aliases": [
+            "SModcast Pictures",
+            "SP"
+          ],
+          "surface_forms": [
+            "SModcast Pictures",
+            "SP"
+          ],
+          "title_anchor": "SModcast Pictures"
+        }
+      },
+      {
+        "node_id": "entity:amblin_partners",
+        "score": 0.03765066877122007,
+        "text": "Amblin Partners",
+        "metadata": {
+          "canonical_name": "Amblin Partners",
+          "aliases": [
+            "AP",
+            "Amblin Partners"
+          ],
+          "surface_forms": [
+            "AP",
+            "Amblin Partners"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:orion_pictures",
+        "score": 0.03618992134615353,
+        "text": "Orion Pictures",
+        "metadata": {
+          "canonical_name": "Orion Pictures",
+          "aliases": [
+            "OP",
+            "Orion Pictures"
+          ],
+          "surface_forms": [
+            "OP",
+            "Orion Pictures"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:mike_medavoy_0_0_morris_mike_medavoy_born_january_21_1941_is_an_american_film_producer_and_exe",
+        "score": 0.071884585514891,
+        "text": "Morris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.",
+        "metadata": {
+          "title": "Mike Medavoy",
+          "chunk_id": "chunk:mike_medavoy_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Morris Mike Medavoy",
+              "relation": "related_to",
+              "tail": "January"
+            },
+            {
+              "head": "January",
+              "relation": "related_to",
+              "tail": "Orion Pictures"
+            },
+            {
+              "head": "Orion Pictures",
+              "relation": "related_to",
+              "tail": "Pictures"
+            }
+          ],
+          "entities": [
+            "Morris Mike Medavoy",
+            "January",
+            "Orion Pictures",
+            "Pictures",
+            "United Artists",
+            "Phoenix Pictures"
+          ],
+          "entity_ids": [
+            "entity:january",
+            "entity:morris_mike_medavoy",
+            "entity:orion_pictures",
+            "entity:phoenix_pictures",
+            "entity:pictures",
+            "entity:united_artists"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:smodcast_pictures_0_1_kevin_smith_announced_at_the_2011_sundance_film_festival_that_he_would_release_h",
+        "score": 0.06941611503384215,
+        "text": "Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.",
+        "metadata": {
+          "title": "SModcast Pictures",
+          "chunk_id": "chunk:smodcast_pictures_0",
+          "sentence_index": 1,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Kevin Smith",
+              "relation": "announced at",
+              "tail": "2011 Sundance Film Festival"
+            },
+            {
+              "head": "Kevin Smith",
+              "relation": "would release",
+              "tail": "Red State"
+            },
+            {
+              "head": "Kevin Smith",
+              "relation": "under",
+              "tail": "SModcast Pictures"
+            }
+          ],
+          "entities": [
+            "Kevin Smith",
+            "2011 Sundance Film Festival",
+            "Red State",
+            "SModcast Pictures"
+          ],
+          "entity_ids": [
+            "entity:2011_sundance_film_festival",
+            "entity:kevin_smith",
+            "entity:red_state",
+            "entity:title_anchor_smodcast_pictures"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:amblin_entertainment_0_0_amblin_entertainment_is_an_american_film_production_company_founded_by_director",
+        "score": 0.06816933950646278,
+        "text": "Amblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981.",
+        "metadata": {
+          "title": "Amblin Entertainment",
+          "chunk_id": "chunk:amblin_entertainment_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Amblin Entertainment",
+              "relation": "is a",
+              "tail": "American film production company"
+            },
+            {
+              "head": "Amblin Entertainment",
+              "relation": "founded by",
+              "tail": "Steven Spielberg Kathleen Kennedy Frank Marshall"
+            }
+          ],
+          "entities": [
+            "Amblin Entertainment",
+            "Steven Spielberg",
+            "Kathleen Kennedy",
+            "Frank Marshall"
+          ],
+          "entity_ids": [
+            "entity:american_film_production_company",
+            "entity:frank_marshall",
+            "entity:kathleen_kennedy",
+            "entity:steven_spielberg",
+            "entity:steven_spielberg_kathleen_kennedy_frank_marshall",
+            "entity:title_anchor_amblin_entertainment"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+        "score": 0.06074939992726013,
+        "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
+        "metadata": {
+          "title": "SModcast Pictures",
+          "chunk_id": "chunk:smodcast_pictures_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "SModcast Pictures",
+              "relation": "is a",
+              "tail": "American film distribution company"
+            },
+            {
+              "head": "SModcast Pictures",
+              "relation": "founded by",
+              "tail": "Kevin Smith"
+            }
+          ],
+          "entities": [
+            "SModcast Pictures",
+            "Kevin Smith"
+          ],
+          "entity_ids": [
+            "entity:american_film_distribution_company",
+            "entity:kevin_smith",
+            "entity:title_anchor_smodcast_pictures"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:smodcast_pictures_0",
+        "score": 0.01872321007925954,
+        "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.",
+        "metadata": {
+          "title": "SModcast Pictures",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:2011_sundance_film_festival",
+            "entity:american_film_distribution_company",
+            "entity:kevin_smith",
+            "entity:red_state",
+            "entity:title_anchor_smodcast_pictures"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:amblin_entertainment_0",
+        "score": 0.017534641623608523,
+        "text": "Amblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981. The company's headquarters are located on the backlot of Universal Studios in Universal City, California. The company distributes all of the films from Amblin Partners under the Amblin Entertainment name.",
+        "metadata": {
+          "title": "Amblin Entertainment",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:amblin_partners",
+            "entity:american_film_production_company",
+            "entity:california",
+            "entity:frank_marshall",
+            "entity:kathleen_kennedy",
+            "entity:steven_spielberg",
+            "entity:steven_spielberg_kathleen_kennedy_frank_marshall",
+            "entity:title_anchor_amblin_entertainment",
+            "entity:universal_city",
+            "entity:universal_city_california",
+            "entity:universal_studios"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mike_medavoy_0",
+        "score": 0.008581614824174796,
+        "text": "Mike Medavoy\nMorris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.",
+        "metadata": {
+          "title": "Mike Medavoy",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:january",
+            "entity:morris_mike_medavoy",
+            "entity:orion_pictures",
+            "entity:phoenix_pictures",
+            "entity:pictures",
+            "entity:united_artists"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:uhf_film_0",
+        "score": 0.0039113263867575744,
+        "text": "UHF (film)\nYankovic and Levey wrote the film after Yankovic's second studio album, looking to apply the musician's parody and comedy to film, and chose the approach of George being a straight man with a vivid imagination to support the inclusion of parodies within the film. They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.",
+        "metadata": {
+          "title": "UHF (film)",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:dallas_texas",
+            "entity:george",
+            "entity:levey",
+            "entity:orion_pictures",
+            "entity:principal_filming",
+            "entity:tulsa_oklahoma",
+            "entity:yankovic"
+          ]
+        }
+      }
+    ],
+    "qa_context": "SModcast Pictures\nSModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.\n\nAmblin Entertainment\nAmblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981. The company's headquarters are located on the backlot of Universal Studios in Universal City, California. The company distributes all of the films from Amblin Partners under the Amblin Entertainment name.\n\nMike Medavoy\nMike Medavoy\nMorris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.\n\nUHF (film)\nUHF (film)\nYankovic and Levey wrote the film after Yankovic's second studio album, looking to apply the musician's parody and comedy to film, and chose the approach of George being a straight man with a vivid imagination to support the inclusion of parodies within the film. They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.\n\nMarketwired\nMarketwired\nMarketwired is a press release distribution service headquartered in Toronto, Ontario, Canada. Marketwired was founded in 1993 and incorporated in the U.S. in 1999. The company distributes press releases via traditional methods (Associated Press, Bloomberg, etc.) as well as new media methods and other services.\n\nSModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.\n\nSModcast Pictures\nKevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.\n\nAmblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981.\n\nDeSoto Records\nDeSoto Records\nDeSoto Records is an American record label based in Washington, D.C. Founded in 1989, it is run by Bill Barbot and Kim Coletta, both formerly of the band Jawbox. It was first founded by members of the band Edsel to release their first single, \"My Manacles\". Jawbox next used the name DeSoto for their first EP. It has released over 40 records, 7\" singles, CDs, and LP vinyl records. It is distributed by Fontana Distribution.\n\nVideodrome\nVideodrome\nVideodrome is a 1983 Canadian science fiction body horror film written and directed by David Cronenberg and starring James Woods, Sonja Smits, and Deborah Harry. Set in Toronto during the early 1980s, it follows the CEO of a small UHF television station who stumbles upon a broadcast signal featuring extreme violence and torture. The layers of deception and mind-control conspiracy unfold as he uncovers the signal's source, and loses touch with reality in a series of increasingly bizarre and violent organic hallucinations.\n\nEquity Music Group\nEquity Music Group\nEquity Music Group was an American country music record label founded in 2003 by singer Clint Black. The label was distributed by Koch Entertainment (now E1 Entertainment).",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:smodcast_pictures_0",
+        "passage_index": 9,
+        "title": "SModcast Pictures",
+        "score": 0.09783733296142158,
+        "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.",
+        "score_breakdown": {
+          "dense": 0.05041503564685969,
+          "graph": 0.05638324232616515,
+          "fact": 0.3546272710519947
+        }
+      },
+      {
+        "node_id": "chunk:amblin_entertainment_0",
+        "passage_index": 18,
+        "title": "Amblin Entertainment",
+        "score": 0.09485035829195368,
+        "text": "Amblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981. The company's headquarters are located on the backlot of Universal Studios in Universal City, California. The company distributes all of the films from Amblin Partners under the Amblin Entertainment name.",
+        "score_breakdown": {
+          "dense": 0.05035041422871315,
+          "graph": 0.05687076767680416,
+          "fact": 0.333976001087468
+        }
+      },
+      {
+        "node_id": "chunk:mike_medavoy_0",
+        "passage_index": 6,
+        "title": "Mike Medavoy",
+        "score": 0.09026202253230095,
+        "text": "Mike Medavoy\nMorris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.",
+        "score_breakdown": {
+          "dense": 0.050116674444791766,
+          "graph": 0.053294474695282965,
+          "fact": 0.31139672786053724
+        }
+      },
+      {
+        "node_id": "chunk:uhf_film_0",
+        "passage_index": 10,
+        "title": "UHF (film)",
+        "score": 0.04284547473442599,
+        "text": "UHF (film)\nYankovic and Levey wrote the film after Yankovic's second studio album, looking to apply the musician's parody and comedy to film, and chose the approach of George being a straight man with a vivid imagination to support the inclusion of parodies within the film. They struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.",
+        "score_breakdown": {
+          "dense": 0.05066440745515194,
+          "graph": 0.0499335021136414,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:marketwired_0",
+        "passage_index": 15,
+        "title": "Marketwired",
+        "score": 0.0422569015870143,
+        "text": "Marketwired\nMarketwired is a press release distribution service headquartered in Toronto, Ontario, Canada. Marketwired was founded in 1993 and incorporated in the U.S. in 1999. The company distributes press releases via traditional methods (Associated Press, Bloomberg, etc.) as well as new media methods and other services.",
+        "score_breakdown": {
+          "dense": 0.05011366627215358,
+          "graph": 0.04898128379109943,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:videodrome_0",
+        "passage_index": 4,
+        "title": "Videodrome",
+        "score": 0.04223317016606773,
+        "text": "Videodrome\nVideodrome is a 1983 Canadian science fiction body horror film written and directed by David Cronenberg and starring James Woods, Sonja Smits, and Deborah Harry. Set in Toronto during the early 1980s, it follows the CEO of a small UHF television station who stumbles upon a broadcast signal featuring extreme violence and torture. The layers of deception and mind-control conspiracy unfold as he uncovers the signal's source, and loses touch with reality in a series of increasingly bizarre and violent organic hallucinations.",
+        "score_breakdown": {
+          "dense": 0.05006958182518077,
+          "graph": 0.04898300054072768,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:equity_music_group_0",
+        "passage_index": 16,
+        "title": "Equity Music Group",
+        "score": 0.04221393924454908,
+        "text": "Equity Music Group\nEquity Music Group was an American country music record label founded in 2003 by singer Clint Black. The label was distributed by Koch Entertainment (now E1 Entertainment).",
+        "score_breakdown": {
+          "dense": 0.05004398762992497,
+          "graph": 0.04896582016030116,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:three_gut_records_0",
+        "passage_index": 8,
+        "title": "Three Gut Records",
+        "score": 0.04220835759642972,
+        "text": "Three Gut Records\nThree Gut Records was a Guelph, Ontario, Canada based independent record label. It was founded in 1999 by Lisa Moran and Tyler Clarke Burke as a vehicle for releasing albums by their friends; it became an influential player in Canadian music with the breakout success of the Constantines' self-titled 2001 release on the label. Three Gut releases were distributed by Outside Music.",
+        "score_breakdown": {
+          "dense": 0.0500323359404633,
+          "graph": 0.04896857609724967,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:desoto_records_0",
+        "passage_index": 3,
+        "title": "DeSoto Records",
+        "score": 0.042205674085878706,
+        "text": "DeSoto Records\nDeSoto Records is an American record label based in Washington, D.C. Founded in 1989, it is run by Bill Barbot and Kim Coletta, both formerly of the band Jawbox. It was first founded by members of the band Edsel to release their first single, \"My Manacles\". Jawbox next used the name DeSoto for their first EP. It has released over 40 records, 7\" singles, CDs, and LP vinyl records. It is distributed by Fontana Distribution.",
+        "score_breakdown": {
+          "dense": 0.05000926759593725,
+          "graph": 0.049001923027044064,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sleaszy_rider_records_0",
+        "passage_index": 11,
+        "title": "Sleaszy Rider Records",
+        "score": 0.04219387552532173,
+        "text": "Sleaszy Rider Records\nSleaszy Rider Records is an independent record label which was founded in 1999 by Tolis G. Palantzas. The head office of the label is located in Greece. The label is mainly distributed in Europe by Sony Music/EMI. The label also distributes releases in Greece from numerous labels, including Roadrunner Records, SPV, and Pagan Records.",
+        "score_breakdown": {
+          "dense": 0.04999433915399444,
+          "graph": 0.04898996330208261,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What company distributed the film UHF?",
+        "resolved_sub_question": "What company distributed the film UHF?",
+        "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+        "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
+        "score": 0.4249862487546674,
+        "source_title": "SModcast Pictures",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".",
+        "hop_raw_response": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "SModcast Pictures",
+            "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
+          },
+          {
+            "title": "SModcast Pictures",
+            "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+          },
+          {
+            "title": "SModcast Pictures",
+            "text": "Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who founded this company?",
+        "resolved_sub_question": "Who founded this company?",
+        "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
+        "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
+        "score": 0.34510358208800074,
+        "source_title": "SModcast Pictures",
+        "hop_answer": "Kevin Smith",
+        "hop_thought": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.",
+        "hop_raw_response": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.\nAnswer: Kevin Smith",
+        "evidence_passages": [
+          {
+            "title": "SModcast Pictures",
+            "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
+          },
+          {
+            "title": "SModcast Pictures",
+            "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
+          },
+          {
+            "title": "Amblin Entertainment",
+            "text": "Amblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What company distributed the film UHF? (source: SModcast Pictures)\n2. Who founded this company? => Kevin Smith (source: SModcast Pictures)\n\nFact hints:\n- SModcast Pictures founded by Kevin Smith\n- Kevin Smith under SModcast Pictures\n- SModcast Pictures is a American film distribution company\n\nWikipedia Title: SModcast Pictures\nKevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release. SModcast Pictures SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.\n\nWikipedia Title: SModcast Pictures\nKevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release.\n\nWikipedia Title: SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.\n\nWikipedia Title: UHF (film)\nThey struggled with finding a film production company for financing the film, but were eventually able to get Orion Pictures' support after stating they could keep the film costs under $5 million. Principal filming took place around Tulsa, Oklahoma, with many of the extras for the film from the Tulsa and Dallas, Texas areas.\n\nWikipedia Title: Amblin Entertainment\nAmblin Entertainment Amblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981. The company's headquarters are located on the backlot of Universal Studios in Universal City, California.\n\nWikipedia Title: Amblin Entertainment\nAmblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981.\n\nWikipedia Title: Mike Medavoy\nMike Medavoy Morris Mike Medavoy (born January 21, 1941) is an American film producer and executive, co-founder of Orion Pictures (1978), former chairman of TriStar Pictures, former head of production for United Artists (1974–1978) and current chairman and CEO of Phoenix Pictures.\n\nWikipedia Title: Videodrome\nSet in Toronto during the early 1980s, it follows the CEO of a small UHF television station who stumbles upon a broadcast signal featuring extreme violence and torture. Videodrome Videodrome is a 1983 Canadian science fiction body horror film written and directed by David Cronenberg and starring James Woods, Sonja Smits, and Deborah Harry.\n\nWikipedia Title: DeSoto Records\nIt is distributed by Fontana Distribution. Founded in 1989, it is run by Bill Barbot and Kim Coletta, both formerly of the band Jawbox.\n\nWikipedia Title: Equity Music Group\nThe label was distributed by Koch Entertainment (now E1 Entertainment). Equity Music Group Equity Music Group was an American country music record label founded in 2003 by singer Clint Black.\n\nWikipedia Title: Marketwired\nMarketwired was founded in 1993 and incorporated in the U.S. in 1999. The company distributes press releases via traditional methods (Associated Press, Bloomberg, etc.) as well as new media methods and other services.\n\nQuestion: Who founded the company that distributed the film UHF?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The company that distributed UHF is SModcast Pictures, which was founded by Kevin Smith.",
+  "predicted_answer": "Kevin Smith",
+  "qa_raw_response": "{\n  \"thought\": \"The company that distributed UHF is SModcast Pictures, which was founded by Kevin Smith.\",\n  \"answer\": \"Kevin Smith\",\n  \"support\": \"SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__252311_366220",
+    "question": "Who founded the company that distributed the film UHF?",
+    "answer": "Mike Medavoy",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "UHF >> distributed by",
+      "#1 >> founded by"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Mike Medavoy",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Mike Medavoy"
+    ]
+  }
+}

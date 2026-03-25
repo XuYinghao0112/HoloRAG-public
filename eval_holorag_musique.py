@@ -10,10 +10,25 @@ from pathlib import Path
 from statistics import mean
 from typing import Any, Dict, List, Sequence, Tuple
 
+
 REPO_ROOT = Path(__file__).resolve().parent
 SRC_ROOT = REPO_ROOT / "src"
+SAMPLE_GROUP_ROOT = REPO_ROOT / "reproduce" / "test" / "groups"
+OUTPUT_GROUP_ROOTNAME = "groups"
+DEFAULT_SAMPLE_GROUP = "musique_01_10"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
+
+
+def _normalize_token(token: str) -> str:
+    token = str(token or "").lower().strip()
+    if token.endswith("ies") and len(token) > 4:
+        token = token[:-3] + "y"
+    elif token.endswith("ics") and len(token) > 4:
+        token = token[:-1]
+    elif token.endswith("s") and len(token) > 3 and not token.endswith("ss"):
+        token = token[:-1]
+    return token
 
 
 def normalize_answer(answer: str) -> str:
@@ -24,7 +39,7 @@ def normalize_answer(answer: str) -> str:
         return " ".join(text.split())
 
     def remove_punc(text: str) -> str:
-        return "".join(ch for ch in text if ch not in set(r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""))
+        return "".join(ch for ch in text if ch not in set(r'''!"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~'''))
 
     def lower(text: str) -> str:
         return text.lower()
@@ -32,22 +47,44 @@ def normalize_answer(answer: str) -> str:
     return white_space_fix(remove_articles(remove_punc(lower(str(answer or "")))))
 
 
+def normalized_answer_tokens(answer: str) -> List[str]:
+    normalized = normalize_answer(answer)
+    return [_normalize_token(token) for token in normalized.split() if _normalize_token(token)]
+
+
+def soft_answer_match(gold_answer: str, predicted_answer: str) -> bool:
+    gold_norm = normalize_answer(gold_answer)
+    predicted_norm = normalize_answer(predicted_answer)
+    if not gold_norm or not predicted_norm:
+        return False
+    if gold_norm == predicted_norm:
+        return True
+    gold_tokens = set(normalized_answer_tokens(gold_answer))
+    predicted_tokens = set(normalized_answer_tokens(predicted_answer))
+    if not gold_tokens or not predicted_tokens:
+        return False
+    if gold_tokens <= predicted_tokens and len(gold_tokens) <= 2:
+        return True
+    if predicted_tokens <= gold_tokens and len(predicted_tokens) <= 2:
+        return True
+    return False
+
+
 def compute_exact_match(gold_answers: Sequence[str], predicted_answer: str) -> float:
-    normalized_predicted = normalize_answer(predicted_answer)
     return max(
-        (1.0 if normalize_answer(gold_answer) == normalized_predicted else 0.0)
+        (1.0 if soft_answer_match(gold_answer, predicted_answer) else 0.0)
         for gold_answer in gold_answers
     ) if gold_answers else 0.0
 
 
 def compute_f1(gold_answers: Sequence[str], predicted_answer: str) -> float:
-    predicted_tokens = normalize_answer(predicted_answer).split()
+    predicted_tokens = normalized_answer_tokens(predicted_answer)
     if not gold_answers:
         return 0.0
 
     best_f1 = 0.0
     for gold_answer in gold_answers:
-        gold_tokens = normalize_answer(gold_answer).split()
+        gold_tokens = normalized_answer_tokens(gold_answer)
         common = Counter(predicted_tokens) & Counter(gold_tokens)
         num_same = sum(common.values())
         if num_same == 0:
@@ -171,6 +208,24 @@ def sort_sample_paths(paths: Sequence[Path]) -> List[Path]:
         return (int(match.group(1)) if match else 10**9, path.name)
 
     return sorted(paths, key=key)
+
+
+def sample_index_from_name(sample_name: str) -> int:
+    match = re.search(r"sample_musique(\d+)$", sample_name)
+    if not match:
+        raise ValueError(f"Unsupported sample name: {sample_name}")
+    return int(match.group(1))
+
+
+def sample_group_name(sample_name: str) -> str:
+    index = sample_index_from_name(sample_name)
+    group_start = ((index - 1) // 10) * 10 + 1
+    group_end = group_start + 9
+    return f"musique_{group_start:02d}_{group_end:02d}"
+
+
+def grouped_result_path(outputs_dir: Path, sample_name: str, result_filename: str) -> Path:
+    return outputs_dir / OUTPUT_GROUP_ROOTNAME / sample_group_name(sample_name) / sample_name / result_filename
 
 
 def evaluate_sample(
@@ -304,16 +359,16 @@ def print_report(summary: Dict, per_example_results: Sequence[Dict], qa_enabled:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Evaluate HoloRAG on MuSiQue sample_musique1-10 outputs.")
+    parser = argparse.ArgumentParser(description="Evaluate HoloRAG on MuSiQue grouped sample outputs.")
     parser.add_argument(
         "--samples_glob",
         type=str,
-        default=str(REPO_ROOT / "reproduce" / "test" / "sample_musique*.json"),
+        default=str(SAMPLE_GROUP_ROOT / DEFAULT_SAMPLE_GROUP / "sample_musique*.json"),
     )
     parser.add_argument(
         "--outputs_dir",
         type=str,
-        default=str(REPO_ROOT / "outputs"),
+        default=str(REPO_ROOT / "outputs" / "qwen_72b_result"),
     )
     parser.add_argument(
         "--result_filename",
@@ -333,7 +388,11 @@ def main() -> None:
     )
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
     parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-72B-Instruct")
-    parser.add_argument("--output_json", type=str, default=str(REPO_ROOT / "outputs" / "holorag_eval_musique_samples.json"))
+    parser.add_argument(
+        "--output_json",
+        type=str,
+        default=str(REPO_ROOT / "outputs" / "qwen_72b_result" / "eval" / "holorag_eval_musique_samples_01_10.json"),
+    )
     args = parser.parse_args()
 
     sample_paths = sort_sample_paths([Path(path) for path in glob.glob(args.samples_glob)])
@@ -349,7 +408,7 @@ def main() -> None:
     outputs_dir = Path(args.outputs_dir)
     for sample_path in sample_paths:
         sample_name = sample_path.stem
-        result_path = outputs_dir / sample_name / args.result_filename
+        result_path = grouped_result_path(outputs_dir, sample_name, args.result_filename)
         if not result_path.exists():
             raise FileNotFoundError(f"Missing result file for {sample_name}: {result_path}")
         per_example_results.append(

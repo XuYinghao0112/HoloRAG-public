@@ -1,0 +1,947 @@
+{
+  "query": "Where is Ulrich Walter's employer headquartered?",
+  "alpha": {
+    "entity": 0.5,
+    "sentence": 0.3,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Ulrich Walser"
+  ],
+  "raw_query_entities": [
+    "Ulrich Walter"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Ulrich Walter",
+      "node_id": "entity:ulrich_walser",
+      "resolved_text": "Ulrich Walser",
+      "score": 0.7482333333333333,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.25333333333333335,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is Ulrich Walter's employer?",
+    "Where is this employer headquartered?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:ulrich_walser",
+      "score": 0.8020371932669866,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:alma_wisconsin_united_states",
+      "score": 0.26904127229109964,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:walter_wood_treatment_facility",
+      "score": 0.24905003452944846,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mount_meigs_campus",
+      "score": 0.24903600079898053,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cologne",
+      "score": 0.24845643000420325,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ulrich_walser_house",
+      "score": 0.21157330157062462,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cologne_germany",
+      "score": 0.20903358802918998,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+      "score": 0.1692133065372132,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:dlr_s_lander_control_center",
+      "score": 0.16653261377635584,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:711_north_2nd_street",
+      "score": 0.1540372704073761,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:from",
+      "score": 0.15403421031451647,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:german_aerospace_center",
+      "score": 0.15403421031451647,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:ulrich_walser_house_located_in_alma_wisconsin_united_states_sentence_ulrich_walser_house_0_0_the_ulrich_walser_house_is_",
+      "text": "Ulrich Walser House located in Alma Wisconsin United States",
+      "head_id": "entity:title_anchor_ulrich_walser_house",
+      "tail_id": "entity:alma_wisconsin_united_states",
+      "sentence_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+      "chunk_id": "chunk:ulrich_walser_house_0",
+      "document_index": 18,
+      "score": 0.26705367068500707
+    },
+    {
+      "fact_id": "fact:walter_wood_treatment_facility_is_located_in_mount_meigs_campus_sentence_mount_meigs_campus_0_3_walter_wood_treatment_fa",
+      "text": "Walter Wood Treatment facility is located in Mount Meigs Campus",
+      "head_id": "entity:walter_wood_treatment_facility",
+      "tail_id": "entity:title_anchor_mount_meigs_campus",
+      "sentence_id": "sentence:mount_meigs_campus_0_3_walter_wood_treatment_facility_for_24_girls_is_also_located_in_the_mount_meigs_c",
+      "chunk_id": "chunk:mount_meigs_campus_0",
+      "document_index": 13,
+      "score": 0.24704875244177274
+    },
+    {
+      "fact_id": "fact:dlr_s_lander_control_center_is_located_in_cologne_germany_sentence_philae_spacecraft_0_1_philae_was_monitored_and_operat",
+      "text": "DLR's Lander Control Center is located in Cologne Germany",
+      "head_id": "entity:dlr_s_lander_control_center",
+      "tail_id": "entity:cologne_germany",
+      "sentence_id": "sentence:philae_spacecraft_0_1_philae_was_monitored_and_operated_from_dlr_s_lander_control_center_in_cologne",
+      "chunk_id": "chunk:philae_spacecraft_0",
+      "document_index": 11,
+      "score": 0.20704702500350272
+    },
+    {
+      "fact_id": "fact:ulrich_walser_house_located_at_711_north_2nd_street_sentence_ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_",
+      "text": "Ulrich Walser House located at 711 North 2nd Street",
+      "head_id": "entity:title_anchor_ulrich_walser_house",
+      "tail_id": "entity:711_north_2nd_street",
+      "sentence_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+      "chunk_id": "chunk:ulrich_walser_house_0",
+      "document_index": 18,
+      "score": 0.15205160558113712
+    },
+    {
+      "fact_id": "fact:from_related_to_german_aerospace_center_sentence_ulrich_walter_0_1_from_1988_to_1990_he_completed_basic_training_at_the_",
+      "text": "From related_to German Aerospace Center",
+      "head_id": "entity:from",
+      "tail_id": "entity:german_aerospace_center",
+      "sentence_id": "sentence:ulrich_walter_0_1_from_1988_to_1990_he_completed_basic_training_at_the_german_aerospace_center_a",
+      "chunk_id": "chunk:ulrich_walter_0",
+      "document_index": 14,
+      "score": 0.15204854553688218
+    },
+    {
+      "fact_id": "fact:philae_was_monitored_and_operated_from_dlr_s_lander_control_center_sentence_philae_spacecraft_0_1_philae_was_monitored_a",
+      "text": "Philae was monitored and operated from DLR's Lander Control Center",
+      "head_id": "entity:title_anchor_philae_spacecraft",
+      "tail_id": "entity:dlr_s_lander_control_center",
+      "sentence_id": "sentence:philae_spacecraft_0_1_philae_was_monitored_and_operated_from_dlr_s_lander_control_center_in_cologne",
+      "chunk_id": "chunk:philae_spacecraft_0",
+      "document_index": 11,
+      "score": 0.12204507649783444
+    }
+  ],
+  "bridge_entities": [
+    "Ulrich Walser House",
+    "711 North 2nd Street",
+    "Alma",
+    "Wisconsin"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is Ulrich Walter's employer?",
+      "resolved_sub_question": "Who is Ulrich Walter's employer?",
+      "sentence_id": "sentence:ulrich_walser_house_0_1_it_was_constructed_in_1895_by_ulrich_walser_and_was_placed_on_the_national_regis",
+      "sentence": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+      "score": 0.364964,
+      "source_title": "Ulrich Walser House",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.",
+      "hop_raw_response": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ulrich Walser House",
+          "text": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+        },
+        {
+          "title": "Ulrich Walser House",
+          "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+        },
+        {
+          "title": "Ulrich Walser House",
+          "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
+        }
+      ]
+    },
+    {
+      "sub_question": "Where is this employer headquartered?",
+      "resolved_sub_question": "Where is this employer headquartered?",
+      "sentence_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+      "sentence": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.",
+      "score": 0.3576358877959009,
+      "source_title": "Ulrich Walser House",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.",
+      "hop_raw_response": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ulrich Walser House",
+          "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
+        },
+        {
+          "title": "Ulrich Walser House",
+          "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+        },
+        {
+          "title": "Full-time",
+          "text": "This is a matter generally to be determined by the employer (US Department of Labor)."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+      "score": 0.07652366026909237,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ulrich_walser_house_0_1_it_was_constructed_in_1895_by_ulrich_walser_and_was_placed_on_the_national_regis",
+      "score": 0.0626532983294217,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:philae_spacecraft_0_1_philae_was_monitored_and_operated_from_dlr_s_lander_control_center_in_cologne",
+      "score": 0.05921170514792251,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_ulrich_walser_house",
+      "score": 0.052771365319392596,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ulrich_walser",
+      "score": 0.05238680827007232,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:national_register",
+      "score": 0.05004106716843905,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:dlr_s_lander_control_center",
+      "score": 0.0409043357855075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cologne_germany",
+      "score": 0.036991938697492704,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mount_meigs_campus",
+      "score": 0.03579176297789684,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:711_north_2nd_street",
+      "score": 0.030313161940873464,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:alma_wisconsin_united_states",
+      "score": 0.02827231299612579,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cologne",
+      "score": 0.027228945173927654,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ulrich_walter_0_1_from_1988_to_1990_he_completed_basic_training_at_the_german_aerospace_center_a",
+      "score": 0.024843212615963565,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_philae_spacecraft",
+      "score": 0.02380113654762835,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:german_aerospace_center",
+      "score": 0.023776436521277408,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mount_meigs_campus_0_0_the_mount_meigs_campus_is_a_juvenile_corrections_facility_of_the_alabama_departm",
+      "score": 0.023376292381090603,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:mount_meigs_campus_0_3_walter_wood_treatment_facility_for_24_girls_is_also_located_in_the_mount_meigs_c",
+      "score": 0.023346897624349744,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:walter_wood_treatment_facility",
+      "score": 0.02113070305961197,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:national_register_of_historic_places",
+      "score": 0.017222647407737365,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:historic_places",
+      "score": 0.01685246757392609,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:ulrich_walser_house_0",
+      "passage_index": 18,
+      "title": "Ulrich Walser House",
+      "score": 0.08383341110381784,
+      "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+      "score_breakdown": {
+        "dense": 0.050229519043072456,
+        "graph": 0.05623769600016977,
+        "fact": 0.2622391122005137
+      }
+    },
+    {
+      "node_id": "chunk:mount_meigs_campus_0",
+      "passage_index": 13,
+      "title": "Mount Meigs Campus",
+      "score": 0.08101425643704387,
+      "text": "Mount Meigs Campus\nThe Mount Meigs Campus is a juvenile corrections facility of the Alabama Department of Youth Services located in Mount Meigs, unincorporated Montgomery County; the campus serves as the agency's administrative headquarters. The campus, which can house 264 boys, is next to Interstate 85 North and about east of Downtown Montgomery. Since 2015, the separate J. Walter Wood Treatment facility for 24 girls is also located in the Mount Meigs Campus.",
+      "score_breakdown": {
+        "dense": 0.04988696744087652,
+        "graph": 0.050065498321374705,
+        "fact": 0.25704516565432917
+      }
+    },
+    {
+      "node_id": "chunk:philae_spacecraft_0",
+      "passage_index": 11,
+      "title": "Philae (spacecraft)",
+      "score": 0.0799624471896786,
+      "text": "Philae (spacecraft)\nThe lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs. \"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany.",
+      "score_breakdown": {
+        "dense": 0.04984275622698064,
+        "graph": 0.05168017725252936,
+        "fact": 0.24696585392720297
+      }
+    },
+    {
+      "node_id": "chunk:ulrich_walter_0",
+      "passage_index": 14,
+      "title": "Ulrich Walter",
+      "score": 0.07749761032092717,
+      "text": "Ulrich Walter\nAfter two post-doc positions at the Argonne National Laboratory, Chicago, Illinois, and the University of California at Berkeley, California, he was selected in 1987 to join the German astronaut team. From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.",
+      "score_breakdown": {
+        "dense": 0.05058148688850925,
+        "graph": 0.04871770766517992,
+        "fact": 0.23374986821795407
+      }
+    },
+    {
+      "node_id": "chunk:john_deere_world_headquarters_0",
+      "passage_index": 6,
+      "title": "John Deere World Headquarters",
+      "score": 0.04159807598455161,
+      "text": "John Deere World Headquarters\nThe John Deere World Headquarters is a complex of four buildings located on 1,400 acres (5.7 km²) of land at One John Deere Place, Moline, Illinois, United States. The complex serves as corporate headquarters for John Deere.",
+      "score_breakdown": {
+        "dense": 0.05016197421974382,
+        "graph": 0.04669663387897503,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ulrich_franzen_0",
+      "passage_index": 19,
+      "title": "Ulrich Franzen",
+      "score": 0.041594282566589216,
+      "text": "Ulrich Franzen\nUlrich Joseph Franzen (January 15, 1921 – October 6, 2012) was a German-born American architect known for his \"fortresslike\" buildings and Brutalist style.",
+      "score_breakdown": {
+        "dense": 0.050177506555005365,
+        "graph": 0.04665551320445422,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:richmond_virginia_0",
+      "passage_index": 0,
+      "title": "Richmond, Virginia",
+      "score": 0.041575946133691026,
+      "text": "Richmond, Virginia\nOther Fortune 500 companies, while not headquartered in the area, do have a major presence. These include SunTrust Bank (based in Atlanta), Capital One Financial Corporation (officially based in McLean, Virginia, but founded in Richmond with its operations center and most employees in the Richmond area), and the medical and pharmaceutical giant McKesson (based in San Francisco). Capital One and Altria company's Philip Morris USA are two of the largest private Richmond-area employers. DuPont maintains a production facility in South Richmond known as the Spruance Plant. UPS Freight, the less-than-truckload division of UPS and formerly known as Overnite Transportation, has its corporate headquarters in Richmond.",
+      "score_breakdown": {
+        "dense": 0.05013594730248487,
+        "graph": 0.04667058372441448,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cork_city_0",
+      "passage_index": 1,
+      "title": "Cork (city)",
+      "score": 0.04155950091645804,
+      "text": "Cork (city)\nCork City is at the heart of industry in the south of Ireland. Its main area of industry is pharmaceuticals, with Pfizer Inc. and Swiss company Novartis being big employers in the region. The most famous product of the Cork pharmaceutical industry is Viagra. Cork is also the European headquarters of Apple Inc. where over 3,000 staff are involved in manufacturing, R&D and customer support. Logitech and EMC Corporation are also important IT employers in the area. Three hospitals are also among the top ten employers in the city (see table below).",
+      "score_breakdown": {
+        "dense": 0.05009699843432739,
+        "graph": 0.04668717259192658,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:schlage_0",
+      "passage_index": 12,
+      "title": "Schlage",
+      "score": 0.04155729478965044,
+      "text": "Schlage\nSchlage (pronounced ) is a lock manufacturer founded in 1920 by Walter Schlage. Schlage was headquartered in San Francisco from its inception until it relocated to Colorado Springs, Colorado in 1997. Schlage also produces high-security key and cylinder lines, Primus, Everest, and Everest Primus XP. Schlage is one of the most popular brands of consumer and commercial locks in the United States.",
+      "score_breakdown": {
+        "dense": 0.05010851328107213,
+        "graph": 0.04665870828353588,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ulrich_10th_prince_kinsky_of_wchinitz_and_tettau_0",
+      "passage_index": 17,
+      "title": "Ulrich, 10th Prince Kinsky of Wchinitz and Tettau",
+      "score": 0.041556652117248946,
+      "text": "Ulrich, 10th Prince Kinsky of Wchinitz and Tettau\nUlrich, 10th Prince Kinsky of Wchinitz and Tettau (; 15 August 189319 December 1938) was the titular pretender Prince Kinsky of Wchinitz and Tettau.",
+      "score_breakdown": {
+        "dense": 0.05011044836265162,
+        "graph": 0.046653018392635165,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_ulrich_walser_house",
+        "score": 0.052771365319392596,
+        "text": "Ulrich Walser House",
+        "metadata": {
+          "canonical_name": "Ulrich Walser House",
+          "aliases": [
+            "UWH",
+            "Ulrich Walser House"
+          ],
+          "surface_forms": [
+            "UWH",
+            "Ulrich Walser House"
+          ],
+          "title_anchor": "Ulrich Walser House"
+        }
+      },
+      {
+        "node_id": "entity:ulrich_walser",
+        "score": 0.05238680827007232,
+        "text": "Ulrich Walser",
+        "metadata": {
+          "canonical_name": "Ulrich Walser",
+          "aliases": [
+            "UW",
+            "Ulrich Walser"
+          ],
+          "surface_forms": [
+            "UW",
+            "Ulrich Walser"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:national_register",
+        "score": 0.05004106716843905,
+        "text": "National Register",
+        "metadata": {
+          "canonical_name": "National Register",
+          "aliases": [
+            "NR",
+            "National Register"
+          ],
+          "surface_forms": [
+            "NR",
+            "National Register"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:dlr_s_lander_control_center",
+        "score": 0.0409043357855075,
+        "text": "DLR's Lander Control Center",
+        "metadata": {
+          "canonical_name": "DLR's Lander Control Center",
+          "aliases": [
+            "DLCC",
+            "DLR's Lander Control Center",
+            "Lander Control Center"
+          ],
+          "surface_forms": [
+            "DLCC",
+            "DLR's Lander Control Center",
+            "Lander Control Center"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:cologne_germany",
+        "score": 0.036991938697492704,
+        "text": "Cologne Germany",
+        "metadata": {
+          "canonical_name": "Cologne Germany",
+          "aliases": [
+            "CG",
+            "Cologne Germany"
+          ],
+          "surface_forms": [
+            "CG",
+            "Cologne Germany"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_mount_meigs_campus",
+        "score": 0.03579176297789684,
+        "text": "Mount Meigs Campus",
+        "metadata": {
+          "canonical_name": "Mount Meigs Campus",
+          "aliases": [
+            "MMC",
+            "Mount Meigs Campus"
+          ],
+          "surface_forms": [
+            "MMC",
+            "Mount Meigs Campus"
+          ],
+          "title_anchor": "Mount Meigs Campus"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+        "score": 0.07652366026909237,
+        "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.",
+        "metadata": {
+          "title": "Ulrich Walser House",
+          "chunk_id": "chunk:ulrich_walser_house_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Ulrich Walser House",
+              "relation": "located at",
+              "tail": "711 North 2nd Street"
+            },
+            {
+              "head": "Ulrich Walser House",
+              "relation": "located in",
+              "tail": "Alma Wisconsin United States"
+            }
+          ],
+          "entities": [
+            "Ulrich Walser House",
+            "711 North 2nd Street",
+            "Alma",
+            "Wisconsin"
+          ],
+          "entity_ids": [
+            "entity:711_north_2nd_street",
+            "entity:alma",
+            "entity:alma_wisconsin_united_states",
+            "entity:title_anchor_ulrich_walser_house",
+            "entity:wisconsin"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ulrich_walser_house_0_1_it_was_constructed_in_1895_by_ulrich_walser_and_was_placed_on_the_national_regis",
+        "score": 0.0626532983294217,
+        "text": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+        "metadata": {
+          "title": "Ulrich Walser House",
+          "chunk_id": "chunk:ulrich_walser_house_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Ulrich Walser",
+              "relation": "related_to",
+              "tail": "National Register"
+            },
+            {
+              "head": "National Register",
+              "relation": "related_to",
+              "tail": "Historic Places"
+            }
+          ],
+          "entities": [
+            "Ulrich Walser",
+            "National Register of Historic Places"
+          ],
+          "entity_ids": [
+            "entity:historic_places",
+            "entity:national_register",
+            "entity:national_register_of_historic_places",
+            "entity:ulrich_walser"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:philae_spacecraft_0_1_philae_was_monitored_and_operated_from_dlr_s_lander_control_center_in_cologne",
+        "score": 0.05921170514792251,
+        "text": "\"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany.",
+        "metadata": {
+          "title": "Philae (spacecraft)",
+          "chunk_id": "chunk:philae_spacecraft_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Philae",
+              "relation": "was monitored and operated from",
+              "tail": "DLR's Lander Control Center"
+            },
+            {
+              "head": "DLR's Lander Control Center",
+              "relation": "is located in",
+              "tail": "Cologne Germany"
+            }
+          ],
+          "entities": [
+            "Philae",
+            "DLR's Lander Control Center",
+            "Cologne",
+            "Germany"
+          ],
+          "entity_ids": [
+            "entity:cologne",
+            "entity:cologne_germany",
+            "entity:dlr_s_lander_control_center",
+            "entity:germany",
+            "entity:title_anchor_philae_spacecraft"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ulrich_walter_0_1_from_1988_to_1990_he_completed_basic_training_at_the_german_aerospace_center_a",
+        "score": 0.024843212615963565,
+        "text": "From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.",
+        "metadata": {
+          "title": "Ulrich Walter",
+          "chunk_id": "chunk:ulrich_walter_0",
+          "sentence_index": 1,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "From",
+              "relation": "related_to",
+              "tail": "German Aerospace Center"
+            },
+            {
+              "head": "German Aerospace Center",
+              "relation": "related_to",
+              "tail": "German Spacelab"
+            }
+          ],
+          "entities": [
+            "German Aerospace Center",
+            "German Spacelab mission"
+          ],
+          "entity_ids": [
+            "entity:from",
+            "entity:german_aerospace_center",
+            "entity:german_spacelab",
+            "entity:german_spacelab_mission"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:ulrich_walser_house_0",
+        "score": 0.014084146880243328,
+        "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+        "metadata": {
+          "title": "Ulrich Walser House",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:711_north_2nd_street",
+            "entity:alma",
+            "entity:alma_wisconsin_united_states",
+            "entity:historic_places",
+            "entity:national_register",
+            "entity:national_register_of_historic_places",
+            "entity:title_anchor_ulrich_walser_house",
+            "entity:ulrich_walser",
+            "entity:wisconsin"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mount_meigs_campus_0",
+        "score": 0.00861261277572632,
+        "text": "Mount Meigs Campus\nThe Mount Meigs Campus is a juvenile corrections facility of the Alabama Department of Youth Services located in Mount Meigs, unincorporated Montgomery County; the campus serves as the agency's administrative headquarters. The campus, which can house 264 boys, is next to Interstate 85 North and about east of Downtown Montgomery. Since 2015, the separate J. Walter Wood Treatment facility for 24 girls is also located in the Mount Meigs Campus.",
+        "metadata": {
+          "title": "Mount Meigs Campus",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:administrative_headquarters_of_alabama_department_of_youth_services",
+            "entity:alabama_department_of_youth_services",
+            "entity:downtown_montgomery",
+            "entity:interstate",
+            "entity:interstate_85_north",
+            "entity:montgomery_county",
+            "entity:mount_meigs",
+            "entity:mount_meigs_unincorporated_montgomery_county",
+            "entity:since",
+            "entity:title_anchor_mount_meigs_campus",
+            "entity:walter_wood_treatment_facility"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ulrich Walser House\nUlrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.\n\nMount Meigs Campus\nMount Meigs Campus\nThe Mount Meigs Campus is a juvenile corrections facility of the Alabama Department of Youth Services located in Mount Meigs, unincorporated Montgomery County; the campus serves as the agency's administrative headquarters. The campus, which can house 264 boys, is next to Interstate 85 North and about east of Downtown Montgomery. Since 2015, the separate J. Walter Wood Treatment facility for 24 girls is also located in the Mount Meigs Campus.\n\nPhilae (spacecraft)\nPhilae (spacecraft)\nThe lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs. \"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany.\n\nUlrich Walter\nUlrich Walter\nAfter two post-doc positions at the Argonne National Laboratory, Chicago, Illinois, and the University of California at Berkeley, California, he was selected in 1987 to join the German astronaut team. From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.\n\nJohn Deere World Headquarters\nJohn Deere World Headquarters\nThe John Deere World Headquarters is a complex of four buildings located on 1,400 acres (5.7 km²) of land at One John Deere Place, Moline, Illinois, United States. The complex serves as corporate headquarters for John Deere.\n\nUlrich Walser House\nIt was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.\n\nUlrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.\n\nFull-time\nThis is a matter generally to be determined by the employer (US Department of Labor).\n\nSchlage\nSchlage\nSchlage (pronounced ) is a lock manufacturer founded in 1920 by Walter Schlage. Schlage was headquartered in San Francisco from its inception until it relocated to Colorado Springs, Colorado in 1997. Schlage also produces high-security key and cylinder lines, Primus, Everest, and Everest Primus XP. Schlage is one of the most popular brands of consumer and commercial locks in the United States.\n\nSouthampton\nSouthampton\nDuring the Middle Ages, shipbuilding became an important industry for the town. Henry V's famous warship HMS Grace Dieu was built in Southampton. Walter Taylor's 18th century mechanisation of the block-making process was a significant step in the Industrial Revolution. From 1904 to 2004, the Thornycroft shipbuilding yard was a major employer in Southampton, building and repairing ships used in the two World Wars.\n\nUlrich Franzen\nUlrich Franzen\nUlrich Joseph Franzen (January 15, 1921 – October 6, 2012) was a German-born American architect known for his \"fortresslike\" buildings and Brutalist style.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:ulrich_walser_house_0",
+        "passage_index": 18,
+        "title": "Ulrich Walser House",
+        "score": 0.08383341110381784,
+        "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+        "score_breakdown": {
+          "dense": 0.050229519043072456,
+          "graph": 0.05623769600016977,
+          "fact": 0.2622391122005137
+        }
+      },
+      {
+        "node_id": "chunk:mount_meigs_campus_0",
+        "passage_index": 13,
+        "title": "Mount Meigs Campus",
+        "score": 0.08101425643704387,
+        "text": "Mount Meigs Campus\nThe Mount Meigs Campus is a juvenile corrections facility of the Alabama Department of Youth Services located in Mount Meigs, unincorporated Montgomery County; the campus serves as the agency's administrative headquarters. The campus, which can house 264 boys, is next to Interstate 85 North and about east of Downtown Montgomery. Since 2015, the separate J. Walter Wood Treatment facility for 24 girls is also located in the Mount Meigs Campus.",
+        "score_breakdown": {
+          "dense": 0.04988696744087652,
+          "graph": 0.050065498321374705,
+          "fact": 0.25704516565432917
+        }
+      },
+      {
+        "node_id": "chunk:philae_spacecraft_0",
+        "passage_index": 11,
+        "title": "Philae (spacecraft)",
+        "score": 0.0799624471896786,
+        "text": "Philae (spacecraft)\nThe lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs. \"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany.",
+        "score_breakdown": {
+          "dense": 0.04984275622698064,
+          "graph": 0.05168017725252936,
+          "fact": 0.24696585392720297
+        }
+      },
+      {
+        "node_id": "chunk:ulrich_walter_0",
+        "passage_index": 14,
+        "title": "Ulrich Walter",
+        "score": 0.07749761032092717,
+        "text": "Ulrich Walter\nAfter two post-doc positions at the Argonne National Laboratory, Chicago, Illinois, and the University of California at Berkeley, California, he was selected in 1987 to join the German astronaut team. From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.",
+        "score_breakdown": {
+          "dense": 0.05058148688850925,
+          "graph": 0.04871770766517992,
+          "fact": 0.23374986821795407
+        }
+      },
+      {
+        "node_id": "chunk:john_deere_world_headquarters_0",
+        "passage_index": 6,
+        "title": "John Deere World Headquarters",
+        "score": 0.04159807598455161,
+        "text": "John Deere World Headquarters\nThe John Deere World Headquarters is a complex of four buildings located on 1,400 acres (5.7 km²) of land at One John Deere Place, Moline, Illinois, United States. The complex serves as corporate headquarters for John Deere.",
+        "score_breakdown": {
+          "dense": 0.05016197421974382,
+          "graph": 0.04669663387897503,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ulrich_franzen_0",
+        "passage_index": 19,
+        "title": "Ulrich Franzen",
+        "score": 0.041594282566589216,
+        "text": "Ulrich Franzen\nUlrich Joseph Franzen (January 15, 1921 – October 6, 2012) was a German-born American architect known for his \"fortresslike\" buildings and Brutalist style.",
+        "score_breakdown": {
+          "dense": 0.050177506555005365,
+          "graph": 0.04665551320445422,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:richmond_virginia_0",
+        "passage_index": 0,
+        "title": "Richmond, Virginia",
+        "score": 0.041575946133691026,
+        "text": "Richmond, Virginia\nOther Fortune 500 companies, while not headquartered in the area, do have a major presence. These include SunTrust Bank (based in Atlanta), Capital One Financial Corporation (officially based in McLean, Virginia, but founded in Richmond with its operations center and most employees in the Richmond area), and the medical and pharmaceutical giant McKesson (based in San Francisco). Capital One and Altria company's Philip Morris USA are two of the largest private Richmond-area employers. DuPont maintains a production facility in South Richmond known as the Spruance Plant. UPS Freight, the less-than-truckload division of UPS and formerly known as Overnite Transportation, has its corporate headquarters in Richmond.",
+        "score_breakdown": {
+          "dense": 0.05013594730248487,
+          "graph": 0.04667058372441448,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cork_city_0",
+        "passage_index": 1,
+        "title": "Cork (city)",
+        "score": 0.04155950091645804,
+        "text": "Cork (city)\nCork City is at the heart of industry in the south of Ireland. Its main area of industry is pharmaceuticals, with Pfizer Inc. and Swiss company Novartis being big employers in the region. The most famous product of the Cork pharmaceutical industry is Viagra. Cork is also the European headquarters of Apple Inc. where over 3,000 staff are involved in manufacturing, R&D and customer support. Logitech and EMC Corporation are also important IT employers in the area. Three hospitals are also among the top ten employers in the city (see table below).",
+        "score_breakdown": {
+          "dense": 0.05009699843432739,
+          "graph": 0.04668717259192658,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:schlage_0",
+        "passage_index": 12,
+        "title": "Schlage",
+        "score": 0.04155729478965044,
+        "text": "Schlage\nSchlage (pronounced ) is a lock manufacturer founded in 1920 by Walter Schlage. Schlage was headquartered in San Francisco from its inception until it relocated to Colorado Springs, Colorado in 1997. Schlage also produces high-security key and cylinder lines, Primus, Everest, and Everest Primus XP. Schlage is one of the most popular brands of consumer and commercial locks in the United States.",
+        "score_breakdown": {
+          "dense": 0.05010851328107213,
+          "graph": 0.04665870828353588,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ulrich_10th_prince_kinsky_of_wchinitz_and_tettau_0",
+        "passage_index": 17,
+        "title": "Ulrich, 10th Prince Kinsky of Wchinitz and Tettau",
+        "score": 0.041556652117248946,
+        "text": "Ulrich, 10th Prince Kinsky of Wchinitz and Tettau\nUlrich, 10th Prince Kinsky of Wchinitz and Tettau (; 15 August 189319 December 1938) was the titular pretender Prince Kinsky of Wchinitz and Tettau.",
+        "score_breakdown": {
+          "dense": 0.05011044836265162,
+          "graph": 0.046653018392635165,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is Ulrich Walter's employer?",
+        "resolved_sub_question": "Who is Ulrich Walter's employer?",
+        "sentence_id": "sentence:ulrich_walser_house_0_1_it_was_constructed_in_1895_by_ulrich_walser_and_was_placed_on_the_national_regis",
+        "sentence": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.",
+        "score": 0.364964,
+        "source_title": "Ulrich Walser House",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.",
+        "hop_raw_response": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ulrich Walser House",
+            "text": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+          },
+          {
+            "title": "Ulrich Walser House",
+            "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+          },
+          {
+            "title": "Ulrich Walser House",
+            "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
+          }
+        ]
+      },
+      {
+        "sub_question": "Where is this employer headquartered?",
+        "resolved_sub_question": "Where is this employer headquartered?",
+        "sentence_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
+        "sentence": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.",
+        "score": 0.3576358877959009,
+        "source_title": "Ulrich Walser House",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.",
+        "hop_raw_response": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ulrich Walser House",
+            "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
+          },
+          {
+            "title": "Ulrich Walser House",
+            "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
+          },
+          {
+            "title": "Full-time",
+            "text": "This is a matter generally to be determined by the employer (US Department of Labor)."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is Ulrich Walter's employer? (source: Ulrich Walser House)\n2. Where is this employer headquartered? (source: Ulrich Walser House)\n\nFact hints:\n- Ulrich Walser House located in Alma Wisconsin United States\n- Ulrich Walser House located at 711 North 2nd Street\n\nWikipedia Title: Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.\n\nWikipedia Title: Ulrich Walser House\nIt was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.\n\nWikipedia Title: Ulrich Walser House\nUlrich Walser House The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982.\n\nWikipedia Title: John Deere World Headquarters\nJohn Deere World Headquarters The John Deere World Headquarters is a complex of four buildings located on 1,400 acres (5.7 km²) of land at One John Deere Place, Moline, Illinois, United States. The complex serves as corporate headquarters for John Deere.\n\nWikipedia Title: Schlage\nSchlage Schlage (pronounced ) is a lock manufacturer founded in 1920 by Walter Schlage. Schlage was headquartered in San Francisco from its inception until it relocated to Colorado Springs, Colorado in 1997.\n\nWikipedia Title: Ulrich Walter\nUlrich Walter After two post-doc positions at the Argonne National Laboratory, Chicago, Illinois, and the University of California at Berkeley, California, he was selected in 1987 to join the German astronaut team. From 1988 to 1990, he completed basic training at the German Aerospace Center, and was then nominated to be in the prime crew for the second German Spacelab mission.\n\nWikipedia Title: Southampton\nWalter Taylor's 18th century mechanisation of the block-making process was a significant step in the Industrial Revolution. From 1904 to 2004, the Thornycroft shipbuilding yard was a major employer in Southampton, building and repairing ships used in the two World Wars.\n\nWikipedia Title: Full-time\nThis is a matter generally to be determined by the employer (US Department of Labor).\n\nWikipedia Title: Mount Meigs Campus\nWalter Wood Treatment facility for 24 girls is also located in the Mount Meigs Campus. Since 2015, the separate J.\n\nWikipedia Title: Ulrich Franzen\nUlrich Franzen Ulrich Joseph Franzen (January 15, 1921 – October 6, 2012) was a German-born American architect known for his \"fortresslike\" buildings and Brutalist style.\n\nWikipedia Title: Philae (spacecraft)\n\"Philae\" was monitored and operated from DLR's Lander Control Center in Cologne, Germany. Philae (spacecraft) The lander is named after the Philae obelisk, which bears a bilingual inscription and was used along with the Rosetta Stone to decipher Egyptian hieroglyphs.\n\nQuestion: Where is Ulrich Walter's employer headquartered?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The provided information does not specify Ulrich Walter's current employer or where it is headquartered. The passage only mentions his past affiliations with the Argonne National Laboratory and the University of California at Berkeley, but does not provide details about his current employment status or location.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The provided information does not specify Ulrich Walter's current employer or where it is headquartered. The passage only mentions his past affiliations with the Argonne National Laboratory and the University of California at Berkeley, but does not provide details about his current employment status or location.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "2hop__259228_793698",
+    "question": "Where is Ulrich Walter's employer headquartered?",
+    "answer": "Cologne",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Ulrich Walter >> employer",
+      "#1 >> headquarters location"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Cologne",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Cologne"
+    ]
+  }
+}

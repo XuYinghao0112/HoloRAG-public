@@ -1,0 +1,996 @@
+{
+  "query": "What province shares a border with the province where Lago District is located?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Lago District"
+  ],
+  "raw_query_entities": [
+    "Lago District"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Lago District",
+      "node_id": "entity:title_anchor_lago_district",
+      "resolved_text": "Lago District",
+      "score": 0.8755999999999999,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.775,
+      "score_margin": 0.238,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What province is Lago District located in?",
+    "What province shares a border with the province where Lago District is located?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_lago_district",
+      "score": 1.0957651494752338,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lake_niassa_reserve",
+      "score": 0.35338185569724634,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_niassa_reserve",
+      "score": 0.2966936180124401,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:niassa_province",
+      "score": 0.29304086120417716,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cabo_delgado_province",
+      "score": 0.28670161615056805,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_western_mozambique",
+      "score": 0.2766935352882744,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+      "score": 0.2566400104939054,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delgado_province_and_niassa_province",
+      "score": 0.237951575006834,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "score": 0.22958322946897392,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:mansehra_district",
+      "score": 0.2228148144115279,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:khyber_pakhtunkhwa_province",
+      "score": 0.218699816450475,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_swan_miara",
+      "score": 0.20271310621882796,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:niassa_reserve_is_located_in_niassa_province_sentence_niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delg",
+      "text": "Niassa Reserve is located in Niassa Province",
+      "head_id": "entity:title_anchor_niassa_reserve",
+      "tail_id": "entity:niassa_province",
+      "sentence_id": "sentence:niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delgado_province_and_niassa_province",
+      "chunk_id": "chunk:niassa_reserve_0",
+      "document_index": 0,
+      "score": 0.30448469826895125
+    },
+    {
+      "fact_id": "fact:lago_district_is_a_district_of_niassa_province_sentence_lago_district_0_0_lago_district_is_a_district_of_niassa_province",
+      "text": "Lago District is a district of Niassa Province",
+      "head_id": "entity:title_anchor_lago_district",
+      "tail_id": "entity:niassa_province",
+      "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "chunk_id": "chunk:lago_district_0",
+      "document_index": 16,
+      "score": 0.2935010546998481
+    },
+    {
+      "fact_id": "fact:niassa_reserve_is_located_in_cabo_delgado_province_sentence_niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cab",
+      "text": "Niassa Reserve is located in Cabo Delgado Province",
+      "head_id": "entity:title_anchor_niassa_reserve",
+      "tail_id": "entity:cabo_delgado_province",
+      "sentence_id": "sentence:niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delgado_province_and_niassa_province",
+      "chunk_id": "chunk:niassa_reserve_0",
+      "document_index": 0,
+      "score": 0.28448506122645933
+    },
+    {
+      "fact_id": "fact:niassa_province_located_in_north_western_mozambique_sentence_lago_district_0_0_lago_district_is_a_district_of_niassa_pro",
+      "text": "Niassa Province located in north-western Mozambique",
+      "head_id": "entity:niassa_province",
+      "tail_id": "entity:north_western_mozambique",
+      "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "chunk_id": "chunk:lago_district_0",
+      "document_index": 16,
+      "score": 0.2744854163757704
+    },
+    {
+      "fact_id": "fact:mansehra_district_located_in_khyber_pakhtunkhwa_province_sentence_swan_miara_0_0_swan_miara_is_a_village_and_union_counc",
+      "text": "Mansehra District located in Khyber-Pakhtunkhwa province",
+      "head_id": "entity:mansehra_district",
+      "tail_id": "entity:khyber_pakhtunkhwa_province",
+      "sentence_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+      "chunk_id": "chunk:swan_miara_0",
+      "document_index": 3,
+      "score": 0.23848600731626818
+    },
+    {
+      "fact_id": "fact:swan_miara_located_in_mansehra_district_sentence_swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrat",
+      "text": "Swan Miara located in Mansehra District",
+      "head_id": "entity:title_anchor_swan_miara",
+      "tail_id": "entity:mansehra_district",
+      "sentence_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+      "chunk_id": "chunk:swan_miara_0",
+      "document_index": 3,
+      "score": 0.20271310621882796
+    },
+    {
+      "fact_id": "fact:khyber_pakhtunkhwa_province_located_in_pakistan_sentence_swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_adm",
+      "text": "Khyber-Pakhtunkhwa province located in Pakistan",
+      "head_id": "entity:khyber_pakhtunkhwa_province",
+      "tail_id": "entity:pakistan",
+      "sentence_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+      "chunk_id": "chunk:swan_miara_0",
+      "document_index": 3,
+      "score": 0.19448311029672216
+    }
+  ],
+  "bridge_entities": [
+    "Niassa Province",
+    "Mozambique",
+    "Tanzania"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What province is Lago District located in?",
+      "resolved_sub_question": "What province is Lago District located in?",
+      "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "sentence": "Lago District is a district of Niassa Province in north-western Mozambique.",
+      "score": 0.5764144,
+      "source_title": "Lago District",
+      "hop_answer": "Niassa Province",
+      "hop_thought": "The passage clearly states that Lago District is a district of Niassa Province.",
+      "hop_raw_response": "The passage clearly states that Lago District is a district of Niassa Province.\nAnswer: Niassa Province",
+      "evidence_passages": [
+        {
+          "title": "Lago District",
+          "text": "Lago District is a district of Niassa Province in north-western Mozambique."
+        },
+        {
+          "title": "Lago District",
+          "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
+        },
+        {
+          "title": "Lago District",
+          "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
+        }
+      ]
+    },
+    {
+      "sub_question": "What province shares a border with the province where Lago District is located?",
+      "resolved_sub_question": "What province shares a border with the province where Lago District is located? Context: Niassa Province.",
+      "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "sentence": "Lago District is a district of Niassa Province in north-western Mozambique.",
+      "score": 0.49093904716364545,
+      "source_title": "Lago District",
+      "hop_answer": "Tanzania",
+      "hop_thought": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.",
+      "hop_raw_response": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.\nAnswer: Tanzania",
+      "evidence_passages": [
+        {
+          "title": "Lago District",
+          "text": "Lago District is a district of Niassa Province in north-western Mozambique."
+        },
+        {
+          "title": "Lago District",
+          "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
+        },
+        {
+          "title": "Lago District",
+          "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+      "score": 0.09018440735373968,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_lago_district",
+      "score": 0.0734436928157825,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delgado_province_and_niassa_province",
+      "score": 0.06856270059372496,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:lago_district_0_2_lago_district_is_bordered_to_the_west_by_lake_nyasa_on_the_south_by_lichinga_o",
+      "score": 0.0684968337195274,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+      "score": 0.06357010947509098,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:niassa_province",
+      "score": 0.051351237078119207,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_niassa_reserve",
+      "score": 0.04508820464626653,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mansehra_district",
+      "score": 0.03582281950554024,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:khyber_pakhtunkhwa_province",
+      "score": 0.03565857806947399,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cabo_delgado_province",
+      "score": 0.025815446476772096,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:lago_district_0",
+      "score": 0.024285433005671826,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_swan_miara",
+      "score": 0.023552618917619537,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pakistan",
+      "score": 0.02328150745078611,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:niassa_reserve_0_2_the_reserve_is_part_of_the_trans_frontier_conservation_area_and_links_to_the_tan",
+      "score": 0.022613721283119587,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:lago_district_0_1_the_principal_town_is_metangula",
+      "score": 0.02170072815558008,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lake_niassa_reserve",
+      "score": 0.021092392397099417,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:niassa_reserve_0",
+      "score": 0.02076756559840874,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:north_western_mozambique",
+      "score": 0.020402950662133306,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:lago_district_0_3_lago_shares_its_northern_boundary_with_tanzania",
+      "score": 0.019324779218017927,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:swan_miara_0_1_it_is_located_in_the_south_of_the_district_where_it_borders_abbottabad_district",
+      "score": 0.01901648835987571,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:lago_district_0",
+      "passage_index": 16,
+      "title": "Lago District",
+      "score": 0.09644002990316236,
+      "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania.",
+      "score_breakdown": {
+        "dense": 0.05103849300753884,
+        "graph": 0.05883535096988986,
+        "fact": 0.33812168972032697
+      }
+    },
+    {
+      "node_id": "chunk:niassa_reserve_0",
+      "passage_index": 0,
+      "title": "Niassa Reserve",
+      "score": 0.09574254245443042,
+      "text": "Niassa Reserve\nNiassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country. The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve. It will connect to the Lake Niassa Reserve when it is completed.",
+      "score_breakdown": {
+        "dense": 0.05000278295942381,
+        "graph": 0.056542055275685156,
+        "fact": 0.3418559682936119
+      }
+    },
+    {
+      "node_id": "chunk:swan_miara_0",
+      "passage_index": 3,
+      "title": "Swan Miara",
+      "score": 0.09211124897472363,
+      "text": "Swan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
+      "score_breakdown": {
+        "dense": 0.04995462703949621,
+        "graph": 0.055442842683638485,
+        "fact": 0.3200223419860611
+      }
+    },
+    {
+      "node_id": "chunk:lago_verde_queyras_0",
+      "passage_index": 10,
+      "title": "Lago Verde (Queyras)",
+      "score": 0.042301116155452546,
+      "text": "Lago Verde (Queyras)\nLago Verde (Italian for \"green lake\") is a lake which is located in Italy, close to the French border and the Queyras valley.",
+      "score_breakdown": {
+        "dense": 0.0503056064191744,
+        "graph": 0.04877677541635542,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:novolaksky_district_0",
+      "passage_index": 9,
+      "title": "Novolaksky District",
+      "score": 0.04217868326355965,
+      "text": "Novolaksky District\nNovolaksky District (; Lak: ; , \"Aux Khoşt\") is an administrative and municipal district (raion), one of the forty-one in the Republic of Dagestan, Russia. It is located in the west of the republic and borders with Khasavyurtovsky District in the northeast, Kazbekovsky District in the southeast, and with the Chechen Republic in the west. The area of the district is . Its administrative center is the rural locality (a \"selo\") of Novolakskoye. As of the 2010 Census, the total population of the district was 28,556, with the population of Novolakskoye accounting for 20.8% of that number.",
+      "score_breakdown": {
+        "dense": 0.050069052072432944,
+        "graph": 0.048802348745738425,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:gallaratese_0",
+      "passage_index": 15,
+      "title": "Gallaratese",
+      "score": 0.04215889002380553,
+      "text": "Gallaratese\nGallaratese is a district (\"quartiere\") of Milan, Italy, part of the Zone 8 administrative division of the city. It is located about 7 km north-west of the city centre. It borders on the \"comune\" of Pero to the north and on the districts of Trenno to the west and Lampugnano to the south; to the east, its ideal border is the eponymous street, which in turn is named after Gallarate, the town it leads to.",
+      "score_breakdown": {
+        "dense": 0.050050391537892994,
+        "graph": 0.04877058225988129,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:akshinsky_district_0",
+      "passage_index": 19,
+      "title": "Akshinsky District",
+      "score": 0.04214017407913759,
+      "text": "Akshinsky District\nAkshinsky District () is an administrative and municipal district (raion), one of the thirty-one in Zabaykalsky Krai, Russia. It is located in the south of the krai and borders with Ononsky, Ulyotovsky, and Kyrinsky Districts of Zabaykalsky Krai, as well as with Mongolia. The area of the district is . Administrative center is the rural locality (a \"selo\") of Aksha. Population: 12,080 (2002 Census); The population of Aksha accounts for 36.9% of the district's total population.",
+      "score_breakdown": {
+        "dense": 0.050010394368548934,
+        "graph": 0.04878152392145223,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:chaunsky_district_0",
+      "passage_index": 12,
+      "title": "Chaunsky District",
+      "score": 0.04211636253380892,
+      "text": "Chaunsky District\nChaunsky District (; Chukchi: ) is an administrative and municipal district (raion), one of the six in Chukotka Autonomous Okrug, Russia. It is located on the northern shore of the autonomous okrug and borders with Iultinsky District in the northeast, Anadyrsky District in the southeast, and with Bilibinsky District in the south and west. The area of the district is . Its administrative center is the town of Pevek. Population: The population of Pevek accounts for 80.8% of the district's total population.",
+      "score_breakdown": {
+        "dense": 0.04997022392415116,
+        "graph": 0.04877579791841927,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:shumerlinsky_district_0",
+      "passage_index": 14,
+      "title": "Shumerlinsky District",
+      "score": 0.042094700451698164,
+      "text": "Shumerlinsky District\nShumerlinsky District (; ) is an administrative and municipal district (raion), one of the twenty-one in the Chuvash Republic, Russia. It is located in the west of the republic and borders with Alikovsky and Krasnochetaysky Districts in the north, Vurnarsky District in the east, Ibresinsky and Poretsky Districts in the south, and with Nizhny Novgorod Oblast on the Sura River in the west. The area of the district is . Its administrative center is the town of Shumerlya (which is not administratively a part of the district). Population: 13,298 (2002 Census);",
+      "score_breakdown": {
+        "dense": 0.04992998499225951,
+        "graph": 0.048777362353184785,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:gmina_w_odawa_0",
+      "passage_index": 11,
+      "title": "Gmina Włodawa",
+      "score": 0.04209425119110698,
+      "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
+      "score_breakdown": {
+        "dense": 0.049943059342358355,
+        "graph": 0.048751895176032935,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_lago_district",
+        "score": 0.0734436928157825,
+        "text": "Lago District",
+        "metadata": {
+          "canonical_name": "Lago District",
+          "aliases": [
+            "LD",
+            "Lago District"
+          ],
+          "surface_forms": [
+            "LD",
+            "Lago District"
+          ],
+          "title_anchor": "Lago District"
+        }
+      },
+      {
+        "node_id": "entity:niassa_province",
+        "score": 0.051351237078119207,
+        "text": "Niassa Province",
+        "metadata": {
+          "canonical_name": "Niassa Province",
+          "aliases": [
+            "NP",
+            "Niassa Province"
+          ],
+          "surface_forms": [
+            "NP",
+            "Niassa Province"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:swan_miara_0_0_swan_miara_is_a_village_and_union_council_an_administrative_subdivision_of_man",
+        "score": 0.09018440735373968,
+        "text": "Swan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan.",
+        "metadata": {
+          "title": "Swan Miara",
+          "chunk_id": "chunk:swan_miara_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Swan Miara",
+              "relation": "located in",
+              "tail": "Mansehra District"
+            },
+            {
+              "head": "Mansehra District",
+              "relation": "located in",
+              "tail": "Khyber-Pakhtunkhwa province"
+            },
+            {
+              "head": "Khyber-Pakhtunkhwa province",
+              "relation": "located in",
+              "tail": "Pakistan"
+            }
+          ],
+          "entities": [
+            "Swan Miara",
+            "Mansehra District",
+            "Khyber-Pakhtunkhwa province",
+            "Pakistan"
+          ],
+          "entity_ids": [
+            "entity:khyber_pakhtunkhwa_province",
+            "entity:mansehra_district",
+            "entity:pakistan",
+            "entity:title_anchor_swan_miara"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:niassa_reserve_0_0_niassa_reserve_is_a_nature_reserve_in_cabo_delgado_province_and_niassa_province",
+        "score": 0.06856270059372496,
+        "text": "Niassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique.",
+        "metadata": {
+          "title": "Niassa Reserve",
+          "chunk_id": "chunk:niassa_reserve_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Niassa Reserve",
+              "relation": "is located in",
+              "tail": "Cabo Delgado Province"
+            },
+            {
+              "head": "Niassa Reserve",
+              "relation": "is located in",
+              "tail": "Niassa Province"
+            }
+          ],
+          "entities": [
+            "Niassa Reserve",
+            "Cabo Delgado Province",
+            "Niassa Province",
+            "Mozambique"
+          ],
+          "entity_ids": [
+            "entity:cabo_delgado_province",
+            "entity:mozambique",
+            "entity:niassa_province",
+            "entity:title_anchor_niassa_reserve"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:lago_district_0_2_lago_district_is_bordered_to_the_west_by_lake_nyasa_on_the_south_by_lichinga_o",
+        "score": 0.0684968337195274,
+        "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District.",
+        "metadata": {
+          "title": "Lago District",
+          "chunk_id": "chunk:lago_district_0",
+          "sentence_index": 2,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Lago District",
+              "relation": "borders",
+              "tail": "Lake Nyasa"
+            },
+            {
+              "head": "Lago District",
+              "relation": "borders",
+              "tail": "Lichinga"
+            },
+            {
+              "head": "Lago District",
+              "relation": "borders",
+              "tail": "Sanga District"
+            }
+          ],
+          "entities": [
+            "Lago District",
+            "Lake Nyasa",
+            "Lichinga",
+            "Sanga District"
+          ],
+          "entity_ids": [
+            "entity:lake_nyasa",
+            "entity:lichinga",
+            "entity:sanga_district",
+            "entity:title_anchor_lago_district"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+        "score": 0.06357010947509098,
+        "text": "Lago District is a district of Niassa Province in north-western Mozambique.",
+        "metadata": {
+          "title": "Lago District",
+          "chunk_id": "chunk:lago_district_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Lago District",
+              "relation": "is a district of",
+              "tail": "Niassa Province"
+            },
+            {
+              "head": "Niassa Province",
+              "relation": "located in",
+              "tail": "north-western Mozambique"
+            }
+          ],
+          "entities": [
+            "Lago District",
+            "Niassa Province",
+            "Mozambique"
+          ],
+          "entity_ids": [
+            "entity:mozambique",
+            "entity:niassa_province",
+            "entity:north_western_mozambique",
+            "entity:title_anchor_lago_district"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:niassa_reserve_0_2_the_reserve_is_part_of_the_trans_frontier_conservation_area_and_links_to_the_tan",
+        "score": 0.022613721283119587,
+        "text": "The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve.",
+        "metadata": {
+          "title": "Niassa Reserve",
+          "chunk_id": "chunk:niassa_reserve_0",
+          "sentence_index": 2,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Trans",
+              "relation": "related_to",
+              "tail": "Frontier Conservation Area"
+            },
+            {
+              "head": "Frontier Conservation Area",
+              "relation": "related_to",
+              "tail": "Tanzanian Lukwika"
+            },
+            {
+              "head": "Tanzanian Lukwika",
+              "relation": "related_to",
+              "tail": "Lumesule Game Reserve"
+            }
+          ],
+          "entities": [
+            "Trans-Frontier Conservation Area",
+            "Tanzanian Lukwika-Lumesule Game Reserve"
+          ],
+          "entity_ids": [
+            "entity:frontier_conservation_area",
+            "entity:lumesule_game_reserve",
+            "entity:tanzanian_lukwika",
+            "entity:tanzanian_lukwika_lumesule_game_reserve",
+            "entity:trans",
+            "entity:trans_frontier_conservation_area"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:lago_district_0_1_the_principal_town_is_metangula",
+        "score": 0.02170072815558008,
+        "text": "The principal town is Metangula.",
+        "metadata": {
+          "title": "Lago District",
+          "chunk_id": "chunk:lago_district_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [],
+          "entities": [
+            "Metangula"
+          ],
+          "entity_ids": [
+            "entity:metangula"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:lago_district_0",
+        "score": 0.024285433005671826,
+        "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania.",
+        "metadata": {
+          "title": "Lago District",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:lago",
+            "entity:lake_nyasa",
+            "entity:lichinga",
+            "entity:metangula",
+            "entity:mozambique",
+            "entity:niassa_province",
+            "entity:north_western_mozambique",
+            "entity:sanga_district",
+            "entity:tanzania",
+            "entity:title_anchor_lago_district"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:niassa_reserve_0",
+        "score": 0.02076756559840874,
+        "text": "Niassa Reserve\nNiassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country. The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve. It will connect to the Lake Niassa Reserve when it is completed.",
+        "metadata": {
+          "title": "Niassa Reserve",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:cabo_delgado_province",
+            "entity:covering",
+            "entity:frontier_conservation_area",
+            "entity:lake_niassa_reserve",
+            "entity:lumesule_game_reserve",
+            "entity:mozambique",
+            "entity:niassa_province",
+            "entity:tanzanian_lukwika",
+            "entity:tanzanian_lukwika_lumesule_game_reserve",
+            "entity:title_anchor_niassa_reserve",
+            "entity:trans",
+            "entity:trans_frontier_conservation_area"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:swan_miara_0",
+        "score": 0.017583861077889555,
+        "text": "Swan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
+        "metadata": {
+          "title": "Swan Miara",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:abbottabad_district",
+            "entity:khyber_pakhtunkhwa_province",
+            "entity:mansehra_district",
+            "entity:pakistan",
+            "entity:title_anchor_swan_miara"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:novolaksky_district_0",
+        "score": 0.0009661144648465082,
+        "text": "Novolaksky District\nNovolaksky District (; Lak: ; , \"Aux Khoşt\") is an administrative and municipal district (raion), one of the forty-one in the Republic of Dagestan, Russia. It is located in the west of the republic and borders with Khasavyurtovsky District in the northeast, Kazbekovsky District in the southeast, and with the Chechen Republic in the west. The area of the district is . Its administrative center is the rural locality (a \"selo\") of Novolakskoye. As of the 2010 Census, the total population of the district was 28,556, with the population of Novolakskoye accounting for 20.8% of that number.",
+        "metadata": {
+          "title": "Novolaksky District",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:2010_census",
+            "entity:as",
+            "entity:census",
+            "entity:chechen_republic",
+            "entity:kazbekovsky_district",
+            "entity:khasavyurtovsky_district",
+            "entity:novolakskoye",
+            "entity:republic_of_dagestan",
+            "entity:russia",
+            "entity:title_anchor_novolaksky_district"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Lago District\nLago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania.\n\nNiassa Reserve\nNiassa Reserve\nNiassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country. The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve. It will connect to the Lake Niassa Reserve when it is completed.\n\nSwan Miara\nSwan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.\n\nLago Verde (Queyras)\nLago Verde (Queyras)\nLago Verde (Italian for \"green lake\") is a lake which is located in Italy, close to the French border and the Queyras valley.\n\nNovolaksky District\nNovolaksky District\nNovolaksky District (; Lak: ; , \"Aux Khoşt\") is an administrative and municipal district (raion), one of the forty-one in the Republic of Dagestan, Russia. It is located in the west of the republic and borders with Khasavyurtovsky District in the northeast, Kazbekovsky District in the southeast, and with the Chechen Republic in the west. The area of the district is . Its administrative center is the rural locality (a \"selo\") of Novolakskoye. As of the 2010 Census, the total population of the district was 28,556, with the population of Novolakskoye accounting for 20.8% of that number.\n\nLago District\nLago District is a district of Niassa Province in north-western Mozambique.\n\nLago District\nLago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District.\n\nGallaratese\nGallaratese\nGallaratese is a district (\"quartiere\") of Milan, Italy, part of the Zone 8 administrative division of the city. It is located about 7 km north-west of the city centre. It borders on the \"comune\" of Pero to the north and on the districts of Trenno to the west and Lampugnano to the south; to the east, its ideal border is the eponymous street, which in turn is named after Gallarate, the town it leads to.\n\nShumerlinsky District\nShumerlinsky District\nShumerlinsky District (; ) is an administrative and municipal district (raion), one of the twenty-one in the Chuvash Republic, Russia. It is located in the west of the republic and borders with Alikovsky and Krasnochetaysky Districts in the north, Vurnarsky District in the east, Ibresinsky and Poretsky Districts in the south, and with Nizhny Novgorod Oblast on the Sura River in the west. The area of the district is . Its administrative center is the town of Shumerlya (which is not administratively a part of the district). Population: 13,298 (2002 Census);\n\nTuymazinsky District\nTuymazinsky District\nTuymazinsky District (; ) is an administrative and municipal district (raion), one of the fifty-four in the Republic of Bashkortostan, Russia. It is located in the west of the republic and borders with Sharansky District in the north, Buzdyaksky District in the east, Belebeyevsky District in the southeast and south, Yermekeyevsky District in the south, and with the Republic of Tatarstan in the west. The area of the district is . Its administrative center is the town of Tuymazy (which is administratively separate from the district). As of the 2010 Census, the total population of the district was 64,389.\n\nKazachinsky District\nKazachinsky District\nKazachinsky District () is an administrative and municipal district (raion), one of the forty-three in Krasnoyarsk Krai, Russia. It is located in the southern central part of the krai and borders with Yeniseysky and Motyginsky Districts in the north, Taseyevsky District in the east, Bolshemurtinsky District in the south, and with Pirovsky District in the west. The area of the district is . Its administrative center is the rural locality (a \"selo\") of Kazachinskoye. Population: The population of Kazachinskoye accounts for 33.8% of the district's total population.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:lago_district_0",
+        "passage_index": 16,
+        "title": "Lago District",
+        "score": 0.09644002990316236,
+        "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania.",
+        "score_breakdown": {
+          "dense": 0.05103849300753884,
+          "graph": 0.05883535096988986,
+          "fact": 0.33812168972032697
+        }
+      },
+      {
+        "node_id": "chunk:niassa_reserve_0",
+        "passage_index": 0,
+        "title": "Niassa Reserve",
+        "score": 0.09574254245443042,
+        "text": "Niassa Reserve\nNiassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country. The reserve is part of the Trans-Frontier Conservation Area and links to the Tanzanian Lukwika-Lumesule Game Reserve. It will connect to the Lake Niassa Reserve when it is completed.",
+        "score_breakdown": {
+          "dense": 0.05000278295942381,
+          "graph": 0.056542055275685156,
+          "fact": 0.3418559682936119
+        }
+      },
+      {
+        "node_id": "chunk:swan_miara_0",
+        "passage_index": 3,
+        "title": "Swan Miara",
+        "score": 0.09211124897472363,
+        "text": "Swan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
+        "score_breakdown": {
+          "dense": 0.04995462703949621,
+          "graph": 0.055442842683638485,
+          "fact": 0.3200223419860611
+        }
+      },
+      {
+        "node_id": "chunk:lago_verde_queyras_0",
+        "passage_index": 10,
+        "title": "Lago Verde (Queyras)",
+        "score": 0.042301116155452546,
+        "text": "Lago Verde (Queyras)\nLago Verde (Italian for \"green lake\") is a lake which is located in Italy, close to the French border and the Queyras valley.",
+        "score_breakdown": {
+          "dense": 0.0503056064191744,
+          "graph": 0.04877677541635542,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:novolaksky_district_0",
+        "passage_index": 9,
+        "title": "Novolaksky District",
+        "score": 0.04217868326355965,
+        "text": "Novolaksky District\nNovolaksky District (; Lak: ; , \"Aux Khoşt\") is an administrative and municipal district (raion), one of the forty-one in the Republic of Dagestan, Russia. It is located in the west of the republic and borders with Khasavyurtovsky District in the northeast, Kazbekovsky District in the southeast, and with the Chechen Republic in the west. The area of the district is . Its administrative center is the rural locality (a \"selo\") of Novolakskoye. As of the 2010 Census, the total population of the district was 28,556, with the population of Novolakskoye accounting for 20.8% of that number.",
+        "score_breakdown": {
+          "dense": 0.050069052072432944,
+          "graph": 0.048802348745738425,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:gallaratese_0",
+        "passage_index": 15,
+        "title": "Gallaratese",
+        "score": 0.04215889002380553,
+        "text": "Gallaratese\nGallaratese is a district (\"quartiere\") of Milan, Italy, part of the Zone 8 administrative division of the city. It is located about 7 km north-west of the city centre. It borders on the \"comune\" of Pero to the north and on the districts of Trenno to the west and Lampugnano to the south; to the east, its ideal border is the eponymous street, which in turn is named after Gallarate, the town it leads to.",
+        "score_breakdown": {
+          "dense": 0.050050391537892994,
+          "graph": 0.04877058225988129,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:akshinsky_district_0",
+        "passage_index": 19,
+        "title": "Akshinsky District",
+        "score": 0.04214017407913759,
+        "text": "Akshinsky District\nAkshinsky District () is an administrative and municipal district (raion), one of the thirty-one in Zabaykalsky Krai, Russia. It is located in the south of the krai and borders with Ononsky, Ulyotovsky, and Kyrinsky Districts of Zabaykalsky Krai, as well as with Mongolia. The area of the district is . Administrative center is the rural locality (a \"selo\") of Aksha. Population: 12,080 (2002 Census); The population of Aksha accounts for 36.9% of the district's total population.",
+        "score_breakdown": {
+          "dense": 0.050010394368548934,
+          "graph": 0.04878152392145223,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:chaunsky_district_0",
+        "passage_index": 12,
+        "title": "Chaunsky District",
+        "score": 0.04211636253380892,
+        "text": "Chaunsky District\nChaunsky District (; Chukchi: ) is an administrative and municipal district (raion), one of the six in Chukotka Autonomous Okrug, Russia. It is located on the northern shore of the autonomous okrug and borders with Iultinsky District in the northeast, Anadyrsky District in the southeast, and with Bilibinsky District in the south and west. The area of the district is . Its administrative center is the town of Pevek. Population: The population of Pevek accounts for 80.8% of the district's total population.",
+        "score_breakdown": {
+          "dense": 0.04997022392415116,
+          "graph": 0.04877579791841927,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:shumerlinsky_district_0",
+        "passage_index": 14,
+        "title": "Shumerlinsky District",
+        "score": 0.042094700451698164,
+        "text": "Shumerlinsky District\nShumerlinsky District (; ) is an administrative and municipal district (raion), one of the twenty-one in the Chuvash Republic, Russia. It is located in the west of the republic and borders with Alikovsky and Krasnochetaysky Districts in the north, Vurnarsky District in the east, Ibresinsky and Poretsky Districts in the south, and with Nizhny Novgorod Oblast on the Sura River in the west. The area of the district is . Its administrative center is the town of Shumerlya (which is not administratively a part of the district). Population: 13,298 (2002 Census);",
+        "score_breakdown": {
+          "dense": 0.04992998499225951,
+          "graph": 0.048777362353184785,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:gmina_w_odawa_0",
+        "passage_index": 11,
+        "title": "Gmina Włodawa",
+        "score": 0.04209425119110698,
+        "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
+        "score_breakdown": {
+          "dense": 0.049943059342358355,
+          "graph": 0.048751895176032935,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What province is Lago District located in?",
+        "resolved_sub_question": "What province is Lago District located in?",
+        "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+        "sentence": "Lago District is a district of Niassa Province in north-western Mozambique.",
+        "score": 0.5764144,
+        "source_title": "Lago District",
+        "hop_answer": "Niassa Province",
+        "hop_thought": "The passage clearly states that Lago District is a district of Niassa Province.",
+        "hop_raw_response": "The passage clearly states that Lago District is a district of Niassa Province.\nAnswer: Niassa Province",
+        "evidence_passages": [
+          {
+            "title": "Lago District",
+            "text": "Lago District is a district of Niassa Province in north-western Mozambique."
+          },
+          {
+            "title": "Lago District",
+            "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
+          },
+          {
+            "title": "Lago District",
+            "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
+          }
+        ]
+      },
+      {
+        "sub_question": "What province shares a border with the province where Lago District is located?",
+        "resolved_sub_question": "What province shares a border with the province where Lago District is located? Context: Niassa Province.",
+        "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
+        "sentence": "Lago District is a district of Niassa Province in north-western Mozambique.",
+        "score": 0.49093904716364545,
+        "source_title": "Lago District",
+        "hop_answer": "Tanzania",
+        "hop_thought": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.",
+        "hop_raw_response": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.\nAnswer: Tanzania",
+        "evidence_passages": [
+          {
+            "title": "Lago District",
+            "text": "Lago District is a district of Niassa Province in north-western Mozambique."
+          },
+          {
+            "title": "Lago District",
+            "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
+          },
+          {
+            "title": "Lago District",
+            "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What province is Lago District located in? => Niassa Province (source: Lago District)\n2. What province shares a border with the province where Lago District is located? => Tanzania (source: Lago District)\n\nFact hints:\n- Lago District is a district of Niassa Province\n- Niassa Province located in north-western Mozambique\n- Niassa Reserve is located in Niassa Province\n\nWikipedia Title: Lago District\nLago shares its northern boundary with Tanzania. Lago District Lago District is a district of Niassa Province in north-western Mozambique.\n\nWikipedia Title: Niassa Reserve\nNiassa Reserve Niassa Reserve is a nature reserve in Cabo Delgado Province and Niassa Province, Mozambique. Covering over , it is the largest protected area in the country.\n\nWikipedia Title: Swan Miara\nIt is located in the south of the district where it borders Abbottabad District. Swan Miara Swan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan.\n\nWikipedia Title: Shumerlinsky District\nIt is located in the west of the republic and borders with Alikovsky and Krasnochetaysky Districts in the north, Vurnarsky District in the east, Ibresinsky and Poretsky Districts in the south, and with Nizhny Novgorod Oblast on the Sura River in the west. The area of the district is .\n\nWikipedia Title: Tuymazinsky District\nIt is located in the west of the republic and borders with Sharansky District in the north, Buzdyaksky District in the east, Belebeyevsky District in the southeast and south, Yermekeyevsky District in the south, and with the Republic of Tatarstan in the west. The area of the district is .\n\nQuestion: What province shares a border with the province where Lago District is located?\nDraft Answer: Tanzania\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The passage states that Lago District shares its northern boundary with Tanzania, which means that Tanzania is the province or country that shares a border with the province where Lago District is located, which is Niassa Province.",
+  "predicted_answer": "Tanzania",
+  "qa_raw_response": "{\n  \"thought\": \"The passage states that Lago District shares its northern boundary with Tanzania, which means that Tanzania is the province or country that shares a border with the province where Lago District is located, which is Niassa Province.\",\n  \"answer\": \"Tanzania\",\n  \"support\": \"Lago shares its northern boundary with Tanzania.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__635187_861533",
+    "question": "What province shares a border with the province where Lago District is located?",
+    "answer": "Cabo Delgado Province",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Lago District >> located in the administrative territorial entity",
+      "#1 >> shares border with"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Cabo Delgado Province",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Cabo Delgado Province"
+    ]
+  }
+}
