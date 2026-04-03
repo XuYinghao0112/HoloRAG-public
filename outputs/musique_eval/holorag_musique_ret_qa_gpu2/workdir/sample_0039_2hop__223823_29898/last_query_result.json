@@ -1,0 +1,1083 @@
+{
+  "query": "Which affiliate left the owner of Canadian Broadcasting Centre due to an agreement with CHBC?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "CHBC"
+  ],
+  "raw_query_entities": [
+    "Canadian Broadcasting Centre",
+    "CHBC"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Canadian Broadcasting Centre",
+      "node_id": "entity:cbc",
+      "resolved_text": "CBC",
+      "score": 0.7678000000000001,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.4325,
+      "score_margin": 0.025133333333333452,
+      "confident": false
+    },
+    {
+      "mention": "CHBC",
+      "node_id": "entity:chbc",
+      "resolved_text": "CHBC",
+      "score": 0.7491333333333334,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.4325,
+      "score_margin": 0.2500000000000001,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is the owner of the Canadian Broadcasting Centre?",
+    "Which affiliate of this owner has an agreement with CHBC?",
+    "Why did this affiliate leave the owner of the Canadian Broadcasting Centre?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:chbc",
+      "score": 1.1086718393846586,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chbc_tv",
+      "score": 0.7376598937156836,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cfjc",
+      "score": 0.6513511612486281,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cfjc_tv",
+      "score": 0.6463520145669982,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:97_1_fm",
+      "score": 0.6273934160638466,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:103_5_fm",
+      "score": 0.6273934160638466,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ckcw_fm",
+      "score": 0.506818827932936,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ckdh_fm",
+      "score": 0.5048192805849764,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ckmx_s_studios",
+      "score": 0.36770345998953385,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ckmp_s_studios",
+      "score": 0.36770345998953385,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_cbc_television",
+      "score": 0.33992714533553275,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cbc_affiliates",
+      "score": 0.33992592086794776,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:chbc_had_agreement_with_cfjc_tv_sentence_cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kaml",
+      "text": "CHBC had agreement with CFJC-TV",
+      "head_id": "entity:chbc",
+      "tail_id": "entity:cfjc_tv",
+      "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "chunk_id": "chunk:cbc_television_0",
+      "document_index": 13,
+      "score": 0.3064253281002761
+    },
+    {
+      "fact_id": "fact:cjbc_s_studios_are_located_in_canadian_broadcasting_centre_sentence_cjbc_fm_0_2_cjbc_s_studios_are_located_in_the_canadi",
+      "text": "CJBC's studios are located in Canadian Broadcasting Centre",
+      "head_id": "entity:cjbc_s_studios",
+      "tail_id": "entity:canadian_broadcasting_centre",
+      "sentence_id": "sentence:cjbc_fm_0_2_cjbc_s_studios_are_located_in_the_canadian_broadcasting_centre_while_its_transm",
+      "chunk_id": "chunk:cjbc_fm_0",
+      "document_index": 6,
+      "score": 0.30641954999127824
+    },
+    {
+      "fact_id": "fact:cfjc_disaffiliated_from_cbc_sentence_cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops",
+      "text": "CFJC disaffiliated from CBC",
+      "head_id": "entity:cfjc",
+      "tail_id": "entity:cbc",
+      "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "chunk_id": "chunk:cbc_television_0",
+      "document_index": 13,
+      "score": 0.2814259981254278
+    },
+    {
+      "fact_id": "fact:ckdh_fm_broadcasting_at_101_7_fm_sentence_ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm_in_am",
+      "text": "CKDH-FM broadcasting at 101 7 FM",
+      "head_id": "entity:title_anchor_ckdh_fm",
+      "tail_id": "entity:101_7_fm",
+      "sentence_id": "sentence:ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm_in_amherst_nova_sc",
+      "chunk_id": "chunk:ckdh_fm_0",
+      "document_index": 9,
+      "score": 0.27141414826015636
+    },
+    {
+      "fact_id": "fact:ckcw_fm_broadcasting_at_94_5_fm_sentence_ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_fm_in_monc",
+      "text": "CKCW-FM broadcasting at 94 5 FM",
+      "head_id": "entity:title_anchor_ckcw_fm",
+      "tail_id": "entity:94_5_fm",
+      "sentence_id": "sentence:ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_fm_in_moncton_new_brun",
+      "chunk_id": "chunk:ckcw_fm_0",
+      "document_index": 3,
+      "score": 0.25141369845971584
+    },
+    {
+      "fact_id": "fact:canadian_broadcasting_centre_located_in_toronto_sentence_cbve_fm_0_0_although_it_is_a_semi_satellite_of_cbme_fm_in_montr",
+      "text": "Canadian Broadcasting Centre located in Toronto",
+      "head_id": "entity:canadian_broadcasting_centre",
+      "tail_id": "entity:toronto",
+      "sentence_id": "sentence:cbve_fm_0_0_although_it_is_a_semi_satellite_of_cbme_fm_in_montreal_most_of_the_station_s_op",
+      "chunk_id": "chunk:cbve_fm_0",
+      "document_index": 5,
+      "score": 0.22642104262943472
+    },
+    {
+      "fact_id": "fact:ckcw_fm_located_in_moncton_new_brunswick_sentence_ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_f",
+      "text": "CKCW-FM located in Moncton New Brunswick",
+      "head_id": "entity:title_anchor_ckcw_fm",
+      "tail_id": "entity:moncton_new_brunswick",
+      "sentence_id": "sentence:ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_fm_in_moncton_new_brun",
+      "chunk_id": "chunk:ckcw_fm_0",
+      "document_index": 3,
+      "score": 0.19641232668120862
+    },
+    {
+      "fact_id": "fact:ckdh_fm_located_in_amherst_nova_scotia_sentence_ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm",
+      "text": "CKDH-FM located in Amherst Nova Scotia",
+      "head_id": "entity:title_anchor_ckdh_fm",
+      "tail_id": "entity:amherst_nova_scotia",
+      "sentence_id": "sentence:ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm_in_amherst_nova_sc",
+      "chunk_id": "chunk:ckdh_fm_0",
+      "document_index": 9,
+      "score": 0.1964113144759836
+    }
+  ],
+  "bridge_entities": [
+    "CFJC-TV",
+    "CBC",
+    "CFJC",
+    "Kamloops",
+    "Agreement with CHBC"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the owner of the Canadian Broadcasting Centre?",
+      "resolved_sub_question": "What is the owner of the Canadian Broadcasting Centre?",
+      "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+      "score": 0.6042393333333334,
+      "source_title": "CBC Television",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain information about the owner of the Canadian Broadcasting Centre.",
+      "hop_raw_response": "The evidence provided does not contain information about the owner of the Canadian Broadcasting Centre.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "CBC Television",
+          "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+        },
+        {
+          "title": "CBC Television",
+          "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+        },
+        {
+          "title": "CJBC-FM",
+          "text": "CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which affiliate of this owner has an agreement with CHBC?",
+      "resolved_sub_question": "Which affiliate of this owner has an agreement with CHBC?",
+      "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+      "score": 0.6003952000000001,
+      "source_title": "CBC Television",
+      "hop_answer": "CFJC-TV",
+      "hop_thought": "The affiliate that has an agreement with CHBC is CFJC-TV in Kamloops.",
+      "hop_raw_response": "The affiliate that has an agreement with CHBC is CFJC-TV in Kamloops.\nAnswer: CFJC-TV",
+      "evidence_passages": [
+        {
+          "title": "CBC Television",
+          "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+        },
+        {
+          "title": "CBC Television",
+          "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+        },
+        {
+          "title": "CBC Television",
+          "text": "When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued."
+        }
+      ]
+    },
+    {
+      "sub_question": "Why did this affiliate leave the owner of the Canadian Broadcasting Centre?",
+      "resolved_sub_question": "Why did this affiliate leave the owner of the Canadian Broadcasting Centre? Context: CFJC-TV.",
+      "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+      "score": 0.5277333333333334,
+      "source_title": "CBC Television",
+      "hop_answer": "Agreement with CHBC",
+      "hop_thought": "CFJC-TV disaffiliated from the CBC due to an agreement between CHBC and CFJC-TV.",
+      "hop_raw_response": "CFJC-TV disaffiliated from the CBC due to an agreement between CHBC and CFJC-TV.\nAnswer: Agreement with CHBC",
+      "evidence_passages": [
+        {
+          "title": "CBC Television",
+          "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+        },
+        {
+          "title": "CBC Television",
+          "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+        },
+        {
+          "title": "CBC Television",
+          "text": "When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:chbc",
+      "score": 0.05158433543194732,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chbc_tv",
+      "score": 0.044044279396496744,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cfjc_tv",
+      "score": 0.03844014322728688,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cfjc",
+      "score": 0.03489191206171413,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+      "score": 0.03315834309398326,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_ckdh_fm",
+      "score": 0.031067024681992884,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:97_1_fm",
+      "score": 0.030188220889399705,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:103_5_fm",
+      "score": 0.028655421723497245,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ckcw_fm",
+      "score": 0.02786253932469819,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cbc",
+      "score": 0.023807804923735652,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm_in_amherst_nova_sc",
+      "score": 0.022599510721323136,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ckmx_s_studios",
+      "score": 0.020671331616739022,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:97_3_fm",
+      "score": 0.019517883637820962,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_fm_in_moncton_new_brun",
+      "score": 0.01928506800156566,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ckmp_s_studios",
+      "score": 0.018923484062081674,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:94_5_fm",
+      "score": 0.018618564076716065,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cjbc_s_studios",
+      "score": 0.018246327100486556,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cbc_programming",
+      "score": 0.01719247777773644,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_cbc_television",
+      "score": 0.017104666920518766,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:94_9_fm",
+      "score": 0.016656313070057143,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:cbc_television_0",
+      "passage_index": 13,
+      "title": "CBC Television",
+      "score": 0.0755345406600196,
+      "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former",
+      "score_breakdown": {
+        "dense": 0.05081408567039438,
+        "graph": 0.055213779622048494,
+        "fact": 0.2068177310312543
+      }
+    },
+    {
+      "node_id": "chunk:cjbc_fm_0",
+      "passage_index": 6,
+      "title": "CJBC-FM",
+      "score": 0.07380202981233772,
+      "text": "CJBC-FM\nCJBC-FM is a public Canadian radio station, broadcasting at 90.3 MHz in Toronto, Ontario. A French-language station, it airs the programming of Radio-Canada's Ici Musique network. CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.",
+      "score_breakdown": {
+        "dense": 0.05007809179789968,
+        "graph": 0.05078866306865254,
+        "fact": 0.20681653601931418
+      }
+    },
+    {
+      "node_id": "chunk:ckdh_fm_0",
+      "passage_index": 9,
+      "title": "CKDH-FM",
+      "score": 0.07272382353703047,
+      "text": "CKDH-FM\nCKDH-FM is a Canadian radio station broadcasting at 101.7 FM in Amherst, Nova Scotia, owned by the Maritime Broadcasting System, and currently offers a country music format.",
+      "score_breakdown": {
+        "dense": 0.049964988398591516,
+        "graph": 0.05095922208669521,
+        "fact": 0.1997020886119772
+      }
+    },
+    {
+      "node_id": "chunk:ckcw_fm_0",
+      "passage_index": 3,
+      "title": "CKCW-FM",
+      "score": 0.0721468062282323,
+      "text": "CKCW-FM\nCKCW-FM is a Canadian radio station broadcasting at 94.5 FM in Moncton, New Brunswick. The station plays a hot adult contemporary format branded as \"K94.5\" and is owned by the Maritime Broadcasting System.",
+      "score_breakdown": {
+        "dense": 0.04998100615210739,
+        "graph": 0.0509836923485827,
+        "fact": 0.1957476342666562
+      }
+    },
+    {
+      "node_id": "chunk:cbve_fm_0",
+      "passage_index": 5,
+      "title": "CBVE-FM",
+      "score": 0.07113271944315289,
+      "text": "CBVE-FM\nAlthough it is a semi-satellite of CBME-FM in Montreal, most of the station's operations are in Quebec City except for master control, which is based at the Canadian Broadcasting Centre in Toronto.",
+      "score_breakdown": {
+        "dense": 0.050053856559064275,
+        "graph": 0.049885656083492796,
+        "fact": 0.190916010070798
+      }
+    },
+    {
+      "node_id": "chunk:cbc_television_1",
+      "passage_index": 13,
+      "title": "CBC Television",
+      "score": 0.04275816560428557,
+      "text": "CBC Television\nannounced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former CBC affiliates have since joined City or Global, or closed altogether.",
+      "score_breakdown": {
+        "dense": 0.050498437103992294,
+        "graph": 0.04994675065696603,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ckmp_fm_0",
+      "passage_index": 15,
+      "title": "CKMP-FM",
+      "score": 0.04244883030016026,
+      "text": "CKMP-FM\nCKMP-FM is a Canadian radio station serving Calgary, Alberta broadcasting at 90.3 FM. Owned by Stingray Group, it broadcasts a CHR format branded as \"90.3 Amp Radio\". The station first signed on the air in 2007 as an alternative rock station branded as \"Fuel 90.3\" with its original call letters CFUL-FM, before adopting its current format in 2009. CKMP's studios are located on Centre Street in Eau Claire, while its transmitter is located on Old Banff Coach Road.",
+      "score_breakdown": {
+        "dense": 0.04988892997070131,
+        "graph": 0.050033062720915115,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cilb_fm_0",
+      "passage_index": 8,
+      "title": "CILB-FM",
+      "score": 0.04239314835937592,
+      "text": "CILB-FM\nCILB-FM is a Canadian radio station broadcasting a classic hits format at 103.5 FM in Lac La Biche, Alberta. The station is branded as boom 103.5 and was owned by Newcap Broadcasting until they were bought out by Stingray Digital.",
+      "score_breakdown": {
+        "dense": 0.0499400328784984,
+        "graph": 0.04975376758733934,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cjrm_fm_0",
+      "passage_index": 4,
+      "title": "CJRM-FM",
+      "score": 0.04237090811019101,
+      "text": "CJRM-FM\nCJRM-FM is a Canadian radio station, broadcasting at 97.3 FM in Labrador City. It is a Francophone community radio station branded as Rafale FM. Although still a licensed station, it has not broadcast regularly since 2015, due to a combination of technical and staffing problems.",
+      "score_breakdown": {
+        "dense": 0.04985118122074766,
+        "graph": 0.049842528129265984,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ckmx_0",
+      "passage_index": 14,
+      "title": "CKMX",
+      "score": 0.04235424249341763,
+      "text": "CKMX\nCKMX is a Canadian radio station, broadcasting at 1060 AM in Calgary, Alberta owned by Bell Media. The station broadcasts a comedy format branded on-air as Funny 1060AM. CKMX's studios are located on Centre Street in Eau Claire, while its transmitters are located near Southeast Calgary. At night it can be heard as far west as Battle Ground, Washington and Snohomish, Washington.",
+      "score_breakdown": {
+        "dense": 0.049955128216231985,
+        "graph": 0.04959640658163347,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:chbc",
+        "score": 0.05158433543194732,
+        "text": "CHBC",
+        "metadata": {
+          "canonical_name": "CHBC",
+          "aliases": [
+            "CHBC"
+          ],
+          "surface_forms": [
+            "CHBC"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:chbc_tv",
+        "score": 0.044044279396496744,
+        "text": "CHBC-TV",
+        "metadata": {
+          "canonical_name": "CHBC-TV",
+          "aliases": [
+            "CHBC-TV"
+          ],
+          "surface_forms": [
+            "CHBC-TV"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:cfjc_tv",
+        "score": 0.03844014322728688,
+        "text": "CFJC-TV",
+        "metadata": {
+          "canonical_name": "CFJC-TV",
+          "aliases": [
+            "CFJC-TV"
+          ],
+          "surface_forms": [
+            "CFJC-TV"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:cfjc",
+        "score": 0.03489191206171413,
+        "text": "CFJC",
+        "metadata": {
+          "canonical_name": "CFJC",
+          "aliases": [
+            "CFJC"
+          ],
+          "surface_forms": [
+            "CFJC"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_ckdh_fm",
+        "score": 0.031067024681992884,
+        "text": "CKDH-FM",
+        "metadata": {
+          "canonical_name": "CKDH-FM",
+          "aliases": [
+            "CKDH-FM"
+          ],
+          "surface_forms": [
+            "CKDH-FM"
+          ],
+          "title_anchor": "CKDH-FM"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+        "score": 0.03315834309398326,
+        "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+        "metadata": {
+          "title": "CBC Television",
+          "chunk_id": "chunk:cbc_television_0",
+          "sentence_index": 3,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "CHBC",
+              "relation": "had agreement with",
+              "tail": "CFJC-TV"
+            },
+            {
+              "head": "CFJC",
+              "relation": "disaffiliated from",
+              "tail": "CBC"
+            },
+            {
+              "head": "CFJC",
+              "relation": "disaffiliated on",
+              "tail": "February 27 2006"
+            }
+          ],
+          "entities": [
+            "CHBC",
+            "CFJC-TV",
+            "CFJC",
+            "CBC",
+            "Kamloops"
+          ],
+          "entity_ids": [
+            "entity:cbc",
+            "entity:cfjc",
+            "entity:cfjc_tv",
+            "entity:chbc",
+            "entity:february_27_2006",
+            "entity:kamloops"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ckdh_fm_0_0_ckdh_fm_is_a_canadian_radio_station_broadcasting_at_101_7_fm_in_amherst_nova_sc",
+        "score": 0.022599510721323136,
+        "text": "CKDH-FM is a Canadian radio station broadcasting at 101.7 FM in Amherst, Nova Scotia, owned by the Maritime Broadcasting System, and currently offers a country music format.",
+        "metadata": {
+          "title": "CKDH-FM",
+          "chunk_id": "chunk:ckdh_fm_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "CKDH-FM",
+              "relation": "is a",
+              "tail": "Canadian radio station"
+            },
+            {
+              "head": "CKDH-FM",
+              "relation": "broadcasting at",
+              "tail": "101 7 FM"
+            },
+            {
+              "head": "CKDH-FM",
+              "relation": "located in",
+              "tail": "Amherst Nova Scotia"
+            },
+            {
+              "head": "CKDH-FM",
+              "relation": "owned by",
+              "tail": "Maritime Broadcasting System"
+            }
+          ],
+          "entities": [
+            "CKDH-FM",
+            "Canadian radio station",
+            "101 7 FM",
+            "Amherst Nova Scotia",
+            "Maritime Broadcasting System"
+          ],
+          "entity_ids": [
+            "entity:101_7_fm",
+            "entity:amherst_nova_scotia",
+            "entity:canadian_radio_station",
+            "entity:maritime_broadcasting_system",
+            "entity:title_anchor_ckdh_fm"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ckcw_fm_0_0_ckcw_fm_is_a_canadian_radio_station_broadcasting_at_94_5_fm_in_moncton_new_brun",
+        "score": 0.01928506800156566,
+        "text": "CKCW-FM is a Canadian radio station broadcasting at 94.5 FM in Moncton, New Brunswick.",
+        "metadata": {
+          "title": "CKCW-FM",
+          "chunk_id": "chunk:ckcw_fm_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "CKCW-FM",
+              "relation": "is a",
+              "tail": "Canadian radio station"
+            },
+            {
+              "head": "CKCW-FM",
+              "relation": "broadcasting at",
+              "tail": "94 5 FM"
+            },
+            {
+              "head": "CKCW-FM",
+              "relation": "located in",
+              "tail": "Moncton New Brunswick"
+            }
+          ],
+          "entities": [
+            "CKCW-FM",
+            "Canadian radio station",
+            "94 5 FM",
+            "Moncton New Brunswick"
+          ],
+          "entity_ids": [
+            "entity:94_5_fm",
+            "entity:canadian_radio_station",
+            "entity:moncton_new_brunswick",
+            "entity:title_anchor_ckcw_fm"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:cbc_television_0_1_one_private_cbc_affiliate_chbc_tv_in_kelowna_joined_e_then_known_as_ch_on_f",
+        "score": 0.012561698698950447,
+        "text": "One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006.",
+        "metadata": {
+          "title": "CBC Television",
+          "chunk_id": "chunk:cbc_television_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "CHBC-TV",
+              "relation": "is a",
+              "tail": "private CBC affiliate"
+            },
+            {
+              "head": "CHBC-TV",
+              "relation": "located in",
+              "tail": "Kelowna"
+            },
+            {
+              "head": "CHBC-TV",
+              "relation": "joined E!",
+              "tail": "February 27 2006"
+            }
+          ],
+          "entities": [
+            "CHBC-TV",
+            "CBC",
+            "Kelowna",
+            "CH",
+            "February 27 2006"
+          ],
+          "entity_ids": [
+            "entity:cbc",
+            "entity:ch",
+            "entity:chbc_tv",
+            "entity:february_27_2006",
+            "entity:kelowna",
+            "entity:private_cbc_affiliate"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:cbc_television_0",
+        "score": 0.008756501466402607,
+        "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former",
+        "metadata": {
+          "title": "CBC Television",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:10_p_m_broadcast_of_the_national",
+            "entity:canwest_global",
+            "entity:cbc",
+            "entity:cbc_programming",
+            "entity:cbc_service_is_continued",
+            "entity:cfjc",
+            "entity:cfjc_tv",
+            "entity:ch",
+            "entity:channel",
+            "entity:chat",
+            "entity:chat_tv_medicine_hat",
+            "entity:chbc",
+            "entity:chbc_tv",
+            "entity:ckpg",
+            "entity:ckpg_tv_prince_george",
+            "entity:core_part_of_the_cbc_schedule",
+            "entity:february_27_2006",
+            "entity:however",
+            "entity:jim_pattison_group",
+            "entity:kamloops",
+            "entity:kelowna",
+            "entity:limited",
+            "entity:most",
+            "entity:national",
+            "entity:o_o_station",
+            "entity:private",
+            "entity:private_affiliates",
+            "entity:private_cbc_affiliate",
+            "entity:retransmitter_of_its_nearest_o_o_station",
+            "entity:some",
+            "entity:thursday",
+            "entity:title_anchor_cbc_television",
+            "entity:two"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ckcw_fm_0",
+        "score": 0.005828582986839334,
+        "text": "CKCW-FM\nCKCW-FM is a Canadian radio station broadcasting at 94.5 FM in Moncton, New Brunswick. The station plays a hot adult contemporary format branded as \"K94.5\" and is owned by the Maritime Broadcasting System.",
+        "metadata": {
+          "title": "CKCW-FM",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:94_5_fm",
+            "entity:canadian_radio_station",
+            "entity:k94",
+            "entity:k94_5",
+            "entity:maritime_broadcasting_system",
+            "entity:moncton_new_brunswick",
+            "entity:title_anchor_ckcw_fm"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ckdh_fm_0",
+        "score": 0.005449441116561677,
+        "text": "CKDH-FM\nCKDH-FM is a Canadian radio station broadcasting at 101.7 FM in Amherst, Nova Scotia, owned by the Maritime Broadcasting System, and currently offers a country music format.",
+        "metadata": {
+          "title": "CKDH-FM",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:101_7_fm",
+            "entity:amherst_nova_scotia",
+            "entity:canadian_radio_station",
+            "entity:maritime_broadcasting_system",
+            "entity:title_anchor_ckdh_fm"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:cjbc_fm_0",
+        "score": 0.0037936184493782355,
+        "text": "CJBC-FM\nCJBC-FM is a public Canadian radio station, broadcasting at 90.3 MHz in Toronto, Ontario. A French-language station, it airs the programming of Radio-Canada's Ici Musique network. CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.",
+        "metadata": {
+          "title": "CJBC-FM",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:90_3_mhz",
+            "entity:canadian_broadcasting_centre",
+            "entity:cjbc",
+            "entity:cjbc_s_studios",
+            "entity:cjbc_s_transmitter",
+            "entity:first_canadian_place",
+            "entity:french_language_station",
+            "entity:ici_musique",
+            "entity:public_canadian_radio_station",
+            "entity:radio_canada",
+            "entity:radio_canada_s_ici_musique_network",
+            "entity:title_anchor_cjbc_fm",
+            "entity:toronto_ontario",
+            "entity:toronto_s_financial_district"
+          ]
+        }
+      }
+    ],
+    "qa_context": "CBC Television\nCBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former\n\nCJBC-FM\nCJBC-FM\nCJBC-FM is a public Canadian radio station, broadcasting at 90.3 MHz in Toronto, Ontario. A French-language station, it airs the programming of Radio-Canada's Ici Musique network. CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.\n\nCKDH-FM\nCKDH-FM\nCKDH-FM is a Canadian radio station broadcasting at 101.7 FM in Amherst, Nova Scotia, owned by the Maritime Broadcasting System, and currently offers a country music format.\n\nCKCW-FM\nCKCW-FM\nCKCW-FM is a Canadian radio station broadcasting at 94.5 FM in Moncton, New Brunswick. The station plays a hot adult contemporary format branded as \"K94.5\" and is owned by the Maritime Broadcasting System.\n\nCBVE-FM\nCBVE-FM\nAlthough it is a semi-satellite of CBME-FM in Montreal, most of the station's operations are in Quebec City except for master control, which is based at the Canadian Broadcasting Centre in Toronto.\n\nCBC Television\nHowever, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.\n\nCJBC-FM\nCJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.\n\nCBC Television\nWhen a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued.\n\nKXVO\nKXVO\nKXVO signed on the air on June 10, 1995 as an affiliate of The WB, which debuted nationally almost five months earlier on January 11 of that year; the station was originally owned by Cocola Broadcasting, but was operated by Pappas Telecasting under a local marketing agreement. In the interim six months, Omaha did have access to the WB via cable and satellite providers through Chicago-based national superstation WGN. Cocola would later sell the station to Mitts Telecasting Company in 2000, which retained the LMA with Pappas.\n\nPremier League\nPremier League\nThe Premier League is particularly popular in Asia, where it is the most widely distributed sports programme. In Australia, Fox Sports broadcasts almost all of the season's 380 matches live, and Foxtel gives subscribers the option of selecting which Saturday 3pm match to watch. In India, the matches are broadcast live on STAR Sports. In China, the broadcast rights were awarded to Super Sports in a six-year agreement that began in the 2013–14 season. As of the 2013–14 season, Canadian broadcast rights to the Premier League are jointly owned by Sportsnet and TSN, with both rival networks holding rights to 190 matches per season.\n\nCBC Television\nCBC Television\nannounced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former CBC affiliates have since joined City or Global, or closed altogether.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:cbc_television_0",
+        "passage_index": 13,
+        "title": "CBC Television",
+        "score": 0.0755345406600196,
+        "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former",
+        "score_breakdown": {
+          "dense": 0.05081408567039438,
+          "graph": 0.055213779622048494,
+          "fact": 0.2068177310312543
+        }
+      },
+      {
+        "node_id": "chunk:cjbc_fm_0",
+        "passage_index": 6,
+        "title": "CJBC-FM",
+        "score": 0.07380202981233772,
+        "text": "CJBC-FM\nCJBC-FM is a public Canadian radio station, broadcasting at 90.3 MHz in Toronto, Ontario. A French-language station, it airs the programming of Radio-Canada's Ici Musique network. CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.",
+        "score_breakdown": {
+          "dense": 0.05007809179789968,
+          "graph": 0.05078866306865254,
+          "fact": 0.20681653601931418
+        }
+      },
+      {
+        "node_id": "chunk:ckdh_fm_0",
+        "passage_index": 9,
+        "title": "CKDH-FM",
+        "score": 0.07272382353703047,
+        "text": "CKDH-FM\nCKDH-FM is a Canadian radio station broadcasting at 101.7 FM in Amherst, Nova Scotia, owned by the Maritime Broadcasting System, and currently offers a country music format.",
+        "score_breakdown": {
+          "dense": 0.049964988398591516,
+          "graph": 0.05095922208669521,
+          "fact": 0.1997020886119772
+        }
+      },
+      {
+        "node_id": "chunk:ckcw_fm_0",
+        "passage_index": 3,
+        "title": "CKCW-FM",
+        "score": 0.0721468062282323,
+        "text": "CKCW-FM\nCKCW-FM is a Canadian radio station broadcasting at 94.5 FM in Moncton, New Brunswick. The station plays a hot adult contemporary format branded as \"K94.5\" and is owned by the Maritime Broadcasting System.",
+        "score_breakdown": {
+          "dense": 0.04998100615210739,
+          "graph": 0.0509836923485827,
+          "fact": 0.1957476342666562
+        }
+      },
+      {
+        "node_id": "chunk:cbve_fm_0",
+        "passage_index": 5,
+        "title": "CBVE-FM",
+        "score": 0.07113271944315289,
+        "text": "CBVE-FM\nAlthough it is a semi-satellite of CBME-FM in Montreal, most of the station's operations are in Quebec City except for master control, which is based at the Canadian Broadcasting Centre in Toronto.",
+        "score_breakdown": {
+          "dense": 0.050053856559064275,
+          "graph": 0.049885656083492796,
+          "fact": 0.190916010070798
+        }
+      },
+      {
+        "node_id": "chunk:cbc_television_1",
+        "passage_index": 13,
+        "title": "CBC Television",
+        "score": 0.04275816560428557,
+        "text": "CBC Television\nannounced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former CBC affiliates have since joined City or Global, or closed altogether.",
+        "score_breakdown": {
+          "dense": 0.050498437103992294,
+          "graph": 0.04994675065696603,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ckmp_fm_0",
+        "passage_index": 15,
+        "title": "CKMP-FM",
+        "score": 0.04244883030016026,
+        "text": "CKMP-FM\nCKMP-FM is a Canadian radio station serving Calgary, Alberta broadcasting at 90.3 FM. Owned by Stingray Group, it broadcasts a CHR format branded as \"90.3 Amp Radio\". The station first signed on the air in 2007 as an alternative rock station branded as \"Fuel 90.3\" with its original call letters CFUL-FM, before adopting its current format in 2009. CKMP's studios are located on Centre Street in Eau Claire, while its transmitter is located on Old Banff Coach Road.",
+        "score_breakdown": {
+          "dense": 0.04988892997070131,
+          "graph": 0.050033062720915115,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cilb_fm_0",
+        "passage_index": 8,
+        "title": "CILB-FM",
+        "score": 0.04239314835937592,
+        "text": "CILB-FM\nCILB-FM is a Canadian radio station broadcasting a classic hits format at 103.5 FM in Lac La Biche, Alberta. The station is branded as boom 103.5 and was owned by Newcap Broadcasting until they were bought out by Stingray Digital.",
+        "score_breakdown": {
+          "dense": 0.0499400328784984,
+          "graph": 0.04975376758733934,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cjrm_fm_0",
+        "passage_index": 4,
+        "title": "CJRM-FM",
+        "score": 0.04237090811019101,
+        "text": "CJRM-FM\nCJRM-FM is a Canadian radio station, broadcasting at 97.3 FM in Labrador City. It is a Francophone community radio station branded as Rafale FM. Although still a licensed station, it has not broadcast regularly since 2015, due to a combination of technical and staffing problems.",
+        "score_breakdown": {
+          "dense": 0.04985118122074766,
+          "graph": 0.049842528129265984,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ckmx_0",
+        "passage_index": 14,
+        "title": "CKMX",
+        "score": 0.04235424249341763,
+        "text": "CKMX\nCKMX is a Canadian radio station, broadcasting at 1060 AM in Calgary, Alberta owned by Bell Media. The station broadcasts a comedy format branded on-air as Funny 1060AM. CKMX's studios are located on Centre Street in Eau Claire, while its transmitters are located near Southeast Calgary. At night it can be heard as far west as Battle Ground, Washington and Snohomish, Washington.",
+        "score_breakdown": {
+          "dense": 0.049955128216231985,
+          "graph": 0.04959640658163347,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the owner of the Canadian Broadcasting Centre?",
+        "resolved_sub_question": "What is the owner of the Canadian Broadcasting Centre?",
+        "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+        "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+        "score": 0.6042393333333334,
+        "source_title": "CBC Television",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain information about the owner of the Canadian Broadcasting Centre.",
+        "hop_raw_response": "The evidence provided does not contain information about the owner of the Canadian Broadcasting Centre.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "CBC Television",
+            "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+          },
+          {
+            "title": "CBC Television",
+            "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+          },
+          {
+            "title": "CJBC-FM",
+            "text": "CJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which affiliate of this owner has an agreement with CHBC?",
+        "resolved_sub_question": "Which affiliate of this owner has an agreement with CHBC?",
+        "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+        "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+        "score": 0.6003952000000001,
+        "source_title": "CBC Television",
+        "hop_answer": "CFJC-TV",
+        "hop_thought": "The affiliate that has an agreement with CHBC is CFJC-TV in Kamloops.",
+        "hop_raw_response": "The affiliate that has an agreement with CHBC is CFJC-TV in Kamloops.\nAnswer: CFJC-TV",
+        "evidence_passages": [
+          {
+            "title": "CBC Television",
+            "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+          },
+          {
+            "title": "CBC Television",
+            "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+          },
+          {
+            "title": "CBC Television",
+            "text": "When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued."
+          }
+        ]
+      },
+      {
+        "sub_question": "Why did this affiliate leave the owner of the Canadian Broadcasting Centre?",
+        "resolved_sub_question": "Why did this affiliate leave the owner of the Canadian Broadcasting Centre? Context: CFJC-TV.",
+        "sentence_id": "sentence:cbc_television_0_3_however_due_to_an_agreement_between_chbc_and_cfjc_tv_in_kamloops_cfjc_also_dis",
+        "sentence": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area.",
+        "score": 0.5277333333333334,
+        "source_title": "CBC Television",
+        "hop_answer": "Agreement with CHBC",
+        "hop_thought": "CFJC-TV disaffiliated from the CBC due to an agreement between CHBC and CFJC-TV.",
+        "hop_raw_response": "CFJC-TV disaffiliated from the CBC due to an agreement between CHBC and CFJC-TV.\nAnswer: Agreement with CHBC",
+        "evidence_passages": [
+          {
+            "title": "CBC Television",
+            "text": "However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area."
+          },
+          {
+            "title": "CBC Television",
+            "text": "CBC Television\nPrivate CBC affiliates are not as common as they were in the past, as many such stations have been purchased either by the CBC itself or by Canwest Global or CHUM Limited, respectively becoming E! or A-Channel (later A, now CTV Two) stations. One private CBC affiliate, CHBC-TV in Kelowna, joined E! (then known as CH) on February 27, 2006. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued. However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. Former private CBC affiliates CKPG-TV Prince George and CHAT-TV Medicine Hat disaffiliated on August 31, 2008 and joined E!, but the CBC announced it will not add new retransmitters to these areas. Incidentally, CFJC, CKPG and CHAT are all owned by an independent media company, Jim Pattison Group. With the closure of E! and other changes in the media landscape, several former"
+          },
+          {
+            "title": "CBC Television",
+            "text": "When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the owner of the Canadian Broadcasting Centre? (source: CBC Television)\n2. Which affiliate of this owner has an agreement with CHBC? => CFJC-TV (source: CBC Television)\n3. Why did this affiliate leave the owner of the Canadian Broadcasting Centre? => Agreement with CHBC (source: CBC Television)\n\nFact hints:\n- CHBC had agreement with CFJC-TV\n\nWikipedia Title: CBC Television\nHowever, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006, but no retransmitters were installed in the licence area. When a private CBC affiliate reaffiliates with another network, the CBC has normally added a retransmitter of its nearest O&O station to ensure that CBC service is continued.\n\nWikipedia Title: KXVO\nKXVO KXVO signed on the air on June 10, 1995 as an affiliate of The WB, which debuted nationally almost five months earlier on January 11 of that year; the station was originally owned by Cocola Broadcasting, but was operated by Pappas Telecasting under a local marketing agreement. Cocola would later sell the station to Mitts Telecasting Company in 2000, which retained the LMA with Pappas.\n\nWikipedia Title: Premier League\nIn China, the broadcast rights were awarded to Super Sports in a six-year agreement that began in the 2013–14 season. As of the 2013–14 season, Canadian broadcast rights to the Premier League are jointly owned by Sportsnet and TSN, with both rival networks holding rights to 190 matches per season.\n\nWikipedia Title: CBVE-FM\nCBVE-FM Although it is a semi-satellite of CBME-FM in Montreal, most of the station's operations are in Quebec City except for master control, which is based at the Canadian Broadcasting Centre in Toronto.\n\nWikipedia Title: CJBC-FM\nCJBC's studios are located in the Canadian Broadcasting Centre, while its transmitter is located atop First Canadian Place in Toronto's Financial District.\n\nQuestion: Which affiliate left the owner of Canadian Broadcasting Centre due to an agreement with CHBC?\nDraft Answer: CFJC-TV\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The owner of the Canadian Broadcasting Centre is CBC. CFJC-TV left the CBC due to an agreement with CHBC.",
+  "predicted_answer": "CFJC-TV",
+  "qa_raw_response": "{\n  \"thought\": \"The owner of the Canadian Broadcasting Centre is CBC. CFJC-TV left the CBC due to an agreement with CHBC.\",\n  \"answer\": \"CFJC-TV\",\n  \"support\": \"However, due to an agreement between CHBC and CFJC-TV in Kamloops, CFJC also disaffiliated from the CBC on February 27, 2006,\"\n}"
+}

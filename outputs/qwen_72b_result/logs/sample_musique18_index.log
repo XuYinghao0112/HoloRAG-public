@@ -1,0 +1,70 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 17:14:16,381 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.72it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.66it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.63it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.08it/s]
+2026-04-03 17:14:27,818 INFO src.holorag.pipeline: Building HoloRAG hierarchical graph for 20 documents
+2026-04-03 17:14:36,525 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:14:49,635 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:02,739 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:08,162 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:12,551 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:13,215 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:23,471 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:32,377 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:35,490 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:38,963 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:42,207 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:42,885 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:43,823 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:46,402 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:47,934 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:52,867 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:15:59,911 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:06,123 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:06,742 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:13,228 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:18,040 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:19,950 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:20,308 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:31,023 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:33,630 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:36,767 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:40,907 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:50,707 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:16:52,138 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:05,304 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:15,383 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:20,032 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:21,595 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:24,648 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:28,327 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:36,262 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:39,212 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:41,845 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:49,508 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:17:56,312 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 17:18:02,926 INFO src.holorag.pipeline: Saved HoloRAG index to /data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_11_20/sample_musique18/holorag_index.pkl
+{
+  "index_path": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_11_20/sample_musique18/holorag_index.pkl",
+  "stats": {
+    "nodes": 223,
+    "edges": 677,
+    "layer_counts": {
+      "entity": 162,
+      "sentence": 41,
+      "chunk": 20
+    }
+  },
+  "sample_metadata": {
+    "sample_id": "2hop__390947_232243",
+    "question": "What is the goal of the group that European Movement Germany is a member of?",
+    "answer": "European integration",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "European Movement Germany >> member of",
+      "#1 >> movement"
+    ]
+  }
+}

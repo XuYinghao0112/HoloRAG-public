@@ -1,0 +1,992 @@
+{
+  "query": "What was the 2017 population of the country where Bedari was made?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Bedari"
+  ],
+  "raw_query_entities": [
+    "Bedari"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Bedari",
+      "node_id": "entity:title_anchor_bedari",
+      "resolved_text": "Bedari",
+      "score": 0.6879555555555555,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.8,
+      "compatibility_score": 0.185,
+      "score_margin": 0.6879555555555555,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Where was Bedari made?",
+    "What was the 2017 population of this country?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_bedari",
+      "score": 1.0873362964405218,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:pakistan",
+      "score": 0.20057920883273514,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rank_country",
+      "score": 0.19152289857887567,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:territory_population_date_approx",
+      "score": 0.19152289857887567,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:speaker_of_the_house_of_representatives",
+      "score": 0.18935840705334436,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:new_zealand",
+      "score": 0.189348543611683,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:indonesia",
+      "score": 0.1672247387260944,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:brazil",
+      "score": 0.14721888513088932,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+      "score": 0.12575475128831679,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+      "score": 0.11577382131257426,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "chunk:demographics_of_pakistan_0",
+      "score": 0.08263924376939721,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "chunk:bedari_0",
+      "score": 0.08212554109069185,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:bedari_was_released_in_pakistan_sentence_bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_bu",
+      "text": "Bedari was released in Pakistan",
+      "head_id": "entity:title_anchor_bedari",
+      "tail_id": "entity:pakistan",
+      "sentence_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+      "chunk_id": "chunk:bedari_0",
+      "document_index": 17,
+      "score": 0.28507288488615334
+    },
+    {
+      "fact_id": "fact:rank_country_related_to_territory_population_date_approx_sentence_world_population_0_0_10_most_populous_countries_rank_c",
+      "text": "Rank Country related_to Territory Population Date Approx",
+      "head_id": "entity:rank_country",
+      "tail_id": "entity:territory_population_date_approx",
+      "sentence_id": "sentence:world_population_0_0_10_most_populous_countries_rank_country_territory_population_date_approx_of",
+      "chunk_id": "chunk:world_population_0",
+      "document_index": 8,
+      "score": 0.18930008429956635
+    },
+    {
+      "fact_id": "fact:speaker_of_the_house_of_representatives_is_located_in_new_zealand_sentence_speaker_of_the_new_zealand_house_of_represent",
+      "text": "Speaker of the House of Representatives is located in New Zealand",
+      "head_id": "entity:speaker_of_the_house_of_representatives",
+      "tail_id": "entity:new_zealand",
+      "sentence_id": "sentence:speaker_of_the_new_zealand_house_of_representatives_0_0_in_new_zealand_the_speaker_of_the_house_of_representatives_m_ori",
+      "chunk_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+      "document_index": 6,
+      "score": 0.1871356623879447
+    },
+    {
+      "fact_id": "fact:pakistan_was_behind_indonesia_sentence_demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017",
+      "text": "Pakistan was behind Indonesia",
+      "head_id": "entity:pakistan",
+      "tail_id": "entity:indonesia",
+      "sentence_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+      "chunk_id": "chunk:demographics_of_pakistan_0",
+      "document_index": 16,
+      "score": 0.16501234195631495
+    },
+    {
+      "fact_id": "fact:pakistan_was_ahead_of_brazil_sentence_demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_",
+      "text": "Pakistan was ahead of Brazil",
+      "head_id": "entity:pakistan",
+      "tail_id": "entity:brazil",
+      "sentence_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+      "chunk_id": "chunk:demographics_of_pakistan_0",
+      "document_index": 16,
+      "score": 0.14500691721621084
+    }
+  ],
+  "bridge_entities": [
+    "Pakistan"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where was Bedari made?",
+      "resolved_sub_question": "Where was Bedari made?",
+      "sentence_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+      "sentence": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition.",
+      "score": 0.6205114285714286,
+      "source_title": "Bedari",
+      "hop_answer": "Pakistan",
+      "hop_thought": "The passage mentions that 'Bedari' is a Pakistani Urdu black and white film, indicating it was made in Pakistan.",
+      "hop_raw_response": "The passage mentions that 'Bedari' is a Pakistani Urdu black and white film, indicating it was made in Pakistan.\nAnswer: Pakistan",
+      "evidence_passages": [
+        {
+          "title": "Bedari",
+          "text": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition."
+        },
+        {
+          "title": "Bedari",
+          "text": "Bedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film."
+        },
+        {
+          "title": "Bedari",
+          "text": "Bedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well."
+        }
+      ]
+    },
+    {
+      "sub_question": "What was the 2017 population of this country?",
+      "resolved_sub_question": "What was the 2017 population of this country? Context: Pakistan.",
+      "sentence_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+      "sentence": "Pakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil.",
+      "score": 0.5761088677686057,
+      "source_title": "Demographics of Pakistan",
+      "hop_answer": "207.77 million",
+      "hop_thought": "The context specifies the country as Pakistan, and according to the provided evidence from the \"Demographics of Pakistan\" article, the estimated population of Pakistan as of August 25, 2017, was 207.77 million people.",
+      "hop_raw_response": "The context specifies the country as Pakistan, and according to the provided evidence from the \"Demographics of Pakistan\" article, the estimated population of Pakistan as of August 25, 2017, was 207.77 million people.\nAnswer: 207.77 million",
+      "evidence_passages": [
+        {
+          "title": "Demographics of Pakistan",
+          "text": "Pakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil."
+        },
+        {
+          "title": "Demographics of Pakistan",
+          "text": "Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%."
+        },
+        {
+          "title": "Bedari",
+          "text": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_bedari",
+      "score": 0.18592940780910885,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pakistan",
+      "score": 0.05882551707241606,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:world_population_0_0_10_most_populous_countries_rank_country_territory_population_date_approx_of",
+      "score": 0.04977773786578695,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:bedari_0_0_bedari_a_pakistani_urdu_black_and_white_film_was_a_classic_melodious_film_of_1",
+      "score": 0.04794613032526626,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+      "score": 0.044460473031642626,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:speaker_of_the_new_zealand_house_of_representatives_0_0_in_new_zealand_the_speaker_of_the_house_of_representatives_m_ori",
+      "score": 0.04306504949559912,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:speaker_of_the_house_of_representatives",
+      "score": 0.042562269511092606,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:territory_population_date_approx",
+      "score": 0.03893448934323883,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+      "score": 0.036443148251864586,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:rank_country",
+      "score": 0.03501428353089979,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:new_zealand",
+      "score": 0.03448129362486027,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:indonesia",
+      "score": 0.0323805579713499,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:brazil",
+      "score": 0.029402919618956382,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:bedari_0_1_rattan_kumar_syed_nazir_ali_who_had_moved_to_pakistan_with_his_family_acted",
+      "score": 0.026849608051683432,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:jagriti",
+      "score": 0.02639130252949934,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:bedari_0",
+      "score": 0.01962820779264702,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:demographics_of_pakistan_0",
+      "score": 0.017691797847524355,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:world_population_0",
+      "score": 0.013888872667470093,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:rattan_kumar",
+      "score": 0.012658137025881394,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+      "score": 0.010926859383351976,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:bedari_0",
+      "passage_index": 17,
+      "title": "Bedari",
+      "score": 0.09324564317644304,
+      "text": "Bedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film.",
+      "score_breakdown": {
+        "dense": 0.05973968512745518,
+        "graph": 0.0662427910937152,
+        "fact": 0.2701065268548543
+      }
+    },
+    {
+      "node_id": "chunk:world_population_0",
+      "passage_index": 14,
+      "title": "World population",
+      "score": 0.08823172535617871,
+      "text": "World population\nIn demographics, the world population is the total number of humans currently living. The world population was estimated to have reached 7.6 billion as of December 2017. The India estimates it will further increase to 11.8 billion by the year 2100.",
+      "score_breakdown": {
+        "dense": 0.05920286565973072,
+        "graph": 0.06284825557102372,
+        "fact": 0.24543781714679794
+      }
+    },
+    {
+      "node_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+      "passage_index": 6,
+      "title": "Speaker of the New Zealand House of Representatives",
+      "score": 0.08749484662283549,
+      "text": "Speaker of the New Zealand House of Representatives\nIn New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives. The individual who holds the position is elected by members of the House from among their number in the first session after each general election. The current Speaker is Trevor Mallard, who was initially elected on 7 November 2017.",
+      "score_breakdown": {
+        "dense": 0.05868637970588915,
+        "graph": 0.06160421229188773,
+        "fact": 0.24490716064686763
+      }
+    },
+    {
+      "node_id": "chunk:demographics_of_pakistan_0",
+      "passage_index": 16,
+      "title": "Demographics of Pakistan",
+      "score": 0.0872151252734701,
+      "text": "Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%.",
+      "score_breakdown": {
+        "dense": 0.05961931383637071,
+        "graph": 0.06164076120248063,
+        "fact": 0.23954849535148012
+      }
+    },
+    {
+      "node_id": "chunk:ethiopia_0",
+      "passage_index": 4,
+      "title": "Ethiopia",
+      "score": 0.04974093005611106,
+      "text": "Ethiopia\nEthiopia's population has grown from 33.5 million in 1983 to 87.9 million in 2014. The population was only about 9 million in the 19th century. The 2007 Population and Housing Census results show that the population of Ethiopia grew at an average annual rate of 2.6% between 1994 and 2007, down from 2.8% during the period 1983–1994. Currently, the population growth rate is among the top ten countries in the world. The population is forecast to grow to over 210 million by 2060, which would be an increase from 2011 estimates by a factor of about 2.5.",
+      "score_breakdown": {
+        "dense": 0.05902724862655554,
+        "graph": 0.05758647770501837,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_countries_by_steel_production_0",
+      "passage_index": 18,
+      "title": "List of countries by steel production",
+      "score": 0.04966520559365016,
+      "text": "List of countries by steel production\nIn 2017, total world crude steel production was 1,691.2 million tonnes (Mt). The biggest steel producing country is currently China, which accounted for 49.2% of world steel production in 2017. In 2008, 2009, 2015 and 2016 output fell in the majority of steel - producing countries as a result of the global recession. In 2010 and 2017, it started to rise again.",
+      "score_breakdown": {
+        "dense": 0.058887085847735894,
+        "graph": 0.057591027924651414,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:iifa_award_for_best_actress_0",
+      "passage_index": 10,
+      "title": "IIFA Award for Best Actress",
+      "score": 0.049659951947560135,
+      "text": "IIFA Award for Best Actress\nIIFA Award for Best Actress Awarded for Best Performance by an Actress in a Leading Role Country India Presented by International Indian Film Academy First awarded Aishwarya Rai, Hum Dil De Chuke Sanam (2000) Currently held by Alia Bhatt, Udta Punjab (2017) Website IIFA Awards",
+      "score_breakdown": {
+        "dense": 0.05892866785554294,
+        "graph": 0.05749728209003838,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ram_nath_kovind_0",
+      "passage_index": 2,
+      "title": "Ram Nath Kovind",
+      "score": 0.04958526999168754,
+      "text": "Ram Nath Kovind\nRam Nath Kovind (born 1 October 1945) is the 14th and current President of India, in office since 25 July 2017. Previously he had served as the Governor of Bihar from 2015 to 2017 and was a Member of Parliament, Rajya Sabha from 1994 to 2006. Kovind was nominated as a presidential candidate by the ruling NDA coalition and won the 2017 presidential election, becoming the second Dalit to be elected to the post of President.",
+      "score_breakdown": {
+        "dense": 0.058764528499228426,
+        "graph": 0.05754926439037301,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:solar_power_in_india_0",
+      "passage_index": 7,
+      "title": "Solar power in India",
+      "score": 0.04956776646118993,
+      "text": "Solar power in India\nSolar power in India is a fast developing industry. The country's solar installed capacity reached 23 GW as of 30 June 2018. India expanded its solar - generation capacity 8 times from 2,650 MW on 26 May 2014 to over 20 GW as on 31 January 2018. The 20 GW capacity was initially targeted for 2022 but the government achieved the target four years ahead of schedule. The country added 3 GW of solar capacity in 2015 - 2016, 5 GW in 2016 - 2017 and over 10 GW in 2017 - 2018, with the average current price of solar electricity dropping to 18% below the average price of its coal - fired counterpart.",
+      "score_breakdown": {
+        "dense": 0.05872702322726595,
+        "graph": 0.05755967895397886,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fresno_california_0",
+      "passage_index": 12,
+      "title": "Fresno, California",
+      "score": 0.04953083348405808,
+      "text": "Fresno, California\nThe population of Fresno grew from a 1960 census population of 134,000 to a 2000 census population of 428,000. With a census - estimated 2017 population of 527,438, Fresno is the fifth-most populous city in California, the most populous city in the Central Valley, the most populous inland city in California, and the 34th-most populous city in the nation.",
+      "score_breakdown": {
+        "dense": 0.05869057062946226,
+        "graph": 0.05750339879284612,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_bedari",
+        "score": 0.18592940780910885,
+        "text": "Bedari",
+        "metadata": {
+          "canonical_name": "Bedari",
+          "aliases": [
+            "Bedari"
+          ],
+          "surface_forms": [
+            "Bedari"
+          ],
+          "title_anchor": "Bedari"
+        }
+      },
+      {
+        "node_id": "entity:pakistan",
+        "score": 0.05882551707241606,
+        "text": "Pakistan",
+        "metadata": {
+          "canonical_name": "Pakistan",
+          "aliases": [
+            "Pakistan"
+          ],
+          "surface_forms": [
+            "Pakistan"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:speaker_of_the_house_of_representatives",
+        "score": 0.042562269511092606,
+        "text": "Speaker of the House of Representatives",
+        "metadata": {
+          "canonical_name": "Speaker of the House of Representatives",
+          "aliases": [
+            "SOTHOR",
+            "Speaker of the House of Representatives"
+          ],
+          "surface_forms": [
+            "SOTHOR",
+            "Speaker of the House of Representatives"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:territory_population_date_approx",
+        "score": 0.03893448934323883,
+        "text": "Territory Population Date Approx",
+        "metadata": {
+          "canonical_name": "Territory Population Date Approx",
+          "aliases": [
+            "TPDA",
+            "Territory Population Date Approx"
+          ],
+          "surface_forms": [
+            "TPDA",
+            "Territory Population Date Approx"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:world_population_0_0_10_most_populous_countries_rank_country_territory_population_date_approx_of",
+        "score": 0.04977773786578695,
+        "text": "10 most populous countries Rank Country / Territory Population Date Approx.% of world population Source China 1,390,040,000 March 29, 2018 18.3% India 1,329,760,000 March 29, 2018 17.5% United States 326,870,000 March 29, 2018 4.29% Indonesia 261,600,000 October 31, 2016 3.44% 5 Pakistan 211,059,000 March 29, 2018 2.77% 6 Brazil 208,846,000 March 29, 2018 2.74% 7 Nigeria 188,500,000 October 31, 2016 2.48% 8 Bangladesh 164,237,000 March 29, 2018 2.16% 9 Russia 146,773,226 June 1, 2017 1.93% 10 Japan 126,670,000 September 1, 2017 1.66%",
+        "metadata": {
+          "title": "World population",
+          "chunk_id": "chunk:world_population_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Rank Country",
+              "relation": "related_to",
+              "tail": "Territory Population Date Approx"
+            },
+            {
+              "head": "Territory Population Date Approx",
+              "relation": "related_to",
+              "tail": "Source China"
+            },
+            {
+              "head": "Source China",
+              "relation": "related_to",
+              "tail": "March"
+            }
+          ],
+          "entities": [
+            "Rank Country",
+            "Territory Population Date Approx",
+            "Source China",
+            "March",
+            "India",
+            "Indonesia",
+            "October",
+            "Pakistan",
+            "Brazil",
+            "Nigeria",
+            "Bangladesh",
+            "Russia",
+            "June",
+            "Japan",
+            "September"
+          ],
+          "entity_ids": [
+            "entity:bangladesh",
+            "entity:brazil",
+            "entity:india",
+            "entity:indonesia",
+            "entity:japan",
+            "entity:june",
+            "entity:march",
+            "entity:nigeria",
+            "entity:october",
+            "entity:pakistan",
+            "entity:rank_country",
+            "entity:russia",
+            "entity:september",
+            "entity:source_china",
+            "entity:territory_population_date_approx"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:bedari_0_0_bedari_a_pakistani_urdu_black_and_white_film_was_a_classic_melodious_film_of_1",
+        "score": 0.04794613032526626,
+        "text": "Bedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well.",
+        "metadata": {
+          "title": "Bedari",
+          "chunk_id": "chunk:bedari_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Bedari",
+              "relation": "is a",
+              "tail": "Pakistani Urdu black and white film"
+            },
+            {
+              "head": "Bedari",
+              "relation": "had identical plot to",
+              "tail": "Jagriti"
+            },
+            {
+              "head": "Bedari",
+              "relation": "used songs from",
+              "tail": "Jagriti"
+            },
+            {
+              "head": "Bedari",
+              "relation": "took music directly from",
+              "tail": "Jagriti"
+            }
+          ],
+          "entities": [
+            "Bedari",
+            "Pakistani Urdu black and white film",
+            "Jagriti"
+          ],
+          "entity_ids": [
+            "entity:jagriti",
+            "entity:pakistani_urdu_black_and_white_film",
+            "entity:title_anchor_bedari"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+        "score": 0.044460473031642626,
+        "text": "Pakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil.",
+        "metadata": {
+          "title": "Demographics of Pakistan",
+          "chunk_id": "chunk:demographics_of_pakistan_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Pakistan",
+              "relation": "was behind",
+              "tail": "Indonesia"
+            },
+            {
+              "head": "Pakistan",
+              "relation": "was ahead of",
+              "tail": "Brazil"
+            }
+          ],
+          "entities": [
+            "Pakistan",
+            "Indonesia",
+            "Brazil"
+          ],
+          "entity_ids": [
+            "entity:brazil",
+            "entity:indonesia",
+            "entity:pakistan"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:speaker_of_the_new_zealand_house_of_representatives_0_0_in_new_zealand_the_speaker_of_the_house_of_representatives_m_ori",
+        "score": 0.04306504949559912,
+        "text": "In New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives.",
+        "metadata": {
+          "title": "Speaker of the New Zealand House of Representatives",
+          "chunk_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Speaker of the House of Representatives",
+              "relation": "is located in",
+              "tail": "New Zealand"
+            },
+            {
+              "head": "Speaker of the House of Representatives",
+              "relation": "chairs",
+              "tail": "New Zealand House of Representatives"
+            },
+            {
+              "head": "Speaker of the House of Representatives",
+              "relation": "has Māori name",
+              "tail": "Te Mana Whakaw o te Whare"
+            }
+          ],
+          "entities": [
+            "New Zealand",
+            "Speaker of the House of Representatives",
+            "M ori",
+            "Te Mana Whakaw o te Whare",
+            "New Zealand House of Representatives"
+          ],
+          "entity_ids": [
+            "entity:m_ori",
+            "entity:new_zealand",
+            "entity:new_zealand_house_of_representatives",
+            "entity:speaker_of_the_house_of_representatives",
+            "entity:te_mana_whakaw_o_te_whare"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+        "score": 0.036443148251864586,
+        "text": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition.",
+        "metadata": {
+          "title": "Bedari",
+          "chunk_id": "chunk:bedari_0",
+          "sentence_index": 2,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Bedari",
+              "relation": "was released in",
+              "tail": "Pakistan"
+            }
+          ],
+          "entities": [
+            "Bedari",
+            "Pakistan"
+          ],
+          "entity_ids": [
+            "entity:pakistan",
+            "entity:title_anchor_bedari"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:bedari_0",
+        "score": 0.01962820779264702,
+        "text": "Bedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film.",
+        "metadata": {
+          "title": "Bedari",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:censor_board",
+            "entity:censor_board_of_pakistan",
+            "entity:however",
+            "entity:jagriti",
+            "entity:pakistan",
+            "entity:pakistani",
+            "entity:pakistani_cinemagoers",
+            "entity:pakistani_urdu_black_and_white_film",
+            "entity:rattan_kumar",
+            "entity:syed_nazir_ali",
+            "entity:there",
+            "entity:title_anchor_bedari"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:demographics_of_pakistan_0",
+        "score": 0.017691797847524355,
+        "text": "Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%.",
+        "metadata": {
+          "title": "Demographics of Pakistan",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:between",
+            "entity:brazil",
+            "entity:during",
+            "entity:indonesia",
+            "entity:pakistan"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:world_population_0",
+        "score": 0.013888872667470093,
+        "text": "World population\nIn demographics, the world population is the total number of humans currently living. The world population was estimated to have reached 7.6 billion as of December 2017. The India estimates it will further increase to 11.8 billion by the year 2100.",
+        "metadata": {
+          "title": "World population",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:bangladesh",
+            "entity:brazil",
+            "entity:december_2017",
+            "entity:india",
+            "entity:indonesia",
+            "entity:japan",
+            "entity:june",
+            "entity:march",
+            "entity:nigeria",
+            "entity:october",
+            "entity:october_2017",
+            "entity:pakistan",
+            "entity:rank_country",
+            "entity:russia",
+            "entity:september",
+            "entity:source_china",
+            "entity:territory_population_date_approx",
+            "entity:united_nations"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+        "score": 0.010926859383351976,
+        "text": "Speaker of the New Zealand House of Representatives\nIn New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives. The individual who holds the position is elected by members of the House from among their number in the first session after each general election. The current Speaker is Trevor Mallard, who was initially elected on 7 November 2017.",
+        "metadata": {
+          "title": "Speaker of the New Zealand House of Representatives",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:7_november_2017",
+            "entity:house",
+            "entity:m_ori",
+            "entity:new_zealand",
+            "entity:new_zealand_house_of_representatives",
+            "entity:speaker",
+            "entity:speaker_of_the_house_of_representatives",
+            "entity:te_mana_whakaw_o_te_whare",
+            "entity:trevor_mallard"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Bedari\nBedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film.\n\nWorld population\nWorld population\nIn demographics, the world population is the total number of humans currently living. The world population was estimated to have reached 7.6 billion as of December 2017. The India estimates it will further increase to 11.8 billion by the year 2100.\n\nSpeaker of the New Zealand House of Representatives\nSpeaker of the New Zealand House of Representatives\nIn New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives. The individual who holds the position is elected by members of the House from among their number in the first session after each general election. The current Speaker is Trevor Mallard, who was initially elected on 7 November 2017.\n\nDemographics of Pakistan\nDemographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%.\n\nEthiopia\nEthiopia\nEthiopia's population has grown from 33.5 million in 1983 to 87.9 million in 2014. The population was only about 9 million in the 19th century. The 2007 Population and Housing Census results show that the population of Ethiopia grew at an average annual rate of 2.6% between 1994 and 2007, down from 2.8% during the period 1983–1994. Currently, the population growth rate is among the top ten countries in the world. The population is forecast to grow to over 210 million by 2060, which would be an increase from 2011 estimates by a factor of about 2.5.\n\nBedari\nWhen 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition.\n\nBedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well.\n\nDemographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil.\n\nSolar power in India\nSolar power in India\nSolar power in India is a fast developing industry. The country's solar installed capacity reached 23 GW as of 30 June 2018. India expanded its solar - generation capacity 8 times from 2,650 MW on 26 May 2014 to over 20 GW as on 31 January 2018. The 20 GW capacity was initially targeted for 2022 but the government achieved the target four years ahead of schedule. The country added 3 GW of solar capacity in 2015 - 2016, 5 GW in 2016 - 2017 and over 10 GW in 2017 - 2018, with the average current price of solar electricity dropping to 18% below the average price of its coal - fired counterpart.\n\nList of countries by steel production\nList of countries by steel production\nIn 2017, total world crude steel production was 1,691.2 million tonnes (Mt). The biggest steel producing country is currently China, which accounted for 49.2% of world steel production in 2017. In 2008, 2009, 2015 and 2016 output fell in the majority of steel - producing countries as a result of the global recession. In 2010 and 2017, it started to rise again.\n\nSuraż\nSuraż\nSuraż, which has a long and rich history, and was a royal town in the Kingdom of Poland, currently is one of the smallest municipalities of the country, with a population of only 1012 (as of June 30, 2012).",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:bedari_0",
+        "passage_index": 17,
+        "title": "Bedari",
+        "score": 0.09324564317644304,
+        "text": "Bedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film.",
+        "score_breakdown": {
+          "dense": 0.05973968512745518,
+          "graph": 0.0662427910937152,
+          "fact": 0.2701065268548543
+        }
+      },
+      {
+        "node_id": "chunk:world_population_0",
+        "passage_index": 14,
+        "title": "World population",
+        "score": 0.08823172535617871,
+        "text": "World population\nIn demographics, the world population is the total number of humans currently living. The world population was estimated to have reached 7.6 billion as of December 2017. The India estimates it will further increase to 11.8 billion by the year 2100.",
+        "score_breakdown": {
+          "dense": 0.05920286565973072,
+          "graph": 0.06284825557102372,
+          "fact": 0.24543781714679794
+        }
+      },
+      {
+        "node_id": "chunk:speaker_of_the_new_zealand_house_of_representatives_0",
+        "passage_index": 6,
+        "title": "Speaker of the New Zealand House of Representatives",
+        "score": 0.08749484662283549,
+        "text": "Speaker of the New Zealand House of Representatives\nIn New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives. The individual who holds the position is elected by members of the House from among their number in the first session after each general election. The current Speaker is Trevor Mallard, who was initially elected on 7 November 2017.",
+        "score_breakdown": {
+          "dense": 0.05868637970588915,
+          "graph": 0.06160421229188773,
+          "fact": 0.24490716064686763
+        }
+      },
+      {
+        "node_id": "chunk:demographics_of_pakistan_0",
+        "passage_index": 16,
+        "title": "Demographics of Pakistan",
+        "score": 0.0872151252734701,
+        "text": "Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%.",
+        "score_breakdown": {
+          "dense": 0.05961931383637071,
+          "graph": 0.06164076120248063,
+          "fact": 0.23954849535148012
+        }
+      },
+      {
+        "node_id": "chunk:ethiopia_0",
+        "passage_index": 4,
+        "title": "Ethiopia",
+        "score": 0.04974093005611106,
+        "text": "Ethiopia\nEthiopia's population has grown from 33.5 million in 1983 to 87.9 million in 2014. The population was only about 9 million in the 19th century. The 2007 Population and Housing Census results show that the population of Ethiopia grew at an average annual rate of 2.6% between 1994 and 2007, down from 2.8% during the period 1983–1994. Currently, the population growth rate is among the top ten countries in the world. The population is forecast to grow to over 210 million by 2060, which would be an increase from 2011 estimates by a factor of about 2.5.",
+        "score_breakdown": {
+          "dense": 0.05902724862655554,
+          "graph": 0.05758647770501837,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_countries_by_steel_production_0",
+        "passage_index": 18,
+        "title": "List of countries by steel production",
+        "score": 0.04966520559365016,
+        "text": "List of countries by steel production\nIn 2017, total world crude steel production was 1,691.2 million tonnes (Mt). The biggest steel producing country is currently China, which accounted for 49.2% of world steel production in 2017. In 2008, 2009, 2015 and 2016 output fell in the majority of steel - producing countries as a result of the global recession. In 2010 and 2017, it started to rise again.",
+        "score_breakdown": {
+          "dense": 0.058887085847735894,
+          "graph": 0.057591027924651414,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:iifa_award_for_best_actress_0",
+        "passage_index": 10,
+        "title": "IIFA Award for Best Actress",
+        "score": 0.049659951947560135,
+        "text": "IIFA Award for Best Actress\nIIFA Award for Best Actress Awarded for Best Performance by an Actress in a Leading Role Country India Presented by International Indian Film Academy First awarded Aishwarya Rai, Hum Dil De Chuke Sanam (2000) Currently held by Alia Bhatt, Udta Punjab (2017) Website IIFA Awards",
+        "score_breakdown": {
+          "dense": 0.05892866785554294,
+          "graph": 0.05749728209003838,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ram_nath_kovind_0",
+        "passage_index": 2,
+        "title": "Ram Nath Kovind",
+        "score": 0.04958526999168754,
+        "text": "Ram Nath Kovind\nRam Nath Kovind (born 1 October 1945) is the 14th and current President of India, in office since 25 July 2017. Previously he had served as the Governor of Bihar from 2015 to 2017 and was a Member of Parliament, Rajya Sabha from 1994 to 2006. Kovind was nominated as a presidential candidate by the ruling NDA coalition and won the 2017 presidential election, becoming the second Dalit to be elected to the post of President.",
+        "score_breakdown": {
+          "dense": 0.058764528499228426,
+          "graph": 0.05754926439037301,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:solar_power_in_india_0",
+        "passage_index": 7,
+        "title": "Solar power in India",
+        "score": 0.04956776646118993,
+        "text": "Solar power in India\nSolar power in India is a fast developing industry. The country's solar installed capacity reached 23 GW as of 30 June 2018. India expanded its solar - generation capacity 8 times from 2,650 MW on 26 May 2014 to over 20 GW as on 31 January 2018. The 20 GW capacity was initially targeted for 2022 but the government achieved the target four years ahead of schedule. The country added 3 GW of solar capacity in 2015 - 2016, 5 GW in 2016 - 2017 and over 10 GW in 2017 - 2018, with the average current price of solar electricity dropping to 18% below the average price of its coal - fired counterpart.",
+        "score_breakdown": {
+          "dense": 0.05872702322726595,
+          "graph": 0.05755967895397886,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fresno_california_0",
+        "passage_index": 12,
+        "title": "Fresno, California",
+        "score": 0.04953083348405808,
+        "text": "Fresno, California\nThe population of Fresno grew from a 1960 census population of 134,000 to a 2000 census population of 428,000. With a census - estimated 2017 population of 527,438, Fresno is the fifth-most populous city in California, the most populous city in the Central Valley, the most populous inland city in California, and the 34th-most populous city in the nation.",
+        "score_breakdown": {
+          "dense": 0.05869057062946226,
+          "graph": 0.05750339879284612,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where was Bedari made?",
+        "resolved_sub_question": "Where was Bedari made?",
+        "sentence_id": "sentence:bedari_0_2_when_bedari_was_released_in_pakistan_in_1956_it_too_made_fabulous_business_in",
+        "sentence": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition.",
+        "score": 0.6205114285714286,
+        "source_title": "Bedari",
+        "hop_answer": "Pakistan",
+        "hop_thought": "The passage mentions that 'Bedari' is a Pakistani Urdu black and white film, indicating it was made in Pakistan.",
+        "hop_raw_response": "The passage mentions that 'Bedari' is a Pakistani Urdu black and white film, indicating it was made in Pakistan.\nAnswer: Pakistan",
+        "evidence_passages": [
+          {
+            "title": "Bedari",
+            "text": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition."
+          },
+          {
+            "title": "Bedari",
+            "text": "Bedari\nBedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well. Rattan Kumar (Syed Nazir Ali), who had moved to Pakistan with his family, acted in Bedari also. When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition. However, it dawned upon the Pakistani cinemagoers that they were watching a plagiarized film. There was a mass uproar that caused public demonstrations against exhibition of the plagiarized film. The Censor Board of Pakistan immediately put a ban on this film."
+          },
+          {
+            "title": "Bedari",
+            "text": "Bedari, a Pakistani Urdu black and white film, was a classic melodious film of 1956.This film had an identical plot and the songs like Indian film Jagriti (1954), with replacement of some words, and music were taken directly from Jagriti as well."
+          }
+        ]
+      },
+      {
+        "sub_question": "What was the 2017 population of this country?",
+        "resolved_sub_question": "What was the 2017 population of this country? Context: Pakistan.",
+        "sentence_id": "sentence:demographics_of_pakistan_0_0_pakistan_s_estimated_population_as_of_august_25_2017_was_207_77_million_people",
+        "sentence": "Pakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil.",
+        "score": 0.5761088677686057,
+        "source_title": "Demographics of Pakistan",
+        "hop_answer": "207.77 million",
+        "hop_thought": "The context specifies the country as Pakistan, and according to the provided evidence from the \"Demographics of Pakistan\" article, the estimated population of Pakistan as of August 25, 2017, was 207.77 million people.",
+        "hop_raw_response": "The context specifies the country as Pakistan, and according to the provided evidence from the \"Demographics of Pakistan\" article, the estimated population of Pakistan as of August 25, 2017, was 207.77 million people.\nAnswer: 207.77 million",
+        "evidence_passages": [
+          {
+            "title": "Demographics of Pakistan",
+            "text": "Pakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil."
+          },
+          {
+            "title": "Demographics of Pakistan",
+            "text": "Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil. During 1950 -- 2011, Pakistan's urban population expanded over sevenfold, while the total population increased by over fourfold. In the past, the country's population had a relatively high growth rate that has been changed by moderate birth rates. Between 1998 - 2017, the average population growth rate stood at 2.40%."
+          },
+          {
+            "title": "Bedari",
+            "text": "When 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where was Bedari made? => Pakistan (source: Bedari)\n2. What was the 2017 population of this country? => 207.77 million (source: Demographics of Pakistan)\n\nFact hints:\n- Bedari was released in Pakistan\n- Pakistan was behind Indonesia\n- Pakistan was ahead of Brazil\n\nWikipedia Title: Demographics of Pakistan\nPakistan's estimated population as of August 25, 2017 was 207.77 million people, making it the world's fifth-most - populous country, just behind Indonesia and slightly ahead of Brazil.\n\nWikipedia Title: Bedari\nWhen 'Bedari' was released in Pakistan in 1956, it too made fabulous business in the first few weeks of exhibition.\n\nWikipedia Title: Solar power in India\nThe 20 GW capacity was initially targeted for 2022 but the government achieved the target four years ahead of schedule. The country's solar installed capacity reached 23 GW as of 30 June 2018.\n\nWikipedia Title: World population\nThe world population was estimated to have reached 7.6 billion as of December 2017. The India estimates it will further increase to 11.8 billion by the year 2100.\n\nWikipedia Title: Speaker of the New Zealand House of Representatives\nThe current Speaker is Trevor Mallard, who was initially elected on 7 November 2017. Speaker of the New Zealand House of Representatives In New Zealand, the Speaker of the House of Representatives (Māori: Te Mana Whakawā o te Whare) is the individual who chairs the country's legislative body, the New Zealand House of Representatives.\n\nQuestion: What was the 2017 population of the country where Bedari was made?\nDraft Answer: 207.77 million\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The question asks for the 2017 population of the country where Bedari was made. Bedari was made in Pakistan, and the 2017 population of Pakistan is given as 207.77 million.",
+  "predicted_answer": "207.77 million",
+  "qa_raw_response": "{\n  \"thought\": \"The question asks for the 2017 population of the country where Bedari was made. Bedari was made in Pakistan, and the 2017 population of Pakistan is given as 207.77 million.\",\n  \"answer\": \"207.77 million\",\n  \"support\": \"Pakistan's estimated population as of August 25, 2017 was 207.77 million people\"\n}"
+}

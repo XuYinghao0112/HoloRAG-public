@@ -19,7 +19,10 @@ setuptools.setup(
         "torch==2.5.1",
         "transformers==4.45.2",
         "networkx==3.4.2",
-        "numpy",
-        "tqdm",
+        "httpx>=0.27.0,<0.29.0",
+        "numpy>=1.24.0,<3.0.0",
+        "tqdm>=4.66.0",
+        "accelerate>=0.33.0",
+        "safetensors>=0.4.3",
     ]
 )

@@ -1,8 +1,8 @@
 {
   "query": "In which county is Southern Maryland Electric Cooperative headquartered?",
   "alpha": {
-    "entity": 0.6000000000000001,
-    "sentence": 0.30000000000000004,
+    "entity": 0.7000000000000001,
+    "sentence": 0.20000000000000004,
     "chunk": 0.10000000000000002
   },
   "query_entities": [
@@ -33,62 +33,62 @@
   "seeds": [
     {
       "node_id": "entity:title_anchor_southern_maryland_electric_cooperative",
-      "score": 1.1558133432365276,
+      "score": 1.1558133257378969,
       "layer": "entity"
     },
     {
       "node_id": "entity:hughesville_maryland",
-      "score": 0.3556782540298744,
+      "score": 0.35567822899556595,
       "layer": "entity"
     },
     {
       "node_id": "entity:aust_agder_county",
-      "score": 0.26861221469040686,
+      "score": 0.2686122067863972,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_hylestad",
-      "score": 0.26859753031376454,
+      "score": 0.2685975218299709,
       "layer": "entity"
     },
     {
       "node_id": "entity:charles_county",
-      "score": 0.23863926039780534,
+      "score": 0.23863925429658103,
       "layer": "entity"
     },
     {
       "node_id": "entity:hughesville",
-      "score": 0.23862501520624585,
+      "score": 0.23862500854277013,
       "layer": "entity"
     },
     {
       "node_id": "sentence:southern_maryland_electric_cooperative_0_0_the_southern_maryland_electric_cooperative_smeco_is_an_electric_distribution_",
-      "score": 0.14308245215230744,
+      "score": 0.14308243974072654,
       "layer": "sentence"
     },
     {
       "node_id": "sentence:hylestad_0_0_hylestad_is_a_former_municipality_in_aust_agder_county_norway",
-      "score": 0.10817275155794678,
+      "score": 0.10817274740330377,
       "layer": "sentence"
     },
     {
       "node_id": "chunk:southern_maryland_electric_cooperative_0",
-      "score": 0.09773471737158942,
+      "score": 0.09773578291977567,
       "layer": "chunk"
     },
     {
       "node_id": "sentence:hughesville_maryland_0_0_hughesville_is_a_census_designated_place_cdp_in_charles_county_maryland_unit",
-      "score": 0.09619402229830228,
+      "score": 0.09619401890326304,
       "layer": "sentence"
     },
     {
       "node_id": "chunk:hylestad_0",
-      "score": 0.07267059219460054,
+      "score": 0.07267072737989437,
       "layer": "chunk"
     },
     {
       "node_id": "chunk:hughesville_maryland_0",
-      "score": 0.06830401040703403,
+      "score": 0.06830319729839861,
       "layer": "chunk"
     }
   ],
@@ -101,7 +101,7 @@
       "sentence_id": "sentence:southern_maryland_electric_cooperative_0_0_the_southern_maryland_electric_cooperative_smeco_is_an_electric_distribution_",
       "chunk_id": "chunk:southern_maryland_electric_cooperative_0",
       "document_index": 3,
-      "score": 0.35318303461739775
+      "score": 0.3531830101892656
     },
     {
       "fact_id": "fact:hylestad_located_in_aust_agder_county_sentence_hylestad_0_0_hylestad_is_a_former_municipality_in_aust_agder_county_norwa",
@@ -111,7 +111,7 @@
       "sentence_id": "sentence:hylestad_0_0_hylestad_is_a_former_municipality_in_aust_agder_county_norway",
       "chunk_id": "chunk:hylestad_0",
       "document_index": 6,
-      "score": 0.2661215922885204
+      "score": 0.26612158313845874
     },
     {
       "fact_id": "fact:hughesville_located_in_charles_county_sentence_hughesville_maryland_0_0_hughesville_is_a_census_designated_place_cdp_in_",
@@ -121,12 +121,11 @@
       "sentence_id": "sentence:hughesville_maryland_0_0_hughesville_is_a_census_designated_place_cdp_in_charles_county_maryland_unit",
       "chunk_id": "chunk:hughesville_maryland_0",
       "document_index": 7,
-      "score": 0.23614983360050876
+      "score": 0.23614982630049278
     }
   ],
   "bridge_entities": [
-    "Hughesville Maryland",
-    "Charles County"
+    "Hughesville Maryland"
   ],
   "reasoning_chain": [
     {
@@ -137,20 +136,12 @@
       "score": 0.7700772952380954,
       "source_title": "Southern Maryland Electric Cooperative",
       "hop_answer": "Hughesville, Maryland",
-      "hop_thought": "The text clearly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
-      "hop_raw_response": "The text clearly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
+      "hop_thought": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
+      "hop_raw_response": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
       "evidence_passages": [
         {
           "title": "Southern Maryland Electric Cooperative",
           "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-        },
-        {
-          "title": "Southern Maryland Electric Cooperative",
-          "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-        },
-        {
-          "title": "Hughesville, Maryland",
-          "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
         }
       ]
     },
@@ -161,21 +152,13 @@
       "sentence": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.",
       "score": 0.6573714285714287,
       "source_title": "Southern Maryland Electric Cooperative",
-      "hop_answer": "Charles County",
-      "hop_thought": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.",
-      "hop_raw_response": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.\nAnswer: Charles County",
+      "hop_answer": "Unknown",
+      "hop_thought": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.",
+      "hop_raw_response": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Southern Maryland Electric Cooperative",
           "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-        },
-        {
-          "title": "Southern Maryland Electric Cooperative",
-          "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-        },
-        {
-          "title": "Hughesville, Maryland",
-          "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
         }
       ]
     }
@@ -183,102 +166,102 @@
   "ranked_nodes": [
     {
       "node_id": "entity:title_anchor_southern_maryland_electric_cooperative",
-      "score": 0.13023898913005302,
+      "score": 0.1404360529589476,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:southern_maryland_electric_cooperative_0_0_the_southern_maryland_electric_cooperative_smeco_is_an_electric_distribution_",
-      "score": 0.1249307231030766,
+      "score": 0.12138380709927095,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:hughesville_maryland",
-      "score": 0.1051953612743038,
+      "score": 0.11628675685976028,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:aust_agder_county",
+      "score": 0.0532485372155449,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:hylestad_0_0_hylestad_is_a_former_municipality_in_aust_agder_county_norway",
-      "score": 0.05497246790091246,
+      "score": 0.05225851357017464,
       "node_type": "sentence"
     },
     {
       "node_id": "sentence:hughesville_maryland_0_0_hughesville_is_a_census_designated_place_cdp_in_charles_county_maryland_unit",
-      "score": 0.052947934691044876,
+      "score": 0.05002062267173517,
       "node_type": "sentence"
     },
     {
-      "node_id": "entity:aust_agder_county",
-      "score": 0.04940283463527688,
-      "node_type": "entity"
-    },
-    {
       "node_id": "entity:charles_county",
-      "score": 0.046012500208589976,
+      "score": 0.04942614383647784,
       "node_type": "entity"
     },
     {
       "node_id": "entity:title_anchor_hylestad",
-      "score": 0.03357167093382392,
+      "score": 0.03540802662184466,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hughesville",
+      "score": 0.032665911173831504,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:southern_maryland_electric_cooperative_0_1_smeco_serves_approximately_161_000_customers_in_calvert_charles_prince_george",
-      "score": 0.03314971095349297,
+      "score": 0.026873619359533623,
       "node_type": "sentence"
     },
     {
-      "node_id": "entity:hughesville",
-      "score": 0.031056841599254894,
-      "node_type": "entity"
-    },
-    {
       "node_id": "entity:norway",
-      "score": 0.022074084856117202,
+      "score": 0.023910440558568457,
       "node_type": "entity"
     },
     {
       "node_id": "entity:maryland",
-      "score": 0.020949090691919522,
+      "score": 0.022558160149892183,
       "node_type": "entity"
     },
     {
       "node_id": "entity:smeco",
-      "score": 0.019439345793388036,
+      "score": 0.017905419711691108,
       "node_type": "entity"
     },
     {
       "node_id": "chunk:southern_maryland_electric_cooperative_0",
-      "score": 0.01925912586995717,
+      "score": 0.017255467490207687,
       "node_type": "chunk"
     },
     {
       "node_id": "sentence:southern_maryland_electric_cooperative_0_2_mary_s_counties_of_southern_maryland",
-      "score": 0.013228444401928552,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "sentence:hylestad_0_1_the_former_municipality_was_located_in_the_southern_part_of_the_present_day_muni",
-      "score": 0.008822195782281335,
+      "score": 0.011115404700552452,
       "node_type": "sentence"
     },
     {
       "node_id": "chunk:hughesville_maryland_0",
-      "score": 0.008499871878828226,
+      "score": 0.0076857760205352055,
       "node_type": "chunk"
     },
     {
       "node_id": "chunk:hylestad_0",
-      "score": 0.008195882295335293,
+      "score": 0.00739128473900259,
       "node_type": "chunk"
     },
     {
-      "node_id": "sentence:hughesville_maryland_0_2_truman_s_place_was_listed_on_the_national_register_of_historic_places_in_1988",
-      "score": 0.007209186157892411,
+      "node_id": "sentence:hylestad_0_1_the_former_municipality_was_located_in_the_southern_part_of_the_present_day_muni",
+      "score": 0.007073528519878813,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:st",
-      "score": 0.00712102559080878,
+      "score": 0.00654791231992608,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:southern_maryland",
+      "score": 0.0062798273743122045,
       "node_type": "entity"
     }
   ],
@@ -287,59 +270,47 @@
       "node_id": "chunk:southern_maryland_electric_cooperative_0",
       "passage_index": 3,
       "title": "Southern Maryland Electric Cooperative",
-      "score": 0.10024264851183409,
+      "score": 0.1001532042001935,
       "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit.",
       "score_breakdown": {
-        "dense": 0.0516951976104398,
-        "graph": 0.06118924236422035,
-        "fact": 0.3563567807788406
+        "dense": 0.05169574915577908,
+        "graph": 0.06089008534893114,
+        "fact": 0.35635677706557106
       }
     },
     {
       "node_id": "chunk:hylestad_0",
       "passage_index": 6,
       "title": "Hylestad",
-      "score": 0.09246011975282234,
+      "score": 0.09242639771838643,
       "text": "Hylestad\nHylestad is a former municipality in Aust-Agder county, Norway. The former municipality was located in the southern part of the present-day municipality of Valle in the traditional region of Setesdal. It existed from 1915 until its dissolution in 1962. The administrative centre was the village of Rysstad where the Hylestad Church was located.",
       "score_breakdown": {
-        "dense": 0.049762000438051804,
-        "graph": 0.053648050826082254,
-        "fact": 0.32664402842712775
+        "dense": 0.049762068010011894,
+        "graph": 0.0535355193692872,
+        "fact": 0.32664403001395825
       }
     },
     {
       "node_id": "chunk:hughesville_maryland_0",
       "passage_index": 7,
       "title": "Hughesville, Maryland",
-      "score": 0.09132896456167475,
+      "score": 0.09129999618789017,
       "text": "Hughesville, Maryland\nHughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census. Truman's Place was listed on the National Register of Historic Places in 1988.",
       "score_breakdown": {
-        "dense": 0.05062027391410321,
-        "graph": 0.0531264509660441,
-        "fact": 0.3169991907940317
+        "dense": 0.05061986320518988,
+        "graph": 0.053030641623217085,
+        "fact": 0.31699919292047074
       }
     },
     {
       "node_id": "chunk:southern_california_edison_0",
       "passage_index": 4,
       "title": "Southern California Edison",
-      "score": 0.04245854930575656,
+      "score": 0.04246747466891422,
       "text": "Southern California Edison\nSouthern California Edison (or SCE Corp), the largest subsidiary of Edison International, is the primary electricity supply company for much of Southern California, USA. It provides 14 million people with electricity across a service territory of approximately 50,000 square miles. However, the Los Angeles Department of Water and Power, San Diego Gas & Electric, Imperial Irrigation District, and some smaller municipal utilities serve substantial portions of the southern California territory. The northern part of the state is generally served by the Pacific Gas & Electric Company of San Francisco.",
       "score_breakdown": {
-        "dense": 0.050448649704107076,
-        "graph": 0.04903930656165889,
-        "fact": 0.0
-      }
-    },
-    {
-      "node_id": "chunk:watercolor_florida_0",
-      "passage_index": 19,
-      "title": "WaterColor, Florida",
-      "score": 0.0422207271965184,
-      "text": "WaterColor, Florida\nWaterColor is an unincorporated master-planned community located in Seagrove Beach on the Northwest Gulf Coast of Florida, United States near Destin. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St. Joe Company. The St. Joe Company has owned the land since 1927. WaterColor is located in Walton County.",
-      "score_breakdown": {
-        "dense": 0.04988430401399424,
-        "graph": 0.049281199962738546,
+        "dense": 0.05044856727037368,
+        "graph": 0.04906920890069565,
         "fact": 0.0
       }
     },
@@ -347,11 +318,23 @@
       "node_id": "chunk:elk_ridge_maryland_0",
       "passage_index": 14,
       "title": "Elk Ridge (Maryland)",
-      "score": 0.0422113650829542,
+      "score": 0.042221213841904706,
       "text": "Elk Ridge (Maryland)\nElk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland. The ridge is located to the west of South Mountain and runs roughly parallel to it from Rohrersville, in the north, to the Potomac River across from Harpers Ferry, West Virginia, in the south. Across the Potomac the ridge continues as Blue Ridge Mountain in Virginia and West Virginia. The southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights.",
       "score_breakdown": {
-        "dense": 0.0500546425431405,
-        "graph": 0.04893770561408973,
+        "dense": 0.05005456235930322,
+        "graph": 0.0489706818142931,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:watercolor_florida_0",
+      "passage_index": 19,
+      "title": "WaterColor, Florida",
+      "score": 0.042212063601498706,
+      "text": "WaterColor, Florida\nWaterColor is an unincorporated master-planned community located in Seagrove Beach on the Northwest Gulf Coast of Florida, United States near Destin. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St. Joe Company. The St. Joe Company has owned the land since 1927. WaterColor is located in Walton County.",
+      "score_breakdown": {
+        "dense": 0.04988436584291128,
+        "graph": 0.049252207959658324,
         "fact": 0.0
       }
     },
@@ -359,11 +342,11 @@
       "node_id": "chunk:united_states_bankruptcy_court_for_the_southern_district_of_new_york_0",
       "passage_index": 11,
       "title": "United States Bankruptcy Court for the Southern District of New York",
-      "score": 0.0421463022200119,
+      "score": 0.042156411450462415,
       "text": "United States Bankruptcy Court for the Southern District of New York\nThe United States Bankruptcy Court for the Southern District of New York is the United States bankruptcy court within the United States District Court for the Southern District of New York. The Southern District of New York is a major venue for bankruptcy, as it has jurisdiction over the corporate headquarters and major financial institutions located in Manhattan.",
       "score_breakdown": {
-        "dense": 0.049959996691800714,
-        "graph": 0.04889434679840502,
+        "dense": 0.04995985801991552,
+        "graph": 0.048928298465029586,
         "fact": 0.0
       }
     },
@@ -371,11 +354,11 @@
       "node_id": "chunk:dunbar_hospital_0",
       "passage_index": 0,
       "title": "Dunbar Hospital",
-      "score": 0.04212702832507409,
+      "score": 0.04213390311254759,
       "text": "Dunbar Hospital\nThe Dunbar Hospital was the first hospital for the black community in Detroit, Michigan. It is located at 580 Frederick Street, and is currently the administrative headquarters of the Detroit Medical Society. It was listed on the National Register of Historic Places in 1979.",
       "score_breakdown": {
-        "dense": 0.04985261068261829,
-        "graph": 0.04902697483211345,
+        "dense": 0.049852656512662956,
+        "graph": 0.04904980676860987,
         "fact": 0.0
       }
     },
@@ -383,11 +366,11 @@
       "node_id": "chunk:pak_tam_chung_0",
       "passage_index": 9,
       "title": "Pak Tam Chung",
-      "score": 0.042108170358764845,
+      "score": 0.04211864850780604,
       "text": "Pak Tam Chung\nPak Tam Chung () is an area in the southern part of the Sai Kung Peninsula in the New Territories of Hong Kong. It is administratively under the Sai Kung District.",
       "score_breakdown": {
-        "dense": 0.04988245028721006,
-        "graph": 0.048909409002664356,
+        "dense": 0.049882406951944236,
+        "graph": 0.048944415614122355,
         "fact": 0.0
       }
     },
@@ -395,11 +378,11 @@
       "node_id": "chunk:port_blair_0",
       "passage_index": 13,
       "title": "Port Blair",
-      "score": 0.04210573646319751,
+      "score": 0.04211609514939252,
       "text": "Port Blair\nPort Blair (pronunciation (help info)) is the capital of the Andaman and Nicobar Islands, a union territory of India situated in the Bay of Bengal. It is also the local administrative sub-division (tehsil) of the islands, the headquarters for the district of South Andaman, and is the territory's only notified town. It houses the headquarters of the Andaman and Nicobar Police and the Andaman and Nicobar Command, the first integrated tri-command of the armed forces of India.",
       "score_breakdown": {
-        "dense": 0.049870780757033974,
-        "graph": 0.04892269015609608,
+        "dense": 0.04987077410325679,
+        "graph": 0.04895723130867095,
         "fact": 0.0
       }
     }
@@ -408,7 +391,7 @@
     "entity": [
       {
         "node_id": "entity:title_anchor_southern_maryland_electric_cooperative",
-        "score": 0.13023898913005302,
+        "score": 0.1404360529589476,
         "text": "Southern Maryland Electric Cooperative",
         "metadata": {
           "canonical_name": "Southern Maryland Electric Cooperative",
@@ -425,7 +408,7 @@
       },
       {
         "node_id": "entity:hughesville_maryland",
-        "score": 0.1051953612743038,
+        "score": 0.11628675685976028,
         "text": "Hughesville Maryland",
         "metadata": {
           "canonical_name": "Hughesville Maryland",
@@ -442,7 +425,7 @@
       },
       {
         "node_id": "entity:aust_agder_county",
-        "score": 0.04940283463527688,
+        "score": 0.0532485372155449,
         "text": "Aust-Agder county",
         "metadata": {
           "canonical_name": "Aust-Agder county",
@@ -459,7 +442,7 @@
       },
       {
         "node_id": "entity:charles_county",
-        "score": 0.046012500208589976,
+        "score": 0.04942614383647784,
         "text": "Charles County",
         "metadata": {
           "canonical_name": "Charles County",
@@ -476,7 +459,7 @@
       },
       {
         "node_id": "entity:title_anchor_hylestad",
-        "score": 0.03357167093382392,
+        "score": 0.03540802662184466,
         "text": "Hylestad",
         "metadata": {
           "canonical_name": "Hylestad",
@@ -491,7 +474,7 @@
       },
       {
         "node_id": "entity:hughesville",
-        "score": 0.031056841599254894,
+        "score": 0.032665911173831504,
         "text": "Hughesville",
         "metadata": {
           "canonical_name": "Hughesville",
@@ -506,7 +489,7 @@
       },
       {
         "node_id": "entity:norway",
-        "score": 0.022074084856117202,
+        "score": 0.023910440558568457,
         "text": "Norway",
         "metadata": {
           "canonical_name": "Norway",
@@ -518,12 +501,27 @@
           ],
           "title_anchor": ""
         }
+      },
+      {
+        "node_id": "entity:maryland",
+        "score": 0.022558160149892183,
+        "text": "Maryland",
+        "metadata": {
+          "canonical_name": "Maryland",
+          "aliases": [
+            "Maryland"
+          ],
+          "surface_forms": [
+            "Maryland"
+          ],
+          "title_anchor": ""
+        }
       }
     ],
     "sentence": [
       {
         "node_id": "sentence:southern_maryland_electric_cooperative_0_0_the_southern_maryland_electric_cooperative_smeco_is_an_electric_distribution_",
-        "score": 0.1249307231030766,
+        "score": 0.12138380709927095,
         "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.",
         "metadata": {
           "title": "Southern Maryland Electric Cooperative",
@@ -549,7 +547,7 @@
       },
       {
         "node_id": "sentence:hylestad_0_0_hylestad_is_a_former_municipality_in_aust_agder_county_norway",
-        "score": 0.05497246790091246,
+        "score": 0.05225851357017464,
         "text": "Hylestad is a former municipality in Aust-Agder county, Norway.",
         "metadata": {
           "title": "Hylestad",
@@ -579,92 +577,12 @@
             "entity:title_anchor_hylestad"
           ]
         }
-      },
-      {
-        "node_id": "sentence:hughesville_maryland_0_0_hughesville_is_a_census_designated_place_cdp_in_charles_county_maryland_unit",
-        "score": 0.052947934691044876,
-        "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States.",
-        "metadata": {
-          "title": "Hughesville, Maryland",
-          "chunk_id": "chunk:hughesville_maryland_0",
-          "sentence_index": 0,
-          "document_index": 7,
-          "triples": [
-            {
-              "head": "Hughesville",
-              "relation": "located in",
-              "tail": "Charles County"
-            },
-            {
-              "head": "Charles County",
-              "relation": "part of",
-              "tail": "Maryland"
-            }
-          ],
-          "entities": [
-            "Hughesville",
-            "Charles County",
-            "Maryland"
-          ],
-          "entity_ids": [
-            "entity:charles_county",
-            "entity:hughesville",
-            "entity:maryland"
-          ]
-        }
-      },
-      {
-        "node_id": "sentence:southern_maryland_electric_cooperative_0_1_smeco_serves_approximately_161_000_customers_in_calvert_charles_prince_george",
-        "score": 0.03314971095349297,
-        "text": "SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St.",
-        "metadata": {
-          "title": "Southern Maryland Electric Cooperative",
-          "chunk_id": "chunk:southern_maryland_electric_cooperative_0",
-          "sentence_index": 1,
-          "document_index": 3,
-          "triples": [
-            {
-              "head": "SMECO",
-              "relation": "operates in",
-              "tail": "Calvert"
-            },
-            {
-              "head": "SMECO",
-              "relation": "operates in",
-              "tail": "Charles"
-            },
-            {
-              "head": "SMECO",
-              "relation": "operates in",
-              "tail": "Prince George's"
-            },
-            {
-              "head": "SMECO",
-              "relation": "operates in",
-              "tail": "St"
-            }
-          ],
-          "entities": [
-            "SMECO",
-            "Calvert",
-            "Charles",
-            "Prince George's",
-            "St"
-          ],
-          "entity_ids": [
-            "entity:calvert",
-            "entity:charles",
-            "entity:prince_george_s",
-            "entity:smeco",
-            "entity:st"
-          ]
-        }
       }
     ],
     "chunk": [
       {
         "node_id": "chunk:southern_maryland_electric_cooperative_0",
-        "score": 0.01925912586995717,
+        "score": 0.017255467490207687,
         "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit.",
         "metadata": {
           "title": "Southern Maryland Electric Cooperative",
@@ -684,65 +602,53 @@
         }
       }
     ],
-    "qa_context": "Southern Maryland Electric Cooperative\nSouthern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit.\n\nHylestad\nHylestad\nHylestad is a former municipality in Aust-Agder county, Norway. The former municipality was located in the southern part of the present-day municipality of Valle in the traditional region of Setesdal. It existed from 1915 until its dissolution in 1962. The administrative centre was the village of Rysstad where the Hylestad Church was located.\n\nHughesville, Maryland\nHughesville, Maryland\nHughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census. Truman's Place was listed on the National Register of Historic Places in 1988.\n\nSouthern California Edison\nSouthern California Edison\nSouthern California Edison (or SCE Corp), the largest subsidiary of Edison International, is the primary electricity supply company for much of Southern California, USA. It provides 14 million people with electricity across a service territory of approximately 50,000 square miles. However, the Los Angeles Department of Water and Power, San Diego Gas & Electric, Imperial Irrigation District, and some smaller municipal utilities serve substantial portions of the southern California territory. The northern part of the state is generally served by the Pacific Gas & Electric Company of San Francisco.\n\nWaterColor, Florida\nWaterColor, Florida\nWaterColor is an unincorporated master-planned community located in Seagrove Beach on the Northwest Gulf Coast of Florida, United States near Destin. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St. Joe Company. The St. Joe Company has owned the land since 1927. WaterColor is located in Walton County.\n\nSouthern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.\n\nHughesville, Maryland\nHughesville is a census-designated place (CDP) in Charles County, Maryland, United States.\n\nElk Ridge (Maryland)\nElk Ridge (Maryland)\nElk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland. The ridge is located to the west of South Mountain and runs roughly parallel to it from Rohrersville, in the north, to the Potomac River across from Harpers Ferry, West Virginia, in the south. Across the Potomac the ridge continues as Blue Ridge Mountain in Virginia and West Virginia. The southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights.",
+    "qa_context": "Hughesville, Maryland\nHughesville, Maryland Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census.\n\nSouthern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.\n\nElk Ridge (Maryland)\nThe southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights. Elk Ridge (Maryland) Elk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland.",
     "retrieved_passages": [
       {
         "node_id": "chunk:southern_maryland_electric_cooperative_0",
         "passage_index": 3,
         "title": "Southern Maryland Electric Cooperative",
-        "score": 0.10024264851183409,
+        "score": 0.1001532042001935,
         "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit.",
         "score_breakdown": {
-          "dense": 0.0516951976104398,
-          "graph": 0.06118924236422035,
-          "fact": 0.3563567807788406
+          "dense": 0.05169574915577908,
+          "graph": 0.06089008534893114,
+          "fact": 0.35635677706557106
         }
       },
       {
         "node_id": "chunk:hylestad_0",
         "passage_index": 6,
         "title": "Hylestad",
-        "score": 0.09246011975282234,
+        "score": 0.09242639771838643,
         "text": "Hylestad\nHylestad is a former municipality in Aust-Agder county, Norway. The former municipality was located in the southern part of the present-day municipality of Valle in the traditional region of Setesdal. It existed from 1915 until its dissolution in 1962. The administrative centre was the village of Rysstad where the Hylestad Church was located.",
         "score_breakdown": {
-          "dense": 0.049762000438051804,
-          "graph": 0.053648050826082254,
-          "fact": 0.32664402842712775
+          "dense": 0.049762068010011894,
+          "graph": 0.0535355193692872,
+          "fact": 0.32664403001395825
         }
       },
       {
         "node_id": "chunk:hughesville_maryland_0",
         "passage_index": 7,
         "title": "Hughesville, Maryland",
-        "score": 0.09132896456167475,
+        "score": 0.09129999618789017,
         "text": "Hughesville, Maryland\nHughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census. Truman's Place was listed on the National Register of Historic Places in 1988.",
         "score_breakdown": {
-          "dense": 0.05062027391410321,
-          "graph": 0.0531264509660441,
-          "fact": 0.3169991907940317
+          "dense": 0.05061986320518988,
+          "graph": 0.053030641623217085,
+          "fact": 0.31699919292047074
         }
       },
       {
         "node_id": "chunk:southern_california_edison_0",
         "passage_index": 4,
         "title": "Southern California Edison",
-        "score": 0.04245854930575656,
+        "score": 0.04246747466891422,
         "text": "Southern California Edison\nSouthern California Edison (or SCE Corp), the largest subsidiary of Edison International, is the primary electricity supply company for much of Southern California, USA. It provides 14 million people with electricity across a service territory of approximately 50,000 square miles. However, the Los Angeles Department of Water and Power, San Diego Gas & Electric, Imperial Irrigation District, and some smaller municipal utilities serve substantial portions of the southern California territory. The northern part of the state is generally served by the Pacific Gas & Electric Company of San Francisco.",
         "score_breakdown": {
-          "dense": 0.050448649704107076,
-          "graph": 0.04903930656165889,
-          "fact": 0.0
-        }
-      },
-      {
-        "node_id": "chunk:watercolor_florida_0",
-        "passage_index": 19,
-        "title": "WaterColor, Florida",
-        "score": 0.0422207271965184,
-        "text": "WaterColor, Florida\nWaterColor is an unincorporated master-planned community located in Seagrove Beach on the Northwest Gulf Coast of Florida, United States near Destin. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St. Joe Company. The St. Joe Company has owned the land since 1927. WaterColor is located in Walton County.",
-        "score_breakdown": {
-          "dense": 0.04988430401399424,
-          "graph": 0.049281199962738546,
+          "dense": 0.05044856727037368,
+          "graph": 0.04906920890069565,
           "fact": 0.0
         }
       },
@@ -750,11 +656,23 @@
         "node_id": "chunk:elk_ridge_maryland_0",
         "passage_index": 14,
         "title": "Elk Ridge (Maryland)",
-        "score": 0.0422113650829542,
+        "score": 0.042221213841904706,
         "text": "Elk Ridge (Maryland)\nElk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland. The ridge is located to the west of South Mountain and runs roughly parallel to it from Rohrersville, in the north, to the Potomac River across from Harpers Ferry, West Virginia, in the south. Across the Potomac the ridge continues as Blue Ridge Mountain in Virginia and West Virginia. The southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights.",
         "score_breakdown": {
-          "dense": 0.0500546425431405,
-          "graph": 0.04893770561408973,
+          "dense": 0.05005456235930322,
+          "graph": 0.0489706818142931,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:watercolor_florida_0",
+        "passage_index": 19,
+        "title": "WaterColor, Florida",
+        "score": 0.042212063601498706,
+        "text": "WaterColor, Florida\nWaterColor is an unincorporated master-planned community located in Seagrove Beach on the Northwest Gulf Coast of Florida, United States near Destin. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St. Joe Company. The St. Joe Company has owned the land since 1927. WaterColor is located in Walton County.",
+        "score_breakdown": {
+          "dense": 0.04988436584291128,
+          "graph": 0.049252207959658324,
           "fact": 0.0
         }
       },
@@ -762,11 +680,11 @@
         "node_id": "chunk:united_states_bankruptcy_court_for_the_southern_district_of_new_york_0",
         "passage_index": 11,
         "title": "United States Bankruptcy Court for the Southern District of New York",
-        "score": 0.0421463022200119,
+        "score": 0.042156411450462415,
         "text": "United States Bankruptcy Court for the Southern District of New York\nThe United States Bankruptcy Court for the Southern District of New York is the United States bankruptcy court within the United States District Court for the Southern District of New York. The Southern District of New York is a major venue for bankruptcy, as it has jurisdiction over the corporate headquarters and major financial institutions located in Manhattan.",
         "score_breakdown": {
-          "dense": 0.049959996691800714,
-          "graph": 0.04889434679840502,
+          "dense": 0.04995985801991552,
+          "graph": 0.048928298465029586,
           "fact": 0.0
         }
       },
@@ -774,11 +692,11 @@
         "node_id": "chunk:dunbar_hospital_0",
         "passage_index": 0,
         "title": "Dunbar Hospital",
-        "score": 0.04212702832507409,
+        "score": 0.04213390311254759,
         "text": "Dunbar Hospital\nThe Dunbar Hospital was the first hospital for the black community in Detroit, Michigan. It is located at 580 Frederick Street, and is currently the administrative headquarters of the Detroit Medical Society. It was listed on the National Register of Historic Places in 1979.",
         "score_breakdown": {
-          "dense": 0.04985261068261829,
-          "graph": 0.04902697483211345,
+          "dense": 0.049852656512662956,
+          "graph": 0.04904980676860987,
           "fact": 0.0
         }
       },
@@ -786,11 +704,11 @@
         "node_id": "chunk:pak_tam_chung_0",
         "passage_index": 9,
         "title": "Pak Tam Chung",
-        "score": 0.042108170358764845,
+        "score": 0.04211864850780604,
         "text": "Pak Tam Chung\nPak Tam Chung () is an area in the southern part of the Sai Kung Peninsula in the New Territories of Hong Kong. It is administratively under the Sai Kung District.",
         "score_breakdown": {
-          "dense": 0.04988245028721006,
-          "graph": 0.048909409002664356,
+          "dense": 0.049882406951944236,
+          "graph": 0.048944415614122355,
           "fact": 0.0
         }
       },
@@ -798,11 +716,11 @@
         "node_id": "chunk:port_blair_0",
         "passage_index": 13,
         "title": "Port Blair",
-        "score": 0.04210573646319751,
+        "score": 0.04211609514939252,
         "text": "Port Blair\nPort Blair (pronunciation (help info)) is the capital of the Andaman and Nicobar Islands, a union territory of India situated in the Bay of Bengal. It is also the local administrative sub-division (tehsil) of the islands, the headquarters for the district of South Andaman, and is the territory's only notified town. It houses the headquarters of the Andaman and Nicobar Police and the Andaman and Nicobar Command, the first integrated tri-command of the armed forces of India.",
         "score_breakdown": {
-          "dense": 0.049870780757033974,
-          "graph": 0.04892269015609608,
+          "dense": 0.04987077410325679,
+          "graph": 0.04895723130867095,
           "fact": 0.0
         }
       }
@@ -816,20 +734,12 @@
         "score": 0.7700772952380954,
         "source_title": "Southern Maryland Electric Cooperative",
         "hop_answer": "Hughesville, Maryland",
-        "hop_thought": "The text clearly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
-        "hop_raw_response": "The text clearly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
+        "hop_thought": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
+        "hop_raw_response": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
         "evidence_passages": [
           {
             "title": "Southern Maryland Electric Cooperative",
             "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-          },
-          {
-            "title": "Southern Maryland Electric Cooperative",
-            "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-          },
-          {
-            "title": "Hughesville, Maryland",
-            "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
           }
         ]
       },
@@ -840,21 +750,13 @@
         "sentence": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.",
         "score": 0.6573714285714287,
         "source_title": "Southern Maryland Electric Cooperative",
-        "hop_answer": "Charles County",
-        "hop_thought": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.",
-        "hop_raw_response": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.\nAnswer: Charles County",
+        "hop_answer": "Unknown",
+        "hop_thought": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.",
+        "hop_raw_response": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Southern Maryland Electric Cooperative",
             "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-          },
-          {
-            "title": "Southern Maryland Electric Cooperative",
-            "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-          },
-          {
-            "title": "Hughesville, Maryland",
-            "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
           }
         ]
       }
@@ -874,13 +776,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. Where is Southern Maryland Electric Cooperative headquartered? => Hughesville, Maryland (source: Southern Maryland Electric Cooperative)\n2. In which county is this headquarters located? => Charles County (source: Southern Maryland Electric Cooperative)\n\nFact hints:\n- Hughesville located in Charles County\n- Southern Maryland Electric Cooperative headquartered in Hughesville Maryland\n\nWikipedia Title: Hughesville, Maryland\nHughesville is a census-designated place (CDP) in Charles County, Maryland, United States.\n\nWikipedia Title: Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.\n\nWikipedia Title: Elk Ridge (Maryland)\nThe southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights. Elk Ridge (Maryland) Elk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland.\n\nWikipedia Title: WaterColor, Florida\nWaterColor is located in Walton County. This Southern resort and residential community was planned by Cooper, Robertson & Partners, under the direction of The St.\n\nWikipedia Title: Hylestad\nHylestad Hylestad is a former municipality in Aust-Agder county, Norway. The former municipality was located in the southern part of the present-day municipality of Valle in the traditional region of Setesdal.\n\nQuestion: In which county is Southern Maryland Electric Cooperative headquartered?\nDraft Answer: Charles County\nThought: "
+        "content": "Intermediate reasoning hints:\n1. Where is Southern Maryland Electric Cooperative headquartered? => Hughesville, Maryland (source: Southern Maryland Electric Cooperative)\n2. In which county is this headquarters located? (source: Southern Maryland Electric Cooperative)\n\nFact hints:\n- Southern Maryland Electric Cooperative headquartered in Hughesville Maryland\n- Hughesville located in Charles County\n\nWikipedia Title: Hughesville, Maryland\nHughesville, Maryland Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States. The population was 2,197 at the 2010 census.\n\nWikipedia Title: Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.\n\nWikipedia Title: Elk Ridge (Maryland)\nThe southern end of the ridge, which is part of Harpers Ferry National Historical Park, is known as Maryland Heights. Elk Ridge (Maryland) Elk Ridge is a mountain ridge of the Blue Ridge Mountains in Maryland.\n\nQuestion: In which county is Southern Maryland Electric Cooperative headquartered?\nDraft Answer: Charles County\nThought: "
       }
     ]
   },
-  "qa_thought": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is located in Charles County.",
+  "qa_thought": "Southern Maryland Electric Cooperative is headquartered in Hughesville, Maryland, and Hughesville is located in Charles County.",
   "predicted_answer": "Charles County",
-  "qa_raw_response": "{\n  \"thought\": \"The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is located in Charles County.\",\n  \"answer\": \"Charles County\",\n  \"support\": \"Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States.\"\n}",
+  "qa_raw_response": "{\n  \"thought\": \"Southern Maryland Electric Cooperative is headquartered in Hughesville, Maryland, and Hughesville is located in Charles County.\",\n  \"answer\": \"Charles County\",\n  \"support\": \"Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States.\"\n}",
   "sample_metadata": {
     "sample_id": "2hop__821197_368148",
     "question": "In which county is Southern Maryland Electric Cooperative headquartered?",

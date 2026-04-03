@@ -48,62 +48,62 @@
   "seeds": [
     {
       "node_id": "entity:iranian_khuzestan",
-      "score": 0.9838347756233866,
+      "score": 0.9838347688332997,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_khabarovsk",
-      "score": 0.3827209601909897,
+      "score": 0.382720956949729,
       "layer": "entity"
     },
     {
       "node_id": "entity:koumaev",
-      "score": 0.3208392767195183,
+      "score": 0.3208392739269067,
       "layer": "entity"
     },
     {
       "node_id": "entity:khabarovsk_russia",
-      "score": 0.320835985025167,
+      "score": 0.32083598225198723,
       "layer": "entity"
     },
     {
       "node_id": "entity:ekbatan",
-      "score": 0.2962935242358526,
+      "score": 0.29629352373621565,
       "layer": "entity"
     },
     {
       "node_id": "entity:ekbatan_area_of_tehran_iran",
-      "score": 0.24881504028510887,
+      "score": 0.24881503978533584,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_shahid_dastgerdi_stadium",
-      "score": 0.24881197935562188,
+      "score": 0.2488119788738995,
       "layer": "entity"
     },
     {
       "node_id": "entity:iraqi_government",
-      "score": 0.21881227568424824,
+      "score": 0.2188122764308176,
       "layer": "entity"
     },
     {
       "node_id": "entity:baghdad",
-      "score": 0.21881227568424824,
+      "score": 0.2188122764308176,
       "layer": "entity"
     },
     {
       "node_id": "entity:iraqi_forces",
-      "score": 0.21830016825852538,
+      "score": 0.21830016031142407,
       "layer": "entity"
     },
     {
       "node_id": "entity:iraqi_army",
-      "score": 0.18381655397851096,
+      "score": 0.18381654729614677,
       "layer": "entity"
     },
     {
       "node_id": "entity:iran_iraq_war",
-      "score": 0.17382299962654157,
+      "score": 0.1738230009855112,
       "layer": "entity"
     }
   ],
@@ -116,7 +116,7 @@
       "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
       "chunk_id": "chunk:ivan_koumaev_0",
       "document_index": 6,
-      "score": 0.31893413349249145
+      "score": 0.31893413079144084
     },
     {
       "fact_id": "fact:shahid_dastgerdi_stadium_located_in_ekbatan_area_of_tehran_iran_sentence_shahid_dastgerdi_stadium_0_0_the_shahid_dastger",
@@ -126,7 +126,7 @@
       "sentence_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
       "chunk_id": "chunk:shahid_dastgerdi_stadium_0",
       "document_index": 13,
-      "score": 0.24691127019654383
+      "score": 0.24691126978017972
     },
     {
       "fact_id": "fact:iraqi_government_located_in_baghdad_sentence_masoud_barzani_0_1_working_closely_with_his_brother_idris_barzani_until_idr",
@@ -136,7 +136,7 @@
       "sentence_id": "sentence:masoud_barzani_0_1_working_closely_with_his_brother_idris_barzani_until_idris_s_death_barzani_and",
       "chunk_id": "chunk:masoud_barzani_0",
       "document_index": 0,
-      "score": 0.21691201841720711
+      "score": 0.21691201922645417
     },
     {
       "fact_id": "fact:iraqi_army_invaded_iranian_khuzestan_sentence_iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan",
@@ -146,7 +146,7 @@
       "sentence_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
       "chunk_id": "chunk:iran_0",
       "document_index": 12,
-      "score": 0.1819168068821045
+      "score": 0.18191680025952006
     },
     {
       "fact_id": "fact:iraqi_army_s_invasion_triggered_iran_iraq_war_sentence_iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_",
@@ -156,15 +156,13 @@
       "sentence_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
       "chunk_id": "chunk:iran_0",
       "document_index": 12,
-      "score": 0.17191486848374757
+      "score": 0.1719148699518506
     }
   ],
   "bridge_entities": [
     "Iraqi army",
     "Iran Iraq War",
-    "Khabarovsk Russia",
-    "UN",
-    "Asia"
+    "Khabarovsk Russia"
   ],
   "reasoning_chain": [
     {
@@ -172,23 +170,15 @@
       "resolved_sub_question": "Where was Ivan Koumaev born?",
       "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
       "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
-      "score": 0.4444173220178604,
+      "score": 0.44443384846420286,
       "source_title": "Ivan Koumaev",
       "hop_answer": "Khabarovsk, Russia",
-      "hop_thought": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.",
-      "hop_raw_response": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.\nAnswer: Khabarovsk, Russia",
+      "hop_thought": "The evidence states that Koumaev was born in Khabarovsk, Russia.",
+      "hop_raw_response": "The evidence states that Koumaev was born in Khabarovsk, Russia.\nAnswer: Khabarovsk, Russia",
       "evidence_passages": [
         {
           "title": "Ivan Koumaev",
           "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
-        },
-        {
-          "title": "Ivan Koumaev",
-          "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
-        },
-        {
-          "title": "Iran",
-          "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
         }
       ]
     },
@@ -199,71 +189,47 @@
       "sentence": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
       "score": 0.48754266666666674,
       "source_title": "Iran",
-      "hop_answer": "UN",
-      "hop_thought": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.",
-      "hop_raw_response": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.\nAnswer: UN",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided about Khabarovsk, Russia, does not contain information regarding the mediation of the truce ending the Iran-Iraq War. The evidence from the Wikipedia title \"Iran\" also does not provide this specific information.",
+      "hop_raw_response": "The context provided about Khabarovsk, Russia, does not contain information regarding the mediation of the truce ending the Iran-Iraq War. The evidence from the Wikipedia title \"Iran\" also does not provide this specific information.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Iran",
           "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
-        },
-        {
-          "title": "Iran",
-          "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed."
-        },
-        {
-          "title": "Masoud Barzani",
-          "text": "Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War."
         }
       ]
     },
     {
       "sub_question": "What continent is Khuzestan located in?",
-      "resolved_sub_question": "What continent is Khuzestan located in? Context: Khabarovsk, Russia; UN.",
+      "resolved_sub_question": "What continent is Khuzestan located in? Context: Khabarovsk, Russia.",
       "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
       "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
-      "score": 0.4230977734208703,
+      "score": 0.4230977719352925,
       "source_title": "Ivan Koumaev",
-      "hop_answer": "Asia",
-      "hop_thought": "Khuzestan is a province in Iran, and Iran is located in Asia.",
-      "hop_raw_response": "Khuzestan is a province in Iran, and Iran is located in Asia.\nAnswer: Asia",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided is about Khabarovsk, Russia, but the question asks about the continent where Khuzestan is located. There is no information in the given context about Khuzestan or its location.",
+      "hop_raw_response": "The context provided is about Khabarovsk, Russia, but the question asks about the continent where Khuzestan is located. There is no information in the given context about Khuzestan or its location.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Ivan Koumaev",
           "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
-        },
-        {
-          "title": "Ivan Koumaev",
-          "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
-        },
-        {
-          "title": "Iran",
-          "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
         }
       ]
     },
     {
       "sub_question": "How many states does this organization recognize in this continent?",
-      "resolved_sub_question": "How many states does this organization recognize in this continent? Context: UN; Asia.",
-      "sentence_id": "sentence:united_nations_regional_groups_0_0_the_african_group_with_54_member_states_the_asia_pacific_group_with_53_membe",
-      "sentence": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.",
-      "score": 0.3519733794530868,
-      "source_title": "United Nations Regional Groups",
-      "hop_answer": "53",
-      "hop_thought": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.",
-      "hop_raw_response": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.\nAnswer: 53",
+      "resolved_sub_question": "How many states does this organization recognize in this continent? Context: Khabarovsk, Russia.",
+      "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+      "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
+      "score": 0.37214104466256515,
+      "source_title": "Ivan Koumaev",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about any organization recognizing states within a continent. The question cannot be answered based on the given information.",
+      "hop_raw_response": "The context provided does not contain information about any organization recognizing states within a continent. The question cannot be answered based on the given information.\nAnswer: Unknown",
       "evidence_passages": [
         {
-          "title": "United Nations Regional Groups",
-          "text": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
-        },
-        {
-          "title": "United Nations Regional Groups",
-          "text": "United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
-        },
-        {
-          "title": "Iran",
-          "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+          "title": "Ivan Koumaev",
+          "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
         }
       ]
     }
@@ -271,102 +237,102 @@
   "ranked_nodes": [
     {
       "node_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
-      "score": 0.04772840059174029,
+      "score": 0.04773546382046244,
       "node_type": "sentence"
     },
     {
       "node_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
-      "score": 0.04373292659457988,
+      "score": 0.04373944964320363,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:iranian_khuzestan",
-      "score": 0.04317352380795574,
+      "score": 0.04317565126172599,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
-      "score": 0.04197129692482455,
+      "score": 0.04197634576626677,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:iraqi_army",
-      "score": 0.040293129790003955,
+      "score": 0.04029911288389677,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:masoud_barzani_0_1_working_closely_with_his_brother_idris_barzani_until_idris_s_death_barzani_and",
-      "score": 0.03930298970794522,
+      "score": 0.03931090592930096,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:koumaev",
-      "score": 0.033828025085659595,
+      "score": 0.03383108840711649,
       "node_type": "entity"
     },
     {
       "node_id": "entity:khabarovsk_russia",
-      "score": 0.03063606147285676,
+      "score": 0.03063803491871829,
       "node_type": "entity"
     },
     {
       "node_id": "entity:title_anchor_shahid_dastgerdi_stadium",
-      "score": 0.03011866187583174,
+      "score": 0.030120775463982737,
       "node_type": "entity"
     },
     {
       "node_id": "entity:iran_iraq_war",
-      "score": 0.029010679349597494,
+      "score": 0.029014777584314273,
       "node_type": "entity"
     },
     {
       "node_id": "entity:ekbatan_area_of_tehran_iran",
-      "score": 0.027786523713850313,
+      "score": 0.027787337443125098,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:khabarovsk_0_0_khabarovsk_is_served_by_the_khabarovsk_novy_airport_with_international_flights_t",
-      "score": 0.026076977077397215,
+      "score": 0.026084007583828006,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:title_anchor_khabarovsk",
-      "score": 0.02377302769351454,
+      "score": 0.023774317713402264,
       "node_type": "entity"
     },
     {
       "node_id": "entity:iraqi_government",
-      "score": 0.022281666683274148,
+      "score": 0.0222842151716988,
       "node_type": "entity"
     },
     {
       "node_id": "entity:iraqi_forces",
-      "score": 0.02218691250539086,
+      "score": 0.02219100032254865,
       "node_type": "entity"
     },
     {
       "node_id": "entity:ekbatan",
-      "score": 0.020978064493162547,
+      "score": 0.020978412396623906,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:iran_0_3_the_war_continued_until_1988_when_the_iraqi_army_defeated_the_iranian_forces_in",
-      "score": 0.018960651679363304,
+      "score": 0.018968183498564585,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:khabarovsk_novy_airport",
-      "score": 0.01767610232899408,
+      "score": 0.017679690544792744,
       "node_type": "entity"
     },
     {
       "node_id": "entity:iranian_forces",
-      "score": 0.016979958211459208,
+      "score": 0.01698491185678558,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:gulf_war_0_1_saddam_hussein_had_closely_micromanaged_iraqi_forces_in_the_iran_iraq_war_and_i",
-      "score": 0.016649309880762003,
+      "score": 0.016655596988917578,
       "node_type": "sentence"
     }
   ],
@@ -375,59 +341,59 @@
       "node_id": "chunk:ivan_koumaev_0",
       "passage_index": 6,
       "title": "Ivan Koumaev",
-      "score": 0.084229600487494,
+      "score": 0.08423000359094146,
       "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
       "score_breakdown": {
-        "dense": 0.05084179892597836,
-        "graph": 0.05261987839822653,
-        "fact": 0.26987098372491963
+        "dense": 0.050842287644912186,
+        "graph": 0.05262032616000047,
+        "fact": 0.2698709835882641
       }
     },
     {
       "node_id": "chunk:shahid_dastgerdi_stadium_0",
       "passage_index": 13,
       "title": "Shahid Dastgerdi Stadium",
-      "score": 0.0809263766339606,
+      "score": 0.08092647918065096,
       "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
       "score_breakdown": {
-        "dense": 0.04983189862019524,
-        "graph": 0.052837334576889015,
-        "fact": 0.2511175467985768
+        "dense": 0.04983193569042845,
+        "graph": 0.05283760821381315,
+        "fact": 0.2511175472451424
       }
     },
     {
       "node_id": "chunk:masoud_barzani_0",
       "passage_index": 0,
       "title": "Masoud Barzani",
-      "score": 0.07963694471374824,
+      "score": 0.07963723827287009,
       "text": "Masoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.",
       "score_breakdown": {
-        "dense": 0.049962571834073884,
-        "graph": 0.05201039200433465,
-        "fact": 0.24369608402471477
+        "dense": 0.04996277744889661,
+        "graph": 0.052010993208210156,
+        "fact": 0.24369608475675936
       }
     },
     {
       "node_id": "chunk:iran_0",
       "passage_index": 12,
       "title": "Iran",
-      "score": 0.07950452150183232,
+      "score": 0.07950511869224025,
       "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
       "score_breakdown": {
-        "dense": 0.050344032152274794,
-        "graph": 0.05505998666770953,
-        "fact": 0.23531538545178884
+        "dense": 0.05034399056813995,
+        "graph": 0.05506205406096049,
+        "fact": 0.23531538440983413
       }
     },
     {
       "node_id": "chunk:khabarovsk_0",
       "passage_index": 9,
       "title": "Khabarovsk",
-      "score": 0.04264017817549999,
+      "score": 0.0426402477159002,
       "text": "Khabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
       "score_breakdown": {
-        "dense": 0.049872808865026444,
-        "graph": 0.050700444332451494,
+        "dense": 0.049872730724418037,
+        "graph": 0.050700819391567585,
         "fact": 0.0
       }
     },
@@ -435,11 +401,11 @@
       "node_id": "chunk:gulf_war_0",
       "passage_index": 4,
       "title": "Gulf War",
-      "score": 0.04255200237420655,
+      "score": 0.04255217119317275,
       "text": "Gulf War\nThe next targets were command and communication facilities. Saddam Hussein had closely micromanaged Iraqi forces in the Iran–Iraq War, and initiative at lower levels was discouraged. Coalition planners hoped that Iraqi resistance would quickly collapse if deprived of command and control.",
       "score_breakdown": {
-        "dense": 0.04988990809094503,
-        "graph": 0.050375176413955954,
+        "dense": 0.049889966851067453,
+        "graph": 0.05037563141695215,
         "fact": 0.0
       }
     },
@@ -447,11 +413,11 @@
       "node_id": "chunk:united_nations_regional_groups_0",
       "passage_index": 10,
       "title": "United Nations Regional Groups",
-      "score": 0.0424216695479818,
+      "score": 0.04242175050596044,
       "text": "United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.",
       "score_breakdown": {
-        "dense": 0.05043803593474047,
-        "graph": 0.04893583261291513,
+        "dense": 0.05043796487424489,
+        "graph": 0.04893623275041918,
         "fact": 0.0
       }
     },
@@ -459,11 +425,11 @@
       "node_id": "chunk:near_east_0",
       "passage_index": 1,
       "title": "Near East",
-      "score": 0.04225572766327909,
+      "score": 0.042254688257673256,
       "text": "Near East\nThe term middle east as a noun and adjective was common in the 19th century in nearly every context except diplomacy and archaeology. An uncountable number of places appear to have had their middle easts from gardens to regions, including the United States. The innovation of the term \"Near East\" to mean the holdings of the Ottoman Empire as early as the Crimean War had left a geographical gap. The East Indies, or \"Far East,\" derived ultimately from Ptolemy's \"India Beyond the Ganges.\" The Ottoman Empire ended at the eastern border of Iraq. \"India This Side of the Ganges\" and Iran had been omitted. The archaeologists counted Iran as \"the Near East\" because Old Persian cuneiform had been found there. This usage did not sit well with the diplomats; India was left in an equivocal state. They needed a regional term.",
       "score_breakdown": {
-        "dense": 0.049943256265696394,
-        "graph": 0.04928978905715357,
+        "dense": 0.049943232581868176,
+        "graph": 0.04928636779215252,
         "fact": 0.0
       }
     },
@@ -471,11 +437,11 @@
       "node_id": "chunk:war_on_terror_0",
       "passage_index": 19,
       "title": "War on Terror",
-      "score": 0.042216799973926425,
+      "score": 0.04221694169123118,
       "text": "War on Terror\nFollowing the ceasefire agreement that suspended hostilities (but not officially ended) in the 1991 Gulf War, the United States and its allies instituted and began patrolling Iraqi no-fly zones, to protect Iraq's Kurdish and Shi'a Arab population—both of which suffered attacks from the Hussein regime before and after the Gulf War—in Iraq's northern and southern regions, respectively. U.S. forces continued in combat zone deployments through November 1995 and launched Operation Desert Fox against Iraq in 1998 after it failed to meet U.S. demands of \"unconditional cooperation\" in weapons inspections.",
       "score_breakdown": {
-        "dense": 0.05002299648823838,
-        "graph": 0.04901383968465105,
+        "dense": 0.050023044799983596,
+        "graph": 0.04901422350413398,
         "fact": 0.0
       }
     },
@@ -483,11 +449,11 @@
       "node_id": "chunk:mesopotamia_0",
       "passage_index": 17,
       "title": "Mesopotamia",
-      "score": 0.0422152973704025,
+      "score": 0.04221543657360135,
       "text": "Mesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
       "score_breakdown": {
-        "dense": 0.05003304863267506,
-        "graph": 0.04899040207477072,
+        "dense": 0.050033144509034615,
+        "graph": 0.0489906903121077,
         "fact": 0.0
       }
     }
@@ -496,7 +462,7 @@
     "entity": [
       {
         "node_id": "entity:iranian_khuzestan",
-        "score": 0.04317352380795574,
+        "score": 0.04317565126172599,
         "text": "Iranian Khuzestan",
         "metadata": {
           "canonical_name": "Iranian Khuzestan",
@@ -513,7 +479,7 @@
       },
       {
         "node_id": "entity:iraqi_army",
-        "score": 0.040293129790003955,
+        "score": 0.04029911288389677,
         "text": "Iraqi army",
         "metadata": {
           "canonical_name": "Iraqi army",
@@ -530,7 +496,7 @@
       },
       {
         "node_id": "entity:koumaev",
-        "score": 0.033828025085659595,
+        "score": 0.03383108840711649,
         "text": "Koumaev",
         "metadata": {
           "canonical_name": "Koumaev",
@@ -545,7 +511,7 @@
       },
       {
         "node_id": "entity:khabarovsk_russia",
-        "score": 0.03063606147285676,
+        "score": 0.03063803491871829,
         "text": "Khabarovsk Russia",
         "metadata": {
           "canonical_name": "Khabarovsk Russia",
@@ -562,7 +528,7 @@
       },
       {
         "node_id": "entity:title_anchor_shahid_dastgerdi_stadium",
-        "score": 0.03011866187583174,
+        "score": 0.030120775463982737,
         "text": "Shahid Dastgerdi Stadium",
         "metadata": {
           "canonical_name": "Shahid Dastgerdi Stadium",
@@ -581,7 +547,7 @@
     "sentence": [
       {
         "node_id": "sentence:iran_0_0_on_september_22_1980_the_iraqi_army_invaded_the_iranian_khuzestan_and_the_ira",
-        "score": 0.04772840059174029,
+        "score": 0.04773546382046244,
         "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
         "metadata": {
           "title": "Iran",
@@ -615,7 +581,7 @@
       },
       {
         "node_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
-        "score": 0.04373292659457988,
+        "score": 0.04373944964320363,
         "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
         "metadata": {
           "title": "Ivan Koumaev",
@@ -648,7 +614,7 @@
       },
       {
         "node_id": "sentence:shahid_dastgerdi_stadium_0_0_the_shahid_dastgerdi_stadium_also_known_as_pas_tehran_stadium_is_a_football",
-        "score": 0.04197129692482455,
+        "score": 0.04197634576626677,
         "text": "The Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran.",
         "metadata": {
           "title": "Shahid Dastgerdi Stadium",
@@ -686,7 +652,7 @@
       },
       {
         "node_id": "sentence:masoud_barzani_0_1_working_closely_with_his_brother_idris_barzani_until_idris_s_death_barzani_and",
-        "score": 0.03930298970794522,
+        "score": 0.03931090592930096,
         "text": "Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War.",
         "metadata": {
           "title": "Masoud Barzani",
@@ -742,7 +708,7 @@
     "chunk": [
       {
         "node_id": "chunk:iran_0",
-        "score": 0.011894964442416792,
+        "score": 0.011898437858086293,
         "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
         "metadata": {
           "title": "Iran",
@@ -777,7 +743,7 @@
       },
       {
         "node_id": "chunk:ivan_koumaev_0",
-        "score": 0.008268343642006258,
+        "score": 0.008269182443754929,
         "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
         "metadata": {
           "title": "Ivan Koumaev",
@@ -794,7 +760,7 @@
       },
       {
         "node_id": "chunk:shahid_dastgerdi_stadium_0",
-        "score": 0.0076690940487144695,
+        "score": 0.007669747150869472,
         "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
         "metadata": {
           "title": "Shahid Dastgerdi Stadium",
@@ -816,7 +782,7 @@
       },
       {
         "node_id": "chunk:masoud_barzani_0",
-        "score": 0.004469221170437522,
+        "score": 0.004470014897879017,
         "text": "Masoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.",
         "metadata": {
           "title": "Masoud Barzani",
@@ -837,65 +803,65 @@
         }
       }
     ],
-    "qa_context": "Ivan Koumaev\nIvan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".\n\nShahid Dastgerdi Stadium\nShahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.\n\nMasoud Barzani\nMasoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.\n\nIran\nIran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.\n\nKhabarovsk\nKhabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.\n\nIvan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.\n\nIran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.\n\nMasoud Barzani\nWorking closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War.\n\nUnited Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.\n\nUnited Nations Regional Groups\nUnited Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.\n\nAncient Near East\nAncient Near East\nThe ancient Near East was the home of early civilizations within a region roughly corresponding to the modern Middle East: Mesopotamia (modern Iraq, southeast Turkey, southwest Iran, northeastern Syria and Kuwait), ancient Egypt, ancient Iran (Elam, Media, Parthia and Persia), Anatolia / Asia Minor and Armenian Highlands (Turkey's Eastern Anatolia Region, Armenia, northwestern Iran, southern Georgia, and western Azerbaijan), the Levant (modern Syria, Lebanon, Palestine, Israel, and Jordan), Cyprus and the Arabian Peninsula. The ancient Near East is studied in the fields of Near Eastern archaeology and ancient history.",
+    "qa_context": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.\n\nShahid Dastgerdi Stadium\nIt was named after a casualty of the Iran–Iraq War. Shahid Dastgerdi Stadium The Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran.\n\nIran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
     "retrieved_passages": [
       {
         "node_id": "chunk:ivan_koumaev_0",
         "passage_index": 6,
         "title": "Ivan Koumaev",
-        "score": 0.084229600487494,
+        "score": 0.08423000359094146,
         "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".",
         "score_breakdown": {
-          "dense": 0.05084179892597836,
-          "graph": 0.05261987839822653,
-          "fact": 0.26987098372491963
+          "dense": 0.050842287644912186,
+          "graph": 0.05262032616000047,
+          "fact": 0.2698709835882641
         }
       },
       {
         "node_id": "chunk:shahid_dastgerdi_stadium_0",
         "passage_index": 13,
         "title": "Shahid Dastgerdi Stadium",
-        "score": 0.0809263766339606,
+        "score": 0.08092647918065096,
         "text": "Shahid Dastgerdi Stadium\nThe Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran. It was named after a casualty of the Iran–Iraq War. It is the former home of PAS Tehran F.C. and now hosts the Iran national under-20 football team.",
         "score_breakdown": {
-          "dense": 0.04983189862019524,
-          "graph": 0.052837334576889015,
-          "fact": 0.2511175467985768
+          "dense": 0.04983193569042845,
+          "graph": 0.05283760821381315,
+          "fact": 0.2511175472451424
         }
       },
       {
         "node_id": "chunk:masoud_barzani_0",
         "passage_index": 0,
         "title": "Masoud Barzani",
-        "score": 0.07963694471374824,
+        "score": 0.07963723827287009,
         "text": "Masoud Barzani\nMasoud Barzani succeeded his father, the Kurdish nationalist leader Mustafa Barzani, as the leader of the KDP in 1979. Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.",
         "score_breakdown": {
-          "dense": 0.049962571834073884,
-          "graph": 0.05201039200433465,
-          "fact": 0.24369608402471477
+          "dense": 0.04996277744889661,
+          "graph": 0.052010993208210156,
+          "fact": 0.24369608475675936
         }
       },
       {
         "node_id": "chunk:iran_0",
         "passage_index": 12,
         "title": "Iran",
-        "score": 0.07950452150183232,
+        "score": 0.07950511869224025,
         "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed.",
         "score_breakdown": {
-          "dense": 0.050344032152274794,
-          "graph": 0.05505998666770953,
-          "fact": 0.23531538545178884
+          "dense": 0.05034399056813995,
+          "graph": 0.05506205406096049,
+          "fact": 0.23531538440983413
         }
       },
       {
         "node_id": "chunk:khabarovsk_0",
         "passage_index": 9,
         "title": "Khabarovsk",
-        "score": 0.04264017817549999,
+        "score": 0.0426402477159002,
         "text": "Khabarovsk\nKhabarovsk is served by the Khabarovsk Novy Airport with international flights to East Asia, Southeast Asia, European Russia, and Central Asia.",
         "score_breakdown": {
-          "dense": 0.049872808865026444,
-          "graph": 0.050700444332451494,
+          "dense": 0.049872730724418037,
+          "graph": 0.050700819391567585,
           "fact": 0.0
         }
       },
@@ -903,11 +869,11 @@
         "node_id": "chunk:gulf_war_0",
         "passage_index": 4,
         "title": "Gulf War",
-        "score": 0.04255200237420655,
+        "score": 0.04255217119317275,
         "text": "Gulf War\nThe next targets were command and communication facilities. Saddam Hussein had closely micromanaged Iraqi forces in the Iran–Iraq War, and initiative at lower levels was discouraged. Coalition planners hoped that Iraqi resistance would quickly collapse if deprived of command and control.",
         "score_breakdown": {
-          "dense": 0.04988990809094503,
-          "graph": 0.050375176413955954,
+          "dense": 0.049889966851067453,
+          "graph": 0.05037563141695215,
           "fact": 0.0
         }
       },
@@ -915,11 +881,11 @@
         "node_id": "chunk:united_nations_regional_groups_0",
         "passage_index": 10,
         "title": "United Nations Regional Groups",
-        "score": 0.0424216695479818,
+        "score": 0.04242175050596044,
         "text": "United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.",
         "score_breakdown": {
-          "dense": 0.05043803593474047,
-          "graph": 0.04893583261291513,
+          "dense": 0.05043796487424489,
+          "graph": 0.04893623275041918,
           "fact": 0.0
         }
       },
@@ -927,11 +893,11 @@
         "node_id": "chunk:near_east_0",
         "passage_index": 1,
         "title": "Near East",
-        "score": 0.04225572766327909,
+        "score": 0.042254688257673256,
         "text": "Near East\nThe term middle east as a noun and adjective was common in the 19th century in nearly every context except diplomacy and archaeology. An uncountable number of places appear to have had their middle easts from gardens to regions, including the United States. The innovation of the term \"Near East\" to mean the holdings of the Ottoman Empire as early as the Crimean War had left a geographical gap. The East Indies, or \"Far East,\" derived ultimately from Ptolemy's \"India Beyond the Ganges.\" The Ottoman Empire ended at the eastern border of Iraq. \"India This Side of the Ganges\" and Iran had been omitted. The archaeologists counted Iran as \"the Near East\" because Old Persian cuneiform had been found there. This usage did not sit well with the diplomats; India was left in an equivocal state. They needed a regional term.",
         "score_breakdown": {
-          "dense": 0.049943256265696394,
-          "graph": 0.04928978905715357,
+          "dense": 0.049943232581868176,
+          "graph": 0.04928636779215252,
           "fact": 0.0
         }
       },
@@ -939,11 +905,11 @@
         "node_id": "chunk:war_on_terror_0",
         "passage_index": 19,
         "title": "War on Terror",
-        "score": 0.042216799973926425,
+        "score": 0.04221694169123118,
         "text": "War on Terror\nFollowing the ceasefire agreement that suspended hostilities (but not officially ended) in the 1991 Gulf War, the United States and its allies instituted and began patrolling Iraqi no-fly zones, to protect Iraq's Kurdish and Shi'a Arab population—both of which suffered attacks from the Hussein regime before and after the Gulf War—in Iraq's northern and southern regions, respectively. U.S. forces continued in combat zone deployments through November 1995 and launched Operation Desert Fox against Iraq in 1998 after it failed to meet U.S. demands of \"unconditional cooperation\" in weapons inspections.",
         "score_breakdown": {
-          "dense": 0.05002299648823838,
-          "graph": 0.04901383968465105,
+          "dense": 0.050023044799983596,
+          "graph": 0.04901422350413398,
           "fact": 0.0
         }
       },
@@ -951,11 +917,11 @@
         "node_id": "chunk:mesopotamia_0",
         "passage_index": 17,
         "title": "Mesopotamia",
-        "score": 0.0422152973704025,
+        "score": 0.04221543657360135,
         "text": "Mesopotamia\nMesopotamia is a historical region in West Asia situated within the Tigris -- Euphrates river system, in modern days roughly corresponding to most of Iraq plus Kuwait, the eastern parts of Syria, Southeastern Turkey, and regions along the Turkish -- Syrian and Iran -- Iraq borders.",
         "score_breakdown": {
-          "dense": 0.05003304863267506,
-          "graph": 0.04899040207477072,
+          "dense": 0.050033144509034615,
+          "graph": 0.0489906903121077,
           "fact": 0.0
         }
       }
@@ -966,23 +932,15 @@
         "resolved_sub_question": "Where was Ivan Koumaev born?",
         "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
         "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
-        "score": 0.4444173220178604,
+        "score": 0.44443384846420286,
         "source_title": "Ivan Koumaev",
         "hop_answer": "Khabarovsk, Russia",
-        "hop_thought": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.",
-        "hop_raw_response": "The evidence states that Ivan Koumaev was born in Khabarovsk, Russia.\nAnswer: Khabarovsk, Russia",
+        "hop_thought": "The evidence states that Koumaev was born in Khabarovsk, Russia.",
+        "hop_raw_response": "The evidence states that Koumaev was born in Khabarovsk, Russia.\nAnswer: Khabarovsk, Russia",
         "evidence_passages": [
           {
             "title": "Ivan Koumaev",
             "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
-          },
-          {
-            "title": "Ivan Koumaev",
-            "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
-          },
-          {
-            "title": "Iran",
-            "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
           }
         ]
       },
@@ -993,71 +951,47 @@
         "sentence": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.",
         "score": 0.48754266666666674,
         "source_title": "Iran",
-        "hop_answer": "UN",
-        "hop_thought": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.",
-        "hop_raw_response": "The context about Khabarovsk, Russia, is irrelevant to the question about the mediation of the truce ending the Iran-Iraq War. The passage clearly states that Khomeini accepted a truce mediated by the UN.\nAnswer: UN",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided about Khabarovsk, Russia, does not contain information regarding the mediation of the truce ending the Iran-Iraq War. The evidence from the Wikipedia title \"Iran\" also does not provide this specific information.",
+        "hop_raw_response": "The context provided about Khabarovsk, Russia, does not contain information regarding the mediation of the truce ending the Iran-Iraq War. The evidence from the Wikipedia title \"Iran\" also does not provide this specific information.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Iran",
             "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
-          },
-          {
-            "title": "Iran",
-            "text": "Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began. Although the forces of Saddam Hussein made several early advances, by mid 1982, the Iranian forces successfully managed to drive the Iraqi army back into Iraq. In July 1982, with Iraq thrown on the defensive, Iran took the decision to invade Iraq and conducted countless offensives in a bid to conquer Iraqi territory and capture cities, such as Basra. The war continued until 1988, when the Iraqi army defeated the Iranian forces inside Iraq and pushed the remaining Iranian troops back across the border. Subsequently, Khomeini accepted a truce mediated by the UN. The total Iranian casualties in the war were estimated to be 123,220–160,000 KIA, 60,711 MIA, and 11,000–16,000 civilians killed."
-          },
-          {
-            "title": "Masoud Barzani",
-            "text": "Working closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War."
           }
         ]
       },
       {
         "sub_question": "What continent is Khuzestan located in?",
-        "resolved_sub_question": "What continent is Khuzestan located in? Context: Khabarovsk, Russia; UN.",
+        "resolved_sub_question": "What continent is Khuzestan located in? Context: Khabarovsk, Russia.",
         "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
         "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
-        "score": 0.4230977734208703,
+        "score": 0.4230977719352925,
         "source_title": "Ivan Koumaev",
-        "hop_answer": "Asia",
-        "hop_thought": "Khuzestan is a province in Iran, and Iran is located in Asia.",
-        "hop_raw_response": "Khuzestan is a province in Iran, and Iran is located in Asia.\nAnswer: Asia",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided is about Khabarovsk, Russia, but the question asks about the continent where Khuzestan is located. There is no information in the given context about Khuzestan or its location.",
+        "hop_raw_response": "The context provided is about Khabarovsk, Russia, but the question asks about the continent where Khuzestan is located. There is no information in the given context about Khuzestan or its location.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Ivan Koumaev",
             "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
-          },
-          {
-            "title": "Ivan Koumaev",
-            "text": "Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\"."
-          },
-          {
-            "title": "Iran",
-            "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
           }
         ]
       },
       {
         "sub_question": "How many states does this organization recognize in this continent?",
-        "resolved_sub_question": "How many states does this organization recognize in this continent? Context: UN; Asia.",
-        "sentence_id": "sentence:united_nations_regional_groups_0_0_the_african_group_with_54_member_states_the_asia_pacific_group_with_53_membe",
-        "sentence": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.",
-        "score": 0.3519733794530868,
-        "source_title": "United Nations Regional Groups",
-        "hop_answer": "53",
-        "hop_thought": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.",
-        "hop_raw_response": "The context specifies the continent Asia, and the question asks for the number of states recognized by the UN in this continent. From the evidence, the Asia-Pacific Group, which represents Asian and Pacific countries within the UN, has 53 member states.\nAnswer: 53",
+        "resolved_sub_question": "How many states does this organization recognize in this continent? Context: Khabarovsk, Russia.",
+        "sentence_id": "sentence:ivan_koumaev_0_0_koumaev_was_born_in_khabarovsk_russia_and_moved_to_mill_creek_washington_when",
+        "sentence": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.",
+        "score": 0.37214104466256515,
+        "source_title": "Ivan Koumaev",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about any organization recognizing states within a continent. The question cannot be answered based on the given information.",
+        "hop_raw_response": "The context provided does not contain information about any organization recognizing states within a continent. The question cannot be answered based on the given information.\nAnswer: Unknown",
         "evidence_passages": [
           {
-            "title": "United Nations Regional Groups",
-            "text": "the African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
-          },
-          {
-            "title": "United Nations Regional Groups",
-            "text": "United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state."
-          },
-          {
-            "title": "Iran",
-            "text": "On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began."
+            "title": "Ivan Koumaev",
+            "text": "Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old."
           }
         ]
       }
@@ -1065,7 +999,7 @@
     "qa_messages": [
       {
         "role": "system",
-        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
       },
       {
         "role": "user",
@@ -1077,13 +1011,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. Where was Ivan Koumaev born? => Khabarovsk, Russia (source: Ivan Koumaev)\n2. Which organization mediated the truce ending the Iran-Iraq War? => UN (source: Iran)\n3. What continent is Khuzestan located in? => Asia (source: Ivan Koumaev)\n4. How many states does this organization recognize in this continent? => 53 (source: United Nations Regional Groups)\n\nFact hints:\n- Koumaev was born in Khabarovsk Russia\n- Iraqi army's invasion triggered Iran Iraq War\n- Shahid Dastgerdi Stadium located in Ekbatan area of Tehran Iran\n\nWikipedia Title: United Nations Regional Groups\nthe African Group, with 54 member states the Asia - Pacific Group, with 53 member states the Eastern European Group, with 23 member states the Latin American and Caribbean Group (GRULAC), with 33 member states the Western European and Others Group (WEOG), with 28 member states, plus 1 member state (the United States) as an observer state.\n\nWikipedia Title: Iran\nSubsequently, Khomeini accepted a truce mediated by the UN. Iran On September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.\n\nWikipedia Title: Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.\n\nWikipedia Title: Ancient Near East\nAncient Near East The ancient Near East was the home of early civilizations within a region roughly corresponding to the modern Middle East: Mesopotamia (modern Iraq, southeast Turkey, southwest Iran, northeastern Syria and Kuwait), ancient Egypt, ancient Iran (Elam, Media, Parthia and Persia), Anatolia / Asia Minor and Armenian Highlands (Turkey's Eastern Anatolia Region, Armenia, northwestern Iran, southern Georgia, and western Azerbaijan), the Levant (modern Syria, Lebanon, Palestine, Israel, and Jordan), Cyprus and the Arabian Peninsula. The ancient Near East is studied in the fields of Near Eastern archaeology and ancient history.\n\nWikipedia Title: Shahid Dastgerdi Stadium\nIt was named after a casualty of the Iran–Iraq War. Shahid Dastgerdi Stadium The Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran.\n\nQuestion: How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?\nDraft Answer: 53\nThought: "
+        "content": "Intermediate reasoning hints:\n1. Where was Ivan Koumaev born? => Khabarovsk, Russia (source: Ivan Koumaev)\n2. Which organization mediated the truce ending the Iran-Iraq War? (source: Iran)\n3. What continent is Khuzestan located in? (source: Ivan Koumaev)\n4. How many states does this organization recognize in this continent? (source: Ivan Koumaev)\n\nFact hints:\n- Koumaev was born in Khabarovsk Russia\n- Iraqi army's invasion triggered Iran Iraq War\n- Shahid Dastgerdi Stadium located in Ekbatan area of Tehran Iran\n\nWikipedia Title: Ivan Koumaev\nKoumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old.\n\nWikipedia Title: Ivan Koumaev\nIvan Koumaev Koumaev was born in Khabarovsk, Russia and moved to Mill Creek, Washington when he was seven years old. He started dancing at age 11 training under Kimera Lewis, after watching the film \"Breakin'\".\n\nWikipedia Title: Shahid Dastgerdi Stadium\nIt was named after a casualty of the Iran–Iraq War. Shahid Dastgerdi Stadium The Shahid Dastgerdi Stadium (also known as PAS Tehran Stadium) () is a football stadium located in the Ekbatan area of Tehran, Iran.\n\nWikipedia Title: Iran\nOn September 22, 1980, the Iraqi army invaded the Iranian Khuzestan, and the Iran–Iraq War began.\n\nWikipedia Title: Masoud Barzani\nWorking closely with his brother Idris Barzani until Idris's death, Barzani and various other Kurdish groups fought the forces of the Iraqi government in Baghdad during the Iran–Iraq War. For much of this time, the Kurdish leadership was exiled to Iran.\n\nQuestion: How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?\nThought:"
       }
     ]
   },
-  "qa_thought": "The UN mediated the truce ending the Iran-Iraq War. Ivan Koumaev was born in Khabarovsk, Russia, which is in Asia. The UN recognizes 53 member states in the Asia-Pacific Group.",
-  "predicted_answer": "53",
-  "qa_raw_response": "{\n  \"thought\": \"The UN mediated the truce ending the Iran-Iraq War. Ivan Koumaev was born in Khabarovsk, Russia, which is in Asia. The UN recognizes 53 member states in the Asia-Pacific Group.\",\n  \"answer\": \"53\",\n  \"support\": \"the Asia - Pacific Group, with 53 member states\"\n}",
+  "qa_thought": "The question requires information about the organization that mediated the truce ending the Iran-Iraq War and the number of states it recognizes in the continent where Ivan Koumaev was born. From the provided hints and passages:\n\n1. Ivan Koumaev was born in Khabarovsk, Russia, which is in Asia.\n2. The Iran-Iraq War ended with a truce mediated by an organization, but the specific organization is not mentioned in the given passages.\n3. Without knowing the mediating organization, we cannot determine how many states it recognizes in Asia.\n\nSince the passages do not provide the name of the organization that mediated the truce, we cannot answer the question accurately.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The question requires information about the organization that mediated the truce ending the Iran-Iraq War and the number of states it recognizes in the continent where Ivan Koumaev was born. From the provided hints and passages:\n\n1. Ivan Koumaev was born in Khabarovsk, Russia, which is in Asia.\n2. The Iran-Iraq War ended with a truce mediated by an organization, but the specific organization is not mentioned in the given passages.\n3. Without knowing the mediating organization, we cannot determine how many states it recognizes in Asia.\n\nSince the passages do not provide the name of the organization that mediated the truce, we cannot answer the question accurately.\nAnswer: Unknown",
   "sample_metadata": {
     "sample_id": "4hop3__401611_100414_35260_54090",
     "question": "How many states does the organization who mediated the truce ending the Iran-Iraq War recognize in the continent where Ivan Koumaev was born?",
@@ -1099,9 +1033,7 @@
   "answer_match": {
     "gold_answer": "53 member states",
     "gold_aliases": [],
-    "matched": true,
-    "matched_candidates": [
-      "53 member states"
-    ]
+    "matched": false,
+    "matched_candidates": []
   }
 }

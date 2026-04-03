@@ -6,8 +6,13 @@ from .llm_client import LocalLLMClient
 class IntentParser:
     def __init__(self, llm_client: LocalLLMClient) -> None:
         self.llm_client = llm_client
+        self._cache: Dict[str, Dict[str, float]] = {}
 
     def predict(self, query: str) -> Dict[str, float]:
+        cache_key = (query or "").strip()
+        if cache_key in self._cache:
+            return dict(self._cache[cache_key])
+
         fallback = self._heuristic_alpha(query)
         payload, _ = self.llm_client.infer_json(
             system_prompt=(
@@ -24,7 +29,9 @@ class IntentParser:
             "chunk": float(payload.get("alpha_C", fallback["alpha_C"])),
         }
         total = sum(max(0.0, value) for value in alpha.values()) or 1.0
-        return {key: max(0.0, value) / total for key, value in alpha.items()}
+        normalized = {key: max(0.0, value) / total for key, value in alpha.items()}
+        self._cache[cache_key] = dict(normalized)
+        return normalized
 
     def _heuristic_alpha(self, query: str) -> Dict[str, float]:
         lowered = query.lower()

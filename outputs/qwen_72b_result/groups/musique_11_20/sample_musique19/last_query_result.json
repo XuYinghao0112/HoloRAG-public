@@ -33,76 +33,66 @@
   "seeds": [
     {
       "node_id": "entity:adelphia",
-      "score": 0.5207417139797887,
+      "score": 0.4788258561999067,
       "layer": "entity"
     },
     {
       "node_id": "entity:adelphia_communications_corporation",
-      "score": 0.4985400390210899,
+      "score": 0.45454052397535166,
       "layer": "entity"
     },
     {
       "node_id": "entity:ottoman",
-      "score": 0.3476940812845877,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:ea_sports_network",
-      "score": 0.3026849253876477,
+      "score": 0.3476940798363957,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_ottoman_empire",
-      "score": 0.29183956827552066,
+      "score": 0.2918404379445751,
       "layer": "entity"
     },
     {
       "node_id": "entity:constantinople",
-      "score": 0.29183068493336023,
+      "score": 0.2918315231598821,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ea_sports_network",
+      "score": 0.29068587698130505,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_nova_sports",
-      "score": 0.25469723998745386,
+      "score": 0.2546981063363448,
       "layer": "entity"
     },
     {
       "node_id": "entity:greece",
-      "score": 0.2546886838484946,
+      "score": 0.2546895199233972,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_empire_sports_network",
-      "score": 0.25262152244199626,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:fox_sports_networks",
-      "score": 0.2186598015693375,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:fox_sports",
-      "score": 0.21865976548326463,
+      "score": 0.24262259629705812,
       "layer": "entity"
     },
     {
       "node_id": "entity:american_regional_sports_network",
-      "score": 0.21115990339770235,
+      "score": 0.21116085409350238,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
+      "score": 0.19401066296514005,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:time_warner_cable",
+      "score": 0.13754639177034603,
       "layer": "entity"
     }
   ],
   "ranked_facts": [
-    {
-      "fact_id": "fact:empire_sports_network_owned_by_adelphia_communications_corporation_sentence_empire_sports_network_0_0_empire_sports_netw",
-      "text": "Empire Sports Network owned by Adelphia Communications Corporation",
-      "head_id": "entity:title_anchor_empire_sports_network",
-      "tail_id": "entity:adelphia_communications_corporation",
-      "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
-      "chunk_id": "chunk:empire_sports_network_0",
-      "document_index": 2,
-      "score": 0.2918992572361441
-    },
     {
       "fact_id": "fact:constantinople_was_capital_of_ottoman_empire_sentence_ottoman_empire_0_0_with_constantinople_as_its_capital_and_control_",
       "text": "Constantinople was capital of Ottoman Empire",
@@ -111,7 +101,17 @@
       "sentence_id": "sentence:ottoman_empire_0_0_with_constantinople_as_its_capital_and_control_of_lands_around_the_mediterranean",
       "chunk_id": "chunk:ottoman_empire_0",
       "document_index": 1,
-      "score": 0.2897450677371564
+      "score": 0.2897450665303298
+    },
+    {
+      "fact_id": "fact:empire_sports_network_owned_by_adelphia_communications_corporation_sentence_empire_sports_network_0_0_empire_sports_netw",
+      "text": "Empire Sports Network owned by Adelphia Communications Corporation",
+      "head_id": "entity:title_anchor_empire_sports_network",
+      "tail_id": "entity:adelphia_communications_corporation",
+      "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
+      "chunk_id": "chunk:empire_sports_network_0",
+      "document_index": 2,
+      "score": 0.2718992540943612
     },
     {
       "fact_id": "fact:nova_sports_located_in_greece_sentence_nova_sports_0_0_nova_sports_is_a_premium_sports_service_in_greece_and_is_owned_by",
@@ -121,7 +121,7 @@
       "sentence_id": "sentence:nova_sports_0_0_nova_sports_is_a_premium_sports_service_in_greece_and_is_owned_by_forthnet_group",
       "chunk_id": "chunk:nova_sports_0",
       "document_index": 6,
-      "score": 0.252603712951139
+      "score": 0.252603711875631
     },
     {
       "fact_id": "fact:empire_sports_network_was_american_regional_sports_network_sentence_empire_sports_network_0_0_empire_sports_network_was_",
@@ -131,17 +131,7 @@
       "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
       "chunk_id": "chunk:empire_sports_network_0",
       "document_index": 2,
-      "score": 0.20904133884635126
-    },
-    {
-      "fact_id": "fact:fox_sports_west_owned_by_walt_disney_company_sentence_fox_sports_west_and_prime_ticket_0_0_fox_sports_west_and_prime_tic",
-      "text": "Fox Sports West owned by Walt Disney Company",
-      "head_id": "entity:fox_sports_west",
-      "tail_id": "entity:walt_disney_company",
-      "sentence_id": "sentence:fox_sports_west_and_prime_ticket_0_0_fox_sports_west_and_prime_ticket_are_american_regional_sports_networks_owned_by",
-      "chunk_id": "chunk:fox_sports_west_and_prime_ticket_0",
-      "document_index": 11,
-      "score": 0.18046409804813396
+      "score": 0.20904133344358136
     },
     {
       "fact_id": "fact:time_warner_cable_related_to_adelphia_sentence_windjammer_communications_0_0_windjammer_cable_is_a_small_cable_company_f",
@@ -151,7 +141,7 @@
       "sentence_id": "sentence:windjammer_communications_0_0_windjammer_cable_is_a_small_cable_company_formed_by_the_sale_of_25_systems_that",
       "chunk_id": "chunk:windjammer_communications_0",
       "document_index": 16,
-      "score": 0.17046260529641577
+      "score": 0.1504626065972895
     },
     {
       "fact_id": "fact:windjammer_cable_related_to_time_warner_cable_sentence_windjammer_communications_0_0_windjammer_cable_is_a_small_cable_c",
@@ -161,7 +151,7 @@
       "sentence_id": "sentence:windjammer_communications_0_0_windjammer_cable_is_a_small_cable_company_formed_by_the_sale_of_25_systems_that",
       "chunk_id": "chunk:windjammer_communications_0",
       "document_index": 16,
-      "score": 0.12046188880710378
+      "score": 0.12046188756463504
     }
   ],
   "bridge_entities": [
@@ -174,23 +164,15 @@
       "resolved_sub_question": "Who was the owner of Empire Sports Network?",
       "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
       "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-      "score": 0.5757278575412206,
+      "score": 0.5756611437312535,
       "source_title": "Empire Sports Network",
       "hop_answer": "Adelphia Communications Corporation",
-      "hop_thought": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
-      "hop_raw_response": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
+      "hop_thought": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
+      "hop_raw_response": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
       "evidence_passages": [
         {
           "title": "Empire Sports Network",
           "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-        },
-        {
-          "title": "Empire Sports Network",
-          "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-        },
-        {
-          "title": "Ottoman Empire",
-          "text": "With Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries."
         }
       ]
     },
@@ -199,23 +181,15 @@
       "resolved_sub_question": "What company succeeded this owner? Context: Adelphia Communications Corporation.",
       "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
       "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-      "score": 0.4807376969973246,
+      "score": 0.48069455515543624,
       "source_title": "Empire Sports Network",
       "hop_answer": "Unknown",
-      "hop_thought": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.",
-      "hop_raw_response": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.\nAnswer: Unknown",
+      "hop_thought": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.",
+      "hop_raw_response": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Empire Sports Network",
           "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-        },
-        {
-          "title": "Empire Sports Network",
-          "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-        },
-        {
-          "title": "Comcast Sports Southwest",
-          "text": "Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas."
         }
       ]
     }
@@ -223,103 +197,103 @@
   "ranked_nodes": [
     {
       "node_id": "entity:adelphia",
-      "score": 0.05041148510654769,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:adelphia_communications_corporation",
-      "score": 0.03728420827913795,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_empire_sports_network",
-      "score": 0.03673360331362018,
+      "score": 0.057590652068764694,
       "node_type": "entity"
     },
     {
       "node_id": "entity:title_anchor_ottoman_empire",
-      "score": 0.035800813606780044,
+      "score": 0.043938290683765494,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_empire_sports_network",
+      "score": 0.042814527398140026,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:adelphia_communications_corporation",
+      "score": 0.042580568486502296,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:windjammer_communications_0_0_windjammer_cable_is_a_small_cable_company_formed_by_the_sale_of_25_systems_that",
-      "score": 0.03314732993051291,
+      "score": 0.03825888133026471,
       "node_type": "sentence"
     },
     {
       "node_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
-      "score": 0.03159962419375464,
+      "score": 0.03673577158317534,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:time_warner_cable",
-      "score": 0.03110502442279634,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:ea_sports_network",
-      "score": 0.025291938580276584,
+      "score": 0.0359337575276547,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:ottoman_empire_0_0_with_constantinople_as_its_capital_and_control_of_lands_around_the_mediterranean",
-      "score": 0.025163763724537606,
+      "score": 0.03088525088263669,
       "node_type": "sentence"
     },
     {
+      "node_id": "entity:ea_sports_network",
+      "score": 0.02996447571669185,
+      "node_type": "entity"
+    },
+    {
       "node_id": "entity:title_anchor_nova_sports",
-      "score": 0.021586904483446245,
+      "score": 0.026490042133202562,
       "node_type": "entity"
     },
     {
       "node_id": "entity:ottoman",
-      "score": 0.020360252126216144,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_windjammer_communications",
-      "score": 0.018466290160920582,
+      "score": 0.024986176696928333,
       "node_type": "entity"
     },
     {
       "node_id": "entity:american_regional_sports_network",
-      "score": 0.018260881565483104,
+      "score": 0.02167025779997499,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_windjammer_communications",
+      "score": 0.02155534386104109,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:nova_sports_0_0_nova_sports_is_a_premium_sports_service_in_greece_and_is_owned_by_forthnet_group",
-      "score": 0.017364222266168603,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:fox_sports_west",
-      "score": 0.01639115877523597,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:fox_sports_west_and_prime_ticket_0_0_fox_sports_west_and_prime_ticket_are_american_regional_sports_networks_owned_by",
-      "score": 0.015388612367987472,
+      "score": 0.02130836206699075,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:constantinople",
-      "score": 0.015337418515871943,
+      "score": 0.01882232871087114,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:empire_sports_network_0_2_the_network_ceased_operations_on_march_7_2005_in_the_midst_of_adelphia_s_finan",
-      "score": 0.015028767104327089,
+      "score": 0.017254915225850476,
       "node_type": "sentence"
     },
     {
-      "node_id": "entity:fox_sports",
-      "score": 0.014952141874965307,
+      "node_id": "entity:greece",
+      "score": 0.017098582427506545,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:ea_sports_0_1_formerly_a_marketing_gimmick_of_electronic_arts_in_which_they_tried_to_imitate",
-      "score": 0.014283381298155496,
+      "score": 0.01699774186906808,
       "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ottoman_empire_0_4_starting_before_the_war_but_growing_increasingly_common_and_violent_during_it",
+      "score": 0.016127562162741246,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_comcast_sports_southwest",
+      "score": 0.01367564839014088,
+      "node_type": "entity"
     }
   ],
   "ranked_passages": [
@@ -327,83 +301,59 @@
       "node_id": "chunk:empire_sports_network_0",
       "passage_index": 2,
       "title": "Empire Sports Network",
-      "score": 0.07490457510822417,
+      "score": 0.08207545942113473,
       "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy.",
       "score_breakdown": {
-        "dense": 0.050877577454189415,
-        "graph": 0.05091024703532673,
-        "fact": 0.21099222265214643
+        "dense": 0.050877650135638934,
+        "graph": 0.05159388935056846,
+        "fact": 0.25743056694241856
       }
     },
     {
       "node_id": "chunk:ottoman_empire_0",
       "passage_index": 1,
       "title": "Ottoman Empire",
-      "score": 0.07401999602771896,
+      "score": 0.08199822829699159,
       "text": "Ottoman Empire\nWith Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries. Following a long period of military setbacks against European powers, the Ottoman Empire gradually declined into the late nineteenth century. The empire allied with Germany in the early 20th century, with the imperial ambition of recovering its lost territories, joining in World War I to achieve this ambition on the side of Germany and the Central Powers. While the Empire was able to largely hold its own during the conflict, it was struggling with internal dissent, especially with the Arab Revolt in its Arabian holdings. Starting before the war, but growing increasingly common and violent during it, major atrocities were committed by the Ottoman government against the Armenians, Assyrians and Pontic Greeks. The Empire's defeat and the occupation of part of its territory by the Allied Powers in the aftermath of World War I resulted in the emergence of a new state, Turkey, in the Ottoman Anatolian heartland following",
       "score_breakdown": {
-        "dense": 0.049761373483890904,
-        "graph": 0.05023503805767032,
-        "fact": 0.21053819462851908
+        "dense": 0.04976133962450667,
+        "graph": 0.051065374091889416,
+        "fact": 0.26206586183964065
       }
     },
     {
       "node_id": "chunk:nova_sports_0",
       "passage_index": 6,
       "title": "Nova Sports",
-      "score": 0.07255555651817942,
+      "score": 0.08014401028546564,
       "text": "Nova Sports\nNova Sports is a premium Sports service in Greece and is owned by Forthnet Group, a subsidiary of Greek Telecommunications company Forthnet. It launched in 1994 as \"Supersport\" and at the time was the first ever premium sports service in Greece. It is available exclusively on Nova, a DTH satellite service. Nova Sports is available terrestrially and via satellite only on Nova.",
       "score_breakdown": {
-        "dense": 0.049995625821775413,
-        "graph": 0.04876222961679565,
-        "fact": 0.20286195620776162
-      }
-    },
-    {
-      "node_id": "chunk:fox_sports_west_and_prime_ticket_0",
-      "passage_index": 11,
-      "title": "Fox Sports West and Prime Ticket",
-      "score": 0.07042792704908567,
-      "text": "Fox Sports West and Prime Ticket\nFox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area. Fox Sports West and Prime Ticket maintain general offices and studios based at the Staples Center in Downtown Los Angeles.",
-      "score_breakdown": {
-        "dense": 0.0501297302700271,
-        "graph": 0.04848376900237961,
-        "fact": 0.18874296466571247
+        "dense": 0.049995586027181745,
+        "graph": 0.04923266615454768,
+        "fact": 0.2525109208276759
       }
     },
     {
       "node_id": "chunk:windjammer_communications_0",
       "passage_index": 16,
       "title": "Windjammer Communications",
-      "score": 0.07035544521266801,
+      "score": 0.07665382411223999,
       "text": "Windjammer Communications\nWindjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia. Windjammer was created specifically for this deal and consisted of Boston private-equity concern MAST Capital Management and Jupiter, Fla.-based small cable operator Communications Construction Services (CCS).",
       "score_breakdown": {
-        "dense": 0.049973347669902954,
-        "graph": 0.049468015724474346,
-        "fact": 0.1868646618458605
+        "dense": 0.0499732875127901,
+        "graph": 0.049898728072218984,
+        "fact": 0.22799265039026495
       }
     },
     {
       "node_id": "chunk:ea_sports_0",
       "passage_index": 15,
       "title": "EA Sports",
-      "score": 0.04191934376532959,
+      "score": 0.04199118285868917,
       "text": "EA Sports\nEA Sports is a division and brand of Electronic Arts that creates and develops sports video games. Formerly a marketing gimmick of Electronic Arts, in which they tried to imitate real - life sports networks by calling themselves the ``EA Sports Network ''(EASN) with pictures or endorsements with real commentators such as John Madden, it soon grew up to become a sub-label on its own, releasing game series such as NBA Live, FIFA, NHL, Madden NFL, and NASCAR. The best selling EA Sports series is the FIFA series with over 100 million units sold.",
       "score_breakdown": {
-        "dense": 0.05003411178913909,
-        "graph": 0.048001940937676985,
-        "fact": 0.0
-      }
-    },
-    {
-      "node_id": "chunk:fox_sports_1_0",
-      "passage_index": 18,
-      "title": "Fox Sports 1",
-      "score": 0.041859194311723254,
-      "text": "Fox Sports 1\nFox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube",
-      "score_breakdown": {
-        "dense": 0.05014885291688287,
-        "graph": 0.04759108402479226,
+        "dense": 0.050034212909615704,
+        "graph": 0.04824121919466844,
         "fact": 0.0
       }
     },
@@ -411,23 +361,11 @@
       "node_id": "chunk:comcast_sports_southwest_0",
       "passage_index": 5,
       "title": "Comcast Sports Southwest",
-      "score": 0.041763933157773755,
+      "score": 0.04181215618609803,
       "text": "Comcast Sports Southwest\nComcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal. The channel was launched on September 1, 2009 and had a similar format to Comcast/Charter Sports Southeast, which launched ten years earlier. Both networks shared the same logo and focused primarily on collegiate and high school sports.",
       "score_breakdown": {
-        "dense": 0.04998225924342481,
-        "graph": 0.04757896857963368,
-        "fact": 0.0
-      }
-    },
-    {
-      "node_id": "chunk:premier_league_0",
-      "passage_index": 14,
-      "title": "Premier League",
-      "score": 0.04164561180419452,
-      "text": "Premier League\nThe Premier League is particularly popular in Asia, where it is the most widely distributed sports programme. In Australia, Fox Sports broadcasts almost all of the season's 380 matches live, and Foxtel gives subscribers the option of selecting which Saturday 3pm match to watch. In India, the matches are broadcast live on STAR Sports. In China, the broadcast rights were awarded to Super Sports in a six-year agreement that began in the 2013–14 season. As of the 2013–14 season, Canadian broadcast rights to the Premier League are jointly owned by Sportsnet and TSN, with both rival networks holding rights to 190 matches per season.",
-      "score_breakdown": {
-        "dense": 0.04991485801027164,
-        "graph": 0.0473081329951504,
+        "dense": 0.04998260235099608,
+        "graph": 0.047739082976833935,
         "fact": 0.0
       }
     },
@@ -435,11 +373,47 @@
       "node_id": "chunk:wfan_fm_0",
       "passage_index": 10,
       "title": "WFAN-FM",
-      "score": 0.04164515054229033,
+      "score": 0.041645968068198,
       "text": "WFAN-FM\nWFAN-FM (101.9 MHz), also known as \"Sports Radio 66 and 101.9 FM\" or \"The Fan\", is a commercial FM sports radio station licensed to New York City. The station is owned and operated by Entercom, and is simulcast with WFAN (660 AM). WFAN-FM's studios are located in the combined Entercom facility in the Hudson Square neighborhood of Manhattan and its transmitter is located at the Empire State Building.",
       "score_breakdown": {
-        "dense": 0.05021648531685232,
-        "graph": 0.04675361206007185,
+        "dense": 0.050216659811190785,
+        "graph": 0.04675601724014356,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fox_sports_1_0",
+      "passage_index": 18,
+      "title": "Fox Sports 1",
+      "score": 0.041625862607702055,
+      "text": "Fox Sports 1\nFox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube",
+      "score_breakdown": {
+        "dense": 0.050148794557597264,
+        "graph": 0.04681341867007853,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ottoman_empire_1",
+      "passage_index": 1,
+      "title": "Ottoman Empire",
+      "score": 0.04159998352293262,
+      "text": "Ottoman Empire\nand Pontic Greeks. The Empire's defeat and the occupation of part of its territory by the Allied Powers in the aftermath of World War I resulted in the emergence of a new state, Turkey, in the Ottoman Anatolian heartland following the Turkish War of Independence, as well as the founding of modern Balkan and Middle Eastern states and the partitioning of the Ottoman Empire.",
+      "score_breakdown": {
+        "dense": 0.049858334097516964,
+        "graph": 0.04725966589766096,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fox_sports_west_and_prime_ticket_0",
+      "passage_index": 11,
+      "title": "Fox Sports West and Prime Ticket",
+      "score": 0.04159493326663692,
+      "text": "Fox Sports West and Prime Ticket\nFox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area. Fox Sports West and Prime Ticket maintain general offices and studios based at the Staples Center in Downtown Los Angeles.",
+      "score_breakdown": {
+        "dense": 0.050129657476212945,
+        "graph": 0.04674540551573266,
         "fact": 0.0
       }
     }
@@ -448,7 +422,7 @@
     "entity": [
       {
         "node_id": "entity:adelphia",
-        "score": 0.05041148510654769,
+        "score": 0.057590652068764694,
         "text": "Adelphia",
         "metadata": {
           "canonical_name": "Adelphia",
@@ -462,42 +436,8 @@
         }
       },
       {
-        "node_id": "entity:adelphia_communications_corporation",
-        "score": 0.03728420827913795,
-        "text": "Adelphia Communications Corporation",
-        "metadata": {
-          "canonical_name": "Adelphia Communications Corporation",
-          "aliases": [
-            "ACC",
-            "Adelphia Communications Corporation"
-          ],
-          "surface_forms": [
-            "ACC",
-            "Adelphia Communications Corporation"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:title_anchor_empire_sports_network",
-        "score": 0.03673360331362018,
-        "text": "Empire Sports Network",
-        "metadata": {
-          "canonical_name": "Empire Sports Network",
-          "aliases": [
-            "ESN",
-            "Empire Sports Network"
-          ],
-          "surface_forms": [
-            "ESN",
-            "Empire Sports Network"
-          ],
-          "title_anchor": "Empire Sports Network"
-        }
-      },
-      {
         "node_id": "entity:title_anchor_ottoman_empire",
-        "score": 0.035800813606780044,
+        "score": 0.043938290683765494,
         "text": "Ottoman Empire",
         "metadata": {
           "canonical_name": "Ottoman Empire",
@@ -513,8 +453,42 @@
         }
       },
       {
+        "node_id": "entity:title_anchor_empire_sports_network",
+        "score": 0.042814527398140026,
+        "text": "Empire Sports Network",
+        "metadata": {
+          "canonical_name": "Empire Sports Network",
+          "aliases": [
+            "ESN",
+            "Empire Sports Network"
+          ],
+          "surface_forms": [
+            "ESN",
+            "Empire Sports Network"
+          ],
+          "title_anchor": "Empire Sports Network"
+        }
+      },
+      {
+        "node_id": "entity:adelphia_communications_corporation",
+        "score": 0.042580568486502296,
+        "text": "Adelphia Communications Corporation",
+        "metadata": {
+          "canonical_name": "Adelphia Communications Corporation",
+          "aliases": [
+            "ACC",
+            "Adelphia Communications Corporation"
+          ],
+          "surface_forms": [
+            "ACC",
+            "Adelphia Communications Corporation"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
         "node_id": "entity:time_warner_cable",
-        "score": 0.03110502442279634,
+        "score": 0.0359337575276547,
         "text": "Time Warner Cable",
         "metadata": {
           "canonical_name": "Time Warner Cable",
@@ -531,7 +505,7 @@
       },
       {
         "node_id": "entity:ea_sports_network",
-        "score": 0.025291938580276584,
+        "score": 0.02996447571669185,
         "text": "EA Sports Network",
         "metadata": {
           "canonical_name": "EA Sports Network",
@@ -550,7 +524,7 @@
       },
       {
         "node_id": "entity:title_anchor_nova_sports",
-        "score": 0.021586904483446245,
+        "score": 0.026490042133202562,
         "text": "Nova Sports",
         "metadata": {
           "canonical_name": "Nova Sports",
@@ -567,7 +541,7 @@
       },
       {
         "node_id": "entity:ottoman",
-        "score": 0.020360252126216144,
+        "score": 0.024986176696928333,
         "text": "Ottoman",
         "metadata": {
           "canonical_name": "Ottoman",
@@ -584,7 +558,7 @@
     "sentence": [
       {
         "node_id": "sentence:windjammer_communications_0_0_windjammer_cable_is_a_small_cable_company_formed_by_the_sale_of_25_systems_that",
-        "score": 0.03314732993051291,
+        "score": 0.03825888133026471,
         "text": "Windjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia.",
         "metadata": {
           "title": "Windjammer Communications",
@@ -617,7 +591,7 @@
       },
       {
         "node_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
-        "score": 0.03159962419375464,
+        "score": 0.03673577158317534,
         "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
         "metadata": {
           "title": "Empire Sports Network",
@@ -651,7 +625,7 @@
     "chunk": [
       {
         "node_id": "chunk:empire_sports_network_0",
-        "score": 0.007374030058907469,
+        "score": 0.008635308506011165,
         "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy.",
         "metadata": {
           "title": "Empire Sports Network",
@@ -673,89 +647,65 @@
         }
       }
     ],
-    "qa_context": "Empire Sports Network\nEmpire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy.\n\nOttoman Empire\nOttoman Empire\nWith Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries. Following a long period of military setbacks against European powers, the Ottoman Empire gradually declined into the late nineteenth century. The empire allied with Germany in the early 20th century, with the imperial ambition of recovering its lost territories, joining in World War I to achieve this ambition on the side of Germany and the Central Powers. While the Empire was able to largely hold its own during the conflict, it was struggling with internal dissent, especially with the Arab Revolt in its Arabian holdings. Starting before the war, but growing increasingly common and violent during it, major atrocities were committed by the Ottoman government against the Armenians, Assyrians and Pontic Greeks. The Empire's defeat and the occupation of part of its territory by the Allied Powers in the aftermath of World War I resulted in the emergence of a new state, Turkey, in the Ottoman Anatolian heartland following\n\nNova Sports\nNova Sports\nNova Sports is a premium Sports service in Greece and is owned by Forthnet Group, a subsidiary of Greek Telecommunications company Forthnet. It launched in 1994 as \"Supersport\" and at the time was the first ever premium sports service in Greece. It is available exclusively on Nova, a DTH satellite service. Nova Sports is available terrestrially and via satellite only on Nova.\n\nFox Sports West and Prime Ticket\nFox Sports West and Prime Ticket\nFox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area. Fox Sports West and Prime Ticket maintain general offices and studios based at the Staples Center in Downtown Los Angeles.\n\nWindjammer Communications\nWindjammer Communications\nWindjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia. Windjammer was created specifically for this deal and consisted of Boston private-equity concern MAST Capital Management and Jupiter, Fla.-based small cable operator Communications Construction Services (CCS).\n\nEmpire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.\n\nOttoman Empire\nWith Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries.\n\nComcast Sports Southwest\nComcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas.\n\nFox Sports 1\nFox Sports 1\nFox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube\n\nComcast Sports Southwest\nComcast Sports Southwest\nComcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal. The channel was launched on September 1, 2009 and had a similar format to Comcast/Charter Sports Southeast, which launched ten years earlier. Both networks shared the same logo and focused primarily on collegiate and high school sports.\n\nWFAN-FM\nWFAN-FM\nWFAN-FM (101.9 MHz), also known as \"Sports Radio 66 and 101.9 FM\" or \"The Fan\", is a commercial FM sports radio station licensed to New York City. The station is owned and operated by Entercom, and is simulcast with WFAN (660 AM). WFAN-FM's studios are located in the combined Entercom facility in the Hudson Square neighborhood of Manhattan and its transmitter is located at the Empire State Building.",
+    "qa_context": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.\n\nComcast Sports Southwest\nComcast Sports Southwest Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal.\n\nFox Sports 1\nFox Sports 1 Fox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube",
     "retrieved_passages": [
       {
         "node_id": "chunk:empire_sports_network_0",
         "passage_index": 2,
         "title": "Empire Sports Network",
-        "score": 0.07490457510822417,
+        "score": 0.08207545942113473,
         "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy.",
         "score_breakdown": {
-          "dense": 0.050877577454189415,
-          "graph": 0.05091024703532673,
-          "fact": 0.21099222265214643
+          "dense": 0.050877650135638934,
+          "graph": 0.05159388935056846,
+          "fact": 0.25743056694241856
         }
       },
       {
         "node_id": "chunk:ottoman_empire_0",
         "passage_index": 1,
         "title": "Ottoman Empire",
-        "score": 0.07401999602771896,
+        "score": 0.08199822829699159,
         "text": "Ottoman Empire\nWith Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries. Following a long period of military setbacks against European powers, the Ottoman Empire gradually declined into the late nineteenth century. The empire allied with Germany in the early 20th century, with the imperial ambition of recovering its lost territories, joining in World War I to achieve this ambition on the side of Germany and the Central Powers. While the Empire was able to largely hold its own during the conflict, it was struggling with internal dissent, especially with the Arab Revolt in its Arabian holdings. Starting before the war, but growing increasingly common and violent during it, major atrocities were committed by the Ottoman government against the Armenians, Assyrians and Pontic Greeks. The Empire's defeat and the occupation of part of its territory by the Allied Powers in the aftermath of World War I resulted in the emergence of a new state, Turkey, in the Ottoman Anatolian heartland following",
         "score_breakdown": {
-          "dense": 0.049761373483890904,
-          "graph": 0.05023503805767032,
-          "fact": 0.21053819462851908
+          "dense": 0.04976133962450667,
+          "graph": 0.051065374091889416,
+          "fact": 0.26206586183964065
         }
       },
       {
         "node_id": "chunk:nova_sports_0",
         "passage_index": 6,
         "title": "Nova Sports",
-        "score": 0.07255555651817942,
+        "score": 0.08014401028546564,
         "text": "Nova Sports\nNova Sports is a premium Sports service in Greece and is owned by Forthnet Group, a subsidiary of Greek Telecommunications company Forthnet. It launched in 1994 as \"Supersport\" and at the time was the first ever premium sports service in Greece. It is available exclusively on Nova, a DTH satellite service. Nova Sports is available terrestrially and via satellite only on Nova.",
         "score_breakdown": {
-          "dense": 0.049995625821775413,
-          "graph": 0.04876222961679565,
-          "fact": 0.20286195620776162
-        }
-      },
-      {
-        "node_id": "chunk:fox_sports_west_and_prime_ticket_0",
-        "passage_index": 11,
-        "title": "Fox Sports West and Prime Ticket",
-        "score": 0.07042792704908567,
-        "text": "Fox Sports West and Prime Ticket\nFox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area. Fox Sports West and Prime Ticket maintain general offices and studios based at the Staples Center in Downtown Los Angeles.",
-        "score_breakdown": {
-          "dense": 0.0501297302700271,
-          "graph": 0.04848376900237961,
-          "fact": 0.18874296466571247
+          "dense": 0.049995586027181745,
+          "graph": 0.04923266615454768,
+          "fact": 0.2525109208276759
         }
       },
       {
         "node_id": "chunk:windjammer_communications_0",
         "passage_index": 16,
         "title": "Windjammer Communications",
-        "score": 0.07035544521266801,
+        "score": 0.07665382411223999,
         "text": "Windjammer Communications\nWindjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia. Windjammer was created specifically for this deal and consisted of Boston private-equity concern MAST Capital Management and Jupiter, Fla.-based small cable operator Communications Construction Services (CCS).",
         "score_breakdown": {
-          "dense": 0.049973347669902954,
-          "graph": 0.049468015724474346,
-          "fact": 0.1868646618458605
+          "dense": 0.0499732875127901,
+          "graph": 0.049898728072218984,
+          "fact": 0.22799265039026495
         }
       },
       {
         "node_id": "chunk:ea_sports_0",
         "passage_index": 15,
         "title": "EA Sports",
-        "score": 0.04191934376532959,
+        "score": 0.04199118285868917,
         "text": "EA Sports\nEA Sports is a division and brand of Electronic Arts that creates and develops sports video games. Formerly a marketing gimmick of Electronic Arts, in which they tried to imitate real - life sports networks by calling themselves the ``EA Sports Network ''(EASN) with pictures or endorsements with real commentators such as John Madden, it soon grew up to become a sub-label on its own, releasing game series such as NBA Live, FIFA, NHL, Madden NFL, and NASCAR. The best selling EA Sports series is the FIFA series with over 100 million units sold.",
         "score_breakdown": {
-          "dense": 0.05003411178913909,
-          "graph": 0.048001940937676985,
-          "fact": 0.0
-        }
-      },
-      {
-        "node_id": "chunk:fox_sports_1_0",
-        "passage_index": 18,
-        "title": "Fox Sports 1",
-        "score": 0.041859194311723254,
-        "text": "Fox Sports 1\nFox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube",
-        "score_breakdown": {
-          "dense": 0.05014885291688287,
-          "graph": 0.04759108402479226,
+          "dense": 0.050034212909615704,
+          "graph": 0.04824121919466844,
           "fact": 0.0
         }
       },
@@ -763,23 +713,11 @@
         "node_id": "chunk:comcast_sports_southwest_0",
         "passage_index": 5,
         "title": "Comcast Sports Southwest",
-        "score": 0.041763933157773755,
+        "score": 0.04181215618609803,
         "text": "Comcast Sports Southwest\nComcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal. The channel was launched on September 1, 2009 and had a similar format to Comcast/Charter Sports Southeast, which launched ten years earlier. Both networks shared the same logo and focused primarily on collegiate and high school sports.",
         "score_breakdown": {
-          "dense": 0.04998225924342481,
-          "graph": 0.04757896857963368,
-          "fact": 0.0
-        }
-      },
-      {
-        "node_id": "chunk:premier_league_0",
-        "passage_index": 14,
-        "title": "Premier League",
-        "score": 0.04164561180419452,
-        "text": "Premier League\nThe Premier League is particularly popular in Asia, where it is the most widely distributed sports programme. In Australia, Fox Sports broadcasts almost all of the season's 380 matches live, and Foxtel gives subscribers the option of selecting which Saturday 3pm match to watch. In India, the matches are broadcast live on STAR Sports. In China, the broadcast rights were awarded to Super Sports in a six-year agreement that began in the 2013–14 season. As of the 2013–14 season, Canadian broadcast rights to the Premier League are jointly owned by Sportsnet and TSN, with both rival networks holding rights to 190 matches per season.",
-        "score_breakdown": {
-          "dense": 0.04991485801027164,
-          "graph": 0.0473081329951504,
+          "dense": 0.04998260235099608,
+          "graph": 0.047739082976833935,
           "fact": 0.0
         }
       },
@@ -787,11 +725,47 @@
         "node_id": "chunk:wfan_fm_0",
         "passage_index": 10,
         "title": "WFAN-FM",
-        "score": 0.04164515054229033,
+        "score": 0.041645968068198,
         "text": "WFAN-FM\nWFAN-FM (101.9 MHz), also known as \"Sports Radio 66 and 101.9 FM\" or \"The Fan\", is a commercial FM sports radio station licensed to New York City. The station is owned and operated by Entercom, and is simulcast with WFAN (660 AM). WFAN-FM's studios are located in the combined Entercom facility in the Hudson Square neighborhood of Manhattan and its transmitter is located at the Empire State Building.",
         "score_breakdown": {
-          "dense": 0.05021648531685232,
-          "graph": 0.04675361206007185,
+          "dense": 0.050216659811190785,
+          "graph": 0.04675601724014356,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fox_sports_1_0",
+        "passage_index": 18,
+        "title": "Fox Sports 1",
+        "score": 0.041625862607702055,
+        "text": "Fox Sports 1\nFox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube",
+        "score_breakdown": {
+          "dense": 0.050148794557597264,
+          "graph": 0.04681341867007853,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ottoman_empire_1",
+        "passage_index": 1,
+        "title": "Ottoman Empire",
+        "score": 0.04159998352293262,
+        "text": "Ottoman Empire\nand Pontic Greeks. The Empire's defeat and the occupation of part of its territory by the Allied Powers in the aftermath of World War I resulted in the emergence of a new state, Turkey, in the Ottoman Anatolian heartland following the Turkish War of Independence, as well as the founding of modern Balkan and Middle Eastern states and the partitioning of the Ottoman Empire.",
+        "score_breakdown": {
+          "dense": 0.049858334097516964,
+          "graph": 0.04725966589766096,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fox_sports_west_and_prime_ticket_0",
+        "passage_index": 11,
+        "title": "Fox Sports West and Prime Ticket",
+        "score": 0.04159493326663692,
+        "text": "Fox Sports West and Prime Ticket\nFox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area. Fox Sports West and Prime Ticket maintain general offices and studios based at the Staples Center in Downtown Los Angeles.",
+        "score_breakdown": {
+          "dense": 0.050129657476212945,
+          "graph": 0.04674540551573266,
           "fact": 0.0
         }
       }
@@ -802,23 +776,15 @@
         "resolved_sub_question": "Who was the owner of Empire Sports Network?",
         "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
         "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-        "score": 0.5757278575412206,
+        "score": 0.5756611437312535,
         "source_title": "Empire Sports Network",
         "hop_answer": "Adelphia Communications Corporation",
-        "hop_thought": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
-        "hop_raw_response": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
+        "hop_thought": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
+        "hop_raw_response": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
         "evidence_passages": [
           {
             "title": "Empire Sports Network",
             "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-          },
-          {
-            "title": "Empire Sports Network",
-            "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-          },
-          {
-            "title": "Ottoman Empire",
-            "text": "With Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries."
           }
         ]
       },
@@ -827,23 +793,15 @@
         "resolved_sub_question": "What company succeeded this owner? Context: Adelphia Communications Corporation.",
         "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
         "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-        "score": 0.4807376969973246,
+        "score": 0.48069455515543624,
         "source_title": "Empire Sports Network",
         "hop_answer": "Unknown",
-        "hop_thought": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.",
-        "hop_raw_response": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.\nAnswer: Unknown",
+        "hop_thought": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.",
+        "hop_raw_response": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Empire Sports Network",
             "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-          },
-          {
-            "title": "Empire Sports Network",
-            "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-          },
-          {
-            "title": "Comcast Sports Southwest",
-            "text": "Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas."
           }
         ]
       }
@@ -863,13 +821,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. Who was the owner of Empire Sports Network? => Adelphia Communications Corporation (source: Empire Sports Network)\n2. What company succeeded this owner? (source: Empire Sports Network)\n\nFact hints:\n- Empire Sports Network owned by Adelphia Communications Corporation\n- Empire Sports Network was American regional sports network\n\nWikipedia Title: Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.\n\nWikipedia Title: Empire Sports Network\nEmpire Sports Network Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio.\n\nWikipedia Title: Comcast Sports Southwest\nComcast Sports Southwest Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal.\n\nWikipedia Title: Fox Sports 1\nFox Sports 1 Fox Sports 1 Launched August 17, 2013 (2013 - 08 - 17) Network Fox Sports Owned by Fox Entertainment Group (21st Century Fox) Picture format 720p (HDTV) (HD feed downgraded to letterboxed 480i for SD feed) Slogan The 1 Country United States Language English Broadcast area United States Puerto Rico Caribbean Headquarters Los Angeles, California Replaced Speed (2005 -- 2013) Sister channel (s) Fox Sports 2 Fox Soccer Plus Fox Deportes Fox Sports Networks Fox College Sports Big Ten Network Fox Sports Website www.foxsports.com/watch/fs1 www.foxsports.com Availability Satellite DirecTV Channel 219 (HD / SD) Dish Network Channel 150 (HD / SD) Cable Available on most U.S. cable systems Consult your local cable provider for channel availability IPTV AT&T U-verse Channel 1652 (HD) Channel 652 (SD) Verizon FiOS Channel 583 (HD) Channel 83 (SD) Google Fiber Channel 208 (HD) Streaming media Fox Sports Go Watch live (U.S. cable internet subscribers only; requires login to stream content) DirecTV Now Internet Protocol television fuboTV Internet Protocol television Hulu Live TV Internet Protocol television PlayStation Vue Internet Protocol television Sling TV Internet Protocol television YouTube\n\nWikipedia Title: Nova Sports\nIt launched in 1994 as \"Supersport\" and at the time was the first ever premium sports service in Greece. Nova Sports Nova Sports is a premium Sports service in Greece and is owned by Forthnet Group, a subsidiary of Greek Telecommunications company Forthnet.\n\nWikipedia Title: Fox Sports West and Prime Ticket\nFox Sports West and Prime Ticket Fox Sports West and Prime Ticket are American regional sports networks owned by The Walt Disney Company, and operate as Fox Sports Networks affiliates. The channels broadcast regional coverage of professional and collegiate sports events in California, focusing primarily on professional sports teams based in the Greater Los Angeles area.\n\nWikipedia Title: Comcast Sports Southwest\nComcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas.\n\nWikipedia Title: Ottoman Empire\nWith Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries.\n\nWikipedia Title: Ottoman Empire\nOttoman Empire With Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries. While the Empire was able to largely hold its own during the conflict, it was struggling with internal dissent, especially with the Arab Revolt in its Arabian holdings.\n\nWikipedia Title: Windjammer Communications\nWindjammer Communications Windjammer Cable is a small cable company formed by the sale of 25 systems that served 80,000 customers in rural areas that Time Warner Cable acquired from the bankrupt Adelphia. Windjammer was created specifically for this deal and consisted of Boston private-equity concern MAST Capital Management and Jupiter, Fla.-based small cable operator Communications Construction Services (CCS).\n\nWikipedia Title: WFAN-FM\nWFAN-FM's studios are located in the combined Entercom facility in the Hudson Square neighborhood of Manhattan and its transmitter is located at the Empire State Building. The station is owned and operated by Entercom, and is simulcast with WFAN (660 AM).\n\nQuestion: What company succeeded the owner of Empire Sports Network?\nThought:"
+        "content": "Intermediate reasoning hints:\n1. Who was the owner of Empire Sports Network? => Adelphia Communications Corporation (source: Empire Sports Network)\n2. What company succeeded this owner? (source: Empire Sports Network)\n\nFact hints:\n- Empire Sports Network owned by Adelphia Communications Corporation\n- Empire Sports Network was American regional sports network\n\nWikipedia Title: Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.\n\nWikipedia Title: Empire Sports Network\nEmpire Sports Network Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio.\n\nWikipedia Title: Comcast Sports Southwest\nComcast Sports Southwest Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas. It was owned by the NBC Sports Group unit of NBCUniversal.\n\nWikipedia Title: Nova Sports\nIt launched in 1994 as \"Supersport\" and at the time was the first ever premium sports service in Greece. Nova Sports Nova Sports is a premium Sports service in Greece and is owned by Forthnet Group, a subsidiary of Greek Telecommunications company Forthnet.\n\nWikipedia Title: Ottoman Empire\nOttoman Empire With Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries. While the Empire was able to largely hold its own during the conflict, it was struggling with internal dissent, especially with the Arab Revolt in its Arabian holdings.\n\nQuestion: What company succeeded the owner of Empire Sports Network?\nThought:"
       }
     ]
   },
-  "qa_thought": "The passage indicates that Empire Sports Network was owned by Adelphia Communications Corporation but does not provide information about a successor company. There is no mention of Adelphia being sold or replaced by another company in the context of Empire Sports Network.",
+  "qa_thought": "The passage indicates that Empire Sports Network was owned by Adelphia Communications Corporation but does not provide information about a successor company. There is no mention of Adelphia Communications Corporation being replaced by another company in the context of Empire Sports Network.",
   "predicted_answer": "Unknown",
-  "qa_raw_response": "The passage indicates that Empire Sports Network was owned by Adelphia Communications Corporation but does not provide information about a successor company. There is no mention of Adelphia being sold or replaced by another company in the context of Empire Sports Network.\nAnswer: Unknown",
+  "qa_raw_response": "The passage indicates that Empire Sports Network was owned by Adelphia Communications Corporation but does not provide information about a successor company. There is no mention of Adelphia Communications Corporation being replaced by another company in the context of Empire Sports Network.\nAnswer: Unknown",
   "sample_metadata": {
     "sample_id": "2hop__354635_174222",
     "question": "What company succeeded the owner of Empire Sports Network?",

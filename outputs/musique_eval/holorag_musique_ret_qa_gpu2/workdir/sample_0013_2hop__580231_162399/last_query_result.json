@@ -1,0 +1,1086 @@
+{
+  "query": "When did the father of Dahyabhai Patel die?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Dahyabhai Patel"
+  ],
+  "raw_query_entities": [
+    "Dahyabhai Patel"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Dahyabhai Patel",
+      "node_id": "entity:title_anchor_dahyabhai_patel",
+      "resolved_text": "Dahyabhai Patel",
+      "score": 0.8341428571428572,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.20714285714285718,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the father of Dahyabhai Patel?",
+    "When did this person die?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_dahyabhai_patel",
+      "score": 1.5823626704254192,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:dahyabhai_patel_1906_1973",
+      "score": 1.0987247166681289,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sardar_vallabhbhai_patel",
+      "score": 1.0844730516362293,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_vallabhbhai_patel",
+      "score": 0.8233049790490777,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:vallabhbhai_patel",
+      "score": 0.6376379642864448,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sardar_patel",
+      "score": 0.6376371582465076,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hardik",
+      "score": 0.3781618445417542,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "score": 0.33565437798134046,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hardik_patel",
+      "score": 0.31763241161647326,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bharat_and_usha_patel",
+      "score": 0.3176232107228281,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:jabbar_patel",
+      "score": 0.2626272582088093,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:15_december_1950",
+      "score": 0.26260864956583224,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:hardik_patel_born_to_bharat_and_usha_patel_sentence_hardik_patel_0_0_hardik_patel_was_born_on_20_july_1993_in_a_gujarati",
+      "text": "Hardik Patel born to Bharat and Usha Patel",
+      "head_id": "entity:title_anchor_hardik_patel",
+      "tail_id": "entity:bharat_and_usha_patel",
+      "sentence_id": "sentence:hardik_patel_0_0_hardik_patel_was_born_on_20_july_1993_in_a_gujarati_patel_family_to_bharat_and_u",
+      "chunk_id": "chunk:hardik_patel_0",
+      "document_index": 5,
+      "score": 0.3151348704514619
+    },
+    {
+      "fact_id": "fact:dahyabhai_patel_son_of_sardar_vallabhbhai_patel_sentence_dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_in",
+      "text": "Dahyabhai Patel son of Sardar Vallabhbhai Patel",
+      "head_id": "entity:title_anchor_dahyabhai_patel",
+      "tail_id": "entity:sardar_vallabhbhai_patel",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "chunk_id": "chunk:dahyabhai_patel_0",
+      "document_index": 12,
+      "score": 0.26914387340231993
+    },
+    {
+      "fact_id": "fact:vallabhbhai_patel_died_on_15_december_1950_sentence_vallabhbhai_patel_0_0_vallabhbhai_patel_31_october_1875_15_december_",
+      "text": "Vallabhbhai Patel died on 15 December 1950",
+      "head_id": "entity:title_anchor_vallabhbhai_patel",
+      "tail_id": "entity:15_december_1950",
+      "sentence_id": "sentence:vallabhbhai_patel_0_0_vallabhbhai_patel_31_october_1875_15_december_1950_popularly_known_as_sarda",
+      "chunk_id": "chunk:vallabhbhai_patel_0",
+      "document_index": 8,
+      "score": 0.2601354284247772
+    },
+    {
+      "fact_id": "fact:ek_hota_vidushak_directed_by_jabbar_patel_sentence_ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed",
+      "text": "Ek Hota Vidushak directed by Jabbar Patel",
+      "head_id": "entity:title_anchor_ek_hota_vidushak",
+      "tail_id": "entity:jabbar_patel",
+      "sentence_id": "sentence:ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed_by_jabbar_patel_and_produc",
+      "chunk_id": "chunk:ek_hota_vidushak_0",
+      "document_index": 0,
+      "score": 0.26013029788706366
+    },
+    {
+      "fact_id": "fact:parliament_member_of_dahyabhai_patel_1906_1973_sentence_dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_ind",
+      "text": "Parliament member_of Dahyabhai Patel 1906 1973",
+      "head_id": "entity:parliament",
+      "tail_id": "entity:dahyabhai_patel_1906_1973",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "chunk_id": "chunk:dahyabhai_patel_0",
+      "document_index": 12,
+      "score": 0.21413882923206137
+    },
+    {
+      "fact_id": "fact:ek_hota_vidushak_is_a_1992_marathi_film_sentence_ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed_b",
+      "text": "Ek Hota Vidushak is a 1992 Marathi film",
+      "head_id": "entity:title_anchor_ek_hota_vidushak",
+      "tail_id": "entity:1992_marathi_film",
+      "sentence_id": "sentence:ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed_by_jabbar_patel_and_produc",
+      "chunk_id": "chunk:ek_hota_vidushak_0",
+      "document_index": 0,
+      "score": 0.19612565185698355
+    },
+    {
+      "fact_id": "fact:india_member_of_dahyabhai_patel_1906_1973_sentence_dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_l",
+      "text": "India member_of Dahyabhai Patel 1906 1973",
+      "head_id": "entity:india",
+      "tail_id": "entity:dahyabhai_patel_1906_1973",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "chunk_id": "chunk:dahyabhai_patel_0",
+      "document_index": 12,
+      "score": 0.18201800484725217
+    },
+    {
+      "fact_id": "fact:dahyabhai_patel_member_of_parliament_of_india_sentence_dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indi",
+      "text": "Dahyabhai Patel member of Parliament of India",
+      "head_id": "entity:title_anchor_dahyabhai_patel",
+      "tail_id": "entity:parliament_of_india",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "chunk_id": "chunk:dahyabhai_patel_0",
+      "document_index": 12,
+      "score": 0.1691395590739892
+    }
+  ],
+  "bridge_entities": [
+    "Sardar Vallabhbhai Patel",
+    "Parliament of India",
+    "India",
+    "Dahyabhai Patel 1906 1973",
+    "Parliament",
+    "15 December 1950"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the father of Dahyabhai Patel?",
+      "resolved_sub_question": "Who is the father of Dahyabhai Patel?",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "sentence": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.",
+      "score": 0.5550129142857143,
+      "source_title": "Dahyabhai Patel",
+      "hop_answer": "Sardar Vallabhbhai Patel",
+      "hop_thought": "The text clearly states that Dahyabhai Patel is the son of Sardar Vallabhbhai Patel.",
+      "hop_raw_response": "The text clearly states that Dahyabhai Patel is the son of Sardar Vallabhbhai Patel.\nAnswer: Sardar Vallabhbhai Patel",
+      "evidence_passages": [
+        {
+          "title": "Dahyabhai Patel",
+          "text": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India."
+        },
+        {
+          "title": "Dahyabhai Patel",
+          "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944."
+        },
+        {
+          "title": "Dahyabhai Patel",
+          "text": "Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did this person die?",
+      "resolved_sub_question": "When did this person die? Context: Sardar Vallabhbhai Patel.",
+      "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "sentence": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.",
+      "score": 0.492152380952381,
+      "source_title": "Dahyabhai Patel",
+      "hop_answer": "15 December 1950",
+      "hop_thought": "The context specifies Sardar Vallabhbhai Patel, and the evidence states that he died on 15 December 1950.",
+      "hop_raw_response": "The context specifies Sardar Vallabhbhai Patel, and the evidence states that he died on 15 December 1950.\nAnswer: 15 December 1950",
+      "evidence_passages": [
+        {
+          "title": "Dahyabhai Patel",
+          "text": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India."
+        },
+        {
+          "title": "Dahyabhai Patel",
+          "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944."
+        },
+        {
+          "title": "Vallabhbhai Patel",
+          "text": "Vallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_dahyabhai_patel",
+      "score": 0.09447552729687583,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+      "score": 0.08456914849140579,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:sardar_vallabhbhai_patel",
+      "score": 0.0740728578061918,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:dahyabhai_patel_1906_1973",
+      "score": 0.07138026585050555,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_vallabhbhai_patel",
+      "score": 0.06298532590591246,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sardar_patel",
+      "score": 0.04716600174519749,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:vallabhbhai_patel",
+      "score": 0.042823997844320026,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:vallabhbhai_patel_0_0_vallabhbhai_patel_31_october_1875_15_december_1950_popularly_known_as_sarda",
+      "score": 0.034048889236104475,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed_by_jabbar_patel_and_produc",
+      "score": 0.024825170047653895,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hardik_patel",
+      "score": 0.02345953208453353,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:dahyabhai_patel_0_1_educated_in_bombay_dahyabhai_patel_graduated_from_the_gujarat_vidyapith_and_beg",
+      "score": 0.023388062579534002,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:hardik_patel_0_0_hardik_patel_was_born_on_20_july_1993_in_a_gujarati_patel_family_to_bharat_and_u",
+      "score": 0.022465116083652613,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:hardik",
+      "score": 0.02175633374541285,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:india",
+      "score": 0.021015124898837778,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:parliament",
+      "score": 0.020077987378165275,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ek_hota_vidushak",
+      "score": 0.01948712140652236,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bharat_and_usha_patel",
+      "score": 0.01859813763510173,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:jabbar_patel",
+      "score": 0.016394052806367687,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:15_december_1950",
+      "score": 0.01626234681229223,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:parliament_of_india",
+      "score": 0.015324221887949198,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:dahyabhai_patel_0",
+      "passage_index": 12,
+      "title": "Dahyabhai Patel",
+      "score": 0.08294334141681198,
+      "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944.",
+      "score_breakdown": {
+        "dense": 0.050993867547539436,
+        "graph": 0.05889259132818376,
+        "fact": 0.2481929124480677
+      }
+    },
+    {
+      "node_id": "chunk:hardik_patel_0",
+      "passage_index": 5,
+      "title": "Hardik Patel",
+      "score": 0.08222734297984505,
+      "text": "Hardik Patel\nHardik Patel was born on 20 July 1993 in a Gujarati Patel family to Bharat and Usha Patel. In 2004, his parents moved to Viramgam. Hardik studied from Class VI to Class VIII at Divya Jyot School in Viramgam, before moving to K B Shah Vinay Mandir, where he studied until Class XII. He was a poor student and a cricket enthusiast.",
+      "score_breakdown": {
+        "dense": 0.05048842154350483,
+        "graph": 0.051591983122611935,
+        "fact": 0.2598741079608921
+      }
+    },
+    {
+      "node_id": "chunk:vallabhbhai_patel_0",
+      "passage_index": 8,
+      "title": "Vallabhbhai Patel",
+      "score": 0.08054433914905035,
+      "text": "Vallabhbhai Patel\nVallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician. He served as the first Deputy Prime Minister of India. He was an Indian barrister and statesman, a senior leader of the Indian National Congress and a founding father of the Republic of India who played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. In India and elsewhere, he was often called Sardar, meaning \"chief\" in Hindi, Urdu, and Persian. He acted as Home Minister during the political integration of India and the Indo-Pakistani War of 1947.Patel was raised in the countryside of state of Gujarat. He was a successful lawyer. He subsequently organised peasants from Kheda, Borsad, and Bardoli in Gujarat in non-violent civil disobedience against the British Raj, becoming one of the most influential leaders in Gujarat. He was appointed as the 49th President of Indian National Congress, organising the party for elections in 1934 and 1937 while promoting the Quit India Movement.",
+      "score_breakdown": {
+        "dense": 0.05032352526850905,
+        "graph": 0.053237773788386476,
+        "fact": 0.24596712076569616
+      }
+    },
+    {
+      "node_id": "chunk:ek_hota_vidushak_0",
+      "passage_index": 0,
+      "title": "Ek Hota Vidushak",
+      "score": 0.07956425155787894,
+      "text": "Ek Hota Vidushak\nEk Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India. The film stars Laxmikant Berde, Madhu Kambikar, Nilu Phule, Varsha Usgaonkar in lead roles and Mohan Agashe and Dilip Prabhavalkar in supporting roles.",
+      "score_breakdown": {
+        "dense": 0.049823610192426704,
+        "graph": 0.05088795709414222,
+        "fact": 0.245965858825344
+      }
+    },
+    {
+      "node_id": "chunk:bardoli_satyagraha_0",
+      "passage_index": 6,
+      "title": "Bardoli Satyagraha",
+      "score": 0.04256532065232178,
+      "text": "Bardoli Satyagraha\nThe Bardoli Satyagraha of 1928, in the state of Gujarat, India during the period of the British Raj, was a major episode of civil disobedience and revolt in the Indian Independence Movement. The movement was eventually led by Vallabhbhai Patel, and its success gave rise to Patel becoming one of the main leaders of the independence movement.",
+      "score_breakdown": {
+        "dense": 0.05006493964584848,
+        "graph": 0.05009867949035038,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:vadeli_0",
+      "passage_index": 13,
+      "title": "Vadeli",
+      "score": 0.042318177572019056,
+      "text": "Vadeli\nVadeli is a small village in Borsad taluka, Anand district, Gujarat, India. It is located around 8 km from Borsad. It is surrounded by the fertile Charotar region which largely produces tobacco, rice, cotton, lady finger, Tomato, Potato and other agricultural crops. THAKOR owns the majority of business, majority of Patels are from 60 house community that dominates Amul Sahkari Madali Milk Dairy and Patel bazar. Other major communities are Darbar, Thakor, Brahmins and Christians. Gandhiji passed through Vadeli Patiya in Dandi March satyagrah, Borsad satyagraha.",
+      "score_breakdown": {
+        "dense": 0.05014535443873384,
+        "graph": 0.04912744210238482,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bholabhai_patel_0",
+      "passage_index": 16,
+      "title": "Bholabhai Patel",
+      "score": 0.04227933231679285,
+      "text": "Bholabhai Patel\nBholabhai Patel was an Indian Gujarati author. He taught numerous languages at Gujarat University and did comparative studies of literature in different languages. He translated extensively and wrote essays and travelogues. He was awarded the Padma Shri in 2008.",
+      "score_breakdown": {
+        "dense": 0.05014386831415742,
+        "graph": 0.0490006824800209,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bakor_patel_0",
+      "passage_index": 14,
+      "title": "Bakor Patel",
+      "score": 0.04227289381006902,
+      "text": "Bakor Patel\nBakor Patel is children's literature character created by Hariprasad Vyas for funny animal stories published by \"Gandiv\", a children's biweekly in Gujarati language published by Gandiv Sahitya Mandir, Surat, Gujarat, India. The humorous stories about Bakor Patel written by Vyas which first appeared in 1936 and continued till 1955. The stories include other anthropomorphic characters including his wife, Shakri Patlani. The stories were accompanied with an illustration and title printed in typical typography which were drawn by two Surat based artist brothers, Tansukh and Mansukh. The character became the icon of Gujarati children's literature and was adapted into a children's play.",
+      "score_breakdown": {
+        "dense": 0.05011149418556504,
+        "graph": 0.04903857336002747,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ketan_mehta_0",
+      "passage_index": 9,
+      "title": "Ketan Mehta",
+      "score": 0.042208687620385474,
+      "text": "Ketan Mehta\nBorn in Navsari in Gujarat, Ketan Mehta did his schooling from Sardar Patel Vidyalaya, Delhi and later graduated in film direction from Film and Television Institute of India, Pune.",
+      "score_breakdown": {
+        "dense": 0.0499988340439224,
+        "graph": 0.04903109632076051,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:how_death_came_to_earth_0",
+      "passage_index": 3,
+      "title": "How Death Came to Earth",
+      "score": 0.04217173839457457,
+      "text": "How Death Came to Earth\nHow Death Came to Earth is a 14-minute cutout animation film by Ishu Patel produced in 1971 by the National Film Board of Canada. The film deals with an Indian myth of creation, and is notable for its trippy visual style.",
+      "score_breakdown": {
+        "dense": 0.04996610011040983,
+        "graph": 0.048967944446163876,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_dahyabhai_patel",
+        "score": 0.09447552729687583,
+        "text": "Dahyabhai Patel",
+        "metadata": {
+          "canonical_name": "Dahyabhai Patel",
+          "aliases": [
+            "DP",
+            "Dahyabhai Patel"
+          ],
+          "surface_forms": [
+            "DP",
+            "Dahyabhai Patel"
+          ],
+          "title_anchor": "Dahyabhai Patel"
+        }
+      },
+      {
+        "node_id": "entity:sardar_vallabhbhai_patel",
+        "score": 0.0740728578061918,
+        "text": "Sardar Vallabhbhai Patel",
+        "metadata": {
+          "canonical_name": "Sardar Vallabhbhai Patel",
+          "aliases": [
+            "SVP",
+            "Sardar Vallabhbhai Patel"
+          ],
+          "surface_forms": [
+            "SVP",
+            "Sardar Vallabhbhai Patel"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+        "score": 0.08456914849140579,
+        "text": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.",
+        "metadata": {
+          "title": "Dahyabhai Patel",
+          "chunk_id": "chunk:dahyabhai_patel_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Dahyabhai Patel",
+              "relation": "son of",
+              "tail": "Sardar Vallabhbhai Patel"
+            },
+            {
+              "head": "Sardar Vallabhbhai Patel",
+              "relation": "was",
+              "tail": "Indian leader"
+            },
+            {
+              "head": "Dahyabhai Patel",
+              "relation": "member of",
+              "tail": "Parliament of India"
+            },
+            {
+              "head": "Dahyabhai Patel 1906 1973",
+              "relation": "has_member",
+              "tail": "Parliament"
+            },
+            {
+              "head": "Parliament",
+              "relation": "member_of",
+              "tail": "Dahyabhai Patel 1906 1973"
+            },
+            {
+              "head": "Dahyabhai Patel 1906 1973",
+              "relation": "has_member",
+              "tail": "India"
+            },
+            {
+              "head": "India",
+              "relation": "member_of",
+              "tail": "Dahyabhai Patel 1906 1973"
+            }
+          ],
+          "entities": [
+            "Dahyabhai Patel",
+            "Sardar Vallabhbhai Patel",
+            "Parliament of India",
+            "Dahyabhai Patel 1906 1973",
+            "Parliament",
+            "India"
+          ],
+          "entity_ids": [
+            "entity:dahyabhai_patel_1906_1973",
+            "entity:india",
+            "entity:indian_leader",
+            "entity:parliament",
+            "entity:parliament_of_india",
+            "entity:sardar_vallabhbhai_patel",
+            "entity:title_anchor_dahyabhai_patel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:vallabhbhai_patel_0_0_vallabhbhai_patel_31_october_1875_15_december_1950_popularly_known_as_sarda",
+        "score": 0.034048889236104475,
+        "text": "Vallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician.",
+        "metadata": {
+          "title": "Vallabhbhai Patel",
+          "chunk_id": "chunk:vallabhbhai_patel_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Vallabhbhai Patel",
+              "relation": "popularly known as",
+              "tail": "Sardar Patel"
+            },
+            {
+              "head": "Vallabhbhai Patel",
+              "relation": "was",
+              "tail": "Indian politician"
+            },
+            {
+              "head": "Vallabhbhai Patel",
+              "relation": "born on",
+              "tail": "31 October 1875"
+            },
+            {
+              "head": "Vallabhbhai Patel",
+              "relation": "died on",
+              "tail": "15 December 1950"
+            }
+          ],
+          "entities": [
+            "Vallabhbhai Patel",
+            "Sardar Patel",
+            "Indian politician"
+          ],
+          "entity_ids": [
+            "entity:15_december_1950",
+            "entity:31_october_1875",
+            "entity:indian_politician",
+            "entity:sardar_patel",
+            "entity:title_anchor_vallabhbhai_patel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ek_hota_vidushak_0_0_ek_hota_vidushak_is_a_1992_marathi_film_directed_by_jabbar_patel_and_produc",
+        "score": 0.024825170047653895,
+        "text": "Ek Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India.",
+        "metadata": {
+          "title": "Ek Hota Vidushak",
+          "chunk_id": "chunk:ek_hota_vidushak_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Ek Hota Vidushak",
+              "relation": "is a",
+              "tail": "1992 Marathi film"
+            },
+            {
+              "head": "Ek Hota Vidushak",
+              "relation": "directed by",
+              "tail": "Jabbar Patel"
+            },
+            {
+              "head": "Ek Hota Vidushak",
+              "relation": "produced by",
+              "tail": "National Film Development Corporation of India"
+            }
+          ],
+          "entities": [
+            "Ek Hota Vidushak",
+            "Jabbar Patel",
+            "National Film Development Corporation of India"
+          ],
+          "entity_ids": [
+            "entity:1992_marathi_film",
+            "entity:jabbar_patel",
+            "entity:national_film_development_corporation_of_india",
+            "entity:title_anchor_ek_hota_vidushak"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:dahyabhai_patel_0_1_educated_in_bombay_dahyabhai_patel_graduated_from_the_gujarat_vidyapith_and_beg",
+        "score": 0.023388062579534002,
+        "text": "Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay.",
+        "metadata": {
+          "title": "Dahyabhai Patel",
+          "chunk_id": "chunk:dahyabhai_patel_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Dahyabhai Patel",
+              "relation": "educated in",
+              "tail": "Bombay"
+            },
+            {
+              "head": "Dahyabhai Patel",
+              "relation": "graduated from",
+              "tail": "Gujarat Vidyapith"
+            },
+            {
+              "head": "Dahyabhai Patel",
+              "relation": "settled in",
+              "tail": "Bombay"
+            }
+          ],
+          "entities": [
+            "Dahyabhai Patel",
+            "Bombay",
+            "Gujarat Vidyapith"
+          ],
+          "entity_ids": [
+            "entity:bombay",
+            "entity:gujarat_vidyapith",
+            "entity:title_anchor_dahyabhai_patel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hardik_patel_0_0_hardik_patel_was_born_on_20_july_1993_in_a_gujarati_patel_family_to_bharat_and_u",
+        "score": 0.022465116083652613,
+        "text": "Hardik Patel was born on 20 July 1993 in a Gujarati Patel family to Bharat and Usha Patel.",
+        "metadata": {
+          "title": "Hardik Patel",
+          "chunk_id": "chunk:hardik_patel_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Hardik Patel",
+              "relation": "born on",
+              "tail": "20 July 1993"
+            },
+            {
+              "head": "Hardik Patel",
+              "relation": "born to",
+              "tail": "Bharat and Usha Patel"
+            },
+            {
+              "head": "Hardik Patel",
+              "relation": "belongs to",
+              "tail": "Gujarati Patel family"
+            }
+          ],
+          "entities": [
+            "Hardik Patel",
+            "Bharat and Usha Patel",
+            "Gujarati Patel family"
+          ],
+          "entity_ids": [
+            "entity:20_july_1993",
+            "entity:bharat_and_usha_patel",
+            "entity:gujarati_patel_family",
+            "entity:title_anchor_hardik_patel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:dahyabhai_patel_0_4_his_flat_on_sandhurst_road_and_later_prabhadevi_in_bombay_was_the_frequent_resid",
+        "score": 0.011373989123165961,
+        "text": "His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel.",
+        "metadata": {
+          "title": "Dahyabhai Patel",
+          "chunk_id": "chunk:dahyabhai_patel_0",
+          "sentence_index": 4,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "His flat",
+              "relation": "located on",
+              "tail": "Sandhurst Road"
+            },
+            {
+              "head": "His flat",
+              "relation": "later located in",
+              "tail": "Prabhadevi"
+            },
+            {
+              "head": "Prabhadevi",
+              "relation": "in",
+              "tail": "Bombay"
+            },
+            {
+              "head": "His flat",
+              "relation": "was frequent residence of",
+              "tail": "Sardar Patel"
+            }
+          ],
+          "entities": [
+            "Sandhurst Road",
+            "Prabhadevi",
+            "Bombay",
+            "Sardar Patel"
+          ],
+          "entity_ids": [
+            "entity:bombay",
+            "entity:his_flat",
+            "entity:prabhadevi",
+            "entity:sandhurst_road",
+            "entity:sardar_patel"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:dahyabhai_patel_0",
+        "score": 0.013328769983821726,
+        "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944.",
+        "metadata": {
+          "title": "Dahyabhai Patel",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:bhanumati",
+            "entity:bipin",
+            "entity:bombay",
+            "entity:dahyabhai_patel_1906_1973",
+            "entity:gautam",
+            "entity:gujarat_vidyapith",
+            "entity:his_first_wife",
+            "entity:his_flat",
+            "entity:his_son_bipin",
+            "entity:india",
+            "entity:indian_leader",
+            "entity:parliament",
+            "entity:parliament_of_india",
+            "entity:patel",
+            "entity:prabhadevi",
+            "entity:quit_india_movement",
+            "entity:sandhurst_road",
+            "entity:sardar_patel",
+            "entity:sardar_vallabhbhai_patel",
+            "entity:title_anchor_dahyabhai_patel",
+            "entity:yashoda"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ek_hota_vidushak_0",
+        "score": 0.0066484099971158075,
+        "text": "Ek Hota Vidushak\nEk Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India. The film stars Laxmikant Berde, Madhu Kambikar, Nilu Phule, Varsha Usgaonkar in lead roles and Mohan Agashe and Dilip Prabhavalkar in supporting roles.",
+        "metadata": {
+          "title": "Ek Hota Vidushak",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:1992_marathi_film",
+            "entity:dilip_prabhavalkar",
+            "entity:jabbar_patel",
+            "entity:laxmikant_berde",
+            "entity:madhu_kambikar",
+            "entity:mohan_agashe",
+            "entity:national_film_development_corporation_of_india",
+            "entity:nilu_phule",
+            "entity:title_anchor_ek_hota_vidushak",
+            "entity:varsha_usgaonkar"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:hardik_patel_0",
+        "score": 0.005909038855515294,
+        "text": "Hardik Patel\nHardik Patel was born on 20 July 1993 in a Gujarati Patel family to Bharat and Usha Patel. In 2004, his parents moved to Viramgam. Hardik studied from Class VI to Class VIII at Divya Jyot School in Viramgam, before moving to K B Shah Vinay Mandir, where he studied until Class XII. He was a poor student and a cricket enthusiast.",
+        "metadata": {
+          "title": "Hardik Patel",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:20_july_1993",
+            "entity:bharat_and_usha_patel",
+            "entity:class_vi_to_class_viii",
+            "entity:class_xii",
+            "entity:divya_jyot_school",
+            "entity:gujarati_patel_family",
+            "entity:hardik",
+            "entity:k_b_shah_vinay_mandir",
+            "entity:title_anchor_hardik_patel",
+            "entity:viramgam"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:vallabhbhai_patel_0",
+        "score": 0.005805880950863509,
+        "text": "Vallabhbhai Patel\nVallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician. He served as the first Deputy Prime Minister of India. He was an Indian barrister and statesman, a senior leader of the Indian National Congress and a founding father of the Republic of India who played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. In India and elsewhere, he was often called Sardar, meaning \"chief\" in Hindi, Urdu, and Persian. He acted as Home Minister during the political integration of India and the Indo-Pakistani War of 1947.Patel was raised in the countryside of state of Gujarat. He was a successful lawyer. He subsequently organised peasants from Kheda, Borsad, and Bardoli in Gujarat in non-violent civil disobedience against the British Raj, becoming one of the most influential leaders in Gujarat. He was appointed as the 49th President of Indian National Congress, organising the party for elections in 1934 and 1937 while promoting the Quit India Movement.",
+        "metadata": {
+          "title": "Vallabhbhai Patel",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:15_december_1950",
+            "entity:31_october_1875",
+            "entity:bardoli",
+            "entity:borsad",
+            "entity:british_raj",
+            "entity:countryside_of_state_of_gujarat",
+            "entity:deputy_prime_minister",
+            "entity:deputy_prime_minister_of_india",
+            "entity:gujarat",
+            "entity:hindi",
+            "entity:home_minister",
+            "entity:india",
+            "entity:indian",
+            "entity:indian_national_congress",
+            "entity:indian_politician",
+            "entity:indo_pakistani_war_of_1947",
+            "entity:kheda",
+            "entity:patel",
+            "entity:persian",
+            "entity:quit_india_movement",
+            "entity:republic",
+            "entity:republic_of_india",
+            "entity:sardar",
+            "entity:sardar_patel",
+            "entity:title_anchor_vallabhbhai_patel",
+            "entity:urdu"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Dahyabhai Patel\nDahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944.\n\nHardik Patel\nHardik Patel\nHardik Patel was born on 20 July 1993 in a Gujarati Patel family to Bharat and Usha Patel. In 2004, his parents moved to Viramgam. Hardik studied from Class VI to Class VIII at Divya Jyot School in Viramgam, before moving to K B Shah Vinay Mandir, where he studied until Class XII. He was a poor student and a cricket enthusiast.\n\nVallabhbhai Patel\nVallabhbhai Patel\nVallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician. He served as the first Deputy Prime Minister of India. He was an Indian barrister and statesman, a senior leader of the Indian National Congress and a founding father of the Republic of India who played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. In India and elsewhere, he was often called Sardar, meaning \"chief\" in Hindi, Urdu, and Persian. He acted as Home Minister during the political integration of India and the Indo-Pakistani War of 1947.Patel was raised in the countryside of state of Gujarat. He was a successful lawyer. He subsequently organised peasants from Kheda, Borsad, and Bardoli in Gujarat in non-violent civil disobedience against the British Raj, becoming one of the most influential leaders in Gujarat. He was appointed as the 49th President of Indian National Congress, organising the party for elections in 1934 and 1937 while promoting the Quit India Movement.\n\nEk Hota Vidushak\nEk Hota Vidushak\nEk Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India. The film stars Laxmikant Berde, Madhu Kambikar, Nilu Phule, Varsha Usgaonkar in lead roles and Mohan Agashe and Dilip Prabhavalkar in supporting roles.\n\nBardoli Satyagraha\nBardoli Satyagraha\nThe Bardoli Satyagraha of 1928, in the state of Gujarat, India during the period of the British Raj, was a major episode of civil disobedience and revolt in the Indian Independence Movement. The movement was eventually led by Vallabhbhai Patel, and its success gave rise to Patel becoming one of the main leaders of the independence movement.\n\nDahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.\n\nDahyabhai Patel\nEducated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay.\n\nVallabhbhai Patel\nVallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician.\n\nKetan Mehta\nKetan Mehta\nBorn in Navsari in Gujarat, Ketan Mehta did his schooling from Sardar Patel Vidyalaya, Delhi and later graduated in film direction from Film and Television Institute of India, Pune.\n\nVadeli\nVadeli\nVadeli is a small village in Borsad taluka, Anand district, Gujarat, India. It is located around 8 km from Borsad. It is surrounded by the fertile Charotar region which largely produces tobacco, rice, cotton, lady finger, Tomato, Potato and other agricultural crops. THAKOR owns the majority of business, majority of Patels are from 60 house community that dominates Amul Sahkari Madali Milk Dairy and Patel bazar. Other major communities are Darbar, Thakor, Brahmins and Christians. Gandhiji passed through Vadeli Patiya in Dandi March satyagrah, Borsad satyagraha.\n\nBakor Patel\nBakor Patel\nBakor Patel is children's literature character created by Hariprasad Vyas for funny animal stories published by \"Gandiv\", a children's biweekly in Gujarati language published by Gandiv Sahitya Mandir, Surat, Gujarat, India. The humorous stories about Bakor Patel written by Vyas which first appeared in 1936 and continued till 1955. The stories include other anthropomorphic characters including his wife, Shakri Patlani. The stories were accompanied with an illustration and title printed in typical typography which were drawn by two Surat based artist brothers, Tansukh and Mansukh. The character became the icon of Gujarati children's literature and was adapted into a children's play.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:dahyabhai_patel_0",
+        "passage_index": 12,
+        "title": "Dahyabhai Patel",
+        "score": 0.08294334141681198,
+        "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944.",
+        "score_breakdown": {
+          "dense": 0.050993867547539436,
+          "graph": 0.05889259132818376,
+          "fact": 0.2481929124480677
+        }
+      },
+      {
+        "node_id": "chunk:hardik_patel_0",
+        "passage_index": 5,
+        "title": "Hardik Patel",
+        "score": 0.08222734297984505,
+        "text": "Hardik Patel\nHardik Patel was born on 20 July 1993 in a Gujarati Patel family to Bharat and Usha Patel. In 2004, his parents moved to Viramgam. Hardik studied from Class VI to Class VIII at Divya Jyot School in Viramgam, before moving to K B Shah Vinay Mandir, where he studied until Class XII. He was a poor student and a cricket enthusiast.",
+        "score_breakdown": {
+          "dense": 0.05048842154350483,
+          "graph": 0.051591983122611935,
+          "fact": 0.2598741079608921
+        }
+      },
+      {
+        "node_id": "chunk:vallabhbhai_patel_0",
+        "passage_index": 8,
+        "title": "Vallabhbhai Patel",
+        "score": 0.08054433914905035,
+        "text": "Vallabhbhai Patel\nVallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician. He served as the first Deputy Prime Minister of India. He was an Indian barrister and statesman, a senior leader of the Indian National Congress and a founding father of the Republic of India who played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. In India and elsewhere, he was often called Sardar, meaning \"chief\" in Hindi, Urdu, and Persian. He acted as Home Minister during the political integration of India and the Indo-Pakistani War of 1947.Patel was raised in the countryside of state of Gujarat. He was a successful lawyer. He subsequently organised peasants from Kheda, Borsad, and Bardoli in Gujarat in non-violent civil disobedience against the British Raj, becoming one of the most influential leaders in Gujarat. He was appointed as the 49th President of Indian National Congress, organising the party for elections in 1934 and 1937 while promoting the Quit India Movement.",
+        "score_breakdown": {
+          "dense": 0.05032352526850905,
+          "graph": 0.053237773788386476,
+          "fact": 0.24596712076569616
+        }
+      },
+      {
+        "node_id": "chunk:ek_hota_vidushak_0",
+        "passage_index": 0,
+        "title": "Ek Hota Vidushak",
+        "score": 0.07956425155787894,
+        "text": "Ek Hota Vidushak\nEk Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India. The film stars Laxmikant Berde, Madhu Kambikar, Nilu Phule, Varsha Usgaonkar in lead roles and Mohan Agashe and Dilip Prabhavalkar in supporting roles.",
+        "score_breakdown": {
+          "dense": 0.049823610192426704,
+          "graph": 0.05088795709414222,
+          "fact": 0.245965858825344
+        }
+      },
+      {
+        "node_id": "chunk:bardoli_satyagraha_0",
+        "passage_index": 6,
+        "title": "Bardoli Satyagraha",
+        "score": 0.04256532065232178,
+        "text": "Bardoli Satyagraha\nThe Bardoli Satyagraha of 1928, in the state of Gujarat, India during the period of the British Raj, was a major episode of civil disobedience and revolt in the Indian Independence Movement. The movement was eventually led by Vallabhbhai Patel, and its success gave rise to Patel becoming one of the main leaders of the independence movement.",
+        "score_breakdown": {
+          "dense": 0.05006493964584848,
+          "graph": 0.05009867949035038,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:vadeli_0",
+        "passage_index": 13,
+        "title": "Vadeli",
+        "score": 0.042318177572019056,
+        "text": "Vadeli\nVadeli is a small village in Borsad taluka, Anand district, Gujarat, India. It is located around 8 km from Borsad. It is surrounded by the fertile Charotar region which largely produces tobacco, rice, cotton, lady finger, Tomato, Potato and other agricultural crops. THAKOR owns the majority of business, majority of Patels are from 60 house community that dominates Amul Sahkari Madali Milk Dairy and Patel bazar. Other major communities are Darbar, Thakor, Brahmins and Christians. Gandhiji passed through Vadeli Patiya in Dandi March satyagrah, Borsad satyagraha.",
+        "score_breakdown": {
+          "dense": 0.05014535443873384,
+          "graph": 0.04912744210238482,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bholabhai_patel_0",
+        "passage_index": 16,
+        "title": "Bholabhai Patel",
+        "score": 0.04227933231679285,
+        "text": "Bholabhai Patel\nBholabhai Patel was an Indian Gujarati author. He taught numerous languages at Gujarat University and did comparative studies of literature in different languages. He translated extensively and wrote essays and travelogues. He was awarded the Padma Shri in 2008.",
+        "score_breakdown": {
+          "dense": 0.05014386831415742,
+          "graph": 0.0490006824800209,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bakor_patel_0",
+        "passage_index": 14,
+        "title": "Bakor Patel",
+        "score": 0.04227289381006902,
+        "text": "Bakor Patel\nBakor Patel is children's literature character created by Hariprasad Vyas for funny animal stories published by \"Gandiv\", a children's biweekly in Gujarati language published by Gandiv Sahitya Mandir, Surat, Gujarat, India. The humorous stories about Bakor Patel written by Vyas which first appeared in 1936 and continued till 1955. The stories include other anthropomorphic characters including his wife, Shakri Patlani. The stories were accompanied with an illustration and title printed in typical typography which were drawn by two Surat based artist brothers, Tansukh and Mansukh. The character became the icon of Gujarati children's literature and was adapted into a children's play.",
+        "score_breakdown": {
+          "dense": 0.05011149418556504,
+          "graph": 0.04903857336002747,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ketan_mehta_0",
+        "passage_index": 9,
+        "title": "Ketan Mehta",
+        "score": 0.042208687620385474,
+        "text": "Ketan Mehta\nBorn in Navsari in Gujarat, Ketan Mehta did his schooling from Sardar Patel Vidyalaya, Delhi and later graduated in film direction from Film and Television Institute of India, Pune.",
+        "score_breakdown": {
+          "dense": 0.0499988340439224,
+          "graph": 0.04903109632076051,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:how_death_came_to_earth_0",
+        "passage_index": 3,
+        "title": "How Death Came to Earth",
+        "score": 0.04217173839457457,
+        "text": "How Death Came to Earth\nHow Death Came to Earth is a 14-minute cutout animation film by Ishu Patel produced in 1971 by the National Film Board of Canada. The film deals with an Indian myth of creation, and is notable for its trippy visual style.",
+        "score_breakdown": {
+          "dense": 0.04996610011040983,
+          "graph": 0.048967944446163876,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the father of Dahyabhai Patel?",
+        "resolved_sub_question": "Who is the father of Dahyabhai Patel?",
+        "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+        "sentence": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.",
+        "score": 0.5550129142857143,
+        "source_title": "Dahyabhai Patel",
+        "hop_answer": "Sardar Vallabhbhai Patel",
+        "hop_thought": "The text clearly states that Dahyabhai Patel is the son of Sardar Vallabhbhai Patel.",
+        "hop_raw_response": "The text clearly states that Dahyabhai Patel is the son of Sardar Vallabhbhai Patel.\nAnswer: Sardar Vallabhbhai Patel",
+        "evidence_passages": [
+          {
+            "title": "Dahyabhai Patel",
+            "text": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India."
+          },
+          {
+            "title": "Dahyabhai Patel",
+            "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944."
+          },
+          {
+            "title": "Dahyabhai Patel",
+            "text": "Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did this person die?",
+        "resolved_sub_question": "When did this person die? Context: Sardar Vallabhbhai Patel.",
+        "sentence_id": "sentence:dahyabhai_patel_0_0_dahyabhai_patel_1906_1973_was_the_son_of_indian_leader_sardar_vallabhbhai_pate",
+        "sentence": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.",
+        "score": 0.492152380952381,
+        "source_title": "Dahyabhai Patel",
+        "hop_answer": "15 December 1950",
+        "hop_thought": "The context specifies Sardar Vallabhbhai Patel, and the evidence states that he died on 15 December 1950.",
+        "hop_raw_response": "The context specifies Sardar Vallabhbhai Patel, and the evidence states that he died on 15 December 1950.\nAnswer: 15 December 1950",
+        "evidence_passages": [
+          {
+            "title": "Dahyabhai Patel",
+            "text": "Dahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India."
+          },
+          {
+            "title": "Dahyabhai Patel",
+            "text": "Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India. Educated in Bombay, Dahyabhai Patel graduated from the Gujarat Vidyapith and began working for an insurance company, and settled in Bombay. His first wife Yashoda died, leaving him his son Bipin. He later married Bhanumati and had another son, Gautam. His flat on Sandhurst Road and later Prabhadevi in Bombay was the frequent residence of Sardar Patel. Although primarily a businessman, Patel participated in the Quit India movement and was imprisoned from 1942 to 1944."
+          },
+          {
+            "title": "Vallabhbhai Patel",
+            "text": "Vallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the father of Dahyabhai Patel? => Sardar Vallabhbhai Patel (source: Dahyabhai Patel)\n2. When did this person die? => 15 December 1950 (source: Dahyabhai Patel)\n\nFact hints:\n- Vallabhbhai Patel died on 15 December 1950\n- Dahyabhai Patel son of Sardar Vallabhbhai Patel\n- Parliament member_of Dahyabhai Patel 1906 1973\n- India member_of Dahyabhai Patel 1906 1973\n- Dahyabhai Patel member of Parliament of India\n\nWikipedia Title: Dahyabhai Patel\nDahyabhai Patel (1906–1973) was the son of Indian leader Sardar Vallabhbhai Patel, an and later a member of the Parliament of India.\n\nWikipedia Title: Vallabhbhai Patel\nVallabhbhai Patel Vallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician. He served as the first Deputy Prime Minister of India.\n\nWikipedia Title: Bardoli Satyagraha\nThe movement was eventually led by Vallabhbhai Patel, and its success gave rise to Patel becoming one of the main leaders of the independence movement. Bardoli Satyagraha The Bardoli Satyagraha of 1928, in the state of Gujarat, India during the period of the British Raj, was a major episode of civil disobedience and revolt in the Indian Independence Movement.\n\nWikipedia Title: Ketan Mehta\nKetan Mehta Born in Navsari in Gujarat, Ketan Mehta did his schooling from Sardar Patel Vidyalaya, Delhi and later graduated in film direction from Film and Television Institute of India, Pune.\n\nWikipedia Title: Ek Hota Vidushak\nEk Hota Vidushak Ek Hota Vidushak (, ) is a 1992 Marathi film directed by Jabbar Patel and produced by National Film Development Corporation of India. The film stars Laxmikant Berde, Madhu Kambikar, Nilu Phule, Varsha Usgaonkar in lead roles and Mohan Agashe and Dilip Prabhavalkar in supporting roles.\n\nQuestion: When did the father of Dahyabhai Patel die?\nDraft Answer: 15 December 1950\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The father of Dahyabhai Patel is Sardar Vallabhbhai Patel, and he died on 15 December 1950.",
+  "predicted_answer": "15 December 1950",
+  "qa_raw_response": "{\n  \"thought\": \"The father of Dahyabhai Patel is Sardar Vallabhbhai Patel, and he died on 15 December 1950.\",\n  \"answer\": \"15 December 1950\",\n  \"support\": \"Vallabhbhai Patel (31 October 1875 – 15 December 1950), popularly known as Sardar Patel, was an Indian politician.\"\n}"
+}

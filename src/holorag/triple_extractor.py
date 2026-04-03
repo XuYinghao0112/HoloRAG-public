@@ -1,5 +1,7 @@
+import pickle
 import re
-from typing import Dict, List
+from pathlib import Path
+from typing import Dict, List, Optional
 
 from .llm_client import LocalLLMClient
 from .utils import QUESTION_WORDS, clean_entity_text, is_generic_entity, looks_like_named_entity
@@ -8,8 +10,60 @@ from .utils import QUESTION_WORDS, clean_entity_text, is_generic_entity, looks_l
 class TripleExtractor:
     def __init__(self, llm_client: LocalLLMClient) -> None:
         self.llm_client = llm_client
+        self._sentence_cache: Dict[str, Dict[str, List]] = {}
+        self._query_entity_cache: Dict[str, List[str]] = {}
+
+        self._cache_dir: Optional[Path] = None
+        self._sentence_cache_path: Optional[Path] = None
+        self._query_cache_path: Optional[Path] = None
+        self._pending_updates = 0
+        self._flush_interval = 20
+
+    def set_cache_dir(self, cache_dir: str) -> None:
+        self._cache_dir = Path(cache_dir)
+        self._cache_dir.mkdir(parents=True, exist_ok=True)
+        self._sentence_cache_path = self._cache_dir / "triple_sentence_cache.pkl"
+        self._query_cache_path = self._cache_dir / "query_entity_cache.pkl"
+
+        if self._sentence_cache_path.exists():
+            try:
+                payload = pickle.loads(self._sentence_cache_path.read_bytes())
+                if isinstance(payload, dict):
+                    self._sentence_cache.update(payload)
+            except Exception:
+                pass
+        if self._query_cache_path.exists():
+            try:
+                payload = pickle.loads(self._query_cache_path.read_bytes())
+                if isinstance(payload, dict):
+                    self._query_entity_cache.update(payload)
+            except Exception:
+                pass
+
+    def _persist_if_needed(self, force: bool = False) -> None:
+        if self._cache_dir is None:
+            return
+        if not force and self._pending_updates < self._flush_interval:
+            return
+        try:
+            if self._sentence_cache_path is not None:
+                self._sentence_cache_path.write_bytes(pickle.dumps(self._sentence_cache, protocol=pickle.HIGHEST_PROTOCOL))
+            if self._query_cache_path is not None:
+                self._query_cache_path.write_bytes(pickle.dumps(self._query_entity_cache, protocol=pickle.HIGHEST_PROTOCOL))
+            self._pending_updates = 0
+        except Exception:
+            # Cache persistence should never break retrieval.
+            pass
 
     def extract(self, sentence: str) -> Dict[str, List]:
+        cache_key = " ".join(str(sentence or "").split())
+        if cache_key in self._sentence_cache:
+            cached = self._sentence_cache[cache_key]
+            return {
+                "triples": [dict(item) for item in cached.get("triples", [])],
+                "entities": list(cached.get("entities", [])),
+            }
+
         fallback = self._heuristic_extract(sentence)
         payload, _ = self.llm_client.infer_json(
             system_prompt=(
@@ -27,9 +81,21 @@ class TripleExtractor:
         pattern_result = self._pattern_extract(sentence)
         triples = self._merge_triples(triples, pattern_result["triples"])
         entities = self._merge_entities(entities, pattern_result["entities"])
-        return {"triples": triples, "entities": entities}
+
+        result = {"triples": triples, "entities": entities}
+        self._sentence_cache[cache_key] = {
+            "triples": [dict(item) for item in triples],
+            "entities": list(entities),
+        }
+        self._pending_updates += 1
+        self._persist_if_needed()
+        return result
 
     def extract_query_entities(self, query: str) -> List[str]:
+        cache_key = " ".join(str(query or "").split())
+        if cache_key in self._query_entity_cache:
+            return list(self._query_entity_cache[cache_key])
+
         fallback = {"entities": self._heuristic_query_entities(query)}
         payload, _ = self.llm_client.infer_json(
             system_prompt=(
@@ -41,7 +107,11 @@ class TripleExtractor:
             fallback=fallback,
             max_tokens=96,
         )
-        return self._clean_entities(payload.get("entities", []), fallback["entities"])
+        cleaned = self._clean_entities(payload.get("entities", []), fallback["entities"])
+        self._query_entity_cache[cache_key] = list(cleaned)
+        self._pending_updates += 1
+        self._persist_if_needed()
+        return cleaned
 
     def _clean_triples(self, triples: List[Dict], fallback: List[Dict]) -> List[Dict]:
         cleaned = []

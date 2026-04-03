@@ -1,9 +1,10 @@
 import logging
 import os
-
-import httpx
+import threading
+import time
 from typing import Any, Dict, List, Optional, Tuple
 
+import httpx
 from openai import OpenAI
 
 from .config import HoloRAGConfig
@@ -16,12 +17,57 @@ class LocalLLMClient:
     def __init__(self, config: HoloRAGConfig) -> None:
         api_key = os.getenv("OPENAI_API_KEY", "sk-")
         self.config = config
-        self.client = OpenAI(base_url=config.llm_base_url, api_key=api_key, max_retries=3, http_client=httpx.Client(trust_env=False))
+        connect_timeout = float(os.getenv("HOLORAG_LLM_CONNECT_TIMEOUT", "20"))
+        read_timeout = float(os.getenv("HOLORAG_LLM_READ_TIMEOUT", "180"))
+        write_timeout = float(os.getenv("HOLORAG_LLM_WRITE_TIMEOUT", "180"))
+        pool_timeout = float(os.getenv("HOLORAG_LLM_POOL_TIMEOUT", "180"))
+        max_connections = int(os.getenv("HOLORAG_LLM_MAX_CONNECTIONS", "128"))
+        max_keepalive = int(os.getenv("HOLORAG_LLM_MAX_KEEPALIVE", "32"))
+
+        http_client = httpx.Client(
+            trust_env=False,
+            timeout=httpx.Timeout(
+                connect=connect_timeout,
+                read=read_timeout,
+                write=write_timeout,
+                pool=pool_timeout,
+            ),
+            limits=httpx.Limits(
+                max_connections=max_connections,
+                max_keepalive_connections=max_keepalive,
+            ),
+        )
+        self.client = OpenAI(base_url=config.llm_base_url, api_key=api_key, max_retries=0, http_client=http_client)
         self.stats = {
             "completion_calls": 0,
             "json_calls": 0,
             "text_calls": 0,
         }
+        self._stats_lock = threading.Lock()
+        self._max_attempts = int(os.getenv("HOLORAG_LLM_MAX_ATTEMPTS", "3"))
+
+    def _inc_stat(self, key: str) -> None:
+        with self._stats_lock:
+            self.stats[key] = int(self.stats.get(key, 0)) + 1
+
+    def _create_with_retries(self, params: Dict[str, Any]):
+        delay = 0.6
+        for attempt in range(1, max(1, self._max_attempts) + 1):
+            self._inc_stat("completion_calls")
+            try:
+                return self.client.chat.completions.create(**params)
+            except Exception as exc:
+                if attempt >= self._max_attempts:
+                    raise
+                logger.warning(
+                    "LLM call failed (attempt %d/%d): %s; retrying in %.1fs",
+                    attempt,
+                    self._max_attempts,
+                    exc,
+                    delay,
+                )
+                time.sleep(delay)
+                delay = min(delay * 2.0, 5.0)
 
     def _create_completion(
         self,
@@ -38,12 +84,10 @@ class LocalLLMClient:
         if response_format is not None:
             params["response_format"] = response_format
         try:
-            self.stats["completion_calls"] += 1
-            return self.client.chat.completions.create(**params)
+            return self._create_with_retries(params)
         except TypeError:
             params.pop("response_format", None)
-            self.stats["completion_calls"] += 1
-            return self.client.chat.completions.create(**params)
+            return self._create_with_retries(params)
 
     def _extract_content(self, response: Any) -> str:
         message = response.choices[0].message
@@ -67,7 +111,7 @@ class LocalLLMClient:
         fallback: Dict[str, Any],
         max_tokens: Optional[int] = None,
     ) -> Tuple[Dict[str, Any], str]:
-        self.stats["json_calls"] += 1
+        self._inc_stat("json_calls")
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -102,7 +146,7 @@ class LocalLLMClient:
         fallback: str = "",
         max_tokens: Optional[int] = None,
     ) -> str:
-        self.stats["text_calls"] += 1
+        self._inc_stat("text_calls")
         try:
             response = self._create_completion(messages=messages, max_tokens=max_tokens)
             return self._extract_content(response).strip()
@@ -111,8 +155,10 @@ class LocalLLMClient:
             return fallback
 
     def get_stats(self) -> Dict[str, int]:
-        return dict(self.stats)
+        with self._stats_lock:
+            return dict(self.stats)
 
     def reset_stats(self) -> None:
-        for key in self.stats:
-            self.stats[key] = 0
+        with self._stats_lock:
+            for key in self.stats:
+                self.stats[key] = 0

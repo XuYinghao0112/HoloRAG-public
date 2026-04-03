@@ -32,63 +32,63 @@
   "sub_question_source": "model_or_heuristic",
   "seeds": [
     {
-      "node_id": "entity:orl_ans_france",
-      "score": 0.28473811153790646,
+      "node_id": "entity:king_louis_xiv_of_france",
+      "score": 0.48560148301626305,
       "layer": "entity"
     },
     {
-      "node_id": "entity:colombian_mother",
-      "score": 0.27666503136642934,
+      "node_id": "entity:louis_xiv_of_france",
+      "score": 0.44673497722150607,
       "layer": "entity"
     },
     {
-      "node_id": "entity:philippe_ii_duke_of_orl_ans",
-      "score": 0.23981336690496677,
+      "node_id": "entity:louis_xiii_of_france",
+      "score": 0.4458678964507409,
       "layer": "entity"
     },
     {
-      "node_id": "entity:orl_ans_loiret_france",
-      "score": 0.23767065214646454,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_emmanuelle_boidron",
-      "score": 0.23766459702825027,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_jean_michel_oughourlian",
-      "score": 0.23716377866460325,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:louis_xiv",
-      "score": 0.22840281833736226,
+      "node_id": "entity:his_mother",
+      "score": 0.4235312426694652,
       "layer": "entity"
     },
     {
       "node_id": "entity:her_mother",
-      "score": 0.22839864997726594,
+      "score": 0.42273117845489283,
       "layer": "entity"
     },
     {
-      "node_id": "entity:anne_of_austria",
-      "score": 0.21266948236961888,
+      "node_id": "entity:orl_ans_france",
+      "score": 0.2847380904249939,
       "layer": "entity"
     },
     {
-      "node_id": "entity:duke_of_orl_ans",
-      "score": 0.2002092250704557,
+      "node_id": "entity:colombian_mother",
+      "score": 0.276665017060327,
       "layer": "entity"
     },
     {
-      "node_id": "entity:beirut_lebanon",
-      "score": 0.19766085672417424,
+      "node_id": "entity:philippe_ii_duke_of_orl_ans",
+      "score": 0.23981322878140923,
       "layer": "entity"
     },
     {
-      "node_id": "entity:philippe",
-      "score": 0.19402826209762186,
+      "node_id": "entity:orl_ans_loiret_france",
+      "score": 0.23767063047684675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_emmanuelle_boidron",
+      "score": 0.23766458562785675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_jean_michel_oughourlian",
+      "score": 0.23716376491988644,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mother",
+      "score": 0.23319903476854198,
       "layer": "entity"
     }
   ],
@@ -101,7 +101,7 @@
       "sentence_id": "sentence:jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_20_august_1940_in_beirut_lebanon_to_an_arm",
       "chunk_id": "chunk:jean_michel_oughourlian_0",
       "document_index": 12,
-      "score": 0.2743301679245669
+      "score": 0.2743301688044889
     },
     {
       "fact_id": "fact:emmanuelle_boidron_born_in_orl_ans_loiret_france_sentence_emmanuelle_boidron_0_0_emmanuelle_boidron_born_4_august_1978_i",
@@ -111,7 +111,7 @@
       "sentence_id": "sentence:emmanuelle_boidron_0_0_emmanuelle_boidron_born_4_august_1978_in_orl_ans_loiret_france_is_a_french",
       "chunk_id": "chunk:emmanuelle_boidron_0",
       "document_index": 3,
-      "score": 0.23533057423759543
+      "score": 0.23533057667747218
     },
     {
       "fact_id": "fact:philippe_parent_anne_of_austria_sentence_philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_jun",
@@ -121,7 +121,17 @@
       "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
       "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
       "document_index": 8,
-      "score": 0.2103359812091511
+      "score": 0.2303359822891609
+    },
+    {
+      "fact_id": "fact:philippe_parent_louis_xiii_of_france_sentence_philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_",
+      "text": "Philippe parent Louis XIII of France",
+      "head_id": "entity:philippe",
+      "tail_id": "entity:louis_xiii_of_france",
+      "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
+      "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
+      "document_index": 8,
+      "score": 0.21033537353976756
     },
     {
       "fact_id": "fact:philippe_became_duke_of_orl_ans_sentence_philippe_i_duke_of_orl_ans_0_2_styled_duke_of_anjou_from_birth_philippe_became_",
@@ -131,7 +141,7 @@
       "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_2_styled_duke_of_anjou_from_birth_philippe_became_duke_of_orl_ans_upon_the_death",
       "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
       "document_index": 8,
-      "score": 0.19783700351534025
+      "score": 0.19783700679482566
     },
     {
       "fact_id": "fact:jean_michel_oughourlian_born_in_beirut_lebanon_sentence_jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_",
@@ -141,17 +151,17 @@
       "sentence_id": "sentence:jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_20_august_1940_in_beirut_lebanon_to_an_arm",
       "chunk_id": "chunk:jean_michel_oughourlian_0",
       "document_index": 12,
-      "score": 0.19532766252091477
+      "score": 0.1953276645236079
     },
     {
-      "fact_id": "fact:philippe_parent_louis_xiii_sentence_philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_170",
-      "text": "Philippe parent Louis XIII",
-      "head_id": "entity:philippe",
-      "tail_id": "entity:louis_xiii",
-      "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
-      "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
-      "document_index": 8,
-      "score": 0.1903356819478019
+      "fact_id": "fact:her_mother_was_legitimised_daughter_of_louis_xiv_of_france_sentence_louise_lisabeth_d_orl_ans_0_1_her_mother_was_a_legit",
+      "text": "Her mother was legitimised daughter of Louis XIV of France",
+      "head_id": "entity:her_mother",
+      "tail_id": "entity:louis_xiv_of_france",
+      "sentence_id": "sentence:louise_lisabeth_d_orl_ans_0_1_her_mother_was_a_legitimised_daughter_of_louis_xiv_of_france_and_his_mistress_m",
+      "chunk_id": "chunk:louise_lisabeth_d_orl_ans_0",
+      "document_index": 17,
+      "score": 0.194332528973785
     },
     {
       "fact_id": "fact:his_mother_was_eldest_daughter_of_duke_and_duchess_of_teck_sentence_edward_viii_0_3_his_mother_was_the_eldest_daughter_o",
@@ -161,25 +171,14 @@
       "sentence_id": "sentence:edward_viii_0_3_his_mother_was_the_eldest_daughter_of_the_duke_and_duchess_of_teck_francis_and",
       "chunk_id": "chunk:edward_viii_0",
       "document_index": 2,
-      "score": 0.1903322083143883
-    },
-    {
-      "fact_id": "fact:philippe_became_duke_sentence_philippe_i_duke_of_orl_ans_0_2_styled_duke_of_anjou_from_birth_philippe_became_duke_of_orl",
-      "text": "Philippe became Duke",
-      "head_id": "entity:philippe",
-      "tail_id": "entity:duke",
-      "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_2_styled_duke_of_anjou_from_birth_philippe_became_duke_of_orl_ans_upon_the_death",
-      "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
-      "document_index": 8,
-      "score": 0.16816145298803922
+      "score": 0.1903322079009232
     }
   ],
   "bridge_entities": [
     "Philippe",
     "Duke of Orl ans",
-    "Louis XIII",
-    "Anne of Austria",
-    "Fran oise Marie de Bourbon"
+    "Louis XIII of France",
+    "Anne of Austria"
   ],
   "reasoning_chain": [
     {
@@ -187,23 +186,15 @@
       "resolved_sub_question": "Who is the mother of Philippe, Duke of Orléans?",
       "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
       "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-      "score": 0.5937312849164327,
+      "score": 0.5937176080346427,
       "source_title": "Philippe I, Duke of Orléans",
       "hop_answer": "Anne of Austria",
-      "hop_thought": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-      "hop_raw_response": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.\nAnswer: Anne of Austria",
+      "hop_thought": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.",
+      "hop_raw_response": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.\nAnswer: Anne of Austria",
       "evidence_passages": [
         {
           "title": "Philippe I, Duke of Orléans",
           "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-        },
-        {
-          "title": "Philippe I, Duke of Orléans",
-          "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-        },
-        {
-          "title": "Louise Élisabeth d'Orléans",
-          "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
         }
       ]
     },
@@ -212,126 +203,118 @@
       "resolved_sub_question": "Who is the mother of this person? Context: Anne of Austria.",
       "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
       "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-      "score": 0.5183587515830994,
+      "score": 0.5183450747013092,
       "source_title": "Philippe I, Duke of Orléans",
-      "hop_answer": "Françoise Marie de Bourbon",
-      "hop_thought": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.",
-      "hop_raw_response": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\nAnswer: Françoise Marie de Bourbon",
+      "hop_answer": "Anne of Austria",
+      "hop_thought": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.",
+      "hop_raw_response": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.\nAnswer: Anne of Austria",
       "evidence_passages": [
         {
           "title": "Philippe I, Duke of Orléans",
           "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-        },
-        {
-          "title": "Philippe I, Duke of Orléans",
-          "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-        },
-        {
-          "title": "Louise Élisabeth d'Orléans",
-          "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
         }
       ]
     }
   ],
   "ranked_nodes": [
     {
+      "node_id": "entity:louis_xiv_of_france",
+      "score": 0.042032052877106874,
+      "node_type": "entity"
+    },
+    {
       "node_id": "entity:title_anchor_jean_michel_oughourlian",
-      "score": 0.053947666501726624,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_20_august_1940_in_beirut_lebanon_to_an_arm",
-      "score": 0.049850719083421965,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:philippe",
-      "score": 0.04421825247645147,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_emmanuelle_boidron",
-      "score": 0.034029562964878475,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:louis_xiv",
-      "score": 0.029084848386677808,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:emmanuelle_boidron_0_0_emmanuelle_boidron_born_4_august_1978_in_orl_ans_loiret_france_is_a_french",
-      "score": 0.02820464323732795,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:orl_ans_loiret_france",
-      "score": 0.025116073858481715,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
-      "score": 0.02411878459575851,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:duke_and_duchess_of_teck",
-      "score": 0.02261524821479608,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:colombian_mother",
-      "score": 0.022443937722276406,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:orl_ans_france",
-      "score": 0.022330783973059605,
+      "score": 0.039730097928889874,
       "node_type": "entity"
     },
     {
       "node_id": "entity:her_mother",
-      "score": 0.02071022683113369,
+      "score": 0.03847192320070726,
       "node_type": "entity"
     },
     {
-      "node_id": "entity:beirut_lebanon",
-      "score": 0.020056590831026955,
+      "node_id": "entity:philippe",
+      "score": 0.03829698983442118,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_20_august_1940_in_beirut_lebanon_to_an_arm",
+      "score": 0.03671339152353039,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:louis_xiv",
+      "score": 0.033315435132518806,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:king_louis_xiv_of_france",
+      "score": 0.03184964696915232,
       "node_type": "entity"
     },
     {
       "node_id": "entity:his_mother",
-      "score": 0.019537369361433667,
+      "score": 0.02937754443322521,
       "node_type": "entity"
+    },
+    {
+      "node_id": "entity:duke_and_duchess_of_teck",
+      "score": 0.025477501476624784,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:louis_xiii_of_france",
+      "score": 0.02519288047314483,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_emmanuelle_boidron",
+      "score": 0.025106164128390823,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
+      "score": 0.022009926977580422,
+      "node_type": "sentence"
     },
     {
       "node_id": "sentence:edward_viii_0_3_his_mother_was_the_eldest_daughter_of_the_duke_and_duchess_of_teck_francis_and",
-      "score": 0.019168977774827272,
+      "score": 0.02150519905090672,
       "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:emmanuelle_boidron_0_0_emmanuelle_boidron_born_4_august_1978_in_orl_ans_loiret_france_is_a_french",
+      "score": 0.020808341959167084,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:orl_ans_loiret_france",
+      "score": 0.018529820832323858,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:louise_lisabeth_d_orl_ans_0_1_her_mother_was_a_legitimised_daughter_of_louis_xiv_of_france_and_his_mistress_m",
+      "score": 0.01766645354271469,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:colombian_mother",
+      "score": 0.016540305867710468,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:orl_ans_france",
+      "score": 0.01647462211240148,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mother",
+      "score": 0.015468652403470255,
+      "node_type": "entity"
     },
     {
       "node_id": "entity:duke_of_orl_ans",
-      "score": 0.018886848827442813,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:lionel_jesus_gon_alves_medeiros",
-      "score": 0.016485093615132375,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:philippe_i_duke_of_orl_ans_0_2_styled_duke_of_anjou_from_birth_philippe_became_duke_of_orl_ans_upon_the_death",
-      "score": 0.016405358060044447,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "sentence:lionel_medeiros_0_0_lionel_jesus_gon_alves_medeiros_born_14_april_1977_in_orl_ans_france_is_a_por",
-      "score": 0.016126171535272002,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:philippe_ii_duke_of_orl_ans",
-      "score": 0.01568736167560266,
+      "score": 0.015212995120291596,
       "node_type": "entity"
     }
   ],
@@ -340,59 +323,71 @@
       "node_id": "chunk:philippe_i_duke_of_orl_ans_0",
       "passage_index": 8,
       "title": "Philippe I, Duke of Orléans",
-      "score": 0.07995666314048497,
+      "score": 0.07320033972492292,
       "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king.",
       "score_breakdown": {
-        "dense": 0.05067680148287878,
-        "graph": 0.050812615250600615,
-        "fact": 0.24560425166480973
+        "dense": 0.050677497965095346,
+        "graph": 0.05059807761907868,
+        "fact": 0.20098861705597912
       }
     },
     {
       "node_id": "chunk:emmanuelle_boidron_0",
       "passage_index": 3,
       "title": "Emmanuelle Boidron",
-      "score": 0.07990795486952268,
+      "score": 0.07224259364355186,
       "text": "Emmanuelle Boidron\nEmmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress. Her most important appearance is in the Navarro TV series as Yolande Navarro.",
       "score_breakdown": {
-        "dense": 0.04979627606155544,
-        "graph": 0.04915648113173601,
-        "fact": 0.25182039130764255
-      }
-    },
-    {
-      "node_id": "chunk:edward_viii_0",
-      "passage_index": 2,
-      "title": "Edward VIII",
-      "score": 0.0781941652647117,
-      "text": "Edward VIII\nEdward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary). His father was the son of the Prince and Princess of Wales (later King Edward VII and Queen Alexandra). His mother was the eldest daughter of the Duke and Duchess of Teck (Francis and Mary Adelaide). At the time of his birth, he was third in the line of succession to the throne, behind his grandfather and father.",
-      "score_breakdown": {
-        "dense": 0.05001657310784677,
-        "graph": 0.048580140175447414,
-        "fact": 0.240740053351745
-      }
-    },
-    {
-      "node_id": "chunk:jean_michel_oughourlian_0",
-      "passage_index": 12,
-      "title": "Jean-Michel Oughourlian",
-      "score": 0.054444125228202134,
-      "text": "Jean-Michel Oughourlian\nJean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother. He arrived in France at the age of ten.",
-      "score_breakdown": {
-        "dense": 0.0,
-        "graph": 0.05056276558943911,
-        "fact": 0.2618353036758027
+        "dense": 0.0497963923761939,
+        "graph": 0.048517767064447874,
+        "fact": 0.20199498478207237
       }
     },
     {
       "node_id": "chunk:louise_lisabeth_d_orl_ans_0",
       "passage_index": 17,
       "title": "Louise Élisabeth d'Orléans",
-      "score": 0.042259911105502285,
+      "score": 0.07174879356115137,
       "text": "Louise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. Her mother was a legitimised daughter of Louis XIV of France and his mistress, Madame de Montespan. She was known as Élisabeth. As a member of the reigning House of Bourbon, Élisabeth was a \"princesse du sang\".",
       "score_breakdown": {
-        "dense": 0.050496753024594075,
-        "graph": 0.04828898980658512,
+        "dense": 0.05049693354990503,
+        "graph": 0.04964440919063715,
+        "fact": 0.19388104901008302
+      }
+    },
+    {
+      "node_id": "chunk:edward_viii_0",
+      "passage_index": 2,
+      "title": "Edward VIII",
+      "score": 0.07113401899140245,
+      "text": "Edward VIII\nEdward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary). His father was the son of the Prince and Princess of Wales (later King Edward VII and Queen Alexandra). His mother was the eldest daughter of the Duke and Duchess of Teck (Francis and Mary Adelaide). At the time of his birth, he was third in the line of succession to the throne, behind his grandfather and father.",
+      "score_breakdown": {
+        "dense": 0.05001615886241485,
+        "graph": 0.04886359949274473,
+        "fact": 0.1931070117950058
+      }
+    },
+    {
+      "node_id": "chunk:jean_michel_oughourlian_0",
+      "passage_index": 12,
+      "title": "Jean-Michel Oughourlian",
+      "score": 0.046363887757983224,
+      "text": "Jean-Michel Oughourlian\nJean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother. He arrived in France at the age of ten.",
+      "score_breakdown": {
+        "dense": 0.0,
+        "graph": 0.04953212384818094,
+        "fact": 0.21002833735685966
+      }
+    },
+    {
+      "node_id": "chunk:marie_anne_de_bourbon_0",
+      "passage_index": 6,
+      "title": "Marie Anne de Bourbon",
+      "score": 0.04197593320343666,
+      "text": "Marie Anne de Bourbon\nMarie Anne de Bourbon, \"Légitimée de France\" (2 October 1666 – 3 May 1739) was the eldest legitimised daughter (\"fille légitimée de France\") of King Louis XIV of France and his mistress Louise de La Vallière. At the age of thirteen, she was married to Louis Armand de Bourbon, Prince of Conti and as such was the Princess of Conti by marriage. Her father's favourite daughter, Marie Anne was widowed in 1685 aged 19. She never married again and had no children. Following her mother's retirement to a convent, Marie Anne continued to reside at her father's court and was later her mother's heiress. She later became the Duchess of La Vallière in her own right.",
+      "score_breakdown": {
+        "dense": 0.05005374291699211,
+        "graph": 0.048154581996969995,
         "fact": 0.0
       }
     },
@@ -400,11 +395,11 @@
       "node_id": "chunk:louis_philippe_i_0",
       "passage_index": 16,
       "title": "Louis Philippe I",
-      "score": 0.04187507086830229,
+      "score": 0.04182232478754255,
       "text": "Louis Philippe I\nLouis Philippe I (6 October 1773 – 26 August 1850) was King of the French from 1830 to 1848. His father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country. His father denounced his actions and voted for his death, but was imprisoned and executed that same year. Louis Philippe spent the next 21 years in exile before returning during the Bourbon Restoration. He was proclaimed king in 1830 after his cousin Charles X was forced to abdicate by the July Revolution. The reign of Louis Philippe is known as the July Monarchy and was dominated by wealthy industrialists and bankers. He followed conservative policies, especially under the influence of French statesman François Guizot during the period 1840–48. He also promoted friendship with Britain and sponsored colonial expansion, notably the French conquest of Algeria. His popularity faded as economic conditions in France deteriorated in 1847, and he was forced to abdicate after the",
       "score_breakdown": {
-        "dense": 0.05018754497100152,
-        "graph": 0.04757307044750484,
+        "dense": 0.050187467221343283,
+        "graph": 0.047397392719345816,
         "fact": 0.0
       }
     },
@@ -412,11 +407,11 @@
       "node_id": "chunk:fran_ois_d_orl_ans_prince_of_joinville_0",
       "passage_index": 11,
       "title": "François d'Orléans, Prince of Joinville",
-      "score": 0.041750277889034626,
+      "score": 0.041720486292620464,
       "text": "François d'Orléans, Prince of Joinville\nFrançois-Ferdinand-Philippe-Louis-Marie d'Orléans, prince de Joinville (14 August 1818 – 16 June 1900) was the third son of Louis Philippe, Duke of Orléans, afterwards king of the French and his wife Marie Amalie of Bourbon-Sicilies. He was an admiral of the French Navy, and a talented artist.",
       "score_breakdown": {
-        "dense": 0.050094441789632134,
-        "graph": 0.04732778301578984,
+        "dense": 0.05009403559117074,
+        "graph": 0.047229222391588506,
         "fact": 0.0
       }
     },
@@ -424,11 +419,11 @@
       "node_id": "chunk:mercedes_of_orl_ans_0",
       "passage_index": 13,
       "title": "Mercedes of Orléans",
-      "score": 0.04173903772974663,
+      "score": 0.041699532108324756,
       "text": "Mercedes of Orléans\nMaria de las Mercedes of Orléans (24 June 1860 – 26 June 1878) was Queen of Spain as the first wife of King Alfonso XII. She was born in Madrid, the daughter of Antoine of Orléans, Duke of Montpensier, and of Infanta Luisa Fernanda of Spain.",
       "score_breakdown": {
-        "dense": 0.050259753668696804,
-        "graph": 0.04698724403987795,
+        "dense": 0.05025956318835902,
+        "graph": 0.046855907849090966,
         "fact": 0.0
       }
     },
@@ -436,23 +431,11 @@
       "node_id": "chunk:lionel_medeiros_0",
       "passage_index": 19,
       "title": "Lionel Medeiros",
-      "score": 0.04173894712394005,
+      "score": 0.04164387343065742,
       "text": "Lionel Medeiros\nLionel Jesus Gonçalves Medeiros (born 14 April 1977 in Orléans, France) is a Portuguese retired footballer who played as a central defender.",
       "score_breakdown": {
-        "dense": 0.04972795071308738,
-        "graph": 0.047961914105806615,
-        "fact": 0.0
-      }
-    },
-    {
-      "node_id": "chunk:marie_anne_de_bourbon_0",
-      "passage_index": 6,
-      "title": "Marie Anne de Bourbon",
-      "score": 0.0416714749708078,
-      "text": "Marie Anne de Bourbon\nMarie Anne de Bourbon, \"Légitimée de France\" (2 October 1666 – 3 May 1739) was the eldest legitimised daughter (\"fille légitimée de France\") of King Louis XIV of France and his mistress Louise de La Vallière. At the age of thirteen, she was married to Louis Armand de Bourbon, Prince of Conti and as such was the Princess of Conti by marriage. Her father's favourite daughter, Marie Anne was widowed in 1685 aged 19. She never married again and had no children. Following her mother's retirement to a convent, Marie Anne continued to reside at her father's court and was later her mother's heiress. She later became the Duchess of La Vallière in her own right.",
-      "score_breakdown": {
-        "dense": 0.05005313097595768,
-        "graph": 0.04714084311343693,
+        "dense": 0.04972792701742175,
+        "graph": 0.047645045236918177,
         "fact": 0.0
       }
     }
@@ -460,8 +443,27 @@
   "evidence": {
     "entity": [
       {
+        "node_id": "entity:louis_xiv_of_france",
+        "score": 0.042032052877106874,
+        "text": "Louis XIV of France",
+        "metadata": {
+          "canonical_name": "Louis XIV of France",
+          "aliases": [
+            "LXOF",
+            "Louis XIV of France",
+            "Louis of France"
+          ],
+          "surface_forms": [
+            "LXOF",
+            "Louis XIV of France",
+            "Louis of France"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
         "node_id": "entity:title_anchor_jean_michel_oughourlian",
-        "score": 0.053947666501726624,
+        "score": 0.039730097928889874,
         "text": "Jean-Michel Oughourlian",
         "metadata": {
           "canonical_name": "Jean-Michel Oughourlian",
@@ -477,125 +479,8 @@
         }
       },
       {
-        "node_id": "entity:philippe",
-        "score": 0.04421825247645147,
-        "text": "Philippe",
-        "metadata": {
-          "canonical_name": "Philippe",
-          "aliases": [
-            "Philippe"
-          ],
-          "surface_forms": [
-            "Philippe"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:title_anchor_emmanuelle_boidron",
-        "score": 0.034029562964878475,
-        "text": "Emmanuelle Boidron",
-        "metadata": {
-          "canonical_name": "Emmanuelle Boidron",
-          "aliases": [
-            "EB",
-            "Emmanuelle Boidron"
-          ],
-          "surface_forms": [
-            "EB",
-            "Emmanuelle Boidron"
-          ],
-          "title_anchor": "Emmanuelle Boidron"
-        }
-      },
-      {
-        "node_id": "entity:louis_xiv",
-        "score": 0.029084848386677808,
-        "text": "Louis XIV",
-        "metadata": {
-          "canonical_name": "Louis XIV",
-          "aliases": [
-            "LX",
-            "Louis XIV"
-          ],
-          "surface_forms": [
-            "LX",
-            "Louis XIV"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:orl_ans_loiret_france",
-        "score": 0.025116073858481715,
-        "text": "Orl ans Loiret France",
-        "metadata": {
-          "canonical_name": "Orl ans Loiret France",
-          "aliases": [
-            "OALF",
-            "Orl ans Loiret France"
-          ],
-          "surface_forms": [
-            "OALF",
-            "Orl ans Loiret France"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:duke_and_duchess_of_teck",
-        "score": 0.02261524821479608,
-        "text": "Duke and Duchess of Teck",
-        "metadata": {
-          "canonical_name": "Duke and Duchess of Teck",
-          "aliases": [
-            "DADOT",
-            "Duke and Duchess of Teck"
-          ],
-          "surface_forms": [
-            "DADOT",
-            "Duke and Duchess of Teck"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:colombian_mother",
-        "score": 0.022443937722276406,
-        "text": "Colombian mother",
-        "metadata": {
-          "canonical_name": "Colombian mother",
-          "aliases": [
-            "CM",
-            "Colombian mother"
-          ],
-          "surface_forms": [
-            "CM",
-            "Colombian mother"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
-        "node_id": "entity:orl_ans_france",
-        "score": 0.022330783973059605,
-        "text": "Orl ans France",
-        "metadata": {
-          "canonical_name": "Orl ans France",
-          "aliases": [
-            "OAF",
-            "Orl ans France"
-          ],
-          "surface_forms": [
-            "OAF",
-            "Orl ans France"
-          ],
-          "title_anchor": ""
-        }
-      },
-      {
         "node_id": "entity:her_mother",
-        "score": 0.02071022683113369,
+        "score": 0.03847192320070726,
         "text": "Her mother",
         "metadata": {
           "canonical_name": "Her mother",
@@ -611,27 +496,131 @@
         }
       },
       {
-        "node_id": "entity:beirut_lebanon",
-        "score": 0.020056590831026955,
-        "text": "Beirut Lebanon",
+        "node_id": "entity:philippe",
+        "score": 0.03829698983442118,
+        "text": "Philippe",
         "metadata": {
-          "canonical_name": "Beirut Lebanon",
+          "canonical_name": "Philippe",
           "aliases": [
-            "BL",
-            "Beirut Lebanon"
+            "Philippe"
           ],
           "surface_forms": [
-            "BL",
-            "Beirut Lebanon"
+            "Philippe"
           ],
           "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:louis_xiv",
+        "score": 0.033315435132518806,
+        "text": "Louis XIV",
+        "metadata": {
+          "canonical_name": "Louis XIV",
+          "aliases": [
+            "LX",
+            "Louis XIV"
+          ],
+          "surface_forms": [
+            "LX",
+            "Louis XIV"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:king_louis_xiv_of_france",
+        "score": 0.03184964696915232,
+        "text": "King Louis XIV of France",
+        "metadata": {
+          "canonical_name": "King Louis XIV of France",
+          "aliases": [
+            "KLXOF",
+            "King Louis XIV of France",
+            "King Louis of France"
+          ],
+          "surface_forms": [
+            "KLXOF",
+            "King Louis XIV of France",
+            "King Louis of France"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:his_mother",
+        "score": 0.02937754443322521,
+        "text": "His mother",
+        "metadata": {
+          "canonical_name": "His mother",
+          "aliases": [
+            "HM",
+            "His mother"
+          ],
+          "surface_forms": [
+            "HM",
+            "His mother"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:duke_and_duchess_of_teck",
+        "score": 0.025477501476624784,
+        "text": "Duke and Duchess of Teck",
+        "metadata": {
+          "canonical_name": "Duke and Duchess of Teck",
+          "aliases": [
+            "DADOT",
+            "Duke and Duchess of Teck"
+          ],
+          "surface_forms": [
+            "DADOT",
+            "Duke and Duchess of Teck"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:louis_xiii_of_france",
+        "score": 0.02519288047314483,
+        "text": "Louis XIII of France",
+        "metadata": {
+          "canonical_name": "Louis XIII of France",
+          "aliases": [
+            "LXOF",
+            "Louis XIII of France",
+            "Louis of France"
+          ],
+          "surface_forms": [
+            "LXOF",
+            "Louis XIII of France",
+            "Louis of France"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_emmanuelle_boidron",
+        "score": 0.025106164128390823,
+        "text": "Emmanuelle Boidron",
+        "metadata": {
+          "canonical_name": "Emmanuelle Boidron",
+          "aliases": [
+            "EB",
+            "Emmanuelle Boidron"
+          ],
+          "surface_forms": [
+            "EB",
+            "Emmanuelle Boidron"
+          ],
+          "title_anchor": "Emmanuelle Boidron"
         }
       }
     ],
     "sentence": [
       {
         "node_id": "sentence:jean_michel_oughourlian_0_0_jean_michel_oughourlian_was_born_on_20_august_1940_in_beirut_lebanon_to_an_arm",
-        "score": 0.049850719083421965,
+        "score": 0.03671339152353039,
         "text": "Jean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother.",
         "metadata": {
           "title": "Jean-Michel Oughourlian",
@@ -676,41 +665,54 @@
         }
       },
       {
-        "node_id": "sentence:emmanuelle_boidron_0_0_emmanuelle_boidron_born_4_august_1978_in_orl_ans_loiret_france_is_a_french",
-        "score": 0.02820464323732795,
-        "text": "Emmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress.",
+        "node_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
+        "score": 0.022009926977580422,
+        "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
         "metadata": {
-          "title": "Emmanuelle Boidron",
-          "chunk_id": "chunk:emmanuelle_boidron_0",
+          "title": "Philippe I, Duke of Orléans",
+          "chunk_id": "chunk:philippe_i_duke_of_orl_ans_0",
           "sentence_index": 0,
-          "document_index": 3,
+          "document_index": 8,
           "triples": [
             {
-              "head": "Emmanuelle Boidron",
-              "relation": "born on",
-              "tail": "4 August 1978"
+              "head": "Philippe",
+              "relation": "title",
+              "tail": "Duke of Orl ans"
             },
             {
-              "head": "Emmanuelle Boidron",
-              "relation": "born in",
-              "tail": "Orl ans Loiret France"
+              "head": "Philippe",
+              "relation": "date of birth",
+              "tail": "21 September 1640"
             },
             {
-              "head": "Emmanuelle Boidron",
-              "relation": "is a",
-              "tail": "French actress"
+              "head": "Philippe",
+              "relation": "date of death",
+              "tail": "9 June 1701"
+            },
+            {
+              "head": "Philippe",
+              "relation": "parent",
+              "tail": "Louis XIII of France"
+            },
+            {
+              "head": "Philippe",
+              "relation": "parent",
+              "tail": "Anne of Austria"
             }
           ],
           "entities": [
-            "Emmanuelle Boidron",
-            "Orl ans Loiret France",
-            "French actress"
+            "Philippe",
+            "Duke of Orl ans",
+            "Louis XIII of France",
+            "Anne of Austria"
           ],
           "entity_ids": [
-            "entity:4_august_1978",
-            "entity:french_actress",
-            "entity:orl_ans_loiret_france",
-            "entity:title_anchor_emmanuelle_boidron"
+            "entity:21_september_1640",
+            "entity:9_june_1701",
+            "entity:anne_of_austria",
+            "entity:duke_of_orl_ans",
+            "entity:louis_xiii_of_france",
+            "entity:philippe"
           ]
         }
       }
@@ -718,7 +720,7 @@
     "chunk": [
       {
         "node_id": "chunk:philippe_i_duke_of_orl_ans_0",
-        "score": 0.007395157408481632,
+        "score": 0.0051717507546988825,
         "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king.",
         "metadata": {
           "title": "Philippe I, Duke of Orléans",
@@ -743,7 +745,7 @@
             "entity:france",
             "entity:gaston",
             "entity:his_older_brother",
-            "entity:louis_xiii",
+            "entity:louis_xiii_of_france",
             "entity:louis_xiv",
             "entity:marquisates_of_coucy",
             "entity:marquisates_of_folembray",
@@ -757,65 +759,77 @@
         }
       }
     ],
-    "qa_context": "Philippe I, Duke of Orléans\nPhilippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king.\n\nEmmanuelle Boidron\nEmmanuelle Boidron\nEmmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress. Her most important appearance is in the Navarro TV series as Yolande Navarro.\n\nEdward VIII\nEdward VIII\nEdward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary). His father was the son of the Prince and Princess of Wales (later King Edward VII and Queen Alexandra). His mother was the eldest daughter of the Duke and Duchess of Teck (Francis and Mary Adelaide). At the time of his birth, he was third in the line of succession to the throne, behind his grandfather and father.\n\nJean-Michel Oughourlian\nJean-Michel Oughourlian\nJean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother. He arrived in France at the age of ten.\n\nLouise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. Her mother was a legitimised daughter of Louis XIV of France and his mistress, Madame de Montespan. She was known as Élisabeth. As a member of the reigning House of Bourbon, Élisabeth was a \"princesse du sang\".\n\nPhilippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.\n\nLouise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\n\nLouis Philippe I\nLouis Philippe I\nLouis Philippe I (6 October 1773 – 26 August 1850) was King of the French from 1830 to 1848. His father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country. His father denounced his actions and voted for his death, but was imprisoned and executed that same year. Louis Philippe spent the next 21 years in exile before returning during the Bourbon Restoration. He was proclaimed king in 1830 after his cousin Charles X was forced to abdicate by the July Revolution. The reign of Louis Philippe is known as the July Monarchy and was dominated by wealthy industrialists and bankers. He followed conservative policies, especially under the influence of French statesman François Guizot during the period 1840–48. He also promoted friendship with Britain and sponsored colonial expansion, notably the French conquest of Algeria. His popularity faded as economic conditions in France deteriorated in 1847, and he was forced to abdicate after the\n\nFrançois d'Orléans, Prince of Joinville\nFrançois d'Orléans, Prince of Joinville\nFrançois-Ferdinand-Philippe-Louis-Marie d'Orléans, prince de Joinville (14 August 1818 – 16 June 1900) was the third son of Louis Philippe, Duke of Orléans, afterwards king of the French and his wife Marie Amalie of Bourbon-Sicilies. He was an admiral of the French Navy, and a talented artist.\n\n1979–80 Coupe de France\n1979–80 Coupe de France\nThe 1979–80 Coupe de France was the 63rd Coupe de France, France's annual national football cup competition. It was won by AS Monaco, who defeated US Orléans in the final.\n\nMercedes of Orléans\nMercedes of Orléans\nMaria de las Mercedes of Orléans (24 June 1860 – 26 June 1878) was Queen of Spain as the first wife of King Alfonso XII. She was born in Madrid, the daughter of Antoine of Orléans, Duke of Montpensier, and of Infanta Luisa Fernanda of Spain.",
+    "qa_context": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.\n\nLouise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. She was known as Élisabeth.\n\nLouis Philippe I\nHis father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country.",
     "retrieved_passages": [
       {
         "node_id": "chunk:philippe_i_duke_of_orl_ans_0",
         "passage_index": 8,
         "title": "Philippe I, Duke of Orléans",
-        "score": 0.07995666314048497,
+        "score": 0.07320033972492292,
         "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king.",
         "score_breakdown": {
-          "dense": 0.05067680148287878,
-          "graph": 0.050812615250600615,
-          "fact": 0.24560425166480973
+          "dense": 0.050677497965095346,
+          "graph": 0.05059807761907868,
+          "fact": 0.20098861705597912
         }
       },
       {
         "node_id": "chunk:emmanuelle_boidron_0",
         "passage_index": 3,
         "title": "Emmanuelle Boidron",
-        "score": 0.07990795486952268,
+        "score": 0.07224259364355186,
         "text": "Emmanuelle Boidron\nEmmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress. Her most important appearance is in the Navarro TV series as Yolande Navarro.",
         "score_breakdown": {
-          "dense": 0.04979627606155544,
-          "graph": 0.04915648113173601,
-          "fact": 0.25182039130764255
-        }
-      },
-      {
-        "node_id": "chunk:edward_viii_0",
-        "passage_index": 2,
-        "title": "Edward VIII",
-        "score": 0.0781941652647117,
-        "text": "Edward VIII\nEdward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary). His father was the son of the Prince and Princess of Wales (later King Edward VII and Queen Alexandra). His mother was the eldest daughter of the Duke and Duchess of Teck (Francis and Mary Adelaide). At the time of his birth, he was third in the line of succession to the throne, behind his grandfather and father.",
-        "score_breakdown": {
-          "dense": 0.05001657310784677,
-          "graph": 0.048580140175447414,
-          "fact": 0.240740053351745
-        }
-      },
-      {
-        "node_id": "chunk:jean_michel_oughourlian_0",
-        "passage_index": 12,
-        "title": "Jean-Michel Oughourlian",
-        "score": 0.054444125228202134,
-        "text": "Jean-Michel Oughourlian\nJean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother. He arrived in France at the age of ten.",
-        "score_breakdown": {
-          "dense": 0.0,
-          "graph": 0.05056276558943911,
-          "fact": 0.2618353036758027
+          "dense": 0.0497963923761939,
+          "graph": 0.048517767064447874,
+          "fact": 0.20199498478207237
         }
       },
       {
         "node_id": "chunk:louise_lisabeth_d_orl_ans_0",
         "passage_index": 17,
         "title": "Louise Élisabeth d'Orléans",
-        "score": 0.042259911105502285,
+        "score": 0.07174879356115137,
         "text": "Louise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. Her mother was a legitimised daughter of Louis XIV of France and his mistress, Madame de Montespan. She was known as Élisabeth. As a member of the reigning House of Bourbon, Élisabeth was a \"princesse du sang\".",
         "score_breakdown": {
-          "dense": 0.050496753024594075,
-          "graph": 0.04828898980658512,
+          "dense": 0.05049693354990503,
+          "graph": 0.04964440919063715,
+          "fact": 0.19388104901008302
+        }
+      },
+      {
+        "node_id": "chunk:edward_viii_0",
+        "passage_index": 2,
+        "title": "Edward VIII",
+        "score": 0.07113401899140245,
+        "text": "Edward VIII\nEdward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary). His father was the son of the Prince and Princess of Wales (later King Edward VII and Queen Alexandra). His mother was the eldest daughter of the Duke and Duchess of Teck (Francis and Mary Adelaide). At the time of his birth, he was third in the line of succession to the throne, behind his grandfather and father.",
+        "score_breakdown": {
+          "dense": 0.05001615886241485,
+          "graph": 0.04886359949274473,
+          "fact": 0.1931070117950058
+        }
+      },
+      {
+        "node_id": "chunk:jean_michel_oughourlian_0",
+        "passage_index": 12,
+        "title": "Jean-Michel Oughourlian",
+        "score": 0.046363887757983224,
+        "text": "Jean-Michel Oughourlian\nJean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother. He arrived in France at the age of ten.",
+        "score_breakdown": {
+          "dense": 0.0,
+          "graph": 0.04953212384818094,
+          "fact": 0.21002833735685966
+        }
+      },
+      {
+        "node_id": "chunk:marie_anne_de_bourbon_0",
+        "passage_index": 6,
+        "title": "Marie Anne de Bourbon",
+        "score": 0.04197593320343666,
+        "text": "Marie Anne de Bourbon\nMarie Anne de Bourbon, \"Légitimée de France\" (2 October 1666 – 3 May 1739) was the eldest legitimised daughter (\"fille légitimée de France\") of King Louis XIV of France and his mistress Louise de La Vallière. At the age of thirteen, she was married to Louis Armand de Bourbon, Prince of Conti and as such was the Princess of Conti by marriage. Her father's favourite daughter, Marie Anne was widowed in 1685 aged 19. She never married again and had no children. Following her mother's retirement to a convent, Marie Anne continued to reside at her father's court and was later her mother's heiress. She later became the Duchess of La Vallière in her own right.",
+        "score_breakdown": {
+          "dense": 0.05005374291699211,
+          "graph": 0.048154581996969995,
           "fact": 0.0
         }
       },
@@ -823,11 +837,11 @@
         "node_id": "chunk:louis_philippe_i_0",
         "passage_index": 16,
         "title": "Louis Philippe I",
-        "score": 0.04187507086830229,
+        "score": 0.04182232478754255,
         "text": "Louis Philippe I\nLouis Philippe I (6 October 1773 – 26 August 1850) was King of the French from 1830 to 1848. His father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country. His father denounced his actions and voted for his death, but was imprisoned and executed that same year. Louis Philippe spent the next 21 years in exile before returning during the Bourbon Restoration. He was proclaimed king in 1830 after his cousin Charles X was forced to abdicate by the July Revolution. The reign of Louis Philippe is known as the July Monarchy and was dominated by wealthy industrialists and bankers. He followed conservative policies, especially under the influence of French statesman François Guizot during the period 1840–48. He also promoted friendship with Britain and sponsored colonial expansion, notably the French conquest of Algeria. His popularity faded as economic conditions in France deteriorated in 1847, and he was forced to abdicate after the",
         "score_breakdown": {
-          "dense": 0.05018754497100152,
-          "graph": 0.04757307044750484,
+          "dense": 0.050187467221343283,
+          "graph": 0.047397392719345816,
           "fact": 0.0
         }
       },
@@ -835,11 +849,11 @@
         "node_id": "chunk:fran_ois_d_orl_ans_prince_of_joinville_0",
         "passage_index": 11,
         "title": "François d'Orléans, Prince of Joinville",
-        "score": 0.041750277889034626,
+        "score": 0.041720486292620464,
         "text": "François d'Orléans, Prince of Joinville\nFrançois-Ferdinand-Philippe-Louis-Marie d'Orléans, prince de Joinville (14 August 1818 – 16 June 1900) was the third son of Louis Philippe, Duke of Orléans, afterwards king of the French and his wife Marie Amalie of Bourbon-Sicilies. He was an admiral of the French Navy, and a talented artist.",
         "score_breakdown": {
-          "dense": 0.050094441789632134,
-          "graph": 0.04732778301578984,
+          "dense": 0.05009403559117074,
+          "graph": 0.047229222391588506,
           "fact": 0.0
         }
       },
@@ -847,11 +861,11 @@
         "node_id": "chunk:mercedes_of_orl_ans_0",
         "passage_index": 13,
         "title": "Mercedes of Orléans",
-        "score": 0.04173903772974663,
+        "score": 0.041699532108324756,
         "text": "Mercedes of Orléans\nMaria de las Mercedes of Orléans (24 June 1860 – 26 June 1878) was Queen of Spain as the first wife of King Alfonso XII. She was born in Madrid, the daughter of Antoine of Orléans, Duke of Montpensier, and of Infanta Luisa Fernanda of Spain.",
         "score_breakdown": {
-          "dense": 0.050259753668696804,
-          "graph": 0.04698724403987795,
+          "dense": 0.05025956318835902,
+          "graph": 0.046855907849090966,
           "fact": 0.0
         }
       },
@@ -859,23 +873,11 @@
         "node_id": "chunk:lionel_medeiros_0",
         "passage_index": 19,
         "title": "Lionel Medeiros",
-        "score": 0.04173894712394005,
+        "score": 0.04164387343065742,
         "text": "Lionel Medeiros\nLionel Jesus Gonçalves Medeiros (born 14 April 1977 in Orléans, France) is a Portuguese retired footballer who played as a central defender.",
         "score_breakdown": {
-          "dense": 0.04972795071308738,
-          "graph": 0.047961914105806615,
-          "fact": 0.0
-        }
-      },
-      {
-        "node_id": "chunk:marie_anne_de_bourbon_0",
-        "passage_index": 6,
-        "title": "Marie Anne de Bourbon",
-        "score": 0.0416714749708078,
-        "text": "Marie Anne de Bourbon\nMarie Anne de Bourbon, \"Légitimée de France\" (2 October 1666 – 3 May 1739) was the eldest legitimised daughter (\"fille légitimée de France\") of King Louis XIV of France and his mistress Louise de La Vallière. At the age of thirteen, she was married to Louis Armand de Bourbon, Prince of Conti and as such was the Princess of Conti by marriage. Her father's favourite daughter, Marie Anne was widowed in 1685 aged 19. She never married again and had no children. Following her mother's retirement to a convent, Marie Anne continued to reside at her father's court and was later her mother's heiress. She later became the Duchess of La Vallière in her own right.",
-        "score_breakdown": {
-          "dense": 0.05005313097595768,
-          "graph": 0.04714084311343693,
+          "dense": 0.04972792701742175,
+          "graph": 0.047645045236918177,
           "fact": 0.0
         }
       }
@@ -886,23 +888,15 @@
         "resolved_sub_question": "Who is the mother of Philippe, Duke of Orléans?",
         "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
         "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-        "score": 0.5937312849164327,
+        "score": 0.5937176080346427,
         "source_title": "Philippe I, Duke of Orléans",
         "hop_answer": "Anne of Austria",
-        "hop_thought": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-        "hop_raw_response": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.\nAnswer: Anne of Austria",
+        "hop_thought": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.",
+        "hop_raw_response": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.\nAnswer: Anne of Austria",
         "evidence_passages": [
           {
             "title": "Philippe I, Duke of Orléans",
             "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-          },
-          {
-            "title": "Philippe I, Duke of Orléans",
-            "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-          },
-          {
-            "title": "Louise Élisabeth d'Orléans",
-            "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
           }
         ]
       },
@@ -911,23 +905,15 @@
         "resolved_sub_question": "Who is the mother of this person? Context: Anne of Austria.",
         "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
         "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-        "score": 0.5183587515830994,
+        "score": 0.5183450747013092,
         "source_title": "Philippe I, Duke of Orléans",
-        "hop_answer": "Françoise Marie de Bourbon",
-        "hop_thought": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.",
-        "hop_raw_response": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\nAnswer: Françoise Marie de Bourbon",
+        "hop_answer": "Anne of Austria",
+        "hop_thought": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.",
+        "hop_raw_response": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.\nAnswer: Anne of Austria",
         "evidence_passages": [
           {
             "title": "Philippe I, Duke of Orléans",
             "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-          },
-          {
-            "title": "Philippe I, Duke of Orléans",
-            "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-          },
-          {
-            "title": "Louise Élisabeth d'Orléans",
-            "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
           }
         ]
       }
@@ -947,13 +933,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. Who is the mother of Philippe, Duke of Orléans? => Anne of Austria (source: Philippe I, Duke of Orléans)\n2. Who is the mother of this person? => Françoise Marie de Bourbon (source: Philippe I, Duke of Orléans)\n\nFact hints:\n- Philippe parent Anne of Austria\n- Philippe became Duke of Orl ans\n\nWikipedia Title: Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.\n\nWikipedia Title: Philippe I, Duke of Orléans\nPhilippe I, Duke of Orléans Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV.\n\nWikipedia Title: Louise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\n\nWikipedia Title: Louise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. She was known as Élisabeth.\n\nWikipedia Title: Louis Philippe I\nHis father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country.\n\nWikipedia Title: François d'Orléans, Prince of Joinville\nFrançois d'Orléans, Prince of Joinville François-Ferdinand-Philippe-Louis-Marie d'Orléans, prince de Joinville (14 August 1818 – 16 June 1900) was the third son of Louis Philippe, Duke of Orléans, afterwards king of the French and his wife Marie Amalie of Bourbon-Sicilies. He was an admiral of the French Navy, and a talented artist.\n\nWikipedia Title: 1979–80 Coupe de France\nIt was won by AS Monaco, who defeated US Orléans in the final. 1979–80 Coupe de France The 1979–80 Coupe de France was the 63rd Coupe de France, France's annual national football cup competition.\n\nWikipedia Title: Edward VIII\nEdward VIII Edward was born on 23 June 1894 at White Lodge, Richmond Park, on the outskirts of London during the reign of his great-grandmother Queen Victoria. He was the eldest son of the Duke and Duchess of York (later King George V and Queen Mary).\n\nWikipedia Title: Mercedes of Orléans\nShe was born in Madrid, the daughter of Antoine of Orléans, Duke of Montpensier, and of Infanta Luisa Fernanda of Spain. Mercedes of Orléans Maria de las Mercedes of Orléans (24 June 1860 – 26 June 1878) was Queen of Spain as the first wife of King Alfonso XII.\n\nWikipedia Title: Emmanuelle Boidron\nHer most important appearance is in the Navarro TV series as Yolande Navarro. Emmanuelle Boidron Emmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress.\n\nWikipedia Title: Jean-Michel Oughourlian\nHe arrived in France at the age of ten. Jean-Michel Oughourlian Jean-Michel Oughourlian was born on 20 August 1940 in Beirut, Lebanon, to an Armenian father who fled the 1915-1922 genocide and a Colombian mother.\n\nQuestion: Who is the grandmother of Philippe, Duke of Orléans?\nThought:"
+        "content": "Intermediate reasoning hints:\n1. Who is the mother of Philippe, Duke of Orléans? => Anne of Austria (source: Philippe I, Duke of Orléans)\n2. Who is the mother of this person? => Anne of Austria (source: Philippe I, Duke of Orléans)\n\nFact hints:\n- Philippe parent Anne of Austria\n- Philippe became Duke of Orl ans\n\nWikipedia Title: Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.\n\nWikipedia Title: Philippe I, Duke of Orléans\nPhilippe I, Duke of Orléans Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV.\n\nWikipedia Title: Louise Élisabeth d'Orléans\nLouise Élisabeth d'Orléans Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon. She was known as Élisabeth.\n\nWikipedia Title: Louis Philippe I\nHis father Louis Philippe II, Duke of Orléans had taken the name \"Philippe Égalité\" because he initially supported the French Revolution. However, following the deposition and execution of his cousin King Louis XVI, Louis Philippe fled the country.\n\nWikipedia Title: Emmanuelle Boidron\nHer most important appearance is in the Navarro TV series as Yolande Navarro. Emmanuelle Boidron Emmanuelle Boidron (born 4 August 1978, in Orléans, Loiret, France), is a French actress.\n\nQuestion: Who is the grandmother of Philippe, Duke of Orléans?\nThought:"
       }
     ]
   },
-  "qa_thought": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.",
-  "predicted_answer": "Françoise Marie de Bourbon",
-  "qa_raw_response": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\nAnswer: Françoise Marie de Bourbon",
+  "qa_thought": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.",
+  "predicted_answer": "Anne of Austria",
+  "qa_raw_response": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.\nAnswer: Anne of Austria",
   "sample_metadata": {
     "sample_id": "2hop__207476_625987",
     "question": "Who is the grandmother of Philippe, Duke of Orléans?",

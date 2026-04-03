@@ -1,0 +1,1000 @@
+{
+  "query": "What is the distance in miles from Nashville to the place where Hemlock Semiconductor produces electronic components?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Nashville",
+    "Hemlock Semiconductor"
+  ],
+  "raw_query_entities": [
+    "Nashville",
+    "Hemlock Semiconductor"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Nashville",
+      "node_id": "entity:nashville",
+      "resolved_text": "Nashville",
+      "score": 0.803,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.5,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.17100000000000004,
+      "confident": true
+    },
+    {
+      "mention": "Hemlock Semiconductor",
+      "node_id": "entity:hemlock_semiconductor",
+      "resolved_text": "Hemlock Semiconductor",
+      "score": 0.793,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4285714285714286,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.3109090909090909,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Where does Hemlock Semiconductor produce electronic components?",
+    "What is the distance in miles from Nashville to this location?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:nashville",
+      "score": 1.0925213125295343,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hemlock_semiconductor",
+      "score": 0.8025285702587719,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:state_nashville",
+      "score": 0.2925119726653489,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nashville_other",
+      "score": 0.29251056534078906,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nolensville_tennessee",
+      "score": 0.2900061917259196,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gallatin_tennessee",
+      "score": 0.2900061917259196,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tennessee",
+      "score": 0.283160745494187,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tennessee_largest",
+      "score": 0.283160745494187,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_wnqm",
+      "score": 0.25415168835737173,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nashville_tennessee",
+      "score": 0.2441806839489422,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville",
+      "score": 0.23847990971875363,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_tennessee",
+      "score": 0.23844597284057348,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:wnqm_located_in_nashville_tennessee_sentence_wnqm_0_0_wnqm_or_nashville_quality_ministries_is_a_christian_radio_station_",
+      "text": "WNQM located in Nashville Tennessee",
+      "head_id": "entity:title_anchor_wnqm",
+      "tail_id": "entity:nashville_tennessee",
+      "sentence_id": "sentence:wnqm_0_0_wnqm_or_nashville_quality_ministries_is_a_christian_radio_station_located_in_n",
+      "chunk_id": "chunk:wnqm_0",
+      "document_index": 19,
+      "score": 0.25167268664092823
+    },
+    {
+      "fact_id": "fact:tennessee_location_of_1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville_sentence_tenne",
+      "text": "Tennessee location_of 1 2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville",
+      "head_id": "entity:title_anchor_tennessee",
+      "tail_id": "entity:1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville",
+      "sentence_id": "sentence:tennessee_0_1_tennessee_is_also_the_location_of_the_volkswagen_factory_in_chattanooga_a_2_bi",
+      "chunk_id": "chunk:tennessee_0",
+      "document_index": 9,
+      "score": 0.23596728791182253
+    },
+    {
+      "fact_id": "fact:wkdf_located_in_nashville_tennessee_sentence_wkdf_0_0_wkdf_103_3_fm_103_3_nash_fm_is_a_country_music_radio_station_broad",
+      "text": "WKDF located_in Nashville Tennessee",
+      "head_id": "entity:title_anchor_wkdf",
+      "tail_id": "entity:nashville_tennessee",
+      "sentence_id": "sentence:wkdf_0_0_wkdf_103_3_fm_103_3_nash_fm_is_a_country_music_radio_station_broadcasting_o",
+      "chunk_id": "chunk:wkdf_0",
+      "document_index": 6,
+      "score": 0.2316709662356045
+    },
+    {
+      "fact_id": "fact:clarksville_is_located_45_miles_northwest_of_nashville_sentence_tennessee_0_5_the_city_of_clarksville_is_a_fifth_signifi",
+      "text": "Clarksville is located 45 miles northwest of Nashville",
+      "head_id": "entity:clarksville",
+      "tail_id": "entity:45_miles_northwest_of_nashville",
+      "sentence_id": "sentence:tennessee_0_5_the_city_of_clarksville_is_a_fifth_significant_population_center_some_45_miles",
+      "chunk_id": "chunk:tennessee_0",
+      "document_index": 8,
+      "score": 0.16167500038700872
+    }
+  ],
+  "bridge_entities": [
+    "Clarksville",
+    "Nashville Tennessee",
+    "Tennessee",
+    "Volkswagen factory",
+    "Chattanooga",
+    "Wacker Chemie"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where does Hemlock Semiconductor produce electronic components?",
+      "resolved_sub_question": "Where does Hemlock Semiconductor produce electronic components?",
+      "sentence_id": "sentence:tennessee_0_1_tennessee_is_also_the_location_of_the_volkswagen_factory_in_chattanooga_a_2_bi",
+      "sentence": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+      "score": 0.5082638461538462,
+      "source_title": "Tennessee",
+      "hop_answer": "Clarksville",
+      "hop_thought": "Hemlock Semiconductor produces electronic components in a $1.2 billion polysilicon production facility located in Clarksville, Tennessee.",
+      "hop_raw_response": "Hemlock Semiconductor produces electronic components in a $1.2 billion polysilicon production facility located in Clarksville, Tennessee.\nAnswer: Clarksville",
+      "evidence_passages": [
+        {
+          "title": "Tennessee",
+          "text": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+        },
+        {
+          "title": "Tennessee",
+          "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+        },
+        {
+          "title": "Tennessee",
+          "text": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the distance in miles from Nashville to this location?",
+      "resolved_sub_question": "What is the distance in miles from Nashville to this location? Context: Clarksville.",
+      "sentence_id": "sentence:tennessee_0_5_the_city_of_clarksville_is_a_fifth_significant_population_center_some_45_miles",
+      "sentence": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville.",
+      "score": 0.4818019233978271,
+      "source_title": "Tennessee",
+      "hop_answer": "45",
+      "hop_thought": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.",
+      "hop_raw_response": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.\nAnswer: 45",
+      "evidence_passages": [
+        {
+          "title": "Tennessee",
+          "text": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville."
+        },
+        {
+          "title": "Tennessee",
+          "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+        },
+        {
+          "title": "Tennessee",
+          "text": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:nashville",
+      "score": 0.1084350829454083,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hemlock_semiconductor",
+      "score": 0.06801561411055723,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:tennessee_0_1_tennessee_is_also_the_location_of_the_volkswagen_factory_in_chattanooga_a_2_bi",
+      "score": 0.05757392200669631,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_tennessee",
+      "score": 0.043527297914609867,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nashville_tennessee",
+      "score": 0.04007598501050329,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tennessee",
+      "score": 0.034954403474621205,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:state_nashville",
+      "score": 0.029761070469788826,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nashville_other",
+      "score": 0.027875977111906886,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_wnqm",
+      "score": 0.027870114297245643,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nolensville_tennessee",
+      "score": 0.026652910063615403,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gallatin_tennessee",
+      "score": 0.02608924786471384,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_wkdf",
+      "score": 0.025989909037143506,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tennessee_largest",
+      "score": 0.02526300778918274,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville",
+      "score": 0.023062841020521828,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:clarksville",
+      "score": 0.02279005547816678,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:wnqm_0_0_wnqm_or_nashville_quality_ministries_is_a_christian_radio_station_located_in_n",
+      "score": 0.022347574470604856,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:45_miles_northwest_of_nashville",
+      "score": 0.018700555466703885,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:wkdf_0_0_wkdf_103_3_fm_103_3_nash_fm_is_a_country_music_radio_station_broadcasting_o",
+      "score": 0.018676865898419017,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:tennessee_0_5_the_city_of_clarksville_is_a_fifth_significant_population_center_some_45_miles",
+      "score": 0.01766682597467799,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:nashville_metropolitan_area_0_0_the_mid_state_nashville_davidson_murfreesboro_franklin_tn_metropolitan",
+      "score": 0.016705261136749097,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:tennessee_0",
+      "passage_index": 9,
+      "title": "Tennessee",
+      "score": 0.09951876325816966,
+      "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+      "score_breakdown": {
+        "dense": 0.05607617247236523,
+        "graph": 0.06289500761679506,
+        "fact": 0.33205577408886844
+      }
+    },
+    {
+      "node_id": "chunk:wnqm_0",
+      "passage_index": 19,
+      "title": "WNQM",
+      "score": 0.09813931423435432,
+      "text": "WNQM\nWNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F. W. Robbert Broadcasting.",
+      "score_breakdown": {
+        "dense": 0.05563925371947356,
+        "graph": 0.05646974395189207,
+        "fact": 0.33731201002050826
+      }
+    },
+    {
+      "node_id": "chunk:wkdf_0",
+      "passage_index": 6,
+      "title": "WKDF",
+      "score": 0.09723697720887986,
+      "text": "WKDF\nWKDF (103.3 FM, \"103.3 Nash FM\") is a Country music radio station broadcasting on a frequency of 103.3 MHz from Nashville, Tennessee. WKDF is owned by Cumulus Media. A transmitter site is in Brentwood, Tennessee, and its studios are located in Nashville's Music Row district.",
+      "score_breakdown": {
+        "dense": 0.055672196258198504,
+        "graph": 0.05674145627759055,
+        "fact": 0.3306322158906234
+      }
+    },
+    {
+      "node_id": "chunk:nashville_metropolitan_area_0",
+      "passage_index": 5,
+      "title": "Nashville metropolitan area",
+      "score": 0.04761461565809097,
+      "text": "Nashville metropolitan area\nThe Mid-State Nashville - Davidson -- Murfreesboro -- Franklin, TN, Metropolitan Statistical Area Country United States State (s) Tennessee Largest city Nashville Other cities Murfreesboro, Franklin Area Total 7,484 sq mi (19,380 km) Highest elevation 2,092 ft (638 m) Lowest elevation 359 ft (109 m) Population (2016 est.) Total 1,865,298 Rank 36th in the U.S. Density 240 / sq mi (106 / km)",
+      "score_breakdown": {
+        "dense": 0.055668826454036424,
+        "graph": 0.05665587036123644,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:wgfx_0",
+      "passage_index": 10,
+      "title": "WGFX",
+      "score": 0.04738497099014193,
+      "text": "WGFX\nWGFX is a radio station broadcasting on the FM band at 104.5 MHz licensed to the city of Gallatin, Tennessee, but serving the Nashville market as a whole. It is currently branded as 104.5 The Zone, broadcasting a sports talk format. It is owned by Cumulus Media and operates out of studios in Nashville's Music Row district. Its transmitter is located just north of downtown Nashville.",
+      "score_breakdown": {
+        "dense": 0.05556203086427495,
+        "graph": 0.05608618004930236,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:nolensville_tennessee_0",
+      "passage_index": 4,
+      "title": "Nolensville, Tennessee",
+      "score": 0.047338944437616604,
+      "text": "Nolensville, Tennessee\nNolensville is a town in Williamson County, Tennessee. The population was 5,861 at the 2010 census. It was established in 1797 by William Nolen, a veteran of the American Revolutionary War. Located in Middle Tennessee, it is about 22 miles southeast of Nashville, Tennessee. The town was re-incorporated in 1996.",
+      "score_breakdown": {
+        "dense": 0.05565233272629207,
+        "graph": 0.05576720479385321,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:j_percy_priest_dam_0",
+      "passage_index": 14,
+      "title": "J. Percy Priest Dam",
+      "score": 0.047114009372520624,
+      "text": "J. Percy Priest Dam\nJ. Percy Priest Dam is a dam in north central Tennessee at river mile 6.8 of the Stones River, a tributary of the Cumberland. It is located about ten miles (16 km) east of downtown Nashville. The reservoir behind the dam is Percy Priest Lake. It is one of four major flood control reservoirs for the Cumberland; the others being Wolf Creek Dam, Dale Hollow Dam, and Center Hill Dam.",
+      "score_breakdown": {
+        "dense": 0.05578654747676466,
+        "graph": 0.05477136086766685,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:julius_lester_0",
+      "passage_index": 11,
+      "title": "Julius Lester",
+      "score": 0.04700860405797026,
+      "text": "Julius Lester\nBorn on January 27, 1939, in St. Louis, Missouri, Julius Lester was the son of Rev. W. D. Lester, a Methodist minister, and Julia (Smith) Lester. The family moved to Kansas City, Kansas, in 1941, and to Nashville, Tennessee, in 1952. In 1960 he received his BA from Fisk University in Nashville, Tennessee, with a major in English and minors in Art and Spanish.",
+      "score_breakdown": {
+        "dense": 0.055330846293129836,
+        "graph": 0.055255461989162834,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:city_harbor_0",
+      "passage_index": 17,
+      "title": "City Harbor",
+      "score": 0.04696446517065371,
+      "text": "City Harbor\nIn 2011, City Harbor was formed in Nashville, Tennessee and it consisted of duo Molly Reed and Josh Varnadore. However, Varnadore left the duo in late 2012 for a ministry opportunity in Texas. So Robby Earle was added as the male part of the duo.",
+      "score_breakdown": {
+        "dense": 0.05553567873187798,
+        "graph": 0.0547328062270694,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:colonial_heights_tennessee_0",
+      "passage_index": 16,
+      "title": "Colonial Heights, Tennessee",
+      "score": 0.0469331061959046,
+      "text": "Colonial Heights, Tennessee\nColonial Heights is a census-designated place (CDP) in Sullivan County, Tennessee, United States. The population was 6,934 at the 2010 census. It is part of the Kingsport–Bristol (TN)–Bristol (VA) Metropolitan Statistical Area, which is a component of the Johnson City–Kingsport–Bristol, TN-VA Combined Statistical Area – commonly known as the \"Tri-Cities\" region.",
+      "score_breakdown": {
+        "dense": 0.055562695433101925,
+        "graph": 0.054578745692328456,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:nashville",
+        "score": 0.1084350829454083,
+        "text": "Nashville",
+        "metadata": {
+          "canonical_name": "Nashville",
+          "aliases": [
+            "Nashville"
+          ],
+          "surface_forms": [
+            "Nashville"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:hemlock_semiconductor",
+        "score": 0.06801561411055723,
+        "text": "Hemlock Semiconductor",
+        "metadata": {
+          "canonical_name": "Hemlock Semiconductor",
+          "aliases": [
+            "HS",
+            "Hemlock Semiconductor"
+          ],
+          "surface_forms": [
+            "HS",
+            "Hemlock Semiconductor"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_tennessee",
+        "score": 0.043527297914609867,
+        "text": "Tennessee",
+        "metadata": {
+          "canonical_name": "Tennessee",
+          "aliases": [
+            "Tennessee"
+          ],
+          "surface_forms": [
+            "Tennessee"
+          ],
+          "title_anchor": "Tennessee"
+        }
+      },
+      {
+        "node_id": "entity:nashville_tennessee",
+        "score": 0.04007598501050329,
+        "text": "Nashville Tennessee",
+        "metadata": {
+          "canonical_name": "Nashville Tennessee",
+          "aliases": [
+            "NT",
+            "Nashville Tennessee"
+          ],
+          "surface_forms": [
+            "NT",
+            "Nashville Tennessee"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:tennessee",
+        "score": 0.034954403474621205,
+        "text": "Tennessee",
+        "metadata": {
+          "canonical_name": "Tennessee",
+          "aliases": [
+            "Tennessee"
+          ],
+          "surface_forms": [
+            "Tennessee"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:tennessee_0_1_tennessee_is_also_the_location_of_the_volkswagen_factory_in_chattanooga_a_2_bi",
+        "score": 0.05757392200669631,
+        "text": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+        "metadata": {
+          "title": "Tennessee",
+          "chunk_id": "chunk:tennessee_0",
+          "sentence_index": 1,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Tennessee",
+              "relation": "location_of",
+              "tail": "Volkswagen factory in Chattanooga"
+            },
+            {
+              "head": "Tennessee",
+              "relation": "location_of",
+              "tail": "2 billion polysilicon production facility by Wacker Chemie in Bradley County"
+            },
+            {
+              "head": "Tennessee",
+              "relation": "location_of",
+              "tail": "1 2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville"
+            }
+          ],
+          "entities": [
+            "Tennessee",
+            "Volkswagen factory",
+            "Chattanooga",
+            "Wacker Chemie",
+            "Bradley County",
+            "Hemlock Semiconductor",
+            "Clarksville"
+          ],
+          "entity_ids": [
+            "entity:1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville",
+            "entity:2_billion_polysilicon_production_facility_by_wacker_chemie_in_bradley_county",
+            "entity:bradley_county",
+            "entity:chattanooga",
+            "entity:clarksville",
+            "entity:hemlock_semiconductor",
+            "entity:title_anchor_tennessee",
+            "entity:volkswagen_factory",
+            "entity:volkswagen_factory_in_chattanooga",
+            "entity:wacker_chemie"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:wnqm_0_0_wnqm_or_nashville_quality_ministries_is_a_christian_radio_station_located_in_n",
+        "score": 0.022347574470604856,
+        "text": "WNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F.",
+        "metadata": {
+          "title": "WNQM",
+          "chunk_id": "chunk:wnqm_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "WNQM",
+              "relation": "is also known as",
+              "tail": "Nashville Quality Ministries"
+            },
+            {
+              "head": "WNQM",
+              "relation": "is a",
+              "tail": "Christian radio station"
+            },
+            {
+              "head": "WNQM",
+              "relation": "located in",
+              "tail": "Nashville Tennessee"
+            }
+          ],
+          "entities": [
+            "WNQM",
+            "Nashville Quality Ministries",
+            "Christian radio station",
+            "Nashville Tennessee"
+          ],
+          "entity_ids": [
+            "entity:christian_radio_station",
+            "entity:nashville_quality_ministries",
+            "entity:nashville_tennessee",
+            "entity:title_anchor_wnqm"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:wkdf_0_0_wkdf_103_3_fm_103_3_nash_fm_is_a_country_music_radio_station_broadcasting_o",
+        "score": 0.018676865898419017,
+        "text": "WKDF (103.3 FM, \"103.3 Nash FM\") is a Country music radio station broadcasting on a frequency of 103.3 MHz from Nashville, Tennessee.",
+        "metadata": {
+          "title": "WKDF",
+          "chunk_id": "chunk:wkdf_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "WKDF",
+              "relation": "broadcasts_on_frequency",
+              "tail": "103 3 MHz"
+            },
+            {
+              "head": "WKDF",
+              "relation": "located_in",
+              "tail": "Nashville Tennessee"
+            },
+            {
+              "head": "WKDF",
+              "relation": "plays_genre",
+              "tail": "Country music"
+            },
+            {
+              "head": "WKDF",
+              "relation": "has_callsign",
+              "tail": "103 3 Nash FM"
+            }
+          ],
+          "entities": [
+            "WKDF",
+            "103 3 MHz",
+            "Nashville Tennessee",
+            "Country music",
+            "103 3 Nash FM"
+          ],
+          "entity_ids": [
+            "entity:103_3_mhz",
+            "entity:103_3_nash_fm",
+            "entity:country_music",
+            "entity:nashville_tennessee",
+            "entity:title_anchor_wkdf"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:tennessee_0_5_the_city_of_clarksville_is_a_fifth_significant_population_center_some_45_miles",
+        "score": 0.01766682597467799,
+        "text": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville.",
+        "metadata": {
+          "title": "Tennessee",
+          "chunk_id": "chunk:tennessee_0",
+          "sentence_index": 5,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Clarksville",
+              "relation": "is located",
+              "tail": "45 miles northwest of Nashville"
+            }
+          ],
+          "entities": [
+            "Clarksville",
+            "Nashville"
+          ],
+          "entity_ids": [
+            "entity:45_miles_northwest_of_nashville",
+            "entity:clarksville",
+            "entity:nashville"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:tennessee_0",
+        "score": 0.015261897534111668,
+        "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+        "metadata": {
+          "title": "Tennessee",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:1_2_billion_polysilicon_production_facility_by_hemlock_semiconductor_in_clarksville",
+            "entity:2_billion_polysilicon_production_facility_by_wacker_chemie_in_bradley_county",
+            "entity:45_miles_northwest_of_nashville",
+            "entity:alabama",
+            "entity:america",
+            "entity:appalachian_mountains",
+            "entity:arkansas",
+            "entity:bradley_county",
+            "entity:caterpillar_financial",
+            "entity:chattanooga",
+            "entity:cherokee",
+            "entity:clarksville",
+            "entity:eastman_chemical_company",
+            "entity:franklin",
+            "entity:georgia",
+            "entity:great_smoky_mountains",
+            "entity:hemlock_semiconductor",
+            "entity:hospital_corporation",
+            "entity:international_paper",
+            "entity:kentucky",
+            "entity:kingsport",
+            "entity:kingston",
+            "entity:knoxville",
+            "entity:major",
+            "entity:memphis",
+            "entity:mississippi",
+            "entity:mississippi_river",
+            "entity:missouri",
+            "entity:murfreesboro",
+            "entity:nashville",
+            "entity:nissan_motor_company",
+            "entity:north_american",
+            "entity:north_carolina",
+            "entity:one_third_of_the_population_of_memphis_or_nashville",
+            "entity:pilot_corporation",
+            "entity:regal_entertainment_group",
+            "entity:second_largest_city_in_tennessee",
+            "entity:southeastern_united_states",
+            "entity:tanasi",
+            "entity:title_anchor_tennessee",
+            "entity:unum",
+            "entity:virginia",
+            "entity:volkswagen_factory",
+            "entity:volkswagen_factory_in_chattanooga",
+            "entity:wacker_chemie"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wnqm_0",
+        "score": 0.007370269635371198,
+        "text": "WNQM\nWNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F. W. Robbert Broadcasting.",
+        "metadata": {
+          "title": "WNQM",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:christian_radio_station",
+            "entity:nashville_quality_ministries",
+            "entity:nashville_tennessee",
+            "entity:robbert_broadcasting",
+            "entity:title_anchor_wnqm"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wkdf_0",
+        "score": 0.006857419948159539,
+        "text": "WKDF\nWKDF (103.3 FM, \"103.3 Nash FM\") is a Country music radio station broadcasting on a frequency of 103.3 MHz from Nashville, Tennessee. WKDF is owned by Cumulus Media. A transmitter site is in Brentwood, Tennessee, and its studios are located in Nashville's Music Row district.",
+        "metadata": {
+          "title": "WKDF",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:103_3_mhz",
+            "entity:103_3_nash_fm",
+            "entity:brentwood",
+            "entity:brentwood_tennessee",
+            "entity:country_music",
+            "entity:cumulus_media",
+            "entity:music_row",
+            "entity:nashville",
+            "entity:nashville_s_music_row_district",
+            "entity:nashville_tennessee",
+            "entity:tennessee",
+            "entity:title_anchor_wkdf"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wgfx_0",
+        "score": 0.0034106781470310344,
+        "text": "WGFX\nWGFX is a radio station broadcasting on the FM band at 104.5 MHz licensed to the city of Gallatin, Tennessee, but serving the Nashville market as a whole. It is currently branded as 104.5 The Zone, broadcasting a sports talk format. It is owned by Cumulus Media and operates out of studios in Nashville's Music Row district. Its transmitter is located just north of downtown Nashville.",
+        "metadata": {
+          "title": "WGFX",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:104_5_the_zone",
+            "entity:cumulus_media",
+            "entity:fm_band_at_104_5_mhz",
+            "entity:gallatin_tennessee",
+            "entity:music_row",
+            "entity:nashville",
+            "entity:nashville_market",
+            "entity:nashville_s_music_row_district",
+            "entity:title_anchor_wgfx"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Tennessee\nTennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.\n\nWNQM\nWNQM\nWNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F. W. Robbert Broadcasting.\n\nWKDF\nWKDF\nWKDF (103.3 FM, \"103.3 Nash FM\") is a Country music radio station broadcasting on a frequency of 103.3 MHz from Nashville, Tennessee. WKDF is owned by Cumulus Media. A transmitter site is in Brentwood, Tennessee, and its studios are located in Nashville's Music Row district.\n\nNashville metropolitan area\nNashville metropolitan area\nThe Mid-State Nashville - Davidson -- Murfreesboro -- Franklin, TN, Metropolitan Statistical Area Country United States State (s) Tennessee Largest city Nashville Other cities Murfreesboro, Franklin Area Total 7,484 sq mi (19,380 km) Highest elevation 2,092 ft (638 m) Lowest elevation 359 ft (109 m) Population (2016 est.) Total 1,865,298 Rank 36th in the U.S. Density 240 / sq mi (106 / km)\n\nWGFX\nWGFX\nWGFX is a radio station broadcasting on the FM band at 104.5 MHz licensed to the city of Gallatin, Tennessee, but serving the Nashville market as a whole. It is currently branded as 104.5 The Zone, broadcasting a sports talk format. It is owned by Cumulus Media and operates out of studios in Nashville's Music Row district. Its transmitter is located just north of downtown Nashville.\n\nTennessee\nTennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.\n\nTennessee\nThe city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville.\n\nNolensville, Tennessee\nNolensville, Tennessee\nNolensville is a town in Williamson County, Tennessee. The population was 5,861 at the 2010 census. It was established in 1797 by William Nolen, a veteran of the American Revolutionary War. Located in Middle Tennessee, it is about 22 miles southeast of Nashville, Tennessee. The town was re-incorporated in 1996.\n\nJ. Percy Priest Dam\nJ. Percy Priest Dam\nJ. Percy Priest Dam is a dam in north central Tennessee at river mile 6.8 of the Stones River, a tributary of the Cumberland. It is located about ten miles (16 km) east of downtown Nashville. The reservoir behind the dam is Percy Priest Lake. It is one of four major flood control reservoirs for the Cumberland; the others being Wolf Creek Dam, Dale Hollow Dam, and Center Hill Dam.\n\nJulius Lester\nJulius Lester\nBorn on January 27, 1939, in St. Louis, Missouri, Julius Lester was the son of Rev. W. D. Lester, a Methodist minister, and Julia (Smith) Lester. The family moved to Kansas City, Kansas, in 1941, and to Nashville, Tennessee, in 1952. In 1960 he received his BA from Fisk University in Nashville, Tennessee, with a major in English and minors in Art and Spanish.\n\nCity Harbor\nCity Harbor\nIn 2011, City Harbor was formed in Nashville, Tennessee and it consisted of duo Molly Reed and Josh Varnadore. However, Varnadore left the duo in late 2012 for a ministry opportunity in Texas. So Robby Earle was added as the male part of the duo.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:tennessee_0",
+        "passage_index": 9,
+        "title": "Tennessee",
+        "score": 0.09951876325816966,
+        "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+        "score_breakdown": {
+          "dense": 0.05607617247236523,
+          "graph": 0.06289500761679506,
+          "fact": 0.33205577408886844
+        }
+      },
+      {
+        "node_id": "chunk:wnqm_0",
+        "passage_index": 19,
+        "title": "WNQM",
+        "score": 0.09813931423435432,
+        "text": "WNQM\nWNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F. W. Robbert Broadcasting.",
+        "score_breakdown": {
+          "dense": 0.05563925371947356,
+          "graph": 0.05646974395189207,
+          "fact": 0.33731201002050826
+        }
+      },
+      {
+        "node_id": "chunk:wkdf_0",
+        "passage_index": 6,
+        "title": "WKDF",
+        "score": 0.09723697720887986,
+        "text": "WKDF\nWKDF (103.3 FM, \"103.3 Nash FM\") is a Country music radio station broadcasting on a frequency of 103.3 MHz from Nashville, Tennessee. WKDF is owned by Cumulus Media. A transmitter site is in Brentwood, Tennessee, and its studios are located in Nashville's Music Row district.",
+        "score_breakdown": {
+          "dense": 0.055672196258198504,
+          "graph": 0.05674145627759055,
+          "fact": 0.3306322158906234
+        }
+      },
+      {
+        "node_id": "chunk:nashville_metropolitan_area_0",
+        "passage_index": 5,
+        "title": "Nashville metropolitan area",
+        "score": 0.04761461565809097,
+        "text": "Nashville metropolitan area\nThe Mid-State Nashville - Davidson -- Murfreesboro -- Franklin, TN, Metropolitan Statistical Area Country United States State (s) Tennessee Largest city Nashville Other cities Murfreesboro, Franklin Area Total 7,484 sq mi (19,380 km) Highest elevation 2,092 ft (638 m) Lowest elevation 359 ft (109 m) Population (2016 est.) Total 1,865,298 Rank 36th in the U.S. Density 240 / sq mi (106 / km)",
+        "score_breakdown": {
+          "dense": 0.055668826454036424,
+          "graph": 0.05665587036123644,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:wgfx_0",
+        "passage_index": 10,
+        "title": "WGFX",
+        "score": 0.04738497099014193,
+        "text": "WGFX\nWGFX is a radio station broadcasting on the FM band at 104.5 MHz licensed to the city of Gallatin, Tennessee, but serving the Nashville market as a whole. It is currently branded as 104.5 The Zone, broadcasting a sports talk format. It is owned by Cumulus Media and operates out of studios in Nashville's Music Row district. Its transmitter is located just north of downtown Nashville.",
+        "score_breakdown": {
+          "dense": 0.05556203086427495,
+          "graph": 0.05608618004930236,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:nolensville_tennessee_0",
+        "passage_index": 4,
+        "title": "Nolensville, Tennessee",
+        "score": 0.047338944437616604,
+        "text": "Nolensville, Tennessee\nNolensville is a town in Williamson County, Tennessee. The population was 5,861 at the 2010 census. It was established in 1797 by William Nolen, a veteran of the American Revolutionary War. Located in Middle Tennessee, it is about 22 miles southeast of Nashville, Tennessee. The town was re-incorporated in 1996.",
+        "score_breakdown": {
+          "dense": 0.05565233272629207,
+          "graph": 0.05576720479385321,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:j_percy_priest_dam_0",
+        "passage_index": 14,
+        "title": "J. Percy Priest Dam",
+        "score": 0.047114009372520624,
+        "text": "J. Percy Priest Dam\nJ. Percy Priest Dam is a dam in north central Tennessee at river mile 6.8 of the Stones River, a tributary of the Cumberland. It is located about ten miles (16 km) east of downtown Nashville. The reservoir behind the dam is Percy Priest Lake. It is one of four major flood control reservoirs for the Cumberland; the others being Wolf Creek Dam, Dale Hollow Dam, and Center Hill Dam.",
+        "score_breakdown": {
+          "dense": 0.05578654747676466,
+          "graph": 0.05477136086766685,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:julius_lester_0",
+        "passage_index": 11,
+        "title": "Julius Lester",
+        "score": 0.04700860405797026,
+        "text": "Julius Lester\nBorn on January 27, 1939, in St. Louis, Missouri, Julius Lester was the son of Rev. W. D. Lester, a Methodist minister, and Julia (Smith) Lester. The family moved to Kansas City, Kansas, in 1941, and to Nashville, Tennessee, in 1952. In 1960 he received his BA from Fisk University in Nashville, Tennessee, with a major in English and minors in Art and Spanish.",
+        "score_breakdown": {
+          "dense": 0.055330846293129836,
+          "graph": 0.055255461989162834,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:city_harbor_0",
+        "passage_index": 17,
+        "title": "City Harbor",
+        "score": 0.04696446517065371,
+        "text": "City Harbor\nIn 2011, City Harbor was formed in Nashville, Tennessee and it consisted of duo Molly Reed and Josh Varnadore. However, Varnadore left the duo in late 2012 for a ministry opportunity in Texas. So Robby Earle was added as the male part of the duo.",
+        "score_breakdown": {
+          "dense": 0.05553567873187798,
+          "graph": 0.0547328062270694,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:colonial_heights_tennessee_0",
+        "passage_index": 16,
+        "title": "Colonial Heights, Tennessee",
+        "score": 0.0469331061959046,
+        "text": "Colonial Heights, Tennessee\nColonial Heights is a census-designated place (CDP) in Sullivan County, Tennessee, United States. The population was 6,934 at the 2010 census. It is part of the Kingsport–Bristol (TN)–Bristol (VA) Metropolitan Statistical Area, which is a component of the Johnson City–Kingsport–Bristol, TN-VA Combined Statistical Area – commonly known as the \"Tri-Cities\" region.",
+        "score_breakdown": {
+          "dense": 0.055562695433101925,
+          "graph": 0.054578745692328456,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where does Hemlock Semiconductor produce electronic components?",
+        "resolved_sub_question": "Where does Hemlock Semiconductor produce electronic components?",
+        "sentence_id": "sentence:tennessee_0_1_tennessee_is_also_the_location_of_the_volkswagen_factory_in_chattanooga_a_2_bi",
+        "sentence": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville.",
+        "score": 0.5082638461538462,
+        "source_title": "Tennessee",
+        "hop_answer": "Clarksville",
+        "hop_thought": "Hemlock Semiconductor produces electronic components in a $1.2 billion polysilicon production facility located in Clarksville, Tennessee.",
+        "hop_raw_response": "Hemlock Semiconductor produces electronic components in a $1.2 billion polysilicon production facility located in Clarksville, Tennessee.\nAnswer: Clarksville",
+        "evidence_passages": [
+          {
+            "title": "Tennessee",
+            "text": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+          },
+          {
+            "title": "Tennessee",
+            "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+          },
+          {
+            "title": "Tennessee",
+            "text": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the distance in miles from Nashville to this location?",
+        "resolved_sub_question": "What is the distance in miles from Nashville to this location? Context: Clarksville.",
+        "sentence_id": "sentence:tennessee_0_5_the_city_of_clarksville_is_a_fifth_significant_population_center_some_45_miles",
+        "sentence": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville.",
+        "score": 0.4818019233978271,
+        "source_title": "Tennessee",
+        "hop_answer": "45",
+        "hop_thought": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.",
+        "hop_raw_response": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.\nAnswer: 45",
+        "evidence_passages": [
+          {
+            "title": "Tennessee",
+            "text": "The city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville."
+          },
+          {
+            "title": "Tennessee",
+            "text": "Tennessee\nMajor corporations with headquarters in Tennessee include FedEx, AutoZone and International Paper, all based in Memphis; Pilot Corporation and Regal Entertainment Group, based in Knoxville; Eastman Chemical Company, based in Kingsport; the North American headquarters of Nissan Motor Company, based in Franklin; Hospital Corporation of America and Caterpillar Financial, based in Nashville; and Unum, based in Chattanooga. Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+          },
+          {
+            "title": "Tennessee",
+            "text": "Tennessee is also the location of the Volkswagen factory in Chattanooga, a $2 billion polysilicon production facility by Wacker Chemie in Bradley County, and a $1.2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where does Hemlock Semiconductor produce electronic components? => Clarksville (source: Tennessee)\n2. What is the distance in miles from Nashville to this location? => 45 (source: Tennessee)\n\nFact hints:\n- Clarksville is located 45 miles northwest of Nashville\n- Tennessee location_of 1 2 billion polysilicon production facility by Hemlock Semiconductor in Clarksville\n- WNQM located in Nashville Tennessee\n- WKDF located_in Nashville Tennessee\n\nWikipedia Title: Tennessee\nThe city of Clarksville is a fifth significant population center, some 45 miles (72 km) northwest of Nashville.\n\nWikipedia Title: Nolensville, Tennessee\nLocated in Middle Tennessee, it is about 22 miles southeast of Nashville, Tennessee. The town was re-incorporated in 1996.\n\nWikipedia Title: J. Percy Priest Dam\nIt is located about ten miles (16 km) east of downtown Nashville. Percy Priest Dam is a dam in north central Tennessee at river mile 6.8 of the Stones River, a tributary of the Cumberland.\n\nWikipedia Title: WNQM\nWNQM WNQM, or Nashville Quality Ministries, is a Christian radio station located in Nashville, Tennessee and owned by F. W.\n\nWikipedia Title: WGFX\nWGFX WGFX is a radio station broadcasting on the FM band at 104.5 MHz licensed to the city of Gallatin, Tennessee, but serving the Nashville market as a whole. Its transmitter is located just north of downtown Nashville.\n\nQuestion: What is the distance in miles from Nashville to the place where Hemlock Semiconductor produces electronic components?\nDraft Answer: 45 miles\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.",
+  "predicted_answer": "45",
+  "qa_raw_response": "The distance from Nashville to Clarksville is mentioned in the text as 45 miles.\nAnswer: 45"
+}

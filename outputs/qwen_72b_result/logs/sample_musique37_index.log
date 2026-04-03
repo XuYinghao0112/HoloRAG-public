@@ -1,0 +1,121 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 18:51:29,648 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.74it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.69it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.65it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.10it/s]
+2026-04-03 18:51:38,371 INFO src.holorag.pipeline: Building HoloRAG hierarchical graph for 20 documents
+2026-04-03 18:51:43,273 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:43,375 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:45,763 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:46,638 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:47,302 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:48,278 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:48,283 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:48,283 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:48,782 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:50,011 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:50,181 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:52,051 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:52,329 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:52,552 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:52,977 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:53,189 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:54,939 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:56,759 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:57,226 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:57,844 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:57,997 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:58,860 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:51:58,967 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:00,839 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:02,006 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:02,854 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:03,793 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:04,467 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:04,518 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:12,171 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:17,101 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:17,260 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:18,043 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:21,586 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:22,001 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:22,104 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:26,429 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:27,123 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:28,988 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:29,145 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:30,972 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:33,878 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:34,697 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:39,509 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:39,563 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:42,587 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:47,719 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:48,434 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:55,391 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:52:56,975 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:00,859 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:05,352 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:12,204 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:13,442 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:15,586 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:16,985 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:20,440 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:28,917 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:42,081 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:49,162 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:51,921 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:55,187 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:53:59,173 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:07,694 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:07,953 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:10,354 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:14,756 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:15,532 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:20,178 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:22,655 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:25,544 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:32,185 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:36,638 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:41,746 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:46,545 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:47,327 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:47,901 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:47,903 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:49,740 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:54:55,040 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:02,808 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:05,788 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:08,235 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:08,442 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:12,683 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:19,633 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:24,538 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:28,139 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:30,482 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:32,135 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:34,382 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 18:55:43,084 INFO src.holorag.pipeline: Saved HoloRAG index to /data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_31_40/sample_musique37/holorag_index.pkl
+{
+  "index_path": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_31_40/sample_musique37/holorag_index.pkl",
+  "stats": {
+    "nodes": 347,
+    "edges": 1013,
+    "layer_counts": {
+      "entity": 233,
+      "sentence": 92,
+      "chunk": 22
+    }
+  },
+  "sample_metadata": {
+    "sample_id": "2hop__647996_551681",
+    "question": "What is another notable work made by the author of Miss Sara Sampson?",
+    "answer": "Emilia Galotti",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Miss Sara Sampson >> author",
+      "#1 >> notable work"
+    ]
+  }
+}

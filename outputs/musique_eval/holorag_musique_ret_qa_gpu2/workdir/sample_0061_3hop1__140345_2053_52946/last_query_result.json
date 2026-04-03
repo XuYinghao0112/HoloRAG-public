@@ -1,0 +1,1188 @@
+{
+  "query": "When is Celebrity Big Brother coming to the network which, along with ABC and the network which aired Law of the Plainsman, is the other major broadcaster based in NY?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Celebrity Big Brother (American TV series)",
+    "Law of the Plainsman"
+  ],
+  "raw_query_entities": [
+    "Celebrity Big Brother",
+    "ABC",
+    "Law of the Plainsman"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Celebrity Big Brother",
+      "node_id": "entity:title_anchor_celebrity_big_brother_american_tv_series",
+      "resolved_text": "Celebrity Big Brother (American TV series)",
+      "score": 0.7948526315789473,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6571428571428571,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.11625263157894727,
+      "confident": true
+    },
+    {
+      "mention": "ABC",
+      "node_id": "entity:abc",
+      "resolved_text": "ABC",
+      "score": 0.6613058823529412,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.5764705882352941,
+      "compatibility_score": 0.2525,
+      "score_margin": 0.28500000000000003,
+      "confident": false
+    },
+    {
+      "mention": "Law of the Plainsman",
+      "node_id": "entity:title_anchor_law_of_the_plainsman",
+      "resolved_text": "Law of the Plainsman",
+      "score": 0.8241859649122807,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.8666666666666667,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.46708596491228066,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Which network aired Law of the Plainsman?",
+    "What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman?",
+    "Which of these networks is the one other than ABC and the network that aired Law of the Plainsman?",
+    "When is Celebrity Big Brother coming to this network?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_law_of_the_plainsman",
+      "score": 1.0527664083136208,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_celebrity_big_brother_american_tv_series",
+      "score": 0.802128373498817,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cbs",
+      "score": 0.5947966746091402,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nbc",
+      "score": 0.5717055979802422,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:big_three_television_networks",
+      "score": 0.4322635979201515,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "score": 0.4023798281321321,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:major_american_broadcast_networks",
+      "score": 0.3962416314268056,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:abc_cbs_and_nbc",
+      "score": 0.3962416314268055,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_bigg_boss",
+      "score": 0.32323961011933133,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:october_1_1959_to_may_5_1960",
+      "score": 0.31897406081748003,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:february_25_2018",
+      "score": 0.27224758986333086,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:thursday_february_8",
+      "score": 0.27224758986333086,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:law_of_the_plainsman_aired_on_nbc_sentence_law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_",
+      "text": "Law of the Plainsman aired on NBC",
+      "head_id": "entity:title_anchor_law_of_the_plainsman",
+      "tail_id": "entity:nbc",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "chunk_id": "chunk:law_of_the_plainsman_0",
+      "document_index": 5,
+      "score": 0.3218956485804501
+    },
+    {
+      "fact_id": "fact:law_of_the_plainsman_aired_from_october_1_1959_to_may_5_1960_sentence_law_of_the_plainsman_0_0_law_of_the_plainsman_is_a",
+      "text": "Law of the Plainsman aired from October 1 1959 to May 5 1960",
+      "head_id": "entity:title_anchor_law_of_the_plainsman",
+      "tail_id": "entity:october_1_1959_to_may_5_1960",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "chunk_id": "chunk:law_of_the_plainsman_0",
+      "document_index": 5,
+      "score": 0.31688336589768135
+    },
+    {
+      "fact_id": "fact:shilpa_shetty_became_host_bigg_boss_second_season_sentence_bigg_boss_0_3_the_show_gained_popularity_after_shilpa_shetty_",
+      "text": "Shilpa Shetty became host Bigg Boss second season",
+      "head_id": "entity:shilpa_shetty",
+      "tail_id": "entity:bigg_boss_second_season",
+      "sentence_id": "sentence:bigg_boss_0_3_the_show_gained_popularity_after_shilpa_shetty_emerged_as_the_winner_in_celebrit",
+      "chunk_id": "chunk:bigg_boss_0",
+      "document_index": 7,
+      "score": 0.26936634176610946
+    },
+    {
+      "fact_id": "fact:cbs_announced_premiere_date_of_series_february_7_2018_sentence_celebrity_big_brother_american_tv_series_0_5_cbs_announce",
+      "text": "CBS announced premiere date of series February 7 2018",
+      "head_id": "entity:cbs",
+      "tail_id": "entity:february_7_2018",
+      "sentence_id": "sentence:celebrity_big_brother_american_tv_series_0_5_cbs_announced_that_the_series_is_set_to_premiere_on_february_7_2018_and_con",
+      "chunk_id": "chunk:celebrity_big_brother_american_tv_series_0",
+      "document_index": 15,
+      "score": 0.2268729915527757
+    },
+    {
+      "fact_id": "fact:cbs_is_headquartered_in_new_york_sentence_new_york_city_0_1_the_three_major_american_broadcast_networks_are_all_headquar",
+      "text": "CBS is headquartered in New York",
+      "head_id": "entity:cbs",
+      "tail_id": "entity:new_york",
+      "sentence_id": "sentence:new_york_city_0_1_the_three_major_american_broadcast_networks_are_all_headquartered_in_new_york_a",
+      "chunk_id": "chunk:new_york_city_0",
+      "document_index": 10,
+      "score": 0.18599229237272044
+    },
+    {
+      "fact_id": "fact:law_of_the_plainsman_is_a_western_television_series_sentence_law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_",
+      "text": "Law of the Plainsman is a Western television series",
+      "head_id": "entity:title_anchor_law_of_the_plainsman",
+      "tail_id": "entity:western_television_series",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "chunk_id": "chunk:law_of_the_plainsman_0",
+      "document_index": 5,
+      "score": 0.1818880474730235
+    },
+    {
+      "fact_id": "fact:law_of_the_plainsman_stars_michael_ansara_sentence_law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television",
+      "text": "Law of the Plainsman stars Michael Ansara",
+      "head_id": "entity:title_anchor_law_of_the_plainsman",
+      "tail_id": "entity:michael_ansara",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "chunk_id": "chunk:law_of_the_plainsman_0",
+      "document_index": 5,
+      "score": 0.1818850773080603
+    },
+    {
+      "fact_id": "fact:abc_cbs_and_nbc_are_major_american_broadcast_networks_sentence_new_york_city_0_1_the_three_major_american_broadcast_netw",
+      "text": "ABC CBS and NBC are major American broadcast networks",
+      "head_id": "entity:abc_cbs_and_nbc",
+      "tail_id": "entity:major_american_broadcast_networks",
+      "sentence_id": "sentence:new_york_city_0_1_the_three_major_american_broadcast_networks_are_all_headquartered_in_new_york_a",
+      "chunk_id": "chunk:new_york_city_0",
+      "document_index": 10,
+      "score": 0.1801098324667298
+    }
+  ],
+  "bridge_entities": [
+    "NBC",
+    "Michael Ansara",
+    "Western television series",
+    "October 1 1959 to May 5 1960",
+    "Shilpa Shetty",
+    "Warsi",
+    "ABC CBS NBC",
+    "CBS"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Which network aired Law of the Plainsman?",
+      "resolved_sub_question": "Which network aired Law of the Plainsman?",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+      "score": 0.6582690158434743,
+      "source_title": "Law of the Plainsman",
+      "hop_answer": "NBC",
+      "hop_thought": "The evidence states that Law of the Plainsman aired on the NBC television network.",
+      "hop_raw_response": "The evidence states that Law of the Plainsman aired on the NBC television network.\nAnswer: NBC",
+      "evidence_passages": [
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "Celebrity Big Brother (American TV series)",
+          "text": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season."
+        }
+      ]
+    },
+    {
+      "sub_question": "What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman?",
+      "resolved_sub_question": "What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman? Context: NBC.",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+      "score": 0.5862436691729325,
+      "source_title": "Law of the Plainsman",
+      "hop_answer": "ABC, CBS, NBC",
+      "hop_thought": "The three major American broadcast networks headquartered in New York include ABC, CBS, and NBC. Since NBC is the network that aired Law of the Plainsman, the three networks are ABC, CBS, and NBC.",
+      "hop_raw_response": "The three major American broadcast networks headquartered in New York include ABC, CBS, and NBC. Since NBC is the network that aired Law of the Plainsman, the three networks are ABC, CBS, and NBC.\nAnswer: ABC, CBS, NBC",
+      "evidence_passages": [
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "New York City",
+          "text": "The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which of these networks is the one other than ABC and the network that aired Law of the Plainsman?",
+      "resolved_sub_question": "Which of these networks is the one other than ABC and the network that aired Law of the Plainsman? Context: NBC; ABC, CBS, NBC.",
+      "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+      "score": 0.5345006475011058,
+      "source_title": "Law of the Plainsman",
+      "hop_answer": "CBS",
+      "hop_thought": "The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Since we need to find the network other than ABC and NBC, it must be CBS.",
+      "hop_raw_response": "The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Since we need to find the network other than ABC and NBC, it must be CBS.\nAnswer: CBS",
+      "evidence_passages": [
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "Law of the Plainsman",
+          "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+        },
+        {
+          "title": "New York City",
+          "text": "The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC."
+        }
+      ]
+    },
+    {
+      "sub_question": "When is Celebrity Big Brother coming to this network?",
+      "resolved_sub_question": "When is Celebrity Big Brother coming to this network? Context: ABC, CBS, NBC; CBS.",
+      "sentence_id": "sentence:celebrity_big_brother_american_tv_series_0_0_the_main_television_coverage_of_celebrity_big_brother_was_screened_on_cbs_d",
+      "sentence": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season.",
+      "score": 0.5026061341821497,
+      "source_title": "Celebrity Big Brother (American TV series)",
+      "hop_answer": "early 2018",
+      "hop_thought": "The context indicates that Celebrity Big Brother is coming to CBS, and the specific time mentioned is early 2018.",
+      "hop_raw_response": "The context indicates that Celebrity Big Brother is coming to CBS, and the specific time mentioned is early 2018.\nAnswer: early 2018",
+      "evidence_passages": [
+        {
+          "title": "Celebrity Big Brother (American TV series)",
+          "text": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season."
+        },
+        {
+          "title": "Celebrity Big Brother (American TV series)",
+          "text": "Celebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House."
+        },
+        {
+          "title": "Big Brother (American TV series)",
+          "text": "The series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_law_of_the_plainsman",
+      "score": 0.09249210617955228,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+      "score": 0.08365274028679422,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:cbs",
+      "score": 0.05253076429662673,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_celebrity_big_brother_american_tv_series",
+      "score": 0.04963759912053682,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nbc",
+      "score": 0.046780616412793324,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:major_american_broadcast_networks",
+      "score": 0.03935049432212312,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:abc_cbs_and_nbc",
+      "score": 0.03602877230126417,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:big_three_television_networks",
+      "score": 0.03588381224189209,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:new_york_city_0_1_the_three_major_american_broadcast_networks_are_all_headquartered_in_new_york_a",
+      "score": 0.032975963683102794,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:october_1_1959_to_may_5_1960",
+      "score": 0.026564153273721327,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_bigg_boss",
+      "score": 0.024564041199799477,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:february_7_2018",
+      "score": 0.023761768787710483,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:february_25_2018",
+      "score": 0.022133025376798284,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:shilpa_shetty",
+      "score": 0.022020403407376862,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:michael_ansara",
+      "score": 0.022007384951016673,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:new_york",
+      "score": 0.021973906602809005,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:bigg_boss_0_3_the_show_gained_popularity_after_shilpa_shetty_emerged_as_the_winner_in_celebrit",
+      "score": 0.019137238649588852,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:western_television_series",
+      "score": 0.018932450809958888,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:thursday_february_8",
+      "score": 0.018542970552994247,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bigg_boss_second_season",
+      "score": 0.01816773651991647,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:law_of_the_plainsman_0",
+      "passage_index": 5,
+      "title": "Law of the Plainsman",
+      "score": 0.08723798063905625,
+      "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+      "score_breakdown": {
+        "dense": 0.05363656779180316,
+        "graph": 0.058451033417117396,
+        "fact": 0.26801705552286187
+      }
+    },
+    {
+      "node_id": "chunk:bigg_boss_0",
+      "passage_index": 7,
+      "title": "Bigg Boss",
+      "score": 0.08322394969628144,
+      "text": "Bigg Boss\nBigg Boss is a Hindi (Bollywood) adaption of Big Brother created in Netherlands by John de Mol Jr., largely based on the Celebrity Big Brother model owned by the Endemol Shine Group. The show was named Bigg Boss and a house was constructed for the purpose of the show at Lonavla in Maharashtra. Bigg Boss debuted on television in 2006 through Sony Entertainment Television with Arshad Warsi as the host. The show gained popularity after Shilpa Shetty emerged as the winner in Celebrity Big Brother 5 (UK) and replaced Warsi as the host in the second season of Bigg Boss. From the second season, the show has moved to Viacom 18's Colors.",
+      "score_breakdown": {
+        "dense": 0.052533178538049265,
+        "graph": 0.05395149415054295,
+        "fact": 0.25430168836794304
+      }
+    },
+    {
+      "node_id": "chunk:celebrity_big_brother_american_tv_series_0",
+      "passage_index": 16,
+      "title": "Celebrity Big Brother (American TV series)",
+      "score": 0.08281760981314173,
+      "text": "Celebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House.",
+      "score_breakdown": {
+        "dense": 0.05338447839812569,
+        "graph": 0.056326188551644334,
+        "fact": 0.2437219341911953
+      }
+    },
+    {
+      "node_id": "chunk:new_york_city_0",
+      "passage_index": 10,
+      "title": "New York City",
+      "score": 0.08084500466273123,
+      "text": "New York City\nThe television industry developed in New York and is a significant employer in the city's economy. The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC. Many cable networks are based in the city as well, including MTV, Fox News, HBO, Showtime, Bravo, Food Network, AMC, and Comedy Central. The City of New York operates a public broadcast service, NYCTV, that has produced several original Emmy Award-winning shows covering music and culture in city neighborhoods and city government.",
+      "score_breakdown": {
+        "dense": 0.05289810423928297,
+        "graph": 0.05552383014475211,
+        "fact": 0.23395932191799967
+      }
+    },
+    {
+      "node_id": "chunk:big_brother_american_tv_series_0",
+      "passage_index": 9,
+      "title": "Big Brother (American TV series)",
+      "score": 0.04478397320360279,
+      "text": "Big Brother (American TV series)\nThe series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018.",
+      "score_breakdown": {
+        "dense": 0.05323611016759142,
+        "graph": 0.05168037537142503,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:new_york_giants_radio_network_0",
+      "passage_index": 8,
+      "title": "New York Giants Radio Network",
+      "score": 0.04476852231793403,
+      "text": "New York Giants Radio Network\nThe New York Giants Radio Network is a broadcast radio network based in New York City, the official radio broadcaster of the New York Giants. The network's radio broadcasts are currently flagshipped at WFAN, a station owned by CBS Radio. Overflow radio casts air on WCBS, WFAN's corporate sibling",
+      "score_breakdown": {
+        "dense": 0.05280610234224953,
+        "graph": 0.05241722009898931,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:walt_disney_anthology_television_series_0",
+      "passage_index": 14,
+      "title": "Walt Disney anthology television series",
+      "score": 0.04458736341763874,
+      "text": "Walt Disney anthology television series\nThe original version of the series premiered on ABC on Wednesday, October 27, 1954. The show was broadcast weekly on one of the Big Three television networks until 1990, a 36 - year span with only a two - year hiatus from 1984 until 1985. The series was broadcast on Sunday for 25 of those years. From 1991 until 1997, the series aired infrequently.",
+      "score_breakdown": {
+        "dense": 0.05243927774561851,
+        "graph": 0.0524858688584952,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:chasing_news_0",
+      "passage_index": 0,
+      "title": "Chasing News",
+      "score": 0.044464396230390106,
+      "text": "Chasing News\nChasing News with Bill Spadea (formerly Chasing New Jersey and Chasing News) is a news and talk show program broadcast by WWOR-TV, a MyNetworkTV O&O based in Secaucus, New Jersey and serving New York City, and sister to Fox flagship station WNYW-TV. The program airs nightly at 11 PM on WWOR and is rerun on WNYW and its sister station, WTXF-TV.",
+      "score_breakdown": {
+        "dense": 0.05262458172451809,
+        "graph": 0.05173625427301718,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_lawrence_welk_show_0",
+      "passage_index": 12,
+      "title": "The Lawrence Welk Show",
+      "score": 0.04444112607595599,
+      "text": "The Lawrence Welk Show\nThe Lawrence Welk Show is an American televised musical variety show hosted by big band leader Lawrence Welk. The series aired locally in Los Angeles for four years, from 1951 to 1955, then nationally for another 27 years on ABC from 1955 to 1971, and in first - run syndication from 1971 to 1982. Repeat episodes are broadcast in the United States by Public Broadcasting Service (PBS) stations. These airings incorporate an original program -- usually, a color broadcast from 1965 through 1982 -- in its entirety. In place of the commercials, newer performance and interview clips from the original stars and / or a family member of the performers are included; these clips are occasionally updated.",
+      "score_breakdown": {
+        "dense": 0.05266317264152732,
+        "graph": 0.051587937077053225,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:kreindler_kreindler_0",
+      "passage_index": 11,
+      "title": "Kreindler & Kreindler",
+      "score": 0.04442072324217309,
+      "text": "Kreindler & Kreindler\nKreindler & Kreindler LLP is a U.S. law firm founded in 1950 with offices in New York, California and Massachusetts. The firm specializes in air disaster litigation and has represented plaintiffs in most major aviation disaster litigations. According to the New York Times, Lee Kreindler, a named partner of the firm, was \"considered the founder of air disaster law.\"",
+      "score_breakdown": {
+        "dense": 0.052576001983037836,
+        "graph": 0.05167974050500759,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_law_of_the_plainsman",
+        "score": 0.09249210617955228,
+        "text": "Law of the Plainsman",
+        "metadata": {
+          "canonical_name": "Law of the Plainsman",
+          "aliases": [
+            "LOTP",
+            "Law of the Plainsman"
+          ],
+          "surface_forms": [
+            "LOTP",
+            "Law of the Plainsman"
+          ],
+          "title_anchor": "Law of the Plainsman"
+        }
+      },
+      {
+        "node_id": "entity:cbs",
+        "score": 0.05253076429662673,
+        "text": "CBS",
+        "metadata": {
+          "canonical_name": "CBS",
+          "aliases": [
+            "CBS"
+          ],
+          "surface_forms": [
+            "CBS"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_celebrity_big_brother_american_tv_series",
+        "score": 0.04963759912053682,
+        "text": "Celebrity Big Brother (American TV series)",
+        "metadata": {
+          "canonical_name": "Celebrity Big Brother (American TV series)",
+          "aliases": [
+            "American TV series",
+            "CBB",
+            "Celebrity Big Brother",
+            "Celebrity Big Brother American TV series",
+            "Celebrity Big Brother American series"
+          ],
+          "surface_forms": [
+            "CBB",
+            "Celebrity Big Brother"
+          ],
+          "title_anchor": "Celebrity Big Brother (American TV series)"
+        }
+      },
+      {
+        "node_id": "entity:nbc",
+        "score": 0.046780616412793324,
+        "text": "NBC",
+        "metadata": {
+          "canonical_name": "NBC",
+          "aliases": [
+            "NBC"
+          ],
+          "surface_forms": [
+            "NBC"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+        "score": 0.08365274028679422,
+        "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "metadata": {
+          "title": "Law of the Plainsman",
+          "chunk_id": "chunk:law_of_the_plainsman_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Law of the Plainsman",
+              "relation": "is a",
+              "tail": "Western television series"
+            },
+            {
+              "head": "Law of the Plainsman",
+              "relation": "stars",
+              "tail": "Michael Ansara"
+            },
+            {
+              "head": "Law of the Plainsman",
+              "relation": "aired on",
+              "tail": "NBC"
+            },
+            {
+              "head": "Law of the Plainsman",
+              "relation": "aired from",
+              "tail": "October 1 1959 to May 5 1960"
+            }
+          ],
+          "entities": [
+            "Law of the Plainsman",
+            "Michael Ansara",
+            "NBC"
+          ],
+          "entity_ids": [
+            "entity:michael_ansara",
+            "entity:nbc",
+            "entity:october_1_1959_to_may_5_1960",
+            "entity:title_anchor_law_of_the_plainsman",
+            "entity:western_television_series"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:new_york_city_0_1_the_three_major_american_broadcast_networks_are_all_headquartered_in_new_york_a",
+        "score": 0.032975963683102794,
+        "text": "The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC.",
+        "metadata": {
+          "title": "New York City",
+          "chunk_id": "chunk:new_york_city_0",
+          "sentence_index": 1,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "ABC",
+              "relation": "is headquartered in",
+              "tail": "New York"
+            },
+            {
+              "head": "CBS",
+              "relation": "is headquartered in",
+              "tail": "New York"
+            },
+            {
+              "head": "NBC",
+              "relation": "is headquartered in",
+              "tail": "New York"
+            },
+            {
+              "head": "ABC CBS and NBC",
+              "relation": "are",
+              "tail": "major American broadcast networks"
+            }
+          ],
+          "entities": [
+            "ABC",
+            "CBS",
+            "NBC",
+            "New York"
+          ],
+          "entity_ids": [
+            "entity:abc",
+            "entity:abc_cbs_and_nbc",
+            "entity:cbs",
+            "entity:major_american_broadcast_networks",
+            "entity:nbc",
+            "entity:new_york"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:bigg_boss_0_3_the_show_gained_popularity_after_shilpa_shetty_emerged_as_the_winner_in_celebrit",
+        "score": 0.019137238649588852,
+        "text": "The show gained popularity after Shilpa Shetty emerged as the winner in Celebrity Big Brother 5 (UK) and replaced Warsi as the host in the second season of Bigg Boss.",
+        "metadata": {
+          "title": "Bigg Boss",
+          "chunk_id": "chunk:bigg_boss_0",
+          "sentence_index": 3,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Shilpa Shetty",
+              "relation": "won",
+              "tail": "Celebrity Big Brother 5 UK"
+            },
+            {
+              "head": "Shilpa Shetty",
+              "relation": "replaced",
+              "tail": "Warsi"
+            },
+            {
+              "head": "Shilpa Shetty",
+              "relation": "became host",
+              "tail": "Bigg Boss second season"
+            }
+          ],
+          "entities": [
+            "Shilpa Shetty",
+            "Warsi",
+            "Celebrity Big Brother 5 UK",
+            "Bigg Boss"
+          ],
+          "entity_ids": [
+            "entity:bigg_boss_second_season",
+            "entity:celebrity_big_brother_5_uk",
+            "entity:shilpa_shetty",
+            "entity:title_anchor_bigg_boss",
+            "entity:warsi"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:celebrity_big_brother_american_tv_series_0_5_cbs_announced_that_the_series_is_set_to_premiere_on_february_7_2018_and_con",
+        "score": 0.016421393502619355,
+        "text": "CBS announced that the series is set to premiere on February 7, 2018 and conclude on February 25, 2018.",
+        "metadata": {
+          "title": "Celebrity Big Brother (American TV series)",
+          "chunk_id": "chunk:celebrity_big_brother_american_tv_series_0",
+          "sentence_index": 5,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "CBS",
+              "relation": "announced premiere date of series",
+              "tail": "February 7 2018"
+            },
+            {
+              "head": "CBS",
+              "relation": "announced conclusion date of series",
+              "tail": "February 25 2018"
+            }
+          ],
+          "entities": [
+            "CBS"
+          ],
+          "entity_ids": [
+            "entity:cbs",
+            "entity:february_25_2018",
+            "entity:february_7_2018"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:celebrity_big_brother_american_tv_series_0_0_celebrity_big_brother_also_known_as_big_brother_celebrity_edition_is_a_spin",
+        "score": 0.009091512994089081,
+        "text": "Celebrity Big Brother also known as Big Brother: Celebrity Edition is a spin - off series of the American reality television series Big Brother.",
+        "metadata": {
+          "title": "Celebrity Big Brother (American TV series)",
+          "chunk_id": "chunk:celebrity_big_brother_american_tv_series_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Celebrity Big Brother",
+              "relation": "also known as",
+              "tail": "Big Brother Celebrity Edition"
+            },
+            {
+              "head": "Celebrity Big Brother",
+              "relation": "is a spin-off of",
+              "tail": "Big Brother"
+            },
+            {
+              "head": "Big Brother",
+              "relation": "is an",
+              "tail": "American reality television series"
+            }
+          ],
+          "entities": [
+            "Celebrity Big Brother",
+            "Big Brother Celebrity Edition",
+            "Big Brother",
+            "American reality television series"
+          ],
+          "entity_ids": [
+            "entity:american_reality_television_series",
+            "entity:big_brother",
+            "entity:big_brother_celebrity_edition",
+            "entity:title_anchor_celebrity_big_brother_american_tv_series"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:law_of_the_plainsman_0",
+        "score": 0.016112627844949837,
+        "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "metadata": {
+          "title": "Law of the Plainsman",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:michael_ansara",
+            "entity:nbc",
+            "entity:october_1_1959_to_may_5_1960",
+            "entity:title_anchor_law_of_the_plainsman",
+            "entity:western_television_series"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:celebrity_big_brother_american_tv_series_0",
+        "score": 0.007999266049314507,
+        "text": "Celebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House.",
+        "metadata": {
+          "title": "Celebrity Big Brother (American TV series)",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:2018_winter_olympics",
+            "entity:all",
+            "entity:allison_grodner",
+            "entity:american_reality_television_series",
+            "entity:american_version_of_celebrity_big_brother",
+            "entity:big_brother",
+            "entity:big_brother_9",
+            "entity:big_brother_after_dark",
+            "entity:big_brother_celebrity_edition",
+            "entity:cbs",
+            "entity:cbs_all_access",
+            "entity:celebrity_big_brother_after_dark",
+            "entity:endemol_shine_north_america",
+            "entity:episodes",
+            "entity:february_25_2018",
+            "entity:february_7_2018",
+            "entity:fly_on_the_wall_entertainment",
+            "entity:friday_episodes",
+            "entity:fridays",
+            "entity:house",
+            "entity:internet_feeds",
+            "entity:julie_chen",
+            "entity:mondays",
+            "entity:nbc",
+            "entity:nbc_s_coverage_of_2018_winter_olympics",
+            "entity:pop",
+            "entity:rich_meehan",
+            "entity:saturday_february_24",
+            "entity:sundays",
+            "entity:sundays_mondays_wednesdays_fridays",
+            "entity:thursday_february_8",
+            "entity:title_anchor_celebrity_big_brother_american_tv_series",
+            "entity:wednesdays",
+            "entity:weekly_shows_on_cbs"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:new_york_city_0",
+        "score": 0.007340512838527182,
+        "text": "New York City\nThe television industry developed in New York and is a significant employer in the city's economy. The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC. Many cable networks are based in the city as well, including MTV, Fox News, HBO, Showtime, Bravo, Food Network, AMC, and Comedy Central. The City of New York operates a public broadcast service, NYCTV, that has produced several original Emmy Award-winning shows covering music and culture in city neighborhoods and city government.",
+        "metadata": {
+          "title": "New York City",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:abc",
+            "entity:abc_cbs_and_nbc",
+            "entity:bravo",
+            "entity:cbs",
+            "entity:city_of_new_york",
+            "entity:comedy_central",
+            "entity:emmy_award",
+            "entity:emmy_award_winning_shows",
+            "entity:food_network",
+            "entity:fox_news",
+            "entity:major_american_broadcast_networks",
+            "entity:many",
+            "entity:nbc",
+            "entity:new_york",
+            "entity:nyctv",
+            "entity:showtime"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:bigg_boss_0",
+        "score": 0.005368290741182169,
+        "text": "Bigg Boss\nBigg Boss is a Hindi (Bollywood) adaption of Big Brother created in Netherlands by John de Mol Jr., largely based on the Celebrity Big Brother model owned by the Endemol Shine Group. The show was named Bigg Boss and a house was constructed for the purpose of the show at Lonavla in Maharashtra. Bigg Boss debuted on television in 2006 through Sony Entertainment Television with Arshad Warsi as the host. The show gained popularity after Shilpa Shetty emerged as the winner in Celebrity Big Brother 5 (UK) and replaced Warsi as the host in the second season of Bigg Boss. From the second season, the show has moved to Viacom 18's Colors.",
+        "metadata": {
+          "title": "Bigg Boss",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:arshad_warsi",
+            "entity:bigg_boss_second_season",
+            "entity:celebrity_big_brother",
+            "entity:celebrity_big_brother_5_uk",
+            "entity:celebrity_big_brother_model",
+            "entity:colors",
+            "entity:endemol_shine_group",
+            "entity:from",
+            "entity:john_de_mol_jr",
+            "entity:lonavla",
+            "entity:maharashtra",
+            "entity:netherlands",
+            "entity:shilpa_shetty",
+            "entity:sony_entertainment_television",
+            "entity:title_anchor_bigg_boss",
+            "entity:viacom",
+            "entity:viacom_18_s_colors",
+            "entity:warsi"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Law of the Plainsman\nLaw of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.\n\nBigg Boss\nBigg Boss\nBigg Boss is a Hindi (Bollywood) adaption of Big Brother created in Netherlands by John de Mol Jr., largely based on the Celebrity Big Brother model owned by the Endemol Shine Group. The show was named Bigg Boss and a house was constructed for the purpose of the show at Lonavla in Maharashtra. Bigg Boss debuted on television in 2006 through Sony Entertainment Television with Arshad Warsi as the host. The show gained popularity after Shilpa Shetty emerged as the winner in Celebrity Big Brother 5 (UK) and replaced Warsi as the host in the second season of Bigg Boss. From the second season, the show has moved to Viacom 18's Colors.\n\nCelebrity Big Brother (American TV series)\nCelebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House.\n\nNew York City\nNew York City\nThe television industry developed in New York and is a significant employer in the city's economy. The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC. Many cable networks are based in the city as well, including MTV, Fox News, HBO, Showtime, Bravo, Food Network, AMC, and Comedy Central. The City of New York operates a public broadcast service, NYCTV, that has produced several original Emmy Award-winning shows covering music and culture in city neighborhoods and city government.\n\nBig Brother (American TV series)\nBig Brother (American TV series)\nThe series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018.\n\nLaw of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.\n\nCelebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season.\n\nNew York City\nThe three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC.\n\nBig Brother (American TV series)\nThe series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018.\n\nNew York Giants Radio Network\nNew York Giants Radio Network\nThe New York Giants Radio Network is a broadcast radio network based in New York City, the official radio broadcaster of the New York Giants. The network's radio broadcasts are currently flagshipped at WFAN, a station owned by CBS Radio. Overflow radio casts air on WCBS, WFAN's corporate sibling\n\nFull House\nFull House\nFull House is an American sitcom created by Jeff Franklin for ABC. The show chronicles the events of widowed father, Danny Tanner, who enlists his brother - in - law and best friend to help raise his three daughters. It aired from September 22, 1987, to May 23, 1995, broadcasting eight seasons and 192 episodes.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:law_of_the_plainsman_0",
+        "passage_index": 5,
+        "title": "Law of the Plainsman",
+        "score": 0.08723798063905625,
+        "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "score_breakdown": {
+          "dense": 0.05363656779180316,
+          "graph": 0.058451033417117396,
+          "fact": 0.26801705552286187
+        }
+      },
+      {
+        "node_id": "chunk:bigg_boss_0",
+        "passage_index": 7,
+        "title": "Bigg Boss",
+        "score": 0.08322394969628144,
+        "text": "Bigg Boss\nBigg Boss is a Hindi (Bollywood) adaption of Big Brother created in Netherlands by John de Mol Jr., largely based on the Celebrity Big Brother model owned by the Endemol Shine Group. The show was named Bigg Boss and a house was constructed for the purpose of the show at Lonavla in Maharashtra. Bigg Boss debuted on television in 2006 through Sony Entertainment Television with Arshad Warsi as the host. The show gained popularity after Shilpa Shetty emerged as the winner in Celebrity Big Brother 5 (UK) and replaced Warsi as the host in the second season of Bigg Boss. From the second season, the show has moved to Viacom 18's Colors.",
+        "score_breakdown": {
+          "dense": 0.052533178538049265,
+          "graph": 0.05395149415054295,
+          "fact": 0.25430168836794304
+        }
+      },
+      {
+        "node_id": "chunk:celebrity_big_brother_american_tv_series_0",
+        "passage_index": 16,
+        "title": "Celebrity Big Brother (American TV series)",
+        "score": 0.08281760981314173,
+        "text": "Celebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House.",
+        "score_breakdown": {
+          "dense": 0.05338447839812569,
+          "graph": 0.056326188551644334,
+          "fact": 0.2437219341911953
+        }
+      },
+      {
+        "node_id": "chunk:new_york_city_0",
+        "passage_index": 10,
+        "title": "New York City",
+        "score": 0.08084500466273123,
+        "text": "New York City\nThe television industry developed in New York and is a significant employer in the city's economy. The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC. Many cable networks are based in the city as well, including MTV, Fox News, HBO, Showtime, Bravo, Food Network, AMC, and Comedy Central. The City of New York operates a public broadcast service, NYCTV, that has produced several original Emmy Award-winning shows covering music and culture in city neighborhoods and city government.",
+        "score_breakdown": {
+          "dense": 0.05289810423928297,
+          "graph": 0.05552383014475211,
+          "fact": 0.23395932191799967
+        }
+      },
+      {
+        "node_id": "chunk:big_brother_american_tv_series_0",
+        "passage_index": 9,
+        "title": "Big Brother (American TV series)",
+        "score": 0.04478397320360279,
+        "text": "Big Brother (American TV series)\nThe series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018.",
+        "score_breakdown": {
+          "dense": 0.05323611016759142,
+          "graph": 0.05168037537142503,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:new_york_giants_radio_network_0",
+        "passage_index": 8,
+        "title": "New York Giants Radio Network",
+        "score": 0.04476852231793403,
+        "text": "New York Giants Radio Network\nThe New York Giants Radio Network is a broadcast radio network based in New York City, the official radio broadcaster of the New York Giants. The network's radio broadcasts are currently flagshipped at WFAN, a station owned by CBS Radio. Overflow radio casts air on WCBS, WFAN's corporate sibling",
+        "score_breakdown": {
+          "dense": 0.05280610234224953,
+          "graph": 0.05241722009898931,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:walt_disney_anthology_television_series_0",
+        "passage_index": 14,
+        "title": "Walt Disney anthology television series",
+        "score": 0.04458736341763874,
+        "text": "Walt Disney anthology television series\nThe original version of the series premiered on ABC on Wednesday, October 27, 1954. The show was broadcast weekly on one of the Big Three television networks until 1990, a 36 - year span with only a two - year hiatus from 1984 until 1985. The series was broadcast on Sunday for 25 of those years. From 1991 until 1997, the series aired infrequently.",
+        "score_breakdown": {
+          "dense": 0.05243927774561851,
+          "graph": 0.0524858688584952,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:chasing_news_0",
+        "passage_index": 0,
+        "title": "Chasing News",
+        "score": 0.044464396230390106,
+        "text": "Chasing News\nChasing News with Bill Spadea (formerly Chasing New Jersey and Chasing News) is a news and talk show program broadcast by WWOR-TV, a MyNetworkTV O&O based in Secaucus, New Jersey and serving New York City, and sister to Fox flagship station WNYW-TV. The program airs nightly at 11 PM on WWOR and is rerun on WNYW and its sister station, WTXF-TV.",
+        "score_breakdown": {
+          "dense": 0.05262458172451809,
+          "graph": 0.05173625427301718,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_lawrence_welk_show_0",
+        "passage_index": 12,
+        "title": "The Lawrence Welk Show",
+        "score": 0.04444112607595599,
+        "text": "The Lawrence Welk Show\nThe Lawrence Welk Show is an American televised musical variety show hosted by big band leader Lawrence Welk. The series aired locally in Los Angeles for four years, from 1951 to 1955, then nationally for another 27 years on ABC from 1955 to 1971, and in first - run syndication from 1971 to 1982. Repeat episodes are broadcast in the United States by Public Broadcasting Service (PBS) stations. These airings incorporate an original program -- usually, a color broadcast from 1965 through 1982 -- in its entirety. In place of the commercials, newer performance and interview clips from the original stars and / or a family member of the performers are included; these clips are occasionally updated.",
+        "score_breakdown": {
+          "dense": 0.05266317264152732,
+          "graph": 0.051587937077053225,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:kreindler_kreindler_0",
+        "passage_index": 11,
+        "title": "Kreindler & Kreindler",
+        "score": 0.04442072324217309,
+        "text": "Kreindler & Kreindler\nKreindler & Kreindler LLP is a U.S. law firm founded in 1950 with offices in New York, California and Massachusetts. The firm specializes in air disaster litigation and has represented plaintiffs in most major aviation disaster litigations. According to the New York Times, Lee Kreindler, a named partner of the firm, was \"considered the founder of air disaster law.\"",
+        "score_breakdown": {
+          "dense": 0.052576001983037836,
+          "graph": 0.05167974050500759,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Which network aired Law of the Plainsman?",
+        "resolved_sub_question": "Which network aired Law of the Plainsman?",
+        "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+        "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "score": 0.6582690158434743,
+        "source_title": "Law of the Plainsman",
+        "hop_answer": "NBC",
+        "hop_thought": "The evidence states that Law of the Plainsman aired on the NBC television network.",
+        "hop_raw_response": "The evidence states that Law of the Plainsman aired on the NBC television network.\nAnswer: NBC",
+        "evidence_passages": [
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "Celebrity Big Brother (American TV series)",
+            "text": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season."
+          }
+        ]
+      },
+      {
+        "sub_question": "What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman?",
+        "resolved_sub_question": "What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman? Context: NBC.",
+        "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+        "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "score": 0.5862436691729325,
+        "source_title": "Law of the Plainsman",
+        "hop_answer": "ABC, CBS, NBC",
+        "hop_thought": "The three major American broadcast networks headquartered in New York include ABC, CBS, and NBC. Since NBC is the network that aired Law of the Plainsman, the three networks are ABC, CBS, and NBC.",
+        "hop_raw_response": "The three major American broadcast networks headquartered in New York include ABC, CBS, and NBC. Since NBC is the network that aired Law of the Plainsman, the three networks are ABC, CBS, and NBC.\nAnswer: ABC, CBS, NBC",
+        "evidence_passages": [
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "New York City",
+            "text": "The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which of these networks is the one other than ABC and the network that aired Law of the Plainsman?",
+        "resolved_sub_question": "Which of these networks is the one other than ABC and the network that aired Law of the Plainsman? Context: NBC; ABC, CBS, NBC.",
+        "sentence_id": "sentence:law_of_the_plainsman_0_0_law_of_the_plainsman_is_a_western_television_series_starring_michael_ansara_that",
+        "sentence": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.",
+        "score": 0.5345006475011058,
+        "source_title": "Law of the Plainsman",
+        "hop_answer": "CBS",
+        "hop_thought": "The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Since we need to find the network other than ABC and NBC, it must be CBS.",
+        "hop_raw_response": "The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Since we need to find the network other than ABC and NBC, it must be CBS.\nAnswer: CBS",
+        "evidence_passages": [
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "Law of the Plainsman",
+            "text": "Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960."
+          },
+          {
+            "title": "New York City",
+            "text": "The three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC."
+          }
+        ]
+      },
+      {
+        "sub_question": "When is Celebrity Big Brother coming to this network?",
+        "resolved_sub_question": "When is Celebrity Big Brother coming to this network? Context: ABC, CBS, NBC; CBS.",
+        "sentence_id": "sentence:celebrity_big_brother_american_tv_series_0_0_the_main_television_coverage_of_celebrity_big_brother_was_screened_on_cbs_d",
+        "sentence": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season.",
+        "score": 0.5026061341821497,
+        "source_title": "Celebrity Big Brother (American TV series)",
+        "hop_answer": "early 2018",
+        "hop_thought": "The context indicates that Celebrity Big Brother is coming to CBS, and the specific time mentioned is early 2018.",
+        "hop_raw_response": "The context indicates that Celebrity Big Brother is coming to CBS, and the specific time mentioned is early 2018.\nAnswer: early 2018",
+        "evidence_passages": [
+          {
+            "title": "Celebrity Big Brother (American TV series)",
+            "text": "The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season."
+          },
+          {
+            "title": "Celebrity Big Brother (American TV series)",
+            "text": "Celebrity Big Brother (American TV series)\nThe main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season. CBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Episodes aired on Sundays, Mondays, Wednesdays, and Fridays with two special episodes on Thursday, February 8 and Saturday, February 24. All episodes aired for one hour and aired from 8: 00 - 9: 00 p.m. EST; the Friday episodes and the season finale, however, ran for two hours each (from 8: 00 - 10: 00 p.m. EST). The live Internet feeds returned for the American version of Celebrity Big Brother as part of CBS All Access. Alongside the weekly shows on CBS, the companion series Big Brother: After Dark returned on Pop under the title Celebrity Big Brother: After Dark. The show provided live coverage nightly from inside the House."
+          },
+          {
+            "title": "Big Brother (American TV series)",
+            "text": "The series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Which network aired Law of the Plainsman? => NBC (source: Law of the Plainsman)\n2. What are the three major broadcasters based in New York, including ABC and the network that aired Law of the Plainsman? => ABC, CBS, NBC (source: Law of the Plainsman)\n3. Which of these networks is the one other than ABC and the network that aired Law of the Plainsman? => CBS (source: Law of the Plainsman)\n4. When is Celebrity Big Brother coming to this network? => early 2018 (source: Celebrity Big Brother (American TV series))\n\nFact hints:\n- Law of the Plainsman aired on NBC\n- Law of the Plainsman aired from October 1 1959 to May 5 1960\n- Law of the Plainsman is a Western television series\n- Law of the Plainsman stars Michael Ansara\n- ABC CBS and NBC are major American broadcast networks\n\nWikipedia Title: Celebrity Big Brother (American TV series)\nCBS decided to schedule the spin - off during the February 2018 sweeps period to counterprogram NBC's coverage of the 2018 Winter Olympics. Celebrity Big Brother (American TV series) The main television coverage of Celebrity Big Brother was screened on CBS during the winter of the 2017 -- 18 network television season.\n\nWikipedia Title: Big Brother (American TV series)\nBig Brother (American TV series) The series currently has two spin - offs: Big Brother: Over The Top, which was the first reality game show to air exclusively on a streaming platform airing in Fall 2016 on CBS's streaming service, CBS All Access; and Celebrity Big Brother, set to air on CBS in early 2018.\n\nWikipedia Title: Law of the Plainsman\nLaw of the Plainsman is a Western television series starring Michael Ansara that aired on the NBC television network from October 1, 1959, until May 5, 1960.\n\nWikipedia Title: New York City\nThe three major American broadcast networks are all headquartered in New York: ABC, CBS, and NBC.\n\nWikipedia Title: New York Giants Radio Network\nThe network's radio broadcasts are currently flagshipped at WFAN, a station owned by CBS Radio. New York Giants Radio Network The New York Giants Radio Network is a broadcast radio network based in New York City, the official radio broadcaster of the New York Giants.\n\nQuestion: When is Celebrity Big Brother coming to the network which, along with ABC and the network which aired Law of the Plainsman, is the other major broadcaster based in NY?\nDraft Answer: early 2018\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Therefore, the network other than ABC and NBC is CBS. Celebrity Big Brother is coming to CBS in early 2018.",
+  "predicted_answer": "early 2018",
+  "qa_raw_response": "{\n  \"thought\": \"The network that aired Law of the Plainsman is NBC. The three major broadcasters based in New York include ABC, CBS, and NBC. Therefore, the network other than ABC and NBC is CBS. Celebrity Big Brother is coming to CBS in early 2018.\",\n  \"answer\": \"early 2018\",\n  \"support\": \"Celebrity Big Brother, set to air on CBS in early 2018.\"\n}"
+}

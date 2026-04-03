@@ -1,0 +1,971 @@
+{
+  "query": "What year did the city were Hans-Joachim Merker was born end?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Hans-Joachim Merker"
+  ],
+  "raw_query_entities": [
+    "Hans-Joachim Merker"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Hans-Joachim Merker",
+      "node_id": "entity:title_anchor_hans_joachim_merker",
+      "resolved_text": "Hans-Joachim Merker",
+      "score": 0.7779333333333334,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.8666666666666667,
+      "compatibility_score": 0.2525,
+      "score_margin": 0.006999999999999895,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Where was Hans-Joachim Merker born?",
+    "When did the city where Hans-Joachim Merker was born cease to exist?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_merseburg",
+      "score": 0.685046373150826,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:merseburg",
+      "score": 0.6256435775234835,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hans_joachim_mack",
+      "score": 0.443661141036856,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:albert_einstein",
+      "score": 0.3785307195183912,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hans_joachim_merker",
+      "score": 0.3700960383884825,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:einstein",
+      "score": 0.317535801243859,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chicago",
+      "score": 0.317535801243859,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "score": 0.29638858047934674,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:berlin",
+      "score": 0.292545546358551,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saxony",
+      "score": 0.19253469216427763,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:hans_joachim_merker_0",
+      "score": 0.16591434564859087,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:electorate_of_saxony",
+      "score": 0.1625363996989788,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:hans_joachim_merker_born_in_merseburg_sentence_hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseb",
+      "text": "Hans-Joachim Merker born in Merseburg",
+      "head_id": "entity:title_anchor_hans_joachim_merker",
+      "tail_id": "entity:merseburg",
+      "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "chunk_id": "chunk:hans_joachim_merker_0",
+      "document_index": 12,
+      "score": 0.4454528264267621
+    },
+    {
+      "fact_id": "fact:einstein_was_born_in_chicago_sentence_evelyn_einstein_0_0_einstein_was_born_in_chicago_after_her_birth_she_was_adopted_b",
+      "text": "Einstein was born in Chicago",
+      "head_id": "entity:einstein",
+      "tail_id": "entity:chicago",
+      "sentence_id": "sentence:evelyn_einstein_0_0_einstein_was_born_in_chicago_after_her_birth_she_was_adopted_by_hans_albert_ein",
+      "chunk_id": "chunk:evelyn_einstein_0",
+      "document_index": 5,
+      "score": 0.315442266265326
+    },
+    {
+      "fact_id": "fact:hans_joachim_merker_died_in_berlin_sentence_hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg",
+      "text": "Hans-Joachim Merker died in Berlin",
+      "head_id": "entity:title_anchor_hans_joachim_merker",
+      "tail_id": "entity:berlin",
+      "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "chunk_id": "chunk:hans_joachim_merker_0",
+      "document_index": 12,
+      "score": 0.29045247780684913
+    },
+    {
+      "fact_id": "fact:merseburg_fell_to_electorate_of_saxony_sentence_merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_of_the_dukes",
+      "text": "Merseburg fell to Electorate of Saxony",
+      "head_id": "entity:title_anchor_merseburg",
+      "tail_id": "entity:electorate_of_saxony",
+      "sentence_id": "sentence:merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_of_the_dukes_of_saxe_merseburg_af",
+      "chunk_id": "chunk:merseburg_0",
+      "document_index": 16,
+      "score": 0.1604455768035647
+    },
+    {
+      "fact_id": "fact:merseburg_was_residence_of_dukes_of_saxe_merseburg_sentence_merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_",
+      "text": "Merseburg was residence of Dukes of Saxe-Merseburg",
+      "head_id": "entity:title_anchor_merseburg",
+      "tail_id": "entity:dukes_of_saxe_merseburg",
+      "sentence_id": "sentence:merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_of_the_dukes_of_saxe_merseburg_af",
+      "chunk_id": "chunk:merseburg_0",
+      "document_index": 16,
+      "score": 0.13637874028303
+    }
+  ],
+  "bridge_entities": [
+    "Merseburg",
+    "Berlin",
+    "7 October 1929",
+    "German physician and anatomist",
+    "18 August 2014"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where was Hans-Joachim Merker born?",
+      "resolved_sub_question": "Where was Hans-Joachim Merker born?",
+      "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "sentence": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.",
+      "score": 0.6869224173685708,
+      "source_title": "Hans-Joachim Merker",
+      "hop_answer": "Merseburg",
+      "hop_thought": "The evidence states that Hans-Joachim Merker was born in Merseburg.",
+      "hop_raw_response": "The evidence states that Hans-Joachim Merker was born in Merseburg.\nAnswer: Merseburg",
+      "evidence_passages": [
+        {
+          "title": "Hans-Joachim Merker",
+          "text": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist."
+        },
+        {
+          "title": "Hans-Joachim Merker",
+          "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\"."
+        },
+        {
+          "title": "Karel Halíř",
+          "text": "Karel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76)."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did the city where Hans-Joachim Merker was born cease to exist?",
+      "resolved_sub_question": "When did the city where Hans-Joachim Merker was born cease to exist? Context: Merseburg.",
+      "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "sentence": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.",
+      "score": 0.49699905453471915,
+      "source_title": "Hans-Joachim Merker",
+      "hop_answer": "Unknown",
+      "hop_thought": "Merseburg did not cease to exist; it has continued to exist since before Hans-Joachim Merker's birth in 1929. The context provided does not indicate any cessation of existence for Merseburg.",
+      "hop_raw_response": "Merseburg did not cease to exist; it has continued to exist since before Hans-Joachim Merker's birth in 1929. The context provided does not indicate any cessation of existence for Merseburg.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Hans-Joachim Merker",
+          "text": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist."
+        },
+        {
+          "title": "Hans-Joachim Merker",
+          "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\"."
+        },
+        {
+          "title": "Merseburg",
+          "text": "From 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_merseburg",
+      "score": 0.09229058962523966,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+      "score": 0.08116597864010552,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:merseburg",
+      "score": 0.07598277087538963,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hans_joachim_merker",
+      "score": 0.06527906206246252,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_of_the_dukes_of_saxe_merseburg_af",
+      "score": 0.06156197791482576,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hans_joachim_mack",
+      "score": 0.05219413931311672,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:einstein",
+      "score": 0.04969211268031064,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:evelyn_einstein_0_0_einstein_was_born_in_chicago_after_her_birth_she_was_adopted_by_hans_albert_ein",
+      "score": 0.04827342930814704,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:albert_einstein",
+      "score": 0.044804222886953585,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chicago",
+      "score": 0.03932004995049192,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:berlin",
+      "score": 0.035666292250229575,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:electorate_of_saxony",
+      "score": 0.03011837498268164,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:dukes_of_saxe_merseburg",
+      "score": 0.02608059429779514,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saxony",
+      "score": 0.02344281201767936,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hans_joachim_mack_0_0_hans_joachim_mack_30_march_1928_6_april_2008_was_a_german_general_of_the_bun",
+      "score": 0.021798860984952224,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:hans_joachim_merker_0",
+      "score": 0.02040849551329528,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:evelyn_einstein_0_1_towards_the_end_of_her_life_she_recounted_that_as_a_child_she_was_told_she_was",
+      "score": 0.01937187981053773,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:merseburg_0_1_in_1815_following_the_napoleonic_wars_the_town_became_part_of_the_prussian_prov",
+      "score": 0.012476162451526586,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:evelyn_einstein_0",
+      "score": 0.012176399131635585,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:merseburg_0",
+      "score": 0.01172730019545917,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:hans_joachim_merker_0",
+      "passage_index": 12,
+      "title": "Hans-Joachim Merker",
+      "score": 0.1010093151703632,
+      "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\".",
+      "score_breakdown": {
+        "dense": 0.05075294598835851,
+        "graph": 0.05354344529470835,
+        "fact": 0.38021440858902344
+      }
+    },
+    {
+      "node_id": "chunk:evelyn_einstein_0",
+      "passage_index": 5,
+      "title": "Evelyn Einstein",
+      "score": 0.09311171026169307,
+      "text": "Evelyn Einstein\nEinstein was born in Chicago; after her birth she was adopted by Hans Albert Einstein. Towards the end of her life, she recounted that as a child she was told she was an illegitimate daughter of Albert Einstein and a ballet dancer; however, she had no documentation supporting this claim. She obtained a Master's degree in Medieval literature at University of California, Berkeley. She was married to Grover Krantz for 13 years from 1964 to about 1977. She then worked briefly as an animal control officer, as a cult deprogrammer, and as a Berkeley, California, reserve police officer.",
+      "score_breakdown": {
+        "dense": 0.04992749965724659,
+        "graph": 0.05190811351365127,
+        "fact": 0.3338610093074138
+      }
+    },
+    {
+      "node_id": "chunk:merseburg_0",
+      "passage_index": 16,
+      "title": "Merseburg",
+      "score": 0.08626088504209933,
+      "text": "Merseburg\nFrom 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony. In 1815 following the Napoleonic Wars, the town became part of the Prussian Province of Saxony.",
+      "score_breakdown": {
+        "dense": 0.05030752755287421,
+        "graph": 0.05234352524161374,
+        "fact": 0.2859245821035627
+      }
+    },
+    {
+      "node_id": "chunk:hans_joachim_mack_0",
+      "passage_index": 18,
+      "title": "Hans-Joachim Mack",
+      "score": 0.042021058716144005,
+      "text": "Hans-Joachim Mack\nHans-Joachim Mack (30 March 1928 – 6 April 2008) was a German general of the Bundeswehr and Deputy Supreme Allied Commander Europe (DSACEUR) from 1984 to 1987.",
+      "score_breakdown": {
+        "dense": 0.05004962553231404,
+        "graph": 0.0483125489112376,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:karel_hal_0",
+      "passage_index": 10,
+      "title": "Karel Halíř",
+      "score": 0.04174962119293736,
+      "text": "Karel Halíř\nKarel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76). For the next four years (1876-1879) he was part of the Benjamin BilseKapelle in Berlin. He was concertmaster of the orchestras at Königsberg (1879), Mannheim (1881) and Weimar (1884–94). He first started getting attention as a soloist with his playing of the Bach Double Concerto with Joseph Joachim at the Bach Festival at Eisenach in 1884. In 1893 Halíř took over as concert master with the Berlin opera orchestra, the Königliche Kapelle, and joined the faculty of the Berlin Königliche Hochschule für Musik. At that time he started his own quartet in Berlin with Carl Markees, Adolf Müller, and Hugo Dechert. Later he also founded a Piano Trio group with his Hochschule colleague Georg Schumann on piano and Hugo Dechert on cello. Halíř became the second violinist of the Joachim Quartet in 1897, joining Joachim, Emanuel Wirth on viola, and Robert Hausmann on cello.",
+      "score_breakdown": {
+        "dense": 0.05010819806840911,
+        "graph": 0.04730037418437451,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:hans_joachim_veen_0",
+      "passage_index": 9,
+      "title": "Hans-Joachim Veen",
+      "score": 0.04157731252096369,
+      "text": "Hans-Joachim Veen\nHans-Joachim Veen (born 29 August 1944 in Strasbourg) is a German political scientist who since 1994 works as honorary professor at the University of Trier, Germany.",
+      "score_breakdown": {
+        "dense": 0.050147518375413355,
+        "graph": 0.04665392471495447,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:east_prussian_regional_museum_0",
+      "passage_index": 17,
+      "title": "East Prussian Regional Museum",
+      "score": 0.04157436151478674,
+      "text": "East Prussian Regional Museum\nThe East Prussian Regional Museum () in Lüneburg, Lower Saxony in Germany, was established 1987 on the basis of the East Prussian Hunting Museum () created by forester Hans Loeffke. It documents and commemorates the history, art and culture, but also the landscape and fauna of the former German province of East Prussia. Since spring 2009 the director of the museum is historian Dr. Joachim Mähnert.",
+      "score_breakdown": {
+        "dense": 0.05007250841876997,
+        "graph": 0.046781606281544166,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:joachim_streich_0",
+      "passage_index": 4,
+      "title": "Joachim Streich",
+      "score": 0.04155735563237371,
+      "text": "Joachim Streich\nJoachim Streich (born 13 April 1951 in Wismar) is a former German footballer, who won the bronze medal with East Germany at the 1972 Summer Olympics in Munich.",
+      "score_breakdown": {
+        "dense": 0.050108608496844086,
+        "graph": 0.04665873653036489,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:hans_otto_meissner_0",
+      "passage_index": 0,
+      "title": "Hans-Otto Meissner",
+      "score": 0.04152073000562648,
+      "text": "Hans-Otto Meissner\nThe son of prominent German diplomat Otto Meissner, Hans-Otto Meissner studied law at Heidelberg and Trinity College, Cambridge, after which he embarked on a diplomatic career. His postings took him to London, Tokyo, Moscow, and Milan, among other cities. After ending his diplomatic career, Meissner published a series of books, which proved financially successful.",
+      "score_breakdown": {
+        "dense": 0.050039439007885135,
+        "graph": 0.04666346183763217,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:nanjing_1",
+      "passage_index": 6,
+      "title": "Nanjing",
+      "score": 0.04149508387303005,
+      "text": "Nanjing\nof present-day Nanjing. It was renamed Moling (秣陵) during reign of Qin Shi Huang. Since then, the city experienced destruction and renewal many times.[citation needed] The area was successively part of Kuaiji, Zhang and Danyang prefectures in Qin and Han dynasty, and part of Yangzhou region which was established as the nation's 13 supervisory and administrative regions in the 5th year of Yuanfeng in Han dynasty (106 BC). Nanjing was later the capital city of Danyang Prefecture, and had been the capital city of Yangzhou for about 400 years from late Han to early Tang.",
+      "score_breakdown": {
+        "dense": 0.0499932223749526,
+        "graph": 0.046662705222687076,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_merseburg",
+        "score": 0.09229058962523966,
+        "text": "Merseburg",
+        "metadata": {
+          "canonical_name": "Merseburg",
+          "aliases": [
+            "Merseburg"
+          ],
+          "surface_forms": [
+            "Merseburg"
+          ],
+          "title_anchor": "Merseburg"
+        }
+      },
+      {
+        "node_id": "entity:merseburg",
+        "score": 0.07598277087538963,
+        "text": "Merseburg",
+        "metadata": {
+          "canonical_name": "Merseburg",
+          "aliases": [
+            "Merseburg"
+          ],
+          "surface_forms": [
+            "Merseburg"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+        "score": 0.08116597864010552,
+        "text": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.",
+        "metadata": {
+          "title": "Hans-Joachim Merker",
+          "chunk_id": "chunk:hans_joachim_merker_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Hans-Joachim Merker",
+              "relation": "born on",
+              "tail": "7 October 1929"
+            },
+            {
+              "head": "Hans-Joachim Merker",
+              "relation": "born in",
+              "tail": "Merseburg"
+            },
+            {
+              "head": "Hans-Joachim Merker",
+              "relation": "died on",
+              "tail": "18 August 2014"
+            },
+            {
+              "head": "Hans-Joachim Merker",
+              "relation": "died in",
+              "tail": "Berlin"
+            },
+            {
+              "head": "Hans-Joachim Merker",
+              "relation": "was",
+              "tail": "German physician and anatomist"
+            }
+          ],
+          "entities": [
+            "Hans-Joachim Merker",
+            "Merseburg",
+            "Berlin"
+          ],
+          "entity_ids": [
+            "entity:18_august_2014",
+            "entity:7_october_1929",
+            "entity:berlin",
+            "entity:german_physician_and_anatomist",
+            "entity:merseburg",
+            "entity:title_anchor_hans_joachim_merker"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:merseburg_0_0_from_1657_to_1738_merseburg_was_the_residence_of_the_dukes_of_saxe_merseburg_af",
+        "score": 0.06156197791482576,
+        "text": "From 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony.",
+        "metadata": {
+          "title": "Merseburg",
+          "chunk_id": "chunk:merseburg_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Merseburg",
+              "relation": "was residence of",
+              "tail": "Dukes of Saxe-Merseburg"
+            },
+            {
+              "head": "Merseburg",
+              "relation": "fell to",
+              "tail": "Electorate of Saxony"
+            }
+          ],
+          "entities": [
+            "Merseburg",
+            "Dukes of Saxe-Merseburg",
+            "Electorate of Saxony"
+          ],
+          "entity_ids": [
+            "entity:dukes_of_saxe_merseburg",
+            "entity:electorate_of_saxony",
+            "entity:title_anchor_merseburg"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:evelyn_einstein_0_0_einstein_was_born_in_chicago_after_her_birth_she_was_adopted_by_hans_albert_ein",
+        "score": 0.04827342930814704,
+        "text": "Einstein was born in Chicago; after her birth she was adopted by Hans Albert Einstein.",
+        "metadata": {
+          "title": "Evelyn Einstein",
+          "chunk_id": "chunk:evelyn_einstein_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Einstein",
+              "relation": "was born in",
+              "tail": "Chicago"
+            },
+            {
+              "head": "Einstein",
+              "relation": "was adopted by",
+              "tail": "Hans Albert Einstein"
+            }
+          ],
+          "entities": [
+            "Einstein",
+            "Chicago",
+            "Hans Albert Einstein"
+          ],
+          "entity_ids": [
+            "entity:chicago",
+            "entity:einstein",
+            "entity:hans_albert_einstein"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hans_joachim_mack_0_0_hans_joachim_mack_30_march_1928_6_april_2008_was_a_german_general_of_the_bun",
+        "score": 0.021798860984952224,
+        "text": "Hans-Joachim Mack (30 March 1928 – 6 April 2008) was a German general of the Bundeswehr and Deputy Supreme Allied Commander Europe (DSACEUR) from 1984 to 1987.",
+        "metadata": {
+          "title": "Hans-Joachim Mack",
+          "chunk_id": "chunk:hans_joachim_mack_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Hans-Joachim Mack",
+              "relation": "was born on",
+              "tail": "30 March 1928"
+            },
+            {
+              "head": "Hans-Joachim Mack",
+              "relation": "died on",
+              "tail": "6 April 2008"
+            },
+            {
+              "head": "Hans-Joachim Mack",
+              "relation": "was",
+              "tail": "German general of the Bundeswehr"
+            },
+            {
+              "head": "Hans-Joachim Mack",
+              "relation": "served as",
+              "tail": "Deputy Supreme Allied Commander Europe DSACEUR"
+            }
+          ],
+          "entities": [
+            "Hans-Joachim Mack",
+            "Bundeswehr",
+            "Deputy Supreme Allied Commander Europe DSACEUR"
+          ],
+          "entity_ids": [
+            "entity:30_march_1928",
+            "entity:6_april_2008",
+            "entity:bundeswehr",
+            "entity:deputy_supreme_allied_commander_europe_dsaceur",
+            "entity:german_general_of_the_bundeswehr",
+            "entity:title_anchor_hans_joachim_mack"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:evelyn_einstein_0_1_towards_the_end_of_her_life_she_recounted_that_as_a_child_she_was_told_she_was",
+        "score": 0.01937187981053773,
+        "text": "Towards the end of her life, she recounted that as a child she was told she was an illegitimate daughter of Albert Einstein and a ballet dancer; however, she had no documentation supporting this claim.",
+        "metadata": {
+          "title": "Evelyn Einstein",
+          "chunk_id": "chunk:evelyn_einstein_0",
+          "sentence_index": 1,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Towards",
+              "relation": "related_to",
+              "tail": "Albert Einstein"
+            }
+          ],
+          "entities": [
+            "Albert Einstein"
+          ],
+          "entity_ids": [
+            "entity:albert_einstein",
+            "entity:towards"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:merseburg_0_1_in_1815_following_the_napoleonic_wars_the_town_became_part_of_the_prussian_prov",
+        "score": 0.012476162451526586,
+        "text": "In 1815 following the Napoleonic Wars, the town became part of the Prussian Province of Saxony.",
+        "metadata": {
+          "title": "Merseburg",
+          "chunk_id": "chunk:merseburg_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Napoleonic Wars",
+              "relation": "related_to",
+              "tail": "Prussian Province"
+            },
+            {
+              "head": "Prussian Province",
+              "relation": "related_to",
+              "tail": "Saxony"
+            }
+          ],
+          "entities": [
+            "Napoleonic Wars",
+            "Prussian Province of Saxony"
+          ],
+          "entity_ids": [
+            "entity:napoleonic_wars",
+            "entity:prussian_province",
+            "entity:prussian_province_of_saxony",
+            "entity:saxony"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hans_joachim_merker_0_1_he_was_professor_of_anatomy_at_the_free_university_of_berlin_from_1972_to_1998",
+        "score": 0.009864918949145129,
+        "text": "He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981.",
+        "metadata": {
+          "title": "Hans-Joachim Merker",
+          "chunk_id": "chunk:hans_joachim_merker_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Professor",
+              "relation": "related_to",
+              "tail": "Anatomy"
+            },
+            {
+              "head": "Anatomy",
+              "relation": "related_to",
+              "tail": "Free University"
+            },
+            {
+              "head": "Free University",
+              "relation": "related_to",
+              "tail": "Berlin"
+            }
+          ],
+          "entities": [
+            "Free University of Berlin"
+          ],
+          "entity_ids": [
+            "entity:anatomy",
+            "entity:berlin",
+            "entity:free_university",
+            "entity:free_university_of_berlin",
+            "entity:professor"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:hans_joachim_merker_0",
+        "score": 0.02040849551329528,
+        "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\".",
+        "metadata": {
+          "title": "Hans-Joachim Merker",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:18_august_2014",
+            "entity:7_october_1929",
+            "entity:anatomy",
+            "entity:berlin",
+            "entity:free_university",
+            "entity:free_university_of_berlin",
+            "entity:german_physician_and_anatomist",
+            "entity:hans_georg_baumgarten",
+            "entity:merseburg",
+            "entity:professor",
+            "entity:title_anchor_hans_joachim_merker"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:evelyn_einstein_0",
+        "score": 0.012176399131635585,
+        "text": "Evelyn Einstein\nEinstein was born in Chicago; after her birth she was adopted by Hans Albert Einstein. Towards the end of her life, she recounted that as a child she was told she was an illegitimate daughter of Albert Einstein and a ballet dancer; however, she had no documentation supporting this claim. She obtained a Master's degree in Medieval literature at University of California, Berkeley. She was married to Grover Krantz for 13 years from 1964 to about 1977. She then worked briefly as an animal control officer, as a cult deprogrammer, and as a Berkeley, California, reserve police officer.",
+        "metadata": {
+          "title": "Evelyn Einstein",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:albert_einstein",
+            "entity:berkeley",
+            "entity:berkeley_california",
+            "entity:california",
+            "entity:chicago",
+            "entity:einstein",
+            "entity:grover_krantz",
+            "entity:hans_albert_einstein",
+            "entity:master",
+            "entity:medieval",
+            "entity:towards",
+            "entity:university",
+            "entity:university_of_california_berkeley"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Hans-Joachim Merker\nHans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\".\n\nEvelyn Einstein\nEvelyn Einstein\nEinstein was born in Chicago; after her birth she was adopted by Hans Albert Einstein. Towards the end of her life, she recounted that as a child she was told she was an illegitimate daughter of Albert Einstein and a ballet dancer; however, she had no documentation supporting this claim. She obtained a Master's degree in Medieval literature at University of California, Berkeley. She was married to Grover Krantz for 13 years from 1964 to about 1977. She then worked briefly as an animal control officer, as a cult deprogrammer, and as a Berkeley, California, reserve police officer.\n\nMerseburg\nMerseburg\nFrom 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony. In 1815 following the Napoleonic Wars, the town became part of the Prussian Province of Saxony.\n\nHans-Joachim Mack\nHans-Joachim Mack\nHans-Joachim Mack (30 March 1928 – 6 April 2008) was a German general of the Bundeswehr and Deputy Supreme Allied Commander Europe (DSACEUR) from 1984 to 1987.\n\nKarel Halíř\nKarel Halíř\nKarel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76). For the next four years (1876-1879) he was part of the Benjamin BilseKapelle in Berlin. He was concertmaster of the orchestras at Königsberg (1879), Mannheim (1881) and Weimar (1884–94). He first started getting attention as a soloist with his playing of the Bach Double Concerto with Joseph Joachim at the Bach Festival at Eisenach in 1884. In 1893 Halíř took over as concert master with the Berlin opera orchestra, the Königliche Kapelle, and joined the faculty of the Berlin Königliche Hochschule für Musik. At that time he started his own quartet in Berlin with Carl Markees, Adolf Müller, and Hugo Dechert. Later he also founded a Piano Trio group with his Hochschule colleague Georg Schumann on piano and Hugo Dechert on cello. Halíř became the second violinist of the Joachim Quartet in 1897, joining Joachim, Emanuel Wirth on viola, and Robert Hausmann on cello.\n\nHans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.\n\nKarel Halíř\nKarel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76).\n\nMerseburg\nFrom 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony.\n\nWenn Der Südwind Weht\nWenn Der Südwind Weht\nWenn Der Südwind Weht is the seventh solo album by German keyboardist Hans-Joachim Roedelius, best known for his work with Cluster, Harmonia, and Aquarello. All the pieces on the album were composed by Roedelius. It was released by Sky Records in 1981 and has been reissued on CD by Sky Records in Germany by the Gyroscope label in the United States in 1996. The Bureau-B label reissued \"Wenn Der Südwind Weht\" in the European Union on both CD and 180 gram vinyl LP in 2010.\n\nNanosurf\nNanosurf\nIn 1997, Nanosurf was awarded the “Start-up-Label” by the Swiss government agency for innovation (KTI). Nanosurf was founded June 4, 1997, in order to design scanning probe microscopes that were accessible for everyone. The Nanosurf founders were inspired by Hans-Joachim Guentherodt, the Director of the Swiss NCCR Nanoscale Science, head of the Institute of Physics of the University of Basel, coordinator of the Swiss Nanoscience Institute, and chairman of the National Center of Competence in Research (NCCR) “Nanoscale Science”.\n\nHans-Joachim Veen\nHans-Joachim Veen\nHans-Joachim Veen (born 29 August 1944 in Strasbourg) is a German political scientist who since 1994 works as honorary professor at the University of Trier, Germany.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:hans_joachim_merker_0",
+        "passage_index": 12,
+        "title": "Hans-Joachim Merker",
+        "score": 0.1010093151703632,
+        "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\".",
+        "score_breakdown": {
+          "dense": 0.05075294598835851,
+          "graph": 0.05354344529470835,
+          "fact": 0.38021440858902344
+        }
+      },
+      {
+        "node_id": "chunk:evelyn_einstein_0",
+        "passage_index": 5,
+        "title": "Evelyn Einstein",
+        "score": 0.09311171026169307,
+        "text": "Evelyn Einstein\nEinstein was born in Chicago; after her birth she was adopted by Hans Albert Einstein. Towards the end of her life, she recounted that as a child she was told she was an illegitimate daughter of Albert Einstein and a ballet dancer; however, she had no documentation supporting this claim. She obtained a Master's degree in Medieval literature at University of California, Berkeley. She was married to Grover Krantz for 13 years from 1964 to about 1977. She then worked briefly as an animal control officer, as a cult deprogrammer, and as a Berkeley, California, reserve police officer.",
+        "score_breakdown": {
+          "dense": 0.04992749965724659,
+          "graph": 0.05190811351365127,
+          "fact": 0.3338610093074138
+        }
+      },
+      {
+        "node_id": "chunk:merseburg_0",
+        "passage_index": 16,
+        "title": "Merseburg",
+        "score": 0.08626088504209933,
+        "text": "Merseburg\nFrom 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony. In 1815 following the Napoleonic Wars, the town became part of the Prussian Province of Saxony.",
+        "score_breakdown": {
+          "dense": 0.05030752755287421,
+          "graph": 0.05234352524161374,
+          "fact": 0.2859245821035627
+        }
+      },
+      {
+        "node_id": "chunk:hans_joachim_mack_0",
+        "passage_index": 18,
+        "title": "Hans-Joachim Mack",
+        "score": 0.042021058716144005,
+        "text": "Hans-Joachim Mack\nHans-Joachim Mack (30 March 1928 – 6 April 2008) was a German general of the Bundeswehr and Deputy Supreme Allied Commander Europe (DSACEUR) from 1984 to 1987.",
+        "score_breakdown": {
+          "dense": 0.05004962553231404,
+          "graph": 0.0483125489112376,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:karel_hal_0",
+        "passage_index": 10,
+        "title": "Karel Halíř",
+        "score": 0.04174962119293736,
+        "text": "Karel Halíř\nKarel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76). For the next four years (1876-1879) he was part of the Benjamin BilseKapelle in Berlin. He was concertmaster of the orchestras at Königsberg (1879), Mannheim (1881) and Weimar (1884–94). He first started getting attention as a soloist with his playing of the Bach Double Concerto with Joseph Joachim at the Bach Festival at Eisenach in 1884. In 1893 Halíř took over as concert master with the Berlin opera orchestra, the Königliche Kapelle, and joined the faculty of the Berlin Königliche Hochschule für Musik. At that time he started his own quartet in Berlin with Carl Markees, Adolf Müller, and Hugo Dechert. Later he also founded a Piano Trio group with his Hochschule colleague Georg Schumann on piano and Hugo Dechert on cello. Halíř became the second violinist of the Joachim Quartet in 1897, joining Joachim, Emanuel Wirth on viola, and Robert Hausmann on cello.",
+        "score_breakdown": {
+          "dense": 0.05010819806840911,
+          "graph": 0.04730037418437451,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:hans_joachim_veen_0",
+        "passage_index": 9,
+        "title": "Hans-Joachim Veen",
+        "score": 0.04157731252096369,
+        "text": "Hans-Joachim Veen\nHans-Joachim Veen (born 29 August 1944 in Strasbourg) is a German political scientist who since 1994 works as honorary professor at the University of Trier, Germany.",
+        "score_breakdown": {
+          "dense": 0.050147518375413355,
+          "graph": 0.04665392471495447,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:east_prussian_regional_museum_0",
+        "passage_index": 17,
+        "title": "East Prussian Regional Museum",
+        "score": 0.04157436151478674,
+        "text": "East Prussian Regional Museum\nThe East Prussian Regional Museum () in Lüneburg, Lower Saxony in Germany, was established 1987 on the basis of the East Prussian Hunting Museum () created by forester Hans Loeffke. It documents and commemorates the history, art and culture, but also the landscape and fauna of the former German province of East Prussia. Since spring 2009 the director of the museum is historian Dr. Joachim Mähnert.",
+        "score_breakdown": {
+          "dense": 0.05007250841876997,
+          "graph": 0.046781606281544166,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:joachim_streich_0",
+        "passage_index": 4,
+        "title": "Joachim Streich",
+        "score": 0.04155735563237371,
+        "text": "Joachim Streich\nJoachim Streich (born 13 April 1951 in Wismar) is a former German footballer, who won the bronze medal with East Germany at the 1972 Summer Olympics in Munich.",
+        "score_breakdown": {
+          "dense": 0.050108608496844086,
+          "graph": 0.04665873653036489,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:hans_otto_meissner_0",
+        "passage_index": 0,
+        "title": "Hans-Otto Meissner",
+        "score": 0.04152073000562648,
+        "text": "Hans-Otto Meissner\nThe son of prominent German diplomat Otto Meissner, Hans-Otto Meissner studied law at Heidelberg and Trinity College, Cambridge, after which he embarked on a diplomatic career. His postings took him to London, Tokyo, Moscow, and Milan, among other cities. After ending his diplomatic career, Meissner published a series of books, which proved financially successful.",
+        "score_breakdown": {
+          "dense": 0.050039439007885135,
+          "graph": 0.04666346183763217,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:nanjing_1",
+        "passage_index": 6,
+        "title": "Nanjing",
+        "score": 0.04149508387303005,
+        "text": "Nanjing\nof present-day Nanjing. It was renamed Moling (秣陵) during reign of Qin Shi Huang. Since then, the city experienced destruction and renewal many times.[citation needed] The area was successively part of Kuaiji, Zhang and Danyang prefectures in Qin and Han dynasty, and part of Yangzhou region which was established as the nation's 13 supervisory and administrative regions in the 5th year of Yuanfeng in Han dynasty (106 BC). Nanjing was later the capital city of Danyang Prefecture, and had been the capital city of Yangzhou for about 400 years from late Han to early Tang.",
+        "score_breakdown": {
+          "dense": 0.0499932223749526,
+          "graph": 0.046662705222687076,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where was Hans-Joachim Merker born?",
+        "resolved_sub_question": "Where was Hans-Joachim Merker born?",
+        "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+        "sentence": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.",
+        "score": 0.6869224173685708,
+        "source_title": "Hans-Joachim Merker",
+        "hop_answer": "Merseburg",
+        "hop_thought": "The evidence states that Hans-Joachim Merker was born in Merseburg.",
+        "hop_raw_response": "The evidence states that Hans-Joachim Merker was born in Merseburg.\nAnswer: Merseburg",
+        "evidence_passages": [
+          {
+            "title": "Hans-Joachim Merker",
+            "text": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist."
+          },
+          {
+            "title": "Hans-Joachim Merker",
+            "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\"."
+          },
+          {
+            "title": "Karel Halíř",
+            "text": "Karel Halíř was born in Hohenelbe, Bohemia (now Vrchlabí, Czech Republic), and studied with Antonín Bennewitz in Prague (1867–73) and with Joseph Joachim in Berlin (1874–76)."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did the city where Hans-Joachim Merker was born cease to exist?",
+        "resolved_sub_question": "When did the city where Hans-Joachim Merker was born cease to exist? Context: Merseburg.",
+        "sentence_id": "sentence:hans_joachim_merker_0_0_hans_joachim_merker_born_7_october_1929_in_merseburg_died_18_august_2014_in_be",
+        "sentence": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.",
+        "score": 0.49699905453471915,
+        "source_title": "Hans-Joachim Merker",
+        "hop_answer": "Unknown",
+        "hop_thought": "Merseburg did not cease to exist; it has continued to exist since before Hans-Joachim Merker's birth in 1929. The context provided does not indicate any cessation of existence for Merseburg.",
+        "hop_raw_response": "Merseburg did not cease to exist; it has continued to exist since before Hans-Joachim Merker's birth in 1929. The context provided does not indicate any cessation of existence for Merseburg.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Hans-Joachim Merker",
+            "text": "Hans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist."
+          },
+          {
+            "title": "Hans-Joachim Merker",
+            "text": "Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist. He was Professor of Anatomy at the Free University of Berlin from 1972 to 1998, and served as Dean of the Faculty of Medicine from 1980 to 1981. He was noted for his research on the fine structure of connective tissue, the morphology of hormone effects, and embryological and embryotoxic problems, and his research was central in the development of medical research utilising electron microscopy. Hans Georg Baumgarten noted on his death that he was \"not only a chair-holder, but a philosopher, humanist, anthropologist, developmental biologist, transdisciplinary scholar and scientist\"."
+          },
+          {
+            "title": "Merseburg",
+            "text": "From 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where was Hans-Joachim Merker born? => Merseburg (source: Hans-Joachim Merker)\n2. When did the city where Hans-Joachim Merker was born cease to exist? (source: Hans-Joachim Merker)\n\nFact hints:\n- Hans-Joachim Merker born in Merseburg\n- Hans-Joachim Merker died in Berlin\n- Merseburg fell to Electorate of Saxony\n- Merseburg was residence of Dukes of Saxe-Merseburg\n\nWikipedia Title: Hans-Joachim Merker\nHans-Joachim Merker (born 7 October 1929 in Merseburg, died 18 August 2014 in Berlin) was a German physician and anatomist.\n\nWikipedia Title: Merseburg\nFrom 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony.\n\nWikipedia Title: Nanosurf\nThe Nanosurf founders were inspired by Hans-Joachim Guentherodt, the Director of the Swiss NCCR Nanoscale Science, head of the Institute of Physics of the University of Basel, coordinator of the Swiss Nanoscience Institute, and chairman of the National Center of Competence in Research (NCCR) “Nanoscale Science”. Nanosurf In 1997, Nanosurf was awarded the “Start-up-Label” by the Swiss government agency for innovation (KTI).\n\nWikipedia Title: Hans-Joachim Veen\nHans-Joachim Veen Hans-Joachim Veen (born 29 August 1944 in Strasbourg) is a German political scientist who since 1994 works as honorary professor at the University of Trier, Germany.\n\nWikipedia Title: Hans-Joachim Mack\nHans-Joachim Mack Hans-Joachim Mack (30 March 1928 – 6 April 2008) was a German general of the Bundeswehr and Deputy Supreme Allied Commander Europe (DSACEUR) from 1984 to 1987.\n\nQuestion: What year did the city were Hans-Joachim Merker was born end?\nDraft Answer: 1738\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The city where Hans-Joachim Merker was born is Merseburg. According to the passage, Merseburg ceased to be an independent entity when it fell to the Electorate of Saxony in 1738.",
+  "predicted_answer": "1738",
+  "qa_raw_response": "{\n  \"thought\": \"The city where Hans-Joachim Merker was born is Merseburg. According to the passage, Merseburg ceased to be an independent entity when it fell to the Electorate of Saxony in 1738.\",\n  \"answer\": \"1738\",\n  \"support\": \"From 1657 to 1738 Merseburg was the residence of the Dukes of Saxe-Merseburg, after which it fell to the Electorate of Saxony.\"\n}"
+}

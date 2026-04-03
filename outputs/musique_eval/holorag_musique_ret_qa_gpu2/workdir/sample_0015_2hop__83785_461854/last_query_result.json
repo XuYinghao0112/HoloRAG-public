@@ -1,0 +1,1152 @@
+{
+  "query": "Who was the spouse of the leading lady in Gone With the wind?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Gone with the Wind (film)"
+  ],
+  "raw_query_entities": [
+    "Gone With the Wind"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Gone With the Wind",
+      "node_id": "entity:title_anchor_gone_with_the_wind_film",
+      "resolved_text": "Gone with the Wind (film)",
+      "score": 0.7960222222222224,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.11962222222222241,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who was the leading lady in Gone with the Wind?",
+    "Who was the spouse of this leading lady?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_gone_with_the_wind_film",
+      "score": 0.9746168361649762,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:katie_scarlett",
+      "score": 0.43541448460406856,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_vivien_leigh",
+      "score": 0.4103590979360356,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:vivien_leigh",
+      "score": 0.4077864778400276,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:scarlett_o_hara",
+      "score": 0.4032231040413939,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:scarlett",
+      "score": 0.3992184668028337,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:laurence_olivier",
+      "score": 0.2622757578847703,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lady_olivier",
+      "score": 0.22065989426888372,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:leading_actress_of_the_american_stage",
+      "score": 0.21494774165812064,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_laura_hope_crews",
+      "score": 0.21493240684862425,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:1939_film_gone_with_the_wind",
+      "score": 0.20909263681465312,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gone_with_the_wind",
+      "score": 0.2090842238257827,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:vivien_leigh_known_as_lady_olivier_sentence_vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lad",
+      "text": "Vivien Leigh known as Lady Olivier",
+      "head_id": "entity:title_anchor_vivien_leigh",
+      "tail_id": "entity:lady_olivier",
+      "sentence_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+      "chunk_id": "chunk:vivien_leigh_0",
+      "document_index": 10,
+      "score": 0.21856313157064194
+    },
+    {
+      "fact_id": "fact:laura_hope_crews_was_leading_actress_of_the_american_stage_sentence_laura_hope_crews_0_0_laura_hope_crews_december_12_18",
+      "text": "Laura Hope Crews was leading actress of the American stage",
+      "head_id": "entity:title_anchor_laura_hope_crews",
+      "tail_id": "entity:leading_actress_of_the_american_stage",
+      "sentence_id": "sentence:laura_hope_crews_0_0_laura_hope_crews_december_12_1879_november_12_1942_was_a_leading_actress",
+      "chunk_id": "chunk:laura_hope_crews_0",
+      "document_index": 12,
+      "score": 0.21284344047750745
+    },
+    {
+      "fact_id": "fact:fire_over_england_notable_for_providing_the_first_pairing_of_laurence_olivier_and_vivien_leigh_sentence_fire_over_englan",
+      "text": "Fire Over England notable for providing the first pairing of Laurence Olivier and Vivien Leigh",
+      "head_id": "entity:title_anchor_fire_over_england",
+      "tail_id": "entity:providing_the_first_pairing_of_laurence_olivier_and_vivien_leigh",
+      "sentence_id": "sentence:fire_over_england_0_0_fire_over_england_aka_gloriana_is_a_1937_london_film_productions_film_drama_n",
+      "chunk_id": "chunk:fire_over_england_0",
+      "document_index": 3,
+      "score": 0.19856106718783376
+    },
+    {
+      "fact_id": "fact:vivien_leigh_plays_role_scarlett_sentence_gone_with_the_wind_film_0_5_the_leading_roles_are_played_by_vivien_leigh_scarl",
+      "text": "Vivien Leigh plays role Scarlett",
+      "head_id": "entity:vivien_leigh",
+      "tail_id": "entity:scarlett",
+      "sentence_id": "sentence:gone_with_the_wind_film_0_5_the_leading_roles_are_played_by_vivien_leigh_scarlett_clark_gable_rhett_le",
+      "chunk_id": "chunk:gone_with_the_wind_film_0",
+      "document_index": 7,
+      "score": 0.1914230996637579
+    },
+    {
+      "fact_id": "fact:gone_with_the_wind_adapted_from_margaret_mitchell_s_1936_novel_sentence_gone_with_the_wind_film_0_0_gone_with_the_wind_i",
+      "text": "Gone with the Wind adapted from Margaret Mitchell's 1936 novel",
+      "head_id": "entity:title_anchor_gone_with_the_wind_film",
+      "tail_id": "entity:margaret_mitchell_s_1936_novel",
+      "sentence_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+      "chunk_id": "chunk:gone_with_the_wind_film_0",
+      "document_index": 7,
+      "score": 0.18641976819260034
+    },
+    {
+      "fact_id": "fact:scarlett_o_hara_is_played_by_leigh_sentence_frankly_my_dear_i_don_t_give_a_damn_0_1_the_line_is_spoken_by_rhett_butler_g",
+      "text": "Scarlett O'Hara is played by Leigh",
+      "head_id": "entity:scarlett_o_hara",
+      "tail_id": "entity:leigh",
+      "sentence_id": "sentence:frankly_my_dear_i_don_t_give_a_damn_0_1_the_line_is_spoken_by_rhett_butler_gable_as_his_last_words_to_scarlett_o_hara",
+      "chunk_id": "chunk:frankly_my_dear_i_don_t_give_a_damn_0",
+      "document_index": 18,
+      "score": 0.17142230417296594
+    },
+    {
+      "fact_id": "fact:gone_with_the_wind_is_1939_american_epic_historical_romance_film_sentence_gone_with_the_wind_film_0_0_gone_with_the_wind",
+      "text": "Gone with the Wind is 1939 American epic historical romance film",
+      "head_id": "entity:title_anchor_gone_with_the_wind_film",
+      "tail_id": "entity:1939_american_epic_historical_romance_film",
+      "sentence_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+      "chunk_id": "chunk:gone_with_the_wind_film_0",
+      "document_index": 7,
+      "score": 0.15845680296371029
+    },
+    {
+      "fact_id": "fact:vivien_leigh_was_english_stage_and_film_actress_sentence_vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also",
+      "text": "Vivien Leigh was English stage and film actress",
+      "head_id": "entity:title_anchor_vivien_leigh",
+      "tail_id": "entity:english_stage_and_film_actress",
+      "sentence_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+      "chunk_id": "chunk:vivien_leigh_0",
+      "document_index": 10,
+      "score": 0.13856149517061295
+    }
+  ],
+  "bridge_entities": [
+    "1939 American epic historical romance film",
+    "Margaret Mitchell's 1936 novel",
+    "Margaret Mitchell",
+    "Vivien Leigh",
+    "Laurence Olivier"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was the leading lady in Gone with the Wind?",
+      "resolved_sub_question": "Who was the leading lady in Gone with the Wind?",
+      "sentence_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+      "sentence": "Gone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name.",
+      "score": 0.5646451428571428,
+      "source_title": "Gone with the Wind (film)",
+      "hop_answer": "Vivien Leigh",
+      "hop_thought": "The leading lady in Gone with the Wind is Scarlett O'Hara, played by Vivien Leigh.",
+      "hop_raw_response": "The leading lady in Gone with the Wind is Scarlett O'Hara, played by Vivien Leigh.\nAnswer: Vivien Leigh",
+      "evidence_passages": [
+        {
+          "title": "Gone with the Wind (film)",
+          "text": "Gone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name."
+        },
+        {
+          "title": "Gone with the Wind (film)",
+          "text": "Gone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie)."
+        },
+        {
+          "title": "Scarlett O'Hara",
+          "text": "Scarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew"
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was the spouse of this leading lady?",
+      "resolved_sub_question": "Who was the spouse of this leading lady? Context: Vivien Leigh.",
+      "sentence_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+      "sentence": "Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress.",
+      "score": 0.47233408527259824,
+      "source_title": "Vivien Leigh",
+      "hop_answer": "Laurence Olivier",
+      "hop_thought": "Vivien Leigh was also known as Lady Olivier after 1947, indicating that she married someone with the surname Olivier.",
+      "hop_raw_response": "Vivien Leigh was also known as Lady Olivier after 1947, indicating that she married someone with the surname Olivier.\nAnswer: Laurence Olivier",
+      "evidence_passages": [
+        {
+          "title": "Vivien Leigh",
+          "text": "Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress."
+        },
+        {
+          "title": "Vivien Leigh",
+          "text": "Vivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963)."
+        },
+        {
+          "title": "Scarlett O'Hara",
+          "text": "Scarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew"
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_gone_with_the_wind_film",
+      "score": 0.08901993019666714,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+      "score": 0.04879263926404377,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_vivien_leigh",
+      "score": 0.0449353534799276,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:scarlett_o_hara",
+      "score": 0.04181684391955528,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+      "score": 0.04000681374010906,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:scarlett",
+      "score": 0.0371947495307095,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:vivien_leigh",
+      "score": 0.03640094357352446,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:katie_scarlett",
+      "score": 0.03367575822136528,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:1939_film_gone_with_the_wind",
+      "score": 0.025190486684663678,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gone_with_the_wind",
+      "score": 0.02515646269617963,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_laura_hope_crews",
+      "score": 0.024517904402371574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:laura_hope_crews_0_0_laura_hope_crews_december_12_1879_november_12_1942_was_a_leading_actress",
+      "score": 0.02410726897372025,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lady_olivier",
+      "score": 0.02376434584109032,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:fire_over_england_0_0_fire_over_england_aka_gloriana_is_a_1937_london_film_productions_film_drama_n",
+      "score": 0.0234165755232104,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:laurence_olivier",
+      "score": 0.022930686663776415,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_fire_over_england",
+      "score": 0.022336418229809557,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:margaret_mitchell_s_1936_novel",
+      "score": 0.02212790464793031,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:1939_american_epic_historical_romance_film",
+      "score": 0.020105373162240706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:frankly_my_dear_i_don_t_give_a_damn_0_1_the_line_is_spoken_by_rhett_butler_gable_as_his_last_words_to_scarlett_o_hara",
+      "score": 0.018181302146809093,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:leading_actress_of_the_american_stage",
+      "score": 0.01817096745578034,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:vivien_leigh_0",
+      "passage_index": 10,
+      "title": "Vivien Leigh",
+      "score": 0.07344556412531361,
+      "text": "Vivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963).",
+      "score_breakdown": {
+        "dense": 0.050419530722763437,
+        "graph": 0.05037671639450325,
+        "fact": 0.20401204872961834
+      }
+    },
+    {
+      "node_id": "chunk:gone_with_the_wind_film_0",
+      "passage_index": 7,
+      "title": "Gone with the Wind (film)",
+      "score": 0.07326080762055567,
+      "text": "Gone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie).",
+      "score_breakdown": {
+        "dense": 0.050379822329151704,
+        "graph": 0.05256487656042019,
+        "fact": 0.1985496158093078
+      }
+    },
+    {
+      "node_id": "chunk:laura_hope_crews_0",
+      "passage_index": 12,
+      "title": "Laura Hope Crews",
+      "score": 0.07260212977568532,
+      "text": "Laura Hope Crews\nLaura Hope Crews (December 12, 1879 -- November 12, 1942) was a leading actress of the American stage in the first decades of the 20th century who is best remembered today for her later work as a character actress in motion pictures of the 1930s. Her best - known film role was Aunt Pittypat in Gone with the Wind.",
+      "score_breakdown": {
+        "dense": 0.05021974902844432,
+        "graph": 0.048513312570946036,
+        "fact": 0.20284849359171422
+      }
+    },
+    {
+      "node_id": "chunk:fire_over_england_0",
+      "passage_index": 3,
+      "title": "Fire Over England",
+      "score": 0.07250813847462459,
+      "text": "Fire Over England\nFire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh. It was directed by William K. Howard and written by Clemence Dane from the novel \"Fire Over England\" by AEW Mason. Leigh's performance in the film helped to convince David O. Selznick to cast her as Scarlett O'Hara in his production of \"Gone with the Wind\". The film is an historical drama set during the reign of Elizabeth I focusing on England's victory over the Spanish Armada.",
+      "score_breakdown": {
+        "dense": 0.05020517657903278,
+        "graph": 0.04966500784502288,
+        "fact": 0.1999719266843313
+      }
+    },
+    {
+      "node_id": "chunk:frankly_my_dear_i_don_t_give_a_damn_0",
+      "passage_index": 18,
+      "title": "Frankly, my dear, I don't give a damn",
+      "score": 0.0715430460353142,
+      "text": "Frankly, my dear, I don't give a damn\n``Frankly, my dear, I do n't give a damn ''is a line from the 1939 film Gone with the Wind starring Clark Gable and Vivien Leigh. The line is spoken by Rhett Butler (Gable), as his last words to Scarlett O'Hara (Leigh), in response to her tearful question:`` Where shall I go? What shall I do?'' Scarlett clings to the hope that she can win him back. This line is also partially spoken by Rhett Butler in Margaret Mitchell's novel Gone with the Wind, published in 1936, from which the film is derived.",
+      "score_breakdown": {
+        "dense": 0.050233604283066655,
+        "graph": 0.04907292133957761,
+        "fact": 0.1946179151850284
+      }
+    },
+    {
+      "node_id": "chunk:scarlett_o_hara_0",
+      "passage_index": 6,
+      "title": "Scarlett O'Hara",
+      "score": 0.041990198480086574,
+      "text": "Scarlett O'Hara\nScarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew",
+      "score_breakdown": {
+        "dense": 0.050318759414126744,
+        "graph": 0.047716269341056196,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:melanie_hamilton_0",
+      "passage_index": 4,
+      "title": "Melanie Hamilton",
+      "score": 0.04175954421183279,
+      "text": "Melanie Hamilton\nMelanie Hamilton Wilkes is a fictional character first appearing in the novel \"Gone with the Wind\" by Margaret Mitchell. In the 1939 film she was portrayed by Olivia de Havilland. Melanie is Scarlett O'Hara's sister-in-law and eventually her best friend.",
+      "score_breakdown": {
+        "dense": 0.05019157835543526,
+        "graph": 0.04718058705447798,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:scarlett_o_hara_1",
+      "passage_index": 6,
+      "title": "Scarlett O'Hara",
+      "score": 0.04162424978826208,
+      "text": "Scarlett O'Hara\nlaw in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew O'Hara (paternal uncle) Pierre Robillard (maternal grandfather) Solange Prudhomme Robillard (maternal grandmother) Katie Scarlett O'Hara (paternal grandmother) Will Benteen (brother - in - law) Unnamed Benteen (niece or nephew, via Suellen and Will) Melanie Hamilton (sister - in - law) Beau Wilkes (nephew) Religion Roman Catholicism Nationality Confederate, American",
+      "score_breakdown": {
+        "dense": 0.04982705216762613,
+        "graph": 0.04739790365355902,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:darlings_of_the_gods_0",
+      "passage_index": 13,
+      "title": "Darlings of the Gods",
+      "score": 0.04158756096196202,
+      "text": "Darlings of the Gods\nDarlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.",
+      "score_breakdown": {
+        "dense": 0.049871179285947136,
+        "graph": 0.04719470784897031,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:mickey_kuhn_0",
+      "passage_index": 5,
+      "title": "Mickey Kuhn",
+      "score": 0.04158593928752533,
+      "text": "Mickey Kuhn\nTheodore Matthew Michael Kuhn, Jr. (born September 21, 1932), known as Mickey Kuhn, is an American former child actor of the 1930s, 1940s and 1950s. He came to prominence in 1939 playing Beau Wilkes in Gone with the Wind.",
+      "score_breakdown": {
+        "dense": 0.05010657894017686,
+        "graph": 0.04675773623476019,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_gone_with_the_wind_film",
+        "score": 0.08901993019666714,
+        "text": "Gone with the Wind (film)",
+        "metadata": {
+          "canonical_name": "Gone with the Wind (film)",
+          "aliases": [
+            "GWTW",
+            "Gone with the Wind"
+          ],
+          "surface_forms": [
+            "GWTW",
+            "Gone with the Wind"
+          ],
+          "title_anchor": "Gone with the Wind (film)"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_vivien_leigh",
+        "score": 0.0449353534799276,
+        "text": "Vivien Leigh",
+        "metadata": {
+          "canonical_name": "Vivien Leigh",
+          "aliases": [
+            "VL",
+            "Vivien Leigh"
+          ],
+          "surface_forms": [
+            "VL",
+            "Vivien Leigh"
+          ],
+          "title_anchor": "Vivien Leigh"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+        "score": 0.04879263926404377,
+        "text": "Gone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name.",
+        "metadata": {
+          "title": "Gone with the Wind (film)",
+          "chunk_id": "chunk:gone_with_the_wind_film_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Gone with the Wind",
+              "relation": "is",
+              "tail": "1939 American epic historical romance film"
+            },
+            {
+              "head": "Gone with the Wind",
+              "relation": "adapted from",
+              "tail": "Margaret Mitchell's 1936 novel"
+            }
+          ],
+          "entities": [
+            "Gone with the Wind",
+            "Margaret Mitchell"
+          ],
+          "entity_ids": [
+            "entity:1939_american_epic_historical_romance_film",
+            "entity:margaret_mitchell",
+            "entity:margaret_mitchell_s_1936_novel",
+            "entity:title_anchor_gone_with_the_wind_film"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+        "score": 0.04000681374010906,
+        "text": "Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress.",
+        "metadata": {
+          "title": "Vivien Leigh",
+          "chunk_id": "chunk:vivien_leigh_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Vivien Leigh",
+              "relation": "born as",
+              "tail": "Vivian Mary Hartley"
+            },
+            {
+              "head": "Vivien Leigh",
+              "relation": "known as",
+              "tail": "Lady Olivier"
+            },
+            {
+              "head": "Vivien Leigh",
+              "relation": "date of birth",
+              "tail": "5 November 1913"
+            },
+            {
+              "head": "Vivien Leigh",
+              "relation": "date of death",
+              "tail": "8 July 1967"
+            },
+            {
+              "head": "Vivien Leigh",
+              "relation": "was",
+              "tail": "English stage and film actress"
+            }
+          ],
+          "entities": [
+            "Vivien Leigh",
+            "Vivian Mary Hartley",
+            "Lady Olivier"
+          ],
+          "entity_ids": [
+            "entity:5_november_1913",
+            "entity:8_july_1967",
+            "entity:english_stage_and_film_actress",
+            "entity:lady_olivier",
+            "entity:title_anchor_vivien_leigh",
+            "entity:vivian_mary_hartley"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:laura_hope_crews_0_0_laura_hope_crews_december_12_1879_november_12_1942_was_a_leading_actress",
+        "score": 0.02410726897372025,
+        "text": "Laura Hope Crews (December 12, 1879 -- November 12, 1942) was a leading actress of the American stage in the first decades of the 20th century who is best remembered today for her later work as a character actress in motion pictures of the 1930s.",
+        "metadata": {
+          "title": "Laura Hope Crews",
+          "chunk_id": "chunk:laura_hope_crews_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Laura Hope Crews",
+              "relation": "born on",
+              "tail": "December 12 1879"
+            },
+            {
+              "head": "Laura Hope Crews",
+              "relation": "died on",
+              "tail": "November 12 1942"
+            },
+            {
+              "head": "Laura Hope Crews",
+              "relation": "was",
+              "tail": "leading actress of the American stage"
+            }
+          ],
+          "entities": [
+            "Laura Hope Crews",
+            "American stage"
+          ],
+          "entity_ids": [
+            "entity:american_stage",
+            "entity:december_12_1879",
+            "entity:leading_actress_of_the_american_stage",
+            "entity:november_12_1942",
+            "entity:title_anchor_laura_hope_crews"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:fire_over_england_0_0_fire_over_england_aka_gloriana_is_a_1937_london_film_productions_film_drama_n",
+        "score": 0.0234165755232104,
+        "text": "Fire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh.",
+        "metadata": {
+          "title": "Fire Over England",
+          "chunk_id": "chunk:fire_over_england_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Fire Over England",
+              "relation": "also known as",
+              "tail": "Gloriana"
+            },
+            {
+              "head": "Fire Over England",
+              "relation": "is a",
+              "tail": "1937 London Film Productions film drama"
+            },
+            {
+              "head": "Fire Over England",
+              "relation": "notable for",
+              "tail": "providing the first pairing of Laurence Olivier and Vivien Leigh"
+            }
+          ],
+          "entities": [
+            "Fire Over England",
+            "Gloriana",
+            "London Film Productions",
+            "Laurence Olivier",
+            "Vivien Leigh"
+          ],
+          "entity_ids": [
+            "entity:1937_london_film_productions_film_drama",
+            "entity:gloriana",
+            "entity:laurence_olivier",
+            "entity:london_film_productions",
+            "entity:providing_the_first_pairing_of_laurence_olivier_and_vivien_leigh",
+            "entity:title_anchor_fire_over_england",
+            "entity:vivien_leigh"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:frankly_my_dear_i_don_t_give_a_damn_0_1_the_line_is_spoken_by_rhett_butler_gable_as_his_last_words_to_scarlett_o_hara",
+        "score": 0.018181302146809093,
+        "text": "The line is spoken by Rhett Butler (Gable), as his last words to Scarlett O'Hara (Leigh), in response to her tearful question:`` Where shall I go?",
+        "metadata": {
+          "title": "Frankly, my dear, I don't give a damn",
+          "chunk_id": "chunk:frankly_my_dear_i_don_t_give_a_damn_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Rhett Butler",
+              "relation": "is played by",
+              "tail": "Gable"
+            },
+            {
+              "head": "Scarlett O'Hara",
+              "relation": "is played by",
+              "tail": "Leigh"
+            },
+            {
+              "head": "Rhett Butler",
+              "relation": "speaks to",
+              "tail": "Scarlett O'Hara"
+            },
+            {
+              "head": "Scarlett O'Hara",
+              "relation": "asks",
+              "tail": "shall I go"
+            }
+          ],
+          "entities": [
+            "Rhett Butler",
+            "Gable",
+            "Scarlett O'Hara",
+            "Leigh"
+          ],
+          "entity_ids": [
+            "entity:gable",
+            "entity:leigh",
+            "entity:rhett_butler",
+            "entity:scarlett_o_hara",
+            "entity:shall_i_go"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:gone_with_the_wind_film_0_5_the_leading_roles_are_played_by_vivien_leigh_scarlett_clark_gable_rhett_le",
+        "score": 0.015793725436947098,
+        "text": "The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie).",
+        "metadata": {
+          "title": "Gone with the Wind (film)",
+          "chunk_id": "chunk:gone_with_the_wind_film_0",
+          "sentence_index": 5,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Vivien Leigh",
+              "relation": "plays role",
+              "tail": "Scarlett"
+            },
+            {
+              "head": "Clark Gable",
+              "relation": "plays role",
+              "tail": "Rhett"
+            },
+            {
+              "head": "Leslie Howard",
+              "relation": "plays role",
+              "tail": "Ashley"
+            },
+            {
+              "head": "Olivia de Havilland",
+              "relation": "plays role",
+              "tail": "Melanie"
+            }
+          ],
+          "entities": [
+            "Vivien Leigh",
+            "Clark Gable",
+            "Leslie Howard",
+            "Olivia de Havilland",
+            "Scarlett",
+            "Rhett",
+            "Ashley",
+            "Melanie"
+          ],
+          "entity_ids": [
+            "entity:ashley",
+            "entity:clark_gable",
+            "entity:leslie_howard",
+            "entity:melanie",
+            "entity:olivia_de_havilland",
+            "entity:rhett",
+            "entity:scarlett",
+            "entity:vivien_leigh"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:scarlett_o_hara_0_0_scarlett_o_hara_scarlett_o_hara_as_portrayed_by_vivien_leigh_in_the_1939_film_ad",
+        "score": 0.014620388468736038,
+        "text": "Scarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew",
+        "metadata": {
+          "title": "Scarlett O'Hara",
+          "chunk_id": "chunk:scarlett_o_hara_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Scarlett",
+              "relation": "related_to",
+              "tail": "Hara Scarlett"
+            },
+            {
+              "head": "Hara Scarlett",
+              "relation": "related_to",
+              "tail": "Hara"
+            },
+            {
+              "head": "Hara",
+              "relation": "related_to",
+              "tail": "Vivien Leigh"
+            }
+          ],
+          "entities": [
+            "Scarlett",
+            "Hara Scarlett",
+            "Hara",
+            "Vivien Leigh",
+            "Gone",
+            "Wind First",
+            "Wind Created",
+            "Margaret Mitchell Portrayed",
+            "Wind",
+            "Joanne Whalley",
+            "Information Full",
+            "Katie Scarlett",
+            "Hara Gender Female Family",
+            "Gerald",
+            "Ellen Robillard",
+            "Susan Elinor",
+            "Suellen",
+            "Hara Benteen",
+            "Caroline Irene",
+            "Carreen",
+            "Hara Jr",
+            "Spouse",
+            "Charles Hamilton",
+            "Frank Kennedy",
+            "Rhett Butler",
+            "Children Wade Hampton Hamilton",
+            "Charles",
+            "Ella Lorena Kennedy",
+            "Frank",
+            "Eugenie Victoria",
+            "Bonnie Blue",
+            "Butler",
+            "Rhett",
+            "Katie Colum",
+            "Cat",
+            "Relatives Langston Butler",
+            "Eleanor Butler",
+            "Ross Butler",
+            "Rosemary Butler",
+            "Pauline Robillard",
+            "Eulalie Robillard",
+            "Philippe Robillard",
+            "James",
+            "Andrew"
+          ],
+          "entity_ids": [
+            "entity:andrew",
+            "entity:bonnie_blue",
+            "entity:butler",
+            "entity:caroline_irene",
+            "entity:carreen",
+            "entity:cat",
+            "entity:charles",
+            "entity:charles_hamilton",
+            "entity:children_wade_hampton_hamilton",
+            "entity:eleanor_butler",
+            "entity:ella_lorena_kennedy",
+            "entity:ellen_robillard",
+            "entity:eugenie_victoria",
+            "entity:eulalie_robillard",
+            "entity:frank",
+            "entity:frank_kennedy",
+            "entity:gerald",
+            "entity:gone",
+            "entity:hara",
+            "entity:hara_benteen",
+            "entity:hara_gender_female_family",
+            "entity:hara_jr",
+            "entity:hara_scarlett",
+            "entity:information_full",
+            "entity:james",
+            "entity:joanne_whalley",
+            "entity:katie_colum",
+            "entity:katie_scarlett",
+            "entity:margaret_mitchell_portrayed",
+            "entity:pauline_robillard",
+            "entity:philippe_robillard",
+            "entity:relatives_langston_butler",
+            "entity:rhett",
+            "entity:rhett_butler",
+            "entity:rosemary_butler",
+            "entity:ross_butler",
+            "entity:scarlett",
+            "entity:spouse",
+            "entity:suellen",
+            "entity:susan_elinor",
+            "entity:vivien_leigh",
+            "entity:wind",
+            "entity:wind_created",
+            "entity:wind_first"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:gone_with_the_wind_film_0",
+        "score": 0.013636327255200777,
+        "text": "Gone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie).",
+        "metadata": {
+          "title": "Gone with the Wind (film)",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:1939_american_epic_historical_romance_film",
+            "entity:american_civil_war",
+            "entity:american_south",
+            "entity:ashley",
+            "entity:ashley_wilkes",
+            "entity:clark_gable",
+            "entity:david_o",
+            "entity:georgia",
+            "entity:georgia_plantation_owner",
+            "entity:leslie_howard",
+            "entity:margaret_mitchell",
+            "entity:margaret_mitchell_s_1936_novel",
+            "entity:melanie",
+            "entity:melanie_hamilton",
+            "entity:olivia_de_havilland",
+            "entity:reconstruction_era",
+            "entity:rhett",
+            "entity:rhett_butler",
+            "entity:scarlett",
+            "entity:scarlett_o_hara",
+            "entity:selznick",
+            "entity:selznick_international_pictures",
+            "entity:title_anchor_gone_with_the_wind_film",
+            "entity:victor_fleming",
+            "entity:vivien_leigh"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:vivien_leigh_0",
+        "score": 0.008216923096332469,
+        "text": "Vivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963).",
+        "metadata": {
+          "title": "Vivien Leigh",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:5_november_1913",
+            "entity:8_july_1967",
+            "entity:academy_awards",
+            "entity:best_actress",
+            "entity:blanche_dubois",
+            "entity:broadway",
+            "entity:english_stage_and_film_actress",
+            "entity:gone_with_the_wind",
+            "entity:hara",
+            "entity:lady_olivier",
+            "entity:london_s_west_end",
+            "entity:scarlett",
+            "entity:scarlett_o_hara",
+            "entity:streetcar_named_desire",
+            "entity:title_anchor_vivien_leigh",
+            "entity:tony_award",
+            "entity:tovarich",
+            "entity:vivian_mary_hartley",
+            "entity:work_in_broadway_musical_version_of_tovarich"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Vivien Leigh\nVivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963).\n\nGone with the Wind (film)\nGone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie).\n\nLaura Hope Crews\nLaura Hope Crews\nLaura Hope Crews (December 12, 1879 -- November 12, 1942) was a leading actress of the American stage in the first decades of the 20th century who is best remembered today for her later work as a character actress in motion pictures of the 1930s. Her best - known film role was Aunt Pittypat in Gone with the Wind.\n\nFire Over England\nFire Over England\nFire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh. It was directed by William K. Howard and written by Clemence Dane from the novel \"Fire Over England\" by AEW Mason. Leigh's performance in the film helped to convince David O. Selznick to cast her as Scarlett O'Hara in his production of \"Gone with the Wind\". The film is an historical drama set during the reign of Elizabeth I focusing on England's victory over the Spanish Armada.\n\nFrankly, my dear, I don't give a damn\nFrankly, my dear, I don't give a damn\n``Frankly, my dear, I do n't give a damn ''is a line from the 1939 film Gone with the Wind starring Clark Gable and Vivien Leigh. The line is spoken by Rhett Butler (Gable), as his last words to Scarlett O'Hara (Leigh), in response to her tearful question:`` Where shall I go? What shall I do?'' Scarlett clings to the hope that she can win him back. This line is also partially spoken by Rhett Butler in Margaret Mitchell's novel Gone with the Wind, published in 1936, from which the film is derived.\n\nGone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name.\n\nScarlett O'Hara\nScarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew\n\nVivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress.\n\nDarlings of the Gods\nDarlings of the Gods\nDarlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.\n\nScarlett O'Hara\nScarlett O'Hara\nScarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew\n\nHarry Davenport (actor)\nHarry Davenport (actor)\nHarold George Bryant Davenport (January 19, 1866 -- August 9, 1949) was an American film and stage actor who worked in show business from the age of six until his death. After a long and prolific Broadway career, he came to Hollywood in the 1930s and appeared in films, including Gone with the Wind (1939), in which he played Dr. Meade.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:vivien_leigh_0",
+        "passage_index": 10,
+        "title": "Vivien Leigh",
+        "score": 0.07344556412531361,
+        "text": "Vivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963).",
+        "score_breakdown": {
+          "dense": 0.050419530722763437,
+          "graph": 0.05037671639450325,
+          "fact": 0.20401204872961834
+        }
+      },
+      {
+        "node_id": "chunk:gone_with_the_wind_film_0",
+        "passage_index": 7,
+        "title": "Gone with the Wind (film)",
+        "score": 0.07326080762055567,
+        "text": "Gone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie).",
+        "score_breakdown": {
+          "dense": 0.050379822329151704,
+          "graph": 0.05256487656042019,
+          "fact": 0.1985496158093078
+        }
+      },
+      {
+        "node_id": "chunk:laura_hope_crews_0",
+        "passage_index": 12,
+        "title": "Laura Hope Crews",
+        "score": 0.07260212977568532,
+        "text": "Laura Hope Crews\nLaura Hope Crews (December 12, 1879 -- November 12, 1942) was a leading actress of the American stage in the first decades of the 20th century who is best remembered today for her later work as a character actress in motion pictures of the 1930s. Her best - known film role was Aunt Pittypat in Gone with the Wind.",
+        "score_breakdown": {
+          "dense": 0.05021974902844432,
+          "graph": 0.048513312570946036,
+          "fact": 0.20284849359171422
+        }
+      },
+      {
+        "node_id": "chunk:fire_over_england_0",
+        "passage_index": 3,
+        "title": "Fire Over England",
+        "score": 0.07250813847462459,
+        "text": "Fire Over England\nFire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh. It was directed by William K. Howard and written by Clemence Dane from the novel \"Fire Over England\" by AEW Mason. Leigh's performance in the film helped to convince David O. Selznick to cast her as Scarlett O'Hara in his production of \"Gone with the Wind\". The film is an historical drama set during the reign of Elizabeth I focusing on England's victory over the Spanish Armada.",
+        "score_breakdown": {
+          "dense": 0.05020517657903278,
+          "graph": 0.04966500784502288,
+          "fact": 0.1999719266843313
+        }
+      },
+      {
+        "node_id": "chunk:frankly_my_dear_i_don_t_give_a_damn_0",
+        "passage_index": 18,
+        "title": "Frankly, my dear, I don't give a damn",
+        "score": 0.0715430460353142,
+        "text": "Frankly, my dear, I don't give a damn\n``Frankly, my dear, I do n't give a damn ''is a line from the 1939 film Gone with the Wind starring Clark Gable and Vivien Leigh. The line is spoken by Rhett Butler (Gable), as his last words to Scarlett O'Hara (Leigh), in response to her tearful question:`` Where shall I go? What shall I do?'' Scarlett clings to the hope that she can win him back. This line is also partially spoken by Rhett Butler in Margaret Mitchell's novel Gone with the Wind, published in 1936, from which the film is derived.",
+        "score_breakdown": {
+          "dense": 0.050233604283066655,
+          "graph": 0.04907292133957761,
+          "fact": 0.1946179151850284
+        }
+      },
+      {
+        "node_id": "chunk:scarlett_o_hara_0",
+        "passage_index": 6,
+        "title": "Scarlett O'Hara",
+        "score": 0.041990198480086574,
+        "text": "Scarlett O'Hara\nScarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew",
+        "score_breakdown": {
+          "dense": 0.050318759414126744,
+          "graph": 0.047716269341056196,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:melanie_hamilton_0",
+        "passage_index": 4,
+        "title": "Melanie Hamilton",
+        "score": 0.04175954421183279,
+        "text": "Melanie Hamilton\nMelanie Hamilton Wilkes is a fictional character first appearing in the novel \"Gone with the Wind\" by Margaret Mitchell. In the 1939 film she was portrayed by Olivia de Havilland. Melanie is Scarlett O'Hara's sister-in-law and eventually her best friend.",
+        "score_breakdown": {
+          "dense": 0.05019157835543526,
+          "graph": 0.04718058705447798,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:scarlett_o_hara_1",
+        "passage_index": 6,
+        "title": "Scarlett O'Hara",
+        "score": 0.04162424978826208,
+        "text": "Scarlett O'Hara\nlaw in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew O'Hara (paternal uncle) Pierre Robillard (maternal grandfather) Solange Prudhomme Robillard (maternal grandmother) Katie Scarlett O'Hara (paternal grandmother) Will Benteen (brother - in - law) Unnamed Benteen (niece or nephew, via Suellen and Will) Melanie Hamilton (sister - in - law) Beau Wilkes (nephew) Religion Roman Catholicism Nationality Confederate, American",
+        "score_breakdown": {
+          "dense": 0.04982705216762613,
+          "graph": 0.04739790365355902,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:darlings_of_the_gods_0",
+        "passage_index": 13,
+        "title": "Darlings of the Gods",
+        "score": 0.04158756096196202,
+        "text": "Darlings of the Gods\nDarlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.",
+        "score_breakdown": {
+          "dense": 0.049871179285947136,
+          "graph": 0.04719470784897031,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:mickey_kuhn_0",
+        "passage_index": 5,
+        "title": "Mickey Kuhn",
+        "score": 0.04158593928752533,
+        "text": "Mickey Kuhn\nTheodore Matthew Michael Kuhn, Jr. (born September 21, 1932), known as Mickey Kuhn, is an American former child actor of the 1930s, 1940s and 1950s. He came to prominence in 1939 playing Beau Wilkes in Gone with the Wind.",
+        "score_breakdown": {
+          "dense": 0.05010657894017686,
+          "graph": 0.04675773623476019,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was the leading lady in Gone with the Wind?",
+        "resolved_sub_question": "Who was the leading lady in Gone with the Wind?",
+        "sentence_id": "sentence:gone_with_the_wind_film_0_0_gone_with_the_wind_is_a_1939_american_epic_historical_romance_film_adapted_from",
+        "sentence": "Gone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name.",
+        "score": 0.5646451428571428,
+        "source_title": "Gone with the Wind (film)",
+        "hop_answer": "Vivien Leigh",
+        "hop_thought": "The leading lady in Gone with the Wind is Scarlett O'Hara, played by Vivien Leigh.",
+        "hop_raw_response": "The leading lady in Gone with the Wind is Scarlett O'Hara, played by Vivien Leigh.\nAnswer: Vivien Leigh",
+        "evidence_passages": [
+          {
+            "title": "Gone with the Wind (film)",
+            "text": "Gone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name."
+          },
+          {
+            "title": "Gone with the Wind (film)",
+            "text": "Gone with the Wind (film)\nGone with the Wind is a 1939 American epic historical romance film, adapted from Margaret Mitchell's 1936 novel of the same name. The film was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong - willed daughter of a Georgia plantation owner. It follows her romantic pursuit of Ashley Wilkes, who is married to his cousin, Melanie Hamilton, and her subsequent marriage to Rhett Butler. The leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie)."
+          },
+          {
+            "title": "Scarlett O'Hara",
+            "text": "Scarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew"
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was the spouse of this leading lady?",
+        "resolved_sub_question": "Who was the spouse of this leading lady? Context: Vivien Leigh.",
+        "sentence_id": "sentence:vivien_leigh_0_0_vivien_leigh_born_vivian_mary_hartley_and_also_known_as_lady_olivier_after_194",
+        "sentence": "Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress.",
+        "score": 0.47233408527259824,
+        "source_title": "Vivien Leigh",
+        "hop_answer": "Laurence Olivier",
+        "hop_thought": "Vivien Leigh was also known as Lady Olivier after 1947, indicating that she married someone with the surname Olivier.",
+        "hop_raw_response": "Vivien Leigh was also known as Lady Olivier after 1947, indicating that she married someone with the surname Olivier.\nAnswer: Laurence Olivier",
+        "evidence_passages": [
+          {
+            "title": "Vivien Leigh",
+            "text": "Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress."
+          },
+          {
+            "title": "Vivien Leigh",
+            "text": "Vivien Leigh\nVivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress. She won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. She also won a Tony Award for her work in the Broadway musical version of Tovarich (1963)."
+          },
+          {
+            "title": "Scarlett O'Hara",
+            "text": "Scarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew"
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who was the leading lady in Gone with the Wind? => Vivien Leigh (source: Gone with the Wind (film))\n2. Who was the spouse of this leading lady? => Laurence Olivier (source: Vivien Leigh)\n\nFact hints:\n- Fire Over England notable for providing the first pairing of Laurence Olivier and Vivien Leigh\n- Vivien Leigh known as Lady Olivier\n- Vivien Leigh was English stage and film actress\n- Vivien Leigh plays role Scarlett\n\nWikipedia Title: Fire Over England\nFire Over England Fire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh. Selznick to cast her as Scarlett O'Hara in his production of \"Gone with the Wind\".\n\nWikipedia Title: Darlings of the Gods\nDarlings of the Gods Darlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.\n\nWikipedia Title: Gone with the Wind (film)\nThe leading roles are played by Vivien Leigh (Scarlett), Clark Gable (Rhett), Leslie Howard (Ashley), and Olivia de Havilland (Melanie). The film was produced by David O.\n\nWikipedia Title: Scarlett O'Hara\nScarlett O'Hara Scarlett O'Hara as portrayed by Vivien Leigh in the 1939 film adaptation of Gone with the Wind First appearance Gone with the Wind Created by Margaret Mitchell Portrayed by Vivien Leigh (Gone with the Wind) Joanne Whalley (Scarlett) Information Full name Katie Scarlett O'Hara Gender Female Family Gerald O'Hara (father, deceased) Ellen Robillard O'Hara (mother, deceased) Susan Elinor ``Suellen ''O'Hara Benteen (sister) Caroline Irene`` Carreen'' O'Hara (sister) Gerald O'Hara Jr. (name of 3 brothers, all deceased) Spouse (s) Charles Hamilton (1st; deceased) Frank Kennedy (2nd; deceased) Rhett Butler (3rd) Children Wade Hampton Hamilton (son with Charles) Ella Lorena Kennedy (daughter with Frank) Eugenie Victoria ``Bonnie Blue ''Butler (daughter with Rhett; deceased) Katie Colum`` Cat'' Butler (daughter with Rhett in Scarlett) Relatives Langston Butler (father - in - law named in Scarlett; deceased) Eleanor Butler (mother - in - law in sequel Scarlett) Ross Butler (brother - in - law named in Scarlett) Rosemary Butler (sister - in - law) Pauline Robillard (maternal aunt) Eulalie Robillard (maternal aunt) Philippe Robillard (cousin of her mother) James O'Hara (paternal uncle) Andrew\n\nWikipedia Title: Vivien Leigh\nShe won two Academy Awards for Best Actress for her iconic performances as Scarlett O'Hara in Gone with the Wind (1939) and Blanche DuBois in the film version of A Streetcar Named Desire (1951), a role she had also played on stage in London's West End in 1949. Vivien Leigh Vivien Leigh (born Vivian Mary Hartley, and also known as Lady Olivier after 1947; 5 November 1913 -- 8 July 1967) was an English stage and film actress.\n\nQuestion: Who was the spouse of the leading lady in Gone With the wind?\nDraft Answer: Laurence Olivier\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The leading lady in Gone with the Wind was Vivien Leigh, and her spouse was Laurence Olivier.",
+  "predicted_answer": "Laurence Olivier",
+  "qa_raw_response": "{\n  \"thought\": \"The leading lady in Gone with the Wind was Vivien Leigh, and her spouse was Laurence Olivier.\",\n  \"answer\": \"Laurence Olivier\",\n  \"support\": \"Fire Over England (aka Gloriana) is a 1937 London Film Productions film drama, notable for providing the first pairing of Laurence Olivier and Vivien Leigh.\"\n}"
+}

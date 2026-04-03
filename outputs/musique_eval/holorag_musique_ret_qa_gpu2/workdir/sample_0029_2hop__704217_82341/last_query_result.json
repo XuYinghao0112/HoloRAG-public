@@ -1,0 +1,923 @@
+{
+  "query": "Where is Sean Hampton's birth place in the state of Florida?",
+  "alpha": {
+    "entity": 0.5,
+    "sentence": 0.3,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Florida"
+  ],
+  "raw_query_entities": [
+    "Sean Hampton",
+    "Florida"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Sean Hampton",
+      "node_id": "entity:hampton",
+      "resolved_text": "Hampton",
+      "score": 0.586,
+      "alias_score": 0.5,
+      "relation_score": 0.7,
+      "context_score": 0.5,
+      "compatibility_score": 0.775,
+      "score_margin": 0.06053333333333344,
+      "confident": false
+    },
+    {
+      "mention": "Florida",
+      "node_id": "entity:florida",
+      "resolved_text": "Florida",
+      "score": 0.762,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4,
+      "compatibility_score": 0.775,
+      "score_margin": 0.20200000000000007,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is Sean Hampton's birth place?",
+    "Is Sean Hampton's birth place located in the state of Florida?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:florida",
+      "score": 1.0901116127565729,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ocala",
+      "score": 0.5540119126394912,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ocala_florida",
+      "score": 0.5500247085914405,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hampton",
+      "score": 0.262147552203112,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hampton_double_square_historic_district",
+      "score": 0.25210104268802036,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hampton_iowa_united_states",
+      "score": 0.25210104268802036,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:northern_florida",
+      "score": 0.24212130238599994,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+      "score": 0.22917185608693005,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:larsen_inlet",
+      "score": 0.2120795648678805,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hampton_bluffs",
+      "score": 0.21160176992421836,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:antarctic_place",
+      "score": 0.17982875976975618,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:antarctica",
+      "score": 0.15206402011313372,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:hampton_bluffs_are_located_in_larsen_inlet_sentence_hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluf",
+      "text": "Hampton Bluffs are located in Larsen Inlet",
+      "head_id": "entity:title_anchor_hampton_bluffs",
+      "tail_id": "entity:larsen_inlet",
+      "sentence_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+      "chunk_id": "chunk:hampton_bluffs_0",
+      "document_index": 17,
+      "score": 0.2698840012223797
+    },
+    {
+      "fact_id": "fact:hampton_born_in_ocala_florida_sentence_sean_hampton_0_0_born_in_ocala_florida_hampton_is_the_youngest_of_five_children_o",
+      "text": "Hampton born_in Ocala Florida",
+      "head_id": "entity:hampton",
+      "tail_id": "entity:ocala_florida",
+      "sentence_id": "sentence:sean_hampton_0_0_born_in_ocala_florida_hampton_is_the_youngest_of_five_children_of_a_dentist_fa",
+      "chunk_id": "chunk:sean_hampton_0",
+      "document_index": 7,
+      "score": 0.2599292019908863
+    },
+    {
+      "fact_id": "fact:hampton_double_square_historic_district_is_located_in_hampton_iowa_united_states_sentence_hampton_double_square_historic",
+      "text": "Hampton Double Square Historic District is located in Hampton Iowa United States",
+      "head_id": "entity:title_anchor_hampton_double_square_historic_district",
+      "tail_id": "entity:hampton_iowa_united_states",
+      "sentence_id": "sentence:hampton_double_square_historic_district_0_0_the_hampton_double_square_historic_district_is_a_historic_district_located_i",
+      "chunk_id": "chunk:hampton_double_square_historic_district_0",
+      "document_index": 6,
+      "score": 0.24988298181056187
+    },
+    {
+      "fact_id": "fact:ocala_is_located_in_northern_florida_sentence_ocala_florida_0_0_ocala_o_k_l_oh_kal_is_a_city_located_in_northern_florida",
+      "text": "Ocala is located in Northern Florida",
+      "head_id": "entity:ocala",
+      "tail_id": "entity:northern_florida",
+      "sentence_id": "sentence:ocala_florida_0_0_ocala_o_k_l_oh_kal_is_a_city_located_in_northern_florida",
+      "chunk_id": "chunk:ocala_florida_0",
+      "document_index": 10,
+      "score": 0.2398844217014248
+    },
+    {
+      "fact_id": "fact:larsen_inlet_is_in_antarctica_sentence_hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_eas",
+      "text": "Larsen Inlet is in Antarctica",
+      "head_id": "entity:larsen_inlet",
+      "tail_id": "entity:antarctica",
+      "sentence_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+      "chunk_id": "chunk:hampton_bluffs_0",
+      "document_index": 17,
+      "score": 0.14985729980813015
+    },
+    {
+      "fact_id": "fact:hampton_bluffs_are_part_of_graham_land_sentence_hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_o",
+      "text": "Hampton Bluffs are part of Graham Land",
+      "head_id": "entity:title_anchor_hampton_bluffs",
+      "tail_id": "entity:graham_land",
+      "sentence_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+      "chunk_id": "chunk:hampton_bluffs_0",
+      "document_index": 17,
+      "score": 0.14888225895934887
+    }
+  ],
+  "bridge_entities": [
+    "Hampton",
+    "Ocala Florida",
+    "Ocala",
+    "Northern Florida",
+    "Yes"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is Sean Hampton's birth place?",
+      "resolved_sub_question": "What is Sean Hampton's birth place?",
+      "sentence_id": "sentence:south_beach_florida_0_0_south_beach_is_a_census_designated_place_cdp_on_orchid_island_in_indian_river",
+      "sentence": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States.",
+      "score": 0.437878,
+      "source_title": "South Beach, Florida",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not contain any information about Sean Hampton or his birthplace.",
+      "hop_raw_response": "The provided evidence does not contain any information about Sean Hampton or his birthplace.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "South Beach, Florida",
+          "text": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States."
+        },
+        {
+          "title": "South Beach, Florida",
+          "text": "South Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States. The population was 3,501 at the 2010 census. It is ranked tenth in Florida locations by per capita income as of 2010."
+        },
+        {
+          "title": "Tamiami, Florida",
+          "text": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States."
+        }
+      ]
+    },
+    {
+      "sub_question": "Is Sean Hampton's birth place located in the state of Florida?",
+      "resolved_sub_question": "Is Sean Hampton's birth place located in the state of Florida?",
+      "sentence_id": "sentence:tamiami_florida_0_0_tamiami_is_a_census_designated_place_cdp_in_miami_dade_county_florida_united",
+      "sentence": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States.",
+      "score": 0.34520000000000006,
+      "source_title": "Tamiami, Florida",
+      "hop_answer": "Yes",
+      "hop_thought": "Sean Hampton's birthplace is South Beach, Florida, and South Beach is a census-designated place in Florida, United States.",
+      "hop_raw_response": "Sean Hampton's birthplace is South Beach, Florida, and South Beach is a census-designated place in Florida, United States.\nAnswer: Yes",
+      "evidence_passages": [
+        {
+          "title": "Tamiami, Florida",
+          "text": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States."
+        },
+        {
+          "title": "Tamiami, Florida",
+          "text": "Tamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 55,271 at the 2010 census."
+        },
+        {
+          "title": "South Beach, Florida",
+          "text": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:florida",
+      "score": 0.11650709576820963,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ocala",
+      "score": 0.0781055997933518,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ocala_florida",
+      "score": 0.07346218672699778,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+      "score": 0.05167317623466004,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:hampton",
+      "score": 0.04503801662368036,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:northern_florida",
+      "score": 0.04141250903569614,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hampton_bluffs",
+      "score": 0.0377838169284261,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_hampton_double_square_historic_district",
+      "score": 0.037622671099483564,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hampton_iowa_united_states",
+      "score": 0.037622671099483564,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ocala_florida_0_0_ocala_o_k_l_oh_kal_is_a_city_located_in_northern_florida",
+      "score": 0.036743930172902936,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:larsen_inlet",
+      "score": 0.033459899321618726,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hampton_double_square_historic_district_0_0_the_hampton_double_square_historic_district_is_a_historic_district_located_i",
+      "score": 0.032587584634446665,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:sean_hampton_0_0_born_in_ocala_florida_hampton_is_the_youngest_of_five_children_of_a_dentist_fa",
+      "score": 0.029573497784172037,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:antarctica",
+      "score": 0.02555169217038528,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:antarctic_place",
+      "score": 0.02298318546953809,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:graham_land",
+      "score": 0.021641194878026924,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:hampton_bluffs_0",
+      "score": 0.014916173261954302,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:hampton_bluffs_0_2_hampton_an_fids_physiologist_at_hope_bay_in_1959_and_1960",
+      "score": 0.012564044897128894,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:hampton_bluffs_0_1_they_were_mapped_from_surveys_by_the_falkland_islands_dependencies_survey_fids",
+      "score": 0.010081188742942754,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:hampton_double_square_historic_district_0",
+      "score": 0.009605788605673252,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:hampton_bluffs_0",
+      "passage_index": 17,
+      "title": "Hampton Bluffs",
+      "score": 0.08113330020062261,
+      "text": "Hampton Bluffs\nThe Hampton Bluffs () are a group of three rock bluffs on the east side of Larsen Inlet, Graham Land, Antarctica. They were mapped from surveys by the Falkland Islands Dependencies Survey (FIDS) (1960–61), and were named by the UK Antarctic Place-Names Committee for Ian F.G. Hampton, an FIDS physiologist at Hope Bay in 1959 and 1960.",
+      "score_breakdown": {
+        "dense": 0.04994758621117924,
+        "graph": 0.05199397827625878,
+        "fact": 0.2537595620106426
+      }
+    },
+    {
+      "node_id": "chunk:sean_hampton_0",
+      "passage_index": 7,
+      "title": "Sean Hampton",
+      "score": 0.08061761882248038,
+      "text": "Sean Hampton\nBorn in Ocala, Florida, Hampton is the youngest of five children of a dentist father and a professional model mother. After graduating high school, Hampton enrolled at Stetson University to pursue a career in law. While in school he not only joined Sigma Nu fraternity (Delta Mu chapter), but caught onto acting. After college he married his current wife Jennifer and the two moved to Los Angeles where they currently reside.",
+      "score_breakdown": {
+        "dense": 0.050992544326733474,
+        "graph": 0.04961608059170744,
+        "fact": 0.2512459684350982
+      }
+    },
+    {
+      "node_id": "chunk:hampton_double_square_historic_district_0",
+      "passage_index": 6,
+      "title": "Hampton Double Square Historic District",
+      "score": 0.07974455631142602,
+      "text": "Hampton Double Square Historic District\nThe Hampton Double Square Historic District is a historic district located in Hampton, Iowa, United States. It has been listed on the National Register of Historic Places since 2003. At the time of its nomination it contained 43 resources, which included 28 contributing buildings, two contributing sites, 10 non-contributing buildings, one non-contributing site, one non-contributing structures, and on non-contributing object. The town of Hampton was laid out by H.P. Allen, who was the county surveyor, in June 1856. The original plat was eight blocks by eight blocks in the shape of an “L”. Near the center of the “L” was the two-block, or double, square. While many county seats in Iowa have a courthouse square, the double square is a rarity. Four double squares were platted in Iowa, but only those in Hampton and Sidney survived their early period of development. Estherville's square was platted as a four-block square, but its development created a double square instead. Hampton has the only symmetrical double square plan in the state. The double square exemplifies the two primary functions of a public square,",
+      "score_breakdown": {
+        "dense": 0.049970970503417936,
+        "graph": 0.049834475552478524,
+        "fact": 0.24873453245868402
+      }
+    },
+    {
+      "node_id": "chunk:ocala_florida_0",
+      "passage_index": 10,
+      "title": "Ocala, Florida",
+      "score": 0.0795298026440441,
+      "text": "Ocala, Florida\nOcala (/ oʊ ˈkælə / oh - KAL - ə) is a city located in Northern Florida. As of the 2013 census, its population, estimated by the United States Census Bureau, was 57,468, making it the 45th most populated city in Florida.",
+      "score_breakdown": {
+        "dense": 0.049904025310428334,
+        "graph": 0.050478660529907474,
+        "fact": 0.24625993709557523
+      }
+    },
+    {
+      "node_id": "chunk:south_beach_florida_0",
+      "passage_index": 15,
+      "title": "South Beach, Florida",
+      "score": 0.04162907088894978,
+      "text": "South Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States. The population was 3,501 at the 2010 census. It is ranked tenth in Florida locations by per capita income as of 2010.",
+      "score_breakdown": {
+        "dense": 0.05002127538059192,
+        "graph": 0.04705789809874739,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tamiami_florida_0",
+      "passage_index": 5,
+      "title": "Tamiami, Florida",
+      "score": 0.04162719016300148,
+      "text": "Tamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 55,271 at the 2010 census.",
+      "score_breakdown": {
+        "dense": 0.05005988205958756,
+        "graph": 0.04698085010076107,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ridgecrest_florida_0",
+      "passage_index": 2,
+      "title": "Ridgecrest, Florida",
+      "score": 0.04157975093840317,
+      "text": "Ridgecrest, Florida\nRidgecrest is a census-designated place (CDP) in Pinellas County, Florida, United States. The population was 2,558 at the 2010 census.",
+      "score_breakdown": {
+        "dense": 0.04997411200351031,
+        "graph": 0.04697996445490834,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ives_estates_florida_0",
+      "passage_index": 11,
+      "title": "Ives Estates, Florida",
+      "score": 0.04157960929669966,
+      "text": "Ives Estates, Florida\nIves Estates is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 17,586 at the 2000 census.",
+      "score_breakdown": {
+        "dense": 0.04997205244583428,
+        "graph": 0.04698326817163602,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:carver_ranches_west_park_florida_0",
+      "passage_index": 14,
+      "title": "Carver Ranches, West Park, Florida",
+      "score": 0.04157705135199588,
+      "text": "Carver Ranches, West Park, Florida\nCarver Ranches was a census-designated place (CDP) in Broward County, Florida, United States. The population was 4,299 at the 2000 census.",
+      "score_breakdown": {
+        "dense": 0.04998059700244571,
+        "graph": 0.04695907666883578,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:gladeview_florida_0",
+      "passage_index": 8,
+      "title": "Gladeview, Florida",
+      "score": 0.04157109918865892,
+      "text": "Gladeview, Florida\nGladeview is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 11,535 at the 2010 census.",
+      "score_breakdown": {
+        "dense": 0.04995661399124754,
+        "graph": 0.04698320497824259,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:florida",
+        "score": 0.11650709576820963,
+        "text": "Florida",
+        "metadata": {
+          "canonical_name": "Florida",
+          "aliases": [
+            "Florida"
+          ],
+          "surface_forms": [
+            "Florida"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ocala",
+        "score": 0.0781055997933518,
+        "text": "Ocala",
+        "metadata": {
+          "canonical_name": "Ocala",
+          "aliases": [
+            "Ocala"
+          ],
+          "surface_forms": [
+            "Ocala"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ocala_florida",
+        "score": 0.07346218672699778,
+        "text": "Ocala Florida",
+        "metadata": {
+          "canonical_name": "Ocala Florida",
+          "aliases": [
+            "Ocala Florida"
+          ],
+          "surface_forms": [
+            "Ocala Florida"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:hampton",
+        "score": 0.04503801662368036,
+        "text": "Hampton",
+        "metadata": {
+          "canonical_name": "Hampton",
+          "aliases": [
+            "Hampton"
+          ],
+          "surface_forms": [
+            "Hampton"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:northern_florida",
+        "score": 0.04141250903569614,
+        "text": "Northern Florida",
+        "metadata": {
+          "canonical_name": "Northern Florida",
+          "aliases": [
+            "NF",
+            "Northern Florida"
+          ],
+          "surface_forms": [
+            "NF",
+            "Northern Florida"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_hampton_bluffs",
+        "score": 0.0377838169284261,
+        "text": "Hampton Bluffs",
+        "metadata": {
+          "canonical_name": "Hampton Bluffs",
+          "aliases": [
+            "HB",
+            "Hampton Bluffs",
+            "Hope Bay"
+          ],
+          "surface_forms": [
+            "HB",
+            "Hampton Bluffs",
+            "Hope Bay"
+          ],
+          "title_anchor": "Hampton Bluffs"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:hampton_bluffs_0_0_the_hampton_bluffs_are_a_group_of_three_rock_bluffs_on_the_east_side_of_larse",
+        "score": 0.05167317623466004,
+        "text": "The Hampton Bluffs () are a group of three rock bluffs on the east side of Larsen Inlet, Graham Land, Antarctica.",
+        "metadata": {
+          "title": "Hampton Bluffs",
+          "chunk_id": "chunk:hampton_bluffs_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Hampton Bluffs",
+              "relation": "are located in",
+              "tail": "Larsen Inlet"
+            },
+            {
+              "head": "Hampton Bluffs",
+              "relation": "are part of",
+              "tail": "Graham Land"
+            },
+            {
+              "head": "Larsen Inlet",
+              "relation": "is in",
+              "tail": "Antarctica"
+            }
+          ],
+          "entities": [
+            "Hampton Bluffs",
+            "Larsen Inlet",
+            "Graham Land",
+            "Antarctica"
+          ],
+          "entity_ids": [
+            "entity:antarctica",
+            "entity:graham_land",
+            "entity:larsen_inlet",
+            "entity:title_anchor_hampton_bluffs"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ocala_florida_0_0_ocala_o_k_l_oh_kal_is_a_city_located_in_northern_florida",
+        "score": 0.036743930172902936,
+        "text": "Ocala (/ oʊ ˈkælə / oh - KAL - ə) is a city located in Northern Florida.",
+        "metadata": {
+          "title": "Ocala, Florida",
+          "chunk_id": "chunk:ocala_florida_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Ocala",
+              "relation": "is located in",
+              "tail": "Northern Florida"
+            }
+          ],
+          "entities": [
+            "Ocala",
+            "Northern Florida"
+          ],
+          "entity_ids": [
+            "entity:northern_florida",
+            "entity:ocala"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hampton_double_square_historic_district_0_0_the_hampton_double_square_historic_district_is_a_historic_district_located_i",
+        "score": 0.032587584634446665,
+        "text": "The Hampton Double Square Historic District is a historic district located in Hampton, Iowa, United States.",
+        "metadata": {
+          "title": "Hampton Double Square Historic District",
+          "chunk_id": "chunk:hampton_double_square_historic_district_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Hampton Double Square Historic District",
+              "relation": "is located in",
+              "tail": "Hampton Iowa United States"
+            }
+          ],
+          "entities": [
+            "Hampton Double Square Historic District",
+            "Hampton Iowa United States"
+          ],
+          "entity_ids": [
+            "entity:hampton_iowa_united_states",
+            "entity:title_anchor_hampton_double_square_historic_district"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:sean_hampton_0_0_born_in_ocala_florida_hampton_is_the_youngest_of_five_children_of_a_dentist_fa",
+        "score": 0.029573497784172037,
+        "text": "Born in Ocala, Florida, Hampton is the youngest of five children of a dentist father and a professional model mother.",
+        "metadata": {
+          "title": "Sean Hampton",
+          "chunk_id": "chunk:sean_hampton_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Hampton",
+              "relation": "born_in",
+              "tail": "Ocala Florida"
+            }
+          ],
+          "entities": [
+            "Hampton",
+            "Ocala Florida"
+          ],
+          "entity_ids": [
+            "entity:hampton",
+            "entity:ocala_florida"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:hampton_bluffs_0",
+        "score": 0.014916173261954302,
+        "text": "Hampton Bluffs\nThe Hampton Bluffs () are a group of three rock bluffs on the east side of Larsen Inlet, Graham Land, Antarctica. They were mapped from surveys by the Falkland Islands Dependencies Survey (FIDS) (1960–61), and were named by the UK Antarctic Place-Names Committee for Ian F.G. Hampton, an FIDS physiologist at Hope Bay in 1959 and 1960.",
+        "metadata": {
+          "title": "Hampton Bluffs",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:antarctic_place",
+            "entity:antarctica",
+            "entity:falkland_islands_dependencies_survey",
+            "entity:falkland_islands_dependencies_survey_fids",
+            "entity:fids",
+            "entity:fids_physiologist",
+            "entity:graham_land",
+            "entity:hampton",
+            "entity:ian",
+            "entity:ian_f_g",
+            "entity:larsen_inlet",
+            "entity:names_committee",
+            "entity:title_anchor_hampton_bluffs",
+            "entity:uk_antarctic_place_names_committee"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:hampton_double_square_historic_district_0",
+        "score": 0.009605788605673252,
+        "text": "Hampton Double Square Historic District\nThe Hampton Double Square Historic District is a historic district located in Hampton, Iowa, United States. It has been listed on the National Register of Historic Places since 2003. At the time of its nomination it contained 43 resources, which included 28 contributing buildings, two contributing sites, 10 non-contributing buildings, one non-contributing site, one non-contributing structures, and on non-contributing object. The town of Hampton was laid out by H.P. Allen, who was the county surveyor, in June 1856. The original plat was eight blocks by eight blocks in the shape of an “L”. Near the center of the “L” was the two-block, or double, square. While many county seats in Iowa have a courthouse square, the double square is a rarity. Four double squares were platted in Iowa, but only those in Hampton and Sidney survived their early period of development. Estherville's square was platted as a four-block square, but its development created a double square instead. Hampton has the only symmetrical double square plan in the state. The double square exemplifies the two primary functions of a public square,",
+        "metadata": {
+          "title": "Hampton Double Square Historic District",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:allen",
+            "entity:estherville_s_square",
+            "entity:four_double_squares",
+            "entity:hampton",
+            "entity:hampton_iowa_united_states",
+            "entity:historic_places",
+            "entity:iowa",
+            "entity:june_1856",
+            "entity:national_register",
+            "entity:national_register_of_historic_places",
+            "entity:near",
+            "entity:sidney",
+            "entity:title_anchor_hampton_double_square_historic_district",
+            "entity:while"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Hampton Bluffs\nHampton Bluffs\nThe Hampton Bluffs () are a group of three rock bluffs on the east side of Larsen Inlet, Graham Land, Antarctica. They were mapped from surveys by the Falkland Islands Dependencies Survey (FIDS) (1960–61), and were named by the UK Antarctic Place-Names Committee for Ian F.G. Hampton, an FIDS physiologist at Hope Bay in 1959 and 1960.\n\nSean Hampton\nSean Hampton\nBorn in Ocala, Florida, Hampton is the youngest of five children of a dentist father and a professional model mother. After graduating high school, Hampton enrolled at Stetson University to pursue a career in law. While in school he not only joined Sigma Nu fraternity (Delta Mu chapter), but caught onto acting. After college he married his current wife Jennifer and the two moved to Los Angeles where they currently reside.\n\nHampton Double Square Historic District\nHampton Double Square Historic District\nThe Hampton Double Square Historic District is a historic district located in Hampton, Iowa, United States. It has been listed on the National Register of Historic Places since 2003. At the time of its nomination it contained 43 resources, which included 28 contributing buildings, two contributing sites, 10 non-contributing buildings, one non-contributing site, one non-contributing structures, and on non-contributing object. The town of Hampton was laid out by H.P. Allen, who was the county surveyor, in June 1856. The original plat was eight blocks by eight blocks in the shape of an “L”. Near the center of the “L” was the two-block, or double, square. While many county seats in Iowa have a courthouse square, the double square is a rarity. Four double squares were platted in Iowa, but only those in Hampton and Sidney survived their early period of development. Estherville's square was platted as a four-block square, but its development created a double square instead. Hampton has the only symmetrical double square plan in the state. The double square exemplifies the two primary functions of a public square,\n\nOcala, Florida\nOcala, Florida\nOcala (/ oʊ ˈkælə / oh - KAL - ə) is a city located in Northern Florida. As of the 2013 census, its population, estimated by the United States Census Bureau, was 57,468, making it the 45th most populated city in Florida.\n\nSouth Beach, Florida\nSouth Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States. The population was 3,501 at the 2010 census. It is ranked tenth in Florida locations by per capita income as of 2010.\n\nSouth Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States.\n\nTamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States.\n\nTamiami, Florida\nTamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 55,271 at the 2010 census.\n\nRidgecrest, Florida\nRidgecrest, Florida\nRidgecrest is a census-designated place (CDP) in Pinellas County, Florida, United States. The population was 2,558 at the 2010 census.\n\nGladeview, Florida\nGladeview, Florida\nGladeview is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 11,535 at the 2010 census.\n\nLacoochee, Florida\nLacoochee, Florida\nLacoochee is a census-designated place (CDP) in Pasco County, Florida, United States. The population was 1,345 at the 2000 census.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:hampton_bluffs_0",
+        "passage_index": 17,
+        "title": "Hampton Bluffs",
+        "score": 0.08113330020062261,
+        "text": "Hampton Bluffs\nThe Hampton Bluffs () are a group of three rock bluffs on the east side of Larsen Inlet, Graham Land, Antarctica. They were mapped from surveys by the Falkland Islands Dependencies Survey (FIDS) (1960–61), and were named by the UK Antarctic Place-Names Committee for Ian F.G. Hampton, an FIDS physiologist at Hope Bay in 1959 and 1960.",
+        "score_breakdown": {
+          "dense": 0.04994758621117924,
+          "graph": 0.05199397827625878,
+          "fact": 0.2537595620106426
+        }
+      },
+      {
+        "node_id": "chunk:sean_hampton_0",
+        "passage_index": 7,
+        "title": "Sean Hampton",
+        "score": 0.08061761882248038,
+        "text": "Sean Hampton\nBorn in Ocala, Florida, Hampton is the youngest of five children of a dentist father and a professional model mother. After graduating high school, Hampton enrolled at Stetson University to pursue a career in law. While in school he not only joined Sigma Nu fraternity (Delta Mu chapter), but caught onto acting. After college he married his current wife Jennifer and the two moved to Los Angeles where they currently reside.",
+        "score_breakdown": {
+          "dense": 0.050992544326733474,
+          "graph": 0.04961608059170744,
+          "fact": 0.2512459684350982
+        }
+      },
+      {
+        "node_id": "chunk:hampton_double_square_historic_district_0",
+        "passage_index": 6,
+        "title": "Hampton Double Square Historic District",
+        "score": 0.07974455631142602,
+        "text": "Hampton Double Square Historic District\nThe Hampton Double Square Historic District is a historic district located in Hampton, Iowa, United States. It has been listed on the National Register of Historic Places since 2003. At the time of its nomination it contained 43 resources, which included 28 contributing buildings, two contributing sites, 10 non-contributing buildings, one non-contributing site, one non-contributing structures, and on non-contributing object. The town of Hampton was laid out by H.P. Allen, who was the county surveyor, in June 1856. The original plat was eight blocks by eight blocks in the shape of an “L”. Near the center of the “L” was the two-block, or double, square. While many county seats in Iowa have a courthouse square, the double square is a rarity. Four double squares were platted in Iowa, but only those in Hampton and Sidney survived their early period of development. Estherville's square was platted as a four-block square, but its development created a double square instead. Hampton has the only symmetrical double square plan in the state. The double square exemplifies the two primary functions of a public square,",
+        "score_breakdown": {
+          "dense": 0.049970970503417936,
+          "graph": 0.049834475552478524,
+          "fact": 0.24873453245868402
+        }
+      },
+      {
+        "node_id": "chunk:ocala_florida_0",
+        "passage_index": 10,
+        "title": "Ocala, Florida",
+        "score": 0.0795298026440441,
+        "text": "Ocala, Florida\nOcala (/ oʊ ˈkælə / oh - KAL - ə) is a city located in Northern Florida. As of the 2013 census, its population, estimated by the United States Census Bureau, was 57,468, making it the 45th most populated city in Florida.",
+        "score_breakdown": {
+          "dense": 0.049904025310428334,
+          "graph": 0.050478660529907474,
+          "fact": 0.24625993709557523
+        }
+      },
+      {
+        "node_id": "chunk:south_beach_florida_0",
+        "passage_index": 15,
+        "title": "South Beach, Florida",
+        "score": 0.04162907088894978,
+        "text": "South Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States. The population was 3,501 at the 2010 census. It is ranked tenth in Florida locations by per capita income as of 2010.",
+        "score_breakdown": {
+          "dense": 0.05002127538059192,
+          "graph": 0.04705789809874739,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tamiami_florida_0",
+        "passage_index": 5,
+        "title": "Tamiami, Florida",
+        "score": 0.04162719016300148,
+        "text": "Tamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 55,271 at the 2010 census.",
+        "score_breakdown": {
+          "dense": 0.05005988205958756,
+          "graph": 0.04698085010076107,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ridgecrest_florida_0",
+        "passage_index": 2,
+        "title": "Ridgecrest, Florida",
+        "score": 0.04157975093840317,
+        "text": "Ridgecrest, Florida\nRidgecrest is a census-designated place (CDP) in Pinellas County, Florida, United States. The population was 2,558 at the 2010 census.",
+        "score_breakdown": {
+          "dense": 0.04997411200351031,
+          "graph": 0.04697996445490834,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ives_estates_florida_0",
+        "passage_index": 11,
+        "title": "Ives Estates, Florida",
+        "score": 0.04157960929669966,
+        "text": "Ives Estates, Florida\nIves Estates is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 17,586 at the 2000 census.",
+        "score_breakdown": {
+          "dense": 0.04997205244583428,
+          "graph": 0.04698326817163602,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:carver_ranches_west_park_florida_0",
+        "passage_index": 14,
+        "title": "Carver Ranches, West Park, Florida",
+        "score": 0.04157705135199588,
+        "text": "Carver Ranches, West Park, Florida\nCarver Ranches was a census-designated place (CDP) in Broward County, Florida, United States. The population was 4,299 at the 2000 census.",
+        "score_breakdown": {
+          "dense": 0.04998059700244571,
+          "graph": 0.04695907666883578,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:gladeview_florida_0",
+        "passage_index": 8,
+        "title": "Gladeview, Florida",
+        "score": 0.04157109918865892,
+        "text": "Gladeview, Florida\nGladeview is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 11,535 at the 2010 census.",
+        "score_breakdown": {
+          "dense": 0.04995661399124754,
+          "graph": 0.04698320497824259,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is Sean Hampton's birth place?",
+        "resolved_sub_question": "What is Sean Hampton's birth place?",
+        "sentence_id": "sentence:south_beach_florida_0_0_south_beach_is_a_census_designated_place_cdp_on_orchid_island_in_indian_river",
+        "sentence": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States.",
+        "score": 0.437878,
+        "source_title": "South Beach, Florida",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not contain any information about Sean Hampton or his birthplace.",
+        "hop_raw_response": "The provided evidence does not contain any information about Sean Hampton or his birthplace.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "South Beach, Florida",
+            "text": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States."
+          },
+          {
+            "title": "South Beach, Florida",
+            "text": "South Beach, Florida\nSouth Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States. The population was 3,501 at the 2010 census. It is ranked tenth in Florida locations by per capita income as of 2010."
+          },
+          {
+            "title": "Tamiami, Florida",
+            "text": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States."
+          }
+        ]
+      },
+      {
+        "sub_question": "Is Sean Hampton's birth place located in the state of Florida?",
+        "resolved_sub_question": "Is Sean Hampton's birth place located in the state of Florida?",
+        "sentence_id": "sentence:tamiami_florida_0_0_tamiami_is_a_census_designated_place_cdp_in_miami_dade_county_florida_united",
+        "sentence": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States.",
+        "score": 0.34520000000000006,
+        "source_title": "Tamiami, Florida",
+        "hop_answer": "Yes",
+        "hop_thought": "Sean Hampton's birthplace is South Beach, Florida, and South Beach is a census-designated place in Florida, United States.",
+        "hop_raw_response": "Sean Hampton's birthplace is South Beach, Florida, and South Beach is a census-designated place in Florida, United States.\nAnswer: Yes",
+        "evidence_passages": [
+          {
+            "title": "Tamiami, Florida",
+            "text": "Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States."
+          },
+          {
+            "title": "Tamiami, Florida",
+            "text": "Tamiami, Florida\nTamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States. The population was 55,271 at the 2010 census."
+          },
+          {
+            "title": "South Beach, Florida",
+            "text": "South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is Sean Hampton's birth place? (source: South Beach, Florida)\n2. Is Sean Hampton's birth place located in the state of Florida? => Yes (source: Tamiami, Florida)\n\nFact hints:\n- Hampton born_in Ocala Florida\n- Ocala is located in Northern Florida\n\nWikipedia Title: Sean Hampton\nSean Hampton Born in Ocala, Florida, Hampton is the youngest of five children of a dentist father and a professional model mother. After college he married his current wife Jennifer and the two moved to Los Angeles where they currently reside.\n\nWikipedia Title: Ocala, Florida\nOcala, Florida Ocala (/ oʊ ˈkælə / oh - KAL - ə) is a city located in Northern Florida. As of the 2013 census, its population, estimated by the United States Census Bureau, was 57,468, making it the 45th most populated city in Florida.\n\nWikipedia Title: Tamiami, Florida\nThe population was 55,271 at the 2010 census. Tamiami, Florida Tamiami is a census-designated place (CDP) in Miami-Dade County, Florida, United States.\n\nWikipedia Title: South Beach, Florida\nThe population was 3,501 at the 2010 census. South Beach, Florida South Beach is a census-designated place (CDP) on Orchid Island in Indian River County, Florida, United States.\n\nWikipedia Title: Ridgecrest, Florida\nThe population was 2,558 at the 2010 census. Ridgecrest, Florida Ridgecrest is a census-designated place (CDP) in Pinellas County, Florida, United States.\n\nQuestion: Where is Sean Hampton's birth place in the state of Florida?\nDraft Answer: Ocala\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The passage states that Sean Hampton was born in Ocala, Florida, and another passage confirms that Ocala is located in Northern Florida.",
+  "predicted_answer": "Ocala",
+  "qa_raw_response": "{\n  \"thought\": \"The passage states that Sean Hampton was born in Ocala, Florida, and another passage confirms that Ocala is located in Northern Florida.\",\n  \"answer\": \"Ocala\",\n  \"support\": \"Born in Ocala, Florida\"\n}"
+}

@@ -1,0 +1,1018 @@
+{
+  "query": "Why did Roncalli leave the city where the creator of Flora died?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Roncalli"
+  ],
+  "raw_query_entities": [
+    "Roncalli",
+    "Flora"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Roncalli",
+      "node_id": "entity:roncalli",
+      "resolved_text": "Roncalli",
+      "score": 0.7989000000000002,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.4,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.7989000000000002,
+      "confident": true
+    },
+    {
+      "mention": "Flora",
+      "node_id": "entity:flora",
+      "resolved_text": "Flora",
+      "score": 0.79,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.775,
+      "score_margin": 0.08119999999999994,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Where did the creator of Flora die?",
+    "Why did Roncalli leave this city?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:roncalli",
+      "score": 1.0027749484072308,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+      "score": 0.30475581289275205,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:flora",
+      "score": 0.30475581289275205,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+      "score": 0.2801460928192656,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:flora_gomes",
+      "score": 0.2777372025894328,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mortu_nega",
+      "score": 0.25772744956490695,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_flora_titian",
+      "score": 0.25607457055404076,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:florence",
+      "score": 0.24772895539444134,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gomes",
+      "score": 0.23772518966842776,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:venice",
+      "score": 0.23273899537881274,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:uffizi_gallery",
+      "score": 0.19523038523446487,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:letter_from_pacelli",
+      "score": 0.17062892290447929,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:flora_painted_by_titian_sentence_flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_da",
+      "text": "Flora painted by Titian",
+      "head_id": "entity:title_anchor_flora_titian",
+      "tail_id": "entity:title_anchor_flora_titian",
+      "sentence_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+      "chunk_id": "chunk:flora_titian_0",
+      "document_index": 13,
+      "score": 0.3106295772613266
+    },
+    {
+      "fact_id": "fact:mortu_nega_directed_by_flora_gomes_sentence_mortu_nega_0_0_mortu_nega_english_death_denied_or_those_whom_death_refused_i",
+      "text": "Mortu Nega directed_by Flora Gomes",
+      "head_id": "entity:title_anchor_mortu_nega",
+      "tail_id": "entity:flora_gomes",
+      "sentence_id": "sentence:mortu_nega_0_0_mortu_nega_english_death_denied_or_those_whom_death_refused_is_a_1988_his",
+      "chunk_id": "chunk:mortu_nega_0",
+      "document_index": 1,
+      "score": 0.2756268472760615
+    },
+    {
+      "fact_id": "fact:uffizi_gallery_located_in_florence_sentence_flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painte",
+      "text": "Uffizi Gallery located in Florence",
+      "head_id": "entity:uffizi_gallery",
+      "tail_id": "entity:florence",
+      "sentence_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+      "chunk_id": "chunk:flora_titian_0",
+      "document_index": 13,
+      "score": 0.24562751802917993
+    },
+    {
+      "fact_id": "fact:mortu_nega_was_directed_by_gomes_sentence_mortu_nega_0_1_mortu_nega_was_gomes_first_feature_length_film",
+      "text": "Mortu Nega was directed by Gomes",
+      "head_id": "entity:title_anchor_mortu_nega",
+      "tail_id": "entity:gomes",
+      "sentence_id": "sentence:mortu_nega_0_1_mortu_nega_was_gomes_first_feature_length_film",
+      "chunk_id": "chunk:mortu_nega_0",
+      "document_index": 1,
+      "score": 0.2356239524103305
+    },
+    {
+      "fact_id": "fact:roncalli_left_venice_sentence_pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_p",
+      "text": "Roncalli left Venice",
+      "head_id": "entity:roncalli",
+      "tail_id": "entity:venice",
+      "sentence_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+      "chunk_id": "chunk:pope_john_xxiii_0",
+      "document_index": 4,
+      "score": 0.23063785710839738
+    },
+    {
+      "fact_id": "fact:roncalli_recalled_letter_from_pacelli_sentence_pope_john_xxiii_0_4_he_was_sent_a_letter_by_cardinal_eugenio_pacelli_and_",
+      "text": "Roncalli recalled letter from Pacelli",
+      "head_id": "entity:roncalli",
+      "tail_id": "entity:letter_from_pacelli",
+      "sentence_id": "sentence:pope_john_xxiii_0_4_he_was_sent_a_letter_by_cardinal_eugenio_pacelli_and_roncalli_later_recalled_th",
+      "chunk_id": "chunk:pope_john_xxiii_0",
+      "document_index": 11,
+      "score": 0.17062892290447929
+    },
+    {
+      "fact_id": "fact:flora_held_at_uffizi_gallery_sentence_flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titi",
+      "text": "Flora held at Uffizi Gallery",
+      "head_id": "entity:title_anchor_flora_titian",
+      "tail_id": "entity:uffizi_gallery",
+      "sentence_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+      "chunk_id": "chunk:flora_titian_0",
+      "document_index": 13,
+      "score": 0.14063037770922698
+    },
+    {
+      "fact_id": "fact:flora_sssr_is_also_known_as_flora_of_the_u_s_s_r_sentence_vladimir_leontyevich_komarov_0_0_until_his_death_in_1945_he_wa",
+      "text": "Flora SSSR is also known as Flora of the U S S R",
+      "head_id": "entity:flora_sssr",
+      "tail_id": "entity:flora_of_the_u_s_s_r",
+      "sentence_id": "sentence:vladimir_leontyevich_komarov_0_0_until_his_death_in_1945_he_was_senior_editor_of_the_flora_sssr_flora_of_the",
+      "chunk_id": "chunk:vladimir_leontyevich_komarov_0",
+      "document_index": 3,
+      "score": 0.13062704452734364
+    }
+  ],
+  "bridge_entities": [
+    "Venice",
+    "Pius XII",
+    "Vatican",
+    "conclave in Rome",
+    "return train ticket to Venice",
+    "Rome",
+    "attend the conclave in Rome"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where did the creator of Flora die?",
+      "resolved_sub_question": "Where did the creator of Flora die?",
+      "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+      "score": 0.5307933333333335,
+      "source_title": "Pope John XXIII",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question asks about the death location of the creator of Flora, but the provided evidence only discusses events related to Pope John XXIII and does not mention anyone named Flora or a creator of Flora. There is no information in the given text to determine where such a person died.",
+      "hop_raw_response": "The question asks about the death location of the creator of Flora, but the provided evidence only discusses events related to Pope John XXIII and does not mention anyone named Flora or a creator of Flora. There is no information in the given text to determine where such a person died.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Pope John XXIII",
+          "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        }
+      ]
+    },
+    {
+      "sub_question": "Why did Roncalli leave this city?",
+      "resolved_sub_question": "Why did Roncalli leave this city?",
+      "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+      "score": 0.4766133333333334,
+      "source_title": "Pope John XXIII",
+      "hop_answer": "to attend the conclave in Rome",
+      "hop_thought": "Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.",
+      "hop_raw_response": "Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome",
+      "evidence_passages": [
+        {
+          "title": "Pope John XXIII",
+          "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:roncalli",
+      "score": 0.12020973139130885,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+      "score": 0.07199492428525792,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_flora_titian",
+      "score": 0.050092878345224974,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mortu_nega",
+      "score": 0.04198053840832384,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+      "score": 0.03971554250571112,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:flora_gomes",
+      "score": 0.035565976604830574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:uffizi_gallery",
+      "score": 0.03551319029596694,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+      "score": 0.03364463556350079,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:flora",
+      "score": 0.03325894473432834,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:florence",
+      "score": 0.03313134761572549,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:venice",
+      "score": 0.032695161003362574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gomes",
+      "score": 0.030217988762644216,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mortu_nega_0_0_mortu_nega_english_death_denied_or_those_whom_death_refused_is_a_1988_his",
+      "score": 0.029706520114906914,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:mortu_nega_0_1_mortu_nega_was_gomes_first_feature_length_film",
+      "score": 0.02609301356530054,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:letter_from_pacelli",
+      "score": 0.02050537911196338,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:flora_sssr",
+      "score": 0.01953758984326466,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:flora_of_the_u_s_s_r",
+      "score": 0.01953758984326466,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:pope_john_xxiii_0_4_he_was_sent_a_letter_by_cardinal_eugenio_pacelli_and_roncalli_later_recalled_th",
+      "score": 0.0191268788332898,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:vladimir_leontyevich_komarov_0_0_until_his_death_in_1945_he_was_senior_editor_of_the_flora_sssr_flora_of_the",
+      "score": 0.018483024740865838,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_martyrdom_of_saint_lawrence_titian_0_0_the_martyrdom_of_saint_lawrence_is_a_1558_painting_by_titian_now_in_the_churc",
+      "score": 0.017938562278721655,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:flora_titian_0",
+      "passage_index": 13,
+      "title": "Flora (Titian)",
+      "score": 0.08352676226741784,
+      "text": "Flora (Titian)\nFlora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.",
+      "score_breakdown": {
+        "dense": 0.05035197439853175,
+        "graph": 0.051846170709502974,
+        "fact": 0.26852883423582996
+      }
+    },
+    {
+      "node_id": "chunk:mortu_nega_0",
+      "passage_index": 1,
+      "title": "Mortu Nega",
+      "score": 0.08172067334484259,
+      "text": "Mortu Nega\nMortu Nega (English: \"Death Denied\" or \"Those Whom Death Refused\") is a 1988 historic film by Flora Gomes, a director from Guinea-Bissau. \"Mortu Nega\" was Gomes' first feature-length film. This is the first docufiction, more precisely the first ethnofiction, from his country that shows, in an expressive and touching way, the experiences of the Guinea-Bissau War of Independence. This film blends contemporary history with mythology, in this case African mythology. \"Mortu Nega\" was the first film produced in independent Guinea-Bissau. Its world premiere was at the Venice Film Festival on August 29, 1988.",
+      "score_breakdown": {
+        "dense": 0.04994550462264428,
+        "graph": 0.05118939156064761,
+        "fact": 0.2592921888946264
+      }
+    },
+    {
+      "node_id": "chunk:pope_john_xxiii_0",
+      "passage_index": 11,
+      "title": "Pope John XXIII",
+      "score": 0.08032886051607119,
+      "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff.",
+      "score_breakdown": {
+        "dense": 0.05026757446990743,
+        "graph": 0.05166294412339656,
+        "fact": 0.2478854088040209
+      }
+    },
+    {
+      "node_id": "chunk:vladimir_leontyevich_komarov_0",
+      "passage_index": 3,
+      "title": "Vladimir Leontyevich Komarov",
+      "score": 0.0756264608511694,
+      "text": "Vladimir Leontyevich Komarov\nUntil his death in 1945, he was senior editor of the \"Flora SSSR\" (Flora of the U.S.S.R.), in full comprising 30 volumes published between 1934–1960. He was elected a corresponding member of the Russian Academy of Sciences in 1914 and its full member in 1920. He served as President of the Academy of Sciences of the USSR in 1936-1945.",
+      "score_breakdown": {
+        "dense": 0.05002920854535163,
+        "graph": 0.04822120313799199,
+        "fact": 0.22429356806552272
+      }
+    },
+    {
+      "node_id": "chunk:the_martyrdom_of_saint_lawrence_titian_0",
+      "passage_index": 5,
+      "title": "The Martyrdom of Saint Lawrence (Titian)",
+      "score": 0.04189538824156802,
+      "text": "The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.",
+      "score_breakdown": {
+        "dense": 0.049872939007589934,
+        "graph": 0.048217572624645176,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jack_london_1",
+      "passage_index": 8,
+      "title": "Jack London",
+      "score": 0.04165637423796655,
+      "text": "Jack London\nthat in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle of June 4, 1875, Chaney demanded that she have an abortion. When she refused, he disclaimed responsibility for the child. In desperation, she shot herself. She was not seriously wounded, but she was temporarily deranged. After giving birth, Flora turned the baby over for care to Virginia Prentiss, an African-American woman and former slave. She was a major maternal figure throughout London's life. Late in 1876, Flora Wellman married John London, a partially disabled Civil War veteran, and brought her baby John, later known as Jack, to live with the newly married couple. The family moved around the San Francisco Bay Area before settling in Oakland, where London completed public grade school.",
+      "score_breakdown": {
+        "dense": 0.050172623953812785,
+        "graph": 0.046871436877898395,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jack_london_0",
+      "passage_index": 8,
+      "title": "Jack London",
+      "score": 0.0416253934574123,
+      "text": "Jack London\nJack London's mother, Flora Wellman, was the fifth and youngest child of Pennsylvania Canal builder Marshall Wellman and his first wife, Eleanor Garrett Jones. Marshall Wellman was descended from Thomas Wellman, an early Puritan settler in the Massachusetts Bay Colony. Flora left Ohio and moved to the Pacific coast when her father remarried after her mother died. In San Francisco, Flora worked as a music teacher and spiritualist, claiming to channel the spirit of a Sauk chief, Black Hawk.Biographer Clarice Stasz and others believe London's father was astrologer William Chaney. Flora Wellman was living with Chaney in San Francisco when she became pregnant. Whether Wellman and Chaney were legally married is unknown. Most San Francisco civil records were destroyed by the extensive fires that followed the 1906 earthquake; nobody knows what name appeared on her son's birth certificate. Stasz notes that in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle",
+      "score_breakdown": {
+        "dense": 0.05007372797960042,
+        "graph": 0.04694947689544023,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:flora_louisiana_0",
+      "passage_index": 16,
+      "title": "Flora, Louisiana",
+      "score": 0.04159438905237965,
+      "text": "Flora, Louisiana\nFlora is an unincorporated community in Natchitoches Parish, Louisiana, United States. It is located near the intersection of Louisiana highways 120 and 478, south of Natchitoches.",
+      "score_breakdown": {
+        "dense": 0.05008130700702004,
+        "graph": 0.04683223399506209,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:flora_l_thornton_0",
+      "passage_index": 18,
+      "title": "Flora L. Thornton",
+      "score": 0.04159145747581354,
+      "text": "Flora L. Thornton\nFlora Laney Thornton (November 1, 1913 – May 7, 2010) was an American Broadway actress and philanthropist from Los Angeles, California.",
+      "score_breakdown": {
+        "dense": 0.05012217062527585,
+        "graph": 0.046747545439706065,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:flora_shaw_lady_lugard_0",
+      "passage_index": 10,
+      "title": "Flora Shaw, Lady Lugard",
+      "score": 0.04158114963800148,
+      "text": "Flora Shaw, Lady Lugard\nFlora Louise Shaw, DBE (born 19 December 1852 -- 25 January 1929), was a British journalist and writer. She is credited with having coined the name ``Nigeria ''.",
+      "score_breakdown": {
+        "dense": 0.050101005877957204,
+        "graph": 0.046751988017083385,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:roncalli",
+        "score": 0.12020973139130885,
+        "text": "Roncalli",
+        "metadata": {
+          "canonical_name": "Roncalli",
+          "aliases": [
+            "Roncalli"
+          ],
+          "surface_forms": [
+            "Roncalli"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_flora_titian",
+        "score": 0.050092878345224974,
+        "text": "Flora (Titian)",
+        "metadata": {
+          "canonical_name": "Flora (Titian)",
+          "aliases": [
+            "Flora",
+            "Flora Titian",
+            "Titian"
+          ],
+          "surface_forms": [
+            "Flora",
+            "Titian"
+          ],
+          "title_anchor": "Flora (Titian)"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_mortu_nega",
+        "score": 0.04198053840832384,
+        "text": "Mortu Nega",
+        "metadata": {
+          "canonical_name": "Mortu Nega",
+          "aliases": [
+            "MN",
+            "Mortu Nega"
+          ],
+          "surface_forms": [
+            "MN",
+            "Mortu Nega"
+          ],
+          "title_anchor": "Mortu Nega"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+        "score": 0.03971554250571112,
+        "text": "The Martyrdom of Saint Lawrence (Titian)",
+        "metadata": {
+          "canonical_name": "The Martyrdom of Saint Lawrence (Titian)",
+          "aliases": [
+            "MOSL",
+            "Martyrdom of Saint Lawrence",
+            "Martyrdom of Saint Lawrence Titian",
+            "Titian"
+          ],
+          "surface_forms": [
+            "MOSL",
+            "Martyrdom of Saint Lawrence",
+            "Titian"
+          ],
+          "title_anchor": "The Martyrdom of Saint Lawrence (Titian)"
+        }
+      },
+      {
+        "node_id": "entity:flora_gomes",
+        "score": 0.035565976604830574,
+        "text": "Flora Gomes",
+        "metadata": {
+          "canonical_name": "Flora Gomes",
+          "aliases": [
+            "FG",
+            "Flora Gomes"
+          ],
+          "surface_forms": [
+            "FG",
+            "Flora Gomes"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:flora_titian_0_0_flora_is_an_oil_painting_by_italian_late_renaissance_painter_titian_dated_to_ar",
+        "score": 0.07199492428525792,
+        "text": "Flora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.",
+        "metadata": {
+          "title": "Flora (Titian)",
+          "chunk_id": "chunk:flora_titian_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Flora",
+              "relation": "painted by",
+              "tail": "Titian"
+            },
+            {
+              "head": "Titian",
+              "relation": "is a",
+              "tail": "Italian late Renaissance painter"
+            },
+            {
+              "head": "Flora",
+              "relation": "held at",
+              "tail": "Uffizi Gallery"
+            },
+            {
+              "head": "Uffizi Gallery",
+              "relation": "located in",
+              "tail": "Florence"
+            }
+          ],
+          "entities": [
+            "Flora",
+            "Titian",
+            "Italian late Renaissance painter",
+            "Uffizi Gallery",
+            "Florence"
+          ],
+          "entity_ids": [
+            "entity:florence",
+            "entity:italian_late_renaissance_painter",
+            "entity:title_anchor_flora_titian",
+            "entity:uffizi_gallery"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+        "score": 0.03364463556350079,
+        "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]",
+        "metadata": {
+          "title": "Pope John XXIII",
+          "chunk_id": "chunk:pope_john_xxiii_0",
+          "sentence_index": 2,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Roncalli",
+              "relation": "left",
+              "tail": "Venice"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "went to",
+              "tail": "conclave in Rome"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "elected to succeed",
+              "tail": "Pius XII"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "arrived at",
+              "tail": "Vatican"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "had",
+              "tail": "return train ticket to Venice"
+            }
+          ],
+          "entities": [
+            "Roncalli",
+            "Venice",
+            "Rome",
+            "Pius XII",
+            "Vatican"
+          ],
+          "entity_ids": [
+            "entity:conclave_in_rome",
+            "entity:pius_xii",
+            "entity:return_train_ticket_to_venice",
+            "entity:rome",
+            "entity:roncalli",
+            "entity:vatican",
+            "entity:venice"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mortu_nega_0_0_mortu_nega_english_death_denied_or_those_whom_death_refused_is_a_1988_his",
+        "score": 0.029706520114906914,
+        "text": "Mortu Nega (English: \"Death Denied\" or \"Those Whom Death Refused\") is a 1988 historic film by Flora Gomes, a director from Guinea-Bissau.",
+        "metadata": {
+          "title": "Mortu Nega",
+          "chunk_id": "chunk:mortu_nega_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Mortu Nega",
+              "relation": "directed_by",
+              "tail": "Flora Gomes"
+            },
+            {
+              "head": "Flora Gomes",
+              "relation": "from",
+              "tail": "Guinea-Bissau"
+            }
+          ],
+          "entities": [
+            "Mortu Nega",
+            "Flora Gomes",
+            "Guinea-Bissau"
+          ],
+          "entity_ids": [
+            "entity:flora_gomes",
+            "entity:guinea_bissau",
+            "entity:title_anchor_mortu_nega"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mortu_nega_0_1_mortu_nega_was_gomes_first_feature_length_film",
+        "score": 0.02609301356530054,
+        "text": "\"Mortu Nega\" was Gomes' first feature-length film.",
+        "metadata": {
+          "title": "Mortu Nega",
+          "chunk_id": "chunk:mortu_nega_0",
+          "sentence_index": 1,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Mortu Nega",
+              "relation": "was directed by",
+              "tail": "Gomes"
+            }
+          ],
+          "entities": [
+            "Mortu Nega",
+            "Gomes"
+          ],
+          "entity_ids": [
+            "entity:gomes",
+            "entity:title_anchor_mortu_nega"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:flora_titian_0",
+        "score": 0.017697175836322496,
+        "text": "Flora (Titian)\nFlora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.",
+        "metadata": {
+          "title": "Flora (Titian)",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:florence",
+            "entity:italian_late_renaissance_painter",
+            "entity:title_anchor_flora_titian",
+            "entity:uffizi_gallery"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mortu_nega_0",
+        "score": 0.016095506855943843,
+        "text": "Mortu Nega\nMortu Nega (English: \"Death Denied\" or \"Those Whom Death Refused\") is a 1988 historic film by Flora Gomes, a director from Guinea-Bissau. \"Mortu Nega\" was Gomes' first feature-length film. This is the first docufiction, more precisely the first ethnofiction, from his country that shows, in an expressive and touching way, the experiences of the Guinea-Bissau War of Independence. This film blends contemporary history with mythology, in this case African mythology. \"Mortu Nega\" was the first film produced in independent Guinea-Bissau. Its world premiere was at the Venice Film Festival on August 29, 1988.",
+        "metadata": {
+          "title": "Mortu Nega",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:african_mythology",
+            "entity:august",
+            "entity:bissau_war",
+            "entity:flora_gomes",
+            "entity:gomes",
+            "entity:guinea",
+            "entity:guinea_bissau",
+            "entity:guinea_bissau_war_of_independence",
+            "entity:independence",
+            "entity:independent_guinea_bissau",
+            "entity:title_anchor_mortu_nega",
+            "entity:venice_film_festival"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:pope_john_xxiii_0",
+        "score": 0.014409342007981777,
+        "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff.",
+        "metadata": {
+          "title": "Pope John XXIII",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:10_february_1939",
+            "entity:11_october",
+            "entity:2_march_1939",
+            "entity:9_october_1958",
+            "entity:cardinal_eugenio_pacelli",
+            "entity:conclave_in_rome",
+            "entity:february",
+            "entity:february_1939",
+            "entity:letter_from_pacelli",
+            "entity:pacelli",
+            "entity:pacelli_s_election",
+            "entity:pius",
+            "entity:pius_xi",
+            "entity:pius_xii",
+            "entity:pope_pius_xi",
+            "entity:pope_pius_xii",
+            "entity:return_train_ticket_to_venice",
+            "entity:rome",
+            "entity:roncalli",
+            "entity:unfortunately",
+            "entity:vatican",
+            "entity:venice"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:vladimir_leontyevich_komarov_0",
+        "score": 0.0058311765376348,
+        "text": "Vladimir Leontyevich Komarov\nUntil his death in 1945, he was senior editor of the \"Flora SSSR\" (Flora of the U.S.S.R.), in full comprising 30 volumes published between 1934–1960. He was elected a corresponding member of the Russian Academy of Sciences in 1914 and its full member in 1920. He served as President of the Academy of Sciences of the USSR in 1936-1945.",
+        "metadata": {
+          "title": "Vladimir Leontyevich Komarov",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:academy",
+            "entity:flora_of_the_u_s_s_r",
+            "entity:flora_sssr",
+            "entity:president_of_the_academy_of_sciences_of_the_ussr",
+            "entity:russian_academy",
+            "entity:russian_academy_of_sciences",
+            "entity:sciences"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Flora (Titian)\nFlora (Titian)\nFlora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.\n\nMortu Nega\nMortu Nega\nMortu Nega (English: \"Death Denied\" or \"Those Whom Death Refused\") is a 1988 historic film by Flora Gomes, a director from Guinea-Bissau. \"Mortu Nega\" was Gomes' first feature-length film. This is the first docufiction, more precisely the first ethnofiction, from his country that shows, in an expressive and touching way, the experiences of the Guinea-Bissau War of Independence. This film blends contemporary history with mythology, in this case African mythology. \"Mortu Nega\" was the first film produced in independent Guinea-Bissau. Its world premiere was at the Venice Film Festival on August 29, 1988.\n\nPope John XXIII\nPope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff.\n\nVladimir Leontyevich Komarov\nVladimir Leontyevich Komarov\nUntil his death in 1945, he was senior editor of the \"Flora SSSR\" (Flora of the U.S.S.R.), in full comprising 30 volumes published between 1934–1960. He was elected a corresponding member of the Russian Academy of Sciences in 1914 and its full member in 1920. He served as President of the Academy of Sciences of the USSR in 1936-1945.\n\nThe Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.\n\nPope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.\n\nPope John XXIII\nRoncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]\n\nJacques Huber\nJacques Huber\nJacques Huber (13 October 1867 Schleitheim – 18 February 1914 Belém) was a Swiss-Brazilian botanist who did pioneering work on the flora of the Amazon from 1895 until his death. He created and organized the herbarium and arboretum in Belém, Brazil, and was director of the Museu Paraense Emílio Goeldi from 1907 until he died.\n\nJack London\nJack London\nthat in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle of June 4, 1875, Chaney demanded that she have an abortion. When she refused, he disclaimed responsibility for the child. In desperation, she shot herself. She was not seriously wounded, but she was temporarily deranged. After giving birth, Flora turned the baby over for care to Virginia Prentiss, an African-American woman and former slave. She was a major maternal figure throughout London's life. Late in 1876, Flora Wellman married John London, a partially disabled Civil War veteran, and brought her baby John, later known as Jack, to live with the newly married couple. The family moved around the San Francisco Bay Area before settling in Oakland, where London completed public grade school.\n\nJack London\nJack London\nJack London's mother, Flora Wellman, was the fifth and youngest child of Pennsylvania Canal builder Marshall Wellman and his first wife, Eleanor Garrett Jones. Marshall Wellman was descended from Thomas Wellman, an early Puritan settler in the Massachusetts Bay Colony. Flora left Ohio and moved to the Pacific coast when her father remarried after her mother died. In San Francisco, Flora worked as a music teacher and spiritualist, claiming to channel the spirit of a Sauk chief, Black Hawk.Biographer Clarice Stasz and others believe London's father was astrologer William Chaney. Flora Wellman was living with Chaney in San Francisco when she became pregnant. Whether Wellman and Chaney were legally married is unknown. Most San Francisco civil records were destroyed by the extensive fires that followed the 1906 earthquake; nobody knows what name appeared on her son's birth certificate. Stasz notes that in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle\n\nQueen Victoria\nQueen Victoria\nAt the start of her reign Victoria was popular, but her reputation suffered in an 1839 court intrigue when one of her mother's ladies-in-waiting, Lady Flora Hastings, developed an abdominal growth that was widely rumoured to be an out-of-wedlock pregnancy by Sir John Conroy. Victoria believed the rumours. She hated Conroy, and despised \"that odious Lady Flora\", because she had conspired with Conroy and the Duchess of Kent in the Kensington System. At first, Lady Flora refused to submit to a naked medical examination, until in mid-February she eventually agreed, and was found to be a virgin. Conroy, the Hastings family and the opposition Tories organised a press campaign implicating the Queen in the spreading of false rumours about Lady Flora. When Lady Flora died in July, the post-mortem revealed a large tumour on her liver that had distended her abdomen. At public appearances, Victoria was hissed and jeered as \"Mrs. Melbourne\".",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:flora_titian_0",
+        "passage_index": 13,
+        "title": "Flora (Titian)",
+        "score": 0.08352676226741784,
+        "text": "Flora (Titian)\nFlora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.",
+        "score_breakdown": {
+          "dense": 0.05035197439853175,
+          "graph": 0.051846170709502974,
+          "fact": 0.26852883423582996
+        }
+      },
+      {
+        "node_id": "chunk:mortu_nega_0",
+        "passage_index": 1,
+        "title": "Mortu Nega",
+        "score": 0.08172067334484259,
+        "text": "Mortu Nega\nMortu Nega (English: \"Death Denied\" or \"Those Whom Death Refused\") is a 1988 historic film by Flora Gomes, a director from Guinea-Bissau. \"Mortu Nega\" was Gomes' first feature-length film. This is the first docufiction, more precisely the first ethnofiction, from his country that shows, in an expressive and touching way, the experiences of the Guinea-Bissau War of Independence. This film blends contemporary history with mythology, in this case African mythology. \"Mortu Nega\" was the first film produced in independent Guinea-Bissau. Its world premiere was at the Venice Film Festival on August 29, 1988.",
+        "score_breakdown": {
+          "dense": 0.04994550462264428,
+          "graph": 0.05118939156064761,
+          "fact": 0.2592921888946264
+        }
+      },
+      {
+        "node_id": "chunk:pope_john_xxiii_0",
+        "passage_index": 11,
+        "title": "Pope John XXIII",
+        "score": 0.08032886051607119,
+        "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff.",
+        "score_breakdown": {
+          "dense": 0.05026757446990743,
+          "graph": 0.05166294412339656,
+          "fact": 0.2478854088040209
+        }
+      },
+      {
+        "node_id": "chunk:vladimir_leontyevich_komarov_0",
+        "passage_index": 3,
+        "title": "Vladimir Leontyevich Komarov",
+        "score": 0.0756264608511694,
+        "text": "Vladimir Leontyevich Komarov\nUntil his death in 1945, he was senior editor of the \"Flora SSSR\" (Flora of the U.S.S.R.), in full comprising 30 volumes published between 1934–1960. He was elected a corresponding member of the Russian Academy of Sciences in 1914 and its full member in 1920. He served as President of the Academy of Sciences of the USSR in 1936-1945.",
+        "score_breakdown": {
+          "dense": 0.05002920854535163,
+          "graph": 0.04822120313799199,
+          "fact": 0.22429356806552272
+        }
+      },
+      {
+        "node_id": "chunk:the_martyrdom_of_saint_lawrence_titian_0",
+        "passage_index": 5,
+        "title": "The Martyrdom of Saint Lawrence (Titian)",
+        "score": 0.04189538824156802,
+        "text": "The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.",
+        "score_breakdown": {
+          "dense": 0.049872939007589934,
+          "graph": 0.048217572624645176,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jack_london_1",
+        "passage_index": 8,
+        "title": "Jack London",
+        "score": 0.04165637423796655,
+        "text": "Jack London\nthat in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle of June 4, 1875, Chaney demanded that she have an abortion. When she refused, he disclaimed responsibility for the child. In desperation, she shot herself. She was not seriously wounded, but she was temporarily deranged. After giving birth, Flora turned the baby over for care to Virginia Prentiss, an African-American woman and former slave. She was a major maternal figure throughout London's life. Late in 1876, Flora Wellman married John London, a partially disabled Civil War veteran, and brought her baby John, later known as Jack, to live with the newly married couple. The family moved around the San Francisco Bay Area before settling in Oakland, where London completed public grade school.",
+        "score_breakdown": {
+          "dense": 0.050172623953812785,
+          "graph": 0.046871436877898395,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jack_london_0",
+        "passage_index": 8,
+        "title": "Jack London",
+        "score": 0.0416253934574123,
+        "text": "Jack London\nJack London's mother, Flora Wellman, was the fifth and youngest child of Pennsylvania Canal builder Marshall Wellman and his first wife, Eleanor Garrett Jones. Marshall Wellman was descended from Thomas Wellman, an early Puritan settler in the Massachusetts Bay Colony. Flora left Ohio and moved to the Pacific coast when her father remarried after her mother died. In San Francisco, Flora worked as a music teacher and spiritualist, claiming to channel the spirit of a Sauk chief, Black Hawk.Biographer Clarice Stasz and others believe London's father was astrologer William Chaney. Flora Wellman was living with Chaney in San Francisco when she became pregnant. Whether Wellman and Chaney were legally married is unknown. Most San Francisco civil records were destroyed by the extensive fires that followed the 1906 earthquake; nobody knows what name appeared on her son's birth certificate. Stasz notes that in his memoirs, Chaney refers to London's mother Flora Wellman as having been his \"wife\"; he also cites an advertisement in which Flora called herself \"Florence Wellman Chaney\".According to Flora Wellman's account, as recorded in the San Francisco Chronicle",
+        "score_breakdown": {
+          "dense": 0.05007372797960042,
+          "graph": 0.04694947689544023,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:flora_louisiana_0",
+        "passage_index": 16,
+        "title": "Flora, Louisiana",
+        "score": 0.04159438905237965,
+        "text": "Flora, Louisiana\nFlora is an unincorporated community in Natchitoches Parish, Louisiana, United States. It is located near the intersection of Louisiana highways 120 and 478, south of Natchitoches.",
+        "score_breakdown": {
+          "dense": 0.05008130700702004,
+          "graph": 0.04683223399506209,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:flora_l_thornton_0",
+        "passage_index": 18,
+        "title": "Flora L. Thornton",
+        "score": 0.04159145747581354,
+        "text": "Flora L. Thornton\nFlora Laney Thornton (November 1, 1913 – May 7, 2010) was an American Broadway actress and philanthropist from Los Angeles, California.",
+        "score_breakdown": {
+          "dense": 0.05012217062527585,
+          "graph": 0.046747545439706065,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:flora_shaw_lady_lugard_0",
+        "passage_index": 10,
+        "title": "Flora Shaw, Lady Lugard",
+        "score": 0.04158114963800148,
+        "text": "Flora Shaw, Lady Lugard\nFlora Louise Shaw, DBE (born 19 December 1852 -- 25 January 1929), was a British journalist and writer. She is credited with having coined the name ``Nigeria ''.",
+        "score_breakdown": {
+          "dense": 0.050101005877957204,
+          "graph": 0.046751988017083385,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where did the creator of Flora die?",
+        "resolved_sub_question": "Where did the creator of Flora die?",
+        "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+        "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+        "score": 0.5307933333333335,
+        "source_title": "Pope John XXIII",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question asks about the death location of the creator of Flora, but the provided evidence only discusses events related to Pope John XXIII and does not mention anyone named Flora or a creator of Flora. There is no information in the given text to determine where such a person died.",
+        "hop_raw_response": "The question asks about the death location of the creator of Flora, but the provided evidence only discusses events related to Pope John XXIII and does not mention anyone named Flora or a creator of Flora. There is no information in the given text to determine where such a person died.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Pope John XXIII",
+            "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          }
+        ]
+      },
+      {
+        "sub_question": "Why did Roncalli leave this city?",
+        "resolved_sub_question": "Why did Roncalli leave this city?",
+        "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+        "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+        "score": 0.4766133333333334,
+        "source_title": "Pope John XXIII",
+        "hop_answer": "to attend the conclave in Rome",
+        "hop_thought": "Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.",
+        "hop_raw_response": "Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome",
+        "evidence_passages": [
+          {
+            "title": "Pope John XXIII",
+            "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Pope John XXIII\nIn February 1939, he received news from his sisters that his mother was dying. On 10 February 1939, Pope Pius XI died. Roncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI. He was sent a letter by Cardinal Eugenio Pacelli, and Roncalli later recalled that it was probably the last letter Pacelli sent until his election as Pope Pius XII on 2 March 1939. Roncalli expressed happiness that Pacelli was elected, and, on radio, listened to the coronation of the new pontiff."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where did the creator of Flora die? (source: Pope John XXIII)\n2. Why did Roncalli leave this city? => to attend the conclave in Rome (source: Pope John XXIII)\n\nWikipedia Title: Pope John XXIII\nRoncalli was unable to see his mother for the end as the death of a pontiff meant that he would have to stay at his post until the election of a new pontiff. Unfortunately, she died on 20 February 1939, during the nine days of mourning for the late Pius XI.\n\nWikipedia Title: Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.\n\nWikipedia Title: Pope John XXIII\nRoncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]\n\nWikipedia Title: Jacques Huber\nHe created and organized the herbarium and arboretum in Belém, Brazil, and was director of the Museu Paraense Emílio Goeldi from 1907 until he died. Jacques Huber Jacques Huber (13 October 1867 Schleitheim – 18 February 1914 Belém) was a Swiss-Brazilian botanist who did pioneering work on the flora of the Amazon from 1895 until his death.\n\nWikipedia Title: Queen Victoria\nWhen Lady Flora died in July, the post-mortem revealed a large tumour on her liver that had distended her abdomen. Victoria believed the rumours.\n\nWikipedia Title: Jack London\nFlora left Ohio and moved to the Pacific coast when her father remarried after her mother died. Jack London Jack London's mother, Flora Wellman, was the fifth and youngest child of Pennsylvania Canal builder Marshall Wellman and his first wife, Eleanor Garrett Jones.\n\nWikipedia Title: Flora (Titian)\nFlora (Titian) Flora is an oil painting by Italian late Renaissance painter Titian, dated to around 1515 and now held at the Uffizi Gallery in Florence.\n\nWikipedia Title: Jack London\nWhen she refused, he disclaimed responsibility for the child. After giving birth, Flora turned the baby over for care to Virginia Prentiss, an African-American woman and former slave.\n\nWikipedia Title: Mortu Nega\n\"Mortu Nega\" was the first film produced in independent Guinea-Bissau. Its world premiere was at the Venice Film Festival on August 29, 1988.\n\nWikipedia Title: Vladimir Leontyevich Komarov\nHe served as President of the Academy of Sciences of the USSR in 1936-1945. He was elected a corresponding member of the Russian Academy of Sciences in 1914 and its full member in 1920.\n\nWikipedia Title: The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence (Titian) The Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.\n\nQuestion: Why did Roncalli leave the city where the creator of Flora died?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The creator of Flora, as mentioned in the context, is Titian, and the painting \"Flora\" is now held at the Uffizi Gallery in Florence. However, the passage about Roncalli leaving a city refers to Venice, not Florence. Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The creator of Flora, as mentioned in the context, is Titian, and the painting \"Flora\" is now held at the Uffizi Gallery in Florence. However, the passage about Roncalli leaving a city refers to Venice, not Florence. Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome"
+}

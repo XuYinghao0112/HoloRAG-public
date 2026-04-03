@@ -1,0 +1,1139 @@
+{
+  "query": "When was the start of the battle of the birthplace of the performer of III?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "III"
+  ],
+  "raw_query_entities": [
+    "III"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "III",
+      "node_id": "entity:richard_iii",
+      "resolved_text": "Richard III",
+      "score": 0.5346000000000001,
+      "alias_score": 0.5,
+      "relation_score": 1.0,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.2525,
+      "score_margin": 0.014200000000000101,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is the performer of III?",
+    "What is the birthplace of this performer?",
+    "What is the battle associated with this birthplace?",
+    "When did this battle start?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_iii_stanton_moore_album",
+      "score": 0.643871151678523,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:stanton_moore_s_third_studio_solo_album",
+      "score": 0.6438521828450569,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_korytsa",
+      "score": 0.3227445203195078,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:greco_italian_war_of_1940_41",
+      "score": 0.32273579199323704,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:princess_magdalena_augusta",
+      "score": 0.31873545483147975,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:anhalt_zerbst",
+      "score": 0.31873545483147975,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:war_of_1812",
+      "score": 0.26873377158272754,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:birth_of_osiris",
+      "score": 0.26309646499659595,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_new_orleans",
+      "score": 0.24574275047009722,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:fontainebleau",
+      "score": 0.24373557061227058,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:13_october_1679",
+      "score": 0.23609480485696108,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:11_october_1740",
+      "score": 0.23609480485696108,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:battle_of_korytsa_fought_during_greco_italian_war_of_1940_41_sentence_battle_of_korytsa_0_0_the_battle_of_korytsa_was_fo",
+      "text": "Battle of Korytsa fought during Greco-Italian War of 1940 41",
+      "head_id": "entity:title_anchor_battle_of_korytsa",
+      "tail_id": "entity:greco_italian_war_of_1940_41",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "chunk_id": "chunk:battle_of_korytsa_0",
+      "document_index": 8,
+      "score": 0.32074733634542496
+    },
+    {
+      "fact_id": "fact:princess_magdalena_augusta_born_in_anhalt_zerbst_sentence_princess_magdalena_augusta_of_anhalt_zerbst_0_0_princess_magda",
+      "text": "Princess Magdalena Augusta born in Anhalt-Zerbst",
+      "head_id": "entity:princess_magdalena_augusta",
+      "tail_id": "entity:anhalt_zerbst",
+      "sentence_id": "sentence:princess_magdalena_augusta_of_anhalt_zerbst_0_0_princess_magdalena_augusta_of_anhalt_zerbst_13_october_1679_11_october_1",
+      "chunk_id": "chunk:princess_magdalena_augusta_of_anhalt_zerbst_0",
+      "document_index": 4,
+      "score": 0.3167470687217379
+    },
+    {
+      "fact_id": "fact:iii_is_stanton_moore_s_third_studio_solo_album_sentence_iii_stanton_moore_album_0_0_iii_is_stanton_moore_s_third_studio_",
+      "text": "III is Stanton Moore's third studio solo album",
+      "head_id": "entity:title_anchor_iii_stanton_moore_album",
+      "tail_id": "entity:stanton_moore_s_third_studio_solo_album",
+      "sentence_id": "sentence:iii_stanton_moore_album_0_0_iii_is_stanton_moore_s_third_studio_solo_album_released_2006",
+      "chunk_id": "chunk:iii_stanton_moore_album_0",
+      "document_index": 2,
+      "score": 0.29175596652472197
+    },
+    {
+      "fact_id": "fact:battle_of_new_orleans_was_part_of_war_of_1812_sentence_battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_",
+      "text": "Battle of New Orleans was part of War of 1812",
+      "head_id": "entity:title_anchor_battle_of_new_orleans",
+      "tail_id": "entity:war_of_1812",
+      "sentence_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "chunk_id": "chunk:battle_of_new_orleans_0",
+      "document_index": 19,
+      "score": 0.2667462313936459
+    },
+    {
+      "fact_id": "fact:la_naissance_d_osiris_performed_at_fontainebleau_sentence_la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_f_te_pam",
+      "text": "La naissance d'Osiris performed at Fontainebleau",
+      "head_id": "entity:title_anchor_la_naissance_d_osiris",
+      "tail_id": "entity:fontainebleau",
+      "sentence_id": "sentence:la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_f_te_pamilie_the_birth_of_osiris_or_the_festival",
+      "chunk_id": "chunk:la_naissance_d_osiris_0",
+      "document_index": 7,
+      "score": 0.24174843761352566
+    },
+    {
+      "fact_id": "fact:town_of_kor_located_in_southern_albania_sentence_battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco",
+      "text": "town of Kor located in southern Albania",
+      "head_id": "entity:town_of_kor",
+      "tail_id": "entity:southern_albania",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "chunk_id": "chunk:battle_of_korytsa_0",
+      "document_index": 8,
+      "score": 0.22674515304009596
+    },
+    {
+      "fact_id": "fact:battle_of_new_orleans_occurred_on_december_14_1814_to_january_18_1815_sentence_battle_of_new_orleans_0_0_the_battle_of_n",
+      "text": "Battle of New Orleans occurred on December 14 1814 to January 18 1815",
+      "head_id": "entity:title_anchor_battle_of_new_orleans",
+      "tail_id": "entity:december_14_1814_to_january_18_1815",
+      "sentence_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "chunk_id": "chunk:battle_of_new_orleans_0",
+      "document_index": 19,
+      "score": 0.22074765971228205
+    },
+    {
+      "fact_id": "fact:la_naissance_d_osiris_first_performed_on_12_october_1754_sentence_la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_",
+      "text": "La naissance d'Osiris first performed on 12 October 1754",
+      "head_id": "entity:title_anchor_la_naissance_d_osiris",
+      "tail_id": "entity:12_october_1754",
+      "sentence_id": "sentence:la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_f_te_pamilie_the_birth_of_osiris_or_the_festival",
+      "chunk_id": "chunk:la_naissance_d_osiris_0",
+      "document_index": 7,
+      "score": 0.19674567071413424
+    }
+  ],
+  "bridge_entities": [
+    "Stanton Moore's third studio solo album",
+    "Battle of Korytsa",
+    "Greco-Italian War of 1940 41",
+    "town of Kor",
+    "southern Albania",
+    "Italian 9th Army"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the performer of III?",
+      "resolved_sub_question": "Who is the performer of III?",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+      "score": 0.4618189207042695,
+      "source_title": "Battle of Korytsa",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question seems to be misinterpreting the context. In the given text, \"III\" refers to the Greek III Army Corps, not a performer.",
+      "hop_raw_response": "The question seems to be misinterpreting the context. In the given text, \"III\" refers to the Greek III Army Corps, not a performer.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Battle of Korytsa",
+          "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "Battle of Korytsa",
+          "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "Modern history",
+          "text": "In England the modern period is often dated to the start of the Tudor period with the victory of Henry VII over Richard III at the Battle of Bosworth in 1485."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the birthplace of this performer?",
+      "resolved_sub_question": "What is the birthplace of this performer?",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+      "score": 0.4345866321577088,
+      "source_title": "Battle of Korytsa",
+      "hop_answer": "Unknown",
+      "hop_thought": "The performer of III is Stanton Moore, and his birthplace is not mentioned in the given evidence.",
+      "hop_raw_response": "The performer of III is Stanton Moore, and his birthplace is not mentioned in the given evidence.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Battle of Korytsa",
+          "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "Battle of Korytsa",
+          "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "III (Stanton Moore album)",
+          "text": "III is Stanton Moore's third studio solo album released 2006."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the battle associated with this birthplace?",
+      "resolved_sub_question": "What is the battle associated with this birthplace?",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+      "score": 0.4681047210841066,
+      "source_title": "Battle of Korytsa",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question seems to be mixing information from different contexts. The performer of the album \"III\" is Stanton Moore, but his birthplace is not mentioned in the given evidence. The Battle of Korytsa is related to the town of Korçë in southern Albania, but there is no direct connection to Stanton Moore or his birthplace. Since the evidence does not provide a clear link between the battle and the birthplace of the performer, the answer is:",
+      "hop_raw_response": "The question seems to be mixing information from different contexts. The performer of the album \"III\" is Stanton Moore, but his birthplace is not mentioned in the given evidence. The Battle of Korytsa is related to the town of Korçë in southern Albania, but there is no direct connection to Stanton Moore or his birthplace. Since the evidence does not provide a clear link between the battle and the birthplace of the performer, the answer is:\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Battle of Korytsa",
+          "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "Battle of Korytsa",
+          "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "III (Stanton Moore album)",
+          "text": "III is Stanton Moore's third studio solo album released 2006."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did this battle start?",
+      "resolved_sub_question": "When did this battle start?",
+      "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+      "score": 0.40679192108410656,
+      "source_title": "Battle of Korytsa",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not specify the exact start date of the Battle of Korytsa.",
+      "hop_raw_response": "The provided evidence does not specify the exact start date of the Battle of Korytsa.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Battle of Korytsa",
+          "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "Battle of Korytsa",
+          "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+        },
+        {
+          "title": "III (Stanton Moore album)",
+          "text": "III is Stanton Moore's third studio solo album released 2006."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_iii_stanton_moore_album",
+      "score": 0.0675373332397194,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+      "score": 0.06646345200573858,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:stanton_moore_s_third_studio_solo_album",
+      "score": 0.06097588355009555,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "score": 0.04682817590448294,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:princess_magdalena_augusta_of_anhalt_zerbst_0_0_princess_magdalena_augusta_of_anhalt_zerbst_13_october_1679_11_october_1",
+      "score": 0.04555498306649136,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:princess_magdalena_augusta",
+      "score": 0.042425922231081686,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_korytsa",
+      "score": 0.04068959861977066,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_f_te_pamilie_the_birth_of_osiris_or_the_festival",
+      "score": 0.03754787258558466,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:iii_stanton_moore_album_0_0_iii_is_stanton_moore_s_third_studio_solo_album_released_2006",
+      "score": 0.036035822583130324,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_new_orleans",
+      "score": 0.03311893418602057,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_la_naissance_d_osiris",
+      "score": 0.03222398876281318,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:greco_italian_war_of_1940_41",
+      "score": 0.029475148196510214,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:anhalt_zerbst",
+      "score": 0.027984797928786827,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:town_of_kor",
+      "score": 0.027540515176127902,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:war_of_1812",
+      "score": 0.027091679236196816,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:11_october_1740",
+      "score": 0.027025826906921156,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:13_october_1679",
+      "score": 0.026907948123881295,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:12_october_1754",
+      "score": 0.024108449355219306,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:southern_albania",
+      "score": 0.02286157782012945,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:iii_stanton_moore_album_0_1_as_each_of_moore_s_solo_albums_have_had_unique_character_iii_features_keyboar",
+      "score": 0.022253803108828317,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:battle_of_korytsa_0",
+      "passage_index": 8,
+      "title": "Battle of Korytsa",
+      "score": 0.0747821172258575,
+      "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+      "score_breakdown": {
+        "dense": 0.05023259048369029,
+        "graph": 0.053851470124228175,
+        "fact": 0.20665834281706252
+      }
+    },
+    {
+      "node_id": "chunk:princess_magdalena_augusta_of_anhalt_zerbst_0",
+      "passage_index": 4,
+      "title": "Princess Magdalena Augusta of Anhalt-Zerbst",
+      "score": 0.07425790054054188,
+      "text": "Princess Magdalena Augusta of Anhalt-Zerbst\nPrincess Magdalena Augusta of Anhalt-Zerbst (13 October 1679 – 11 October 1740) was, by birth, a Princess of Anhalt-Zerbst and, by marriage, a Duchess of Saxe-Gotha-Altenburg. She was the maternal grandmother of George III of the United Kingdom.",
+      "score_breakdown": {
+        "dense": 0.049929137839175956,
+        "graph": 0.05307292971772955,
+        "fact": 0.20583330542450826
+      }
+    },
+    {
+      "node_id": "chunk:iii_stanton_moore_album_0",
+      "passage_index": 2,
+      "title": "III (Stanton Moore album)",
+      "score": 0.07376588128959373,
+      "text": "III (Stanton Moore album)\nIII is Stanton Moore's third studio solo album released 2006. As each of Moore's solo albums have had unique character, \"III\" features keyboardist Robert Walter and guitarist Will Bernard for a 1970s-like soul funk with a \"sense of authenticity\" as \"artists who live it.\"",
+      "score_breakdown": {
+        "dense": 0.050373502806673666,
+        "graph": 0.05315832452347136,
+        "fact": 0.20075304925921197
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_new_orleans_0",
+      "passage_index": 19,
+      "title": "Battle of New Orleans",
+      "score": 0.0726463805811096,
+      "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+      "score_breakdown": {
+        "dense": 0.04996729932755824,
+        "graph": 0.05265062014432348,
+        "fact": 0.19579453271770356
+      }
+    },
+    {
+      "node_id": "chunk:la_naissance_d_osiris_0",
+      "passage_index": 7,
+      "title": "La naissance d'Osiris",
+      "score": 0.07199747515884451,
+      "text": "La naissance d'Osiris\nLa naissance d'Osiris, ou La fête Pamilie (\"The Birth of Osiris, or The Festival of Pamylia\") is a one-act opera by Jean-Philippe Rameau, first performed on 12 October 1754 at Fontainebleau to celebrate the birth of the future King Louis XVI. The libretto is by Rameau's frequent collaborator Louis de Cahusac. Cahusac styled the work a \"ballet allégorique\" (\"allegorical ballet\"), but it is usually categorised as an \"acte de ballet\". Its slender plot tells of Jupiter's announcement to a group of Egyptian shepherds of the birth of the god Osiris, who symbolises the baby prince. The piece may have started life as part of a larger work, \"Les beaux jours de l'Amour\", an \"opéra-ballet\" Rameau and Cahusac planned but never completed for reasons which are still uncertain.",
+      "score_breakdown": {
+        "dense": 0.049926736699723556,
+        "graph": 0.052978848355898306,
+        "fact": 0.19096076978151375
+      }
+    },
+    {
+      "node_id": "chunk:franco_prussian_war_0",
+      "passage_index": 17,
+      "title": "Franco-Prussian War",
+      "score": 0.042296373659911915,
+      "text": "Franco-Prussian War\nDespite odds of four to one, the III Corps launched a risky attack. The French were routed and the III Corps captured Vionville, blocking any further escape attempts to the west. Once blocked from retreat, the French in the fortress of Metz had no choice but to engage in a fight that would see the last major cavalry engagement in Western Europe. The battle soon erupted, and III Corps was shattered by incessant cavalry charges, losing over half its soldiers. The German Official History recorded 15,780 casualties and French casualties of 13,761 men.",
+      "score_breakdown": {
+        "dense": 0.05019199956519924,
+        "graph": 0.048969246330174424,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_atapuerca_0",
+      "passage_index": 15,
+      "title": "Battle of Atapuerca",
+      "score": 0.042240997187256074,
+      "text": "Battle of Atapuerca\nThe Battle of Atapuerca was fought on 1 September 1054 at the site of Piedrahita (\"standing stone\") in the valley of Atapuerca between two brothers, King García Sánchez III of Navarre and King Ferdinand I of Castile.",
+      "score_breakdown": {
+        "dense": 0.05011235961921572,
+        "graph": 0.048930664655624734,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_preveza_0",
+      "passage_index": 13,
+      "title": "Battle of Preveza",
+      "score": 0.04222741132514872,
+      "text": "Battle of Preveza\nThe Battle of Preveza was a naval battle that took place on 28 September 1538 near Preveza in northwestern Greece between an Ottoman fleet and that of a Christian alliance assembled by Pope Paul III in which the Ottoman fleet defeated the allies. It occurred in the same area in the Ionian Sea as the Battle of Actium, 31 BC. It was one of the three largest sea battles that took place in the sixteenth century Mediterranean.",
+      "score_breakdown": {
+        "dense": 0.050075437080630676,
+        "graph": 0.0489530697693395,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_abbeville_0",
+      "passage_index": 3,
+      "title": "Battle of Abbeville",
+      "score": 0.042224343158616215,
+      "text": "Battle of Abbeville\nThe Battle of Abbeville took place from 27 May to 4 June 1940, near Abbeville during the Battle of France in the Second World War. On 20 May, the 2nd Panzer Division advanced to Abbeville on the English Channel, overran the 25th Infantry Brigade of the 50th (Northumbrian) Infantry Division and captured the town at Only a few British survivors managed to retreat to the south bank of the Somme and at on 21 May, the III Battalion, Rifle Regiment 2 reached the coast, west of Noyelles-sur-Mer.",
+      "score_breakdown": {
+        "dense": 0.050079271250815585,
+        "graph": 0.04893581323555881,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_sempach_0",
+      "passage_index": 10,
+      "title": "Battle of Sempach",
+      "score": 0.04222131848801688,
+      "text": "Battle of Sempach\nThe Battle of Sempach was fought on 9 July 1386, between Leopold III, Duke of Austria and the Old Swiss Confederacy. The battle was a decisive Swiss victory in which Duke Leopold and numerous Austrian nobles died. The victory helped turn the loosely allied Swiss Confederation into a more unified nation and is seen as a turning point in the growth of Switzerland.",
+      "score_breakdown": {
+        "dense": 0.05006951408408295,
+        "graph": 0.04894361913923751,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_iii_stanton_moore_album",
+        "score": 0.0675373332397194,
+        "text": "III (Stanton Moore album)",
+        "metadata": {
+          "canonical_name": "III (Stanton Moore album)",
+          "aliases": [
+            "III",
+            "III Stanton Moore album",
+            "Stanton Moore album"
+          ],
+          "surface_forms": [
+            "III"
+          ],
+          "title_anchor": "III (Stanton Moore album)"
+        }
+      },
+      {
+        "node_id": "entity:stanton_moore_s_third_studio_solo_album",
+        "score": 0.06097588355009555,
+        "text": "Stanton Moore's third studio solo album",
+        "metadata": {
+          "canonical_name": "Stanton Moore's third studio solo album",
+          "aliases": [
+            "SMTSSA",
+            "Stanton Moore's third studio solo album"
+          ],
+          "surface_forms": [
+            "SMTSSA",
+            "Stanton Moore's third studio solo album"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+        "score": 0.06646345200573858,
+        "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "metadata": {
+          "title": "Battle of Korytsa",
+          "chunk_id": "chunk:battle_of_korytsa_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Battle of Korytsa",
+              "relation": "fought during",
+              "tail": "Greco-Italian War of 1940 41"
+            },
+            {
+              "head": "Battle of Korytsa",
+              "relation": "occurred in",
+              "tail": "town of Kor"
+            },
+            {
+              "head": "town of Kor",
+              "relation": "located in",
+              "tail": "southern Albania"
+            },
+            {
+              "head": "Battle of Korytsa",
+              "relation": "involved",
+              "tail": "Italian 9th Army"
+            },
+            {
+              "head": "Battle of Korytsa",
+              "relation": "involved",
+              "tail": "Greek III Army Corps"
+            }
+          ],
+          "entities": [
+            "Battle of Korytsa",
+            "Greco-Italian War of 1940 41",
+            "town of Kor",
+            "southern Albania",
+            "Italian 9th Army",
+            "Greek III Army Corps"
+          ],
+          "entity_ids": [
+            "entity:greco_italian_war_of_1940_41",
+            "entity:greek_iii_army_corps",
+            "entity:italian_9th_army",
+            "entity:southern_albania",
+            "entity:title_anchor_battle_of_korytsa",
+            "entity:town_of_kor"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+        "score": 0.04682817590448294,
+        "text": "The Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812.",
+        "metadata": {
+          "title": "Battle of New Orleans",
+          "chunk_id": "chunk:battle_of_new_orleans_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Battle of New Orleans",
+              "relation": "was part of",
+              "tail": "War of 1812"
+            },
+            {
+              "head": "Battle of New Orleans",
+              "relation": "occurred on",
+              "tail": "December 14 1814 to January 18 1815"
+            }
+          ],
+          "entities": [
+            "Battle of New Orleans",
+            "War of 1812",
+            "December 14 1814",
+            "January 18 1815"
+          ],
+          "entity_ids": [
+            "entity:december_14_1814",
+            "entity:december_14_1814_to_january_18_1815",
+            "entity:january_18_1815",
+            "entity:title_anchor_battle_of_new_orleans",
+            "entity:war_of_1812"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:princess_magdalena_augusta_of_anhalt_zerbst_0_0_princess_magdalena_augusta_of_anhalt_zerbst_13_october_1679_11_october_1",
+        "score": 0.04555498306649136,
+        "text": "Princess Magdalena Augusta of Anhalt-Zerbst (13 October 1679 – 11 October 1740) was, by birth, a Princess of Anhalt-Zerbst and, by marriage, a Duchess of Saxe-Gotha-Altenburg.",
+        "metadata": {
+          "title": "Princess Magdalena Augusta of Anhalt-Zerbst",
+          "chunk_id": "chunk:princess_magdalena_augusta_of_anhalt_zerbst_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Princess Magdalena Augusta",
+              "relation": "born in",
+              "tail": "Anhalt-Zerbst"
+            },
+            {
+              "head": "Princess Magdalena Augusta",
+              "relation": "born on",
+              "tail": "13 October 1679"
+            },
+            {
+              "head": "Princess Magdalena Augusta",
+              "relation": "died on",
+              "tail": "11 October 1740"
+            },
+            {
+              "head": "Princess Magdalena Augusta",
+              "relation": "title by birth",
+              "tail": "Princess of Anhalt-Zerbst"
+            },
+            {
+              "head": "Princess Magdalena Augusta",
+              "relation": "title by marriage",
+              "tail": "Duchess of Saxe-Gotha-Altenburg"
+            }
+          ],
+          "entities": [
+            "Princess Magdalena Augusta",
+            "Anhalt-Zerbst",
+            "Saxe-Gotha-Altenburg"
+          ],
+          "entity_ids": [
+            "entity:11_october_1740",
+            "entity:13_october_1679",
+            "entity:anhalt_zerbst",
+            "entity:duchess_of_saxe_gotha_altenburg",
+            "entity:princess_magdalena_augusta",
+            "entity:princess_of_anhalt_zerbst",
+            "entity:saxe_gotha_altenburg"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:la_naissance_d_osiris_0_0_la_naissance_d_osiris_ou_la_f_te_pamilie_the_birth_of_osiris_or_the_festival",
+        "score": 0.03754787258558466,
+        "text": "La naissance d'Osiris, ou La fête Pamilie (\"The Birth of Osiris, or The Festival of Pamylia\") is a one-act opera by Jean-Philippe Rameau, first performed on 12 October 1754 at Fontainebleau to celebrate the birth of the future King Louis XVI.",
+        "metadata": {
+          "title": "La naissance d'Osiris",
+          "chunk_id": "chunk:la_naissance_d_osiris_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "La naissance d'Osiris",
+              "relation": "composed by",
+              "tail": "Jean-Philippe Rameau"
+            },
+            {
+              "head": "La naissance d'Osiris",
+              "relation": "first performed on",
+              "tail": "12 October 1754"
+            },
+            {
+              "head": "La naissance d'Osiris",
+              "relation": "performed at",
+              "tail": "Fontainebleau"
+            },
+            {
+              "head": "La naissance d'Osiris",
+              "relation": "celebrated",
+              "tail": "birth of the future King Louis XVI"
+            }
+          ],
+          "entities": [
+            "La naissance d'Osiris",
+            "Jean-Philippe Rameau",
+            "Fontainebleau",
+            "King Louis XVI"
+          ],
+          "entity_ids": [
+            "entity:12_october_1754",
+            "entity:birth_of_the_future_king_louis_xvi",
+            "entity:fontainebleau",
+            "entity:jean_philippe_rameau",
+            "entity:king_louis_xvi",
+            "entity:title_anchor_la_naissance_d_osiris"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:iii_stanton_moore_album_0_0_iii_is_stanton_moore_s_third_studio_solo_album_released_2006",
+        "score": 0.036035822583130324,
+        "text": "III is Stanton Moore's third studio solo album released 2006.",
+        "metadata": {
+          "title": "III (Stanton Moore album)",
+          "chunk_id": "chunk:iii_stanton_moore_album_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "III",
+              "relation": "is",
+              "tail": "Stanton Moore's third studio solo album"
+            }
+          ],
+          "entities": [
+            "Stanton Moore"
+          ],
+          "entity_ids": [
+            "entity:stanton_moore",
+            "entity:stanton_moore_s_third_studio_solo_album",
+            "entity:title_anchor_iii_stanton_moore_album"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:iii_stanton_moore_album_0_1_as_each_of_moore_s_solo_albums_have_had_unique_character_iii_features_keyboar",
+        "score": 0.022253803108828317,
+        "text": "As each of Moore's solo albums have had unique character, \"III\" features keyboardist Robert Walter and guitarist Will Bernard for a 1970s-like soul funk with a \"sense of authenticity\" as \"artists who live it.\"",
+        "metadata": {
+          "title": "III (Stanton Moore album)",
+          "chunk_id": "chunk:iii_stanton_moore_album_0",
+          "sentence_index": 1,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "III",
+              "relation": "features",
+              "tail": "Robert Walter"
+            },
+            {
+              "head": "III",
+              "relation": "features",
+              "tail": "Will Bernard"
+            }
+          ],
+          "entities": [
+            "Moore",
+            "Robert Walter",
+            "Will Bernard"
+          ],
+          "entity_ids": [
+            "entity:moore",
+            "entity:robert_walter",
+            "entity:title_anchor_iii_stanton_moore_album",
+            "entity:will_bernard"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:battle_of_korytsa_0",
+        "score": 0.011750696860922564,
+        "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "metadata": {
+          "title": "Battle of Korytsa",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:greco_italian_war_of_1940_41",
+            "entity:greek_iii_army_corps",
+            "entity:italian_9th_army",
+            "entity:southern_albania",
+            "entity:title_anchor_battle_of_korytsa",
+            "entity:town_of_kor"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_new_orleans_0",
+        "score": 0.01135727250090086,
+        "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+        "metadata": {
+          "title": "Battle of New Orleans",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:admiral_alexander_cochrane",
+            "entity:admiral_alexander_cochrane_and_general_edward_pakenham",
+            "entity:american_combatants",
+            "entity:british_force",
+            "entity:british_force_from_seizing_new_orleans_and_the_louisiana_purchase_territory",
+            "entity:december_14_1814",
+            "entity:december_14_1814_to_january_18_1815",
+            "entity:general_edward_pakenham",
+            "entity:january_18_1815",
+            "entity:louisiana_purchase",
+            "entity:major_general_andrew_jackson",
+            "entity:new_orleans",
+            "entity:title_anchor_battle_of_new_orleans",
+            "entity:war_of_1812"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:iii_stanton_moore_album_0",
+        "score": 0.011235947970096662,
+        "text": "III (Stanton Moore album)\nIII is Stanton Moore's third studio solo album released 2006. As each of Moore's solo albums have had unique character, \"III\" features keyboardist Robert Walter and guitarist Will Bernard for a 1970s-like soul funk with a \"sense of authenticity\" as \"artists who live it.\"",
+        "metadata": {
+          "title": "III (Stanton Moore album)",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:moore",
+            "entity:robert_walter",
+            "entity:stanton_moore",
+            "entity:stanton_moore_s_third_studio_solo_album",
+            "entity:title_anchor_iii_stanton_moore_album",
+            "entity:will_bernard"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:la_naissance_d_osiris_0",
+        "score": 0.010127932590215917,
+        "text": "La naissance d'Osiris\nLa naissance d'Osiris, ou La fête Pamilie (\"The Birth of Osiris, or The Festival of Pamylia\") is a one-act opera by Jean-Philippe Rameau, first performed on 12 October 1754 at Fontainebleau to celebrate the birth of the future King Louis XVI. The libretto is by Rameau's frequent collaborator Louis de Cahusac. Cahusac styled the work a \"ballet allégorique\" (\"allegorical ballet\"), but it is usually categorised as an \"acte de ballet\". Its slender plot tells of Jupiter's announcement to a group of Egyptian shepherds of the birth of the god Osiris, who symbolises the baby prince. The piece may have started life as part of a larger work, \"Les beaux jours de l'Amour\", an \"opéra-ballet\" Rameau and Cahusac planned but never completed for reasons which are still uncertain.",
+        "metadata": {
+          "title": "La naissance d'Osiris",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:12_october_1754",
+            "entity:amour",
+            "entity:birth_of_osiris",
+            "entity:birth_of_the_future_king_louis_xvi",
+            "entity:cahusac",
+            "entity:egyptian_shepherds",
+            "entity:fontainebleau",
+            "entity:jean_philippe_rameau",
+            "entity:jupiter",
+            "entity:king_louis_xvi",
+            "entity:les",
+            "entity:louis_de_cahusac",
+            "entity:osiris",
+            "entity:rameau",
+            "entity:title_anchor_la_naissance_d_osiris"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Battle of Korytsa\nBattle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.\n\nPrincess Magdalena Augusta of Anhalt-Zerbst\nPrincess Magdalena Augusta of Anhalt-Zerbst\nPrincess Magdalena Augusta of Anhalt-Zerbst (13 October 1679 – 11 October 1740) was, by birth, a Princess of Anhalt-Zerbst and, by marriage, a Duchess of Saxe-Gotha-Altenburg. She was the maternal grandmother of George III of the United Kingdom.\n\nIII (Stanton Moore album)\nIII (Stanton Moore album)\nIII is Stanton Moore's third studio solo album released 2006. As each of Moore's solo albums have had unique character, \"III\" features keyboardist Robert Walter and guitarist Will Bernard for a 1970s-like soul funk with a \"sense of authenticity\" as \"artists who live it.\"\n\nBattle of New Orleans\nBattle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.\n\nLa naissance d'Osiris\nLa naissance d'Osiris\nLa naissance d'Osiris, ou La fête Pamilie (\"The Birth of Osiris, or The Festival of Pamylia\") is a one-act opera by Jean-Philippe Rameau, first performed on 12 October 1754 at Fontainebleau to celebrate the birth of the future King Louis XVI. The libretto is by Rameau's frequent collaborator Louis de Cahusac. Cahusac styled the work a \"ballet allégorique\" (\"allegorical ballet\"), but it is usually categorised as an \"acte de ballet\". Its slender plot tells of Jupiter's announcement to a group of Egyptian shepherds of the birth of the god Osiris, who symbolises the baby prince. The piece may have started life as part of a larger work, \"Les beaux jours de l'Amour\", an \"opéra-ballet\" Rameau and Cahusac planned but never completed for reasons which are still uncertain.\n\nBattle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.\n\nModern history\nIn England the modern period is often dated to the start of the Tudor period with the victory of Henry VII over Richard III at the Battle of Bosworth in 1485.\n\nIII (Stanton Moore album)\nIII is Stanton Moore's third studio solo album released 2006.\n\nBattle of Magenta\nBattle of Magenta\nThe Battle of Magenta was fought on 4 June 1859 during the Second Italian War of Independence, resulting in a French-Sardinian victory under Napoleon III against the Austrians under Marshal Ferencz Gyulai.\n\nCharles Russell Lowell\nCharles Russell Lowell\nCharles Russell Lowell III (January 2, 1835 – October 20, 1864) was a railroad executive, foundryman, and General in the Union Army during the American Civil War. He was mortally wounded at the Battle of Cedar Creek and was mourned by a number of leading generals.\n\nBattle of Abbeville\nBattle of Abbeville\nThe Battle of Abbeville took place from 27 May to 4 June 1940, near Abbeville during the Battle of France in the Second World War. On 20 May, the 2nd Panzer Division advanced to Abbeville on the English Channel, overran the 25th Infantry Brigade of the 50th (Northumbrian) Infantry Division and captured the town at Only a few British survivors managed to retreat to the south bank of the Somme and at on 21 May, the III Battalion, Rifle Regiment 2 reached the coast, west of Noyelles-sur-Mer.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:battle_of_korytsa_0",
+        "passage_index": 8,
+        "title": "Battle of Korytsa",
+        "score": 0.0747821172258575,
+        "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "score_breakdown": {
+          "dense": 0.05023259048369029,
+          "graph": 0.053851470124228175,
+          "fact": 0.20665834281706252
+        }
+      },
+      {
+        "node_id": "chunk:princess_magdalena_augusta_of_anhalt_zerbst_0",
+        "passage_index": 4,
+        "title": "Princess Magdalena Augusta of Anhalt-Zerbst",
+        "score": 0.07425790054054188,
+        "text": "Princess Magdalena Augusta of Anhalt-Zerbst\nPrincess Magdalena Augusta of Anhalt-Zerbst (13 October 1679 – 11 October 1740) was, by birth, a Princess of Anhalt-Zerbst and, by marriage, a Duchess of Saxe-Gotha-Altenburg. She was the maternal grandmother of George III of the United Kingdom.",
+        "score_breakdown": {
+          "dense": 0.049929137839175956,
+          "graph": 0.05307292971772955,
+          "fact": 0.20583330542450826
+        }
+      },
+      {
+        "node_id": "chunk:iii_stanton_moore_album_0",
+        "passage_index": 2,
+        "title": "III (Stanton Moore album)",
+        "score": 0.07376588128959373,
+        "text": "III (Stanton Moore album)\nIII is Stanton Moore's third studio solo album released 2006. As each of Moore's solo albums have had unique character, \"III\" features keyboardist Robert Walter and guitarist Will Bernard for a 1970s-like soul funk with a \"sense of authenticity\" as \"artists who live it.\"",
+        "score_breakdown": {
+          "dense": 0.050373502806673666,
+          "graph": 0.05315832452347136,
+          "fact": 0.20075304925921197
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_new_orleans_0",
+        "passage_index": 19,
+        "title": "Battle of New Orleans",
+        "score": 0.0726463805811096,
+        "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+        "score_breakdown": {
+          "dense": 0.04996729932755824,
+          "graph": 0.05265062014432348,
+          "fact": 0.19579453271770356
+        }
+      },
+      {
+        "node_id": "chunk:la_naissance_d_osiris_0",
+        "passage_index": 7,
+        "title": "La naissance d'Osiris",
+        "score": 0.07199747515884451,
+        "text": "La naissance d'Osiris\nLa naissance d'Osiris, ou La fête Pamilie (\"The Birth of Osiris, or The Festival of Pamylia\") is a one-act opera by Jean-Philippe Rameau, first performed on 12 October 1754 at Fontainebleau to celebrate the birth of the future King Louis XVI. The libretto is by Rameau's frequent collaborator Louis de Cahusac. Cahusac styled the work a \"ballet allégorique\" (\"allegorical ballet\"), but it is usually categorised as an \"acte de ballet\". Its slender plot tells of Jupiter's announcement to a group of Egyptian shepherds of the birth of the god Osiris, who symbolises the baby prince. The piece may have started life as part of a larger work, \"Les beaux jours de l'Amour\", an \"opéra-ballet\" Rameau and Cahusac planned but never completed for reasons which are still uncertain.",
+        "score_breakdown": {
+          "dense": 0.049926736699723556,
+          "graph": 0.052978848355898306,
+          "fact": 0.19096076978151375
+        }
+      },
+      {
+        "node_id": "chunk:franco_prussian_war_0",
+        "passage_index": 17,
+        "title": "Franco-Prussian War",
+        "score": 0.042296373659911915,
+        "text": "Franco-Prussian War\nDespite odds of four to one, the III Corps launched a risky attack. The French were routed and the III Corps captured Vionville, blocking any further escape attempts to the west. Once blocked from retreat, the French in the fortress of Metz had no choice but to engage in a fight that would see the last major cavalry engagement in Western Europe. The battle soon erupted, and III Corps was shattered by incessant cavalry charges, losing over half its soldiers. The German Official History recorded 15,780 casualties and French casualties of 13,761 men.",
+        "score_breakdown": {
+          "dense": 0.05019199956519924,
+          "graph": 0.048969246330174424,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_atapuerca_0",
+        "passage_index": 15,
+        "title": "Battle of Atapuerca",
+        "score": 0.042240997187256074,
+        "text": "Battle of Atapuerca\nThe Battle of Atapuerca was fought on 1 September 1054 at the site of Piedrahita (\"standing stone\") in the valley of Atapuerca between two brothers, King García Sánchez III of Navarre and King Ferdinand I of Castile.",
+        "score_breakdown": {
+          "dense": 0.05011235961921572,
+          "graph": 0.048930664655624734,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_preveza_0",
+        "passage_index": 13,
+        "title": "Battle of Preveza",
+        "score": 0.04222741132514872,
+        "text": "Battle of Preveza\nThe Battle of Preveza was a naval battle that took place on 28 September 1538 near Preveza in northwestern Greece between an Ottoman fleet and that of a Christian alliance assembled by Pope Paul III in which the Ottoman fleet defeated the allies. It occurred in the same area in the Ionian Sea as the Battle of Actium, 31 BC. It was one of the three largest sea battles that took place in the sixteenth century Mediterranean.",
+        "score_breakdown": {
+          "dense": 0.050075437080630676,
+          "graph": 0.0489530697693395,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_abbeville_0",
+        "passage_index": 3,
+        "title": "Battle of Abbeville",
+        "score": 0.042224343158616215,
+        "text": "Battle of Abbeville\nThe Battle of Abbeville took place from 27 May to 4 June 1940, near Abbeville during the Battle of France in the Second World War. On 20 May, the 2nd Panzer Division advanced to Abbeville on the English Channel, overran the 25th Infantry Brigade of the 50th (Northumbrian) Infantry Division and captured the town at Only a few British survivors managed to retreat to the south bank of the Somme and at on 21 May, the III Battalion, Rifle Regiment 2 reached the coast, west of Noyelles-sur-Mer.",
+        "score_breakdown": {
+          "dense": 0.050079271250815585,
+          "graph": 0.04893581323555881,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_sempach_0",
+        "passage_index": 10,
+        "title": "Battle of Sempach",
+        "score": 0.04222131848801688,
+        "text": "Battle of Sempach\nThe Battle of Sempach was fought on 9 July 1386, between Leopold III, Duke of Austria and the Old Swiss Confederacy. The battle was a decisive Swiss victory in which Duke Leopold and numerous Austrian nobles died. The victory helped turn the loosely allied Swiss Confederation into a more unified nation and is seen as a turning point in the growth of Switzerland.",
+        "score_breakdown": {
+          "dense": 0.05006951408408295,
+          "graph": 0.04894361913923751,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the performer of III?",
+        "resolved_sub_question": "Who is the performer of III?",
+        "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+        "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "score": 0.4618189207042695,
+        "source_title": "Battle of Korytsa",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question seems to be misinterpreting the context. In the given text, \"III\" refers to the Greek III Army Corps, not a performer.",
+        "hop_raw_response": "The question seems to be misinterpreting the context. In the given text, \"III\" refers to the Greek III Army Corps, not a performer.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Battle of Korytsa",
+            "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "Battle of Korytsa",
+            "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "Modern history",
+            "text": "In England the modern period is often dated to the start of the Tudor period with the victory of Henry VII over Richard III at the Battle of Bosworth in 1485."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the birthplace of this performer?",
+        "resolved_sub_question": "What is the birthplace of this performer?",
+        "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+        "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "score": 0.4345866321577088,
+        "source_title": "Battle of Korytsa",
+        "hop_answer": "Unknown",
+        "hop_thought": "The performer of III is Stanton Moore, and his birthplace is not mentioned in the given evidence.",
+        "hop_raw_response": "The performer of III is Stanton Moore, and his birthplace is not mentioned in the given evidence.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Battle of Korytsa",
+            "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "Battle of Korytsa",
+            "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "III (Stanton Moore album)",
+            "text": "III is Stanton Moore's third studio solo album released 2006."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the battle associated with this birthplace?",
+        "resolved_sub_question": "What is the battle associated with this birthplace?",
+        "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+        "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "score": 0.4681047210841066,
+        "source_title": "Battle of Korytsa",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question seems to be mixing information from different contexts. The performer of the album \"III\" is Stanton Moore, but his birthplace is not mentioned in the given evidence. The Battle of Korytsa is related to the town of Korçë in southern Albania, but there is no direct connection to Stanton Moore or his birthplace. Since the evidence does not provide a clear link between the battle and the birthplace of the performer, the answer is:",
+        "hop_raw_response": "The question seems to be mixing information from different contexts. The performer of the album \"III\" is Stanton Moore, but his birthplace is not mentioned in the given evidence. The Battle of Korytsa is related to the town of Korçë in southern Albania, but there is no direct connection to Stanton Moore or his birthplace. Since the evidence does not provide a clear link between the battle and the birthplace of the performer, the answer is:\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Battle of Korytsa",
+            "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "Battle of Korytsa",
+            "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "III (Stanton Moore album)",
+            "text": "III is Stanton Moore's third studio solo album released 2006."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did this battle start?",
+        "resolved_sub_question": "When did this battle start?",
+        "sentence_id": "sentence:battle_of_korytsa_0_0_the_battle_of_korytsa_was_fought_during_the_greco_italian_war_of_1940_41_in_the",
+        "sentence": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.",
+        "score": 0.40679192108410656,
+        "source_title": "Battle of Korytsa",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not specify the exact start date of the Battle of Korytsa.",
+        "hop_raw_response": "The provided evidence does not specify the exact start date of the Battle of Korytsa.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Battle of Korytsa",
+            "text": "The Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "Battle of Korytsa",
+            "text": "Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps."
+          },
+          {
+            "title": "III (Stanton Moore album)",
+            "text": "III is Stanton Moore's third studio solo album released 2006."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the performer of III? (source: Battle of Korytsa)\n2. What is the birthplace of this performer? (source: Battle of Korytsa)\n3. What is the battle associated with this birthplace? (source: Battle of Korytsa)\n4. When did this battle start? (source: Battle of Korytsa)\n\nFact hints:\n- Battle of Korytsa fought during Greco-Italian War of 1940 41\n\nWikipedia Title: Battle of Korytsa\nThe Battle of Korytsa was fought during the Greco-Italian War of 1940–41 in the town of Korçë (Greek: \"Korytsa\") in southern Albania between the defending Italian 9th Army and the attacking Greek III Army Corps.\n\nWikipedia Title: Battle of Abbeville\nBattle of Abbeville The Battle of Abbeville took place from 27 May to 4 June 1940, near Abbeville during the Battle of France in the Second World War. On 20 May, the 2nd Panzer Division advanced to Abbeville on the English Channel, overran the 25th Infantry Brigade of the 50th (Northumbrian) Infantry Division and captured the town at Only a few British survivors managed to retreat to the south bank of the Somme and at on 21 May, the III Battalion, Rifle Regiment 2 reached the coast, west of Noyelles-sur-Mer.\n\nWikipedia Title: Battle of Magenta\nBattle of Magenta The Battle of Magenta was fought on 4 June 1859 during the Second Italian War of Independence, resulting in a French-Sardinian victory under Napoleon III against the Austrians under Marshal Ferencz Gyulai.\n\nWikipedia Title: Charles Russell Lowell\nHe was mortally wounded at the Battle of Cedar Creek and was mourned by a number of leading generals. Charles Russell Lowell Charles Russell Lowell III (January 2, 1835 – October 20, 1864) was a railroad executive, foundryman, and General in the Union Army during the American Civil War.\n\nWikipedia Title: Battle of New Orleans\nBattle of New Orleans The Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.\n\nQuestion: When was the start of the battle of the birthplace of the performer of III?\nDraft Answer: 1940\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The performer of III is part of the Greek III Army Corps. The birthplace of this performer is Korçë, also known as Korytsa. The battle associated with this birthplace is the Battle of Korytsa. The Battle of Korytsa started in 1940.",
+  "predicted_answer": "1940",
+  "qa_raw_response": "{\n  \"thought\": \"The performer of III is part of the Greek III Army Corps. The birthplace of this performer is Korçë, also known as Korytsa. The battle associated with this birthplace is the Battle of Korytsa. The Battle of Korytsa started in 1940.\",\n  \"answer\": \"1940\",\n  \"support\": \"The Battle of Korytsa was fought during the Greco-Italian War of 1940–41\"\n}"
+}

@@ -1,0 +1,1004 @@
+{
+  "query": "What is the largest state in the region where the Handmaid's Tale takes place?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "The Handmaid's Tale"
+  ],
+  "raw_query_entities": [
+    "Handmaid's Tale"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Handmaid's Tale",
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "resolved_text": "The Handmaid's Tale",
+      "score": 0.7914000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.13340000000000007,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Where does The Handmaid's Tale take place?",
+    "What states are in this region?",
+    "Which of these states is the largest?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "score": 1.0807112459975836,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+      "score": 0.3364009626035834,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:handmaid_s_tale",
+      "score": 0.33639524321386766,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:republic_of_gilead",
+      "score": 0.24049614130330987,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:small_city_in_the_midwestern_united_states",
+      "score": 0.21432274123186493,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:borders_of_former_united_states_of_america",
+      "score": 0.20034600911854641,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_last_crossing",
+      "score": 0.1943223136511833,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:england_to_the_united_states_and_the_canadian_west",
+      "score": 0.1943159726709284,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "score": 0.192465356269537,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "score": 0.18033281210278726,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_seventeen_tarkington_novel",
+      "score": 0.17030874771609186,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:maine",
+      "score": 0.1583263125459897,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:handmaid_s_tale_is_set_in_republic_of_gilead_sentence_the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic",
+      "text": "Handmaid's Tale is set in Republic of Gilead",
+      "head_id": "entity:title_anchor_the_handmaid_s_tale",
+      "tail_id": "entity:republic_of_gilead",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "chunk_id": "chunk:the_handmaid_s_tale_0",
+      "document_index": 10,
+      "score": 0.2785526360048823
+    },
+    {
+      "fact_id": "fact:seventeen_takes_place_in_small_city_in_the_midwestern_united_states_sentence_seventeen_tarkington_novel_0_1_seventeen_ta",
+      "text": "Seventeen takes place in small city in the Midwestern United States",
+      "head_id": "entity:title_anchor_seventeen_tarkington_novel",
+      "tail_id": "entity:small_city_in_the_midwestern_united_states",
+      "sentence_id": "sentence:seventeen_tarkington_novel_0_1_seventeen_takes_place_in_a_small_city_in_the_midwestern_united_states_shortly",
+      "chunk_id": "chunk:seventeen_tarkington_novel_0",
+      "document_index": 1,
+      "score": 0.21222477609105203
+    },
+    {
+      "fact_id": "fact:republic_of_gilead_formed_within_borders_of_former_united_states_of_america_sentence_the_handmaid_s_tale_0_0_the_handmai",
+      "text": "Republic of Gilead formed within borders of former United States of America",
+      "head_id": "entity:republic_of_gilead",
+      "tail_id": "entity:borders_of_former_united_states_of_america",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "chunk_id": "chunk:the_handmaid_s_tale_0",
+      "document_index": 10,
+      "score": 0.19825523136790058
+    },
+    {
+      "fact_id": "fact:last_crossing_travels_from_england_to_the_united_states_and_the_canadian_west_sentence_the_last_crossing_0_0_a_rethinkin",
+      "text": "Last Crossing travels from England to the United States and the Canadian west",
+      "head_id": "entity:title_anchor_the_last_crossing",
+      "tail_id": "entity:england_to_the_united_states_and_the_canadian_west",
+      "sentence_id": "sentence:the_last_crossing_0_0_a_rethinking_of_the_genre_of_the_western_the_last_crossing_is_a_tale_of_int",
+      "chunk_id": "chunk:the_last_crossing_0",
+      "document_index": 12,
+      "score": 0.19221848987450804
+    },
+    {
+      "fact_id": "fact:maine_constitutes_nearly_one_half_of_the_total_area_of_new_england_sentence_new_england_0_1_maine_alone_constitutes_near",
+      "text": "Maine constitutes nearly one-half of the total area of New England",
+      "head_id": "entity:maine",
+      "tail_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "sentence_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "chunk_id": "chunk:new_england_0",
+      "document_index": 17,
+      "score": 0.17823566067944502
+    },
+    {
+      "fact_id": "fact:maine_is_slightly_smaller_than_indiana_sentence_new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_are",
+      "text": "Maine is slightly smaller than Indiana",
+      "head_id": "entity:maine",
+      "tail_id": "entity:slightly_smaller_than_indiana",
+      "sentence_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "chunk_id": "chunk:new_england_0",
+      "document_index": 17,
+      "score": 0.13423608655593958
+    },
+    {
+      "fact_id": "fact:seventeen_occurs_shortly_before_world_war_i_sentence_seventeen_tarkington_novel_0_1_seventeen_takes_place_in_a_small_cit",
+      "text": "Seventeen occurs shortly before World War I",
+      "head_id": "entity:title_anchor_seventeen_tarkington_novel",
+      "tail_id": "entity:world_war_i",
+      "sentence_id": "sentence:seventeen_tarkington_novel_0_1_seventeen_takes_place_in_a_small_city_in_the_midwestern_united_states_shortly",
+      "chunk_id": "chunk:seventeen_tarkington_novel_0",
+      "document_index": 1,
+      "score": 0.12421068281596946
+    }
+  ],
+  "bridge_entities": [
+    "Republic of Gilead",
+    "United States of America",
+    "New England",
+    "Maine"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where does The Handmaid's Tale take place?",
+      "resolved_sub_question": "Where does The Handmaid's Tale take place?",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "sentence": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+      "score": 0.5426295999999999,
+      "source_title": "The Handmaid's Tale",
+      "hop_answer": "New England",
+      "hop_thought": "The Handmaid's Tale takes place in the Republic of Gilead, which is located within the borders of what was formerly the United States of America, specifically in a near-future New England.",
+      "hop_raw_response": "The Handmaid's Tale takes place in the Republic of Gilead, which is located within the borders of what was formerly the United States of America, specifically in a near-future New England.\nAnswer: New England",
+      "evidence_passages": [
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+        },
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.)."
+        },
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood."
+        }
+      ]
+    },
+    {
+      "sub_question": "What states are in this region?",
+      "resolved_sub_question": "What states are in this region? Context: New England.",
+      "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+      "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+      "score": 0.5544045219532013,
+      "source_title": "New England",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not explicitly list the states that are in New England, but it is known from common knowledge that New England consists of six states: Maine, Vermont, New Hampshire, Massachusetts, Connecticut, and Rhode Island. However, since the evidence does not directly state these states, the correct response based on the given instruction would be 'Unknown'.",
+      "hop_raw_response": "The context provided does not explicitly list the states that are in New England, but it is known from common knowledge that New England consists of six states: Maine, Vermont, New Hampshire, Massachusetts, Connecticut, and Rhode Island. However, since the evidence does not directly state these states, the correct response based on the given instruction would be 'Unknown'.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "New England",
+          "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+        },
+        {
+          "title": "New England",
+          "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+        },
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which of these states is the largest?",
+      "resolved_sub_question": "Which of these states is the largest? Context: New England.",
+      "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+      "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+      "score": 0.5039937397327423,
+      "source_title": "New England",
+      "hop_answer": "Maine",
+      "hop_thought": "The context indicates that Maine constitutes nearly one-half of the total area of New England, suggesting it is the largest state within the region.",
+      "hop_raw_response": "The context indicates that Maine constitutes nearly one-half of the total area of New England, suggesting it is the largest state within the region.\nAnswer: Maine",
+      "evidence_passages": [
+        {
+          "title": "New England",
+          "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+        },
+        {
+          "title": "New England",
+          "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+        },
+        {
+          "title": "New England",
+          "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "score": 0.13976272272502377,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "score": 0.04895814745521806,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:republic_of_gilead",
+      "score": 0.04758161009204402,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+      "score": 0.04512716549221928,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:handmaid_s_tale",
+      "score": 0.04246890537846563,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "score": 0.03708418396636514,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_seventeen_tarkington_novel",
+      "score": 0.036665450082488074,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:seventeen_tarkington_novel_0_1_seventeen_takes_place_in_a_small_city_in_the_midwestern_united_states_shortly",
+      "score": 0.03577040645436281,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:maine",
+      "score": 0.03510104344097458,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_last_crossing",
+      "score": 0.03381417310885243,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_last_crossing_0_0_a_rethinking_of_the_genre_of_the_western_the_last_crossing_is_a_tale_of_int",
+      "score": 0.032591756963766046,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:borders_of_former_united_states_of_america",
+      "score": 0.03028177431731611,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:england_to_the_united_states_and_the_canadian_west",
+      "score": 0.02991851595311051,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:margaret_atwood",
+      "score": 0.02760947403438948,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_a_dystopian_novel_by_canadian_author_margaret_atwood",
+      "score": 0.027268801961568608,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:small_city_in_the_midwestern_united_states",
+      "score": 0.027139005503063307,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:the_handmaid_s_tale_0",
+      "score": 0.026091060717042126,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "score": 0.0252487072514767,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:slightly_smaller_than_indiana",
+      "score": 0.02040894875897327,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:world_war_i",
+      "score": 0.019763269968443686,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:the_handmaid_s_tale_0",
+      "passage_index": 15,
+      "title": "The Handmaid's Tale",
+      "score": 0.12922808183656742,
+      "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+      "score_breakdown": {
+        "dense": 0.10238651378625528,
+        "graph": 0.10999021332421631,
+        "fact": 0.26612290171241415
+      }
+    },
+    {
+      "node_id": "chunk:new_england_0",
+      "passage_index": 17,
+      "title": "New England",
+      "score": 0.12308398918360287,
+      "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+      "score_breakdown": {
+        "dense": 0.10199393419425874,
+        "graph": 0.10293026241429838,
+        "fact": 0.240721644349807
+      }
+    },
+    {
+      "node_id": "chunk:seventeen_tarkington_novel_0",
+      "passage_index": 1,
+      "title": "Seventeen (Tarkington novel)",
+      "score": 0.12277714730483236,
+      "text": "Seventeen (Tarkington novel)\nSeventeen: A Tale of Youth and Summer Time and the Baxter Family Especially William is a humorous novel by Booth Tarkington that gently satirizes first love, in the person of a callow 17-year-old, William Sylvanus Baxter. \"Seventeen\" takes place in a small city in the Midwestern United States shortly before World War I. It was published as sketches in the \"Metropolitan Magazine\" in 1914, and collected in a single volume in 1916, when it was the bestselling novel in the United States.",
+      "score_breakdown": {
+        "dense": 0.09914044643853359,
+        "graph": 0.10297757404933178,
+        "fact": 0.24904419699226227
+      }
+    },
+    {
+      "node_id": "chunk:the_last_crossing_0",
+      "passage_index": 12,
+      "title": "The Last Crossing",
+      "score": 0.12158430078813909,
+      "text": "The Last Crossing\nA rethinking of the genre of the \"western\", \"The Last Crossing\" is a tale of interwoven lives and stories taking place in the last half of the 19th century, travelling from England to the United States and the Canadian west.",
+      "score_breakdown": {
+        "dense": 0.09936921666813377,
+        "graph": 0.1010484769294601,
+        "fact": 0.2441112569455165
+      }
+    },
+    {
+      "node_id": "chunk:the_handmaid_s_tale_tv_series_0",
+      "passage_index": 18,
+      "title": "The Handmaid's Tale (TV series)",
+      "score": 0.08535814080227287,
+      "text": "The Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.",
+      "score_breakdown": {
+        "dense": 0.10119019838872778,
+        "graph": 0.09901177229490862,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:samira_wiley_0",
+      "passage_index": 13,
+      "title": "Samira Wiley",
+      "score": 0.0842732237308389,
+      "text": "Samira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale, for which she was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series.",
+      "score_breakdown": {
+        "dense": 0.09943782335422836,
+        "graph": 0.0986080696200443,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:new_york_city_0",
+      "passage_index": 19,
+      "title": "New York City",
+      "score": 0.0837096576542894,
+      "text": "New York City\nThe New York metropolitan area is home to a self-identifying gay and bisexual community estimated at 568,903 individuals, the largest in the United States and one of the world's largest. Same-sex marriages in New York were legalized on June 24, 2011 and were authorized to take place beginning 30 days thereafter.",
+      "score_breakdown": {
+        "dense": 0.09963304674831155,
+        "graph": 0.0963716064757268,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sure_of_you_0",
+      "passage_index": 16,
+      "title": "Sure of You",
+      "score": 0.08344504184704492,
+      "text": "Sure of You\nSure of You (1989) is the sixth book in the \"Tales of the City\" series by San Francisco novelist Armistead Maupin. The story takes place around the eve of the 1988 presidential election in the U.S., three years after the previous book \"Significant Others\". The book was written as the end to the Tales series and is the antithesis of the first book.",
+      "score_breakdown": {
+        "dense": 0.09916245460273422,
+        "graph": 0.09635230605180364,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ancilla_college_0",
+      "passage_index": 6,
+      "title": "Ancilla College",
+      "score": 0.08340803713500014,
+      "text": "Ancilla College\nAncilla College, near Donaldson, Indiana, is a two-year private liberal arts college that admits both men and women students. Ancilla College was founded by the Poor Handmaids of Jesus Christ in 1937 as an extension of DePaul University for the training of novices and candidates of the Poor Handmaids of Jesus Christ. In 1966 the college started admitting the public as a private liberal arts community college. Ancilla College focuses on serving the seven surrounding counties of Indiana. Ancilla College grants associate degrees in multiple programs, from which Ancilla graduates may easily transfer to a four-year college or university, especially via the transfer agreements that Ancilla College has with 14 Indiana colleges and universities. The Latin word \"ancilla\" means \"handmaid or servant,\" a reference to the college's sponsor, The Poor Handmaids of Jesus Christ.",
+      "score_breakdown": {
+        "dense": 0.09907242559826185,
+        "graph": 0.09639401018652038,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:1990_recopa_sudamericana_0",
+      "passage_index": 3,
+      "title": "1990 Recopa Sudamericana",
+      "score": 0.08313237971741207,
+      "text": "1990 Recopa Sudamericana\nThe 1990 Recopa Sudamericana was the second Recopa Sudamericana, an annual football match between the winners of the previous season's Copa Libertadores and Supercopa Sudamericana competitions. Originally, the title was to supposed to be disputed on a two-legged series. Due to security concerns on the eventual, first leg in Colombia and schedule congestion a neutral stadium was chosen for the match to take place. The Orange Bowl in Miami became the venue for this year's Recopa Sudamericana final.",
+      "score_breakdown": {
+        "dense": 0.09861394022055486,
+        "graph": 0.09631570865368963,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_the_handmaid_s_tale",
+        "score": 0.13976272272502377,
+        "text": "The Handmaid's Tale",
+        "metadata": {
+          "canonical_name": "The Handmaid's Tale",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": "The Handmaid's Tale"
+        }
+      },
+      {
+        "node_id": "entity:republic_of_gilead",
+        "score": 0.04758161009204402,
+        "text": "Republic of Gilead",
+        "metadata": {
+          "canonical_name": "Republic of Gilead",
+          "aliases": [
+            "ROG",
+            "Republic of Gilead"
+          ],
+          "surface_forms": [
+            "ROG",
+            "Republic of Gilead"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+        "score": 0.04512716549221928,
+        "text": "The Handmaid's Tale (TV series)",
+        "metadata": {
+          "canonical_name": "The Handmaid's Tale (TV series)",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale",
+            "Handmaid's Tale series"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": "The Handmaid's Tale (TV series)"
+        }
+      },
+      {
+        "node_id": "entity:handmaid_s_tale",
+        "score": 0.04246890537846563,
+        "text": "Handmaid's Tale",
+        "metadata": {
+          "canonical_name": "Handmaid's Tale",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_seventeen_tarkington_novel",
+        "score": 0.036665450082488074,
+        "text": "Seventeen (Tarkington novel)",
+        "metadata": {
+          "canonical_name": "Seventeen (Tarkington novel)",
+          "aliases": [
+            "Seventeen",
+            "Seventeen Tarkington novel",
+            "Tarkington novel"
+          ],
+          "surface_forms": [
+            "Seventeen"
+          ],
+          "title_anchor": "Seventeen (Tarkington novel)"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+        "score": 0.04895814745521806,
+        "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+        "metadata": {
+          "title": "The Handmaid's Tale",
+          "chunk_id": "chunk:the_handmaid_s_tale_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Handmaid's Tale",
+              "relation": "is set in",
+              "tail": "Republic of Gilead"
+            },
+            {
+              "head": "Republic of Gilead",
+              "relation": "formed within",
+              "tail": "borders of former United States of America"
+            }
+          ],
+          "entities": [
+            "Handmaid's Tale",
+            "Republic of Gilead",
+            "United States of America"
+          ],
+          "entity_ids": [
+            "entity:borders_of_former_united_states_of_america",
+            "entity:republic_of_gilead",
+            "entity:title_anchor_the_handmaid_s_tale",
+            "entity:united_states_of_america"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+        "score": 0.03708418396636514,
+        "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.",
+        "metadata": {
+          "title": "New England",
+          "chunk_id": "chunk:new_england_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Maine",
+              "relation": "constitutes",
+              "tail": "nearly one-half of the total area of New England"
+            },
+            {
+              "head": "Maine",
+              "relation": "is",
+              "tail": "slightly smaller than Indiana"
+            }
+          ],
+          "entities": [
+            "Maine",
+            "New England",
+            "Indiana"
+          ],
+          "entity_ids": [
+            "entity:indiana",
+            "entity:maine",
+            "entity:nearly_one_half_of_the_total_area_of_new_england",
+            "entity:slightly_smaller_than_indiana",
+            "entity:title_anchor_new_england"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:seventeen_tarkington_novel_0_1_seventeen_takes_place_in_a_small_city_in_the_midwestern_united_states_shortly",
+        "score": 0.03577040645436281,
+        "text": "\"Seventeen\" takes place in a small city in the Midwestern United States shortly before World War I.",
+        "metadata": {
+          "title": "Seventeen (Tarkington novel)",
+          "chunk_id": "chunk:seventeen_tarkington_novel_0",
+          "sentence_index": 1,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Seventeen",
+              "relation": "takes place in",
+              "tail": "small city in the Midwestern United States"
+            },
+            {
+              "head": "Seventeen",
+              "relation": "occurs shortly before",
+              "tail": "World War I"
+            }
+          ],
+          "entities": [
+            "Seventeen",
+            "World War I"
+          ],
+          "entity_ids": [
+            "entity:small_city_in_the_midwestern_united_states",
+            "entity:title_anchor_seventeen_tarkington_novel",
+            "entity:world_war_i"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_last_crossing_0_0_a_rethinking_of_the_genre_of_the_western_the_last_crossing_is_a_tale_of_int",
+        "score": 0.032591756963766046,
+        "text": "A rethinking of the genre of the \"western\", \"The Last Crossing\" is a tale of interwoven lives and stories taking place in the last half of the 19th century, travelling from England to the United States and the Canadian west.",
+        "metadata": {
+          "title": "The Last Crossing",
+          "chunk_id": "chunk:the_last_crossing_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Last Crossing",
+              "relation": "travels from",
+              "tail": "England to the United States and the Canadian west"
+            }
+          ],
+          "entities": [
+            "Last Crossing",
+            "England",
+            "Canadian west"
+          ],
+          "entity_ids": [
+            "entity:canadian_west",
+            "entity:england",
+            "entity:england_to_the_united_states_and_the_canadian_west",
+            "entity:title_anchor_the_last_crossing"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_handmaid_s_tale_0",
+        "score": 0.026091060717042126,
+        "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+        "metadata": {
+          "title": "The Handmaid's Tale",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:borders_of_former_united_states_of_america",
+            "entity:canadian",
+            "entity:canadian_author",
+            "entity:canterbury_tales",
+            "entity:christian_theonomy",
+            "entity:fred",
+            "entity:geoffrey_chaucer",
+            "entity:margaret_atwood",
+            "entity:merchant_s_tale",
+            "entity:new_england",
+            "entity:offred",
+            "entity:parson_s_tale",
+            "entity:republic_of_gilead",
+            "entity:title_anchor_the_handmaid_s_tale",
+            "entity:totalitarian_christian_theonomy",
+            "entity:united_states_government",
+            "entity:united_states_of_america"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:seventeen_tarkington_novel_0",
+        "score": 0.014064630445216367,
+        "text": "Seventeen (Tarkington novel)\nSeventeen: A Tale of Youth and Summer Time and the Baxter Family Especially William is a humorous novel by Booth Tarkington that gently satirizes first love, in the person of a callow 17-year-old, William Sylvanus Baxter. \"Seventeen\" takes place in a small city in the Midwestern United States shortly before World War I. It was published as sketches in the \"Metropolitan Magazine\" in 1914, and collected in a single volume in 1916, when it was the bestselling novel in the United States.",
+        "metadata": {
+          "title": "Seventeen (Tarkington novel)",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:booth_tarkington",
+            "entity:metropolitan_magazine",
+            "entity:small_city_in_the_midwestern_united_states",
+            "entity:title_anchor_seventeen_tarkington_novel",
+            "entity:william_sylvanus_baxter",
+            "entity:world_war_i"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:new_england_0",
+        "score": 0.013169962309367313,
+        "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+        "metadata": {
+          "title": "New England",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:england",
+            "entity:indiana",
+            "entity:maine",
+            "entity:nearly_one_half_of_the_total_area_of_new_england",
+            "entity:rhode_island",
+            "entity:slightly_smaller_than_indiana",
+            "entity:state_of_washington",
+            "entity:title_anchor_new_england",
+            "entity:washington"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_last_crossing_0",
+        "score": 0.010241188815559998,
+        "text": "The Last Crossing\nA rethinking of the genre of the \"western\", \"The Last Crossing\" is a tale of interwoven lives and stories taking place in the last half of the 19th century, travelling from England to the United States and the Canadian west.",
+        "metadata": {
+          "title": "The Last Crossing",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:canadian_west",
+            "entity:england",
+            "entity:england_to_the_united_states_and_the_canadian_west",
+            "entity:title_anchor_the_last_crossing"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Handmaid's Tale\nThe Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).\n\nNew England\nNew England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.\n\nSeventeen (Tarkington novel)\nSeventeen (Tarkington novel)\nSeventeen: A Tale of Youth and Summer Time and the Baxter Family Especially William is a humorous novel by Booth Tarkington that gently satirizes first love, in the person of a callow 17-year-old, William Sylvanus Baxter. \"Seventeen\" takes place in a small city in the Midwestern United States shortly before World War I. It was published as sketches in the \"Metropolitan Magazine\" in 1914, and collected in a single volume in 1916, when it was the bestselling novel in the United States.\n\nThe Last Crossing\nThe Last Crossing\nA rethinking of the genre of the \"western\", \"The Last Crossing\" is a tale of interwoven lives and stories taking place in the last half of the 19th century, travelling from England to the United States and the Canadian west.\n\nThe Handmaid's Tale (TV series)\nThe Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.\n\nThe Handmaid's Tale\nThe Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.\n\nThe Handmaid's Tale\nThe Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood.\n\nNew England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.\n\nNew England\nMaine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.\n\nSamira Wiley\nSamira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale, for which she was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series.\n\nNew York City\nNew York City\nThe New York metropolitan area is home to a self-identifying gay and bisexual community estimated at 568,903 individuals, the largest in the United States and one of the world's largest. Same-sex marriages in New York were legalized on June 24, 2011 and were authorized to take place beginning 30 days thereafter.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:the_handmaid_s_tale_0",
+        "passage_index": 15,
+        "title": "The Handmaid's Tale",
+        "score": 0.12922808183656742,
+        "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+        "score_breakdown": {
+          "dense": 0.10238651378625528,
+          "graph": 0.10999021332421631,
+          "fact": 0.26612290171241415
+        }
+      },
+      {
+        "node_id": "chunk:new_england_0",
+        "passage_index": 17,
+        "title": "New England",
+        "score": 0.12308398918360287,
+        "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+        "score_breakdown": {
+          "dense": 0.10199393419425874,
+          "graph": 0.10293026241429838,
+          "fact": 0.240721644349807
+        }
+      },
+      {
+        "node_id": "chunk:seventeen_tarkington_novel_0",
+        "passage_index": 1,
+        "title": "Seventeen (Tarkington novel)",
+        "score": 0.12277714730483236,
+        "text": "Seventeen (Tarkington novel)\nSeventeen: A Tale of Youth and Summer Time and the Baxter Family Especially William is a humorous novel by Booth Tarkington that gently satirizes first love, in the person of a callow 17-year-old, William Sylvanus Baxter. \"Seventeen\" takes place in a small city in the Midwestern United States shortly before World War I. It was published as sketches in the \"Metropolitan Magazine\" in 1914, and collected in a single volume in 1916, when it was the bestselling novel in the United States.",
+        "score_breakdown": {
+          "dense": 0.09914044643853359,
+          "graph": 0.10297757404933178,
+          "fact": 0.24904419699226227
+        }
+      },
+      {
+        "node_id": "chunk:the_last_crossing_0",
+        "passage_index": 12,
+        "title": "The Last Crossing",
+        "score": 0.12158430078813909,
+        "text": "The Last Crossing\nA rethinking of the genre of the \"western\", \"The Last Crossing\" is a tale of interwoven lives and stories taking place in the last half of the 19th century, travelling from England to the United States and the Canadian west.",
+        "score_breakdown": {
+          "dense": 0.09936921666813377,
+          "graph": 0.1010484769294601,
+          "fact": 0.2441112569455165
+        }
+      },
+      {
+        "node_id": "chunk:the_handmaid_s_tale_tv_series_0",
+        "passage_index": 18,
+        "title": "The Handmaid's Tale (TV series)",
+        "score": 0.08535814080227287,
+        "text": "The Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.",
+        "score_breakdown": {
+          "dense": 0.10119019838872778,
+          "graph": 0.09901177229490862,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:samira_wiley_0",
+        "passage_index": 13,
+        "title": "Samira Wiley",
+        "score": 0.0842732237308389,
+        "text": "Samira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale, for which she was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series.",
+        "score_breakdown": {
+          "dense": 0.09943782335422836,
+          "graph": 0.0986080696200443,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:new_york_city_0",
+        "passage_index": 19,
+        "title": "New York City",
+        "score": 0.0837096576542894,
+        "text": "New York City\nThe New York metropolitan area is home to a self-identifying gay and bisexual community estimated at 568,903 individuals, the largest in the United States and one of the world's largest. Same-sex marriages in New York were legalized on June 24, 2011 and were authorized to take place beginning 30 days thereafter.",
+        "score_breakdown": {
+          "dense": 0.09963304674831155,
+          "graph": 0.0963716064757268,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sure_of_you_0",
+        "passage_index": 16,
+        "title": "Sure of You",
+        "score": 0.08344504184704492,
+        "text": "Sure of You\nSure of You (1989) is the sixth book in the \"Tales of the City\" series by San Francisco novelist Armistead Maupin. The story takes place around the eve of the 1988 presidential election in the U.S., three years after the previous book \"Significant Others\". The book was written as the end to the Tales series and is the antithesis of the first book.",
+        "score_breakdown": {
+          "dense": 0.09916245460273422,
+          "graph": 0.09635230605180364,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ancilla_college_0",
+        "passage_index": 6,
+        "title": "Ancilla College",
+        "score": 0.08340803713500014,
+        "text": "Ancilla College\nAncilla College, near Donaldson, Indiana, is a two-year private liberal arts college that admits both men and women students. Ancilla College was founded by the Poor Handmaids of Jesus Christ in 1937 as an extension of DePaul University for the training of novices and candidates of the Poor Handmaids of Jesus Christ. In 1966 the college started admitting the public as a private liberal arts community college. Ancilla College focuses on serving the seven surrounding counties of Indiana. Ancilla College grants associate degrees in multiple programs, from which Ancilla graduates may easily transfer to a four-year college or university, especially via the transfer agreements that Ancilla College has with 14 Indiana colleges and universities. The Latin word \"ancilla\" means \"handmaid or servant,\" a reference to the college's sponsor, The Poor Handmaids of Jesus Christ.",
+        "score_breakdown": {
+          "dense": 0.09907242559826185,
+          "graph": 0.09639401018652038,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:1990_recopa_sudamericana_0",
+        "passage_index": 3,
+        "title": "1990 Recopa Sudamericana",
+        "score": 0.08313237971741207,
+        "text": "1990 Recopa Sudamericana\nThe 1990 Recopa Sudamericana was the second Recopa Sudamericana, an annual football match between the winners of the previous season's Copa Libertadores and Supercopa Sudamericana competitions. Originally, the title was to supposed to be disputed on a two-legged series. Due to security concerns on the eventual, first leg in Colombia and schedule congestion a neutral stadium was chosen for the match to take place. The Orange Bowl in Miami became the venue for this year's Recopa Sudamericana final.",
+        "score_breakdown": {
+          "dense": 0.09861394022055486,
+          "graph": 0.09631570865368963,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where does The Handmaid's Tale take place?",
+        "resolved_sub_question": "Where does The Handmaid's Tale take place?",
+        "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+        "sentence": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+        "score": 0.5426295999999999,
+        "source_title": "The Handmaid's Tale",
+        "hop_answer": "New England",
+        "hop_thought": "The Handmaid's Tale takes place in the Republic of Gilead, which is located within the borders of what was formerly the United States of America, specifically in a near-future New England.",
+        "hop_raw_response": "The Handmaid's Tale takes place in the Republic of Gilead, which is located within the borders of what was formerly the United States of America, specifically in a near-future New England.\nAnswer: New England",
+        "evidence_passages": [
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+          },
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.)."
+          },
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood."
+          }
+        ]
+      },
+      {
+        "sub_question": "What states are in this region?",
+        "resolved_sub_question": "What states are in this region? Context: New England.",
+        "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+        "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+        "score": 0.5544045219532013,
+        "source_title": "New England",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not explicitly list the states that are in New England, but it is known from common knowledge that New England consists of six states: Maine, Vermont, New Hampshire, Massachusetts, Connecticut, and Rhode Island. However, since the evidence does not directly state these states, the correct response based on the given instruction would be 'Unknown'.",
+        "hop_raw_response": "The context provided does not explicitly list the states that are in New England, but it is known from common knowledge that New England consists of six states: Maine, Vermont, New Hampshire, Massachusetts, Connecticut, and Rhode Island. However, since the evidence does not directly state these states, the correct response based on the given instruction would be 'Unknown'.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "New England",
+            "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+          },
+          {
+            "title": "New England",
+            "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+          },
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which of these states is the largest?",
+        "resolved_sub_question": "Which of these states is the largest? Context: New England.",
+        "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+        "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+        "score": 0.5039937397327423,
+        "source_title": "New England",
+        "hop_answer": "Maine",
+        "hop_thought": "The context indicates that Maine constitutes nearly one-half of the total area of New England, suggesting it is the largest state within the region.",
+        "hop_raw_response": "The context indicates that Maine constitutes nearly one-half of the total area of New England, suggesting it is the largest state within the region.\nAnswer: Maine",
+        "evidence_passages": [
+          {
+            "title": "New England",
+            "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+          },
+          {
+            "title": "New England",
+            "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+          },
+          {
+            "title": "New England",
+            "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where does The Handmaid's Tale take place? => New England (source: The Handmaid's Tale)\n2. What states are in this region? (source: New England)\n3. Which of these states is the largest? => Maine (source: New England)\n\nFact hints:\n- Maine constitutes nearly one-half of the total area of New England\n- Maine is slightly smaller than Indiana\n- Handmaid's Tale is set in Republic of Gilead\n\nWikipedia Title: New England\nMaine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. New England The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.\n\nWikipedia Title: The Handmaid's Tale\nSet in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The Handmaid's Tale The Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood.\n\nWikipedia Title: The Handmaid's Tale (TV series)\nThe Handmaid's Tale (TV series) The Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.\n\nWikipedia Title: Samira Wiley\nShe is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale, for which she was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series. Samira Wiley Samira Wiley (born April 15, 1987) is an American actress and model.\n\nWikipedia Title: New York City\nNew York City The New York metropolitan area is home to a self-identifying gay and bisexual community estimated at 568,903 individuals, the largest in the United States and one of the world's largest. Same-sex marriages in New York were legalized on June 24, 2011 and were authorized to take place beginning 30 days thereafter.\n\nQuestion: What is the largest state in the region where the Handmaid's Tale takes place?\nDraft Answer: Maine\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The Handmaid's Tale takes place in New England, and among the states in this region, Maine is the largest.",
+  "predicted_answer": "Maine",
+  "qa_raw_response": "{\n  \"thought\": \"The Handmaid's Tale takes place in New England, and among the states in this region, Maine is the largest.\",\n  \"answer\": \"Maine\",\n  \"support\": \"Maine alone constitutes nearly one - half of the total area of New England\"\n}"
+}

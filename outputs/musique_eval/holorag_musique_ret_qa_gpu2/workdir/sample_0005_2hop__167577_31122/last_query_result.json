@@ -1,0 +1,945 @@
+{
+  "query": "What century did the author of A Treatise Concerning the Principles of Human Knowledge live in?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "A Treatise Concerning the Principles of Human Knowledge"
+  ],
+  "raw_query_entities": [
+    "Treatise Concerning the Principles of Human Knowledge"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Treatise Concerning the Principles of Human Knowledge",
+      "node_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "resolved_text": "A Treatise Concerning the Principles of Human Knowledge",
+      "score": 0.7510545454545455,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.8,
+      "compatibility_score": 0.39,
+      "score_margin": 0.2227212121212122,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the author of A Treatise Concerning the Principles of Human Knowledge?",
+    "What century did this author live in?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "score": 1.097899241878192,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "score": 0.408218474176928,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:essay_concerning_human_understanding",
+      "score": 0.35672949211151284,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:english",
+      "score": 0.309371275005008,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:george_berkeley",
+      "score": 0.2518753135289691,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "score": 0.2429543013754726,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:treatise",
+      "score": 0.21439052067958259,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:irish_empiricist_philosopher",
+      "score": 0.13437021636952026,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:locke",
+      "score": 0.13383656045122086,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:john_locke",
+      "score": 0.11436590651363554,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:berkeley",
+      "score": 0.11435701905665178,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_1_this_book_largely_seeks_to_refute_the_claims_made_by_berkele",
+      "score": 0.046336983666500756,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:treatise_concerning_the_principles_of_human_knowledge_was_written_by_george_berkeley_sentence_a_treatise_concerning_the_",
+      "text": "Treatise Concerning the Principles of Human Knowledge was written by George Berkeley",
+      "head_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "tail_id": "entity:george_berkeley",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "document_index": 10,
+      "score": 0.36654318310124195
+    },
+    {
+      "fact_id": "fact:treatise_concerning_the_principles_of_human_knowledge_is_in_language_english_sentence_a_treatise_concerning_the_principl",
+      "text": "Treatise Concerning the Principles of Human Knowledge is in language English",
+      "head_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "tail_id": "entity:english",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "document_index": 10,
+      "score": 0.3065385513915281
+    },
+    {
+      "fact_id": "fact:treatise_concerning_the_principles_of_human_knowledge_is_also_known_as_treatise_sentence_a_treatise_concerning_the_princ",
+      "text": "Treatise Concerning the Principles of Human Knowledge is also known as Treatise",
+      "head_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "tail_id": "entity:treatise",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "document_index": 10,
+      "score": 0.21153753590438135
+    },
+    {
+      "fact_id": "fact:george_berkeley_is_a_irish_empiricist_philosopher_sentence_a_treatise_concerning_the_principles_of_human_knowledge_0_0_a",
+      "text": "George Berkeley is a Irish Empiricist philosopher",
+      "head_id": "entity:george_berkeley",
+      "tail_id": "entity:irish_empiricist_philosopher",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "document_index": 10,
+      "score": 0.13153160127524732
+    },
+    {
+      "fact_id": "fact:john_locke_is_contemporary_of_berkeley_sentence_a_treatise_concerning_the_principles_of_human_knowledge_0_1_this_book_la",
+      "text": "John Locke is contemporary of Berkeley",
+      "head_id": "entity:john_locke",
+      "tail_id": "entity:berkeley",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_1_this_book_largely_seeks_to_refute_the_claims_made_by_berkele",
+      "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "document_index": 10,
+      "score": 0.11153046704268404
+    }
+  ],
+  "bridge_entities": [
+    "George Berkeley",
+    "English",
+    "Treatise",
+    "Irish Empiricist philosopher"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the author of A Treatise Concerning the Principles of Human Knowledge?",
+      "resolved_sub_question": "Who is the author of A Treatise Concerning the Principles of Human Knowledge?",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "sentence": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.",
+      "score": 0.6252279999999999,
+      "source_title": "A Treatise Concerning the Principles of Human Knowledge",
+      "hop_answer": "George Berkeley",
+      "hop_thought": "The text clearly states that A Treatise Concerning the Principles of Human Knowledge is a work by Irish Empiricist philosopher George Berkeley.",
+      "hop_raw_response": "The text clearly states that A Treatise Concerning the Principles of Human Knowledge is a work by Irish Empiricist philosopher George Berkeley.\nAnswer: George Berkeley",
+      "evidence_passages": [
+        {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "text": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley."
+        },
+        {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God."
+        },
+        {
+          "title": "Idealism",
+          "text": "This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism."
+        }
+      ]
+    },
+    {
+      "sub_question": "What century did this author live in?",
+      "resolved_sub_question": "What century did this author live in? Context: George Berkeley.",
+      "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "sentence": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.",
+      "score": 0.48577777777777775,
+      "source_title": "A Treatise Concerning the Principles of Human Knowledge",
+      "hop_answer": "18th century",
+      "hop_thought": "George Berkeley is mentioned as reviving idealism in the 18th century.",
+      "hop_raw_response": "George Berkeley is mentioned as reviving idealism in the 18th century.\nAnswer: 18th century",
+      "evidence_passages": [
+        {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "text": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley."
+        },
+        {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God."
+        },
+        {
+          "title": "Idealism",
+          "text": "This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+      "score": 0.18604359093784578,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+      "score": 0.16532009154915486,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:george_berkeley",
+      "score": 0.06510211593773431,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:essay_concerning_human_understanding",
+      "score": 0.0629645118344005,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:english",
+      "score": 0.061248041814500616,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:treatise",
+      "score": 0.049427294987784025,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "score": 0.042672412610507214,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:irish_empiricist_philosopher",
+      "score": 0.03233474869580381,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:john_locke",
+      "score": 0.028999054929265574,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_1_this_book_largely_seeks_to_refute_the_claims_made_by_berkele",
+      "score": 0.024585316992005987,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:berkeley",
+      "score": 0.024573984802895722,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:tabula_rasa_0_0_the_modern_idea_of_the_theory_however_is_attributed_mostly_to_john_locke_s_exp",
+      "score": 0.024207180415769962,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:locke",
+      "score": 0.022414725763091493,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_2_whilst_like_all_the_empiricist_philosophers_both_locke_and_b",
+      "score": 0.012327061461491255,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:protestantism_0_4_the_members_of_a_congregation_had_the_right_to_elect_a_minister_and_if_necessar",
+      "score": 0.01224509931396575,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:idealism_0_3_this_turn_toward_the_subjective_anticipated_empiricists_such_as_george_berkeley",
+      "score": 0.011578505049372361,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_3_berkeley_did_this_by_suggesting_that_ideas_can_only_resemble",
+      "score": 0.009251991974518668,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:architecture_0_4_the_notion_of_style_in_the_arts_was_not_developed_until_the_16th_century_with_t",
+      "score": 0.009131969897356512,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_4_this_world_is_or_at_least_was_given_logic_and_regularity_by_",
+      "score": 0.008191749591770658,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:christian",
+      "score": 0.005550931161611956,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+      "passage_index": 10,
+      "title": "A Treatise Concerning the Principles of Human Knowledge",
+      "score": 0.1938426379095749,
+      "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God.",
+      "score_breakdown": {
+        "dense": 0.050981640005226814,
+        "graph": 0.05267578635566718,
+        "fact": 1.0
+      }
+    },
+    {
+      "node_id": "chunk:tabula_rasa_0",
+      "passage_index": 1,
+      "title": "Tabula rasa",
+      "score": 0.040011515805818326,
+      "text": "Tabula rasa\nThe modern idea of the theory, however, is attributed mostly to John Locke's expression of the idea in Essay Concerning Human Understanding (he uses the term ``white paper ''in Book II, Chap. I, 2). In Locke's philosophy, tabula rasa was the theory that at birth the (human) mind is a`` blank slate'' without rules for processing data, and that data is added and rules for processing are formed solely by one's sensory experiences. The notion is central to Lockean empiricism; it serves as the starting point for Locke's subsequent explication (in Book II) of simple ideas and complex ideas. As understood by Locke, tabula rasa meant that the mind of the individual was born blank, and it also emphasized the freedom of individuals to author their own soul. Individuals are free to define the content of their character -- but basic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula",
+      "score_breakdown": {
+        "dense": 0.050110116709659626,
+        "graph": 0.0415031720516851,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:idealism_0",
+      "passage_index": 14,
+      "title": "Idealism",
+      "score": 0.039638276172869025,
+      "text": "Idealism\nThe earliest extant arguments that the world of experience is grounded in the mental derive from India and Greece. The Hindu idealists in India and the Greek Neoplatonists gave panentheistic arguments for an all-pervading consciousness as the ground or true nature of reality. In contrast, the Yogācāra school, which arose within Mahayana Buddhism in India in the 4th century CE, based its \"mind-only\" idealism to a greater extent on phenomenological analyses of personal experience. This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.",
+      "score_breakdown": {
+        "dense": 0.05017593927634002,
+        "graph": 0.04013836523627337,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:architecture_0",
+      "passage_index": 19,
+      "title": "Architecture",
+      "score": 0.03949618759169476,
+      "text": "Architecture\nAccording to Vitruvius, the architect should strive to fulfill each of these three attributes as well as possible. Leon Battista Alberti, who elaborates on the ideas of Vitruvius in his treatise, De Re Aedificatoria, saw beauty primarily as a matter of proportion, although ornament also played a part. For Alberti, the rules of proportion were those that governed the idealised human figure, the Golden mean. The most important aspect of beauty was therefore an inherent part of an object, rather than something applied superficially; and was based on universal, recognisable truths. The notion of style in the arts was not developed until the 16th century, with the writing of Vasari: by the 18th century, his Lives of the Most Excellent Painters, Sculptors, and Architects had been translated into Italian, French, Spanish and English.",
+      "score_breakdown": {
+        "dense": 0.05000293623649477,
+        "graph": 0.03998190887207544,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:protestantism_0",
+      "passage_index": 12,
+      "title": "Protestantism",
+      "score": 0.039436995704978925,
+      "text": "Protestantism\nIn the Middle Ages, the Church and the worldly authorities were closely related. Martin Luther separated the religious and the worldly realms in principle (doctrine of the two kingdoms). The believers were obliged to use reason to govern the worldly sphere in an orderly and peaceful way. Luther's doctrine of the priesthood of all believers upgraded the role of laymen in the church considerably. The members of a congregation had the right to elect a minister and, if necessary, to vote for his dismissal (Treatise On the right and authority of a Christian assembly or congregation to judge all doctrines and to call, install and dismiss teachers, as testified in Scripture; 1523). Calvin strengthened this basically democratic approach by including elected laymen (church elders, presbyters) in his representative church government. The Huguenots added regional synods and a national synod, whose members were elected by the congregations, to Calvin's system of church self-government. This system was taken over by the other reformed churches.",
+      "score_breakdown": {
+        "dense": 0.04983948357350121,
+        "graph": 0.04008426579851087,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:dezallier_d_argenville_0",
+      "passage_index": 11,
+      "title": "Dezallier d'Argenville",
+      "score": 0.0393158464818981,
+      "text": "Dezallier d'Argenville\nAntoine-Joseph Dezallier d'Argenville (Paris, 1 July 1680 – 29 November 1765), avocat to the Parlement de Paris and secretary to the king, was a connoisseur of gardening who laid out two for himself and his family, before writing \"La théorie et la pratique du jardinage\" (published anonymously, 1709; second edition, 1713), based on his experience and his reading. The majority of the illustrations were by Jean-Baptiste Alexandre Le Blond, who was credited as the author in the third edition, 1722. As the work of a gentleman rather than a gardener, as previous French books on gardening had all been, Dezallier d'Argenville's work was laid out like a treatise of architecture, addressed as much to the architect and the patron as to the practising gardener. As its title suggests, the treatise is composed of two parts: the theoretical principles of the art of fine gardening and its practical applications. The first section considers the principles of siting the \"maison de plaisance\" relative to its gardens, techniques of laying out geometric figures in parterres, avenues and formal tree plantations (\"bosquets\"), and the",
+      "score_breakdown": {
+        "dense": 0.05005341542228218,
+        "graph": 0.039288226665476336,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:karl_popper_1",
+      "passage_index": 4,
+      "title": "Karl Popper",
+      "score": 0.039302877831705045,
+      "text": "Karl Popper\nsuch, has an existence and evolution independent of any individual knowing subjects. The influence of World Three, in his view, on the individual human mind (World Two) is at least as strong as the influence of World One. In other words, the knowledge held by a given individual mind owes at least as much to the total accumulated wealth of human knowledge, made manifest, as to the world of direct experience. As such, the growth of human knowledge could be said to be a function of the independent evolution of World Three. Many contemporary philosophers, such as Daniel Dennett, have not embraced Popper's Three World conjecture, due mostly, it seems, to its resemblance to mind-body dualism.",
+      "score_breakdown": {
+        "dense": 0.05002364030832888,
+        "graph": 0.039299585540413864,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:karl_popper_0",
+      "passage_index": 4,
+      "title": "Karl Popper",
+      "score": 0.03929830774380874,
+      "text": "Karl Popper\nKnowledge, for Popper, was objective, both in the sense that it is objectively true (or truthlike), and also in the sense that knowledge has an ontological status (i.e., knowledge as object) independent of the knowing subject (Objective Knowledge: An Evolutionary Approach, 1972). He proposed three worlds: World One, being the physical world, or physical states; World Two, being the world of mind, or mental states, ideas, and perceptions; and World Three, being the body of human knowledge expressed in its manifold forms, or the products of the second world made manifest in the materials of the first world (i.e., books, papers, paintings, symphonies, and all the products of the human mind). World Three, he argued, was the product of individual human beings in exactly the same sense that an animal path is the product of individual animals, and that, as such, has an existence and evolution independent of any individual knowing subjects. The influence of World Three, in his view, on the individual human mind (World Two) is at least as strong as the influence of World One. In other",
+      "score_breakdown": {
+        "dense": 0.050009998745210525,
+        "graph": 0.0393093614464765,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tabula_rasa_1",
+      "passage_index": 1,
+      "title": "Tabula rasa",
+      "score": 0.039295815786339734,
+      "text": "Tabula rasa\nbasic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula rasa is frequently compared with Thomas Hobbes's viewpoint of human nature, in which humans are endowed with inherent mental content -- particularly with selfishness.",
+      "score_breakdown": {
+        "dense": 0.049957428352637244,
+        "graph": 0.039397433974630816,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:humanism_0",
+      "passage_index": 17,
+      "title": "Humanism",
+      "score": 0.03925145931154886,
+      "text": "Humanism\nReligious humanism is an integration of humanist ethical philosophy with religious rituals and beliefs that centre on human needs, interests, and abilities. Though practitioners of religious humanism did not officially organise under the name of \"humanism\" until the late 19th and early 20th centuries, non-theistic religions paired with human-centred ethical philosophy have a long history. The Cult of Reason (French: Culte de la Raison) was a religion based on deism devised during the French Revolution by Jacques Hébert, Pierre Gaspard Chaumette and their supporters. In 1793 during the French Revolution, the cathedral Notre Dame de Paris was turned into a \"Temple to Reason\" and for a time Lady Liberty replaced the Virgin Mary on several altars. In the 1850s, Auguste Comte, the Father of Sociology, founded Positivism, a \"religion of humanity\". One of the earliest forerunners of contemporary chartered humanist organisations was the Humanistic Religious Association formed in 1853 in London. This early group was democratically organised, with male and female members participating in the election of the leadership and promoted knowledge of the sciences, philosophy, and the arts. The",
+      "score_breakdown": {
+        "dense": 0.04992824817159106,
+        "graph": 0.039303076057245916,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+        "score": 0.18604359093784578,
+        "text": "A Treatise Concerning the Principles of Human Knowledge",
+        "metadata": {
+          "canonical_name": "A Treatise Concerning the Principles of Human Knowledge",
+          "aliases": [
+            "TCTPOHK",
+            "Treatise Concerning the Principles of Human Knowledge"
+          ],
+          "surface_forms": [
+            "TCTPOHK",
+            "Treatise Concerning the Principles of Human Knowledge"
+          ],
+          "title_anchor": "A Treatise Concerning the Principles of Human Knowledge"
+        }
+      },
+      {
+        "node_id": "entity:george_berkeley",
+        "score": 0.06510211593773431,
+        "text": "George Berkeley",
+        "metadata": {
+          "canonical_name": "George Berkeley",
+          "aliases": [
+            "GB",
+            "George Berkeley"
+          ],
+          "surface_forms": [
+            "GB",
+            "George Berkeley"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+        "score": 0.16532009154915486,
+        "text": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.",
+        "metadata": {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Treatise Concerning the Principles of Human Knowledge",
+              "relation": "is also known as",
+              "tail": "Treatise"
+            },
+            {
+              "head": "Treatise Concerning the Principles of Human Knowledge",
+              "relation": "is in language",
+              "tail": "English"
+            },
+            {
+              "head": "Treatise Concerning the Principles of Human Knowledge",
+              "relation": "was written by",
+              "tail": "George Berkeley"
+            },
+            {
+              "head": "George Berkeley",
+              "relation": "is a",
+              "tail": "Irish Empiricist philosopher"
+            }
+          ],
+          "entities": [
+            "Treatise Concerning the Principles of Human Knowledge",
+            "Treatise",
+            "English",
+            "George Berkeley",
+            "Irish Empiricist philosopher"
+          ],
+          "entity_ids": [
+            "entity:english",
+            "entity:george_berkeley",
+            "entity:irish_empiricist_philosopher",
+            "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+            "entity:treatise"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_1_this_book_largely_seeks_to_refute_the_claims_made_by_berkele",
+        "score": 0.024585316992005987,
+        "text": "This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception.",
+        "metadata": {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+          "sentence_index": 1,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "John Locke",
+              "relation": "is contemporary of",
+              "tail": "Berkeley"
+            }
+          ],
+          "entities": [
+            "Berkeley",
+            "John Locke"
+          ],
+          "entity_ids": [
+            "entity:berkeley",
+            "entity:john_locke"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:tabula_rasa_0_0_the_modern_idea_of_the_theory_however_is_attributed_mostly_to_john_locke_s_exp",
+        "score": 0.024207180415769962,
+        "text": "The modern idea of the theory, however, is attributed mostly to John Locke's expression of the idea in Essay Concerning Human Understanding (he uses the term ``white paper ''in Book II, Chap.",
+        "metadata": {
+          "title": "Tabula rasa",
+          "chunk_id": "chunk:tabula_rasa_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "John Locke",
+              "relation": "wrote",
+              "tail": "Essay Concerning Human Understanding"
+            }
+          ],
+          "entities": [
+            "John Locke",
+            "Essay Concerning Human Understanding",
+            "Book II Chap"
+          ],
+          "entity_ids": [
+            "entity:book_ii_chap",
+            "entity:essay_concerning_human_understanding",
+            "entity:john_locke"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_2_whilst_like_all_the_empiricist_philosophers_both_locke_and_b",
+        "score": 0.012327061461491255,
+        "text": "Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas.",
+        "metadata": {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "chunk_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+          "sentence_index": 2,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Locke",
+              "relation": "agreed with",
+              "tail": "Berkeley"
+            }
+          ],
+          "entities": [
+            "Locke",
+            "Berkeley",
+            "Empiricist philosophers"
+          ],
+          "entity_ids": [
+            "entity:berkeley",
+            "entity:empiricist_philosophers",
+            "entity:locke"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:protestantism_0_4_the_members_of_a_congregation_had_the_right_to_elect_a_minister_and_if_necessar",
+        "score": 0.01224509931396575,
+        "text": "The members of a congregation had the right to elect a minister and, if necessary, to vote for his dismissal (Treatise On the right and authority of a Christian assembly or congregation to judge all doctrines and to call, install and dismiss teachers, as testified in Scripture; 1523).",
+        "metadata": {
+          "title": "Protestantism",
+          "chunk_id": "chunk:protestantism_0",
+          "sentence_index": 4,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Treatise",
+              "relation": "related_to",
+              "tail": "Christian"
+            },
+            {
+              "head": "Christian",
+              "relation": "related_to",
+              "tail": "Scripture"
+            }
+          ],
+          "entities": [
+            "Treatise",
+            "Christian",
+            "Scripture"
+          ],
+          "entity_ids": [
+            "entity:christian",
+            "entity:scripture",
+            "entity:treatise"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:idealism_0_3_this_turn_toward_the_subjective_anticipated_empiricists_such_as_george_berkeley",
+        "score": 0.011578505049372361,
+        "text": "This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.",
+        "metadata": {
+          "title": "Idealism",
+          "chunk_id": "chunk:idealism_0",
+          "sentence_index": 3,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "George Berkeley",
+              "relation": "related_to",
+              "tail": "Europe"
+            }
+          ],
+          "entities": [
+            "George Berkeley",
+            "18th-century Europe"
+          ],
+          "entity_ids": [
+            "entity:18th_century_europe",
+            "entity:europe",
+            "entity:george_berkeley"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+        "score": 0.042672412610507214,
+        "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God.",
+        "metadata": {
+          "title": "A Treatise Concerning the Principles of Human Knowledge",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:berkeley",
+            "entity:empiricist_philosophers",
+            "entity:english",
+            "entity:george_berkeley",
+            "entity:god",
+            "entity:ideas_can_only_resemble_ideas",
+            "entity:irish_empiricist_philosopher",
+            "entity:john_locke",
+            "entity:locke",
+            "entity:title_anchor_a_treatise_concerning_the_principles_of_human_knowledge",
+            "entity:treatise"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:tabula_rasa_0",
+        "score": 0.0055253683352884785,
+        "text": "Tabula rasa\nThe modern idea of the theory, however, is attributed mostly to John Locke's expression of the idea in Essay Concerning Human Understanding (he uses the term ``white paper ''in Book II, Chap. I, 2). In Locke's philosophy, tabula rasa was the theory that at birth the (human) mind is a`` blank slate'' without rules for processing data, and that data is added and rules for processing are formed solely by one's sensory experiences. The notion is central to Lockean empiricism; it serves as the starting point for Locke's subsequent explication (in Book II) of simple ideas and complex ideas. As understood by Locke, tabula rasa meant that the mind of the individual was born blank, and it also emphasized the freedom of individuals to author their own soul. Individuals are free to define the content of their character -- but basic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula",
+        "metadata": {
+          "title": "Tabula rasa",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:as",
+            "entity:book_ii",
+            "entity:book_ii_chap",
+            "entity:essay_concerning_human_understanding",
+            "entity:individuals",
+            "entity:john_locke",
+            "entity:locke",
+            "entity:locke_s_subsequent_explication",
+            "entity:lockean_doctrine_of_natural_rights",
+            "entity:lockean_empiricism"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:idealism_0",
+        "score": 0.003094617561817254,
+        "text": "Idealism\nThe earliest extant arguments that the world of experience is grounded in the mental derive from India and Greece. The Hindu idealists in India and the Greek Neoplatonists gave panentheistic arguments for an all-pervading consciousness as the ground or true nature of reality. In contrast, the Yogācāra school, which arose within Mahayana Buddhism in India in the 4th century CE, based its \"mind-only\" idealism to a greater extent on phenomenological analyses of personal experience. This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.",
+        "metadata": {
+          "title": "Idealism",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:18th_century_europe",
+            "entity:4th_century_ce",
+            "entity:europe",
+            "entity:george_berkeley",
+            "entity:greece",
+            "entity:greek_neoplatonists",
+            "entity:hindu",
+            "entity:hindu_idealists",
+            "entity:india",
+            "entity:mahayana_buddhism",
+            "entity:yog_c_ra_school"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:protestantism_0",
+        "score": 0.00283890798647014,
+        "text": "Protestantism\nIn the Middle Ages, the Church and the worldly authorities were closely related. Martin Luther separated the religious and the worldly realms in principle (doctrine of the two kingdoms). The believers were obliged to use reason to govern the worldly sphere in an orderly and peaceful way. Luther's doctrine of the priesthood of all believers upgraded the role of laymen in the church considerably. The members of a congregation had the right to elect a minister and, if necessary, to vote for his dismissal (Treatise On the right and authority of a Christian assembly or congregation to judge all doctrines and to call, install and dismiss teachers, as testified in Scripture; 1523). Calvin strengthened this basically democratic approach by including elected laymen (church elders, presbyters) in his representative church government. The Huguenots added regional synods and a national synod, whose members were elected by the congregations, to Calvin's system of church self-government. This system was taken over by the other reformed churches.",
+        "metadata": {
+          "title": "Protestantism",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:calvin",
+            "entity:christian",
+            "entity:church",
+            "entity:huguenots",
+            "entity:luther",
+            "entity:martin_luther",
+            "entity:middle_ages",
+            "entity:scripture",
+            "entity:treatise"
+          ]
+        }
+      }
+    ],
+    "qa_context": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God.\n\nTabula rasa\nTabula rasa\nThe modern idea of the theory, however, is attributed mostly to John Locke's expression of the idea in Essay Concerning Human Understanding (he uses the term ``white paper ''in Book II, Chap. I, 2). In Locke's philosophy, tabula rasa was the theory that at birth the (human) mind is a`` blank slate'' without rules for processing data, and that data is added and rules for processing are formed solely by one's sensory experiences. The notion is central to Lockean empiricism; it serves as the starting point for Locke's subsequent explication (in Book II) of simple ideas and complex ideas. As understood by Locke, tabula rasa meant that the mind of the individual was born blank, and it also emphasized the freedom of individuals to author their own soul. Individuals are free to define the content of their character -- but basic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula\n\nIdealism\nIdealism\nThe earliest extant arguments that the world of experience is grounded in the mental derive from India and Greece. The Hindu idealists in India and the Greek Neoplatonists gave panentheistic arguments for an all-pervading consciousness as the ground or true nature of reality. In contrast, the Yogācāra school, which arose within Mahayana Buddhism in India in the 4th century CE, based its \"mind-only\" idealism to a greater extent on phenomenological analyses of personal experience. This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.\n\nArchitecture\nArchitecture\nAccording to Vitruvius, the architect should strive to fulfill each of these three attributes as well as possible. Leon Battista Alberti, who elaborates on the ideas of Vitruvius in his treatise, De Re Aedificatoria, saw beauty primarily as a matter of proportion, although ornament also played a part. For Alberti, the rules of proportion were those that governed the idealised human figure, the Golden mean. The most important aspect of beauty was therefore an inherent part of an object, rather than something applied superficially; and was based on universal, recognisable truths. The notion of style in the arts was not developed until the 16th century, with the writing of Vasari: by the 18th century, his Lives of the Most Excellent Painters, Sculptors, and Architects had been translated into Italian, French, Spanish and English.\n\nProtestantism\nProtestantism\nIn the Middle Ages, the Church and the worldly authorities were closely related. Martin Luther separated the religious and the worldly realms in principle (doctrine of the two kingdoms). The believers were obliged to use reason to govern the worldly sphere in an orderly and peaceful way. Luther's doctrine of the priesthood of all believers upgraded the role of laymen in the church considerably. The members of a congregation had the right to elect a minister and, if necessary, to vote for his dismissal (Treatise On the right and authority of a Christian assembly or congregation to judge all doctrines and to call, install and dismiss teachers, as testified in Scripture; 1523). Calvin strengthened this basically democratic approach by including elected laymen (church elders, presbyters) in his representative church government. The Huguenots added regional synods and a national synod, whose members were elected by the congregations, to Calvin's system of church self-government. This system was taken over by the other reformed churches.\n\nA Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.\n\nIdealism\nThis turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.\n\nDezallier d'Argenville\nDezallier d'Argenville\nAntoine-Joseph Dezallier d'Argenville (Paris, 1 July 1680 – 29 November 1765), avocat to the Parlement de Paris and secretary to the king, was a connoisseur of gardening who laid out two for himself and his family, before writing \"La théorie et la pratique du jardinage\" (published anonymously, 1709; second edition, 1713), based on his experience and his reading. The majority of the illustrations were by Jean-Baptiste Alexandre Le Blond, who was credited as the author in the third edition, 1722. As the work of a gentleman rather than a gardener, as previous French books on gardening had all been, Dezallier d'Argenville's work was laid out like a treatise of architecture, addressed as much to the architect and the patron as to the practising gardener. As its title suggests, the treatise is composed of two parts: the theoretical principles of the art of fine gardening and its practical applications. The first section considers the principles of siting the \"maison de plaisance\" relative to its gardens, techniques of laying out geometric figures in parterres, avenues and formal tree plantations (\"bosquets\"), and the\n\nHumanism\nHumanism\nReligious humanism is an integration of humanist ethical philosophy with religious rituals and beliefs that centre on human needs, interests, and abilities. Though practitioners of religious humanism did not officially organise under the name of \"humanism\" until the late 19th and early 20th centuries, non-theistic religions paired with human-centred ethical philosophy have a long history. The Cult of Reason (French: Culte de la Raison) was a religion based on deism devised during the French Revolution by Jacques Hébert, Pierre Gaspard Chaumette and their supporters. In 1793 during the French Revolution, the cathedral Notre Dame de Paris was turned into a \"Temple to Reason\" and for a time Lady Liberty replaced the Virgin Mary on several altars. In the 1850s, Auguste Comte, the Father of Sociology, founded Positivism, a \"religion of humanity\". One of the earliest forerunners of contemporary chartered humanist organisations was the Humanistic Religious Association formed in 1853 in London. This early group was democratically organised, with male and female members participating in the election of the leadership and promoted knowledge of the sciences, philosophy, and the arts. The\n\nKarl Popper\nKarl Popper\nKnowledge, for Popper, was objective, both in the sense that it is objectively true (or truthlike), and also in the sense that knowledge has an ontological status (i.e., knowledge as object) independent of the knowing subject (Objective Knowledge: An Evolutionary Approach, 1972). He proposed three worlds: World One, being the physical world, or physical states; World Two, being the world of mind, or mental states, ideas, and perceptions; and World Three, being the body of human knowledge expressed in its manifold forms, or the products of the second world made manifest in the materials of the first world (i.e., books, papers, paintings, symphonies, and all the products of the human mind). World Three, he argued, was the product of individual human beings in exactly the same sense that an animal path is the product of individual animals, and that, as such, has an existence and evolution independent of any individual knowing subjects. The influence of World Three, in his view, on the individual human mind (World Two) is at least as strong as the influence of World One. In other\n\nCulture\nCulture\nsocial practices such as kinship, gender and marriage, expressive forms such as art, music, dance, ritual, religion, and technologies such as cooking, shelter, clothing are said to be cultural universals, found in all human societies. The concept material culture covers the physical expressions of culture, such as technology, architecture and art, whereas the immaterial aspects of culture such as principles of social organization (including, practices of political organization and social institutions), mythology, philosophy, literature (both written and oral), and science make up the intangible cultural heritage of a society.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:a_treatise_concerning_the_principles_of_human_knowledge_0",
+        "passage_index": 10,
+        "title": "A Treatise Concerning the Principles of Human Knowledge",
+        "score": 0.1938426379095749,
+        "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God.",
+        "score_breakdown": {
+          "dense": 0.050981640005226814,
+          "graph": 0.05267578635566718,
+          "fact": 1.0
+        }
+      },
+      {
+        "node_id": "chunk:tabula_rasa_0",
+        "passage_index": 1,
+        "title": "Tabula rasa",
+        "score": 0.040011515805818326,
+        "text": "Tabula rasa\nThe modern idea of the theory, however, is attributed mostly to John Locke's expression of the idea in Essay Concerning Human Understanding (he uses the term ``white paper ''in Book II, Chap. I, 2). In Locke's philosophy, tabula rasa was the theory that at birth the (human) mind is a`` blank slate'' without rules for processing data, and that data is added and rules for processing are formed solely by one's sensory experiences. The notion is central to Lockean empiricism; it serves as the starting point for Locke's subsequent explication (in Book II) of simple ideas and complex ideas. As understood by Locke, tabula rasa meant that the mind of the individual was born blank, and it also emphasized the freedom of individuals to author their own soul. Individuals are free to define the content of their character -- but basic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula",
+        "score_breakdown": {
+          "dense": 0.050110116709659626,
+          "graph": 0.0415031720516851,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:idealism_0",
+        "passage_index": 14,
+        "title": "Idealism",
+        "score": 0.039638276172869025,
+        "text": "Idealism\nThe earliest extant arguments that the world of experience is grounded in the mental derive from India and Greece. The Hindu idealists in India and the Greek Neoplatonists gave panentheistic arguments for an all-pervading consciousness as the ground or true nature of reality. In contrast, the Yogācāra school, which arose within Mahayana Buddhism in India in the 4th century CE, based its \"mind-only\" idealism to a greater extent on phenomenological analyses of personal experience. This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.",
+        "score_breakdown": {
+          "dense": 0.05017593927634002,
+          "graph": 0.04013836523627337,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:architecture_0",
+        "passage_index": 19,
+        "title": "Architecture",
+        "score": 0.03949618759169476,
+        "text": "Architecture\nAccording to Vitruvius, the architect should strive to fulfill each of these three attributes as well as possible. Leon Battista Alberti, who elaborates on the ideas of Vitruvius in his treatise, De Re Aedificatoria, saw beauty primarily as a matter of proportion, although ornament also played a part. For Alberti, the rules of proportion were those that governed the idealised human figure, the Golden mean. The most important aspect of beauty was therefore an inherent part of an object, rather than something applied superficially; and was based on universal, recognisable truths. The notion of style in the arts was not developed until the 16th century, with the writing of Vasari: by the 18th century, his Lives of the Most Excellent Painters, Sculptors, and Architects had been translated into Italian, French, Spanish and English.",
+        "score_breakdown": {
+          "dense": 0.05000293623649477,
+          "graph": 0.03998190887207544,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:protestantism_0",
+        "passage_index": 12,
+        "title": "Protestantism",
+        "score": 0.039436995704978925,
+        "text": "Protestantism\nIn the Middle Ages, the Church and the worldly authorities were closely related. Martin Luther separated the religious and the worldly realms in principle (doctrine of the two kingdoms). The believers were obliged to use reason to govern the worldly sphere in an orderly and peaceful way. Luther's doctrine of the priesthood of all believers upgraded the role of laymen in the church considerably. The members of a congregation had the right to elect a minister and, if necessary, to vote for his dismissal (Treatise On the right and authority of a Christian assembly or congregation to judge all doctrines and to call, install and dismiss teachers, as testified in Scripture; 1523). Calvin strengthened this basically democratic approach by including elected laymen (church elders, presbyters) in his representative church government. The Huguenots added regional synods and a national synod, whose members were elected by the congregations, to Calvin's system of church self-government. This system was taken over by the other reformed churches.",
+        "score_breakdown": {
+          "dense": 0.04983948357350121,
+          "graph": 0.04008426579851087,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:dezallier_d_argenville_0",
+        "passage_index": 11,
+        "title": "Dezallier d'Argenville",
+        "score": 0.0393158464818981,
+        "text": "Dezallier d'Argenville\nAntoine-Joseph Dezallier d'Argenville (Paris, 1 July 1680 – 29 November 1765), avocat to the Parlement de Paris and secretary to the king, was a connoisseur of gardening who laid out two for himself and his family, before writing \"La théorie et la pratique du jardinage\" (published anonymously, 1709; second edition, 1713), based on his experience and his reading. The majority of the illustrations were by Jean-Baptiste Alexandre Le Blond, who was credited as the author in the third edition, 1722. As the work of a gentleman rather than a gardener, as previous French books on gardening had all been, Dezallier d'Argenville's work was laid out like a treatise of architecture, addressed as much to the architect and the patron as to the practising gardener. As its title suggests, the treatise is composed of two parts: the theoretical principles of the art of fine gardening and its practical applications. The first section considers the principles of siting the \"maison de plaisance\" relative to its gardens, techniques of laying out geometric figures in parterres, avenues and formal tree plantations (\"bosquets\"), and the",
+        "score_breakdown": {
+          "dense": 0.05005341542228218,
+          "graph": 0.039288226665476336,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:karl_popper_1",
+        "passage_index": 4,
+        "title": "Karl Popper",
+        "score": 0.039302877831705045,
+        "text": "Karl Popper\nsuch, has an existence and evolution independent of any individual knowing subjects. The influence of World Three, in his view, on the individual human mind (World Two) is at least as strong as the influence of World One. In other words, the knowledge held by a given individual mind owes at least as much to the total accumulated wealth of human knowledge, made manifest, as to the world of direct experience. As such, the growth of human knowledge could be said to be a function of the independent evolution of World Three. Many contemporary philosophers, such as Daniel Dennett, have not embraced Popper's Three World conjecture, due mostly, it seems, to its resemblance to mind-body dualism.",
+        "score_breakdown": {
+          "dense": 0.05002364030832888,
+          "graph": 0.039299585540413864,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:karl_popper_0",
+        "passage_index": 4,
+        "title": "Karl Popper",
+        "score": 0.03929830774380874,
+        "text": "Karl Popper\nKnowledge, for Popper, was objective, both in the sense that it is objectively true (or truthlike), and also in the sense that knowledge has an ontological status (i.e., knowledge as object) independent of the knowing subject (Objective Knowledge: An Evolutionary Approach, 1972). He proposed three worlds: World One, being the physical world, or physical states; World Two, being the world of mind, or mental states, ideas, and perceptions; and World Three, being the body of human knowledge expressed in its manifold forms, or the products of the second world made manifest in the materials of the first world (i.e., books, papers, paintings, symphonies, and all the products of the human mind). World Three, he argued, was the product of individual human beings in exactly the same sense that an animal path is the product of individual animals, and that, as such, has an existence and evolution independent of any individual knowing subjects. The influence of World Three, in his view, on the individual human mind (World Two) is at least as strong as the influence of World One. In other",
+        "score_breakdown": {
+          "dense": 0.050009998745210525,
+          "graph": 0.0393093614464765,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tabula_rasa_1",
+        "passage_index": 1,
+        "title": "Tabula rasa",
+        "score": 0.039295815786339734,
+        "text": "Tabula rasa\nbasic identity as a member of the human species can not be altered. This presumption of a free, self - authored mind combined with an immutable human nature leads to the Lockean doctrine of ``natural ''rights. Locke's idea of tabula rasa is frequently compared with Thomas Hobbes's viewpoint of human nature, in which humans are endowed with inherent mental content -- particularly with selfishness.",
+        "score_breakdown": {
+          "dense": 0.049957428352637244,
+          "graph": 0.039397433974630816,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:humanism_0",
+        "passage_index": 17,
+        "title": "Humanism",
+        "score": 0.03925145931154886,
+        "text": "Humanism\nReligious humanism is an integration of humanist ethical philosophy with religious rituals and beliefs that centre on human needs, interests, and abilities. Though practitioners of religious humanism did not officially organise under the name of \"humanism\" until the late 19th and early 20th centuries, non-theistic religions paired with human-centred ethical philosophy have a long history. The Cult of Reason (French: Culte de la Raison) was a religion based on deism devised during the French Revolution by Jacques Hébert, Pierre Gaspard Chaumette and their supporters. In 1793 during the French Revolution, the cathedral Notre Dame de Paris was turned into a \"Temple to Reason\" and for a time Lady Liberty replaced the Virgin Mary on several altars. In the 1850s, Auguste Comte, the Father of Sociology, founded Positivism, a \"religion of humanity\". One of the earliest forerunners of contemporary chartered humanist organisations was the Humanistic Religious Association formed in 1853 in London. This early group was democratically organised, with male and female members participating in the election of the leadership and promoted knowledge of the sciences, philosophy, and the arts. The",
+        "score_breakdown": {
+          "dense": 0.04992824817159106,
+          "graph": 0.039303076057245916,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the author of A Treatise Concerning the Principles of Human Knowledge?",
+        "resolved_sub_question": "Who is the author of A Treatise Concerning the Principles of Human Knowledge?",
+        "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+        "sentence": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.",
+        "score": 0.6252279999999999,
+        "source_title": "A Treatise Concerning the Principles of Human Knowledge",
+        "hop_answer": "George Berkeley",
+        "hop_thought": "The text clearly states that A Treatise Concerning the Principles of Human Knowledge is a work by Irish Empiricist philosopher George Berkeley.",
+        "hop_raw_response": "The text clearly states that A Treatise Concerning the Principles of Human Knowledge is a work by Irish Empiricist philosopher George Berkeley.\nAnswer: George Berkeley",
+        "evidence_passages": [
+          {
+            "title": "A Treatise Concerning the Principles of Human Knowledge",
+            "text": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley."
+          },
+          {
+            "title": "A Treatise Concerning the Principles of Human Knowledge",
+            "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God."
+          },
+          {
+            "title": "Idealism",
+            "text": "This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism."
+          }
+        ]
+      },
+      {
+        "sub_question": "What century did this author live in?",
+        "resolved_sub_question": "What century did this author live in? Context: George Berkeley.",
+        "sentence_id": "sentence:a_treatise_concerning_the_principles_of_human_knowledge_0_0_a_treatise_concerning_the_principles_of_human_knowledge_comm",
+        "sentence": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley.",
+        "score": 0.48577777777777775,
+        "source_title": "A Treatise Concerning the Principles of Human Knowledge",
+        "hop_answer": "18th century",
+        "hop_thought": "George Berkeley is mentioned as reviving idealism in the 18th century.",
+        "hop_raw_response": "George Berkeley is mentioned as reviving idealism in the 18th century.\nAnswer: 18th century",
+        "evidence_passages": [
+          {
+            "title": "A Treatise Concerning the Principles of Human Knowledge",
+            "text": "A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley."
+          },
+          {
+            "title": "A Treatise Concerning the Principles of Human Knowledge",
+            "text": "A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. This book largely seeks to refute the claims made by Berkeley's contemporary John Locke about the nature of human perception. Whilst, like all the Empiricist philosophers, both Locke and Berkeley agreed that we are having experiences, regardless of whether material objects exist, Berkeley sought to prove that the outside world (the world which causes the ideas one has within one's mind) is also composed \"solely\" of ideas. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas. This world is (or, at least, was) given logic and regularity by some other force, which Berkeley concludes is God."
+          },
+          {
+            "title": "Idealism",
+            "text": "This turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the author of A Treatise Concerning the Principles of Human Knowledge? => George Berkeley (source: A Treatise Concerning the Principles of Human Knowledge)\n2. What century did this author live in? => 18th century (source: A Treatise Concerning the Principles of Human Knowledge)\n\nFact hints:\n- Treatise Concerning the Principles of Human Knowledge was written by George Berkeley\n- Treatise Concerning the Principles of Human Knowledge is in language English\n- Treatise Concerning the Principles of Human Knowledge is also known as Treatise\n- George Berkeley is a Irish Empiricist philosopher\n\nWikipedia Title: A Treatise Concerning the Principles of Human Knowledge\nA Treatise Concerning the Principles of Human Knowledge A Treatise Concerning the Principles of Human Knowledge (commonly called Treatise when referring to Berkeley's works) is a 1710 work, in English, by Irish Empiricist philosopher George Berkeley. Berkeley did this by suggesting that \"Ideas can only resemble Ideas\" – the mental ideas that we possess can only resemble other ideas (not material objects) and thus the external world consists not of physical form, but rather of ideas.\n\nWikipedia Title: Idealism\nThis turn toward the subjective anticipated empiricists such as George Berkeley, who revived idealism in 18th-century Europe by employing skeptical arguments against materialism.\n\nWikipedia Title: Architecture\nThe notion of style in the arts was not developed until the 16th century, with the writing of Vasari: by the 18th century, his Lives of the Most Excellent Painters, Sculptors, and Architects had been translated into Italian, French, Spanish and English. Leon Battista Alberti, who elaborates on the ideas of Vitruvius in his treatise, De Re Aedificatoria, saw beauty primarily as a matter of proportion, although ornament also played a part.\n\nWikipedia Title: Dezallier d'Argenville\nAs its title suggests, the treatise is composed of two parts: the theoretical principles of the art of fine gardening and its practical applications. The majority of the illustrations were by Jean-Baptiste Alexandre Le Blond, who was credited as the author in the third edition, 1722.\n\nWikipedia Title: Humanism\nThough practitioners of religious humanism did not officially organise under the name of \"humanism\" until the late 19th and early 20th centuries, non-theistic religions paired with human-centred ethical philosophy have a long history. This early group was democratically organised, with male and female members participating in the election of the leadership and promoted knowledge of the sciences, philosophy, and the arts.\n\nQuestion: What century did the author of A Treatise Concerning the Principles of Human Knowledge live in?\nDraft Answer: 18th century\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The question asks for the century in which George Berkeley lived. The passage about Idealism mentions that Berkeley revived idealism in 18th-century Europe, which provides the necessary information.",
+  "predicted_answer": "18th century",
+  "qa_raw_response": "{\n  \"thought\": \"The question asks for the century in which George Berkeley lived. The passage about Idealism mentions that Berkeley revived idealism in 18th-century Europe, which provides the necessary information.\",\n  \"answer\": \"18th century\",\n  \"support\": \"George Berkeley, who revived idealism in 18th-century Europe\"\n}"
+}

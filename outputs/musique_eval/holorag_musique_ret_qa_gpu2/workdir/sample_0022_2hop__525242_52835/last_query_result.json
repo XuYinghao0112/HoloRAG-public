@@ -1,0 +1,1051 @@
+{
+  "query": "Who wrote \"Turn Me On\" by performer of \"Happy Pills\"?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Happy Pills (song)"
+  ],
+  "raw_query_entities": [
+    "Turn Me",
+    "Happy Pills"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Turn Me",
+      "node_id": "entity:title_anchor_turn_me_on_mark_dinning_song",
+      "resolved_text": "Turn Me On (Mark Dinning song)",
+      "score": 0.6281333333333333,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.36000000000000004,
+      "compatibility_score": 0.185,
+      "score_margin": 0.15413333333333334,
+      "confident": false
+    },
+    {
+      "mention": "Happy Pills",
+      "node_id": "entity:title_anchor_happy_pills_song",
+      "resolved_text": "Happy Pills (song)",
+      "score": 0.7924666666666669,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.2366666666666669,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is the name of the performer of the song 'Happy Pills'?",
+    "Who wrote the song 'Turn Me On' performed by this artist?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_happy_pills_song",
+      "score": 1.095878151066862,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_zephroniidae",
+      "score": 0.256485047364077,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sphaerotheriida",
+      "score": 0.256485047364077,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ren_jacques_ducos",
+      "score": 0.23435078081022492,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:norah_jones",
+      "score": 0.19096374483247974,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_jacques_pills",
+      "score": 0.18937193180328374,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "score": 0.17992342609202705,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:turn_me_on_2003",
+      "score": 0.17937189503233794,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:american_singer_songwriter",
+      "score": 0.15434684472939478,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september_1970_was_a_french_s",
+      "score": 0.15133097531281084,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:tulle_france",
+      "score": 0.1421436181302233,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:single",
+      "score": 0.12223122132264355,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:happy_pills_is_a_song_by_norah_jones_sentence_happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwrit",
+      "text": "Happy Pills is a song by Norah Jones",
+      "head_id": "entity:title_anchor_happy_pills_song",
+      "tail_id": "entity:norah_jones",
+      "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "chunk_id": "chunk:happy_pills_song_0",
+      "document_index": 15,
+      "score": 0.29358790315663463
+    },
+    {
+      "fact_id": "fact:zephroniidae_is_in_the_taxonomic_order_sphaerotheriida_sentence_zephroniidae_0_0_zephroniidae_sometimes_misspelled_zephr",
+      "text": "Zephroniidae is in the taxonomic order Sphaerotheriida",
+      "head_id": "entity:title_anchor_zephroniidae",
+      "tail_id": "entity:sphaerotheriida",
+      "sentence_id": "sentence:zephroniidae_0_0_zephroniidae_sometimes_misspelled_zephronidae_is_a_family_of_giant_pill_mill",
+      "chunk_id": "chunk:zephroniidae_0",
+      "document_index": 4,
+      "score": 0.2542787917295164
+    },
+    {
+      "fact_id": "fact:jacques_pills_born_name_ren_jacques_ducos_sentence_jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_septem",
+      "text": "Jacques Pills born_name Ren Jacques Ducos",
+      "head_id": "entity:title_anchor_jacques_pills",
+      "tail_id": "entity:ren_jacques_ducos",
+      "sentence_id": "sentence:jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september_1970_was_a_french_s",
+      "chunk_id": "chunk:jacques_pills_0",
+      "document_index": 2,
+      "score": 0.23214498562921096
+    },
+    {
+      "fact_id": "fact:norah_jones_singles_chronology_turn_me_on_2003_sentence_turn_me_on_mark_dinning_song_0_1_loudermilk_producer_s_lee_alexa",
+      "text": "Norah Jones singles chronology Turn Me On 2003",
+      "head_id": "entity:norah_jones",
+      "tail_id": "entity:turn_me_on_2003",
+      "sentence_id": "sentence:turn_me_on_mark_dinning_song_0_1_loudermilk_producer_s_lee_alexander_norah_jones_norah_jones_singles_chronolog",
+      "chunk_id": "chunk:turn_me_on_mark_dinning_song_0",
+      "document_index": 0,
+      "score": 0.1771541878822306
+    },
+    {
+      "fact_id": "fact:norah_jones_is_an_american_singer_songwriter_sentence_happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_",
+      "text": "Norah Jones is an American singer-songwriter",
+      "head_id": "entity:norah_jones",
+      "tail_id": "entity:american_singer_songwriter",
+      "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "chunk_id": "chunk:happy_pills_song_0",
+      "document_index": 15,
+      "score": 0.1521426306501809
+    },
+    {
+      "fact_id": "fact:jacques_pills_birth_place_tulle_france_sentence_jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september",
+      "text": "Jacques Pills birth_place Tulle France",
+      "head_id": "entity:title_anchor_jacques_pills",
+      "tail_id": "entity:tulle_france",
+      "sentence_id": "sentence:jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september_1970_was_a_french_s",
+      "chunk_id": "chunk:jacques_pills_0",
+      "document_index": 2,
+      "score": 0.1421436181302233
+    },
+    {
+      "fact_id": "fact:single_related_to_norah_jones_sentence_turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_",
+      "text": "Single related_to Norah Jones",
+      "head_id": "entity:single",
+      "tail_id": "entity:norah_jones",
+      "sentence_id": "sentence:turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_first_sessions_come_away_w",
+      "chunk_id": "chunk:turn_me_on_mark_dinning_song_0",
+      "document_index": 0,
+      "score": 0.13214186088934438
+    },
+    {
+      "fact_id": "fact:turn_me_related_to_single_sentence_turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_firs",
+      "text": "Turn Me related_to Single",
+      "head_id": "entity:title_anchor_turn_me_on_mark_dinning_song",
+      "tail_id": "entity:single",
+      "sentence_id": "sentence:turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_first_sessions_come_away_w",
+      "chunk_id": "chunk:turn_me_on_mark_dinning_song_0",
+      "document_index": 0,
+      "score": 0.11232058175594271
+    }
+  ],
+  "bridge_entities": [
+    "Norah Jones",
+    "John D"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the name of the performer of the song 'Happy Pills'?",
+      "resolved_sub_question": "What is the name of the performer of the song 'Happy Pills'?",
+      "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "sentence": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.",
+      "score": 0.6029820000000001,
+      "source_title": "Happy Pills (song)",
+      "hop_answer": "Norah Jones",
+      "hop_thought": "The performer of the song 'Happy Pills' is mentioned in the evidence as Norah Jones.",
+      "hop_raw_response": "The performer of the song 'Happy Pills' is mentioned in the evidence as Norah Jones.\nAnswer: Norah Jones",
+      "evidence_passages": [
+        {
+          "title": "Happy Pills (song)",
+          "text": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones."
+        },
+        {
+          "title": "Happy Pills (song)",
+          "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton."
+        },
+        {
+          "title": "Jacques Pills",
+          "text": "In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\"."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who wrote the song 'Turn Me On' performed by this artist?",
+      "resolved_sub_question": "Who wrote the song 'Turn Me On' performed by this artist? Context: Norah Jones.",
+      "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "sentence": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.",
+      "score": 0.48385454545454554,
+      "source_title": "Happy Pills (song)",
+      "hop_answer": "John D",
+      "hop_thought": "The context provided indicates that the song \"Turn Me On\" was performed by Norah Jones and was written by John D.",
+      "hop_raw_response": "The context provided indicates that the song \"Turn Me On\" was performed by Norah Jones and was written by John D.\nAnswer: John D.",
+      "evidence_passages": [
+        {
+          "title": "Happy Pills (song)",
+          "text": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones."
+        },
+        {
+          "title": "Happy Pills (song)",
+          "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton."
+        },
+        {
+          "title": "Turn Me On (Mark Dinning song)",
+          "text": "``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_happy_pills_song",
+      "score": 0.1439731229176251,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+      "score": 0.08935023991788033,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:norah_jones",
+      "score": 0.07971111942586288,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september_1970_was_a_french_s",
+      "score": 0.054512214703492684,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:zephroniidae_0_0_zephroniidae_sometimes_misspelled_zephronidae_is_a_family_of_giant_pill_mill",
+      "score": 0.04651328985177973,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_zephroniidae",
+      "score": 0.04545735696849615,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sphaerotheriida",
+      "score": 0.04545735696849615,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_jacques_pills",
+      "score": 0.0440064941587156,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_first_sessions_come_away_w",
+      "score": 0.038904027955905626,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:turn_me_on_mark_dinning_song_0_1_loudermilk_producer_s_lee_alexander_norah_jones_norah_jones_singles_chronolog",
+      "score": 0.03785448786575334,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ren_jacques_ducos",
+      "score": 0.034156330204895356,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_singer_songwriter",
+      "score": 0.027337377562453496,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:turn_me_on_2003",
+      "score": 0.024524633295454887,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tulle_france",
+      "score": 0.023287122811758015,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:single",
+      "score": 0.02198549568098289,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:happy_pills_song_0",
+      "score": 0.0204246577985465,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_turn_me_on_mark_dinning_song",
+      "score": 0.01842770348314241,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:turn_me_on_mark_dinning_song_0",
+      "score": 0.014267552895208382,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:jacques_pills_0",
+      "score": 0.013846462587451824,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:zephroniidae_0",
+      "score": 0.012313949067050255,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:happy_pills_song_0",
+      "passage_index": 15,
+      "title": "Happy Pills (song)",
+      "score": 0.08376025232911423,
+      "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton.",
+      "score_breakdown": {
+        "dense": 0.050709277291994447,
+        "graph": 0.0543755257089736,
+        "fact": 0.2637166140388347
+      }
+    },
+    {
+      "node_id": "chunk:zephroniidae_0",
+      "passage_index": 4,
+      "title": "Zephroniidae",
+      "score": 0.08059243897843046,
+      "text": "Zephroniidae\nZephroniidae (sometimes misspelled \"Zephronidae\") is a family of giant pill millipedes in the taxonomic order Sphaerotheriida. They occur in southeast Asia from the Himalayas and China south and east to Sulawesi and to Australia, and also inhabit some Philippine islands.",
+      "score_breakdown": {
+        "dense": 0.04995551729900243,
+        "graph": 0.05028072178263126,
+        "fact": 0.25355125286126495
+      }
+    },
+    {
+      "node_id": "chunk:jacques_pills_0",
+      "passage_index": 2,
+      "title": "Jacques Pills",
+      "score": 0.08007513268076982,
+      "text": "Jacques Pills\nJacques Pills (7 January 1906, Tulle, France — 12 September 1970) was a French singer and actor, born René Jacques Ducos. His impresario was Bruno Coquatrix. In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\". The song ended last, in eleventh place and got only one point.",
+      "score_breakdown": {
+        "dense": 0.05013984874433667,
+        "graph": 0.05099362742982402,
+        "fact": 0.24800085094958302
+      }
+    },
+    {
+      "node_id": "chunk:turn_me_on_mark_dinning_song_0",
+      "passage_index": 0,
+      "title": "Turn Me On (Mark Dinning song)",
+      "score": 0.07851505480828752,
+      "text": "Turn Me On (Mark Dinning song)\n``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D. Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)",
+      "score_breakdown": {
+        "dense": 0.05066411319529182,
+        "graph": 0.051467000761098086,
+        "fact": 0.2347312821503173
+      }
+    },
+    {
+      "node_id": "chunk:gelukkig_zijn_0",
+      "passage_index": 3,
+      "title": "Gelukkig zijn",
+      "score": 0.04153362043901697,
+      "text": "Gelukkig zijn\n\"Gelukkig zijn\" (translated: \"Being happy\", English version: \"Could It Be Happiness\") was the Belgian entry at the Eurovision Song Contest 1975, performed in Dutch and English by Ann Christy. When performing the song at Eurovision in Stockholm, Christy sang the first verse and chorus in Dutch and the rest in English.",
+      "score_breakdown": {
+        "dense": 0.05006522759805796,
+        "graph": 0.0466591508669503,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:queen_band_0",
+      "passage_index": 10,
+      "title": "Queen (band)",
+      "score": 0.041492671118955354,
+      "text": "Queen (band)\nSeveral films have featured their songs performed by other artists. A version of \"Somebody to Love\" by Anne Hathaway was in the 2004 film Ella Enchanted. In 2006, Brittany Murphy also recorded a cover of the same song for the 2006 film Happy Feet. In 2001, a version of \"The Show Must Go On\" was performed by Jim Broadbent and Nicole Kidman in the film musical Moulin Rouge!. The 2001 film A Knight's Tale has a version of \"We Are the Champions\" performed by Robbie Williams and Queen; the film also features \"We Will Rock You\" played by the medieval audience.",
+      "score_breakdown": {
+        "dense": 0.049976314437540574,
+        "graph": 0.04668566059436011,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:huib_drion_0",
+      "passage_index": 13,
+      "title": "Huib Drion",
+      "score": 0.041487994702191,
+      "text": "Huib Drion\nHuib Drion (The Hague, 25 April 1917 – Leiden, 20 April 2004) was a Dutch Supreme Court judge and professor of civil law who became famous for proposing a suicide pill, which was later called Drion's pill after him.",
+      "score_breakdown": {
+        "dense": 0.049998940669065156,
+        "graph": 0.0466285911140172,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:happy_end_musical_0",
+      "passage_index": 12,
+      "title": "Happy End (musical)",
+      "score": 0.04147481555179872,
+      "text": "Happy End (musical)\nHappy End is a three-act musical comedy by Kurt Weill, Elisabeth Hauptmann, and Bertolt Brecht which first opened in Berlin at the Theater am Schiffbauerdamm on September 2, 1929. It closed after seven performances. In 1977 it premiered on Broadway, where it ran for 75 performances.",
+      "score_breakdown": {
+        "dense": 0.04996522295805552,
+        "graph": 0.04664647641622729,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:birth_control_0",
+      "passage_index": 19,
+      "title": "Birth control",
+      "score": 0.04146185872683941,
+      "text": "Birth control\nIn 1909, Richard Richter developed the first intrauterine device made from silkworm gut, which was further developed and marketed in Germany by Ernst Gräfenberg in the late 1920s. In 1951, a chemist, named Carl Djerassi from Mexico City made the hormones in progesterone pills using Mexican yams. Djerassi had chemically created the pill but was not equipped to distribute it to patients. Meanwhile, Gregory Pincus and John Rock with help from the Planned Parenthood Federation of America developed the first birth control pills in the 1950s, such as mestranol / noretynodrel, which became publicly available in the 1960s through the Food and Drug Administration under the name Enovid. Medical abortion became an alternative to surgical abortion with the availability of prostaglandin analogs in the 1970s and mifepristone in the 1980s.",
+      "score_breakdown": {
+        "dense": 0.04990909113320305,
+        "graph": 0.046706195345259126,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:union_maid_0",
+      "passage_index": 14,
+      "title": "Union Maid",
+      "score": 0.041459175344296786,
+      "text": "Union Maid\n\"Union Maid\" is a union song, with lyrics written by Woody Guthrie in response to a request for a union song from a female point of view. The melody is the 1907 standard \"Red Wing\" by Kerry Mills, which was in turn adapted from Robert Schumann's piano composition \"The Happy Farmer, Returning From Work\" in his 1848 Album for the Young, Opus 68.",
+      "score_breakdown": {
+        "dense": 0.04994568519913578,
+        "graph": 0.04663016161590701,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_happy_pills_song",
+        "score": 0.1439731229176251,
+        "text": "Happy Pills (song)",
+        "metadata": {
+          "canonical_name": "Happy Pills (song)",
+          "aliases": [
+            "HP",
+            "Happy Pills"
+          ],
+          "surface_forms": [
+            "HP",
+            "Happy Pills"
+          ],
+          "title_anchor": "Happy Pills (song)"
+        }
+      },
+      {
+        "node_id": "entity:norah_jones",
+        "score": 0.07971111942586288,
+        "text": "Norah Jones",
+        "metadata": {
+          "canonical_name": "Norah Jones",
+          "aliases": [
+            "NJ",
+            "Norah Jones"
+          ],
+          "surface_forms": [
+            "NJ",
+            "Norah Jones"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_zephroniidae",
+        "score": 0.04545735696849615,
+        "text": "Zephroniidae",
+        "metadata": {
+          "canonical_name": "Zephroniidae",
+          "aliases": [
+            "Zephroniidae"
+          ],
+          "surface_forms": [
+            "Zephroniidae"
+          ],
+          "title_anchor": "Zephroniidae"
+        }
+      },
+      {
+        "node_id": "entity:sphaerotheriida",
+        "score": 0.04545735696849615,
+        "text": "Sphaerotheriida",
+        "metadata": {
+          "canonical_name": "Sphaerotheriida",
+          "aliases": [
+            "Sphaerotheriida"
+          ],
+          "surface_forms": [
+            "Sphaerotheriida"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+        "score": 0.08935023991788033,
+        "text": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.",
+        "metadata": {
+          "title": "Happy Pills (song)",
+          "chunk_id": "chunk:happy_pills_song_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Happy Pills",
+              "relation": "is a song by",
+              "tail": "Norah Jones"
+            },
+            {
+              "head": "Norah Jones",
+              "relation": "is an",
+              "tail": "American singer-songwriter"
+            }
+          ],
+          "entities": [
+            "Happy Pills",
+            "Norah Jones"
+          ],
+          "entity_ids": [
+            "entity:american_singer_songwriter",
+            "entity:norah_jones",
+            "entity:title_anchor_happy_pills_song"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:jacques_pills_0_0_jacques_pills_7_january_1906_tulle_france_12_september_1970_was_a_french_s",
+        "score": 0.054512214703492684,
+        "text": "Jacques Pills (7 January 1906, Tulle, France — 12 September 1970) was a French singer and actor, born René Jacques Ducos.",
+        "metadata": {
+          "title": "Jacques Pills",
+          "chunk_id": "chunk:jacques_pills_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Jacques Pills",
+              "relation": "birth_date",
+              "tail": "7 January 1906"
+            },
+            {
+              "head": "Jacques Pills",
+              "relation": "birth_place",
+              "tail": "Tulle France"
+            },
+            {
+              "head": "Jacques Pills",
+              "relation": "death_date",
+              "tail": "12 September 1970"
+            },
+            {
+              "head": "Jacques Pills",
+              "relation": "born_name",
+              "tail": "Ren Jacques Ducos"
+            }
+          ],
+          "entities": [
+            "Jacques Pills",
+            "Tulle France",
+            "Ren Jacques Ducos"
+          ],
+          "entity_ids": [
+            "entity:12_september_1970",
+            "entity:7_january_1906",
+            "entity:ren_jacques_ducos",
+            "entity:title_anchor_jacques_pills",
+            "entity:tulle_france"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:zephroniidae_0_0_zephroniidae_sometimes_misspelled_zephronidae_is_a_family_of_giant_pill_mill",
+        "score": 0.04651328985177973,
+        "text": "Zephroniidae (sometimes misspelled \"Zephronidae\") is a family of giant pill millipedes in the taxonomic order Sphaerotheriida.",
+        "metadata": {
+          "title": "Zephroniidae",
+          "chunk_id": "chunk:zephroniidae_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Zephroniidae",
+              "relation": "is in the taxonomic order",
+              "tail": "Sphaerotheriida"
+            }
+          ],
+          "entities": [
+            "Zephroniidae",
+            "Sphaerotheriida"
+          ],
+          "entity_ids": [
+            "entity:sphaerotheriida",
+            "entity:title_anchor_zephroniidae"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:turn_me_on_mark_dinning_song_0_0_turn_me_on_single_by_norah_jones_from_the_album_first_sessions_come_away_w",
+        "score": 0.038904027955905626,
+        "text": "``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D.",
+        "metadata": {
+          "title": "Turn Me On (Mark Dinning song)",
+          "chunk_id": "chunk:turn_me_on_mark_dinning_song_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Turn Me",
+              "relation": "related_to",
+              "tail": "Single"
+            },
+            {
+              "head": "Single",
+              "relation": "related_to",
+              "tail": "Norah Jones"
+            },
+            {
+              "head": "Norah Jones",
+              "relation": "related_to",
+              "tail": "First Sessions"
+            }
+          ],
+          "entities": [
+            "Turn Me",
+            "Single",
+            "Norah Jones",
+            "First Sessions",
+            "Come Away",
+            "Me Released",
+            "Format",
+            "Recorded",
+            "Genre Jazz",
+            "Length",
+            "Label Blue Note Songwriter",
+            "John"
+          ],
+          "entity_ids": [
+            "entity:come_away",
+            "entity:first_sessions",
+            "entity:format",
+            "entity:genre_jazz",
+            "entity:john",
+            "entity:label_blue_note_songwriter",
+            "entity:length",
+            "entity:me_released",
+            "entity:norah_jones",
+            "entity:recorded",
+            "entity:single",
+            "entity:title_anchor_turn_me_on_mark_dinning_song"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:turn_me_on_mark_dinning_song_0_1_loudermilk_producer_s_lee_alexander_norah_jones_norah_jones_singles_chronolog",
+        "score": 0.03785448786575334,
+        "text": "Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)",
+        "metadata": {
+          "title": "Turn Me On (Mark Dinning song)",
+          "chunk_id": "chunk:turn_me_on_mark_dinning_song_0",
+          "sentence_index": 1,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Loudermilk",
+              "relation": "producer",
+              "tail": "Lee Alexander"
+            },
+            {
+              "head": "Loudermilk",
+              "relation": "producer",
+              "tail": "Norah Jones"
+            },
+            {
+              "head": "Norah Jones",
+              "relation": "singles chronology",
+              "tail": "Come Away with Me 2003"
+            },
+            {
+              "head": "Norah Jones",
+              "relation": "singles chronology",
+              "tail": "Turn Me On 2003"
+            },
+            {
+              "head": "Norah Jones",
+              "relation": "singles chronology",
+              "tail": "Sunrise 2004"
+            }
+          ],
+          "entities": [
+            "Loudermilk",
+            "Lee Alexander",
+            "Norah Jones",
+            "Come Away with Me",
+            "Turn Me",
+            "Sunrise"
+          ],
+          "entity_ids": [
+            "entity:come_away_with_me",
+            "entity:come_away_with_me_2003",
+            "entity:lee_alexander",
+            "entity:loudermilk",
+            "entity:norah_jones",
+            "entity:sunrise",
+            "entity:sunrise_2004",
+            "entity:title_anchor_turn_me_on_mark_dinning_song",
+            "entity:turn_me_on_2003"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:happy_pills_song_0",
+        "score": 0.0204246577985465,
+        "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton.",
+        "metadata": {
+          "title": "Happy Pills (song)",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:american_singer_songwriter",
+            "entity:brian_burton",
+            "entity:burton",
+            "entity:jones",
+            "entity:little_broken_hearts",
+            "entity:march",
+            "entity:musically",
+            "entity:norah_jones",
+            "entity:title_anchor_happy_pills_song",
+            "entity:written"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:turn_me_on_mark_dinning_song_0",
+        "score": 0.014267552895208382,
+        "text": "Turn Me On (Mark Dinning song)\n``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D. Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)",
+        "metadata": {
+          "title": "Turn Me On (Mark Dinning song)",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:come_away",
+            "entity:come_away_with_me",
+            "entity:come_away_with_me_2003",
+            "entity:first_sessions",
+            "entity:format",
+            "entity:genre_jazz",
+            "entity:john",
+            "entity:label_blue_note_songwriter",
+            "entity:lee_alexander",
+            "entity:length",
+            "entity:loudermilk",
+            "entity:me_released",
+            "entity:norah_jones",
+            "entity:recorded",
+            "entity:single",
+            "entity:sunrise",
+            "entity:sunrise_2004",
+            "entity:title_anchor_turn_me_on_mark_dinning_song",
+            "entity:turn_me_on_2003"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:jacques_pills_0",
+        "score": 0.013846462587451824,
+        "text": "Jacques Pills\nJacques Pills (7 January 1906, Tulle, France — 12 September 1970) was a French singer and actor, born René Jacques Ducos. His impresario was Bruno Coquatrix. In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\". The song ended last, in eleventh place and got only one point.",
+        "metadata": {
+          "title": "Jacques Pills",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:12_september_1970",
+            "entity:7_january_1906",
+            "entity:bruno_coquatrix",
+            "entity:eurovision_song_contest_1959",
+            "entity:his_impresario",
+            "entity:mon_ami_pierrot",
+            "entity:monegasque",
+            "entity:pills",
+            "entity:ren_jacques_ducos",
+            "entity:title_anchor_jacques_pills",
+            "entity:tulle_france"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:zephroniidae_0",
+        "score": 0.012313949067050255,
+        "text": "Zephroniidae\nZephroniidae (sometimes misspelled \"Zephronidae\") is a family of giant pill millipedes in the taxonomic order Sphaerotheriida. They occur in southeast Asia from the Himalayas and China south and east to Sulawesi and to Australia, and also inhabit some Philippine islands.",
+        "metadata": {
+          "title": "Zephroniidae",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:asia",
+            "entity:australia",
+            "entity:china",
+            "entity:himalayas",
+            "entity:philippine_islands",
+            "entity:southeast_asia",
+            "entity:sphaerotheriida",
+            "entity:sulawesi",
+            "entity:title_anchor_zephroniidae"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Happy Pills (song)\nHappy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton.\n\nZephroniidae\nZephroniidae\nZephroniidae (sometimes misspelled \"Zephronidae\") is a family of giant pill millipedes in the taxonomic order Sphaerotheriida. They occur in southeast Asia from the Himalayas and China south and east to Sulawesi and to Australia, and also inhabit some Philippine islands.\n\nJacques Pills\nJacques Pills\nJacques Pills (7 January 1906, Tulle, France — 12 September 1970) was a French singer and actor, born René Jacques Ducos. His impresario was Bruno Coquatrix. In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\". The song ended last, in eleventh place and got only one point.\n\nTurn Me On (Mark Dinning song)\nTurn Me On (Mark Dinning song)\n``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D. Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)\n\nGelukkig zijn\nGelukkig zijn\n\"Gelukkig zijn\" (translated: \"Being happy\", English version: \"Could It Be Happiness\") was the Belgian entry at the Eurovision Song Contest 1975, performed in Dutch and English by Ann Christy. When performing the song at Eurovision in Stockholm, Christy sang the first verse and chorus in Dutch and the rest in English.\n\nHappy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.\n\nJacques Pills\nIn 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\".\n\nTurn Me On (Mark Dinning song)\n``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D.\n\nUnion Maid\nUnion Maid\n\"Union Maid\" is a union song, with lyrics written by Woody Guthrie in response to a request for a union song from a female point of view. The melody is the 1907 standard \"Red Wing\" by Kerry Mills, which was in turn adapted from Robert Schumann's piano composition \"The Happy Farmer, Returning From Work\" in his 1848 Album for the Young, Opus 68.\n\nQueen (band)\nQueen (band)\nSeveral films have featured their songs performed by other artists. A version of \"Somebody to Love\" by Anne Hathaway was in the 2004 film Ella Enchanted. In 2006, Brittany Murphy also recorded a cover of the same song for the 2006 film Happy Feet. In 2001, a version of \"The Show Must Go On\" was performed by Jim Broadbent and Nicole Kidman in the film musical Moulin Rouge!. The 2001 film A Knight's Tale has a version of \"We Are the Champions\" performed by Robbie Williams and Queen; the film also features \"We Will Rock You\" played by the medieval audience.\n\nBeauty and the Beast (musical)\nBeauty and the Beast (musical)\nBeach received a call from casting director Jay Binder inviting him to play Lumiere during their workshop of Beauty and the Beast, but kept turning down the offer due to having prior commitments to an upcoming show starring comedian Carol Burnett. It was only at Burnett's insistence that Beach finally accepted. Amidst a cast of relatively obscure actors, Tom Bosley, famous for his roles on the television series Happy Days and Murder, She Wrote, became the show's most recognizable performer when he was cast as Belle's father Maurice.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:happy_pills_song_0",
+        "passage_index": 15,
+        "title": "Happy Pills (song)",
+        "score": 0.08376025232911423,
+        "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton.",
+        "score_breakdown": {
+          "dense": 0.050709277291994447,
+          "graph": 0.0543755257089736,
+          "fact": 0.2637166140388347
+        }
+      },
+      {
+        "node_id": "chunk:zephroniidae_0",
+        "passage_index": 4,
+        "title": "Zephroniidae",
+        "score": 0.08059243897843046,
+        "text": "Zephroniidae\nZephroniidae (sometimes misspelled \"Zephronidae\") is a family of giant pill millipedes in the taxonomic order Sphaerotheriida. They occur in southeast Asia from the Himalayas and China south and east to Sulawesi and to Australia, and also inhabit some Philippine islands.",
+        "score_breakdown": {
+          "dense": 0.04995551729900243,
+          "graph": 0.05028072178263126,
+          "fact": 0.25355125286126495
+        }
+      },
+      {
+        "node_id": "chunk:jacques_pills_0",
+        "passage_index": 2,
+        "title": "Jacques Pills",
+        "score": 0.08007513268076982,
+        "text": "Jacques Pills\nJacques Pills (7 January 1906, Tulle, France — 12 September 1970) was a French singer and actor, born René Jacques Ducos. His impresario was Bruno Coquatrix. In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\". The song ended last, in eleventh place and got only one point.",
+        "score_breakdown": {
+          "dense": 0.05013984874433667,
+          "graph": 0.05099362742982402,
+          "fact": 0.24800085094958302
+        }
+      },
+      {
+        "node_id": "chunk:turn_me_on_mark_dinning_song_0",
+        "passage_index": 0,
+        "title": "Turn Me On (Mark Dinning song)",
+        "score": 0.07851505480828752,
+        "text": "Turn Me On (Mark Dinning song)\n``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D. Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)",
+        "score_breakdown": {
+          "dense": 0.05066411319529182,
+          "graph": 0.051467000761098086,
+          "fact": 0.2347312821503173
+        }
+      },
+      {
+        "node_id": "chunk:gelukkig_zijn_0",
+        "passage_index": 3,
+        "title": "Gelukkig zijn",
+        "score": 0.04153362043901697,
+        "text": "Gelukkig zijn\n\"Gelukkig zijn\" (translated: \"Being happy\", English version: \"Could It Be Happiness\") was the Belgian entry at the Eurovision Song Contest 1975, performed in Dutch and English by Ann Christy. When performing the song at Eurovision in Stockholm, Christy sang the first verse and chorus in Dutch and the rest in English.",
+        "score_breakdown": {
+          "dense": 0.05006522759805796,
+          "graph": 0.0466591508669503,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:queen_band_0",
+        "passage_index": 10,
+        "title": "Queen (band)",
+        "score": 0.041492671118955354,
+        "text": "Queen (band)\nSeveral films have featured their songs performed by other artists. A version of \"Somebody to Love\" by Anne Hathaway was in the 2004 film Ella Enchanted. In 2006, Brittany Murphy also recorded a cover of the same song for the 2006 film Happy Feet. In 2001, a version of \"The Show Must Go On\" was performed by Jim Broadbent and Nicole Kidman in the film musical Moulin Rouge!. The 2001 film A Knight's Tale has a version of \"We Are the Champions\" performed by Robbie Williams and Queen; the film also features \"We Will Rock You\" played by the medieval audience.",
+        "score_breakdown": {
+          "dense": 0.049976314437540574,
+          "graph": 0.04668566059436011,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:huib_drion_0",
+        "passage_index": 13,
+        "title": "Huib Drion",
+        "score": 0.041487994702191,
+        "text": "Huib Drion\nHuib Drion (The Hague, 25 April 1917 – Leiden, 20 April 2004) was a Dutch Supreme Court judge and professor of civil law who became famous for proposing a suicide pill, which was later called Drion's pill after him.",
+        "score_breakdown": {
+          "dense": 0.049998940669065156,
+          "graph": 0.0466285911140172,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:happy_end_musical_0",
+        "passage_index": 12,
+        "title": "Happy End (musical)",
+        "score": 0.04147481555179872,
+        "text": "Happy End (musical)\nHappy End is a three-act musical comedy by Kurt Weill, Elisabeth Hauptmann, and Bertolt Brecht which first opened in Berlin at the Theater am Schiffbauerdamm on September 2, 1929. It closed after seven performances. In 1977 it premiered on Broadway, where it ran for 75 performances.",
+        "score_breakdown": {
+          "dense": 0.04996522295805552,
+          "graph": 0.04664647641622729,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:birth_control_0",
+        "passage_index": 19,
+        "title": "Birth control",
+        "score": 0.04146185872683941,
+        "text": "Birth control\nIn 1909, Richard Richter developed the first intrauterine device made from silkworm gut, which was further developed and marketed in Germany by Ernst Gräfenberg in the late 1920s. In 1951, a chemist, named Carl Djerassi from Mexico City made the hormones in progesterone pills using Mexican yams. Djerassi had chemically created the pill but was not equipped to distribute it to patients. Meanwhile, Gregory Pincus and John Rock with help from the Planned Parenthood Federation of America developed the first birth control pills in the 1950s, such as mestranol / noretynodrel, which became publicly available in the 1960s through the Food and Drug Administration under the name Enovid. Medical abortion became an alternative to surgical abortion with the availability of prostaglandin analogs in the 1970s and mifepristone in the 1980s.",
+        "score_breakdown": {
+          "dense": 0.04990909113320305,
+          "graph": 0.046706195345259126,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:union_maid_0",
+        "passage_index": 14,
+        "title": "Union Maid",
+        "score": 0.041459175344296786,
+        "text": "Union Maid\n\"Union Maid\" is a union song, with lyrics written by Woody Guthrie in response to a request for a union song from a female point of view. The melody is the 1907 standard \"Red Wing\" by Kerry Mills, which was in turn adapted from Robert Schumann's piano composition \"The Happy Farmer, Returning From Work\" in his 1848 Album for the Young, Opus 68.",
+        "score_breakdown": {
+          "dense": 0.04994568519913578,
+          "graph": 0.04663016161590701,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the name of the performer of the song 'Happy Pills'?",
+        "resolved_sub_question": "What is the name of the performer of the song 'Happy Pills'?",
+        "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+        "sentence": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.",
+        "score": 0.6029820000000001,
+        "source_title": "Happy Pills (song)",
+        "hop_answer": "Norah Jones",
+        "hop_thought": "The performer of the song 'Happy Pills' is mentioned in the evidence as Norah Jones.",
+        "hop_raw_response": "The performer of the song 'Happy Pills' is mentioned in the evidence as Norah Jones.\nAnswer: Norah Jones",
+        "evidence_passages": [
+          {
+            "title": "Happy Pills (song)",
+            "text": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones."
+          },
+          {
+            "title": "Happy Pills (song)",
+            "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton."
+          },
+          {
+            "title": "Jacques Pills",
+            "text": "In 1959, Pills was the Monegasque entrant at the Eurovision Song Contest 1959 with the song \"Mon ami Pierrot\"."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who wrote the song 'Turn Me On' performed by this artist?",
+        "resolved_sub_question": "Who wrote the song 'Turn Me On' performed by this artist? Context: Norah Jones.",
+        "sentence_id": "sentence:happy_pills_song_0_0_happy_pills_is_a_song_by_the_american_singer_songwriter_norah_jones",
+        "sentence": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.",
+        "score": 0.48385454545454554,
+        "source_title": "Happy Pills (song)",
+        "hop_answer": "John D",
+        "hop_thought": "The context provided indicates that the song \"Turn Me On\" was performed by Norah Jones and was written by John D.",
+        "hop_raw_response": "The context provided indicates that the song \"Turn Me On\" was performed by Norah Jones and was written by John D.\nAnswer: John D.",
+        "evidence_passages": [
+          {
+            "title": "Happy Pills (song)",
+            "text": "\"Happy Pills\" is a song by the American singer-songwriter Norah Jones."
+          },
+          {
+            "title": "Happy Pills (song)",
+            "text": "Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones. It is the lead single from her fifth studio album \"Little Broken Hearts\" and was released digitally on March 6, 2012. Written by Jones and co-written and produced by Brian Burton, it tells the story of Jones emancipating herself from a relationship and finding that she is better off alone. Musically, it is a gritty, bluesy song with a playful pop sound. It received mostly positive reviews, with many critics complimenting its style and the chemistry between Jones and Burton."
+          },
+          {
+            "title": "Turn Me On (Mark Dinning song)",
+            "text": "``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the name of the performer of the song 'Happy Pills'? => Norah Jones (source: Happy Pills (song))\n2. Who wrote the song 'Turn Me On' performed by this artist? => John D (source: Happy Pills (song))\n\nFact hints:\n- Happy Pills is a song by Norah Jones\n- Norah Jones is an American singer-songwriter\n- Norah Jones singles chronology Turn Me On 2003\n- Single related_to Norah Jones\n\nWikipedia Title: Turn Me On (Mark Dinning song)\nTurn Me On (Mark Dinning song) ``Turn Me On ''Single by Norah Jones from the album First Sessions / Come Away with Me Released 2003 Format CD single Recorded 2002 Genre Jazz, pop Length 2: 34 Label Blue Note Songwriter (s) John D. Loudermilk Producer (s) Lee Alexander, Norah Jones Norah Jones singles chronology`` Come Away with Me'' (2003) ``Turn Me On ''(2003)`` Sunrise'' (2004) ``Come Away with Me ''(2003)`` Turn Me On'' (2004) ``Sunrise ''(2004)\n\nWikipedia Title: Happy Pills (song)\n\"Happy Pills\" is a song by the American singer-songwriter Norah Jones.\n\nWikipedia Title: Union Maid\nThe melody is the 1907 standard \"Red Wing\" by Kerry Mills, which was in turn adapted from Robert Schumann's piano composition \"The Happy Farmer, Returning From Work\" in his 1848 Album for the Young, Opus 68. Union Maid \"Union Maid\" is a union song, with lyrics written by Woody Guthrie in response to a request for a union song from a female point of view.\n\nWikipedia Title: Jacques Pills\nThe song ended last, in eleventh place and got only one point. His impresario was Bruno Coquatrix.\n\nWikipedia Title: Queen (band)\nIn 2006, Brittany Murphy also recorded a cover of the same song for the 2006 film Happy Feet. Queen (band) Several films have featured their songs performed by other artists.\n\nQuestion: Who wrote \"Turn Me On\" by performer of \"Happy Pills\"?\nDraft Answer: John D\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The performer of 'Happy Pills' is Norah Jones. The song 'Turn Me On' was written by John D for Norah Jones.",
+  "predicted_answer": "John D",
+  "qa_raw_response": "{\n  \"thought\": \"The performer of 'Happy Pills' is Norah Jones. The song 'Turn Me On' was written by John D for Norah Jones.\",\n  \"answer\": \"John D\",\n  \"support\": \"Songwriter (s) John D.\"\n}"
+}

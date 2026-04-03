@@ -1,0 +1,934 @@
+{
+  "query": "What record label did the person who is part of The Bruce Lee Band start?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "The Bruce Lee Band"
+  ],
+  "raw_query_entities": [
+    "Bruce Lee Band"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Bruce Lee Band",
+      "node_id": "entity:title_anchor_the_bruce_lee_band",
+      "resolved_text": "The Bruce Lee Band",
+      "score": 0.8582333333333334,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7333333333333334,
+      "compatibility_score": 0.90375,
+      "score_margin": 0.12223333333333342,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is part of The Bruce Lee Band?",
+    "What record label did this person start?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_the_bruce_lee_band",
+      "score": 0.8021669590373612,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chicago",
+      "score": 0.2539157337612665,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bruce_hornsby_and_the_noisemakers",
+      "score": 0.22394488475356172,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hornsby",
+      "score": 0.20106536454341,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_all_the_years",
+      "score": 0.19892236313205264,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+      "score": 0.19484691382412433,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:lee_band",
+      "score": 0.19395207180909818,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:releases_of_mike_park_and_his_backing_band",
+      "score": 0.19393078319606136,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:verve_records",
+      "score": 0.17820763009456156,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_asian_man_records",
+      "score": 0.17028713426409336,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mike_park",
+      "score": 0.16642003805084574,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_studio_album_with_his_touring_band_bruce_hornsby_and_the",
+      "score": 0.1607429413378078,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:all_the_years_recorded_by_chicago_sentence_all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_rock_band_",
+      "text": "All the Years recorded by Chicago",
+      "head_id": "entity:title_anchor_all_the_years",
+      "tail_id": "entity:chicago",
+      "sentence_id": "sentence:all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_rock_band_chicago_released_on",
+      "chunk_id": "chunk:all_the_years_0",
+      "document_index": 8,
+      "score": 0.2518234835454502
+    },
+    {
+      "fact_id": "fact:hornsby_has_band_bruce_hornsby_and_the_noisemakers_sentence_levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_stud",
+      "text": "Hornsby has band Bruce Hornsby and the Noisemakers",
+      "head_id": "entity:hornsby",
+      "tail_id": "entity:bruce_hornsby_and_the_noisemakers",
+      "sentence_id": "sentence:levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_studio_album_with_his_touring_band_bruce_hornsby_and_the",
+      "chunk_id": "chunk:levitate_bruce_hornsby_album_0",
+      "document_index": 11,
+      "score": 0.22183059104233188
+    },
+    {
+      "fact_id": "fact:lee_band_is_name_given_to_releases_of_mike_park_and_his_backing_band_sentence_the_bruce_lee_band_0_1_lee_band_is_the_nam",
+      "text": "Lee Band is name given to releases of Mike Park and his backing band",
+      "head_id": "entity:lee_band",
+      "tail_id": "entity:releases_of_mike_park_and_his_backing_band",
+      "sentence_id": "sentence:the_bruce_lee_band_0_1_lee_band_is_the_name_given_to_the_releases_of_mike_park_and_his_backing_band_wh",
+      "chunk_id": "chunk:the_bruce_lee_band_0",
+      "document_index": 9,
+      "score": 0.19183375230341998
+    },
+    {
+      "fact_id": "fact:asian_man_records_run_by_mike_park_sentence_asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_pa",
+      "text": "Asian Man Records run by Mike Park",
+      "head_id": "entity:title_anchor_asian_man_records",
+      "tail_id": "entity:mike_park",
+      "sentence_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+      "chunk_id": "chunk:asian_man_records_0",
+      "document_index": 18,
+      "score": 0.18183367140281453
+    },
+    {
+      "fact_id": "fact:hornsby_has_record_label_verve_records_sentence_levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_studio_album_wit",
+      "text": "Hornsby has record label Verve Records",
+      "head_id": "entity:hornsby",
+      "tail_id": "entity:verve_records",
+      "sentence_id": "sentence:levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_studio_album_with_his_touring_band_bruce_hornsby_and_the",
+      "chunk_id": "chunk:levitate_bruce_hornsby_album_0",
+      "document_index": 11,
+      "score": 0.1761167410795878
+    },
+    {
+      "fact_id": "fact:asian_man_records_is_a_diy_record_label_sentence_asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mi",
+      "text": "Asian Man Records is a DIY record label",
+      "head_id": "entity:title_anchor_asian_man_records",
+      "tail_id": "entity:diy_record_label",
+      "sentence_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+      "chunk_id": "chunk:asian_man_records_0",
+      "document_index": 18,
+      "score": 0.15455862069239235
+    },
+    {
+      "fact_id": "fact:mike_park_located_in_monte_sereno_california_sentence_asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_",
+      "text": "Mike Park located in Monte Sereno California",
+      "head_id": "entity:mike_park",
+      "tail_id": "entity:monte_sereno_california",
+      "sentence_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+      "chunk_id": "chunk:asian_man_records_0",
+      "document_index": 18,
+      "score": 0.1468244282658971
+    },
+    {
+      "fact_id": "fact:all_the_years_released_on_stone_of_sisyphus_sentence_all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_",
+      "text": "All the Years released on Stone of Sisyphus",
+      "head_id": "entity:title_anchor_all_the_years",
+      "tail_id": "entity:stone_of_sisyphus",
+      "sentence_id": "sentence:all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_rock_band_chicago_released_on",
+      "chunk_id": "chunk:all_the_years_0",
+      "document_index": 8,
+      "score": 0.14182427362823868
+    }
+  ],
+  "bridge_entities": [],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is part of The Bruce Lee Band?",
+      "resolved_sub_question": "Who is part of The Bruce Lee Band?",
+      "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+      "sentence": "The Bruce Lee Band (or B.",
+      "score": 0.4819462053922018,
+      "source_title": "The Bruce Lee Band",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain any information about the members of The Bruce Lee Band.",
+      "hop_raw_response": "The evidence provided does not contain any information about the members of The Bruce Lee Band.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "The Bruce Lee Band",
+          "text": "The Bruce Lee Band (or B."
+        }
+      ]
+    },
+    {
+      "sub_question": "What record label did this person start?",
+      "resolved_sub_question": "What record label did this person start?",
+      "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+      "sentence": "The Bruce Lee Band (or B.",
+      "score": 0.30240000000000006,
+      "source_title": "The Bruce Lee Band",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.",
+      "hop_raw_response": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "The Bruce Lee Band",
+          "text": "The Bruce Lee Band (or B."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:the_bruce_lee_band_0_1_lee_band_is_the_name_given_to_the_releases_of_mike_park_and_his_backing_band_wh",
+      "score": 0.07724017986854635,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+      "score": 0.06323466123926173,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_rock_band_chicago_released_on",
+      "score": 0.05856046198599992,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+      "score": 0.05171381477023485,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lee_band",
+      "score": 0.049587670721911184,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_bruce_lee_band",
+      "score": 0.04375158557486544,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:levitate_bruce_hornsby_album_0_1_it_was_hornsby_s_third_studio_album_with_his_touring_band_bruce_hornsby_and_the",
+      "score": 0.04352393858289546,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_all_the_years",
+      "score": 0.04082947003331286,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mike_park",
+      "score": 0.03592790881706786,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_asian_man_records",
+      "score": 0.03591366550318463,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hornsby",
+      "score": 0.03446799127875731,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chicago",
+      "score": 0.02792322912074622,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:stone_of_sisyphus",
+      "score": 0.024071249834740606,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:the_bruce_lee_band_0",
+      "score": 0.023433611859633538,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:monte_sereno_california",
+      "score": 0.02168863514424289,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bruce_hornsby_and_the_noisemakers",
+      "score": 0.02121580347434803,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:verve_records",
+      "score": 0.01964406056604666,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:releases_of_mike_park_and_his_backing_band",
+      "score": 0.019609129360172773,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:diy_record_label",
+      "score": 0.018169079053139425,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:less_than_jake",
+      "score": 0.01797394758437354,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:all_the_years_0",
+      "passage_index": 8,
+      "title": "All the Years",
+      "score": 0.08253100598027859,
+      "text": "All the Years\nAll the Years is a song that was recorded by the rock band Chicago, released on the 2008 album Stone of Sisyphus. It was written by Robert Lamm and studio session musician Bruce Gaitsch, the guitarist from the \"Night & Day Big Band\" album.",
+      "score_breakdown": {
+        "dense": 0.04987687088368181,
+        "graph": 0.053610895358506536,
+        "fact": 0.2601030559113442
+      }
+    },
+    {
+      "node_id": "chunk:the_bruce_lee_band_0",
+      "passage_index": 9,
+      "title": "The Bruce Lee Band",
+      "score": 0.08184809022286185,
+      "text": "The Bruce Lee Band\nThe Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.",
+      "score_breakdown": {
+        "dense": 0.0507178265553537,
+        "graph": 0.057365111121759314,
+        "fact": 0.24495834853926357
+      }
+    },
+    {
+      "node_id": "chunk:levitate_bruce_hornsby_album_0",
+      "passage_index": 11,
+      "title": "Levitate (Bruce Hornsby album)",
+      "score": 0.08103512802103352,
+      "text": "Levitate (Bruce Hornsby album)\nLevitate is the tenth studio album by Bruce Hornsby. It was Hornsby's third studio album with his touring band, Bruce Hornsby and the Noisemakers, and was his first release with Verve Records.",
+      "score_breakdown": {
+        "dense": 0.05005792249893478,
+        "graph": 0.052135414027373206,
+        "fact": 0.2524176429227162
+      }
+    },
+    {
+      "node_id": "chunk:asian_man_records_0",
+      "passage_index": 18,
+      "title": "Asian Man Records",
+      "score": 0.08013026081682478,
+      "text": "Asian Man Records\nAsian Man Records is a DIY record label run by Mike Park in Monte Sereno, California. Park started a record label and began releasing music in 1989 under the name Dill Records, with the Asian Man label established May 1996.",
+      "score_breakdown": {
+        "dense": 0.0501710212286773,
+        "graph": 0.05386018749016956,
+        "fact": 0.242520952626676
+      }
+    },
+    {
+      "node_id": "chunk:big_swing_face_0",
+      "passage_index": 4,
+      "title": "Big Swing Face",
+      "score": 0.042533400049216345,
+      "text": "Big Swing Face\nBig Swing Face is the eighth album by American singer and pianist Bruce Hornsby. It was Hornsby's first studio album with his touring band, the Noisemakers, and his last album for RCA Records .",
+      "score_breakdown": {
+        "dense": 0.04997159700854079,
+        "graph": 0.05016340564839636,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:birth_of_the_dragon_0",
+      "passage_index": 16,
+      "title": "Birth of the Dragon",
+      "score": 0.04225136532994843,
+      "text": "Birth of the Dragon\nPhilip Ng as Bruce Lee, founder of Jeet Kune Do. Xia Yu as Wong Jack Man, the Tai chi and Northern Shaolin Master who Bruce Lee fights. Jin Xing as Auntie Blossom, a gangster. Billy Magnussen as Steve McKee, Bruce Lee's student. Jingjing Qu as Xiulan, McKee's love interest. Simon Yin as Vinnie Wei Ron Yuan as Tony Yu",
+      "score_breakdown": {
+        "dense": 0.050163723637064075,
+        "graph": 0.04887105776521063,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:porno_graffitti_0",
+      "passage_index": 19,
+      "title": "Porno Graffitti",
+      "score": 0.04223528954003834,
+      "text": "Porno Graffitti\n, also known as , are a Japanese rock band from Onomichi (formerly Innoshima), Hiroshima Prefecture, Japan. The band got their name from the album \"Pornograffitti\" by the band Extreme. They currently record under the SME Records label, and their agency is Amuse, Inc..",
+      "score_breakdown": {
+        "dense": 0.05003622348671944,
+        "graph": 0.0490512220744755,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bruce_lee_my_brother_0",
+      "passage_index": 7,
+      "title": "Bruce Lee, My Brother",
+      "score": 0.04217761617769691,
+      "text": "Bruce Lee, My Brother\nBruce Lee, My Brother (, also known in the United Kingdom as Young Bruce Lee) is a 2010 Hong Kong biographical martial arts drama film directed by Raymond Yip, and also written, produced and directed by Manfred Wong, and also storied, produced and narrated by Bruce Lee's real life younger brother Robert Lee. Starring Aarif Lee as Lee, Tony Leung Ka-fai and Christy Chung as Lee's parents, the film is based on the life of Bruce Lee in his teenage years to part of his adult years.",
+      "score_breakdown": {
+        "dense": 0.05004236616459544,
+        "graph": 0.04884771595723139,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:go_down_records_0",
+      "passage_index": 14,
+      "title": "Go Down Records",
+      "score": 0.042177060769001254,
+      "text": "Go Down Records\nGo Down Records is an independent record label based in Savignano sul Rubicone, Italy. It was founded by Leonardo Cola and Max Ear, also part of the Italian band OJM.",
+      "score_breakdown": {
+        "dense": 0.05004400805768447,
+        "graph": 0.04884285445758266,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:pink_cadillac_song_0",
+      "passage_index": 13,
+      "title": "Pink Cadillac (song)",
+      "score": 0.0421768713371142,
+      "text": "Pink Cadillac (song)\n``Pink Cadillac ''Single by Bruce Springsteen A-side`` Dancing in the Dark'' Released May 3, 1984 (1984 - 05 - 03) Format 7 - inch single Recorded Genre Rock Length 3: 33 Label Columbia Songwriter (s) Bruce Springsteen Producer (s) Bruce Springsteen Jon Landau Chuck Plotkin Steven Van Zandt Bruce Springsteen singles chronology ``Fade Away ''(1981)`` Pink Cadillac'' (1984) ``Cover Me ''(1984)",
+      "score_breakdown": {
+        "dense": 0.05004875034042979,
+        "graph": 0.048833528832926056,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:lee_band",
+        "score": 0.049587670721911184,
+        "text": "Lee Band",
+        "metadata": {
+          "canonical_name": "Lee Band",
+          "aliases": [
+            "LB",
+            "Lee Band"
+          ],
+          "surface_forms": [
+            "LB",
+            "Lee Band"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_bruce_lee_band",
+        "score": 0.04375158557486544,
+        "text": "The Bruce Lee Band",
+        "metadata": {
+          "canonical_name": "The Bruce Lee Band",
+          "aliases": [
+            "BLB",
+            "Bruce Lee Band"
+          ],
+          "surface_forms": [
+            "BLB",
+            "Bruce Lee Band"
+          ],
+          "title_anchor": "The Bruce Lee Band"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_all_the_years",
+        "score": 0.04082947003331286,
+        "text": "All the Years",
+        "metadata": {
+          "canonical_name": "All the Years",
+          "aliases": [
+            "ATY",
+            "All the Years"
+          ],
+          "surface_forms": [
+            "ATY",
+            "All the Years"
+          ],
+          "title_anchor": "All the Years"
+        }
+      },
+      {
+        "node_id": "entity:mike_park",
+        "score": 0.03592790881706786,
+        "text": "Mike Park",
+        "metadata": {
+          "canonical_name": "Mike Park",
+          "aliases": [
+            "MP",
+            "Mike Park"
+          ],
+          "surface_forms": [
+            "MP",
+            "Mike Park"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_asian_man_records",
+        "score": 0.03591366550318463,
+        "text": "Asian Man Records",
+        "metadata": {
+          "canonical_name": "Asian Man Records",
+          "aliases": [
+            "AMR",
+            "Asian Man Records"
+          ],
+          "surface_forms": [
+            "AMR",
+            "Asian Man Records"
+          ],
+          "title_anchor": "Asian Man Records"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_bruce_lee_band_0_1_lee_band_is_the_name_given_to_the_releases_of_mike_park_and_his_backing_band_wh",
+        "score": 0.07724017986854635,
+        "text": "Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.",
+        "metadata": {
+          "title": "The Bruce Lee Band",
+          "chunk_id": "chunk:the_bruce_lee_band_0",
+          "sentence_index": 1,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Lee Band",
+              "relation": "is name given to",
+              "tail": "releases of Mike Park and his backing band"
+            },
+            {
+              "head": "Lee Band",
+              "relation": "includes",
+              "tail": "Less Than Jake"
+            },
+            {
+              "head": "Lee Band",
+              "relation": "includes",
+              "tail": "Rx Bandits"
+            }
+          ],
+          "entities": [
+            "Lee Band",
+            "Mike Park",
+            "Less Than Jake",
+            "Rx Bandits"
+          ],
+          "entity_ids": [
+            "entity:lee_band",
+            "entity:less_than_jake",
+            "entity:mike_park",
+            "entity:releases_of_mike_park_and_his_backing_band",
+            "entity:rx_bandits"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:asian_man_records_0_0_asian_man_records_is_a_diy_record_label_run_by_mike_park_in_monte_sereno_califo",
+        "score": 0.06323466123926173,
+        "text": "Asian Man Records is a DIY record label run by Mike Park in Monte Sereno, California.",
+        "metadata": {
+          "title": "Asian Man Records",
+          "chunk_id": "chunk:asian_man_records_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Asian Man Records",
+              "relation": "is a",
+              "tail": "DIY record label"
+            },
+            {
+              "head": "Asian Man Records",
+              "relation": "run by",
+              "tail": "Mike Park"
+            },
+            {
+              "head": "Mike Park",
+              "relation": "located in",
+              "tail": "Monte Sereno California"
+            }
+          ],
+          "entities": [
+            "Asian Man Records",
+            "Mike Park",
+            "Monte Sereno California"
+          ],
+          "entity_ids": [
+            "entity:diy_record_label",
+            "entity:mike_park",
+            "entity:monte_sereno_california",
+            "entity:title_anchor_asian_man_records"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:all_the_years_0_0_all_the_years_is_a_song_that_was_recorded_by_the_rock_band_chicago_released_on",
+        "score": 0.05856046198599992,
+        "text": "All the Years is a song that was recorded by the rock band Chicago, released on the 2008 album Stone of Sisyphus.",
+        "metadata": {
+          "title": "All the Years",
+          "chunk_id": "chunk:all_the_years_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "All the Years",
+              "relation": "recorded by",
+              "tail": "Chicago"
+            },
+            {
+              "head": "All the Years",
+              "relation": "released on",
+              "tail": "Stone of Sisyphus"
+            }
+          ],
+          "entities": [
+            "All the Years",
+            "Chicago",
+            "Stone of Sisyphus"
+          ],
+          "entity_ids": [
+            "entity:chicago",
+            "entity:stone_of_sisyphus",
+            "entity:title_anchor_all_the_years"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+        "score": 0.05171381477023485,
+        "text": "The Bruce Lee Band (or B.",
+        "metadata": {
+          "title": "The Bruce Lee Band",
+          "chunk_id": "chunk:the_bruce_lee_band_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [],
+          "entities": [
+            "Bruce Lee Band"
+          ],
+          "entity_ids": [
+            "entity:title_anchor_the_bruce_lee_band"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_bruce_lee_band_0",
+        "score": 0.023433611859633538,
+        "text": "The Bruce Lee Band\nThe Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.",
+        "metadata": {
+          "title": "The Bruce Lee Band",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:lee_band",
+            "entity:less_than_jake",
+            "entity:mike_park",
+            "entity:releases_of_mike_park_and_his_backing_band",
+            "entity:rx_bandits",
+            "entity:title_anchor_the_bruce_lee_band"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:all_the_years_0",
+        "score": 0.010627216534935091,
+        "text": "All the Years\nAll the Years is a song that was recorded by the rock band Chicago, released on the 2008 album Stone of Sisyphus. It was written by Robert Lamm and studio session musician Bruce Gaitsch, the guitarist from the \"Night & Day Big Band\" album.",
+        "metadata": {
+          "title": "All the Years",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:bruce_gaitsch",
+            "entity:chicago",
+            "entity:night_day_big_band",
+            "entity:night_day_big_band_album",
+            "entity:robert_lamm",
+            "entity:stone_of_sisyphus",
+            "entity:title_anchor_all_the_years"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:asian_man_records_0",
+        "score": 0.010515140140333985,
+        "text": "Asian Man Records\nAsian Man Records is a DIY record label run by Mike Park in Monte Sereno, California. Park started a record label and began releasing music in 1989 under the name Dill Records, with the Asian Man label established May 1996.",
+        "metadata": {
+          "title": "Asian Man Records",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:asian_man_label",
+            "entity:dill_records",
+            "entity:diy_record_label",
+            "entity:may_1996",
+            "entity:mike_park",
+            "entity:monte_sereno_california",
+            "entity:park",
+            "entity:title_anchor_asian_man_records"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:levitate_bruce_hornsby_album_0",
+        "score": 0.00952476251527175,
+        "text": "Levitate (Bruce Hornsby album)\nLevitate is the tenth studio album by Bruce Hornsby. It was Hornsby's third studio album with his touring band, Bruce Hornsby and the Noisemakers, and was his first release with Verve Records.",
+        "metadata": {
+          "title": "Levitate (Bruce Hornsby album)",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:bruce_hornsby",
+            "entity:bruce_hornsby_and_the_noisemakers",
+            "entity:hornsby",
+            "entity:title_anchor_levitate_bruce_hornsby_album",
+            "entity:verve_records"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Bruce Lee Band\nThe Bruce Lee Band (or B.\n\nGo Down Records\nIt was founded by Leonardo Cola and Max Ear, also part of the Italian band OJM. Go Down Records Go Down Records is an independent record label based in Savignano sul Rubicone, Italy.\n\nBirth of the Dragon\nBilly Magnussen as Steve McKee, Bruce Lee's student. Xia Yu as Wong Jack Man, the Tai chi and Northern Shaolin Master who Bruce Lee fights.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:all_the_years_0",
+        "passage_index": 8,
+        "title": "All the Years",
+        "score": 0.08253100598027859,
+        "text": "All the Years\nAll the Years is a song that was recorded by the rock band Chicago, released on the 2008 album Stone of Sisyphus. It was written by Robert Lamm and studio session musician Bruce Gaitsch, the guitarist from the \"Night & Day Big Band\" album.",
+        "score_breakdown": {
+          "dense": 0.04987687088368181,
+          "graph": 0.053610895358506536,
+          "fact": 0.2601030559113442
+        }
+      },
+      {
+        "node_id": "chunk:the_bruce_lee_band_0",
+        "passage_index": 9,
+        "title": "The Bruce Lee Band",
+        "score": 0.08184809022286185,
+        "text": "The Bruce Lee Band\nThe Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.",
+        "score_breakdown": {
+          "dense": 0.0507178265553537,
+          "graph": 0.057365111121759314,
+          "fact": 0.24495834853926357
+        }
+      },
+      {
+        "node_id": "chunk:levitate_bruce_hornsby_album_0",
+        "passage_index": 11,
+        "title": "Levitate (Bruce Hornsby album)",
+        "score": 0.08103512802103352,
+        "text": "Levitate (Bruce Hornsby album)\nLevitate is the tenth studio album by Bruce Hornsby. It was Hornsby's third studio album with his touring band, Bruce Hornsby and the Noisemakers, and was his first release with Verve Records.",
+        "score_breakdown": {
+          "dense": 0.05005792249893478,
+          "graph": 0.052135414027373206,
+          "fact": 0.2524176429227162
+        }
+      },
+      {
+        "node_id": "chunk:asian_man_records_0",
+        "passage_index": 18,
+        "title": "Asian Man Records",
+        "score": 0.08013026081682478,
+        "text": "Asian Man Records\nAsian Man Records is a DIY record label run by Mike Park in Monte Sereno, California. Park started a record label and began releasing music in 1989 under the name Dill Records, with the Asian Man label established May 1996.",
+        "score_breakdown": {
+          "dense": 0.0501710212286773,
+          "graph": 0.05386018749016956,
+          "fact": 0.242520952626676
+        }
+      },
+      {
+        "node_id": "chunk:big_swing_face_0",
+        "passage_index": 4,
+        "title": "Big Swing Face",
+        "score": 0.042533400049216345,
+        "text": "Big Swing Face\nBig Swing Face is the eighth album by American singer and pianist Bruce Hornsby. It was Hornsby's first studio album with his touring band, the Noisemakers, and his last album for RCA Records .",
+        "score_breakdown": {
+          "dense": 0.04997159700854079,
+          "graph": 0.05016340564839636,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:birth_of_the_dragon_0",
+        "passage_index": 16,
+        "title": "Birth of the Dragon",
+        "score": 0.04225136532994843,
+        "text": "Birth of the Dragon\nPhilip Ng as Bruce Lee, founder of Jeet Kune Do. Xia Yu as Wong Jack Man, the Tai chi and Northern Shaolin Master who Bruce Lee fights. Jin Xing as Auntie Blossom, a gangster. Billy Magnussen as Steve McKee, Bruce Lee's student. Jingjing Qu as Xiulan, McKee's love interest. Simon Yin as Vinnie Wei Ron Yuan as Tony Yu",
+        "score_breakdown": {
+          "dense": 0.050163723637064075,
+          "graph": 0.04887105776521063,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:porno_graffitti_0",
+        "passage_index": 19,
+        "title": "Porno Graffitti",
+        "score": 0.04223528954003834,
+        "text": "Porno Graffitti\n, also known as , are a Japanese rock band from Onomichi (formerly Innoshima), Hiroshima Prefecture, Japan. The band got their name from the album \"Pornograffitti\" by the band Extreme. They currently record under the SME Records label, and their agency is Amuse, Inc..",
+        "score_breakdown": {
+          "dense": 0.05003622348671944,
+          "graph": 0.0490512220744755,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bruce_lee_my_brother_0",
+        "passage_index": 7,
+        "title": "Bruce Lee, My Brother",
+        "score": 0.04217761617769691,
+        "text": "Bruce Lee, My Brother\nBruce Lee, My Brother (, also known in the United Kingdom as Young Bruce Lee) is a 2010 Hong Kong biographical martial arts drama film directed by Raymond Yip, and also written, produced and directed by Manfred Wong, and also storied, produced and narrated by Bruce Lee's real life younger brother Robert Lee. Starring Aarif Lee as Lee, Tony Leung Ka-fai and Christy Chung as Lee's parents, the film is based on the life of Bruce Lee in his teenage years to part of his adult years.",
+        "score_breakdown": {
+          "dense": 0.05004236616459544,
+          "graph": 0.04884771595723139,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:go_down_records_0",
+        "passage_index": 14,
+        "title": "Go Down Records",
+        "score": 0.042177060769001254,
+        "text": "Go Down Records\nGo Down Records is an independent record label based in Savignano sul Rubicone, Italy. It was founded by Leonardo Cola and Max Ear, also part of the Italian band OJM.",
+        "score_breakdown": {
+          "dense": 0.05004400805768447,
+          "graph": 0.04884285445758266,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:pink_cadillac_song_0",
+        "passage_index": 13,
+        "title": "Pink Cadillac (song)",
+        "score": 0.0421768713371142,
+        "text": "Pink Cadillac (song)\n``Pink Cadillac ''Single by Bruce Springsteen A-side`` Dancing in the Dark'' Released May 3, 1984 (1984 - 05 - 03) Format 7 - inch single Recorded Genre Rock Length 3: 33 Label Columbia Songwriter (s) Bruce Springsteen Producer (s) Bruce Springsteen Jon Landau Chuck Plotkin Steven Van Zandt Bruce Springsteen singles chronology ``Fade Away ''(1981)`` Pink Cadillac'' (1984) ``Cover Me ''(1984)",
+        "score_breakdown": {
+          "dense": 0.05004875034042979,
+          "graph": 0.048833528832926056,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is part of The Bruce Lee Band?",
+        "resolved_sub_question": "Who is part of The Bruce Lee Band?",
+        "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+        "sentence": "The Bruce Lee Band (or B.",
+        "score": 0.4819462053922018,
+        "source_title": "The Bruce Lee Band",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain any information about the members of The Bruce Lee Band.",
+        "hop_raw_response": "The evidence provided does not contain any information about the members of The Bruce Lee Band.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "The Bruce Lee Band",
+            "text": "The Bruce Lee Band (or B."
+          }
+        ]
+      },
+      {
+        "sub_question": "What record label did this person start?",
+        "resolved_sub_question": "What record label did this person start?",
+        "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+        "sentence": "The Bruce Lee Band (or B.",
+        "score": 0.30240000000000006,
+        "source_title": "The Bruce Lee Band",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.",
+        "hop_raw_response": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "The Bruce Lee Band",
+            "text": "The Bruce Lee Band (or B."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is part of The Bruce Lee Band? (source: The Bruce Lee Band)\n2. What record label did this person start? (source: The Bruce Lee Band)\n\nWikipedia Title: The Bruce Lee Band\nThe Bruce Lee Band (or B.\n\nWikipedia Title: The Bruce Lee Band\nLee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits. The Bruce Lee Band The Bruce Lee Band (or B.\n\nWikipedia Title: I Will Not Bow\nIt was featured in the ending credits of the Bruce Willis film \"Surrogates\". I Will Not Bow \"I Will Not Bow\" is the first single by American rock band Breaking Benjamin's 2009 album \"Dear Agony\".\n\nWikipedia Title: All the Years\nIt was written by Robert Lamm and studio session musician Bruce Gaitsch, the guitarist from the \"Night & Day Big Band\" album. All the Years All the Years is a song that was recorded by the rock band Chicago, released on the 2008 album Stone of Sisyphus.\n\nWikipedia Title: Levitate (Bruce Hornsby album)\nIt was Hornsby's third studio album with his touring band, Bruce Hornsby and the Noisemakers, and was his first release with Verve Records. Levitate (Bruce Hornsby album) Levitate is the tenth studio album by Bruce Hornsby.\n\nQuestion: What record label did the person who is part of The Bruce Lee Band start?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The information provided does not specify which member of The Bruce Lee Band started a record label, nor does it mention any record label associated with the band or its members.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The information provided does not specify which member of The Bruce Lee Band started a record label, nor does it mention any record label associated with the band or its members.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "2hop__549146_223121",
+    "question": "What record label did the person who is part of The Bruce Lee Band start?",
+    "answer": "Asian Man Records",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "The Bruce Lee Band >> has part",
+      "#1 >> record label"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Asian Man Records",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Asian Man Records"
+    ]
+  }
+}

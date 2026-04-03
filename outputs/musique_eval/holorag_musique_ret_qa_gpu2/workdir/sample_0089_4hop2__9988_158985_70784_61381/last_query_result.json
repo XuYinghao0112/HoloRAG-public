@@ -1,0 +1,1059 @@
+{
+  "query": "When was the region immediately north of the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use established?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Near East"
+  ],
+  "raw_query_entities": [
+    "Near East"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Near East",
+      "node_id": "entity:new_england",
+      "resolved_text": "New England",
+      "score": 0.7240000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.5,
+      "score_margin": 0.0028000000000000247,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use?",
+    "What is the region immediately north of this region?",
+    "When was this northern region established?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:south_yemen",
+      "score": 0.3617849077872993,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:yemen_arab_republic",
+      "score": 0.3617849077872993,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_yemen",
+      "score": 0.3617849077872993,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:yemen",
+      "score": 0.30348272877738514,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bedfordshire",
+      "score": 0.30177982374915463,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:buckinghamshire",
+      "score": 0.30177982374915463,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:city_of_london",
+      "score": 0.30177982374915463,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tibet_autonomous_region",
+      "score": 0.278479711463153,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_saudi_arabia",
+      "score": 0.2737827329197097,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saudi",
+      "score": 0.2737827329197097,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:north_gosford",
+      "score": 0.26348229528608197,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gosford_s_central_business_district",
+      "score": 0.26347888025429994,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:kingdom_of_saudi_arabia_is_north_of_yemen_sentence_geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_countr",
+      "text": "Kingdom of Saudi Arabia is north of Yemen",
+      "head_id": "entity:kingdom_of_saudi_arabia",
+      "tail_id": "entity:yemen",
+      "sentence_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+      "chunk_id": "chunk:geography_of_saudi_arabia_0",
+      "document_index": 15,
+      "score": 0.3014874231560828
+    },
+    {
+      "fact_id": "fact:dobjoi_is_located_in_tibet_autonomous_region_sentence_dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_c",
+      "text": "Dobjoi is located in Tibet Autonomous Region",
+      "head_id": "entity:title_anchor_dobjoi",
+      "tail_id": "entity:tibet_autonomous_region",
+      "sentence_id": "sentence:dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_china_north_east_of_shigat",
+      "chunk_id": "chunk:dobjoi_0",
+      "document_index": 17,
+      "score": 0.27648137734386646
+    },
+    {
+      "fact_id": "fact:north_gosford_is_immediately_north_east_of_gosford_s_central_business_district_sentence_north_gosford_new_south_wales_0_",
+      "text": "North Gosford is immediately north-east of Gosford's central business district",
+      "head_id": "entity:north_gosford",
+      "tail_id": "entity:gosford_s_central_business_district",
+      "sentence_id": "sentence:north_gosford_new_south_wales_0_0_north_gosford_is_a_south_eastern_suburb_of_the_central_coast_region_of_new_south",
+      "chunk_id": "chunk:north_gosford_new_south_wales_0",
+      "document_index": 16,
+      "score": 0.2614842710651077
+    },
+    {
+      "fact_id": "fact:hertfordshire_is_located_north_of_london_sentence_hertfordshire_0_0_hertfordshire_is_the_county_immediately_north_of_lon",
+      "text": "Hertfordshire is located north of London",
+      "head_id": "entity:title_anchor_hertfordshire",
+      "tail_id": "entity:london",
+      "sentence_id": "sentence:hertfordshire_0_0_hertfordshire_is_the_county_immediately_north_of_london_and_is_part_of_the_east",
+      "chunk_id": "chunk:hertfordshire_0",
+      "document_index": 9,
+      "score": 0.25148318645762885
+    },
+    {
+      "fact_id": "fact:kingdom_of_saudi_arabia_is_the_largest_country_of_arabia_sentence_geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_ara",
+      "text": "Kingdom of Saudi Arabia is the largest country of Arabia",
+      "head_id": "entity:kingdom_of_saudi_arabia",
+      "tail_id": "entity:arabia",
+      "sentence_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+      "chunk_id": "chunk:geography_of_saudi_arabia_0",
+      "document_index": 15,
+      "score": 0.21148503010421016
+    },
+    {
+      "fact_id": "fact:dobjoi_is_northeast_of_shigatse_sentence_dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_china_north_ea",
+      "text": "Dobjoi is northeast of Shigatse",
+      "head_id": "entity:title_anchor_dobjoi",
+      "tail_id": "entity:shigatse",
+      "sentence_id": "sentence:dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_china_north_east_of_shigat",
+      "chunk_id": "chunk:dobjoi_0",
+      "document_index": 17,
+      "score": 0.19148230759199203
+    },
+    {
+      "fact_id": "fact:agency_for_international_development_does_not_use_term_near_east_sentence_near_east_0_1_agency_for_international_develop",
+      "text": "Agency for International Development does not use term Near East",
+      "head_id": "entity:agency_for_international_development",
+      "tail_id": "entity:title_anchor_near_east",
+      "sentence_id": "sentence:near_east_0_1_agency_for_international_development_usaid_an_independent_agency_under_the_de",
+      "chunk_id": "chunk:near_east_0",
+      "document_index": 11,
+      "score": 0.1714856756923199
+    },
+    {
+      "fact_id": "fact:kingdom_of_saudi_arabia_founded_by_ibn_saud_sentence_saudi_arabia_0_1_the_kingdom_of_saudi_arabia_was_founded_in_1932_by",
+      "text": "Kingdom of Saudi Arabia founded by Ibn Saud",
+      "head_id": "entity:kingdom_of_saudi_arabia",
+      "tail_id": "entity:ibn_saud",
+      "sentence_id": "sentence:saudi_arabia_0_1_the_kingdom_of_saudi_arabia_was_founded_in_1932_by_ibn_saud",
+      "chunk_id": "chunk:saudi_arabia_0",
+      "document_index": 0,
+      "score": 0.17148437903898134
+    }
+  ],
+  "bridge_entities": [
+    "Persian Gulf"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use?",
+      "resolved_sub_question": "What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use?",
+      "sentence_id": "sentence:water_resources_0_4_however_there_is_growth_in_desalination_for_agricultural_use_and_highly_popula",
+      "sentence": "However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California.",
+      "score": 0.37330779831409455,
+      "source_title": "Water resources",
+      "hop_answer": "Persian Gulf",
+      "hop_thought": "The passage mentions that the most extensive use of desalination is in the Persian Gulf, which is also referred to as a region associated with the Near East.",
+      "hop_raw_response": "The passage mentions that the most extensive use of desalination is in the Persian Gulf, which is also referred to as a region associated with the Near East.\nAnswer: Persian Gulf",
+      "evidence_passages": [
+        {
+          "title": "Water resources",
+          "text": "However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California."
+        },
+        {
+          "title": "Water resources",
+          "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf."
+        },
+        {
+          "title": "Hertfordshire",
+          "text": "Hertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the region immediately north of this region?",
+      "resolved_sub_question": "What is the region immediately north of this region? Context: Persian Gulf.",
+      "sentence_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+      "sentence": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.",
+      "score": 0.4764328657854928,
+      "source_title": "Geography of Saudi Arabia",
+      "hop_answer": "Unknown",
+      "hop_thought": "The region immediately north of the Persian Gulf, based on the context given, would be part of Saudi Arabia, but more specifically, it includes territories of countries like Iraq and Iran which border the northern part of the Persian Gulf.",
+      "hop_raw_response": "The region immediately north of the Persian Gulf, based on the context given, would be part of Saudi Arabia, but more specifically, it includes territories of countries like Iraq and Iran which border the northern part of the Persian Gulf.\nAnswer: Iraq and Iran",
+      "evidence_passages": [
+        {
+          "title": "Geography of Saudi Arabia",
+          "text": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen."
+        },
+        {
+          "title": "Geography of Saudi Arabia",
+          "text": "Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts."
+        },
+        {
+          "title": "Water resources",
+          "text": "The most extensive use is in the Persian Gulf."
+        }
+      ]
+    },
+    {
+      "sub_question": "When was this northern region established?",
+      "resolved_sub_question": "When was this northern region established? Context: Persian Gulf.",
+      "sentence_id": "sentence:water_resources_0_5_the_most_extensive_use_is_in_the_persian_gulf",
+      "sentence": "The most extensive use is in the Persian Gulf.",
+      "score": 0.3734591839346356,
+      "source_title": "Water resources",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question asks about the establishment of the region immediately north of the Persian Gulf, which is Saudi Arabia. However, the provided evidence does not contain information on when Saudi Arabia was established.",
+      "hop_raw_response": "The question asks about the establishment of the region immediately north of the Persian Gulf, which is Saudi Arabia. However, the provided evidence does not contain information on when Saudi Arabia was established.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Water resources",
+          "text": "The most extensive use is in the Persian Gulf."
+        },
+        {
+          "title": "Water resources",
+          "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf."
+        },
+        {
+          "title": "Geography of Saudi Arabia",
+          "text": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_china_north_east_of_shigat",
+      "score": 0.03685349373151168,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:yemen",
+      "score": 0.03672637667652834,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:yemen_arab_republic",
+      "score": 0.03645085829123958,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:north_yemen",
+      "score": 0.036271087891552825,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:south_yemen",
+      "score": 0.03619784842001967,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kingdom_of_saudi_arabia",
+      "score": 0.03155644579876133,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+      "score": 0.029811483463008062,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_hertfordshire",
+      "score": 0.02852621706451186,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bedfordshire",
+      "score": 0.028495484127787477,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:london",
+      "score": 0.027627164126157507,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:buckinghamshire",
+      "score": 0.02637613955440128,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tibet_autonomous_region",
+      "score": 0.02618120957289713,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_dobjoi",
+      "score": 0.025816965372968723,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:north_gosford",
+      "score": 0.02443302989700561,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:north_gosford_new_south_wales_0_0_north_gosford_is_a_south_eastern_suburb_of_the_central_coast_region_of_new_south",
+      "score": 0.024269779179487926,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:city_of_london",
+      "score": 0.024182746159876086,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:arabia",
+      "score": 0.02377130221965485,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:eastern_arabia",
+      "score": 0.022089713062407885,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:hertfordshire_0_0_hertfordshire_is_the_county_immediately_north_of_london_and_is_part_of_the_east",
+      "score": 0.02160902670959144,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_saudi_arabia",
+      "score": 0.021461096669018142,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:geography_of_saudi_arabia_0",
+      "passage_index": 15,
+      "title": "Geography of Saudi Arabia",
+      "score": 0.07062538108226195,
+      "text": "Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts.",
+      "score_breakdown": {
+        "dense": 0.05028482626145513,
+        "graph": 0.05463162609927757,
+        "fact": 0.177194925391189
+      }
+    },
+    {
+      "node_id": "chunk:dobjoi_0",
+      "passage_index": 17,
+      "title": "Dobjoi",
+      "score": 0.06895514234775763,
+      "text": "Dobjoi\nDobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse. It lies at an altitude of 4,410 metres (14,471 feet).",
+      "score_breakdown": {
+        "dense": 0.049877255841271985,
+        "graph": 0.05199937765290791,
+        "fact": 0.17281892226123766
+      }
+    },
+    {
+      "node_id": "chunk:hertfordshire_0",
+      "passage_index": 9,
+      "title": "Hertfordshire",
+      "score": 0.06871124088890262,
+      "text": "Hertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit. A significant minority of the population across all districts are City of London commuters. To the east is Essex, to the west is Buckinghamshire and to the north are Bedfordshire and Cambridgeshire.",
+      "score_breakdown": {
+        "dense": 0.04997743491195889,
+        "graph": 0.053136015892348176,
+        "fact": 0.1685523127974719
+      }
+    },
+    {
+      "node_id": "chunk:north_gosford_new_south_wales_0",
+      "passage_index": 16,
+      "title": "North Gosford, New South Wales",
+      "score": 0.06835230367954034,
+      "text": "North Gosford, New South Wales\nNorth Gosford is a south-eastern suburb of the Central Coast region of New South Wales, Australia immediately north-east of Gosford's central business district. It is part of the local government area.",
+      "score_breakdown": {
+        "dense": 0.05003592830870961,
+        "graph": 0.050985238855494816,
+        "fact": 0.17024647635401083
+      }
+    },
+    {
+      "node_id": "chunk:saudi_arabia_0",
+      "passage_index": 0,
+      "title": "Saudi Arabia",
+      "score": 0.06635445443831399,
+      "text": "Saudi Arabia\nThe area of modern - day Saudi Arabia formerly consisted of four distinct regions: Hejaz, Najd and parts of Eastern Arabia (Al - Ahsa) and Southern Arabia ('Asir). The Kingdom of Saudi Arabia was founded in 1932 by Ibn Saud. He united the four regions into a single state through a series of conquests beginning in 1902 with the capture of Riyadh, the ancestral home of his family, the House of Saud. Saudi Arabia has since been an absolute monarchy, effectively a hereditary dictatorship governed along Islamic lines. The ultraconservative Wahhabi religious movement within Sunni Islam has been called ``the predominant feature of Saudi culture '', with its global spread largely financed by the oil and gas trade. Saudi Arabia is sometimes called`` the Land of the Two Holy Mosques'' in reference to Al - Masjid al - Haram (in Mecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners.",
+      "score_breakdown": {
+        "dense": 0.050128734588901484,
+        "graph": 0.05148204435347128,
+        "fact": 0.15559358072251195
+      }
+    },
+    {
+      "node_id": "chunk:near_east_0",
+      "passage_index": 11,
+      "title": "Near East",
+      "score": 0.06626113161857783,
+      "text": "Near East\nThe U.S. Agency for International Development (USAID), an independent agency under the Department of State established in place of the Marshall Plan for the purpose of determining and distributing foreign aid, does not use the term Near East. Its definition of Middle East corresponds to that of the State Department, which officially prefers the term Near East.",
+      "score_breakdown": {
+        "dense": 0.05022625126962039,
+        "graph": 0.05099208683083272,
+        "fact": 0.15559378247357866
+      }
+    },
+    {
+      "node_id": "chunk:water_resources_0",
+      "passage_index": 13,
+      "title": "Water resources",
+      "score": 0.04257530458608902,
+      "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf.",
+      "score_breakdown": {
+        "dense": 0.05062071547853504,
+        "graph": 0.049113036909649146,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:banana_production_in_the_united_states_0",
+      "passage_index": 3,
+      "title": "Banana production in the United States",
+      "score": 0.04231704721718466,
+      "text": "Banana production in the United States\nThe first commercial banana farm in the United States was established in Florida, near Silver Lake, in 1876. A number of independent banana farms and cultivars have been located in a number of areas, reaching as far north as the southern Midwest and Ohio river, where wild banana trees can be found along the banks of the Ohio at far southern Illinois, Indiana, and Missouri, just north of Kentucky. This region equates roughly with the northernmost terminus of the subtropical crop - growing region of the US, which ends at about Cincinnati, Ohio, and further east in cities and locations such as Philadelphia, Pennsylvania, New York City and Long Island in New York, and coastal regions of southern New England. Banana growth further west along this ecological transition line, such as in central to northern Missouri and northern Kansas / far southern Nebraska is highly dubious and uncertain, due to extreme temperature fluctuations and an increase in aridity.",
+      "score_breakdown": {
+        "dense": 0.05019472979145244,
+        "graph": 0.04903315277295274,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:saudi_arabia_1",
+      "passage_index": 0,
+      "title": "Saudi Arabia",
+      "score": 0.042290356972935525,
+      "text": "Saudi Arabia\nMecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners. As of 2017, the population is 33 million. The state's official language is Arabic.",
+      "score_breakdown": {
+        "dense": 0.04999308380559458,
+        "graph": 0.049313869599528354,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ko_zin_0",
+      "passage_index": 10,
+      "title": "Kołzin",
+      "score": 0.042185708323593175,
+      "text": "Kołzin\nKołzin is a settlement in the administrative district of Gmina Sianów, within Koszalin County, West Pomeranian Voivodeship, in north-western Poland. It lies approximately north of Sianów, north-east of Koszalin, and north-east of the regional capital Szczecin.",
+      "score_breakdown": {
+        "dense": 0.04995432828322972,
+        "graph": 0.049036092559389434,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:yemen",
+        "score": 0.03672637667652834,
+        "text": "Yemen",
+        "metadata": {
+          "canonical_name": "Yemen",
+          "aliases": [
+            "Yemen"
+          ],
+          "surface_forms": [
+            "Yemen"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:yemen_arab_republic",
+        "score": 0.03645085829123958,
+        "text": "Yemen Arab Republic",
+        "metadata": {
+          "canonical_name": "Yemen Arab Republic",
+          "aliases": [
+            "YAR",
+            "Yemen Arab Republic"
+          ],
+          "surface_forms": [
+            "YAR",
+            "Yemen Arab Republic"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:north_yemen",
+        "score": 0.036271087891552825,
+        "text": "North Yemen",
+        "metadata": {
+          "canonical_name": "North Yemen",
+          "aliases": [
+            "NY",
+            "North Yemen"
+          ],
+          "surface_forms": [
+            "NY",
+            "North Yemen"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:south_yemen",
+        "score": 0.03619784842001967,
+        "text": "South Yemen",
+        "metadata": {
+          "canonical_name": "South Yemen",
+          "aliases": [
+            "SY",
+            "South Yemen"
+          ],
+          "surface_forms": [
+            "SY",
+            "South Yemen"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:kingdom_of_saudi_arabia",
+        "score": 0.03155644579876133,
+        "text": "Kingdom of Saudi Arabia",
+        "metadata": {
+          "canonical_name": "Kingdom of Saudi Arabia",
+          "aliases": [
+            "KOSA",
+            "Kingdom of Saudi Arabia"
+          ],
+          "surface_forms": [
+            "KOSA",
+            "Kingdom of Saudi Arabia"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:dobjoi_0_0_dobjoi_is_a_village_in_the_tibet_autonomous_region_of_china_north_east_of_shigat",
+        "score": 0.03685349373151168,
+        "text": "Dobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse.",
+        "metadata": {
+          "title": "Dobjoi",
+          "chunk_id": "chunk:dobjoi_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Dobjoi",
+              "relation": "is located in",
+              "tail": "Tibet Autonomous Region"
+            },
+            {
+              "head": "Tibet Autonomous Region",
+              "relation": "is part of",
+              "tail": "China"
+            },
+            {
+              "head": "Dobjoi",
+              "relation": "is northeast of",
+              "tail": "Shigatse"
+            }
+          ],
+          "entities": [
+            "Dobjoi",
+            "Tibet Autonomous Region",
+            "China",
+            "Shigatse"
+          ],
+          "entity_ids": [
+            "entity:china",
+            "entity:shigatse",
+            "entity:tibet_autonomous_region",
+            "entity:title_anchor_dobjoi"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+        "score": 0.029811483463008062,
+        "text": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.",
+        "metadata": {
+          "title": "Geography of Saudi Arabia",
+          "chunk_id": "chunk:geography_of_saudi_arabia_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Kingdom of Saudi Arabia",
+              "relation": "is located in",
+              "tail": "Southwest Asia"
+            },
+            {
+              "head": "Kingdom of Saudi Arabia",
+              "relation": "is the largest country of",
+              "tail": "Arabia"
+            },
+            {
+              "head": "Kingdom of Saudi Arabia",
+              "relation": "borders",
+              "tail": "Persian Gulf"
+            },
+            {
+              "head": "Kingdom of Saudi Arabia",
+              "relation": "borders",
+              "tail": "Red Sea"
+            },
+            {
+              "head": "Kingdom of Saudi Arabia",
+              "relation": "is north of",
+              "tail": "Yemen"
+            }
+          ],
+          "entities": [
+            "Kingdom of Saudi Arabia",
+            "Southwest Asia",
+            "Arabia",
+            "Persian Gulf",
+            "Red Sea",
+            "Yemen"
+          ],
+          "entity_ids": [
+            "entity:arabia",
+            "entity:kingdom_of_saudi_arabia",
+            "entity:persian_gulf",
+            "entity:red_sea",
+            "entity:southwest_asia",
+            "entity:yemen"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:north_gosford_new_south_wales_0_0_north_gosford_is_a_south_eastern_suburb_of_the_central_coast_region_of_new_south",
+        "score": 0.024269779179487926,
+        "text": "North Gosford is a south-eastern suburb of the Central Coast region of New South Wales, Australia immediately north-east of Gosford's central business district.",
+        "metadata": {
+          "title": "North Gosford, New South Wales",
+          "chunk_id": "chunk:north_gosford_new_south_wales_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "North Gosford",
+              "relation": "is a suburb of",
+              "tail": "Central Coast region"
+            },
+            {
+              "head": "Central Coast region",
+              "relation": "is in",
+              "tail": "New South Wales"
+            },
+            {
+              "head": "New South Wales",
+              "relation": "is in",
+              "tail": "Australia"
+            },
+            {
+              "head": "North Gosford",
+              "relation": "is located",
+              "tail": "south-east of Central Coast region"
+            },
+            {
+              "head": "North Gosford",
+              "relation": "is immediately north-east of",
+              "tail": "Gosford's central business district"
+            }
+          ],
+          "entities": [
+            "North Gosford",
+            "Central Coast region",
+            "New South Wales",
+            "Australia",
+            "Gosford's central business district"
+          ],
+          "entity_ids": [
+            "entity:australia",
+            "entity:central_coast_region",
+            "entity:gosford_s_central_business_district",
+            "entity:new_south_wales",
+            "entity:north_gosford",
+            "entity:south_east_of_central_coast_region"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:hertfordshire_0_0_hertfordshire_is_the_county_immediately_north_of_london_and_is_part_of_the_east",
+        "score": 0.02160902670959144,
+        "text": "Hertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit.",
+        "metadata": {
+          "title": "Hertfordshire",
+          "chunk_id": "chunk:hertfordshire_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Hertfordshire",
+              "relation": "is located north of",
+              "tail": "London"
+            },
+            {
+              "head": "Hertfordshire",
+              "relation": "is part of",
+              "tail": "East of England region"
+            }
+          ],
+          "entities": [
+            "Hertfordshire",
+            "London",
+            "East of England region"
+          ],
+          "entity_ids": [
+            "entity:east_of_england_region",
+            "entity:london",
+            "entity:title_anchor_hertfordshire"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:geography_of_saudi_arabia_0",
+        "score": 0.010022939004100777,
+        "text": "Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts.",
+        "metadata": {
+          "title": "Geography of Saudi Arabia",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:arabia",
+            "entity:arabian_peninsula",
+            "entity:democratic_republic",
+            "entity:kingdom_of_saudi_arabia",
+            "entity:less",
+            "entity:most",
+            "entity:north_yemen",
+            "entity:oman",
+            "entity:people",
+            "entity:persian_gulf",
+            "entity:red_sea",
+            "entity:republic",
+            "entity:saudi_government",
+            "entity:south_yemen",
+            "entity:southwest_asia",
+            "entity:suez_canal",
+            "entity:united_arab_emirates",
+            "entity:yemen",
+            "entity:yemen_arab_republic"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:dobjoi_0",
+        "score": 0.00944882469114602,
+        "text": "Dobjoi\nDobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse. It lies at an altitude of 4,410 metres (14,471 feet).",
+        "metadata": {
+          "title": "Dobjoi",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:china",
+            "entity:shigatse",
+            "entity:tibet_autonomous_region",
+            "entity:title_anchor_dobjoi"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:hertfordshire_0",
+        "score": 0.007043688005641266,
+        "text": "Hertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit. A significant minority of the population across all districts are City of London commuters. To the east is Essex, to the west is Buckinghamshire and to the north are Bedfordshire and Cambridgeshire.",
+        "metadata": {
+          "title": "Hertfordshire",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:bedfordshire",
+            "entity:buckinghamshire",
+            "entity:cambridgeshire",
+            "entity:city_of_london",
+            "entity:east_of_england_region",
+            "entity:essex",
+            "entity:london",
+            "entity:title_anchor_hertfordshire"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:north_gosford_new_south_wales_0",
+        "score": 0.0056087450626410035,
+        "text": "North Gosford, New South Wales\nNorth Gosford is a south-eastern suburb of the Central Coast region of New South Wales, Australia immediately north-east of Gosford's central business district. It is part of the local government area.",
+        "metadata": {
+          "title": "North Gosford, New South Wales",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:australia",
+            "entity:central_coast_region",
+            "entity:gosford_s_central_business_district",
+            "entity:new_south_wales",
+            "entity:north_gosford",
+            "entity:south_east_of_central_coast_region"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Geography of Saudi Arabia\nGeography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts.\n\nDobjoi\nDobjoi\nDobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse. It lies at an altitude of 4,410 metres (14,471 feet).\n\nHertfordshire\nHertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit. A significant minority of the population across all districts are City of London commuters. To the east is Essex, to the west is Buckinghamshire and to the north are Bedfordshire and Cambridgeshire.\n\nNorth Gosford, New South Wales\nNorth Gosford, New South Wales\nNorth Gosford is a south-eastern suburb of the Central Coast region of New South Wales, Australia immediately north-east of Gosford's central business district. It is part of the local government area.\n\nSaudi Arabia\nSaudi Arabia\nThe area of modern - day Saudi Arabia formerly consisted of four distinct regions: Hejaz, Najd and parts of Eastern Arabia (Al - Ahsa) and Southern Arabia ('Asir). The Kingdom of Saudi Arabia was founded in 1932 by Ibn Saud. He united the four regions into a single state through a series of conquests beginning in 1902 with the capture of Riyadh, the ancestral home of his family, the House of Saud. Saudi Arabia has since been an absolute monarchy, effectively a hereditary dictatorship governed along Islamic lines. The ultraconservative Wahhabi religious movement within Sunni Islam has been called ``the predominant feature of Saudi culture '', with its global spread largely financed by the oil and gas trade. Saudi Arabia is sometimes called`` the Land of the Two Holy Mosques'' in reference to Al - Masjid al - Haram (in Mecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners.\n\nWater resources\nHowever, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California.\n\nWater resources\nWater resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf.\n\nHertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit.\n\nGeography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.\n\nWater resources\nThe most extensive use is in the Persian Gulf.\n\nSaudi Arabia\nSaudi Arabia\nMecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners. As of 2017, the population is 33 million. The state's official language is Arabic.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:geography_of_saudi_arabia_0",
+        "passage_index": 15,
+        "title": "Geography of Saudi Arabia",
+        "score": 0.07062538108226195,
+        "text": "Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts.",
+        "score_breakdown": {
+          "dense": 0.05028482626145513,
+          "graph": 0.05463162609927757,
+          "fact": 0.177194925391189
+        }
+      },
+      {
+        "node_id": "chunk:dobjoi_0",
+        "passage_index": 17,
+        "title": "Dobjoi",
+        "score": 0.06895514234775763,
+        "text": "Dobjoi\nDobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse. It lies at an altitude of 4,410 metres (14,471 feet).",
+        "score_breakdown": {
+          "dense": 0.049877255841271985,
+          "graph": 0.05199937765290791,
+          "fact": 0.17281892226123766
+        }
+      },
+      {
+        "node_id": "chunk:hertfordshire_0",
+        "passage_index": 9,
+        "title": "Hertfordshire",
+        "score": 0.06871124088890262,
+        "text": "Hertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit. A significant minority of the population across all districts are City of London commuters. To the east is Essex, to the west is Buckinghamshire and to the north are Bedfordshire and Cambridgeshire.",
+        "score_breakdown": {
+          "dense": 0.04997743491195889,
+          "graph": 0.053136015892348176,
+          "fact": 0.1685523127974719
+        }
+      },
+      {
+        "node_id": "chunk:north_gosford_new_south_wales_0",
+        "passage_index": 16,
+        "title": "North Gosford, New South Wales",
+        "score": 0.06835230367954034,
+        "text": "North Gosford, New South Wales\nNorth Gosford is a south-eastern suburb of the Central Coast region of New South Wales, Australia immediately north-east of Gosford's central business district. It is part of the local government area.",
+        "score_breakdown": {
+          "dense": 0.05003592830870961,
+          "graph": 0.050985238855494816,
+          "fact": 0.17024647635401083
+        }
+      },
+      {
+        "node_id": "chunk:saudi_arabia_0",
+        "passage_index": 0,
+        "title": "Saudi Arabia",
+        "score": 0.06635445443831399,
+        "text": "Saudi Arabia\nThe area of modern - day Saudi Arabia formerly consisted of four distinct regions: Hejaz, Najd and parts of Eastern Arabia (Al - Ahsa) and Southern Arabia ('Asir). The Kingdom of Saudi Arabia was founded in 1932 by Ibn Saud. He united the four regions into a single state through a series of conquests beginning in 1902 with the capture of Riyadh, the ancestral home of his family, the House of Saud. Saudi Arabia has since been an absolute monarchy, effectively a hereditary dictatorship governed along Islamic lines. The ultraconservative Wahhabi religious movement within Sunni Islam has been called ``the predominant feature of Saudi culture '', with its global spread largely financed by the oil and gas trade. Saudi Arabia is sometimes called`` the Land of the Two Holy Mosques'' in reference to Al - Masjid al - Haram (in Mecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners.",
+        "score_breakdown": {
+          "dense": 0.050128734588901484,
+          "graph": 0.05148204435347128,
+          "fact": 0.15559358072251195
+        }
+      },
+      {
+        "node_id": "chunk:near_east_0",
+        "passage_index": 11,
+        "title": "Near East",
+        "score": 0.06626113161857783,
+        "text": "Near East\nThe U.S. Agency for International Development (USAID), an independent agency under the Department of State established in place of the Marshall Plan for the purpose of determining and distributing foreign aid, does not use the term Near East. Its definition of Middle East corresponds to that of the State Department, which officially prefers the term Near East.",
+        "score_breakdown": {
+          "dense": 0.05022625126962039,
+          "graph": 0.05099208683083272,
+          "fact": 0.15559378247357866
+        }
+      },
+      {
+        "node_id": "chunk:water_resources_0",
+        "passage_index": 13,
+        "title": "Water resources",
+        "score": 0.04257530458608902,
+        "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf.",
+        "score_breakdown": {
+          "dense": 0.05062071547853504,
+          "graph": 0.049113036909649146,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:banana_production_in_the_united_states_0",
+        "passage_index": 3,
+        "title": "Banana production in the United States",
+        "score": 0.04231704721718466,
+        "text": "Banana production in the United States\nThe first commercial banana farm in the United States was established in Florida, near Silver Lake, in 1876. A number of independent banana farms and cultivars have been located in a number of areas, reaching as far north as the southern Midwest and Ohio river, where wild banana trees can be found along the banks of the Ohio at far southern Illinois, Indiana, and Missouri, just north of Kentucky. This region equates roughly with the northernmost terminus of the subtropical crop - growing region of the US, which ends at about Cincinnati, Ohio, and further east in cities and locations such as Philadelphia, Pennsylvania, New York City and Long Island in New York, and coastal regions of southern New England. Banana growth further west along this ecological transition line, such as in central to northern Missouri and northern Kansas / far southern Nebraska is highly dubious and uncertain, due to extreme temperature fluctuations and an increase in aridity.",
+        "score_breakdown": {
+          "dense": 0.05019472979145244,
+          "graph": 0.04903315277295274,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:saudi_arabia_1",
+        "passage_index": 0,
+        "title": "Saudi Arabia",
+        "score": 0.042290356972935525,
+        "text": "Saudi Arabia\nMecca) and Al - Masjid an - Nabawi (in Medina), the two holiest places in Islam. As of 2013, the state had a total population of 28.7 million, of which 20 million were Saudi nationals and 8 million were foreigners. As of 2017, the population is 33 million. The state's official language is Arabic.",
+        "score_breakdown": {
+          "dense": 0.04999308380559458,
+          "graph": 0.049313869599528354,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ko_zin_0",
+        "passage_index": 10,
+        "title": "Kołzin",
+        "score": 0.042185708323593175,
+        "text": "Kołzin\nKołzin is a settlement in the administrative district of Gmina Sianów, within Koszalin County, West Pomeranian Voivodeship, in north-western Poland. It lies approximately north of Sianów, north-east of Koszalin, and north-east of the regional capital Szczecin.",
+        "score_breakdown": {
+          "dense": 0.04995432828322972,
+          "graph": 0.049036092559389434,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use?",
+        "resolved_sub_question": "What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use?",
+        "sentence_id": "sentence:water_resources_0_4_however_there_is_growth_in_desalination_for_agricultural_use_and_highly_popula",
+        "sentence": "However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California.",
+        "score": 0.37330779831409455,
+        "source_title": "Water resources",
+        "hop_answer": "Persian Gulf",
+        "hop_thought": "The passage mentions that the most extensive use of desalination is in the Persian Gulf, which is also referred to as a region associated with the Near East.",
+        "hop_raw_response": "The passage mentions that the most extensive use of desalination is in the Persian Gulf, which is also referred to as a region associated with the Near East.\nAnswer: Persian Gulf",
+        "evidence_passages": [
+          {
+            "title": "Water resources",
+            "text": "However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California."
+          },
+          {
+            "title": "Water resources",
+            "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf."
+          },
+          {
+            "title": "Hertfordshire",
+            "text": "Hertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the region immediately north of this region?",
+        "resolved_sub_question": "What is the region immediately north of this region? Context: Persian Gulf.",
+        "sentence_id": "sentence:geography_of_saudi_arabia_0_0_the_kingdom_of_saudi_arabia_is_a_country_situated_in_southwest_asia_the_largest",
+        "sentence": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.",
+        "score": 0.4764328657854928,
+        "source_title": "Geography of Saudi Arabia",
+        "hop_answer": "Unknown",
+        "hop_thought": "The region immediately north of the Persian Gulf, based on the context given, would be part of Saudi Arabia, but more specifically, it includes territories of countries like Iraq and Iran which border the northern part of the Persian Gulf.",
+        "hop_raw_response": "The region immediately north of the Persian Gulf, based on the context given, would be part of Saudi Arabia, but more specifically, it includes territories of countries like Iraq and Iran which border the northern part of the Persian Gulf.\nAnswer: Iraq and Iran",
+        "evidence_passages": [
+          {
+            "title": "Geography of Saudi Arabia",
+            "text": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen."
+          },
+          {
+            "title": "Geography of Saudi Arabia",
+            "text": "Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen. Its extensive coastlines on the Persian Gulf and Red Sea provide great leverage on shipping (especially crude oil) through the Persian Gulf and Suez Canal. The kingdom occupies 80% of the Arabian Peninsula. Most of the country's boundaries with the United Arab Emirates (UAE), Oman, and the Republic of Yemen (formerly two separate countries: the Yemen Arab Republic or North Yemen; and the People's Democratic Republic of Yemen or South Yemen) are undefined, so the exact size of the country remains unknown. The Saudi government estimate is at 2,217,949 square kilometres, while other reputable estimates vary between 2,149,690 and 2,240,000 sq. kilometres. Less than 1% of the total area is suitable for cultivation, and in the early 1990s, population distribution varied greatly among the towns of the eastern and western coastal areas, the densely populated interior oases, and the vast, almost empty deserts."
+          },
+          {
+            "title": "Water resources",
+            "text": "The most extensive use is in the Persian Gulf."
+          }
+        ]
+      },
+      {
+        "sub_question": "When was this northern region established?",
+        "resolved_sub_question": "When was this northern region established? Context: Persian Gulf.",
+        "sentence_id": "sentence:water_resources_0_5_the_most_extensive_use_is_in_the_persian_gulf",
+        "sentence": "The most extensive use is in the Persian Gulf.",
+        "score": 0.3734591839346356,
+        "source_title": "Water resources",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question asks about the establishment of the region immediately north of the Persian Gulf, which is Saudi Arabia. However, the provided evidence does not contain information on when Saudi Arabia was established.",
+        "hop_raw_response": "The question asks about the establishment of the region immediately north of the Persian Gulf, which is Saudi Arabia. However, the provided evidence does not contain information on when Saudi Arabia was established.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Water resources",
+            "text": "The most extensive use is in the Persian Gulf."
+          },
+          {
+            "title": "Water resources",
+            "text": "Water resources\nDesalination is an artificial process by which saline water (generally sea water) is converted to fresh water. The most common desalination processes are distillation and reverse osmosis. Desalination is currently expensive compared to most alternative sources of water, and only a very small fraction of total human use is satisfied by desalination. It is usually only economically practical for high-valued uses (such as household and industrial uses) in arid areas. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California. The most extensive use is in the Persian Gulf."
+          },
+          {
+            "title": "Geography of Saudi Arabia",
+            "text": "The Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use? => Persian Gulf (source: Water resources)\n2. What is the region immediately north of this region? (source: Geography of Saudi Arabia)\n3. When was this northern region established? (source: Water resources)\n\nFact hints:\n- Kingdom of Saudi Arabia is north of Yemen\n- Kingdom of Saudi Arabia is the largest country of Arabia\n\nWikipedia Title: Geography of Saudi Arabia\nThe Kingdom of Saudi Arabia is a country situated in Southwest Asia, the largest country of Arabia, bordering the Persian Gulf and the Red Sea, north of Yemen.\n\nWikipedia Title: Water resources\nThe most extensive use is in the Persian Gulf. However, there is growth in desalination for agricultural use, and highly populated areas such as Singapore or California.\n\nWikipedia Title: Saudi Arabia\nThe Kingdom of Saudi Arabia was founded in 1932 by Ibn Saud. The ultraconservative Wahhabi religious movement within Sunni Islam has been called ``the predominant feature of Saudi culture '', with its global spread largely financed by the oil and gas trade.\n\nWikipedia Title: Hertfordshire\nHertfordshire is the county immediately north of London and is part of the East of England region, a mainly statistical unit.\n\nWikipedia Title: Dobjoi\nDobjoi Dobjoi is a village in the Tibet Autonomous Region of China north east of Shigatse. It lies at an altitude of 4,410 metres (14,471 feet).\n\nQuestion: When was the region immediately north of the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use established?\nDraft Answer: 1932\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use is the Persian Gulf. The region immediately north of the Persian Gulf is the Kingdom of Saudi Arabia, which was established in 1932.",
+  "predicted_answer": "1932",
+  "qa_raw_response": "{\n  \"thought\": \"The region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use is the Persian Gulf. The region immediately north of the Persian Gulf is the Kingdom of Saudi Arabia, which was established in 1932.\",\n  \"answer\": \"1932\",\n  \"support\": \"The Kingdom of Saudi Arabia was founded in 1932 by Ibn Saud.\"\n}"
+}

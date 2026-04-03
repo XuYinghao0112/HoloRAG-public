@@ -1,0 +1,1059 @@
+{
+  "query": "Where does Ulysses Kay's birth city hold NASCAR races?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "NASCAR"
+  ],
+  "raw_query_entities": [
+    "Ulysses Kay",
+    "NASCAR"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Ulysses Kay",
+      "node_id": "entity:ulysses_simpson_kay",
+      "resolved_text": "Ulysses Simpson Kay",
+      "score": 0.5597333333333333,
+      "alias_score": 0.6666666666666666,
+      "relation_score": 0.7,
+      "context_score": 0.52,
+      "compatibility_score": 0.39,
+      "score_margin": 0.5597333333333333,
+      "confident": false
+    },
+    {
+      "mention": "NASCAR",
+      "node_id": "entity:nascar",
+      "resolved_text": "NASCAR",
+      "score": 0.766,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4285714285714286,
+      "compatibility_score": 0.775,
+      "score_margin": 0.19000000000000006,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is Ulysses Kay's birth city?",
+    "Does this city host any NASCAR races?",
+    "Where in this city are the NASCAR races held?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:nascar",
+      "score": 0.9795797184207755,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ulysses_simpson_kay",
+      "score": 0.2758493762032025,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tucson_arizona",
+      "score": 0.275836220343214,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_wendy_venturini",
+      "score": 0.23782570791543334,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chicago_illinois",
+      "score": 0.23782570791543334,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:clearwater_florida",
+      "score": 0.21782524863097094,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+      "score": 0.19117095697681863,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:nascar_races",
+      "score": 0.17958677017508706,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nascar_cup_series",
+      "score": 0.17957487350960613,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:phoenix_international_raceway",
+      "score": 0.1774610646794562,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nascar_busch_grand_national_series",
+      "score": 0.16756863930882548,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:camping_world_truck_series",
+      "score": 0.16545710087291224,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:ulysses_simpson_kay_born_in_tucson_arizona_sentence_ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona",
+      "text": "Ulysses Simpson Kay born in Tucson Arizona",
+      "head_id": "entity:ulysses_simpson_kay",
+      "tail_id": "entity:tucson_arizona",
+      "sentence_id": "sentence:ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona_may_20_1995_in_englew",
+      "chunk_id": "chunk:ulysses_kay_0",
+      "document_index": 7,
+      "score": 0.2737470762881994
+    },
+    {
+      "fact_id": "fact:wendy_venturini_born_in_chicago_illinois_sentence_wendy_venturini_0_0_wendy_venturini_born_january_30_1979_in_chicago_il",
+      "text": "Wendy Venturini born in Chicago Illinois",
+      "head_id": "entity:title_anchor_wendy_venturini",
+      "tail_id": "entity:chicago_illinois",
+      "sentence_id": "sentence:wendy_venturini_0_0_wendy_venturini_born_january_30_1979_in_chicago_illinois_is_an_american_repo",
+      "chunk_id": "chunk:wendy_venturini_0",
+      "document_index": 18,
+      "score": 0.23573711406035794
+    },
+    {
+      "fact_id": "fact:michael_dokken_born_in_clearwater_florida_sentence_michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_flor",
+      "text": "Michael Dokken born in Clearwater Florida",
+      "head_id": "entity:title_anchor_michael_dokken",
+      "tail_id": "entity:clearwater_florida",
+      "sentence_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+      "chunk_id": "chunk:michael_dokken_0",
+      "document_index": 14,
+      "score": 0.21573693593677054
+    },
+    {
+      "fact_id": "fact:tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_sentence_tucson_arizona_0_1_tucson_raceway_park_hosts_nas",
+      "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events",
+      "head_id": "entity:tucson_raceway_park",
+      "tail_id": "entity:nascar_sanctioned_auto_racing_events",
+      "sentence_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+      "chunk_id": "chunk:tucson_arizona_0",
+      "document_index": 11,
+      "score": 0.1478842205662135
+    },
+    {
+      "fact_id": "fact:michael_dokken_was_a_competitor_in_nascar_craftsman_truck_series_sentence_michael_dokken_0_0_michael_dokken_born_june_4_",
+      "text": "Michael Dokken was a competitor in NASCAR Craftsman Truck Series",
+      "head_id": "entity:title_anchor_michael_dokken",
+      "tail_id": "entity:nascar_craftsman_truck_series",
+      "sentence_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+      "chunk_id": "chunk:michael_dokken_0",
+      "document_index": 14,
+      "score": 0.13788091739409353
+    },
+    {
+      "fact_id": "fact:michael_dokken_is_a_retired_american_stock_car_racing_driver_sentence_michael_dokken_0_0_michael_dokken_born_june_4_1971",
+      "text": "Michael Dokken is a retired American stock car racing driver",
+      "head_id": "entity:title_anchor_michael_dokken",
+      "tail_id": "entity:retired_american_stock_car_racing_driver",
+      "sentence_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+      "chunk_id": "chunk:michael_dokken_0",
+      "document_index": 14,
+      "score": 0.12073782377754476
+    }
+  ],
+  "bridge_entities": [
+    "Michael Dokken",
+    "June 4 1971",
+    "Clearwater Florida",
+    "NASCAR Craftsman Truck Series",
+    "Tucson Raceway Park",
+    "Arizona",
+    "Tucson Arizona",
+    "Yes"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is Ulysses Kay's birth city?",
+      "resolved_sub_question": "What is Ulysses Kay's birth city?",
+      "sentence_id": "sentence:ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona_may_20_1995_in_englew",
+      "sentence": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer.",
+      "score": 0.4819248779953003,
+      "source_title": "Ulysses Kay",
+      "hop_answer": "Tucson, Arizona",
+      "hop_thought": "The evidence states that Ulysses Simpson Kay was born on January 7, 1917, in Tucson, Arizona.",
+      "hop_raw_response": "The evidence states that Ulysses Simpson Kay was born on January 7, 1917, in Tucson, Arizona.\nAnswer: Tucson, Arizona",
+      "evidence_passages": [
+        {
+          "title": "Ulysses Kay",
+          "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+        },
+        {
+          "title": "Ulysses Kay",
+          "text": "Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+        }
+      ]
+    },
+    {
+      "sub_question": "Does this city host any NASCAR races?",
+      "resolved_sub_question": "Does this city host any NASCAR races? Context: Tucson, Arizona.",
+      "sentence_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+      "sentence": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.",
+      "score": 0.48288750155220034,
+      "source_title": "Tucson, Arizona",
+      "hop_answer": "Yes",
+      "hop_thought": "The context mentions that Tucson, Arizona, hosts NASCAR-sanctioned auto racing events at Tucson Raceway Park.",
+      "hop_raw_response": "The context mentions that Tucson, Arizona, hosts NASCAR-sanctioned auto racing events at Tucson Raceway Park.\nAnswer: Yes",
+      "evidence_passages": [
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists."
+        },
+        {
+          "title": "Ulysses Kay",
+          "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+        }
+      ]
+    },
+    {
+      "sub_question": "Where in this city are the NASCAR races held?",
+      "resolved_sub_question": "Where in this city are the NASCAR races held? Context: Tucson, Arizona; Yes.",
+      "sentence_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+      "sentence": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.",
+      "score": 0.397146804271698,
+      "source_title": "Tucson, Arizona",
+      "hop_answer": "Tucson Raceway Park",
+      "hop_thought": "The context specifies that NASCAR races are held in Tucson, Arizona, and the evidence from the Wikipedia article about Tucson, Arizona, mentions that Tucson Raceway Park hosts NASCAR-sanctioned auto racing events.",
+      "hop_raw_response": "The context specifies that NASCAR races are held in Tucson, Arizona, and the evidence from the Wikipedia article about Tucson, Arizona, mentions that Tucson Raceway Park hosts NASCAR-sanctioned auto racing events.\nAnswer: Tucson Raceway Park",
+      "evidence_passages": [
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists."
+        },
+        {
+          "title": "Ulysses Kay",
+          "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:nascar",
+      "score": 0.08851383856305993,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+      "score": 0.04210073000531922,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ulysses_simpson_kay",
+      "score": 0.03745359528192696,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona_may_20_1995_in_englew",
+      "score": 0.032909472073888134,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_wendy_venturini",
+      "score": 0.030627612766500802,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_michael_dokken",
+      "score": 0.030039119656566745,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:wendy_venturini_0_0_wendy_venturini_born_january_30_1979_in_chicago_illinois_is_an_american_repo",
+      "score": 0.027121569392063734,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:tucson_arizona",
+      "score": 0.027097945269728984,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_races",
+      "score": 0.0255272689194782,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chicago_illinois",
+      "score": 0.023620675801968267,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:clearwater_florida",
+      "score": 0.023485817080930036,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_craftsman_truck_series",
+      "score": 0.02285424858801728,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tucson_raceway_park",
+      "score": 0.02214498015032372,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_sanctioned_auto_racing_events",
+      "score": 0.02077353640281423,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:camping_world_truck_series",
+      "score": 0.02039437190584579,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_cup_series",
+      "score": 0.020206555713076262,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_gander_outdoors_truck_series",
+      "score": 0.019862754199605925,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:craftsman_truck_series",
+      "score": 0.01889874930605309,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:retired_american_stock_car_racing_driver",
+      "score": 0.01754814310423032,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nascar_busch_grand_national_series",
+      "score": 0.01672813263676815,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:ulysses_kay_0",
+      "passage_index": 7,
+      "title": "Ulysses Kay",
+      "score": 0.08319721962647236,
+      "text": "Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style.",
+      "score_breakdown": {
+        "dense": 0.05101805924527021,
+        "graph": 0.051797950579658525,
+        "fact": 0.2639860124511746
+      }
+    },
+    {
+      "node_id": "chunk:wendy_venturini_0",
+      "passage_index": 18,
+      "title": "Wendy Venturini",
+      "score": 0.08111516657477913,
+      "text": "Wendy Venturini\nWendy Venturini (born January 30, 1979 in Chicago, Illinois) is an American reporter for the Performance Racing Network (PRN). She works as broadcaster for Monster Energy NASCAR Cup Series races and sometimes as a pit reporter for races on PRN. She had been a pit reporter in the NASCAR Craftsman Truck Series, and reporter for NASCAR Race Day. Venturini is a 2000 graduate of the University of North Carolina at Chapel Hill.",
+      "score_breakdown": {
+        "dense": 0.049906595002302344,
+        "graph": 0.0518183551188901,
+        "fact": 0.2541402185856387
+      }
+    },
+    {
+      "node_id": "chunk:michael_dokken_0",
+      "passage_index": 14,
+      "title": "Michael Dokken",
+      "score": 0.08050172520818413,
+      "text": "Michael Dokken\nMichael Dokken (born June 4, 1971 in Clearwater, Florida) is a retired American stock car racing driver, and a former competitor in the NASCAR Craftsman Truck Series.",
+      "score_breakdown": {
+        "dense": 0.04992827206389618,
+        "graph": 0.05224998821703307,
+        "fact": 0.24910786071954205
+      }
+    },
+    {
+      "node_id": "chunk:tucson_arizona_0",
+      "passage_index": 11,
+      "title": "Tucson, Arizona",
+      "score": 0.07774479121277855,
+      "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists.",
+      "score_breakdown": {
+        "dense": 0.050114992047473994,
+        "graph": 0.05088886450040384,
+        "fact": 0.23276590824364474
+      }
+    },
+    {
+      "node_id": "chunk:barney_hall_0",
+      "passage_index": 5,
+      "title": "Barney Hall",
+      "score": 0.04258197224546626,
+      "text": "Barney Hall\nBarney Hall (June 24, 1932January 26, 2016) was an American sports commentator for Motor Racing Network, formerly calling NASCAR races. Hall broadcast races for over 50 years. Hall is considered as one of the best NASCAR commentators of all-time. MRN director David Hyatt stated, \"Motor Racing Network is ‘The Voice of NASCAR’ and Barney Hall is the voice of MRN.\"",
+      "score_breakdown": {
+        "dense": 0.04989005955526114,
+        "graph": 0.050474798300242096,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:wendell_scott_0",
+      "passage_index": 15,
+      "title": "Wendell Scott",
+      "score": 0.04247225964161579,
+      "text": "Wendell Scott\nWendell Oliver Scott (August 29, 1921 – December 23, 1990) was an American stock car racing driver. He was one of the first African-American drivers in NASCAR, and the first African-American to win a race in the Grand National Series, NASCAR's highest level.",
+      "score_breakdown": {
+        "dense": 0.050085285488288854,
+        "graph": 0.049751175410189724,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:brett_moffitt_0",
+      "passage_index": 16,
+      "title": "Brett Moffitt",
+      "score": 0.042419078868817225,
+      "text": "Brett Moffitt\nBrett Moffitt (born August 7, 1992) is an American professional stock car racing driver who currently competes full-time in the NASCAR Gander Outdoors Truck Series, driving the No. 24 Chevrolet Silverado for GMS Racing, and part-time in the NASCAR Xfinity Series, driving the No. 8 Chevrolet Camaro for JR Motorsports. He won Rookie of the Year Honors in 2015 in the Cup Series, and won the 2018 NASCAR Camping World Truck Series Championship.",
+      "score_breakdown": {
+        "dense": 0.049809160542945874,
+        "graph": 0.050080135233989985,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:john_mickel_0",
+      "passage_index": 17,
+      "title": "John Mickel",
+      "score": 0.04240567680455244,
+      "text": "John Mickel\nJohn Mickel (born 28 January 1971, in Cambridge, England), is a stock car racer and commentator. He has raced in NASCAR Craftsman Truck Series and Pickup Truck Racing with TorqueSpeed. He was also a commentator for Sky Sports' coverage of NASCAR racing through 2008-9.",
+      "score_breakdown": {
+        "dense": 0.04982624860279661,
+        "graph": 0.05000413357671434,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jeff_krogh_0",
+      "passage_index": 19,
+      "title": "Jeff Krogh",
+      "score": 0.04239714395461898,
+      "text": "Jeff Krogh\nJeff Krogh (born March 21, 1972 in Kamiah, Idaho) is a former American professional race car driver, who competed in the NASCAR Busch Grand National Series and the NASCAR Winston West Series. He was seriously injured in a crash during the 1999 Busch Grand National season and never returned to competition.",
+      "score_breakdown": {
+        "dense": 0.049863360491040044,
+        "graph": 0.04990765228182317,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:denny_hamlin_0",
+      "passage_index": 12,
+      "title": "Denny Hamlin",
+      "score": 0.04239606584963039,
+      "text": "Denny Hamlin\nJames Dennis Alan ``Denny ''Hamlin (born November 18, 1980) is an American professional stock car racing driver. He currently competes full - time in the Monster Energy NASCAR Cup Series, driving the No. 11 Toyota Camry for Joe Gibbs Racing, and part - time in the NASCAR Xfinity Series, driving the No. 20 Camry for JGR. He has won 30 NASCAR Cup Series races, including the Daytona 500 in 2016, where he also posted the smallest winning margin in that race's history.",
+      "score_breakdown": {
+        "dense": 0.05005406727270231,
+        "graph": 0.04955442949881372,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:nascar",
+        "score": 0.08851383856305993,
+        "text": "NASCAR",
+        "metadata": {
+          "canonical_name": "NASCAR",
+          "aliases": [
+            "NASCAR"
+          ],
+          "surface_forms": [
+            "NASCAR"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ulysses_simpson_kay",
+        "score": 0.03745359528192696,
+        "text": "Ulysses Simpson Kay",
+        "metadata": {
+          "canonical_name": "Ulysses Simpson Kay",
+          "aliases": [
+            "USK",
+            "Ulysses Simpson Kay"
+          ],
+          "surface_forms": [
+            "USK",
+            "Ulysses Simpson Kay"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_wendy_venturini",
+        "score": 0.030627612766500802,
+        "text": "Wendy Venturini",
+        "metadata": {
+          "canonical_name": "Wendy Venturini",
+          "aliases": [
+            "WV",
+            "Wendy Venturini"
+          ],
+          "surface_forms": [
+            "WV",
+            "Wendy Venturini"
+          ],
+          "title_anchor": "Wendy Venturini"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_michael_dokken",
+        "score": 0.030039119656566745,
+        "text": "Michael Dokken",
+        "metadata": {
+          "canonical_name": "Michael Dokken",
+          "aliases": [
+            "MD",
+            "Michael Dokken"
+          ],
+          "surface_forms": [
+            "MD",
+            "Michael Dokken"
+          ],
+          "title_anchor": "Michael Dokken"
+        }
+      },
+      {
+        "node_id": "entity:tucson_arizona",
+        "score": 0.027097945269728984,
+        "text": "Tucson Arizona",
+        "metadata": {
+          "canonical_name": "Tucson Arizona",
+          "aliases": [
+            "TA",
+            "Tucson Arizona"
+          ],
+          "surface_forms": [
+            "TA",
+            "Tucson Arizona"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:michael_dokken_0_0_michael_dokken_born_june_4_1971_in_clearwater_florida_is_a_retired_american",
+        "score": 0.04210073000531922,
+        "text": "Michael Dokken (born June 4, 1971 in Clearwater, Florida) is a retired American stock car racing driver, and a former competitor in the NASCAR Craftsman Truck Series.",
+        "metadata": {
+          "title": "Michael Dokken",
+          "chunk_id": "chunk:michael_dokken_0",
+          "sentence_index": 0,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Michael Dokken",
+              "relation": "born on",
+              "tail": "June 4 1971"
+            },
+            {
+              "head": "Michael Dokken",
+              "relation": "born in",
+              "tail": "Clearwater Florida"
+            },
+            {
+              "head": "Michael Dokken",
+              "relation": "is a",
+              "tail": "retired American stock car racing driver"
+            },
+            {
+              "head": "Michael Dokken",
+              "relation": "was a competitor in",
+              "tail": "NASCAR Craftsman Truck Series"
+            }
+          ],
+          "entities": [
+            "Michael Dokken",
+            "June 4 1971",
+            "Clearwater Florida",
+            "NASCAR Craftsman Truck Series"
+          ],
+          "entity_ids": [
+            "entity:clearwater_florida",
+            "entity:june_4_1971",
+            "entity:nascar_craftsman_truck_series",
+            "entity:retired_american_stock_car_racing_driver",
+            "entity:title_anchor_michael_dokken"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona_may_20_1995_in_englew",
+        "score": 0.032909472073888134,
+        "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer.",
+        "metadata": {
+          "title": "Ulysses Kay",
+          "chunk_id": "chunk:ulysses_kay_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Ulysses Simpson Kay",
+              "relation": "born on",
+              "tail": "January 7 1917"
+            },
+            {
+              "head": "Ulysses Simpson Kay",
+              "relation": "born in",
+              "tail": "Tucson Arizona"
+            },
+            {
+              "head": "Ulysses Simpson Kay",
+              "relation": "died on",
+              "tail": "May 20 1995"
+            },
+            {
+              "head": "Ulysses Simpson Kay",
+              "relation": "died in",
+              "tail": "Englewood New Jersey"
+            },
+            {
+              "head": "Ulysses Simpson Kay",
+              "relation": "was",
+              "tail": "African-American composer"
+            }
+          ],
+          "entities": [
+            "Ulysses Simpson Kay",
+            "Tucson Arizona",
+            "Englewood New Jersey"
+          ],
+          "entity_ids": [
+            "entity:african_american_composer",
+            "entity:englewood_new_jersey",
+            "entity:january_7_1917",
+            "entity:may_20_1995",
+            "entity:tucson_arizona",
+            "entity:ulysses_simpson_kay"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:wendy_venturini_0_0_wendy_venturini_born_january_30_1979_in_chicago_illinois_is_an_american_repo",
+        "score": 0.027121569392063734,
+        "text": "Wendy Venturini (born January 30, 1979 in Chicago, Illinois) is an American reporter for the Performance Racing Network (PRN).",
+        "metadata": {
+          "title": "Wendy Venturini",
+          "chunk_id": "chunk:wendy_venturini_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Wendy Venturini",
+              "relation": "born on",
+              "tail": "January 30 1979"
+            },
+            {
+              "head": "Wendy Venturini",
+              "relation": "born in",
+              "tail": "Chicago Illinois"
+            },
+            {
+              "head": "Wendy Venturini",
+              "relation": "is a",
+              "tail": "American reporter"
+            },
+            {
+              "head": "Wendy Venturini",
+              "relation": "works for",
+              "tail": "Performance Racing Network PRN"
+            }
+          ],
+          "entities": [
+            "Wendy Venturini",
+            "January 30 1979",
+            "Chicago Illinois",
+            "American reporter",
+            "Performance Racing Network PRN"
+          ],
+          "entity_ids": [
+            "entity:american_reporter",
+            "entity:chicago_illinois",
+            "entity:january_30_1979",
+            "entity:performance_racing_network_prn",
+            "entity:title_anchor_wendy_venturini"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+        "score": 0.01575386224922034,
+        "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.",
+        "metadata": {
+          "title": "Tucson, Arizona",
+          "chunk_id": "chunk:tucson_arizona_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Tucson Raceway Park",
+              "relation": "hosts",
+              "tail": "NASCAR-sanctioned auto racing events"
+            },
+            {
+              "head": "Tucson Raceway Park",
+              "relation": "is one of",
+              "tail": "two asphalt short tracks in Arizona"
+            }
+          ],
+          "entities": [
+            "Tucson Raceway Park",
+            "NASCAR",
+            "Arizona"
+          ],
+          "entity_ids": [
+            "entity:arizona",
+            "entity:nascar",
+            "entity:nascar_sanctioned_auto_racing_events",
+            "entity:tucson_raceway_park",
+            "entity:two_asphalt_short_tracks_in_arizona"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:michael_dokken_0",
+        "score": 0.011071044546850007,
+        "text": "Michael Dokken\nMichael Dokken (born June 4, 1971 in Clearwater, Florida) is a retired American stock car racing driver, and a former competitor in the NASCAR Craftsman Truck Series.",
+        "metadata": {
+          "title": "Michael Dokken",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:clearwater_florida",
+            "entity:june_4_1971",
+            "entity:nascar_craftsman_truck_series",
+            "entity:retired_american_stock_car_racing_driver",
+            "entity:title_anchor_michael_dokken"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ulysses_kay_0",
+        "score": 0.007991148370320045,
+        "text": "Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style.",
+        "metadata": {
+          "title": "Ulysses Kay",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:african_american_composer",
+            "entity:englewood_new_jersey",
+            "entity:january_7_1917",
+            "entity:may_20_1995",
+            "entity:tucson_arizona",
+            "entity:ulysses_simpson_kay"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wendy_venturini_0",
+        "score": 0.006754910047773822,
+        "text": "Wendy Venturini\nWendy Venturini (born January 30, 1979 in Chicago, Illinois) is an American reporter for the Performance Racing Network (PRN). She works as broadcaster for Monster Energy NASCAR Cup Series races and sometimes as a pit reporter for races on PRN. She had been a pit reporter in the NASCAR Craftsman Truck Series, and reporter for NASCAR Race Day. Venturini is a 2000 graduate of the University of North Carolina at Chapel Hill.",
+        "metadata": {
+          "title": "Wendy Venturini",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:american_reporter",
+            "entity:chicago_illinois",
+            "entity:craftsman_truck_series",
+            "entity:cup_series",
+            "entity:january_30_1979",
+            "entity:monster_energy",
+            "entity:monster_energy_nascar_cup_series",
+            "entity:nascar_craftsman_truck_series",
+            "entity:nascar_race_day",
+            "entity:performance_racing_network_prn",
+            "entity:prn",
+            "entity:race_day",
+            "entity:title_anchor_wendy_venturini",
+            "entity:university_of_north_carolina_at_chapel_hill",
+            "entity:venturini"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:tucson_arizona_0",
+        "score": 0.005511644988645892,
+        "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists.",
+        "metadata": {
+          "title": "Tucson, Arizona",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:arizona",
+            "entity:january_and_february",
+            "entity:moltacqua_racetrack",
+            "entity:nascar",
+            "entity:nascar_sanctioned_auto_racing_events",
+            "entity:rillito_downs",
+            "entity:sabino_canyon_road",
+            "entity:sabino_canyon_road_and_vactor_ranch_trail",
+            "entity:tracks",
+            "entity:tucson_raceway_park",
+            "entity:two_asphalt_short_tracks_in_arizona",
+            "entity:vactor_ranch_trail"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ulysses Kay\nUlysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style.\n\nWendy Venturini\nWendy Venturini\nWendy Venturini (born January 30, 1979 in Chicago, Illinois) is an American reporter for the Performance Racing Network (PRN). She works as broadcaster for Monster Energy NASCAR Cup Series races and sometimes as a pit reporter for races on PRN. She had been a pit reporter in the NASCAR Craftsman Truck Series, and reporter for NASCAR Race Day. Venturini is a 2000 graduate of the University of North Carolina at Chapel Hill.\n\nMichael Dokken\nMichael Dokken\nMichael Dokken (born June 4, 1971 in Clearwater, Florida) is a retired American stock car racing driver, and a former competitor in the NASCAR Craftsman Truck Series.\n\nTucson, Arizona\nTucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists.\n\nBarney Hall\nBarney Hall\nBarney Hall (June 24, 1932January 26, 2016) was an American sports commentator for Motor Racing Network, formerly calling NASCAR races. Hall broadcast races for over 50 years. Hall is considered as one of the best NASCAR commentators of all-time. MRN director David Hyatt stated, \"Motor Racing Network is ‘The Voice of NASCAR’ and Barney Hall is the voice of MRN.\"\n\nUlysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer.\n\nTucson, Arizona\nTucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.\n\nKevin Harvick\nKevin Harvick\nKevin Michael Harvick (born December 8, 1975) is an American professional stock car racing driver. He currently competes full - time in the Monster Energy NASCAR Cup Series, driving the No. 4 Ford Fusion for Stewart - Haas Racing and part - time in the NASCAR Xfinity Series, driving the No. 98 Ford Mustang for SHR in an alliance with Biagi - DenBeste Racing. Harvick is the former owner of Kevin Harvick Incorporated, a race team that fielded cars in the Xfinity and Camping World Truck Series between 2004 and 2011. He is the 2014 NASCAR Sprint Cup Series champion and a two - time Xfinity Series champion. Harvick holds the all - time record for Cup Series wins at Phoenix International Raceway with nine wins. Harvick is also the third winningest driver in Xfinity Series history with 47 wins.\n\nDenny Hamlin\nDenny Hamlin\nJames Dennis Alan ``Denny ''Hamlin (born November 18, 1980) is an American professional stock car racing driver. He currently competes full - time in the Monster Energy NASCAR Cup Series, driving the No. 11 Toyota Camry for Joe Gibbs Racing, and part - time in the NASCAR Xfinity Series, driving the No. 20 Camry for JGR. He has won 30 NASCAR Cup Series races, including the Daytona 500 in 2016, where he also posted the smallest winning margin in that race's history.\n\nRonnie Silver\nRonnie Silver\nRonnie Silver (born July 20, 1951) is a former American stock car racer and crew chief. He raced in the NASCAR Busch Series for eight seasons, winning two races.\n\nGreg Biffle\nGreg Biffle\nGregory Jack Biffle (born December 23, 1969) is an American professional stock car racing driver. He is inactive as of 2017, last driving in the No. 16 Ford Fusion for Roush Fenway Racing. After racing in the NASCAR Winter Heat Series in the mid-1990s, he was recommended to Jack Roush by former announcer Benny Parsons. He was the 1998 NASCAR Craftsman Truck Series Rookie of the Year. He won the 2000 Craftsman Truck championship. He reprised this progression in the NASCAR Busch Series, winning the 2001 Rookie of the Year, immediately followed by winning the 2002 championship. Biffle drove in the NASCAR Sprint Cup Series for Roush from 2003 until 2016, winning 19 races in the No. 16 Ford. He currently is an analyst for NBC Sports' show NASCAR America.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:ulysses_kay_0",
+        "passage_index": 7,
+        "title": "Ulysses Kay",
+        "score": 0.08319721962647236,
+        "text": "Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style.",
+        "score_breakdown": {
+          "dense": 0.05101805924527021,
+          "graph": 0.051797950579658525,
+          "fact": 0.2639860124511746
+        }
+      },
+      {
+        "node_id": "chunk:wendy_venturini_0",
+        "passage_index": 18,
+        "title": "Wendy Venturini",
+        "score": 0.08111516657477913,
+        "text": "Wendy Venturini\nWendy Venturini (born January 30, 1979 in Chicago, Illinois) is an American reporter for the Performance Racing Network (PRN). She works as broadcaster for Monster Energy NASCAR Cup Series races and sometimes as a pit reporter for races on PRN. She had been a pit reporter in the NASCAR Craftsman Truck Series, and reporter for NASCAR Race Day. Venturini is a 2000 graduate of the University of North Carolina at Chapel Hill.",
+        "score_breakdown": {
+          "dense": 0.049906595002302344,
+          "graph": 0.0518183551188901,
+          "fact": 0.2541402185856387
+        }
+      },
+      {
+        "node_id": "chunk:michael_dokken_0",
+        "passage_index": 14,
+        "title": "Michael Dokken",
+        "score": 0.08050172520818413,
+        "text": "Michael Dokken\nMichael Dokken (born June 4, 1971 in Clearwater, Florida) is a retired American stock car racing driver, and a former competitor in the NASCAR Craftsman Truck Series.",
+        "score_breakdown": {
+          "dense": 0.04992827206389618,
+          "graph": 0.05224998821703307,
+          "fact": 0.24910786071954205
+        }
+      },
+      {
+        "node_id": "chunk:tucson_arizona_0",
+        "passage_index": 11,
+        "title": "Tucson, Arizona",
+        "score": 0.07774479121277855,
+        "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists.",
+        "score_breakdown": {
+          "dense": 0.050114992047473994,
+          "graph": 0.05088886450040384,
+          "fact": 0.23276590824364474
+        }
+      },
+      {
+        "node_id": "chunk:barney_hall_0",
+        "passage_index": 5,
+        "title": "Barney Hall",
+        "score": 0.04258197224546626,
+        "text": "Barney Hall\nBarney Hall (June 24, 1932January 26, 2016) was an American sports commentator for Motor Racing Network, formerly calling NASCAR races. Hall broadcast races for over 50 years. Hall is considered as one of the best NASCAR commentators of all-time. MRN director David Hyatt stated, \"Motor Racing Network is ‘The Voice of NASCAR’ and Barney Hall is the voice of MRN.\"",
+        "score_breakdown": {
+          "dense": 0.04989005955526114,
+          "graph": 0.050474798300242096,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:wendell_scott_0",
+        "passage_index": 15,
+        "title": "Wendell Scott",
+        "score": 0.04247225964161579,
+        "text": "Wendell Scott\nWendell Oliver Scott (August 29, 1921 – December 23, 1990) was an American stock car racing driver. He was one of the first African-American drivers in NASCAR, and the first African-American to win a race in the Grand National Series, NASCAR's highest level.",
+        "score_breakdown": {
+          "dense": 0.050085285488288854,
+          "graph": 0.049751175410189724,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:brett_moffitt_0",
+        "passage_index": 16,
+        "title": "Brett Moffitt",
+        "score": 0.042419078868817225,
+        "text": "Brett Moffitt\nBrett Moffitt (born August 7, 1992) is an American professional stock car racing driver who currently competes full-time in the NASCAR Gander Outdoors Truck Series, driving the No. 24 Chevrolet Silverado for GMS Racing, and part-time in the NASCAR Xfinity Series, driving the No. 8 Chevrolet Camaro for JR Motorsports. He won Rookie of the Year Honors in 2015 in the Cup Series, and won the 2018 NASCAR Camping World Truck Series Championship.",
+        "score_breakdown": {
+          "dense": 0.049809160542945874,
+          "graph": 0.050080135233989985,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:john_mickel_0",
+        "passage_index": 17,
+        "title": "John Mickel",
+        "score": 0.04240567680455244,
+        "text": "John Mickel\nJohn Mickel (born 28 January 1971, in Cambridge, England), is a stock car racer and commentator. He has raced in NASCAR Craftsman Truck Series and Pickup Truck Racing with TorqueSpeed. He was also a commentator for Sky Sports' coverage of NASCAR racing through 2008-9.",
+        "score_breakdown": {
+          "dense": 0.04982624860279661,
+          "graph": 0.05000413357671434,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jeff_krogh_0",
+        "passage_index": 19,
+        "title": "Jeff Krogh",
+        "score": 0.04239714395461898,
+        "text": "Jeff Krogh\nJeff Krogh (born March 21, 1972 in Kamiah, Idaho) is a former American professional race car driver, who competed in the NASCAR Busch Grand National Series and the NASCAR Winston West Series. He was seriously injured in a crash during the 1999 Busch Grand National season and never returned to competition.",
+        "score_breakdown": {
+          "dense": 0.049863360491040044,
+          "graph": 0.04990765228182317,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:denny_hamlin_0",
+        "passage_index": 12,
+        "title": "Denny Hamlin",
+        "score": 0.04239606584963039,
+        "text": "Denny Hamlin\nJames Dennis Alan ``Denny ''Hamlin (born November 18, 1980) is an American professional stock car racing driver. He currently competes full - time in the Monster Energy NASCAR Cup Series, driving the No. 11 Toyota Camry for Joe Gibbs Racing, and part - time in the NASCAR Xfinity Series, driving the No. 20 Camry for JGR. He has won 30 NASCAR Cup Series races, including the Daytona 500 in 2016, where he also posted the smallest winning margin in that race's history.",
+        "score_breakdown": {
+          "dense": 0.05005406727270231,
+          "graph": 0.04955442949881372,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is Ulysses Kay's birth city?",
+        "resolved_sub_question": "What is Ulysses Kay's birth city?",
+        "sentence_id": "sentence:ulysses_kay_0_0_ulysses_simpson_kay_january_7_1917_in_tucson_arizona_may_20_1995_in_englew",
+        "sentence": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer.",
+        "score": 0.4819248779953003,
+        "source_title": "Ulysses Kay",
+        "hop_answer": "Tucson, Arizona",
+        "hop_thought": "The evidence states that Ulysses Simpson Kay was born on January 7, 1917, in Tucson, Arizona.",
+        "hop_raw_response": "The evidence states that Ulysses Simpson Kay was born on January 7, 1917, in Tucson, Arizona.\nAnswer: Tucson, Arizona",
+        "evidence_passages": [
+          {
+            "title": "Ulysses Kay",
+            "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+          },
+          {
+            "title": "Ulysses Kay",
+            "text": "Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer. His music is mostly neoclassical in style."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+          }
+        ]
+      },
+      {
+        "sub_question": "Does this city host any NASCAR races?",
+        "resolved_sub_question": "Does this city host any NASCAR races? Context: Tucson, Arizona.",
+        "sentence_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+        "sentence": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.",
+        "score": 0.48288750155220034,
+        "source_title": "Tucson, Arizona",
+        "hop_answer": "Yes",
+        "hop_thought": "The context mentions that Tucson, Arizona, hosts NASCAR-sanctioned auto racing events at Tucson Raceway Park.",
+        "hop_raw_response": "The context mentions that Tucson, Arizona, hosts NASCAR-sanctioned auto racing events at Tucson Raceway Park.\nAnswer: Yes",
+        "evidence_passages": [
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists."
+          },
+          {
+            "title": "Ulysses Kay",
+            "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+          }
+        ]
+      },
+      {
+        "sub_question": "Where in this city are the NASCAR races held?",
+        "resolved_sub_question": "Where in this city are the NASCAR races held? Context: Tucson, Arizona; Yes.",
+        "sentence_id": "sentence:tucson_arizona_0_1_tucson_raceway_park_hosts_nascar_sanctioned_auto_racing_events_and_is_one_of_onl",
+        "sentence": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.",
+        "score": 0.397146804271698,
+        "source_title": "Tucson, Arizona",
+        "hop_answer": "Tucson Raceway Park",
+        "hop_thought": "The context specifies that NASCAR races are held in Tucson, Arizona, and the evidence from the Wikipedia article about Tucson, Arizona, mentions that Tucson Raceway Park hosts NASCAR-sanctioned auto racing events.",
+        "hop_raw_response": "The context specifies that NASCAR races are held in Tucson, Arizona, and the evidence from the Wikipedia article about Tucson, Arizona, mentions that Tucson Raceway Park hosts NASCAR-sanctioned auto racing events.\nAnswer: Tucson Raceway Park",
+        "evidence_passages": [
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson, Arizona\nTracks include Tucson Raceway Park and Rillito Downs. Tucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona. Rillito Downs is an in-town destination on weekends in January and February each year. This historic track held the first organized quarter horse races in the world, and they are still racing there. The racetrack is threatened by development. The Moltacqua racetrack, was another historic horse racetrack located on what is now Sabino Canyon Road and Vactor Ranch Trail, but it no longer exists."
+          },
+          {
+            "title": "Ulysses Kay",
+            "text": "Ulysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is Ulysses Kay's birth city? => Tucson, Arizona (source: Ulysses Kay)\n2. Does this city host any NASCAR races? => Yes (source: Tucson, Arizona)\n3. Where in this city are the NASCAR races held? => Tucson Raceway Park (source: Tucson, Arizona)\n\nFact hints:\n- Tucson Raceway Park hosts NASCAR-sanctioned auto racing events\n- Ulysses Simpson Kay born in Tucson Arizona\n\nWikipedia Title: Tucson, Arizona\nTucson Raceway Park hosts NASCAR-sanctioned auto racing events and is one of only two asphalt short tracks in Arizona.\n\nWikipedia Title: Ulysses Kay\nUlysses Simpson Kay (January 7, 1917 in Tucson, Arizona – May 20, 1995 in Englewood, New Jersey) was an African-American composer.\n\nWikipedia Title: Denny Hamlin\nHe has won 30 NASCAR Cup Series races, including the Daytona 500 in 2016, where he also posted the smallest winning margin in that race's history. 20 Camry for JGR.\n\nWikipedia Title: Barney Hall\nHall broadcast races for over 50 years. Hall is considered as one of the best NASCAR commentators of all-time.\n\nWikipedia Title: Ronnie Silver\nHe raced in the NASCAR Busch Series for eight seasons, winning two races. Ronnie Silver Ronnie Silver (born July 20, 1951) is a former American stock car racer and crew chief.\n\nQuestion: Where does Ulysses Kay's birth city hold NASCAR races?\nDraft Answer: Tucson Raceway Park\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "Ulysses Kay was born in Tucson, Arizona. Tucson holds NASCAR races at Tucson Raceway Park.",
+  "predicted_answer": "Tucson Raceway Park",
+  "qa_raw_response": "{\n  \"thought\": \"Ulysses Kay was born in Tucson, Arizona. Tucson holds NASCAR races at Tucson Raceway Park.\",\n  \"answer\": \"Tucson Raceway Park\",\n  \"support\": \"Tucson Raceway Park hosts NASCAR-sanctioned auto racing events\"\n}"
+}

@@ -34,62 +34,62 @@
   "seeds": [
     {
       "node_id": "entity:imperial",
-      "score": 1.2084997445644257,
+      "score": 1.2084667709525847,
       "layer": "entity"
     },
     {
       "node_id": "entity:w_odawa_county",
-      "score": 0.348457951481115,
+      "score": 0.34842524413112713,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_gmina_w_odawa",
-      "score": 0.34845024651575546,
+      "score": 0.3484175393596283,
       "layer": "entity"
     },
     {
       "node_id": "entity:pecos_county",
-      "score": 0.295967691587775,
+      "score": 0.29593484310000784,
       "layer": "entity"
     },
     {
       "node_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
-      "score": 0.23710106889010307,
+      "score": 0.23707479111268803,
       "layer": "sentence"
     },
     {
       "node_id": "entity:texas",
-      "score": 0.1834480111388505,
+      "score": 0.18341528931792966,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_lancaster_crossing",
-      "score": 0.1634435521053673,
+      "score": 0.1634109017830961,
       "layer": "entity"
     },
     {
       "node_id": "entity:indian_ford",
-      "score": 0.14844358251808393,
+      "score": 0.14841093196328922,
       "layer": "entity"
     },
     {
       "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
-      "score": 0.14055818566486972,
+      "score": 0.14054510147080063,
       "layer": "sentence"
     },
     {
       "node_id": "chunk:imperial_texas_0",
-      "score": 0.14012420858025826,
+      "score": 0.14011079986131328,
       "layer": "chunk"
     },
     {
       "node_id": "entity:pecos_crossing",
-      "score": 0.1334430943794048,
+      "score": 0.13341044360504892,
       "layer": "entity"
     },
     {
       "node_id": "sentence:lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos_crossing_solomon_s_ford_c",
-      "score": 0.11908390078855394,
+      "score": 0.11905778050085018,
       "layer": "sentence"
     }
   ],
@@ -102,7 +102,7 @@
       "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
       "chunk_id": "chunk:imperial_texas_0",
       "document_index": 17,
-      "score": 0.4063651965123649
+      "score": 0.4063322225215453
     },
     {
       "fact_id": "fact:gmina_w_odawa_is_located_in_w_odawa_county_sentence_gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_dist",
@@ -112,7 +112,7 @@
       "sentence_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
       "chunk_id": "chunk:gmina_w_odawa_0",
       "document_index": 11,
-      "score": 0.3463502778206245
+      "score": 0.346317571253374
     },
     {
       "fact_id": "fact:pecos_county_part_of_texas_sentence_imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_u",
@@ -122,7 +122,7 @@
       "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
       "chunk_id": "chunk:imperial_texas_0",
       "document_index": 17,
-      "score": 0.18135125699290522
+      "score": 0.18131853568045275
     },
     {
       "fact_id": "fact:lancaster_crossing_related_to_indian_ford_sentence_lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_p",
@@ -132,7 +132,7 @@
       "sentence_id": "sentence:lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos_crossing_solomon_s_ford_c",
       "chunk_id": "chunk:lancaster_crossing_0",
       "document_index": 12,
-      "score": 0.16134715255244517
+      "score": 0.1613145027284913
     },
     {
       "fact_id": "fact:indian_ford_related_to_pecos_crossing_sentence_lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos",
@@ -142,13 +142,12 @@
       "sentence_id": "sentence:lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos_crossing_solomon_s_ford_c",
       "chunk_id": "chunk:lancaster_crossing_0",
       "document_index": 12,
-      "score": 0.13134721337787847
+      "score": 0.13131456308887754
     }
   ],
   "bridge_entities": [
     "Pecos County",
-    "Texas",
-    "Crockett County"
+    "Texas"
   ],
   "reasoning_chain": [
     {
@@ -159,20 +158,12 @@
       "score": 0.5903502857142859,
       "source_title": "Imperial, Texas",
       "hop_answer": "Pecos County",
-      "hop_thought": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.",
-      "hop_raw_response": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.\nAnswer: Pecos County",
+      "hop_thought": "The text states that Imperial is in Pecos County, Texas.",
+      "hop_raw_response": "The text states that Imperial is in Pecos County, Texas.\nAnswer: Pecos County",
       "evidence_passages": [
         {
           "title": "Imperial, Texas",
           "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-        },
-        {
-          "title": "Imperial, Texas",
-          "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-        },
-        {
-          "title": "Gmina Włodawa",
-          "text": "Gmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine."
         }
       ]
     },
@@ -183,46 +174,30 @@
       "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
       "score": 0.5531502857142858,
       "source_title": "Imperial, Texas",
-      "hop_answer": "Crockett County",
-      "hop_thought": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.",
-      "hop_raw_response": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.\nAnswer: Crockett County",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not contain information about the counties that border Pecos County.",
+      "hop_raw_response": "The provided evidence does not contain information about the counties that border Pecos County.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Imperial, Texas",
           "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-        },
-        {
-          "title": "Imperial, Texas",
-          "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-        },
-        {
-          "title": "Lancaster Crossing",
-          "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
         }
       ]
     },
     {
       "sub_question": "What other county besides this one does the county where Imperial is located share a border with?",
-      "resolved_sub_question": "What other county besides this one does the county where Imperial is located share a border with? Context: Pecos County; Crockett County.",
+      "resolved_sub_question": "What other county besides this one does the county where Imperial is located share a border with? Context: Pecos County.",
       "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
       "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
-      "score": 0.505929411764706,
+      "score": 0.5084000000000001,
       "source_title": "Imperial, Texas",
-      "hop_answer": "Crockett County",
-      "hop_thought": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.",
-      "hop_raw_response": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.\nAnswer: Crockett County",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not specify the exact counties that border Pecos County.",
+      "hop_raw_response": "The provided context does not specify the exact counties that border Pecos County.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Imperial, Texas",
           "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-        },
-        {
-          "title": "Imperial, Texas",
-          "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-        },
-        {
-          "title": "Lancaster Crossing",
-          "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
         }
       ]
     }
@@ -230,102 +205,102 @@
   "ranked_nodes": [
     {
       "node_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
-      "score": 0.15268206210646823,
+      "score": 0.15268499184590817,
       "node_type": "sentence"
     },
     {
       "node_id": "sentence:lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos_crossing_solomon_s_ford_c",
-      "score": 0.0926269042212757,
+      "score": 0.0926210470079093,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:imperial",
-      "score": 0.08609103912347532,
+      "score": 0.08609457346841284,
       "node_type": "entity"
     },
     {
       "node_id": "entity:pecos_county",
-      "score": 0.07680235705312807,
+      "score": 0.07680337934585142,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
-      "score": 0.06944882823438382,
+      "score": 0.06944865111275711,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:title_anchor_gmina_w_odawa",
-      "score": 0.04494559866577663,
+      "score": 0.04494545370350943,
       "node_type": "entity"
     },
     {
       "node_id": "entity:texas",
-      "score": 0.04218145012133223,
+      "score": 0.04218122201719539,
       "node_type": "entity"
     },
     {
       "node_id": "chunk:imperial_texas_0",
-      "score": 0.03994726988661584,
+      "score": 0.039947872034305915,
       "node_type": "chunk"
     },
     {
       "node_id": "sentence:imperial_texas_0_1_the_population_was_278_at_the_2010_census",
-      "score": 0.03711426223931753,
+      "score": 0.03711490146898065,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:indian_ford",
-      "score": 0.02364604312942096,
+      "score": 0.023644000665532985,
       "node_type": "entity"
     },
     {
       "node_id": "entity:w_odawa_county",
-      "score": 0.022460949500650505,
+      "score": 0.02246086622276246,
       "node_type": "entity"
     },
     {
       "node_id": "entity:pecos_crossing",
-      "score": 0.02177079520817808,
+      "score": 0.021768858947061494,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:lancaster_crossing_0_1_named_after_nearby_fort_lancaster_it_is_one_of_the_few_natural_fords_on_the_pec",
-      "score": 0.018244589907300886,
+      "score": 0.0182434206344759,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:title_anchor_lancaster_crossing",
-      "score": 0.016755401213962535,
+      "score": 0.016753971904805074,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:gmina_w_odawa_0_1_its_seat_is_the_town_of_w_odawa_although_the_town_is_not_part_of_the_territory",
-      "score": 0.013032130661885584,
+      "score": 0.013032150340449302,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:solomon",
-      "score": 0.010380301569107452,
+      "score": 0.01037956024937411,
       "node_type": "entity"
     },
     {
       "node_id": "entity:belarus",
-      "score": 0.010011613173489092,
+      "score": 0.010011597732507895,
       "node_type": "entity"
     },
     {
       "node_id": "chunk:gmina_w_odawa_0",
-      "score": 0.009547054834921737,
+      "score": 0.00954710351914827,
       "node_type": "chunk"
     },
     {
       "node_id": "entity:lublin_voivodeship",
-      "score": 0.009475243460030373,
+      "score": 0.009475217312209015,
       "node_type": "entity"
     },
     {
       "node_id": "entity:eastern_poland",
-      "score": 0.009475243460030373,
+      "score": 0.009475217312209015,
       "node_type": "entity"
     }
   ],
@@ -334,47 +309,47 @@
       "node_id": "chunk:imperial_texas_0",
       "passage_index": 17,
       "title": "Imperial, Texas",
-      "score": 0.10032929032289643,
+      "score": 0.10032931565116766,
       "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.",
       "score_breakdown": {
-        "dense": 0.0509115106106087,
-        "graph": 0.05756930530728303,
-        "fact": 0.3670477859658449
+        "dense": 0.05091131362999453,
+        "graph": 0.05756978492210829,
+        "fact": 0.3670477178535879
       }
     },
     {
       "node_id": "chunk:gmina_w_odawa_0",
       "passage_index": 11,
       "title": "Gmina Włodawa",
-      "score": 0.09479465367097797,
+      "score": 0.09479472932273247,
       "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
       "score_breakdown": {
-        "dense": 0.05014050734011276,
-        "graph": 0.051224200441909166,
-        "fact": 0.3456674300089548
+        "dense": 0.050140528199783194,
+        "graph": 0.05122440022426393,
+        "fact": 0.34566745830381684
       }
     },
     {
       "node_id": "chunk:lancaster_crossing_0",
       "passage_index": 12,
       "title": "Lancaster Crossing",
-      "score": 0.08656771657690593,
+      "score": 0.08656767215303149,
       "text": "Lancaster Crossing\nLancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.",
       "score_breakdown": {
-        "dense": 0.04998334991615928,
-        "graph": 0.053280521730794304,
-        "fact": 0.2872847840252002
+        "dense": 0.049983375126131435,
+        "graph": 0.05328030752423302,
+        "fact": 0.2872848238425953
       }
     },
     {
       "node_id": "chunk:virginia_lempira_0",
       "passage_index": 15,
       "title": "Virginia, Lempira",
-      "score": 0.04157966196619174,
+      "score": 0.04157980078069194,
       "text": "Virginia, Lempira\nVirginia is located in Lempira Honduras and shares a border with El Salvador. Many Virginians travel to El Salvador to do their shopping, because the Honduran cities are far away from Virginia.",
       "score_breakdown": {
-        "dense": 0.05023471062408874,
-        "graph": 0.0465019037431431,
+        "dense": 0.05023485242693944,
+        "graph": 0.04650210648625082,
         "fact": 0.0
       }
     },
@@ -382,11 +357,11 @@
       "node_id": "chunk:canada_united_states_border_0",
       "passage_index": 8,
       "title": "Canada–United States border",
-      "score": 0.04152680436112858,
+      "score": 0.04152692893147558,
       "text": "Canada–United States border\nThe Canada -- United States border (French: Frontière entre le Canada et les États - Unis), officially known as the International Boundary, is the longest international border in the world between two countries. It is shared between Canada and the United States, the second - and fourth - largest countries by area, respectively. The terrestrial boundary (including portions of maritime boundaries in the Great Lakes, and on the Atlantic, Pacific, and Arctic coasts) is 8,891 kilometres (5,525 mi) long, of which 2,475 kilometres (1,538 mi) is Canada's border with Alaska. Eight Canadian provinces and territories (Yukon, British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, and New Brunswick), and thirteen U.S. states (Alaska, Washington, Idaho, Montana, North Dakota, Minnesota, Michigan, Ohio, Pennsylvania, New York, Vermont, New Hampshire, and Maine) are located along the border.",
       "score_breakdown": {
-        "dense": 0.050100866935382765,
-        "graph": 0.046571091822226865,
+        "dense": 0.05010097955196195,
+        "graph": 0.04657130059298836,
         "fact": 0.0
       }
     },
@@ -394,11 +369,11 @@
       "node_id": "chunk:minsk_region_0",
       "passage_index": 19,
       "title": "Minsk Region",
-      "score": 0.04151106760228739,
+      "score": 0.041511152315099324,
       "text": "Minsk Region\nMinsk Region or Minsk Voblasć or Minsk Oblast (, \"Minskaja vobłasć\" ; , \"Minskaja oblastj\") is one of the regions of Belarus. Its administrative center is Minsk, although it is a separate administrative territorial entity of Belarus. As of 2011, the region's population is 1,411,500.",
       "score_breakdown": {
-        "dense": 0.04977557370411073,
-        "graph": 0.04711500688342162,
+        "dense": 0.04977561823327598,
+        "graph": 0.04711520762265843,
         "fact": 0.0
       }
     },
@@ -406,11 +381,11 @@
       "node_id": "chunk:oak_lawn_illinois_0",
       "passage_index": 3,
       "title": "Oak Lawn, Illinois",
-      "score": 0.041506269765274245,
+      "score": 0.04150634976094652,
       "text": "Oak Lawn, Illinois\nOak Lawn is a suburb of Chicago, located southwest of the city. It shares borders with the city in two areas, but is surrounded mostly by other suburbs.",
       "score_breakdown": {
-        "dense": 0.05008381119406008,
-        "graph": 0.04653391202847065,
+        "dense": 0.05008384516107043,
+        "graph": 0.04653411640785927,
         "fact": 0.0
       }
     },
@@ -418,11 +393,11 @@
       "node_id": "chunk:geography_of_the_united_states_0",
       "passage_index": 2,
       "title": "Geography of the United States",
-      "score": 0.04148939352487035,
+      "score": 0.04148941022052558,
       "text": "Geography of the United States\nThe United States shares land borders with Canada (to the north) and Mexico (to the south), and a territorial water border with Russia in the northwest, and two territorial water borders in the southeast between Florida and Cuba, and Florida and the Bahamas. The contiguous forty-eight states are otherwise bounded by the Pacific Ocean on the west, the Atlantic Ocean on the east, and the Gulf of Mexico to the southeast. Alaska borders the Pacific Ocean to the south, the Bering Strait to the west, and the Arctic Ocean to the north, while Hawaii lies far to the southwest of the mainland in the Pacific Ocean.",
       "score_breakdown": {
-        "dense": 0.05006891235247035,
-        "graph": 0.04650497243670551,
+        "dense": 0.05006883265579767,
+        "graph": 0.04650517419945622,
         "fact": 0.0
       }
     },
@@ -430,11 +405,11 @@
       "node_id": "chunk:swan_miara_0",
       "passage_index": 6,
       "title": "Swan Miara",
-      "score": 0.04144276837318919,
+      "score": 0.041442870628044366,
       "text": "Swan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
       "score_breakdown": {
-        "dense": 0.0499731785648585,
-        "graph": 0.04652506720839005,
+        "dense": 0.049973253149890824,
+        "graph": 0.04652527131868137,
         "fact": 0.0
       }
     },
@@ -442,11 +417,11 @@
       "node_id": "chunk:mount_bosworth_0",
       "passage_index": 5,
       "title": "Mount Bosworth",
-      "score": 0.04144000748722568,
+      "score": 0.041440025415170556,
       "text": "Mount Bosworth\nMount Bosworth is located in the Canadian Rockies on the border of Alberta and British Columbia. The mountain is situated immediately northwest of Kicking Horse Pass and straddles the shared border of Banff National Park with Yoho National Park. It was named in 1903 after George Morris Bosworth, an executive and long-time employee of the Canadian Pacific Railway.",
       "score_breakdown": {
-        "dense": 0.04997403447810383,
-        "graph": 0.046514295080895225,
+        "dense": 0.04997395748227767,
+        "graph": 0.04651449599972611,
         "fact": 0.0
       }
     }
@@ -455,7 +430,7 @@
     "entity": [
       {
         "node_id": "entity:imperial",
-        "score": 0.08609103912347532,
+        "score": 0.08609457346841284,
         "text": "Imperial",
         "metadata": {
           "canonical_name": "Imperial",
@@ -470,7 +445,7 @@
       },
       {
         "node_id": "entity:pecos_county",
-        "score": 0.07680235705312807,
+        "score": 0.07680337934585142,
         "text": "Pecos County",
         "metadata": {
           "canonical_name": "Pecos County",
@@ -489,7 +464,7 @@
     "sentence": [
       {
         "node_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
-        "score": 0.15268206210646823,
+        "score": 0.15268499184590817,
         "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
         "metadata": {
           "title": "Imperial, Texas",
@@ -522,7 +497,7 @@
       },
       {
         "node_id": "sentence:lancaster_crossing_0_0_lancaster_crossing_also_known_as_indian_ford_pecos_crossing_solomon_s_ford_c",
-        "score": 0.0926269042212757,
+        "score": 0.0926210470079093,
         "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas.",
         "metadata": {
           "title": "Lancaster Crossing",
@@ -584,7 +559,7 @@
       },
       {
         "node_id": "sentence:gmina_w_odawa_0_0_gmina_w_odawa_is_a_rural_gmina_administrative_district_in_w_odawa_county_lubl",
-        "score": 0.06944882823438382,
+        "score": 0.06944865111275711,
         "text": "Gmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine.",
         "metadata": {
           "title": "Gmina Włodawa",
@@ -638,7 +613,7 @@
       },
       {
         "node_id": "sentence:imperial_texas_0_1_the_population_was_278_at_the_2010_census",
-        "score": 0.03711426223931753,
+        "score": 0.03711490146898065,
         "text": "The population was 278 at the 2010 census.",
         "metadata": {
           "title": "Imperial, Texas",
@@ -651,7 +626,7 @@
       },
       {
         "node_id": "sentence:lancaster_crossing_0_1_named_after_nearby_fort_lancaster_it_is_one_of_the_few_natural_fords_on_the_pec",
-        "score": 0.018244589907300886,
+        "score": 0.0182434206344759,
         "text": "Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.",
         "metadata": {
           "title": "Lancaster Crossing",
@@ -683,7 +658,7 @@
       },
       {
         "node_id": "sentence:gmina_w_odawa_0_1_its_seat_is_the_town_of_w_odawa_although_the_town_is_not_part_of_the_territory",
-        "score": 0.013032130661885584,
+        "score": 0.013032150340449302,
         "text": "Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
         "metadata": {
           "title": "Gmina Włodawa",
@@ -710,7 +685,7 @@
     "chunk": [
       {
         "node_id": "chunk:imperial_texas_0",
-        "score": 0.03994726988661584,
+        "score": 0.039947872034305915,
         "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.",
         "metadata": {
           "title": "Imperial, Texas",
@@ -725,7 +700,7 @@
       },
       {
         "node_id": "chunk:gmina_w_odawa_0",
-        "score": 0.009547054834921737,
+        "score": 0.00954710351914827,
         "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
         "metadata": {
           "title": "Gmina Włodawa",
@@ -745,7 +720,7 @@
       },
       {
         "node_id": "chunk:lancaster_crossing_0",
-        "score": 0.009385158888775648,
+        "score": 0.009384522597896744,
         "text": "Lancaster Crossing\nLancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.",
         "metadata": {
           "title": "Lancaster Crossing",
@@ -774,7 +749,7 @@
       },
       {
         "node_id": "chunk:minsk_region_0",
-        "score": 0.0023598200673514416,
+        "score": 0.0023599078878843963,
         "text": "Minsk Region\nMinsk Region or Minsk Voblasć or Minsk Oblast (, \"Minskaja vobłasć\" ; , \"Minskaja oblastj\") is one of the regions of Belarus. Its administrative center is Minsk, although it is a separate administrative territorial entity of Belarus. As of 2011, the region's population is 1,411,500.",
         "metadata": {
           "title": "Minsk Region",
@@ -792,53 +767,53 @@
         }
       }
     ],
-    "qa_context": "Imperial, Texas\nImperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.\n\nGmina Włodawa\nGmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.\n\nLancaster Crossing\nLancaster Crossing\nLancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.\n\nVirginia, Lempira\nVirginia, Lempira\nVirginia is located in Lempira Honduras and shares a border with El Salvador. Many Virginians travel to El Salvador to do their shopping, because the Honduran cities are far away from Virginia.\n\nCanada–United States border\nCanada–United States border\nThe Canada -- United States border (French: Frontière entre le Canada et les États - Unis), officially known as the International Boundary, is the longest international border in the world between two countries. It is shared between Canada and the United States, the second - and fourth - largest countries by area, respectively. The terrestrial boundary (including portions of maritime boundaries in the Great Lakes, and on the Atlantic, Pacific, and Arctic coasts) is 8,891 kilometres (5,525 mi) long, of which 2,475 kilometres (1,538 mi) is Canada's border with Alaska. Eight Canadian provinces and territories (Yukon, British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, and New Brunswick), and thirteen U.S. states (Alaska, Washington, Idaho, Montana, North Dakota, Minnesota, Michigan, Ohio, Pennsylvania, New York, Vermont, New Hampshire, and Maine) are located along the border.\n\nImperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States.\n\nGmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine.\n\nLancaster Crossing\nLancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas.\n\nOak Lawn, Illinois\nOak Lawn, Illinois\nOak Lawn is a suburb of Chicago, located southwest of the city. It shares borders with the city in two areas, but is surrounded mostly by other suburbs.\n\nMount Bosworth\nMount Bosworth\nMount Bosworth is located in the Canadian Rockies on the border of Alberta and British Columbia. The mountain is situated immediately northwest of Kicking Horse Pass and straddles the shared border of Banff National Park with Yoho National Park. It was named in 1903 after George Morris Bosworth, an executive and long-time employee of the Canadian Pacific Railway.\n\nSwan Miara\nSwan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
+    "qa_context": "Lancaster Crossing\nLancaster Crossing Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.\n\nImperial, Texas\nImperial, Texas Imperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.\n\nOak Lawn, Illinois\nIt shares borders with the city in two areas, but is surrounded mostly by other suburbs. Oak Lawn, Illinois Oak Lawn is a suburb of Chicago, located southwest of the city.",
     "retrieved_passages": [
       {
         "node_id": "chunk:imperial_texas_0",
         "passage_index": 17,
         "title": "Imperial, Texas",
-        "score": 0.10032929032289643,
+        "score": 0.10032931565116766,
         "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.",
         "score_breakdown": {
-          "dense": 0.0509115106106087,
-          "graph": 0.05756930530728303,
-          "fact": 0.3670477859658449
+          "dense": 0.05091131362999453,
+          "graph": 0.05756978492210829,
+          "fact": 0.3670477178535879
         }
       },
       {
         "node_id": "chunk:gmina_w_odawa_0",
         "passage_index": 11,
         "title": "Gmina Włodawa",
-        "score": 0.09479465367097797,
+        "score": 0.09479472932273247,
         "text": "Gmina Włodawa\nGmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine. Its seat is the town of Włodawa, although the town is not part of the territory of the gmina.",
         "score_breakdown": {
-          "dense": 0.05014050734011276,
-          "graph": 0.051224200441909166,
-          "fact": 0.3456674300089548
+          "dense": 0.050140528199783194,
+          "graph": 0.05122440022426393,
+          "fact": 0.34566745830381684
         }
       },
       {
         "node_id": "chunk:lancaster_crossing_0",
         "passage_index": 12,
         "title": "Lancaster Crossing",
-        "score": 0.08656771657690593,
+        "score": 0.08656767215303149,
         "text": "Lancaster Crossing\nLancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.",
         "score_breakdown": {
-          "dense": 0.04998334991615928,
-          "graph": 0.053280521730794304,
-          "fact": 0.2872847840252002
+          "dense": 0.049983375126131435,
+          "graph": 0.05328030752423302,
+          "fact": 0.2872848238425953
         }
       },
       {
         "node_id": "chunk:virginia_lempira_0",
         "passage_index": 15,
         "title": "Virginia, Lempira",
-        "score": 0.04157966196619174,
+        "score": 0.04157980078069194,
         "text": "Virginia, Lempira\nVirginia is located in Lempira Honduras and shares a border with El Salvador. Many Virginians travel to El Salvador to do their shopping, because the Honduran cities are far away from Virginia.",
         "score_breakdown": {
-          "dense": 0.05023471062408874,
-          "graph": 0.0465019037431431,
+          "dense": 0.05023485242693944,
+          "graph": 0.04650210648625082,
           "fact": 0.0
         }
       },
@@ -846,11 +821,11 @@
         "node_id": "chunk:canada_united_states_border_0",
         "passage_index": 8,
         "title": "Canada–United States border",
-        "score": 0.04152680436112858,
+        "score": 0.04152692893147558,
         "text": "Canada–United States border\nThe Canada -- United States border (French: Frontière entre le Canada et les États - Unis), officially known as the International Boundary, is the longest international border in the world between two countries. It is shared between Canada and the United States, the second - and fourth - largest countries by area, respectively. The terrestrial boundary (including portions of maritime boundaries in the Great Lakes, and on the Atlantic, Pacific, and Arctic coasts) is 8,891 kilometres (5,525 mi) long, of which 2,475 kilometres (1,538 mi) is Canada's border with Alaska. Eight Canadian provinces and territories (Yukon, British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, and New Brunswick), and thirteen U.S. states (Alaska, Washington, Idaho, Montana, North Dakota, Minnesota, Michigan, Ohio, Pennsylvania, New York, Vermont, New Hampshire, and Maine) are located along the border.",
         "score_breakdown": {
-          "dense": 0.050100866935382765,
-          "graph": 0.046571091822226865,
+          "dense": 0.05010097955196195,
+          "graph": 0.04657130059298836,
           "fact": 0.0
         }
       },
@@ -858,11 +833,11 @@
         "node_id": "chunk:minsk_region_0",
         "passage_index": 19,
         "title": "Minsk Region",
-        "score": 0.04151106760228739,
+        "score": 0.041511152315099324,
         "text": "Minsk Region\nMinsk Region or Minsk Voblasć or Minsk Oblast (, \"Minskaja vobłasć\" ; , \"Minskaja oblastj\") is one of the regions of Belarus. Its administrative center is Minsk, although it is a separate administrative territorial entity of Belarus. As of 2011, the region's population is 1,411,500.",
         "score_breakdown": {
-          "dense": 0.04977557370411073,
-          "graph": 0.04711500688342162,
+          "dense": 0.04977561823327598,
+          "graph": 0.04711520762265843,
           "fact": 0.0
         }
       },
@@ -870,11 +845,11 @@
         "node_id": "chunk:oak_lawn_illinois_0",
         "passage_index": 3,
         "title": "Oak Lawn, Illinois",
-        "score": 0.041506269765274245,
+        "score": 0.04150634976094652,
         "text": "Oak Lawn, Illinois\nOak Lawn is a suburb of Chicago, located southwest of the city. It shares borders with the city in two areas, but is surrounded mostly by other suburbs.",
         "score_breakdown": {
-          "dense": 0.05008381119406008,
-          "graph": 0.04653391202847065,
+          "dense": 0.05008384516107043,
+          "graph": 0.04653411640785927,
           "fact": 0.0
         }
       },
@@ -882,11 +857,11 @@
         "node_id": "chunk:geography_of_the_united_states_0",
         "passage_index": 2,
         "title": "Geography of the United States",
-        "score": 0.04148939352487035,
+        "score": 0.04148941022052558,
         "text": "Geography of the United States\nThe United States shares land borders with Canada (to the north) and Mexico (to the south), and a territorial water border with Russia in the northwest, and two territorial water borders in the southeast between Florida and Cuba, and Florida and the Bahamas. The contiguous forty-eight states are otherwise bounded by the Pacific Ocean on the west, the Atlantic Ocean on the east, and the Gulf of Mexico to the southeast. Alaska borders the Pacific Ocean to the south, the Bering Strait to the west, and the Arctic Ocean to the north, while Hawaii lies far to the southwest of the mainland in the Pacific Ocean.",
         "score_breakdown": {
-          "dense": 0.05006891235247035,
-          "graph": 0.04650497243670551,
+          "dense": 0.05006883265579767,
+          "graph": 0.04650517419945622,
           "fact": 0.0
         }
       },
@@ -894,11 +869,11 @@
         "node_id": "chunk:swan_miara_0",
         "passage_index": 6,
         "title": "Swan Miara",
-        "score": 0.04144276837318919,
+        "score": 0.041442870628044366,
         "text": "Swan Miara\nSwan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan. It is located in the south of the district where it borders Abbottabad District.",
         "score_breakdown": {
-          "dense": 0.0499731785648585,
-          "graph": 0.04652506720839005,
+          "dense": 0.049973253149890824,
+          "graph": 0.04652527131868137,
           "fact": 0.0
         }
       },
@@ -906,11 +881,11 @@
         "node_id": "chunk:mount_bosworth_0",
         "passage_index": 5,
         "title": "Mount Bosworth",
-        "score": 0.04144000748722568,
+        "score": 0.041440025415170556,
         "text": "Mount Bosworth\nMount Bosworth is located in the Canadian Rockies on the border of Alberta and British Columbia. The mountain is situated immediately northwest of Kicking Horse Pass and straddles the shared border of Banff National Park with Yoho National Park. It was named in 1903 after George Morris Bosworth, an executive and long-time employee of the Canadian Pacific Railway.",
         "score_breakdown": {
-          "dense": 0.04997403447810383,
-          "graph": 0.046514295080895225,
+          "dense": 0.04997395748227767,
+          "graph": 0.04651449599972611,
           "fact": 0.0
         }
       }
@@ -924,20 +899,12 @@
         "score": 0.5903502857142859,
         "source_title": "Imperial, Texas",
         "hop_answer": "Pecos County",
-        "hop_thought": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.",
-        "hop_raw_response": "The evidence states that Imperial is a census-designated place in Pecos County, Texas, United States.\nAnswer: Pecos County",
+        "hop_thought": "The text states that Imperial is in Pecos County, Texas.",
+        "hop_raw_response": "The text states that Imperial is in Pecos County, Texas.\nAnswer: Pecos County",
         "evidence_passages": [
           {
             "title": "Imperial, Texas",
             "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-          },
-          {
-            "title": "Imperial, Texas",
-            "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-          },
-          {
-            "title": "Gmina Włodawa",
-            "text": "Gmina Włodawa is a rural gmina (administrative district) in Włodawa County, Lublin Voivodeship, in eastern Poland, on the border with Belarus and Ukraine."
           }
         ]
       },
@@ -948,46 +915,30 @@
         "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
         "score": 0.5531502857142858,
         "source_title": "Imperial, Texas",
-        "hop_answer": "Crockett County",
-        "hop_thought": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.",
-        "hop_raw_response": "The context mentions that Lancaster Crossing is located between Crockett County and Pecos County. This indicates that Pecos County shares a border with Crockett County. However, the evidence does not provide information about other neighboring counties.\nAnswer: Crockett County",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not contain information about the counties that border Pecos County.",
+        "hop_raw_response": "The provided evidence does not contain information about the counties that border Pecos County.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Imperial, Texas",
             "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-          },
-          {
-            "title": "Imperial, Texas",
-            "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-          },
-          {
-            "title": "Lancaster Crossing",
-            "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
           }
         ]
       },
       {
         "sub_question": "What other county besides this one does the county where Imperial is located share a border with?",
-        "resolved_sub_question": "What other county besides this one does the county where Imperial is located share a border with? Context: Pecos County; Crockett County.",
+        "resolved_sub_question": "What other county besides this one does the county where Imperial is located share a border with? Context: Pecos County.",
         "sentence_id": "sentence:imperial_texas_0_0_imperial_is_a_census_designated_place_cdp_in_pecos_county_texas_united_state",
         "sentence": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States.",
-        "score": 0.505929411764706,
+        "score": 0.5084000000000001,
         "source_title": "Imperial, Texas",
-        "hop_answer": "Crockett County",
-        "hop_thought": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.",
-        "hop_raw_response": "The context indicates that Pecos County, where Imperial is located, shares a border with Crockett County.\nAnswer: Crockett County",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not specify the exact counties that border Pecos County.",
+        "hop_raw_response": "The provided context does not specify the exact counties that border Pecos County.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Imperial, Texas",
             "text": "Imperial is a census-designated place (CDP) in Pecos County, Texas, United States."
-          },
-          {
-            "title": "Imperial, Texas",
-            "text": "Imperial, Texas\nImperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census."
-          },
-          {
-            "title": "Lancaster Crossing",
-            "text": "Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas."
           }
         ]
       }
@@ -1007,13 +958,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. What county is Imperial located in? => Pecos County (source: Imperial, Texas)\n2. What counties does this county share a border with? => Crockett County (source: Imperial, Texas)\n3. What other county besides this one does the county where Imperial is located share a border with? => Crockett County (source: Imperial, Texas)\n\nFact hints:\n- Imperial located in Pecos County\n- Pecos County part of Texas\n\nWikipedia Title: Lancaster Crossing\nLancaster Crossing Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.\n\nWikipedia Title: Imperial, Texas\nImperial, Texas Imperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.\n\nWikipedia Title: Oak Lawn, Illinois\nIt shares borders with the city in two areas, but is surrounded mostly by other suburbs. Oak Lawn, Illinois Oak Lawn is a suburb of Chicago, located southwest of the city.\n\nWikipedia Title: Swan Miara\nIt is located in the south of the district where it borders Abbottabad District. Swan Miara Swan Miara is a village and union council (an administrative subdivision) of Mansehra District in Khyber-Pakhtunkhwa province of Pakistan.\n\nWikipedia Title: Mount Bosworth\nIt was named in 1903 after George Morris Bosworth, an executive and long-time employee of the Canadian Pacific Railway. Mount Bosworth Mount Bosworth is located in the Canadian Rockies on the border of Alberta and British Columbia.\n\nQuestion: What other county does the county where Imperial is located share a border with?\nDraft Answer: Crockett County\nThought: "
+        "content": "Intermediate reasoning hints:\n1. What county is Imperial located in? => Pecos County (source: Imperial, Texas)\n2. What counties does this county share a border with? (source: Imperial, Texas)\n3. What other county besides this one does the county where Imperial is located share a border with? (source: Imperial, Texas)\n\nFact hints:\n- Imperial located in Pecos County\n- Pecos County part of Texas\n\nWikipedia Title: Lancaster Crossing\nLancaster Crossing Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas. Named after nearby Fort Lancaster, it is one of the few natural fords on the Pecos River, otherwise known for its steep banks that made crossing difficult.\n\nWikipedia Title: Imperial, Texas\nImperial, Texas Imperial is a census-designated place (CDP) in Pecos County, Texas, United States. The population was 278 at the 2010 census.\n\nWikipedia Title: Oak Lawn, Illinois\nIt shares borders with the city in two areas, but is surrounded mostly by other suburbs. Oak Lawn, Illinois Oak Lawn is a suburb of Chicago, located southwest of the city.\n\nQuestion: What other county does the county where Imperial is located share a border with?\nDraft Answer: Crockett County\nThought: "
       }
     ]
   },
-  "qa_thought": "The question asks for the other county that shares a border with Pecos County, where Imperial is located. From the provided information, we know that Imperial is in Pecos County, and Pecos County shares a border with Crockett County.",
+  "qa_thought": "Imperial is located in Pecos County, and based on the information about Lancaster Crossing, Pecos County shares a border with Crockett County.",
   "predicted_answer": "Crockett County",
-  "qa_raw_response": "{\n  \"thought\": \"The question asks for the other county that shares a border with Pecos County, where Imperial is located. From the provided information, we know that Imperial is in Pecos County, and Pecos County shares a border with Crockett County.\",\n  \"answer\": \"Crockett County\",\n  \"support\": \"Lancaster Crossing, also known as Indian Ford, Pecos Crossing, Solomon's Ford, Crossing of the Pecos, Crossing Rio Pecos, Ferry of the Pecos, and Ford Canyon Crossing, is an historic ford and ferry on the Pecos River, between Crockett County and Pecos County just southeast of Sheffield, Texas.\"\n}",
+  "qa_raw_response": "{\n  \"thought\": \"Imperial is located in Pecos County, and based on the information about Lancaster Crossing, Pecos County shares a border with Crockett County.\",\n  \"answer\": \"Crockett County\",\n  \"support\": \"between Crockett County and Pecos County\"\n}",
   "sample_metadata": {
     "sample_id": "2hop__402530_774333",
     "question": "What other county does the county where Imperial is located share a border with?",

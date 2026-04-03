@@ -9,70 +9,70 @@
   "raw_query_entities": [],
   "query_entity_resolutions": [],
   "sub_questions": [
-    "In which country or region is this term 'government phonology popular' used?",
+    "In which country or region is this term used?",
     "When did education become free in this country or region?"
   ],
   "sub_question_source": "model_or_heuristic",
   "seeds": [
     {
       "node_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
-      "score": 0.5074002104615912,
+      "score": 0.40221348071380636,
       "layer": "sentence"
     },
     {
+      "node_id": "entity:quezon_city",
+      "score": 0.3455982600959569,
+      "layer": "entity"
+    },
+    {
       "node_id": "entity:ama_computer_college_of_quezon_city",
-      "score": 0.34687044544361834,
+      "score": 0.32559535681641266,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ama_computer_university",
+      "score": 0.2714313147926985,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:education_act",
+      "score": 0.26842838695308,
       "layer": "entity"
     },
     {
       "node_id": "chunk:ama_computer_university_0",
-      "score": 0.2847535847951523,
+      "score": 0.23080145248357734,
       "layer": "chunk"
     },
     {
-      "node_id": "entity:title_anchor_ama_computer_university",
-      "score": 0.26687729792615333,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:quezon_city",
-      "score": 0.25812679251348447,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:title_anchor_leon_belleth",
-      "score": 0.23268289051376936,
-      "layer": "entity"
-    },
-    {
-      "node_id": "entity:radio_ceylon",
-      "score": 0.23268289051376936,
+      "node_id": "entity:compulsory_education_act",
+      "score": 0.22815220070679998,
       "layer": "entity"
     },
     {
       "node_id": "entity:philippine_government",
-      "score": 0.2260953331567661,
+      "score": 0.20480174223063316,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:free",
+      "score": 0.1906414358852505,
       "layer": "entity"
     },
     {
       "node_id": "entity:commission_on_higher_education_ched",
-      "score": 0.21525739437269184,
+      "score": 0.1739638041251279,
       "layer": "entity"
     },
     {
       "node_id": "entity:national_education_day",
-      "score": 0.18867041929237965,
+      "score": 0.17312465270054103,
       "layer": "entity"
     },
     {
       "node_id": "entity:across_india",
-      "score": 0.18867041929237965,
+      "score": 0.17308409813833897,
       "layer": "entity"
-    },
-    {
-      "node_id": "sentence:leon_belleth_0_0_leon_belleth_was_a_popular_announcer_with_radio_ceylon_and_subsequently_the_sri",
-      "score": 0.09218798509593744,
-      "layer": "sentence"
     }
   ],
   "ranked_facts": [
@@ -84,7 +84,7 @@
       "sentence_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
       "chunk_id": "chunk:ama_computer_university_0",
       "document_index": 12,
-      "score": 0.38116744554981924
+      "score": 0.34116729804348767
     },
     {
       "fact_id": "fact:ama_computer_college_of_quezon_city_became_ama_computer_university_sentence_ama_computer_university_0_0_ama_computer_col",
@@ -94,17 +94,17 @@
       "sentence_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
       "chunk_id": "chunk:ama_computer_university_0",
       "document_index": 12,
-      "score": 0.341166684402572
+      "score": 0.3211665398129614
     },
     {
-      "fact_id": "fact:leon_belleth_was_popular_announcer_with_radio_ceylon_sentence_leon_belleth_0_0_leon_belleth_was_a_popular_announcer_with",
-      "text": "Leon Belleth was popular announcer with Radio Ceylon",
-      "head_id": "entity:title_anchor_leon_belleth",
-      "tail_id": "entity:radio_ceylon",
-      "sentence_id": "sentence:leon_belleth_0_0_leon_belleth_was_a_popular_announcer_with_radio_ceylon_and_subsequently_the_sri",
-      "chunk_id": "chunk:leon_belleth_0",
-      "document_index": 3,
-      "score": 0.22699764034256723
+      "fact_id": "fact:free_related_to_compulsory_education_act_sentence_right_of_children_to_free_and_compulsory_education_act_2009_0_0_the_ri",
+      "text": "Free related_to Compulsory Education Act",
+      "head_id": "entity:free",
+      "tail_id": "entity:compulsory_education_act",
+      "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_0_the_right_of_children_to_free_and_compulsory_education_a",
+      "chunk_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_0",
+      "document_index": 11,
+      "score": 0.22369032246090004
     },
     {
       "fact_id": "fact:commission_on_higher_education_ched_is_part_of_philippine_government_sentence_ama_computer_university_0_0_ama_computer_c",
@@ -114,17 +114,7 @@
       "sentence_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
       "chunk_id": "chunk:ama_computer_university_0",
       "document_index": 12,
-      "score": 0.22034324251340123
-    },
-    {
-      "fact_id": "fact:ama_computer_university_received_university_status_from_commission_on_higher_education_ched_sentence_ama_computer_univer",
-      "text": "AMA Computer University received university status from Commission on Higher Education CHED",
-      "head_id": "entity:title_anchor_ama_computer_university",
-      "tail_id": "entity:commission_on_higher_education_ched",
-      "sentence_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
-      "chunk_id": "chunk:ama_computer_university_0",
-      "document_index": 12,
-      "score": 0.19866736494525272
+      "score": 0.2003430965752492
     },
     {
       "fact_id": "fact:national_education_day_is_celebrated_across_india_sentence_abul_kalam_azad_0_3_his_contribution_to_establishing_the_educ",
@@ -134,68 +124,65 @@
       "sentence_id": "sentence:abul_kalam_azad_0_3_his_contribution_to_establishing_the_education_foundation_in_india_is_recognised",
       "chunk_id": "chunk:abul_kalam_azad_0",
       "document_index": 19,
-      "score": 0.18867041929237965
+      "score": 0.16867026987491873
     },
     {
-      "fact_id": "fact:ama_computer_university_formerly_quezon_city_sentence_ama_computer_university_0_0_ama_computer_college_of_quezon_city_be",
-      "text": "AMA Computer University formerly Quezon City",
+      "fact_id": "fact:azad_means_free_sentence_abul_kalam_azad_0_2_he_is_commonly_remembered_as_maulana_azad_the_word_maulana_is_an_honorific_",
+      "text": "Azad means Free",
+      "head_id": "entity:azad",
+      "tail_id": "entity:free",
+      "sentence_id": "sentence:abul_kalam_azad_0_2_he_is_commonly_remembered_as_maulana_azad_the_word_maulana_is_an_honorific_mean",
+      "chunk_id": "chunk:abul_kalam_azad_0",
+      "document_index": 19,
+      "score": 0.1486687928178011
+    },
+    {
+      "fact_id": "fact:ama_computer_university_received_university_status_from_commission_on_higher_education_ched_sentence_ama_computer_univer",
+      "text": "AMA Computer University received university status from Commission on Higher Education CHED",
       "head_id": "entity:title_anchor_ama_computer_university",
-      "tail_id": "entity:quezon_city",
+      "tail_id": "entity:commission_on_higher_education_ched",
       "sentence_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
       "chunk_id": "chunk:ama_computer_university_0",
       "document_index": 12,
-      "score": 0.12366458214733007
+      "score": 0.13866722036423873
     }
   ],
-  "bridge_entities": [],
+  "bridge_entities": [
+    "India",
+    "1 April 2010"
+  ],
   "reasoning_chain": [
     {
-      "sub_question": "In which country or region is this term 'government phonology popular' used?",
-      "resolved_sub_question": "In which country or region is this term 'government phonology popular' used?",
+      "sub_question": "In which country or region is this term used?",
+      "resolved_sub_question": "In which country or region is this term used?",
       "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_2_the_title_of_the_rte_act_incorporates_the_words_free_and",
       "sentence": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
-      "score": 0.3346211862282223,
+      "score": 0.3221822308947245,
       "source_title": "Right of Children to Free and Compulsory Education Act, 2009",
-      "hop_answer": "Unknown",
-      "hop_thought": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.",
-      "hop_raw_response": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.\nAnswer: Unknown",
+      "hop_answer": "India",
+      "hop_thought": "The RTE Act refers to the Right of Children to Free and Compulsory Education Act, 2009, which is specific to India.",
+      "hop_raw_response": "The RTE Act refers to the Right of Children to Free and Compulsory Education Act, 2009, which is specific to India.\nAnswer: India",
       "evidence_passages": [
         {
           "title": "Right of Children to Free and Compulsory Education Act, 2009",
           "text": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
-        },
-        {
-          "title": "Right of Children to Free and Compulsory Education Act, 2009",
-          "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
-        },
-        {
-          "title": "AMA Computer University",
-          "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
         }
       ]
     },
     {
       "sub_question": "When did education become free in this country or region?",
-      "resolved_sub_question": "When did education become free in this country or region?",
-      "sentence_id": "sentence:history_of_education_in_england_0_0_the_1891_elementary_education_act_provided_for_the_state_payment_of_school_fees",
-      "sentence": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
-      "score": 0.3041291306972504,
-      "source_title": "History of education in England",
-      "hop_answer": "1891",
-      "hop_thought": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.",
-      "hop_raw_response": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.\nAnswer: 1891",
+      "resolved_sub_question": "When did education become free in this country or region? Context: India.",
+      "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_1_india_became_one_of_135_countries_to_make_education_a_fu",
+      "sentence": "India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010.",
+      "score": 0.40527474052295687,
+      "source_title": "Right of Children to Free and Compulsory Education Act, 2009",
+      "hop_answer": "1 April 2010",
+      "hop_thought": "The Right of Children to Free and Compulsory Education Act, 2009, came into force on 1 April 2010, making education a fundamental right in India.",
+      "hop_raw_response": "The Right of Children to Free and Compulsory Education Act, 2009, came into force on 1 April 2010, making education a fundamental right in India.\nAnswer: 1 April 2010",
       "evidence_passages": [
         {
-          "title": "History of education in England",
-          "text": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
-        },
-        {
-          "title": "History of education in England",
-          "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
-        },
-        {
-          "title": "AMA Computer University",
-          "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "text": "India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010."
         }
       ]
     }
@@ -203,103 +190,103 @@
   "ranked_nodes": [
     {
       "node_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
-      "score": 0.2198985904448885,
+      "score": 0.18845703365561525,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:title_anchor_ama_computer_university",
-      "score": 0.11182386913285224,
+      "score": 0.09788728650729892,
       "node_type": "entity"
     },
     {
       "node_id": "entity:commission_on_higher_education_ched",
-      "score": 0.07204441634310546,
+      "score": 0.06096160921908801,
       "node_type": "entity"
     },
     {
       "node_id": "entity:quezon_city",
-      "score": 0.05886941076270393,
+      "score": 0.05488275316718764,
       "node_type": "entity"
     },
     {
       "node_id": "entity:ama_computer_college_of_quezon_city",
-      "score": 0.050933001519178324,
+      "score": 0.04414738484406464,
       "node_type": "entity"
     },
     {
-      "node_id": "entity:philippine_government",
-      "score": 0.04657207901982717,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "sentence:abul_kalam_azad_0_3_his_contribution_to_establishing_the_education_foundation_in_india_is_recognised",
-      "score": 0.02889066447498146,
+      "node_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_0_the_right_of_children_to_free_and_compulsory_education_a",
+      "score": 0.04414168789919383,
       "node_type": "sentence"
     },
     {
-      "node_id": "entity:title_anchor_leon_belleth",
-      "score": 0.027491983027241942,
+      "node_id": "entity:philippine_government",
+      "score": 0.0396417247415396,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:free",
+      "score": 0.03047151316646996,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:abul_kalam_azad_0_2_he_is_commonly_remembered_as_maulana_azad_the_word_maulana_is_an_honorific_mean",
+      "score": 0.02917218806005268,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:abul_kalam_azad_0_3_his_contribution_to_establishing_the_education_foundation_in_india_is_recognised",
+      "score": 0.027972763527251573,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:compulsory_education_act",
+      "score": 0.026108568813419355,
       "node_type": "entity"
     },
     {
       "node_id": "entity:national_education_day",
-      "score": 0.027017467596103947,
+      "score": 0.02465601687285155,
       "node_type": "entity"
     },
     {
-      "node_id": "sentence:leon_belleth_0_0_leon_belleth_was_a_popular_announcer_with_radio_ceylon_and_subsequently_the_sri",
-      "score": 0.02658858860527302,
-      "node_type": "sentence"
+      "node_id": "entity:across_india",
+      "score": 0.019751532201293137,
+      "node_type": "entity"
     },
     {
-      "node_id": "entity:radio_ceylon",
-      "score": 0.02426157546901825,
+      "node_id": "entity:education_act",
+      "score": 0.019638922533065137,
       "node_type": "entity"
     },
     {
       "node_id": "chunk:ama_computer_university_0",
-      "score": 0.02325212552456074,
+      "score": 0.01872193657726578,
       "node_type": "chunk"
     },
     {
-      "node_id": "entity:across_india",
-      "score": 0.021821151468039746,
+      "node_id": "entity:azad",
+      "score": 0.016046642463766393,
       "node_type": "entity"
     },
     {
-      "node_id": "sentence:leon_belleth_0_3_leon_belleth_was_educated_at_one_of_sri_lanka_s_foremost_educational_institution",
-      "score": 0.018914218231980136,
+      "node_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_2_the_title_of_the_rte_act_incorporates_the_words_free_and",
+      "score": 0.014410773495734185,
       "node_type": "sentence"
     },
     {
-      "node_id": "sentence:leon_belleth_0_4_he_was_introduced_to_radio_by_the_veteran_broadcaster_vernon_corea_who_mentored",
-      "score": 0.014481264351188915,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:royal_college_colombo",
-      "score": 0.012090710165494158,
+      "node_id": "entity:children",
+      "score": 0.011395276087370851,
       "node_type": "entity"
     },
     {
-      "node_id": "chunk:leon_belleth_0",
-      "score": 0.011159264752105704,
+      "node_id": "entity:maulana_azad",
+      "score": 0.01057376862089938,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:abul_kalam_azad_0",
+      "score": 0.010233875596014626,
       "node_type": "chunk"
-    },
-    {
-      "node_id": "sentence:abul_kalam_azad_0_2_he_is_commonly_remembered_as_maulana_azad_the_word_maulana_is_an_honorific_mean",
-      "score": 0.010344733617730013,
-      "node_type": "sentence"
-    },
-    {
-      "node_id": "entity:vernon_corea",
-      "score": 0.008925836732189794,
-      "node_type": "entity"
-    },
-    {
-      "node_id": "entity:sri_lanka_broadcasting_corporation",
-      "score": 0.008809360853951459,
-      "node_type": "entity"
     }
   ],
   "ranked_passages": [
@@ -307,71 +294,47 @@
       "node_id": "chunk:ama_computer_university_0",
       "passage_index": 12,
       "title": "AMA Computer University",
-      "score": 0.11806886166974412,
+      "score": 0.11612785228719397,
       "text": "AMA Computer University\nAMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.",
       "score_breakdown": {
-        "dense": 0.06657926238806908,
-        "graph": 0.08507446750487993,
-        "fact": 0.37285284736561425
-      }
-    },
-    {
-      "node_id": "chunk:leon_belleth_0",
-      "passage_index": 3,
-      "title": "Leon Belleth",
-      "score": 0.10537109118148488,
-      "text": "Leon Belleth\nLeon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation. He presented a range of radio programs including Holiday Choice. Listeners enjoyed his free and easy style of broadcasting. Leon Belleth was educated at one of Sri Lanka's foremost educational institutions - Royal College Colombo. He was introduced to radio by the veteran broadcaster, Vernon Corea who mentored him while he was in Radio Ceylon.",
-      "score_breakdown": {
-        "dense": 0.06636198986441243,
-        "graph": 0.0697823011710147,
-        "fact": 0.31958204269835766
-      }
-    },
-    {
-      "node_id": "chunk:abul_kalam_azad_0",
-      "passage_index": 19,
-      "title": "Abul Kalam Azad",
-      "score": 0.1033007914746357,
-      "text": "Abul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
-      "score_breakdown": {
-        "dense": 0.06655259189774296,
-        "graph": 0.06854033146824286,
-        "fact": 0.30756510993602815
-      }
-    },
-    {
-      "node_id": "chunk:phonology_0",
-      "passage_index": 18,
-      "title": "Phonology",
-      "score": 0.05679958923634225,
-      "text": "Phonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]",
-      "score_breakdown": {
-        "dense": 0.06784587665170078,
-        "graph": 0.06494785692635606,
-        "fact": 0.0
-      }
-    },
-    {
-      "node_id": "chunk:history_of_education_in_england_0",
-      "passage_index": 10,
-      "title": "History of education in England",
-      "score": 0.0566288117084606,
-      "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
-      "score_breakdown": {
-        "dense": 0.06766183677915012,
-        "graph": 0.0647160049330934,
-        "fact": 0.0
+        "dense": 0.06660889542197168,
+        "graph": 0.08187475907428902,
+        "fact": 0.36620354721881887
       }
     },
     {
       "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_0",
       "passage_index": 11,
       "title": "Right of Children to Free and Compulsory Education Act, 2009",
-      "score": 0.05641496040242292,
+      "score": 0.1068038375637406,
       "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
       "score_breakdown": {
-        "dense": 0.06713132400438888,
-        "graph": 0.0649757740000301,
+        "dense": 0.0671614137933772,
+        "graph": 0.07007658007709712,
+        "fact": 0.32561390636169335
+      }
+    },
+    {
+      "node_id": "chunk:abul_kalam_azad_0",
+      "passage_index": 19,
+      "title": "Abul Kalam Azad",
+      "score": 0.10404901885485623,
+      "text": "Abul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
+      "score_breakdown": {
+        "dense": 0.0665822158967443,
+        "graph": 0.07067139382907907,
+        "fact": 0.30818254641948767
+      }
+    },
+    {
+      "node_id": "chunk:history_of_education_in_england_0",
+      "passage_index": 10,
+      "title": "History of education in England",
+      "score": 0.05665895612058072,
+      "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
+      "score_breakdown": {
+        "dense": 0.06769255318065254,
+        "graph": 0.06476017290407277,
         "fact": 0.0
       }
     },
@@ -379,11 +342,23 @@
       "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_1",
       "passage_index": 11,
       "title": "Right of Children to Free and Compulsory Education Act, 2009",
-      "score": 0.05634098922963941,
+      "score": 0.05655813435151934,
       "text": "Right of Children to Free and Compulsory Education Act, 2009\nexpenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in the 6 - 14 age group. With this, India has moved forward to a rights based framework that casts a legal obligation on the Central and State Governments to implement this fundamental child right as enshrined in the Article 21A of the Constitution, in accordance with the provisions of the RTE Act. 17.",
       "score_breakdown": {
-        "dense": 0.06705449948656711,
-        "graph": 0.06487004837342501,
+        "dense": 0.06708439061655236,
+        "graph": 0.06553906504138513,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:phonology_0",
+      "passage_index": 18,
+      "title": "Phonology",
+      "score": 0.056515498157654054,
+      "text": "Phonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]",
+      "score_breakdown": {
+        "dense": 0.06735452577953553,
+        "graph": 0.06490169659636501,
         "fact": 0.0
       }
     },
@@ -391,11 +366,11 @@
       "node_id": "chunk:rule_of_law_0",
       "passage_index": 5,
       "title": "Rule of law",
-      "score": 0.05606766501929292,
+      "score": 0.05609894131491175,
       "text": "Rule of law\nIn 1776, the notion that no one is above the law was popular during the founding of the United States. For example, Thomas Paine wrote in his pamphlet Common Sense that ``in America, the law is king. For as in absolute governments the King is law, so in free countries the law ought to be king; and there ought to be no other. ''In 1780, John Adams enshrined this principle in the Massachusetts Constitution by seeking to establish`` a government of laws and not of men.''",
       "score_breakdown": {
-        "dense": 0.06666486971376168,
-        "graph": 0.06467328892241332,
+        "dense": 0.06669481932351155,
+        "graph": 0.064722635623268,
         "fact": 0.0
       }
     },
@@ -403,11 +378,11 @@
       "node_id": "chunk:gamal_abdel_nasser_0",
       "passage_index": 1,
       "title": "Gamal Abdel Nasser",
-      "score": 0.05603501390669535,
+      "score": 0.0560656247997197,
       "text": "Gamal Abdel Nasser\nNasser also attempted to maintain oversight of the country's civil service to prevent it from inflating and consequently becoming a burden to the state. New laws provided workers with a minimum wage, profit shares, free education, free health care, reduced working hours, and encouragement to participate in management. Land reforms guaranteed the security of tenant farmers, promoted agricultural growth, and reduced rural poverty. As a result of the 1962 measures, government ownership of Egyptian business reached 51 percent, and the National Union was renamed the Arab Socialist Union (ASU). With these measures came more domestic repression, as thousands of Islamists were imprisoned, including dozens of military officers. Nasser's tilt toward a Soviet-style system led his aides Boghdadi and Hussein el-Shafei to submit their resignations in protest.",
       "score_breakdown": {
-        "dense": 0.06661012263442999,
-        "graph": 0.06466482152586285,
+        "dense": 0.06664007719591443,
+        "graph": 0.0647119411398892,
         "fact": 0.0
       }
     },
@@ -415,11 +390,23 @@
       "node_id": "chunk:bliznashki_government_0",
       "passage_index": 16,
       "title": "Bliznashki Government",
-      "score": 0.05594336777230052,
+      "score": 0.05597845614124029,
       "text": "Bliznashki Government\nThe Bliznashki Government was the ninetieth cabinet of Bulgaria which took office on 6 August 2014, following the resignation of the previous government. This cabinet was a caretaker government of technocrats designated to serve only until a new government could be elected with a popular mandate. The government, led by Prime Minister Georgi Bliznashki, was set up by President Rosen Plevneliev. A new government was formed after the early parliamentary elections on 5 October 2014.",
       "score_breakdown": {
-        "dense": 0.06645116011967307,
-        "graph": 0.06465076568826778,
+        "dense": 0.06648065899769653,
+        "graph": 0.06471364564169065,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:colombian_spanish_0",
+      "passage_index": 7,
+      "title": "Colombian Spanish",
+      "score": 0.055927579124172455,
+      "text": "Colombian Spanish\nColombian Spanish (Spanish: español colombiano) is a grouping of the varieties of Spanish spoken in Colombia. The term is of more geographical than linguistic relevance, since the dialects spoken in the various regions of Colombia are quite diverse. The speech of coastal areas tends to exhibit phonological innovations typical of Caribbean Spanish, while highland varieties have been historically more conservative. The Caro and Cuervo Institute in Bogotá is the main institution in Colombia promoting the scholarly study of the language and literature of both Colombia and Spanish America generally. The educated speech of Bogotá, a generally conservative variety of Spanish, holds high popular prestige among Spanish - speakers throughout the Americas.",
+      "score_breakdown": {
+        "dense": 0.06639880149747128,
+        "graph": 0.06469412766854418,
         "fact": 0.0
       }
     }
@@ -428,7 +415,7 @@
     "entity": [
       {
         "node_id": "entity:title_anchor_ama_computer_university",
-        "score": 0.11182386913285224,
+        "score": 0.09788728650729892,
         "text": "AMA Computer University",
         "metadata": {
           "canonical_name": "AMA Computer University",
@@ -447,7 +434,7 @@
       },
       {
         "node_id": "entity:commission_on_higher_education_ched",
-        "score": 0.07204441634310546,
+        "score": 0.06096160921908801,
         "text": "Commission on Higher Education CHED",
         "metadata": {
           "canonical_name": "Commission on Higher Education CHED",
@@ -466,7 +453,7 @@
       },
       {
         "node_id": "entity:quezon_city",
-        "score": 0.05886941076270393,
+        "score": 0.05488275316718764,
         "text": "Quezon City",
         "metadata": {
           "canonical_name": "Quezon City",
@@ -483,7 +470,7 @@
       },
       {
         "node_id": "entity:ama_computer_college_of_quezon_city",
-        "score": 0.050933001519178324,
+        "score": 0.04414738484406464,
         "text": "AMA Computer College of Quezon City",
         "metadata": {
           "canonical_name": "AMA Computer College of Quezon City",
@@ -502,7 +489,7 @@
       },
       {
         "node_id": "entity:philippine_government",
-        "score": 0.04657207901982717,
+        "score": 0.0396417247415396,
         "text": "Philippine government",
         "metadata": {
           "canonical_name": "Philippine government",
@@ -521,7 +508,7 @@
     "sentence": [
       {
         "node_id": "sentence:ama_computer_university_0_0_ama_computer_college_of_quezon_city_became_ama_computer_university_following_the",
-        "score": 0.2198985904448885,
+        "score": 0.18845703365561525,
         "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.",
         "metadata": {
           "title": "AMA Computer University",
@@ -572,8 +559,107 @@
         }
       },
       {
+        "node_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_0_the_right_of_children_to_free_and_compulsory_education_a",
+        "score": 0.04414168789919383,
+        "text": "The Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution.",
+        "metadata": {
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "chunk_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Right",
+              "relation": "related_to",
+              "tail": "Children"
+            },
+            {
+              "head": "Children",
+              "relation": "related_to",
+              "tail": "Free"
+            },
+            {
+              "head": "Free",
+              "relation": "related_to",
+              "tail": "Compulsory Education Act"
+            }
+          ],
+          "entities": [
+            "Right",
+            "Children",
+            "Free",
+            "Compulsory Education Act",
+            "Education Act",
+            "Act",
+            "Parliament",
+            "India",
+            "August",
+            "Article",
+            "Indian Constitution"
+          ],
+          "entity_ids": [
+            "entity:act",
+            "entity:article",
+            "entity:august",
+            "entity:children",
+            "entity:compulsory_education_act",
+            "entity:education_act",
+            "entity:free",
+            "entity:india",
+            "entity:indian_constitution",
+            "entity:parliament",
+            "entity:right"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:abul_kalam_azad_0_2_he_is_commonly_remembered_as_maulana_azad_the_word_maulana_is_an_honorific_mean",
+        "score": 0.02917218806005268,
+        "text": "He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name.",
+        "metadata": {
+          "title": "Abul Kalam Azad",
+          "chunk_id": "chunk:abul_kalam_azad_0",
+          "sentence_index": 2,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Maulana Azad",
+              "relation": "is_honorific",
+              "tail": "Maulana"
+            },
+            {
+              "head": "Maulana",
+              "relation": "means",
+              "tail": "Our Master"
+            },
+            {
+              "head": "Azad",
+              "relation": "is_pen_name_of",
+              "tail": "Maulana Azad"
+            },
+            {
+              "head": "Azad",
+              "relation": "means",
+              "tail": "Free"
+            }
+          ],
+          "entities": [
+            "Maulana Azad",
+            "Maulana",
+            "Azad"
+          ],
+          "entity_ids": [
+            "entity:azad",
+            "entity:free",
+            "entity:maulana",
+            "entity:maulana_azad",
+            "entity:our_master"
+          ]
+        }
+      },
+      {
         "node_id": "sentence:abul_kalam_azad_0_3_his_contribution_to_establishing_the_education_foundation_in_india_is_recognised",
-        "score": 0.02889066447498146,
+        "score": 0.027972763527251573,
         "text": "His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
         "metadata": {
           "title": "Abul Kalam Azad",
@@ -597,85 +683,12 @@
             "entity:national_education_day"
           ]
         }
-      },
-      {
-        "node_id": "sentence:leon_belleth_0_0_leon_belleth_was_a_popular_announcer_with_radio_ceylon_and_subsequently_the_sri",
-        "score": 0.02658858860527302,
-        "text": "Leon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation.",
-        "metadata": {
-          "title": "Leon Belleth",
-          "chunk_id": "chunk:leon_belleth_0",
-          "sentence_index": 0,
-          "document_index": 3,
-          "triples": [
-            {
-              "head": "Leon Belleth",
-              "relation": "was popular announcer with",
-              "tail": "Radio Ceylon"
-            },
-            {
-              "head": "Leon Belleth",
-              "relation": "subsequently worked with",
-              "tail": "Sri Lanka Broadcasting Corporation"
-            }
-          ],
-          "entities": [
-            "Leon Belleth",
-            "Radio Ceylon",
-            "Sri Lanka Broadcasting Corporation"
-          ],
-          "entity_ids": [
-            "entity:radio_ceylon",
-            "entity:sri_lanka_broadcasting_corporation",
-            "entity:title_anchor_leon_belleth"
-          ]
-        }
-      },
-      {
-        "node_id": "sentence:leon_belleth_0_3_leon_belleth_was_educated_at_one_of_sri_lanka_s_foremost_educational_institution",
-        "score": 0.018914218231980136,
-        "text": "Leon Belleth was educated at one of Sri Lanka's foremost educational institutions - Royal College Colombo.",
-        "metadata": {
-          "title": "Leon Belleth",
-          "chunk_id": "chunk:leon_belleth_0",
-          "sentence_index": 3,
-          "document_index": 3,
-          "triples": [
-            {
-              "head": "Leon Belleth",
-              "relation": "was educated at",
-              "tail": "Royal College Colombo"
-            },
-            {
-              "head": "Royal College Colombo",
-              "relation": "is located in",
-              "tail": "Colombo"
-            },
-            {
-              "head": "Royal College Colombo",
-              "relation": "is one of",
-              "tail": "Sri Lanka's foremost educational institutions"
-            }
-          ],
-          "entities": [
-            "Leon Belleth",
-            "Royal College Colombo",
-            "Sri Lanka"
-          ],
-          "entity_ids": [
-            "entity:colombo",
-            "entity:royal_college_colombo",
-            "entity:sri_lanka",
-            "entity:sri_lanka_s_foremost_educational_institutions",
-            "entity:title_anchor_leon_belleth"
-          ]
-        }
       }
     ],
     "chunk": [
       {
         "node_id": "chunk:ama_computer_university_0",
-        "score": 0.02325212552456074,
+        "score": 0.01872193657726578,
         "text": "AMA Computer University\nAMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.",
         "metadata": {
           "title": "AMA Computer University",
@@ -691,30 +704,8 @@
         }
       },
       {
-        "node_id": "chunk:leon_belleth_0",
-        "score": 0.011159264752105704,
-        "text": "Leon Belleth\nLeon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation. He presented a range of radio programs including Holiday Choice. Listeners enjoyed his free and easy style of broadcasting. Leon Belleth was educated at one of Sri Lanka's foremost educational institutions - Royal College Colombo. He was introduced to radio by the veteran broadcaster, Vernon Corea who mentored him while he was in Radio Ceylon.",
-        "metadata": {
-          "title": "Leon Belleth",
-          "chunk_index": 0,
-          "document_index": 3,
-          "entity_ids": [
-            "entity:colombo",
-            "entity:holiday_choice",
-            "entity:listeners",
-            "entity:radio_ceylon",
-            "entity:royal_college_colombo",
-            "entity:sri_lanka",
-            "entity:sri_lanka_broadcasting_corporation",
-            "entity:sri_lanka_s_foremost_educational_institutions",
-            "entity:title_anchor_leon_belleth",
-            "entity:vernon_corea"
-          ]
-        }
-      },
-      {
         "node_id": "chunk:abul_kalam_azad_0",
-        "score": 0.00806910618821223,
+        "score": 0.010233875596014626,
         "text": "Abul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
         "metadata": {
           "title": "Abul Kalam Azad",
@@ -742,137 +733,104 @@
         }
       },
       {
-        "node_id": "chunk:phonology_0",
-        "score": 0.0032425386312001673,
-        "text": "Phonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]",
+        "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_0",
+        "score": 0.007230768631454495,
+        "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
         "metadata": {
-          "title": "Phonology",
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
           "chunk_index": 0,
-          "document_index": 18,
+          "document_index": 11,
           "entity_ids": [
-            "entity:alan_prince",
-            "entity:autosegmental_phonology",
-            "entity:broadly",
-            "entity:charles_reiss",
-            "entity:david_stampe",
-            "entity:dressler",
-            "entity:europe",
-            "entity:furthermore",
-            "entity:geoffrey_nathan",
-            "entity:government_phonology",
-            "entity:gunnar_fant",
-            "entity:jean",
-            "entity:jean_lowenstamm",
-            "entity:jean_roger_vergnaud",
-            "entity:john",
-            "entity:john_goldsmith",
-            "entity:john_harris",
-            "entity:john_mccarthy",
-            "entity:jonathan_kaye",
-            "entity:mark_hale",
-            "entity:monik_charette",
-            "entity:morris_halle",
-            "entity:natural_phonologist_in_the_u_s",
-            "entity:natural_phonology",
-            "entity:noam_chomsky",
-            "entity:note",
-            "entity:ordered",
-            "entity:patricia_donegan",
-            "entity:paul_smolensky",
-            "entity:phonetics",
-            "entity:phonological_phenomena",
-            "entity:phonological_processes",
-            "entity:principles",
-            "entity:prominent",
-            "entity:prosodic",
-            "entity:publications_of_david_stampe",
-            "entity:rather",
-            "entity:roman_jakobson",
-            "entity:some",
-            "entity:sound_pattern_of_english_spe",
-            "entity:spe",
-            "entity:stampe",
-            "entity:stampe_s_wife",
-            "entity:there",
-            "entity:title_anchor_phonology",
-            "entity:united_kingdom",
-            "entity:while",
-            "entity:wolfgang_u"
+            "entity:1_april_2010",
+            "entity:act",
+            "entity:appropriate_government",
+            "entity:april",
+            "entity:article",
+            "entity:august",
+            "entity:children",
+            "entity:compulsory",
+            "entity:compulsory_education_act",
+            "entity:education_act",
+            "entity:free",
+            "entity:government",
+            "entity:india",
+            "entity:indian_constitution",
+            "entity:parliament",
+            "entity:right",
+            "entity:rte_act"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_1",
+        "score": 0.0035060795056937643,
+        "text": "Right of Children to Free and Compulsory Education Act, 2009\nexpenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in the 6 - 14 age group. With this, India has moved forward to a rights based framework that casts a legal obligation on the Central and State Governments to implement this fundamental child right as enshrined in the Article 21A of the Constitution, in accordance with the provisions of the RTE Act. 17.",
+        "metadata": {
+          "title": "Right of Children to Free and Compulsory Education Act, 2009",
+          "chunk_index": 1,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:appropriate_government",
+            "entity:appropriate_government_and_local_authorities",
+            "entity:article",
+            "entity:article_21a_of_the_constitution",
+            "entity:central",
+            "entity:central_and_state_governments",
+            "entity:compulsory_education",
+            "entity:india",
+            "entity:rte_act",
+            "entity:state_governments"
           ]
         }
       }
     ],
-    "qa_context": "AMA Computer University\nAMA Computer University\nAMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.\n\nLeon Belleth\nLeon Belleth\nLeon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation. He presented a range of radio programs including Holiday Choice. Listeners enjoyed his free and easy style of broadcasting. Leon Belleth was educated at one of Sri Lanka's foremost educational institutions - Royal College Colombo. He was introduced to radio by the veteran broadcaster, Vernon Corea who mentored him while he was in Radio Ceylon.\n\nAbul Kalam Azad\nAbul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.\n\nPhonology\nPhonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]\n\nHistory of education in England\nHistory of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.\n\nRight of Children to Free and Compulsory Education Act, 2009\nThe title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in\n\nRight of Children to Free and Compulsory Education Act, 2009\nRight of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in\n\nAMA Computer University\nAMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.\n\nHistory of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.\n\nRight of Children to Free and Compulsory Education Act, 2009\nRight of Children to Free and Compulsory Education Act, 2009\nexpenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in the 6 - 14 age group. With this, India has moved forward to a rights based framework that casts a legal obligation on the Central and State Governments to implement this fundamental child right as enshrined in the Article 21A of the Constitution, in accordance with the provisions of the RTE Act. 17.\n\nRule of law\nRule of law\nIn 1776, the notion that no one is above the law was popular during the founding of the United States. For example, Thomas Paine wrote in his pamphlet Common Sense that ``in America, the law is king. For as in absolute governments the King is law, so in free countries the law ought to be king; and there ought to be no other. ''In 1780, John Adams enshrined this principle in the Massachusetts Constitution by seeking to establish`` a government of laws and not of men.''",
+    "qa_context": "Right of Children to Free and Compulsory Education Act, 2009\nIndia became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010.\n\nAbul Kalam Azad\nFollowing India's independence, he became the first Minister of Education in the Indian government. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.\n\nGamal Abdel Nasser\nNew laws provided workers with a minimum wage, profit shares, free education, free health care, reduced working hours, and encouragement to participate in management. As a result of the 1962 measures, government ownership of Egyptian business reached 51 percent, and the National Union was renamed the Arab Socialist Union (ASU).",
     "retrieved_passages": [
       {
         "node_id": "chunk:ama_computer_university_0",
         "passage_index": 12,
         "title": "AMA Computer University",
-        "score": 0.11806886166974412,
+        "score": 0.11612785228719397,
         "text": "AMA Computer University\nAMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.",
         "score_breakdown": {
-          "dense": 0.06657926238806908,
-          "graph": 0.08507446750487993,
-          "fact": 0.37285284736561425
-        }
-      },
-      {
-        "node_id": "chunk:leon_belleth_0",
-        "passage_index": 3,
-        "title": "Leon Belleth",
-        "score": 0.10537109118148488,
-        "text": "Leon Belleth\nLeon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation. He presented a range of radio programs including Holiday Choice. Listeners enjoyed his free and easy style of broadcasting. Leon Belleth was educated at one of Sri Lanka's foremost educational institutions - Royal College Colombo. He was introduced to radio by the veteran broadcaster, Vernon Corea who mentored him while he was in Radio Ceylon.",
-        "score_breakdown": {
-          "dense": 0.06636198986441243,
-          "graph": 0.0697823011710147,
-          "fact": 0.31958204269835766
-        }
-      },
-      {
-        "node_id": "chunk:abul_kalam_azad_0",
-        "passage_index": 19,
-        "title": "Abul Kalam Azad",
-        "score": 0.1033007914746357,
-        "text": "Abul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
-        "score_breakdown": {
-          "dense": 0.06655259189774296,
-          "graph": 0.06854033146824286,
-          "fact": 0.30756510993602815
-        }
-      },
-      {
-        "node_id": "chunk:phonology_0",
-        "passage_index": 18,
-        "title": "Phonology",
-        "score": 0.05679958923634225,
-        "text": "Phonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]",
-        "score_breakdown": {
-          "dense": 0.06784587665170078,
-          "graph": 0.06494785692635606,
-          "fact": 0.0
-        }
-      },
-      {
-        "node_id": "chunk:history_of_education_in_england_0",
-        "passage_index": 10,
-        "title": "History of education in England",
-        "score": 0.0566288117084606,
-        "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
-        "score_breakdown": {
-          "dense": 0.06766183677915012,
-          "graph": 0.0647160049330934,
-          "fact": 0.0
+          "dense": 0.06660889542197168,
+          "graph": 0.08187475907428902,
+          "fact": 0.36620354721881887
         }
       },
       {
         "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_0",
         "passage_index": 11,
         "title": "Right of Children to Free and Compulsory Education Act, 2009",
-        "score": 0.05641496040242292,
+        "score": 0.1068038375637406,
         "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
         "score_breakdown": {
-          "dense": 0.06713132400438888,
-          "graph": 0.0649757740000301,
+          "dense": 0.0671614137933772,
+          "graph": 0.07007658007709712,
+          "fact": 0.32561390636169335
+        }
+      },
+      {
+        "node_id": "chunk:abul_kalam_azad_0",
+        "passage_index": 19,
+        "title": "Abul Kalam Azad",
+        "score": 0.10404901885485623,
+        "text": "Abul Kalam Azad\nMaulana Sayyid Abul Kalam Ghulam Muhiyuddin Ahmed Azad (pronunciation (help info); 11 November 1888 -- 22 February 1958) was an Indian scholar and the senior Muslim leader of the Indian National Congress during the Indian independence movement. Following India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.",
+        "score_breakdown": {
+          "dense": 0.0665822158967443,
+          "graph": 0.07067139382907907,
+          "fact": 0.30818254641948767
+        }
+      },
+      {
+        "node_id": "chunk:history_of_education_in_england_0",
+        "passage_index": 10,
+        "title": "History of education in England",
+        "score": 0.05665895612058072,
+        "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
+        "score_breakdown": {
+          "dense": 0.06769255318065254,
+          "graph": 0.06476017290407277,
           "fact": 0.0
         }
       },
@@ -880,11 +838,23 @@
         "node_id": "chunk:right_of_children_to_free_and_compulsory_education_act_2009_1",
         "passage_index": 11,
         "title": "Right of Children to Free and Compulsory Education Act, 2009",
-        "score": 0.05634098922963941,
+        "score": 0.05655813435151934,
         "text": "Right of Children to Free and Compulsory Education Act, 2009\nexpenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in the 6 - 14 age group. With this, India has moved forward to a rights based framework that casts a legal obligation on the Central and State Governments to implement this fundamental child right as enshrined in the Article 21A of the Constitution, in accordance with the provisions of the RTE Act. 17.",
         "score_breakdown": {
-          "dense": 0.06705449948656711,
-          "graph": 0.06487004837342501,
+          "dense": 0.06708439061655236,
+          "graph": 0.06553906504138513,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:phonology_0",
+        "passage_index": 18,
+        "title": "Phonology",
+        "score": 0.056515498157654054,
+        "text": "Phonology\nBroadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]",
+        "score_breakdown": {
+          "dense": 0.06735452577953553,
+          "graph": 0.06490169659636501,
           "fact": 0.0
         }
       },
@@ -892,11 +862,11 @@
         "node_id": "chunk:rule_of_law_0",
         "passage_index": 5,
         "title": "Rule of law",
-        "score": 0.05606766501929292,
+        "score": 0.05609894131491175,
         "text": "Rule of law\nIn 1776, the notion that no one is above the law was popular during the founding of the United States. For example, Thomas Paine wrote in his pamphlet Common Sense that ``in America, the law is king. For as in absolute governments the King is law, so in free countries the law ought to be king; and there ought to be no other. ''In 1780, John Adams enshrined this principle in the Massachusetts Constitution by seeking to establish`` a government of laws and not of men.''",
         "score_breakdown": {
-          "dense": 0.06666486971376168,
-          "graph": 0.06467328892241332,
+          "dense": 0.06669481932351155,
+          "graph": 0.064722635623268,
           "fact": 0.0
         }
       },
@@ -904,11 +874,11 @@
         "node_id": "chunk:gamal_abdel_nasser_0",
         "passage_index": 1,
         "title": "Gamal Abdel Nasser",
-        "score": 0.05603501390669535,
+        "score": 0.0560656247997197,
         "text": "Gamal Abdel Nasser\nNasser also attempted to maintain oversight of the country's civil service to prevent it from inflating and consequently becoming a burden to the state. New laws provided workers with a minimum wage, profit shares, free education, free health care, reduced working hours, and encouragement to participate in management. Land reforms guaranteed the security of tenant farmers, promoted agricultural growth, and reduced rural poverty. As a result of the 1962 measures, government ownership of Egyptian business reached 51 percent, and the National Union was renamed the Arab Socialist Union (ASU). With these measures came more domestic repression, as thousands of Islamists were imprisoned, including dozens of military officers. Nasser's tilt toward a Soviet-style system led his aides Boghdadi and Hussein el-Shafei to submit their resignations in protest.",
         "score_breakdown": {
-          "dense": 0.06661012263442999,
-          "graph": 0.06466482152586285,
+          "dense": 0.06664007719591443,
+          "graph": 0.0647119411398892,
           "fact": 0.0
         }
       },
@@ -916,63 +886,59 @@
         "node_id": "chunk:bliznashki_government_0",
         "passage_index": 16,
         "title": "Bliznashki Government",
-        "score": 0.05594336777230052,
+        "score": 0.05597845614124029,
         "text": "Bliznashki Government\nThe Bliznashki Government was the ninetieth cabinet of Bulgaria which took office on 6 August 2014, following the resignation of the previous government. This cabinet was a caretaker government of technocrats designated to serve only until a new government could be elected with a popular mandate. The government, led by Prime Minister Georgi Bliznashki, was set up by President Rosen Plevneliev. A new government was formed after the early parliamentary elections on 5 October 2014.",
         "score_breakdown": {
-          "dense": 0.06645116011967307,
-          "graph": 0.06465076568826778,
+          "dense": 0.06648065899769653,
+          "graph": 0.06471364564169065,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:colombian_spanish_0",
+        "passage_index": 7,
+        "title": "Colombian Spanish",
+        "score": 0.055927579124172455,
+        "text": "Colombian Spanish\nColombian Spanish (Spanish: español colombiano) is a grouping of the varieties of Spanish spoken in Colombia. The term is of more geographical than linguistic relevance, since the dialects spoken in the various regions of Colombia are quite diverse. The speech of coastal areas tends to exhibit phonological innovations typical of Caribbean Spanish, while highland varieties have been historically more conservative. The Caro and Cuervo Institute in Bogotá is the main institution in Colombia promoting the scholarly study of the language and literature of both Colombia and Spanish America generally. The educated speech of Bogotá, a generally conservative variety of Spanish, holds high popular prestige among Spanish - speakers throughout the Americas.",
+        "score_breakdown": {
+          "dense": 0.06639880149747128,
+          "graph": 0.06469412766854418,
           "fact": 0.0
         }
       }
     ],
     "reasoning_chain": [
       {
-        "sub_question": "In which country or region is this term 'government phonology popular' used?",
-        "resolved_sub_question": "In which country or region is this term 'government phonology popular' used?",
+        "sub_question": "In which country or region is this term used?",
+        "resolved_sub_question": "In which country or region is this term used?",
         "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_2_the_title_of_the_rte_act_incorporates_the_words_free_and",
         "sentence": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in",
-        "score": 0.3346211862282223,
+        "score": 0.3221822308947245,
         "source_title": "Right of Children to Free and Compulsory Education Act, 2009",
-        "hop_answer": "Unknown",
-        "hop_thought": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.",
-        "hop_raw_response": "The provided evidence does not contain information about where the term 'government phonology' is popular. There is no mention of this term in the given texts.\nAnswer: Unknown",
+        "hop_answer": "India",
+        "hop_thought": "The RTE Act refers to the Right of Children to Free and Compulsory Education Act, 2009, which is specific to India.",
+        "hop_raw_response": "The RTE Act refers to the Right of Children to Free and Compulsory Education Act, 2009, which is specific to India.\nAnswer: India",
         "evidence_passages": [
           {
             "title": "Right of Children to Free and Compulsory Education Act, 2009",
             "text": "The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
-          },
-          {
-            "title": "Right of Children to Free and Compulsory Education Act, 2009",
-            "text": "Right of Children to Free and Compulsory Education Act, 2009\nThe Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution. India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in"
-          },
-          {
-            "title": "AMA Computer University",
-            "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
           }
         ]
       },
       {
         "sub_question": "When did education become free in this country or region?",
-        "resolved_sub_question": "When did education become free in this country or region?",
-        "sentence_id": "sentence:history_of_education_in_england_0_0_the_1891_elementary_education_act_provided_for_the_state_payment_of_school_fees",
-        "sentence": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.",
-        "score": 0.3041291306972504,
-        "source_title": "History of education in England",
-        "hop_answer": "1891",
-        "hop_thought": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.",
-        "hop_raw_response": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.\nAnswer: 1891",
+        "resolved_sub_question": "When did education become free in this country or region? Context: India.",
+        "sentence_id": "sentence:right_of_children_to_free_and_compulsory_education_act_2009_0_1_india_became_one_of_135_countries_to_make_education_a_fu",
+        "sentence": "India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010.",
+        "score": 0.40527474052295687,
+        "source_title": "Right of Children to Free and Compulsory Education Act, 2009",
+        "hop_answer": "1 April 2010",
+        "hop_thought": "The Right of Children to Free and Compulsory Education Act, 2009, came into force on 1 April 2010, making education a fundamental right in India.",
+        "hop_raw_response": "The Right of Children to Free and Compulsory Education Act, 2009, came into force on 1 April 2010, making education a fundamental right in India.\nAnswer: 1 April 2010",
         "evidence_passages": [
           {
-            "title": "History of education in England",
-            "text": "The 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
-          },
-          {
-            "title": "History of education in England",
-            "text": "History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free."
-          },
-          {
-            "title": "AMA Computer University",
-            "text": "AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001."
+            "title": "Right of Children to Free and Compulsory Education Act, 2009",
+            "text": "India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010."
           }
         ]
       }
@@ -980,7 +946,7 @@
     "qa_messages": [
       {
         "role": "system",
-        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
       },
       {
         "role": "user",
@@ -992,13 +958,13 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. In which country or region is this term 'government phonology popular' used? (source: Right of Children to Free and Compulsory Education Act, 2009)\n2. When did education become free in this country or region? => 1891 (source: History of education in England)\n\nWikipedia Title: History of education in England\nThe 1891 Elementary Education Act provided for the state payment of school fees up to ten shillings per head, making primary education effectively free.\n\nWikipedia Title: Right of Children to Free and Compulsory Education Act, 2009\nIndia became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. The title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in\n\nWikipedia Title: Abul Kalam Azad\nFollowing India's independence, he became the first Minister of Education in the Indian government. He is commonly remembered as Maulana Azad; the word Maulana is an honorific meaning 'Our Master', and he had adopted Azad (Free) as his pen name.\n\nWikipedia Title: Leon Belleth\nLeon Belleth Leon Belleth was a popular announcer with Radio Ceylon and subsequently the Sri Lanka Broadcasting Corporation. Listeners enjoyed his free and easy style of broadcasting.\n\nWikipedia Title: Phonology\nPhonology Broadly speaking, government phonology (or its descendant, strict-CV phonology) has a greater following in the United Kingdom, whereas optimality theory is predominant in the United States.[citation needed]\n\nQuestion: When did education become free in the government phonology popular?\nDraft Answer: 1891\nThought: "
+        "content": "Intermediate reasoning hints:\n1. In which country or region is this term used? => India (source: Right of Children to Free and Compulsory Education Act, 2009)\n2. When did education become free in this country or region? => 1 April 2010 (source: Right of Children to Free and Compulsory Education Act, 2009)\n\nFact hints:\n- National Education Day is celebrated across India\n\nWikipedia Title: Right of Children to Free and Compulsory Education Act, 2009\nIndia became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010.\n\nWikipedia Title: Right of Children to Free and Compulsory Education Act, 2009\nIndia became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010. Right of Children to Free and Compulsory Education Act, 2009 The Right of Children to Free and Compulsory Education Act or Right to Education Act (RTE) is an Act of the Parliament of India enacted on 4 August 2009, which describes the modalities of the importance of free and compulsory education for children between the age of 6 to 14 years in India under Article 21A of the Indian Constitution.\n\nWikipedia Title: Abul Kalam Azad\nFollowing India's independence, he became the first Minister of Education in the Indian government. His contribution to establishing the education foundation in India is recognised by celebrating his birthday as ``National Education Day ''across India.\n\nWikipedia Title: Right of Children to Free and Compulsory Education Act, 2009\nThe title of the RTE Act incorporates the words' free and compulsory '.' Free education 'means that no child, other than a child who has been admitted by his or her parents to a school which is not supported by the appropriate Government, shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing elementary education.' Compulsory education 'casts an obligation on the appropriate Government and local authorities to provide and ensure admission, attendance and completion of elementary education by all children in\n\nWikipedia Title: AMA Computer University\nAMA Computer University AMA Computer College of Quezon City became AMA Computer University following the conferment of university status by the Philippine government's Commission on Higher Education (CHED) on 20 August 2001.\n\nQuestion: When did education become free in the government phonology popular?\nThought:"
       }
     ]
   },
-  "qa_thought": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.",
-  "predicted_answer": "1891",
-  "qa_raw_response": "The question refers to the country or region where the term 'government phonology popular' is used, but the provided evidence does not contain information about this term. However, based on the context from the previous step, it seems the country in question is England. The 1891 Elementary Education Act made primary education effectively free in England.\nAnswer: 1891",
+  "qa_thought": "The passage states that the Right of Children to Free and Compulsory Education Act came into force on 1 April 2010, making education a fundamental right in India.",
+  "predicted_answer": "1 April 2010",
+  "qa_raw_response": "{\n  \"thought\": \"The passage states that the Right of Children to Free and Compulsory Education Act came into force on 1 April 2010, making education a fundamental right in India.\",\n  \"answer\": \"1 April 2010\",\n  \"support\": \"India became one of 135 countries to make education a fundamental right of every child when the act came into force on 1 April 2010.\"\n}",
   "sample_metadata": {
     "sample_id": "3hop1__10725_695397_69808",
     "question": "When did education become free in the government phonology popular?",
@@ -1013,9 +979,7 @@
   "answer_match": {
     "gold_answer": "1891",
     "gold_aliases": [],
-    "matched": true,
-    "matched_candidates": [
-      "1891"
-    ]
+    "matched": false,
+    "matched_candidates": []
   }
 }

@@ -1,0 +1,1151 @@
+{
+  "query": "In 2010, what was the population of the city where the Yongle emperor greeted the person to whom the edict was addressed?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Yongle Emperor"
+  ],
+  "raw_query_entities": [
+    "Yongle emperor"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Yongle emperor",
+      "node_id": "entity:yongle_emperor",
+      "resolved_text": "Yongle Emperor",
+      "score": 0.8832222222222222,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6444444444444445,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.27785555555555563,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who did the Yongle emperor greet with an edict?",
+    "Where did the Yongle emperor greet this person?",
+    "What was the population of this city in 2010?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:yongle_emperor",
+      "score": 1.0264715177507353,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_lama",
+      "score": 0.5661374865725171,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_kargyu",
+      "score": 0.3490725904169332,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_of_the_karma_kagyu_school",
+      "score": 0.3490725904169332,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:karmapa",
+      "score": 0.2931002172666929,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ming_yongle_emperor",
+      "score": 0.27130789658372134,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:zhengtong_emperor",
+      "score": 0.27129135282965017,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_state_church_of_the_roman_empire",
+      "score": 0.24773464123089192,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nicene_christianity",
+      "score": 0.24772953102168355,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nanjing",
+      "score": 0.24106791431290542,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:deshin_shekpa",
+      "score": 0.21706489615558378,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:4th_karmapa_lama",
+      "score": 0.21706489615558378,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:yongle_emperor_greeted_karmapa_sentence_sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_o",
+      "text": "Yongle Emperor greeted Karmapa",
+      "head_id": "entity:yongle_emperor",
+      "tail_id": "entity:karmapa",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+      "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "document_index": 1,
+      "score": 0.29089382534744435
+    },
+    {
+      "fact_id": "fact:nicene_christianity_became_state_church_of_the_roman_empire_sentence_state_church_of_the_roman_empire_0_0_nicene_christi",
+      "text": "Nicene Christianity became state church of the Roman Empire",
+      "head_id": "entity:nicene_christianity",
+      "tail_id": "entity:title_anchor_state_church_of_the_roman_empire",
+      "sentence_id": "sentence:state_church_of_the_roman_empire_0_0_nicene_christianity_became_the_state_church_of_the_roman_empire_with_the_edict_o",
+      "chunk_id": "chunk:state_church_of_the_roman_empire_0",
+      "document_index": 7,
+      "score": 0.24552396846098226
+    },
+    {
+      "fact_id": "fact:nanjing_related_to_yongle_emperor_sentence_sino_tibetan_relations_during_the_ming_dynasty_0_1_at_linggu_temple_in_nanjin",
+      "text": "Nanjing related_to Yongle Emperor",
+      "head_id": "entity:nanjing",
+      "tail_id": "entity:yongle_emperor",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_1_at_linggu_temple_in_nanjing_he_presided_over_the_religious_ceremonies",
+      "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "document_index": 3,
+      "score": 0.20088992859408786
+    },
+    {
+      "fact_id": "fact:yongle_emperor_invited_deshin_shekpa_5th_karmapa_lama_sentence_sino_tibetan_relations_during_the_ming_dynasty_0_2_on_mar",
+      "text": "Yongle Emperor invited Deshin Shekpa 5th Karmapa Lama",
+      "head_id": "entity:yongle_emperor",
+      "tail_id": "entity:deshin_shekpa_5th_karmapa_lama",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_on_march_10_1403_the_yongle_emperor_invited_deshin_shekpa_5th_karmapa",
+      "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "document_index": 2,
+      "score": 0.18088741346298648
+    },
+    {
+      "fact_id": "fact:elliot_sperling_asserts_yongle_emperor_bestowed_deshin_shekpa_with_the_title_of_king_sentence_sino_tibetan_relations_dur",
+      "text": "Elliot Sperling asserts Yongle Emperor bestowed Deshin Shekpa with the title of King",
+      "head_id": "entity:elliot_sperling",
+      "tail_id": "entity:yongle_emperor_bestowed_deshin_shekpa_with_the_title_of_king",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_3_elliot_sperling_asserts_that_the_yongle_emperor_in_bestowing_deshin_s",
+      "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "document_index": 3,
+      "score": 0.1508852177976476
+    },
+    {
+      "fact_id": "fact:sixth_china_census_reported_nanjing_s_population_in_2010_sentence_nanjing_0_0_according_to_the_sixth_china_census_the_to",
+      "text": "Sixth China Census reported Nanjing's population in 2010",
+      "head_id": "entity:sixth_china_census",
+      "tail_id": "entity:nanjing_s_population_in_2010",
+      "sentence_id": "sentence:nanjing_0_0_according_to_the_sixth_china_census_the_total_population_of_the_city_of_nanjing",
+      "chunk_id": "chunk:nanjing_0",
+      "document_index": 5,
+      "score": 0.15017462042817956
+    }
+  ],
+  "bridge_entities": [
+    "Karmapa",
+    "palace in Nanjing",
+    "Nanjing",
+    "Deshin Shekpa 5th Karmapa Lama",
+    "Karmapa to kowtow like a tributary vassal",
+    "Emperor",
+    "Deshin Shekpa"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who did the Yongle emperor greet with an edict?",
+      "resolved_sub_question": "Who did the Yongle emperor greet with an edict?",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+      "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+      "score": 0.7007208571428571,
+      "source_title": "Sino-Tibetan relations during the Ming dynasty",
+      "hop_answer": "Deshin Shekpa",
+      "hop_thought": "The passage mentions that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa from the context provided.",
+      "hop_raw_response": "The passage mentions that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa from the context provided.\nAnswer: Deshin Shekpa",
+      "evidence_passages": [
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "Elliot Sperling asserts that the Yongle Emperor, in bestowing Deshin Shekpa with the title of \"King\" and praising his mystical abilities and miracles, was trying to build an alliance with the Karmapa as the Mongols had with the Sakya lamas, but Deshin Shekpa rejected the Yongle Emperor's offer."
+        }
+      ]
+    },
+    {
+      "sub_question": "Where did the Yongle emperor greet this person?",
+      "resolved_sub_question": "Where did the Yongle emperor greet this person? Context: Deshin Shekpa.",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+      "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+      "score": 0.593478181818182,
+      "source_title": "Sino-Tibetan relations during the Ming dynasty",
+      "hop_answer": "Nanjing",
+      "hop_thought": "The context specifies that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa, and it mentions the location where this occurred.",
+      "hop_raw_response": "The context specifies that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa, and it mentions the location where this occurred.\nAnswer: Nanjing",
+      "evidence_passages": [
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "In fact, this was the same title that Kublai Khan had offered the Sakya Phagpa lama, but Deshin Shekpa persuaded the Yongle Emperor to grant the title to religious leaders of other Tibetan Buddhist sects."
+        }
+      ]
+    },
+    {
+      "sub_question": "What was the population of this city in 2010?",
+      "resolved_sub_question": "What was the population of this city in 2010? Context: Deshin Shekpa; Nanjing.",
+      "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+      "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+      "score": 0.5122701298701299,
+      "source_title": "Sino-Tibetan relations during the Ming dynasty",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not contain information about the population of Nanjing in 2010.",
+      "hop_raw_response": "The provided context does not contain information about the population of Nanjing in 2010.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+        },
+        {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "text": "During his stay in Nanjing, Deshin Shekpa was bestowed the title \"Great Treasure Prince of Dharma\" by the Yongle Emperor."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:yongle_emperor",
+      "score": 0.10539970745623807,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_lama",
+      "score": 0.057218773909992235,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:karmapa",
+      "score": 0.04278445395299366,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_kargyu",
+      "score": 0.0398123096674455,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:karmapa_of_the_karma_kagyu_school",
+      "score": 0.03837804007215668,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:deshin_shekpa",
+      "score": 0.031095703186187075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nicene_christianity",
+      "score": 0.02836928961236379,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nanjing",
+      "score": 0.02815998177123345,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "score": 0.0277518147351904,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_state_church_of_the_roman_empire",
+      "score": 0.026015429243275896,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:state_church_of_the_roman_empire_0_0_nicene_christianity_became_the_state_church_of_the_roman_empire_with_the_edict_o",
+      "score": 0.025820731623708293,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:zhengtong_emperor",
+      "score": 0.025749659223352026,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ming_yongle_emperor",
+      "score": 0.024700209941494893,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:4th_karmapa_lama",
+      "score": 0.023229026870876114,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:deshin_shekpa_5th_karmapa_lama",
+      "score": 0.023151826853130157,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nanjing",
+      "score": 0.02198049160436427,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_3_elliot_sperling_asserts_that_the_yongle_emperor_in_bestowing_deshin_s",
+      "score": 0.02114632021940588,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:nanjing_0_0_according_to_the_sixth_china_census_the_total_population_of_the_city_of_nanjing",
+      "score": 0.020414533061809608,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:sixth_china_census",
+      "score": 0.019961265660625793,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:elliot_sperling",
+      "score": 0.01774754620648744,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+      "passage_index": 19,
+      "title": "Sino-Tibetan relations during the Ming dynasty",
+      "score": 0.14526970141585946,
+      "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful.",
+      "score_breakdown": {
+        "dense": 0.09990064625252389,
+        "graph": 0.12405097335735503,
+        "fact": 0.35406035979843214
+      }
+    },
+    {
+      "node_id": "chunk:state_church_of_the_roman_empire_0",
+      "passage_index": 7,
+      "title": "State church of the Roman Empire",
+      "score": 0.13594076063100327,
+      "text": "State church of the Roman Empire\nNicene Christianity became the state church of the Roman Empire with the Edict of Thessalonica in 380 AD, when Emperor Theodosius I made it the Empire's sole authorized religion. The Eastern Orthodox Church, Oriental Orthodoxy, and the Catholic Church each claim to be the historical continuation of this church in its original form, but do not identify with it in the caesaropapist form that it took later. Unlike Constantine I, who with the Edict of Milan of 313 AD had established tolerance for Christianity without placing it above other religions and whose involvement in matters of the Christian faith extended to convoking councils of bishops who were to determine doctrine and to presiding at their meetings, but not to determining doctrine himself, Theodosius established a single Christian doctrine (specified as that professed by Pope Damasus I of Rome and Pope Peter II of Alexandria) as the Empire's official religion.",
+      "score_breakdown": {
+        "dense": 0.09994564954710243,
+        "graph": 0.10072435489712406,
+        "fact": 0.3383556460730648
+      }
+    },
+    {
+      "node_id": "chunk:nanjing_0",
+      "passage_index": 5,
+      "title": "Nanjing",
+      "score": 0.13222349849464934,
+      "text": "Nanjing\nAccording to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010. The statistics in 2011 estimated the total population to be 8.11 million. The birth rate was 8.86 percent and the death rate was 6.88 percent. The urban area had a population of 6.47 million people. The sex ratio of the city population was 107.31 males to 100 females.",
+      "score_breakdown": {
+        "dense": 0.10177633393843316,
+        "graph": 0.10036305236411881,
+        "fact": 0.30758399412850307
+      }
+    },
+    {
+      "node_id": "chunk:athanasius_of_alexandria_0",
+      "passage_index": 15,
+      "title": "Athanasius of Alexandria",
+      "score": 0.08422419062064958,
+      "text": "Athanasius of Alexandria\nWith characteristic energy he set to work to re-establish the somewhat shattered fortunes of the orthodox party and to purge the theological atmosphere of uncertainty. To clear up the misunderstandings that had arisen in the course of the previous years, an attempt was made to determine still further the significance of the Nicene formularies. In the meanwhile, Julian, who seems to have become suddenly jealous of the influence that Athanasius was exercising at Alexandria, addressed an order to Ecdicius, the Prefect of Egypt, peremptorily commanding the expulsion of the restored primate, on the ground that he had never been included in the imperial act of clemency. The edict was communicated to the bishop by Pythicodorus Trico, who, though described in the \"Chronicon Athanasianum\" (XXXV) as a \"philosopher\", seems to have behaved with brutal insolence. On 23 October the people gathered about the proscribed bishop to protest against the emperor's decree; but Athanasius urged them to submit, consoling them with the promise that his absence would be of short duration.",
+      "score_breakdown": {
+        "dense": 0.10055632999045203,
+        "graph": 0.09639403041966985,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:samurai_0",
+      "passage_index": 14,
+      "title": "Samurai",
+      "score": 0.0839480706201761,
+      "text": "Samurai\nFollowing the Battle of Hakusukinoe against Tang China and Silla in 663 AD that led to a Japanese retreat from Korean affairs, Japan underwent widespread reform. One of the most important was that of the Taika Reform, issued by Prince Naka no Ōe (Emperor Tenji) in 646 AD. This edict allowed the Japanese aristocracy to adopt the Tang dynasty political structure, bureaucracy, culture, religion, and philosophy. As part of the Taihō Code, of 702 AD, and the later Yōrō Code, the population was required to report regularly for census, a precursor for national conscription. With an understanding of how the population was distributed, Emperor Mommu introduced a law whereby 1 in 3–4 adult males was drafted into the national military. These soldiers were required to supply their own weapons, and in return were exempted from duties and taxes. This was one of the first attempts by the Imperial government to form an organized army modeled after the Chinese system. It was called \"Gundan-Sei\" (軍団制) by later historians and is believed to have been short-lived.[citation needed]",
+      "score_breakdown": {
+        "dense": 0.10005948468304252,
+        "graph": 0.09638451348167573,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:heresy_0",
+      "passage_index": 12,
+      "title": "Heresy",
+      "score": 0.08391471884665473,
+      "text": "Heresy\nConstantine the Great, who along with Licinius had decreed toleration of Christianity in the Roman Empire by what is commonly called the \"Edict of Milan\", and was the first Roman Emperor baptized, set precedents for later policy. By Roman law the Emperor was Pontifex Maximus, the high priest of the College of Pontiffs (Collegium Pontificum) of all recognized religions in ancient Rome. To put an end to the doctrinal debate initiated by Arius, Constantine called the first of what would afterwards be called the ecumenical councils and then enforced orthodoxy by Imperial authority.",
+      "score_breakdown": {
+        "dense": 0.09992064902240326,
+        "graph": 0.09652787294777647,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:religion_in_ancient_rome_0",
+      "passage_index": 8,
+      "title": "Religion in ancient Rome",
+      "score": 0.08377948266062649,
+      "text": "Religion in ancient Rome\nIn the wake of religious riots in Egypt, the emperor Decius decreed that all subjects of the Empire must actively seek to benefit the state through witnessed and certified sacrifice to \"ancestral gods\" or suffer a penalty: only Jews were exempt. Decius' edict appealed to whatever common mos maiores might reunite a politically and socially fractured Empire and its multitude of cults; no ancestral gods were specified by name. The fulfillment of sacrificial obligation by loyal subjects would define them and their gods as Roman. Roman oaths of loyalty were traditionally collective; the Decian oath has been interpreted as a design to root out individual subversives and suppress their cults, but apostasy was sought, rather than capital punishment. A year after its due deadline, the edict expired.",
+      "score_breakdown": {
+        "dense": 0.09975225287947018,
+        "graph": 0.0963858119230596,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:qing_dynasty_0",
+      "passage_index": 18,
+      "title": "Qing dynasty",
+      "score": 0.08366966434341672,
+      "text": "Qing dynasty\nIn the wake of these external defeats, the Guangxu Emperor initiated the Hundred Days' Reform of 1898. Newer, more radical advisers such as Kang Youwei were given positions of influence. The emperor issued a series of edicts and plans were made to reorganize the bureaucracy, restructure the school system, and appoint new officials. Opposition from the bureaucracy was immediate and intense. Although she had been involved in the initial reforms, the empress dowager stepped in to call them off, arrested and executed several reformers, and took over day-to-day control of policy. Yet many of the plans stayed in place, and the goals of reform were implanted.",
+      "score_breakdown": {
+        "dense": 0.09954308421220805,
+        "graph": 0.09640322675567431,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:linndale_ohio_0",
+      "passage_index": 11,
+      "title": "Linndale, Ohio",
+      "score": 0.08355528786414279,
+      "text": "Linndale, Ohio\nLinndale is the smallest village in Cuyahoga County, Ohio, United States. It is landlocked, surrounded by the cities of Cleveland and Brooklyn. According to the 2010 census, the village achieved the second highest growth rate in Cuyahoga County: 53% as the population increased from 117 to 179, although the last house was built in 1968 and there are only 37 residential addresses.",
+      "score_breakdown": {
+        "dense": 0.09935274916597474,
+        "graph": 0.09637091940952225,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bloomingdale_florida_0",
+      "passage_index": 13,
+      "title": "Bloomingdale, Florida",
+      "score": 0.08347462450282146,
+      "text": "Bloomingdale, Florida\nBloomingdale is an unincorporated census-designated place in Hillsborough County, Florida, United States. The population was 22,711 at the 2010 census. The ZIP Codes serving the community are 33511 (which is addressed to Brandon) and 33596 (which is addressed to Valrico).",
+      "score_breakdown": {
+        "dense": 0.09919282030838956,
+        "graph": 0.09639524444402398,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:yongle_emperor",
+        "score": 0.10539970745623807,
+        "text": "Yongle Emperor",
+        "metadata": {
+          "canonical_name": "Yongle Emperor",
+          "aliases": [
+            "YE",
+            "Yongle Emperor"
+          ],
+          "surface_forms": [
+            "YE",
+            "Yongle Emperor"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:karmapa_lama",
+        "score": 0.057218773909992235,
+        "text": "Karmapa Lama",
+        "metadata": {
+          "canonical_name": "Karmapa Lama",
+          "aliases": [
+            "KL",
+            "Karmapa Lama"
+          ],
+          "surface_forms": [
+            "KL",
+            "Karmapa Lama"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:karmapa",
+        "score": 0.04278445395299366,
+        "text": "Karmapa",
+        "metadata": {
+          "canonical_name": "Karmapa",
+          "aliases": [
+            "Karmapa"
+          ],
+          "surface_forms": [
+            "Karmapa"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:karmapa_kargyu",
+        "score": 0.0398123096674455,
+        "text": "Karmapa Kargyu",
+        "metadata": {
+          "canonical_name": "Karmapa Kargyu",
+          "aliases": [
+            "KK",
+            "Karmapa Kargyu"
+          ],
+          "surface_forms": [
+            "KK",
+            "Karmapa Kargyu"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:karmapa_of_the_karma_kagyu_school",
+        "score": 0.03837804007215668,
+        "text": "Karmapa of the Karma Kagyu school",
+        "metadata": {
+          "canonical_name": "Karmapa of the Karma Kagyu school",
+          "aliases": [
+            "KOTKKS",
+            "Karmapa of the Karma Kagyu school"
+          ],
+          "surface_forms": [
+            "KOTKKS",
+            "Karmapa of the Karma Kagyu school"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:state_church_of_the_roman_empire_0_0_nicene_christianity_became_the_state_church_of_the_roman_empire_with_the_edict_o",
+        "score": 0.025820731623708293,
+        "text": "Nicene Christianity became the state church of the Roman Empire with the Edict of Thessalonica in 380 AD, when Emperor Theodosius I made it the Empire's sole authorized religion.",
+        "metadata": {
+          "title": "State church of the Roman Empire",
+          "chunk_id": "chunk:state_church_of_the_roman_empire_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Nicene Christianity",
+              "relation": "became",
+              "tail": "state church of the Roman Empire"
+            },
+            {
+              "head": "Edict of Thessalonica",
+              "relation": "issued in",
+              "tail": "380 AD"
+            },
+            {
+              "head": "Emperor Theodosius I",
+              "relation": "made",
+              "tail": "Nicene Christianity the Empire's sole authorized religion"
+            }
+          ],
+          "entities": [
+            "Nicene Christianity",
+            "Roman Empire",
+            "Edict of Thessalonica",
+            "380 AD",
+            "Emperor Theodosius I"
+          ],
+          "entity_ids": [
+            "entity:380_ad",
+            "entity:edict_of_thessalonica",
+            "entity:emperor_theodosius_i",
+            "entity:nicene_christianity",
+            "entity:nicene_christianity_the_empire_s_sole_authorized_religion",
+            "entity:roman_empire",
+            "entity:title_anchor_state_church_of_the_roman_empire"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_3_elliot_sperling_asserts_that_the_yongle_emperor_in_bestowing_deshin_s",
+        "score": 0.02114632021940588,
+        "text": "Elliot Sperling asserts that the Yongle Emperor, in bestowing Deshin Shekpa with the title of \"King\" and praising his mystical abilities and miracles, was trying to build an alliance with the Karmapa as the Mongols had with the Sakya lamas, but Deshin Shekpa rejected the Yongle Emperor's offer.",
+        "metadata": {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+          "sentence_index": 3,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Elliot Sperling",
+              "relation": "asserts",
+              "tail": "Yongle Emperor bestowed Deshin Shekpa with the title of King"
+            },
+            {
+              "head": "Yongle Emperor",
+              "relation": "praised",
+              "tail": "Deshin Shekpa's mystical abilities and miracles"
+            },
+            {
+              "head": "Yongle Emperor",
+              "relation": "tried to build an alliance with",
+              "tail": "Karmapa"
+            },
+            {
+              "head": "Mongols",
+              "relation": "had an alliance with",
+              "tail": "Sakya lamas"
+            },
+            {
+              "head": "Deshin Shekpa",
+              "relation": "rejected",
+              "tail": "Yongle Emperor's offer"
+            }
+          ],
+          "entities": [
+            "Elliot Sperling",
+            "Yongle Emperor",
+            "Deshin Shekpa",
+            "Karmapa",
+            "Mongols",
+            "Sakya lamas"
+          ],
+          "entity_ids": [
+            "entity:deshin_shekpa",
+            "entity:deshin_shekpa_s_mystical_abilities_and_miracles",
+            "entity:elliot_sperling",
+            "entity:karmapa",
+            "entity:mongols",
+            "entity:sakya_lamas",
+            "entity:yongle_emperor",
+            "entity:yongle_emperor_bestowed_deshin_shekpa_with_the_title_of_king",
+            "entity:yongle_emperor_s_offer"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:nanjing_0_0_according_to_the_sixth_china_census_the_total_population_of_the_city_of_nanjing",
+        "score": 0.020414533061809608,
+        "text": "According to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010.",
+        "metadata": {
+          "title": "Nanjing",
+          "chunk_id": "chunk:nanjing_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Sixth China Census",
+              "relation": "reported",
+              "tail": "Nanjing's population in 2010"
+            }
+          ],
+          "entities": [
+            "Sixth China Census",
+            "Nanjing"
+          ],
+          "entity_ids": [
+            "entity:nanjing_s_population_in_2010",
+            "entity:sixth_china_census",
+            "entity:title_anchor_nanjing"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+        "score": 0.016323788209008278,
+        "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+        "metadata": {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "chunk_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+          "sentence_index": 2,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Yongle Emperor",
+              "relation": "came out of",
+              "tail": "palace in Nanjing"
+            },
+            {
+              "head": "Yongle Emperor",
+              "relation": "greeted",
+              "tail": "Karmapa"
+            },
+            {
+              "head": "Yongle Emperor",
+              "relation": "did not require",
+              "tail": "Karmapa to kowtow like a tributary vassal"
+            }
+          ],
+          "entities": [
+            "Yongle Emperor",
+            "palace in Nanjing",
+            "Karmapa"
+          ],
+          "entity_ids": [
+            "entity:karmapa",
+            "entity:karmapa_to_kowtow_like_a_tributary_vassal",
+            "entity:palace_in_nanjing",
+            "entity:yongle_emperor"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+        "score": 0.0277518147351904,
+        "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful.",
+        "metadata": {
+          "title": "Sino-Tibetan relations during the Ming dynasty",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:4th_karmapa_lama",
+            "entity:according",
+            "entity:april_10_1407",
+            "entity:arrangement_made_by_kublai_khan_and_sakya_phagpa_lama",
+            "entity:association_for_asian_studies",
+            "entity:buddha",
+            "entity:buddhism",
+            "entity:buddhist_link_between_tibet_and_china",
+            "entity:buddhist_monk",
+            "entity:buddhist_monk_yao_guangxiao",
+            "entity:buddhist_scriptures",
+            "entity:buddhist_texts",
+            "entity:chen",
+            "entity:chen_qingying",
+            "entity:china",
+            "entity:dbus",
+            "entity:deshin_shekpa",
+            "entity:deshin_shekpa_5th_karmapa_lama",
+            "entity:deshin_shekpa_s_mystical_abilities_and_miracles",
+            "entity:drog_n_ch_gyal_phagpa",
+            "entity:edict_of_the_zhengtong_emperor",
+            "entity:elliot_sperling",
+            "entity:emperor",
+            "entity:emperor_gave_karmapa_place_of_honor",
+            "entity:emperor_s_seal",
+            "entity:fourth_karmapa",
+            "entity:gelug_school",
+            "entity:great_treasure_prince_of_dharma",
+            "entity:gtsang",
+            "entity:hezhou",
+            "entity:hongwu_emperor",
+            "entity:hongwu_emperor_s_invitation",
+            "entity:horse_trade_with_tibet",
+            "entity:hou_xian",
+            "entity:however",
+            "entity:information_office_of_the_state_council_of_the_prc",
+            "entity:initiation_state_master_to_sagya_gyaincain",
+            "entity:invitation_of_the_hongwu_emperor",
+            "entity:invitation_to_the_ming_court",
+            "entity:jamyang_shakya_gyaltsen",
+            "entity:je_tsongkhapa",
+            "entity:jianwen_emperor",
+            "entity:karma_kagyu_school",
+            "entity:karma_thinley",
+            "entity:karmapa",
+            "entity:karmapa_kargyu",
+            "entity:karmapa_lama",
+            "entity:karmapa_of_the_karma_kagyu_school",
+            "entity:karmapa_s_agent",
+            "entity:karmapa_to_kowtow_like_a_tributary_vassal",
+            "entity:kashmir",
+            "entity:khotan",
+            "entity:kublai_khan",
+            "entity:lamas_of_schools_such_as_the_karmapa_kargyu",
+            "entity:letter_of_the_yongle_emperor",
+            "entity:letter_to_decline_the_emperor_s_invitation",
+            "entity:lhasa",
+            "entity:linggu_temple",
+            "entity:linxia",
+            "entity:lower_platform_than_tibetan_cleric",
+            "entity:ming",
+            "entity:ming_court",
+            "entity:ming_dynasty",
+            "entity:ming_tibetan_relationship",
+            "entity:ming_yongle_emperor",
+            "entity:mongol",
+            "entity:mongol_emperors",
+            "entity:mongol_invitations_to_receive_titles",
+            "entity:mongol_leader",
+            "entity:mongols",
+            "entity:nanjing",
+            "entity:nepal",
+            "entity:nepal_and_kashmir",
+            "entity:norbu",
+            "entity:nyima",
+            "entity:palace_in_nanjing",
+            "entity:phagmodru",
+            "entity:polite_and_complimentary_towards_the_karmapa",
+            "entity:qinghai",
+            "entity:records_of_the_founding_emperor",
+            "entity:religious_instructions_from_sakya_phagpa_lama",
+            "entity:religious_leaders_of_other_tibetan_buddhist_sects",
+            "entity:rolpe_dorje",
+            "entity:rossabi",
+            "entity:sagya_gyaincain",
+            "entity:sakya_lamas",
+            "entity:sakya_phagpa_lama",
+            "entity:sakya_school_of_tibetan_buddhism",
+            "entity:separate_relations_with_nepal_and_kashmir",
+            "entity:shan_henry_tsai",
+            "entity:shih",
+            "entity:silk_road",
+            "entity:some",
+            "entity:tibet",
+            "entity:tibetan",
+            "entity:tibetan_buddhist_sects",
+            "entity:tibetan_cleric",
+            "entity:tibetan_lamas",
+            "entity:tibetan_leaders",
+            "entity:tibetan_rulers",
+            "entity:tibetan_translation",
+            "entity:traveling",
+            "entity:tsongkhapa",
+            "entity:tsongkhapa_wrote_a_letter",
+            "entity:van_praag",
+            "entity:visit_to_nanjing",
+            "entity:wang",
+            "entity:yang_sanbao",
+            "entity:yongle_emperor",
+            "entity:yongle_emperor_bestowed_deshin_shekpa_with_the_title_of_king",
+            "entity:yongle_emperor_s_court",
+            "entity:yongle_emperor_s_offer",
+            "entity:zhengtong",
+            "entity:zhengtong_emperor",
+            "entity:zhi_guang",
+            "entity:zongluo"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:nanjing_0",
+        "score": 0.007898694306923151,
+        "text": "Nanjing\nAccording to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010. The statistics in 2011 estimated the total population to be 8.11 million. The birth rate was 8.86 percent and the death rate was 6.88 percent. The urban area had a population of 6.47 million people. The sex ratio of the city population was 107.31 males to 100 females.",
+        "metadata": {
+          "title": "Nanjing",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:nanjing_s_population_in_2010",
+            "entity:sixth_china_census",
+            "entity:title_anchor_nanjing"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:state_church_of_the_roman_empire_0",
+        "score": 0.007560905833201648,
+        "text": "State church of the Roman Empire\nNicene Christianity became the state church of the Roman Empire with the Edict of Thessalonica in 380 AD, when Emperor Theodosius I made it the Empire's sole authorized religion. The Eastern Orthodox Church, Oriental Orthodoxy, and the Catholic Church each claim to be the historical continuation of this church in its original form, but do not identify with it in the caesaropapist form that it took later. Unlike Constantine I, who with the Edict of Milan of 313 AD had established tolerance for Christianity without placing it above other religions and whose involvement in matters of the Christian faith extended to convoking councils of bishops who were to determine doctrine and to presiding at their meetings, but not to determining doctrine himself, Theodosius established a single Christian doctrine (specified as that professed by Pope Damasus I of Rome and Pope Peter II of Alexandria) as the Empire's official religion.",
+        "metadata": {
+          "title": "State church of the Roman Empire",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:380_ad",
+            "entity:alexandria",
+            "entity:catholic_church",
+            "entity:christian",
+            "entity:christianity",
+            "entity:eastern_orthodox_church",
+            "entity:edict",
+            "entity:edict_of_thessalonica",
+            "entity:emperor_theodosius_i",
+            "entity:empire",
+            "entity:milan",
+            "entity:nicene_christianity",
+            "entity:nicene_christianity_the_empire_s_sole_authorized_religion",
+            "entity:oriental_orthodoxy",
+            "entity:pope_damasus",
+            "entity:pope_peter",
+            "entity:roman_empire",
+            "entity:rome",
+            "entity:theodosius",
+            "entity:title_anchor_state_church_of_the_roman_empire",
+            "entity:unlike_constantine"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:qing_dynasty_0",
+        "score": 0.002879913690643515,
+        "text": "Qing dynasty\nIn the wake of these external defeats, the Guangxu Emperor initiated the Hundred Days' Reform of 1898. Newer, more radical advisers such as Kang Youwei were given positions of influence. The emperor issued a series of edicts and plans were made to reorganize the bureaucracy, restructure the school system, and appoint new officials. Opposition from the bureaucracy was immediate and intense. Although she had been involved in the initial reforms, the empress dowager stepped in to call them off, arrested and executed several reformers, and took over day-to-day control of policy. Yet many of the plans stayed in place, and the goals of reform were implanted.",
+        "metadata": {
+          "title": "Qing dynasty",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:although",
+            "entity:chinese_culture",
+            "entity:empire_of_japan",
+            "entity:february",
+            "entity:guangxu_emperor",
+            "entity:hundred_days_reform",
+            "entity:imperial_china",
+            "entity:kang_youwei",
+            "entity:longyu",
+            "entity:manchukuo",
+            "entity:newer",
+            "entity:northeast_china",
+            "entity:opposition",
+            "entity:puyi",
+            "entity:soviet_union",
+            "entity:yet"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Sino-Tibetan relations during the Ming dynasty\nSino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful.\n\nState church of the Roman Empire\nState church of the Roman Empire\nNicene Christianity became the state church of the Roman Empire with the Edict of Thessalonica in 380 AD, when Emperor Theodosius I made it the Empire's sole authorized religion. The Eastern Orthodox Church, Oriental Orthodoxy, and the Catholic Church each claim to be the historical continuation of this church in its original form, but do not identify with it in the caesaropapist form that it took later. Unlike Constantine I, who with the Edict of Milan of 313 AD had established tolerance for Christianity without placing it above other religions and whose involvement in matters of the Christian faith extended to convoking councils of bishops who were to determine doctrine and to presiding at their meetings, but not to determining doctrine himself, Theodosius established a single Christian doctrine (specified as that professed by Pope Damasus I of Rome and Pope Peter II of Alexandria) as the Empire's official religion.\n\nNanjing\nNanjing\nAccording to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010. The statistics in 2011 estimated the total population to be 8.11 million. The birth rate was 8.86 percent and the death rate was 6.88 percent. The urban area had a population of 6.47 million people. The sex ratio of the city population was 107.31 males to 100 females.\n\nAthanasius of Alexandria\nAthanasius of Alexandria\nWith characteristic energy he set to work to re-establish the somewhat shattered fortunes of the orthodox party and to purge the theological atmosphere of uncertainty. To clear up the misunderstandings that had arisen in the course of the previous years, an attempt was made to determine still further the significance of the Nicene formularies. In the meanwhile, Julian, who seems to have become suddenly jealous of the influence that Athanasius was exercising at Alexandria, addressed an order to Ecdicius, the Prefect of Egypt, peremptorily commanding the expulsion of the restored primate, on the ground that he had never been included in the imperial act of clemency. The edict was communicated to the bishop by Pythicodorus Trico, who, though described in the \"Chronicon Athanasianum\" (XXXV) as a \"philosopher\", seems to have behaved with brutal insolence. On 23 October the people gathered about the proscribed bishop to protest against the emperor's decree; but Athanasius urged them to submit, consoling them with the promise that his absence would be of short duration.\n\nSamurai\nSamurai\nFollowing the Battle of Hakusukinoe against Tang China and Silla in 663 AD that led to a Japanese retreat from Korean affairs, Japan underwent widespread reform. One of the most important was that of the Taika Reform, issued by Prince Naka no Ōe (Emperor Tenji) in 646 AD. This edict allowed the Japanese aristocracy to adopt the Tang dynasty political structure, bureaucracy, culture, religion, and philosophy. As part of the Taihō Code, of 702 AD, and the later Yōrō Code, the population was required to report regularly for census, a precursor for national conscription. With an understanding of how the population was distributed, Emperor Mommu introduced a law whereby 1 in 3–4 adult males was drafted into the national military. These soldiers were required to supply their own weapons, and in return were exempted from duties and taxes. This was one of the first attempts by the Imperial government to form an organized army modeled after the Chinese system. It was called \"Gundan-Sei\" (軍団制) by later historians and is believed to have been short-lived.[citation needed]\n\nSino-Tibetan relations during the Ming dynasty\nThe Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.\n\nSino-Tibetan relations during the Ming dynasty\nElliot Sperling asserts that the Yongle Emperor, in bestowing Deshin Shekpa with the title of \"King\" and praising his mystical abilities and miracles, was trying to build an alliance with the Karmapa as the Mongols had with the Sakya lamas, but Deshin Shekpa rejected the Yongle Emperor's offer.\n\nSino-Tibetan relations during the Ming dynasty\nIn fact, this was the same title that Kublai Khan had offered the Sakya Phagpa lama, but Deshin Shekpa persuaded the Yongle Emperor to grant the title to religious leaders of other Tibetan Buddhist sects.\n\nSino-Tibetan relations during the Ming dynasty\nDuring his stay in Nanjing, Deshin Shekpa was bestowed the title \"Great Treasure Prince of Dharma\" by the Yongle Emperor.\n\nBloomingdale, Florida\nBloomingdale, Florida\nBloomingdale is an unincorporated census-designated place in Hillsborough County, Florida, United States. The population was 22,711 at the 2010 census. The ZIP Codes serving the community are 33511 (which is addressed to Brandon) and 33596 (which is addressed to Valrico).\n\nLinndale, Ohio\nLinndale, Ohio\nLinndale is the smallest village in Cuyahoga County, Ohio, United States. It is landlocked, surrounded by the cities of Cleveland and Brooklyn. According to the 2010 census, the village achieved the second highest growth rate in Cuyahoga County: 53% as the population increased from 117 to 179, although the last house was built in 1968 and there are only 37 residential addresses.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:sino_tibetan_relations_during_the_ming_dynasty_0",
+        "passage_index": 19,
+        "title": "Sino-Tibetan relations during the Ming dynasty",
+        "score": 0.14526970141585946,
+        "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful.",
+        "score_breakdown": {
+          "dense": 0.09990064625252389,
+          "graph": 0.12405097335735503,
+          "fact": 0.35406035979843214
+        }
+      },
+      {
+        "node_id": "chunk:state_church_of_the_roman_empire_0",
+        "passage_index": 7,
+        "title": "State church of the Roman Empire",
+        "score": 0.13594076063100327,
+        "text": "State church of the Roman Empire\nNicene Christianity became the state church of the Roman Empire with the Edict of Thessalonica in 380 AD, when Emperor Theodosius I made it the Empire's sole authorized religion. The Eastern Orthodox Church, Oriental Orthodoxy, and the Catholic Church each claim to be the historical continuation of this church in its original form, but do not identify with it in the caesaropapist form that it took later. Unlike Constantine I, who with the Edict of Milan of 313 AD had established tolerance for Christianity without placing it above other religions and whose involvement in matters of the Christian faith extended to convoking councils of bishops who were to determine doctrine and to presiding at their meetings, but not to determining doctrine himself, Theodosius established a single Christian doctrine (specified as that professed by Pope Damasus I of Rome and Pope Peter II of Alexandria) as the Empire's official religion.",
+        "score_breakdown": {
+          "dense": 0.09994564954710243,
+          "graph": 0.10072435489712406,
+          "fact": 0.3383556460730648
+        }
+      },
+      {
+        "node_id": "chunk:nanjing_0",
+        "passage_index": 5,
+        "title": "Nanjing",
+        "score": 0.13222349849464934,
+        "text": "Nanjing\nAccording to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010. The statistics in 2011 estimated the total population to be 8.11 million. The birth rate was 8.86 percent and the death rate was 6.88 percent. The urban area had a population of 6.47 million people. The sex ratio of the city population was 107.31 males to 100 females.",
+        "score_breakdown": {
+          "dense": 0.10177633393843316,
+          "graph": 0.10036305236411881,
+          "fact": 0.30758399412850307
+        }
+      },
+      {
+        "node_id": "chunk:athanasius_of_alexandria_0",
+        "passage_index": 15,
+        "title": "Athanasius of Alexandria",
+        "score": 0.08422419062064958,
+        "text": "Athanasius of Alexandria\nWith characteristic energy he set to work to re-establish the somewhat shattered fortunes of the orthodox party and to purge the theological atmosphere of uncertainty. To clear up the misunderstandings that had arisen in the course of the previous years, an attempt was made to determine still further the significance of the Nicene formularies. In the meanwhile, Julian, who seems to have become suddenly jealous of the influence that Athanasius was exercising at Alexandria, addressed an order to Ecdicius, the Prefect of Egypt, peremptorily commanding the expulsion of the restored primate, on the ground that he had never been included in the imperial act of clemency. The edict was communicated to the bishop by Pythicodorus Trico, who, though described in the \"Chronicon Athanasianum\" (XXXV) as a \"philosopher\", seems to have behaved with brutal insolence. On 23 October the people gathered about the proscribed bishop to protest against the emperor's decree; but Athanasius urged them to submit, consoling them with the promise that his absence would be of short duration.",
+        "score_breakdown": {
+          "dense": 0.10055632999045203,
+          "graph": 0.09639403041966985,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:samurai_0",
+        "passage_index": 14,
+        "title": "Samurai",
+        "score": 0.0839480706201761,
+        "text": "Samurai\nFollowing the Battle of Hakusukinoe against Tang China and Silla in 663 AD that led to a Japanese retreat from Korean affairs, Japan underwent widespread reform. One of the most important was that of the Taika Reform, issued by Prince Naka no Ōe (Emperor Tenji) in 646 AD. This edict allowed the Japanese aristocracy to adopt the Tang dynasty political structure, bureaucracy, culture, religion, and philosophy. As part of the Taihō Code, of 702 AD, and the later Yōrō Code, the population was required to report regularly for census, a precursor for national conscription. With an understanding of how the population was distributed, Emperor Mommu introduced a law whereby 1 in 3–4 adult males was drafted into the national military. These soldiers were required to supply their own weapons, and in return were exempted from duties and taxes. This was one of the first attempts by the Imperial government to form an organized army modeled after the Chinese system. It was called \"Gundan-Sei\" (軍団制) by later historians and is believed to have been short-lived.[citation needed]",
+        "score_breakdown": {
+          "dense": 0.10005948468304252,
+          "graph": 0.09638451348167573,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:heresy_0",
+        "passage_index": 12,
+        "title": "Heresy",
+        "score": 0.08391471884665473,
+        "text": "Heresy\nConstantine the Great, who along with Licinius had decreed toleration of Christianity in the Roman Empire by what is commonly called the \"Edict of Milan\", and was the first Roman Emperor baptized, set precedents for later policy. By Roman law the Emperor was Pontifex Maximus, the high priest of the College of Pontiffs (Collegium Pontificum) of all recognized religions in ancient Rome. To put an end to the doctrinal debate initiated by Arius, Constantine called the first of what would afterwards be called the ecumenical councils and then enforced orthodoxy by Imperial authority.",
+        "score_breakdown": {
+          "dense": 0.09992064902240326,
+          "graph": 0.09652787294777647,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:religion_in_ancient_rome_0",
+        "passage_index": 8,
+        "title": "Religion in ancient Rome",
+        "score": 0.08377948266062649,
+        "text": "Religion in ancient Rome\nIn the wake of religious riots in Egypt, the emperor Decius decreed that all subjects of the Empire must actively seek to benefit the state through witnessed and certified sacrifice to \"ancestral gods\" or suffer a penalty: only Jews were exempt. Decius' edict appealed to whatever common mos maiores might reunite a politically and socially fractured Empire and its multitude of cults; no ancestral gods were specified by name. The fulfillment of sacrificial obligation by loyal subjects would define them and their gods as Roman. Roman oaths of loyalty were traditionally collective; the Decian oath has been interpreted as a design to root out individual subversives and suppress their cults, but apostasy was sought, rather than capital punishment. A year after its due deadline, the edict expired.",
+        "score_breakdown": {
+          "dense": 0.09975225287947018,
+          "graph": 0.0963858119230596,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:qing_dynasty_0",
+        "passage_index": 18,
+        "title": "Qing dynasty",
+        "score": 0.08366966434341672,
+        "text": "Qing dynasty\nIn the wake of these external defeats, the Guangxu Emperor initiated the Hundred Days' Reform of 1898. Newer, more radical advisers such as Kang Youwei were given positions of influence. The emperor issued a series of edicts and plans were made to reorganize the bureaucracy, restructure the school system, and appoint new officials. Opposition from the bureaucracy was immediate and intense. Although she had been involved in the initial reforms, the empress dowager stepped in to call them off, arrested and executed several reformers, and took over day-to-day control of policy. Yet many of the plans stayed in place, and the goals of reform were implanted.",
+        "score_breakdown": {
+          "dense": 0.09954308421220805,
+          "graph": 0.09640322675567431,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:linndale_ohio_0",
+        "passage_index": 11,
+        "title": "Linndale, Ohio",
+        "score": 0.08355528786414279,
+        "text": "Linndale, Ohio\nLinndale is the smallest village in Cuyahoga County, Ohio, United States. It is landlocked, surrounded by the cities of Cleveland and Brooklyn. According to the 2010 census, the village achieved the second highest growth rate in Cuyahoga County: 53% as the population increased from 117 to 179, although the last house was built in 1968 and there are only 37 residential addresses.",
+        "score_breakdown": {
+          "dense": 0.09935274916597474,
+          "graph": 0.09637091940952225,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bloomingdale_florida_0",
+        "passage_index": 13,
+        "title": "Bloomingdale, Florida",
+        "score": 0.08347462450282146,
+        "text": "Bloomingdale, Florida\nBloomingdale is an unincorporated census-designated place in Hillsborough County, Florida, United States. The population was 22,711 at the 2010 census. The ZIP Codes serving the community are 33511 (which is addressed to Brandon) and 33596 (which is addressed to Valrico).",
+        "score_breakdown": {
+          "dense": 0.09919282030838956,
+          "graph": 0.09639524444402398,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who did the Yongle emperor greet with an edict?",
+        "resolved_sub_question": "Who did the Yongle emperor greet with an edict?",
+        "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+        "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+        "score": 0.7007208571428571,
+        "source_title": "Sino-Tibetan relations during the Ming dynasty",
+        "hop_answer": "Deshin Shekpa",
+        "hop_thought": "The passage mentions that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa from the context provided.",
+        "hop_raw_response": "The passage mentions that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa from the context provided.\nAnswer: Deshin Shekpa",
+        "evidence_passages": [
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "Elliot Sperling asserts that the Yongle Emperor, in bestowing Deshin Shekpa with the title of \"King\" and praising his mystical abilities and miracles, was trying to build an alliance with the Karmapa as the Mongols had with the Sakya lamas, but Deshin Shekpa rejected the Yongle Emperor's offer."
+          }
+        ]
+      },
+      {
+        "sub_question": "Where did the Yongle emperor greet this person?",
+        "resolved_sub_question": "Where did the Yongle emperor greet this person? Context: Deshin Shekpa.",
+        "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+        "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+        "score": 0.593478181818182,
+        "source_title": "Sino-Tibetan relations during the Ming dynasty",
+        "hop_answer": "Nanjing",
+        "hop_thought": "The context specifies that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa, and it mentions the location where this occurred.",
+        "hop_raw_response": "The context specifies that the Yongle Emperor greeted the Karmapa, who is identified as Deshin Shekpa, and it mentions the location where this occurred.\nAnswer: Nanjing",
+        "evidence_passages": [
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "In fact, this was the same title that Kublai Khan had offered the Sakya Phagpa lama, but Deshin Shekpa persuaded the Yongle Emperor to grant the title to religious leaders of other Tibetan Buddhist sects."
+          }
+        ]
+      },
+      {
+        "sub_question": "What was the population of this city in 2010?",
+        "resolved_sub_question": "What was the population of this city in 2010? Context: Deshin Shekpa; Nanjing.",
+        "sentence_id": "sentence:sino_tibetan_relations_during_the_ming_dynasty_0_2_the_yongle_emperor_came_out_of_the_palace_in_nanjing_to_greet_the_kar",
+        "sentence": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal.",
+        "score": 0.5122701298701299,
+        "source_title": "Sino-Tibetan relations during the Ming dynasty",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not contain information about the population of Nanjing in 2010.",
+        "hop_raw_response": "The provided context does not contain information about the population of Nanjing in 2010.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "The Yongle Emperor came out of the palace in Nanjing to greet the Karmapa and did not require him to kowtow like a tributary vassal."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "Sino-Tibetan relations during the Ming dynasty\nSome scholars note that Tibetan leaders during the Ming frequently engaged in civil war and conducted their own foreign diplomacy with neighboring states such as Nepal. Some scholars underscore the commercial aspect of the Ming-Tibetan relationship, noting the Ming dynasty's shortage of horses for warfare and thus the importance of the horse trade with Tibet. Others argue that the significant religious nature of the relationship of the Ming court with Tibetan lamas is underrepresented in modern scholarship. In hopes of reviving the unique relationship of the earlier Mongol leader Kublai Khan (r. 1260–1294) and his spiritual superior Drogön Chögyal Phagpa (1235–1280) of the Sakya school of Tibetan Buddhism, the Yongle Emperor (r. 1402–1424) made a concerted effort to build a secular and religious alliance with Deshin Shekpa (1384–1415), the Karmapa of the Karma Kagyu school. However, the Yongle Emperor's attempts were unsuccessful."
+          },
+          {
+            "title": "Sino-Tibetan relations during the Ming dynasty",
+            "text": "During his stay in Nanjing, Deshin Shekpa was bestowed the title \"Great Treasure Prince of Dharma\" by the Yongle Emperor."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who did the Yongle emperor greet with an edict? => Deshin Shekpa (source: Sino-Tibetan relations during the Ming dynasty)\n2. Where did the Yongle emperor greet this person? => Nanjing (source: Sino-Tibetan relations during the Ming dynasty)\n3. What was the population of this city in 2010? (source: Sino-Tibetan relations during the Ming dynasty)\n\nFact hints:\n- Nanjing related_to Yongle Emperor\n- Sixth China Census reported Nanjing's population in 2010\n- Yongle Emperor invited Deshin Shekpa 5th Karmapa Lama\n- Elliot Sperling asserts Yongle Emperor bestowed Deshin Shekpa with the title of King\n\nWikipedia Title: Sino-Tibetan relations during the Ming dynasty\nDuring his stay in Nanjing, Deshin Shekpa was bestowed the title \"Great Treasure Prince of Dharma\" by the Yongle Emperor.\n\nWikipedia Title: Nanjing\nNanjing According to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010. The sex ratio of the city population was 107.31 males to 100 females.\n\nWikipedia Title: Bloomingdale, Florida\nThe population was 22,711 at the 2010 census. The ZIP Codes serving the community are 33511 (which is addressed to Brandon) and 33596 (which is addressed to Valrico).\n\nWikipedia Title: Linndale, Ohio\nAccording to the 2010 census, the village achieved the second highest growth rate in Cuyahoga County: 53% as the population increased from 117 to 179, although the last house was built in 1968 and there are only 37 residential addresses. It is landlocked, surrounded by the cities of Cleveland and Brooklyn.\n\nWikipedia Title: Samurai\nWith an understanding of how the population was distributed, Emperor Mommu introduced a law whereby 1 in 3–4 adult males was drafted into the national military. One of the most important was that of the Taika Reform, issued by Prince Naka no Ōe (Emperor Tenji) in 646 AD.\n\nQuestion: In 2010, what was the population of the city where the Yongle emperor greeted the person to whom the edict was addressed?\nDraft Answer: 8.005 million\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The question asks for the population of Nanjing in 2010, which is the city where the Yongle emperor greeted Deshin Shekpa. The relevant information is found in the passage about the Sixth China Census.",
+  "predicted_answer": "8.005 million",
+  "qa_raw_response": "{\n  \"thought\": \"The question asks for the population of Nanjing in 2010, which is the city where the Yongle emperor greeted Deshin Shekpa. The relevant information is found in the passage about the Sixth China Census.\",\n  \"answer\": \"8.005 million\",\n  \"support\": \"According to the Sixth China Census, the total population of the City of Nanjing reached 8.005 million in 2010.\"\n}"
+}

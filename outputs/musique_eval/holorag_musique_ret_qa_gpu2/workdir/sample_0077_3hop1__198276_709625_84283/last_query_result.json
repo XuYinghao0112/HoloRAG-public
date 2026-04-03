@@ -1,0 +1,1074 @@
+{
+  "query": "Who is the owner of the record label of the performer of What Kind of Love?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Kind of Love"
+  ],
+  "raw_query_entities": [
+    "Kind of Love"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Kind of Love",
+      "node_id": "entity:title_anchor_what_kind_of_love",
+      "resolved_text": "What Kind of Love",
+      "score": 0.6670666666666668,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.185,
+      "score_margin": 0.1557777777777779,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What is the name of the performer of What Kind of Love?",
+    "What is the name of the record label of this performer?",
+    "Who is the owner of this record label?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_sound_of_love",
+      "score": 0.5175233186183574,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_what_kind_of_love",
+      "score": 0.5053396396237624,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rodney_crowell",
+      "score": 0.26414797598687617,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:village_vanguard",
+      "score": 0.2541423747964465,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+      "score": 0.2426522860472391,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:sun_studio",
+      "score": 0.2141360689863285,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:paul_motian",
+      "score": 0.2041400566898285,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:winter_winter",
+      "score": 0.17847119063925718,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sam_phillips",
+      "score": 0.17414103065957526,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_barbara_pittman",
+      "score": 0.16913548174169432,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:international",
+      "score": 0.16246359960200119,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:winter_winter_label",
+      "score": 0.14872599219938099,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:kind_of_love_is_a_song_by_rodney_crowell_sentence_what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recor",
+      "text": "Kind of Love is a song by Rodney Crowell",
+      "head_id": "entity:title_anchor_what_kind_of_love",
+      "tail_id": "entity:rodney_crowell",
+      "sentence_id": "sentence:what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recorded_by_american_country_music",
+      "chunk_id": "chunk:what_kind_of_love_0",
+      "document_index": 4,
+      "score": 0.26205738255554734
+    },
+    {
+      "fact_id": "fact:sound_of_love_recorded_at_village_vanguard_sentence_sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul",
+      "text": "Sound of Love recorded at Village Vanguard",
+      "head_id": "entity:title_anchor_sound_of_love",
+      "tail_id": "entity:village_vanguard",
+      "sentence_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+      "chunk_id": "chunk:sound_of_love_0",
+      "document_index": 13,
+      "score": 0.2520519759936606
+    },
+    {
+      "fact_id": "fact:barbara_pittman_recorded_at_sun_studio_sentence_barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_",
+      "text": "Barbara Pittman recorded at Sun Studio",
+      "head_id": "entity:title_anchor_barbara_pittman",
+      "tail_id": "entity:sun_studio",
+      "sentence_id": "sentence:barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_american_singer_one_o",
+      "chunk_id": "chunk:barbara_pittman_0",
+      "document_index": 3,
+      "score": 0.21204642904125778
+    },
+    {
+      "fact_id": "fact:sound_of_love_by_paul_motian_sentence_sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_record",
+      "text": "Sound of Love by Paul Motian",
+      "head_id": "entity:title_anchor_sound_of_love",
+      "tail_id": "entity:paul_motian",
+      "sentence_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+      "chunk_id": "chunk:sound_of_love_0",
+      "document_index": 13,
+      "score": 0.20205060161883537
+    },
+    {
+      "fact_id": "fact:international_label_owned_by_sam_phillips_sentence_barbara_pittman_0_2_pittman_s_most_popular_recordings_include_i_need_",
+      "text": "International label owned by Sam Phillips",
+      "head_id": "entity:international_label",
+      "tail_id": "entity:sam_phillips",
+      "sentence_id": "sentence:barbara_pittman_0_2_pittman_s_most_popular_recordings_include_i_need_a_man_on_the_sun_label_and_t",
+      "chunk_id": "chunk:barbara_pittman_0",
+      "document_index": 3,
+      "score": 0.17205211935282583
+    },
+    {
+      "fact_id": "fact:sound_of_love_released_on_winter_winter_label_sentence_sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_p",
+      "text": "Sound of Love released on Winter Winter label",
+      "head_id": "entity:title_anchor_sound_of_love",
+      "tail_id": "entity:winter_winter_label",
+      "sentence_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+      "chunk_id": "chunk:sound_of_love_0",
+      "document_index": 13,
+      "score": 0.14872599219938099
+    },
+    {
+      "fact_id": "fact:barbara_pittman_was_american_singer_sentence_barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_ame",
+      "text": "Barbara Pittman was American singer",
+      "head_id": "entity:title_anchor_barbara_pittman",
+      "tail_id": "entity:american_singer",
+      "sentence_id": "sentence:barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_american_singer_one_o",
+      "chunk_id": "chunk:barbara_pittman_0",
+      "document_index": 3,
+      "score": 0.12204525455198943
+    },
+    {
+      "fact_id": "fact:two_young_fools_in_love_released_on_international_label_sentence_barbara_pittman_0_2_pittman_s_most_popular_recordings_i",
+      "text": "Two Young Fools In Love released on International label",
+      "head_id": "entity:two_young_fools_in_love",
+      "tail_id": "entity:international_label",
+      "sentence_id": "sentence:barbara_pittman_0_2_pittman_s_most_popular_recordings_include_i_need_a_man_on_the_sun_label_and_t",
+      "chunk_id": "chunk:barbara_pittman_0",
+      "document_index": 3,
+      "score": 0.09872054665050947
+    }
+  ],
+  "bridge_entities": [
+    "Rodney Crowell",
+    "American country music artist",
+    "Warner Bros Records"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the name of the performer of What Kind of Love?",
+      "resolved_sub_question": "What is the name of the performer of What Kind of Love?",
+      "sentence_id": "sentence:what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recorded_by_american_country_music",
+      "sentence": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell.",
+      "score": 0.49980358141572134,
+      "source_title": "What Kind of Love",
+      "hop_answer": "Rodney Crowell",
+      "hop_thought": "The performer of \"What Kind of Love\" is mentioned in the text as Rodney Crowell.",
+      "hop_raw_response": "The performer of \"What Kind of Love\" is mentioned in the text as Rodney Crowell.\nAnswer: Rodney Crowell",
+      "evidence_passages": [
+        {
+          "title": "What Kind of Love",
+          "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+        },
+        {
+          "title": "What Kind of Love",
+          "text": "What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada."
+        },
+        {
+          "title": "Sound of Love",
+          "text": "Sound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the name of the record label of this performer?",
+      "resolved_sub_question": "What is the name of the record label of this performer? Context: Rodney Crowell.",
+      "sentence_id": "sentence:ain_t_living_long_like_this_0_0_ain_t_living_long_like_this_is_the_debut_studio_album_by_american_country_music",
+      "sentence": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.",
+      "score": 0.526829376211896,
+      "source_title": "Ain't Living Long Like This",
+      "hop_answer": "Warner Bros. Records",
+      "hop_thought": "The context indicates that Rodney Crowell released his debut album \"Ain't Living Long Like This\" through Warner Bros. Records.",
+      "hop_raw_response": "The context indicates that Rodney Crowell released his debut album \"Ain't Living Long Like This\" through Warner Bros. Records.\nAnswer: Warner Bros. Records",
+      "evidence_passages": [
+        {
+          "title": "Ain't Living Long Like This",
+          "text": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros."
+        },
+        {
+          "title": "Ain't Living Long Like This",
+          "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible."
+        },
+        {
+          "title": "What Kind of Love",
+          "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the owner of this record label?",
+      "resolved_sub_question": "Who is the owner of this record label? Context: Rodney Crowell; Warner Bros. Records.",
+      "sentence_id": "sentence:ain_t_living_long_like_this_0_0_ain_t_living_long_like_this_is_the_debut_studio_album_by_american_country_music",
+      "sentence": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.",
+      "score": 0.4864813762118959,
+      "source_title": "Ain't Living Long Like This",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about the ownership of Warner Bros. Records.",
+      "hop_raw_response": "The context provided does not contain information about the ownership of Warner Bros. Records.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ain't Living Long Like This",
+          "text": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros."
+        },
+        {
+          "title": "Ain't Living Long Like This",
+          "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible."
+        },
+        {
+          "title": "What Kind of Love",
+          "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+      "score": 0.10869421999353503,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_sound_of_love",
+      "score": 0.09789510005521179,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_what_kind_of_love",
+      "score": 0.066910624365373,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_american_singer_one_o",
+      "score": 0.04704829809720483,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:rodney_crowell",
+      "score": 0.044335296206108,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:village_vanguard",
+      "score": 0.04267405156831642,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:barbara_pittman_0_2_pittman_s_most_popular_recordings_include_i_need_a_man_on_the_sun_label_and_t",
+      "score": 0.04222155043990191,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recorded_by_american_country_music",
+      "score": 0.04212354022128184,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:paul_motian",
+      "score": 0.037227202396502776,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_barbara_pittman",
+      "score": 0.03583473755569751,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:winter_winter_label",
+      "score": 0.03385028735087455,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:winter_winter",
+      "score": 0.02949315126427241,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sun_studio",
+      "score": 0.028749748822404827,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:international_label",
+      "score": 0.028097419792832607,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sam_phillips",
+      "score": 0.023270270944178113,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:sound_of_love_0",
+      "score": 0.021260944575691047,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:international",
+      "score": 0.020195712027000837,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_singer",
+      "score": 0.020051506253395246,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_musician",
+      "score": 0.019828528814629008,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:barbara_pittman_0",
+      "score": 0.01947363715402941,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:sound_of_love_0",
+      "passage_index": 13,
+      "title": "Sound of Love",
+      "score": 0.09543691507528934,
+      "text": "Sound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.",
+      "score_breakdown": {
+        "dense": 0.05021041696681292,
+        "graph": 0.057768036662127674,
+        "fact": 0.3366051649660262
+      }
+    },
+    {
+      "node_id": "chunk:what_kind_of_love_0",
+      "passage_index": 4,
+      "title": "What Kind of Love",
+      "score": 0.09462706986547083,
+      "text": "What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada.",
+      "score_breakdown": {
+        "dense": 0.050616085618688286,
+        "graph": 0.0526324386071319,
+        "fact": 0.33998994128701804
+      }
+    },
+    {
+      "node_id": "chunk:barbara_pittman_0",
+      "passage_index": 3,
+      "title": "Barbara Pittman",
+      "score": 0.09282125780318529,
+      "text": "Barbara Pittman\nBarbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio. As a young teenager, she recorded some demos of songs for others. Pittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label.",
+      "score_breakdown": {
+        "dense": 0.04999817902998741,
+        "graph": 0.056038417582162825,
+        "fact": 0.32340489374695575
+      }
+    },
+    {
+      "node_id": "chunk:ain_t_living_long_like_this_0",
+      "passage_index": 12,
+      "title": "Ain't Living Long Like This",
+      "score": 0.0423428846103114,
+      "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible.",
+      "score_breakdown": {
+        "dense": 0.04984674168801749,
+        "graph": 0.04975725560633928,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:larry_norman_0",
+      "passage_index": 14,
+      "title": "Larry Norman",
+      "score": 0.04233827713207559,
+      "text": "Larry Norman\nLarry David Norman (April 8, 1947 – February 24, 2008) was an American musician, singer, songwriter, record label owner, and record producer. He is considered to be one of the pioneers of Christian rock music, and released more than 100 albums.",
+      "score_breakdown": {
+        "dense": 0.04996600573173611,
+        "graph": 0.049523246598735755,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:warner_records_0",
+      "passage_index": 9,
+      "title": "Warner Records",
+      "score": 0.042337086750232567,
+      "text": "Warner Records\nWarner Bros. Records Parent company Warner Music Group Founded March 19, 1958; 60 years ago (1958 - 03 - 19) Founder James Conkling Distributor (s) Self - distributed (In the US) WEA International (Outside the US) Rhino Entertainment Company (Re-issues) Genre Various Country of origin United States Location Burbank, California, U.S. Official website warnerbrosrecords.com",
+      "score_breakdown": {
+        "dense": 0.049965743926635775,
+        "graph": 0.0495197586352763,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:love_sign_0",
+      "passage_index": 19,
+      "title": "Love Sign",
+      "score": 0.04225453758334928,
+      "text": "Love Sign\n\"Love Sign\" is a song by American musician Prince, from the \"1-800-NEW-FUNK\" compilation album released by his independent record label NPG Records in 1994.",
+      "score_breakdown": {
+        "dense": 0.05014687658962295,
+        "graph": 0.048912518196855534,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:aretha_franklin_0",
+      "passage_index": 10,
+      "title": "Aretha Franklin",
+      "score": 0.04224988289092628,
+      "text": "Aretha Franklin\nAfter turning 18, Franklin confided to her father that she aspired to follow Sam Cooke to record pop music. Serving as her manager, C.L. agreed to the move and helped to produce a two - song demo that soon was brought to the attention of Columbia Records, who agreed to sign her in 1960. Franklin was signed as a ``five - percent artist ''. During this period, Franklin would be coached by choreographer Cholly Atkins to prepare for her pop performances. Before signing with Columbia, Sam Cooke tried to persuade Franklin's father to have his label, RCA sign Franklin. He had also been courted by local record label owner Berry Gordy to sign Franklin and her elder sister Erma to his Tamla label. Franklin's father felt the label was not established enough yet. Franklin's first Columbia single,`` Today I Sing the Blues'', was issued in September 1960 and later reached the top ten of the Hot Rhythm & Blues Sellers chart.",
+      "score_breakdown": {
+        "dense": 0.05012580218674667,
+        "graph": 0.0489356389607187,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:a_king_in_the_kindness_room_0",
+      "passage_index": 8,
+      "title": "A King in the Kindness Room",
+      "score": 0.04222471405743916,
+      "text": "A King in the Kindness Room\nA King in the Kindness Room is the ninth solo album by Australian guitarist and songwriter Ed Kuepper recorded in 1995 and released on the Hot label.",
+      "score_breakdown": {
+        "dense": 0.05009301767997455,
+        "graph": 0.04891184777817718,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bob_shad_0",
+      "passage_index": 6,
+      "title": "Bob Shad",
+      "score": 0.04218951888994043,
+      "text": "Bob Shad\nRobert \"Bob\" Shad (born Abraham Shadrinsky; February 12, 1920 – March 13, 1985) was an American record producer and record label owner. He produced the first album by Big Brother and the Holding Company (featuring Janis Joplin). Among his more successful labels were Time Records, Brent Records, and Mainstream Records.",
+      "score_breakdown": {
+        "dense": 0.05002787217785198,
+        "graph": 0.048913963973739476,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_sound_of_love",
+        "score": 0.09789510005521179,
+        "text": "Sound of Love",
+        "metadata": {
+          "canonical_name": "Sound of Love",
+          "aliases": [
+            "SOL",
+            "Sound of Love"
+          ],
+          "surface_forms": [
+            "SOL",
+            "Sound of Love"
+          ],
+          "title_anchor": "Sound of Love"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_what_kind_of_love",
+        "score": 0.066910624365373,
+        "text": "What Kind of Love",
+        "metadata": {
+          "canonical_name": "What Kind of Love",
+          "aliases": [
+            "KOL",
+            "Kind of Love"
+          ],
+          "surface_forms": [
+            "KOL",
+            "Kind of Love"
+          ],
+          "title_anchor": "What Kind of Love"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:sound_of_love_0_0_sound_of_love_is_a_live_album_by_jazz_drummer_paul_motian_recorded_at_the_villag",
+        "score": 0.10869421999353503,
+        "text": "Sound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.",
+        "metadata": {
+          "title": "Sound of Love",
+          "chunk_id": "chunk:sound_of_love_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Sound of Love",
+              "relation": "by",
+              "tail": "Paul Motian"
+            },
+            {
+              "head": "Sound of Love",
+              "relation": "recorded at",
+              "tail": "Village Vanguard"
+            },
+            {
+              "head": "Sound of Love",
+              "relation": "released on",
+              "tail": "Winter Winter label"
+            }
+          ],
+          "entities": [
+            "Sound of Love",
+            "Paul Motian",
+            "Village Vanguard",
+            "Winter Winter"
+          ],
+          "entity_ids": [
+            "entity:paul_motian",
+            "entity:title_anchor_sound_of_love",
+            "entity:village_vanguard",
+            "entity:winter_winter",
+            "entity:winter_winter_label"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:barbara_pittman_0_0_barbara_pittman_april_6_1938_october_29_2005_was_an_american_singer_one_o",
+        "score": 0.04704829809720483,
+        "text": "Barbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio.",
+        "metadata": {
+          "title": "Barbara Pittman",
+          "chunk_id": "chunk:barbara_pittman_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Barbara Pittman",
+              "relation": "born on",
+              "tail": "April 6 1938"
+            },
+            {
+              "head": "Barbara Pittman",
+              "relation": "died on",
+              "tail": "October 29 2005"
+            },
+            {
+              "head": "Barbara Pittman",
+              "relation": "was",
+              "tail": "American singer"
+            },
+            {
+              "head": "Barbara Pittman",
+              "relation": "recorded at",
+              "tail": "Sun Studio"
+            }
+          ],
+          "entities": [
+            "Barbara Pittman",
+            "Sun Studio"
+          ],
+          "entity_ids": [
+            "entity:american_singer",
+            "entity:april_6_1938",
+            "entity:october_29_2005",
+            "entity:sun_studio",
+            "entity:title_anchor_barbara_pittman"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:barbara_pittman_0_2_pittman_s_most_popular_recordings_include_i_need_a_man_on_the_sun_label_and_t",
+        "score": 0.04222155043990191,
+        "text": "Pittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label.",
+        "metadata": {
+          "title": "Barbara Pittman",
+          "chunk_id": "chunk:barbara_pittman_0",
+          "sentence_index": 2,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Pittman",
+              "relation": "recorded",
+              "tail": "I Need A Man"
+            },
+            {
+              "head": "I Need A Man",
+              "relation": "released on",
+              "tail": "Sun label"
+            },
+            {
+              "head": "Pittman",
+              "relation": "recorded",
+              "tail": "Two Young Fools In Love"
+            },
+            {
+              "head": "Two Young Fools In Love",
+              "relation": "released on",
+              "tail": "International label"
+            },
+            {
+              "head": "International label",
+              "relation": "owned by",
+              "tail": "Sam Phillips"
+            }
+          ],
+          "entities": [
+            "Pittman",
+            "I Need A Man",
+            "Sun label",
+            "Two Young Fools In Love",
+            "International label",
+            "Sam Phillips"
+          ],
+          "entity_ids": [
+            "entity:i_need_a_man",
+            "entity:international_label",
+            "entity:pittman",
+            "entity:sam_phillips",
+            "entity:sun_label",
+            "entity:two_young_fools_in_love"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recorded_by_american_country_music",
+        "score": 0.04212354022128184,
+        "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell.",
+        "metadata": {
+          "title": "What Kind of Love",
+          "chunk_id": "chunk:what_kind_of_love_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Kind of Love",
+              "relation": "is a song by",
+              "tail": "Rodney Crowell"
+            },
+            {
+              "head": "Rodney Crowell",
+              "relation": "is an",
+              "tail": "American country music artist"
+            }
+          ],
+          "entities": [
+            "Kind of Love",
+            "Rodney Crowell",
+            "American country music artist"
+          ],
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:rodney_crowell",
+            "entity:title_anchor_what_kind_of_love"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ain_t_living_long_like_this_0_0_ain_t_living_long_like_this_is_the_debut_studio_album_by_american_country_music",
+        "score": 0.009857394783575673,
+        "text": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.",
+        "metadata": {
+          "title": "Ain't Living Long Like This",
+          "chunk_id": "chunk:ain_t_living_long_like_this_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Ain't Living Long Like",
+              "relation": "is debut studio album of",
+              "tail": "Rodney Crowell"
+            },
+            {
+              "head": "Rodney Crowell",
+              "relation": "is",
+              "tail": "American country music singer-songwriter"
+            },
+            {
+              "head": "Ain't Living Long Like",
+              "relation": "released by",
+              "tail": "Warner Bros"
+            }
+          ],
+          "entities": [
+            "Ain't Living Long Like",
+            "Rodney Crowell",
+            "American country music singer-songwriter",
+            "Warner Bros"
+          ],
+          "entity_ids": [
+            "entity:american_country_music_singer_songwriter",
+            "entity:rodney_crowell",
+            "entity:title_anchor_ain_t_living_long_like_this",
+            "entity:warner_bros"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:barbara_pittman_0_1_as_a_young_teenager_she_recorded_some_demos_of_songs_for_others",
+        "score": 0.007350000162469219,
+        "text": "As a young teenager, she recorded some demos of songs for others.",
+        "metadata": {
+          "title": "Barbara Pittman",
+          "chunk_id": "chunk:barbara_pittman_0",
+          "sentence_index": 1,
+          "document_index": 3,
+          "triples": [],
+          "entities": [
+            "As"
+          ],
+          "entity_ids": [
+            "entity:as"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:sound_of_love_0",
+        "score": 0.021260944575691047,
+        "text": "Sound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.",
+        "metadata": {
+          "title": "Sound of Love",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:paul_motian",
+            "entity:title_anchor_sound_of_love",
+            "entity:village_vanguard",
+            "entity:winter_winter",
+            "entity:winter_winter_label"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:barbara_pittman_0",
+        "score": 0.01947363715402941,
+        "text": "Barbara Pittman\nBarbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio. As a young teenager, she recorded some demos of songs for others. Pittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label.",
+        "metadata": {
+          "title": "Barbara Pittman",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:american_singer",
+            "entity:april_6_1938",
+            "entity:as",
+            "entity:i_need_a_man",
+            "entity:international_label",
+            "entity:october_29_2005",
+            "entity:pittman",
+            "entity:sam_phillips",
+            "entity:sun_label",
+            "entity:sun_studio",
+            "entity:title_anchor_barbara_pittman",
+            "entity:two_young_fools_in_love"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:what_kind_of_love_0",
+        "score": 0.011262772036645306,
+        "text": "What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada.",
+        "metadata": {
+          "title": "What Kind of Love",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:billboard",
+            "entity:billboard_hot_country_singles_tracks",
+            "entity:canada",
+            "entity:country_tracks",
+            "entity:hot_country_singles",
+            "entity:june",
+            "entity:june_1992",
+            "entity:life_is_messy",
+            "entity:rodney_crowell",
+            "entity:rpm_country_tracks",
+            "entity:title_anchor_what_kind_of_love",
+            "entity:tracks"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ain_t_living_long_like_this_0",
+        "score": 0.002608617300473718,
+        "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible.",
+        "metadata": {
+          "title": "Ain't Living Long Like This",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:alan_jackson",
+            "entity:allmusic",
+            "entity:american_country_music_singer_songwriter",
+            "entity:baby_better_start_turnin",
+            "entity:baby_better_start_turnin_em_down",
+            "entity:brett_hartenbach",
+            "entity:crowell",
+            "entity:elvira",
+            "entity:em_down",
+            "entity:most",
+            "entity:now",
+            "entity:now_and_then_there_s_a_fool_such_as_i",
+            "entity:oak_ridge_boys",
+            "entity:one_of_crowell_s_best_and_most_influential_albums",
+            "entity:records",
+            "entity:rodney_crowell",
+            "entity:title_anchor_ain_t_living_long_like_this",
+            "entity:top_country_albums_chart",
+            "entity:warner_bros"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Sound of Love\nSound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.\n\nWhat Kind of Love\nWhat Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada.\n\nBarbara Pittman\nBarbara Pittman\nBarbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio. As a young teenager, she recorded some demos of songs for others. Pittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label.\n\nAin't Living Long Like This\nAin't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible.\n\nLarry Norman\nLarry Norman\nLarry David Norman (April 8, 1947 – February 24, 2008) was an American musician, singer, songwriter, record label owner, and record producer. He is considered to be one of the pioneers of Christian rock music, and released more than 100 albums.\n\nWhat Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell.\n\nSound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.\n\nAin't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.\n\nWarner Records\nWarner Records\nWarner Bros. Records Parent company Warner Music Group Founded March 19, 1958; 60 years ago (1958 - 03 - 19) Founder James Conkling Distributor (s) Self - distributed (In the US) WEA International (Outside the US) Rhino Entertainment Company (Re-issues) Genre Various Country of origin United States Location Burbank, California, U.S. Official website warnerbrosrecords.com\n\nLove Sign\nLove Sign\n\"Love Sign\" is a song by American musician Prince, from the \"1-800-NEW-FUNK\" compilation album released by his independent record label NPG Records in 1994.\n\nAretha Franklin\nAretha Franklin\nAfter turning 18, Franklin confided to her father that she aspired to follow Sam Cooke to record pop music. Serving as her manager, C.L. agreed to the move and helped to produce a two - song demo that soon was brought to the attention of Columbia Records, who agreed to sign her in 1960. Franklin was signed as a ``five - percent artist ''. During this period, Franklin would be coached by choreographer Cholly Atkins to prepare for her pop performances. Before signing with Columbia, Sam Cooke tried to persuade Franklin's father to have his label, RCA sign Franklin. He had also been courted by local record label owner Berry Gordy to sign Franklin and her elder sister Erma to his Tamla label. Franklin's father felt the label was not established enough yet. Franklin's first Columbia single,`` Today I Sing the Blues'', was issued in September 1960 and later reached the top ten of the Hot Rhythm & Blues Sellers chart.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:sound_of_love_0",
+        "passage_index": 13,
+        "title": "Sound of Love",
+        "score": 0.09543691507528934,
+        "text": "Sound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.",
+        "score_breakdown": {
+          "dense": 0.05021041696681292,
+          "graph": 0.057768036662127674,
+          "fact": 0.3366051649660262
+        }
+      },
+      {
+        "node_id": "chunk:what_kind_of_love_0",
+        "passage_index": 4,
+        "title": "What Kind of Love",
+        "score": 0.09462706986547083,
+        "text": "What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada.",
+        "score_breakdown": {
+          "dense": 0.050616085618688286,
+          "graph": 0.0526324386071319,
+          "fact": 0.33998994128701804
+        }
+      },
+      {
+        "node_id": "chunk:barbara_pittman_0",
+        "passage_index": 3,
+        "title": "Barbara Pittman",
+        "score": 0.09282125780318529,
+        "text": "Barbara Pittman\nBarbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio. As a young teenager, she recorded some demos of songs for others. Pittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label.",
+        "score_breakdown": {
+          "dense": 0.04999817902998741,
+          "graph": 0.056038417582162825,
+          "fact": 0.32340489374695575
+        }
+      },
+      {
+        "node_id": "chunk:ain_t_living_long_like_this_0",
+        "passage_index": 12,
+        "title": "Ain't Living Long Like This",
+        "score": 0.0423428846103114,
+        "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible.",
+        "score_breakdown": {
+          "dense": 0.04984674168801749,
+          "graph": 0.04975725560633928,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:larry_norman_0",
+        "passage_index": 14,
+        "title": "Larry Norman",
+        "score": 0.04233827713207559,
+        "text": "Larry Norman\nLarry David Norman (April 8, 1947 – February 24, 2008) was an American musician, singer, songwriter, record label owner, and record producer. He is considered to be one of the pioneers of Christian rock music, and released more than 100 albums.",
+        "score_breakdown": {
+          "dense": 0.04996600573173611,
+          "graph": 0.049523246598735755,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:warner_records_0",
+        "passage_index": 9,
+        "title": "Warner Records",
+        "score": 0.042337086750232567,
+        "text": "Warner Records\nWarner Bros. Records Parent company Warner Music Group Founded March 19, 1958; 60 years ago (1958 - 03 - 19) Founder James Conkling Distributor (s) Self - distributed (In the US) WEA International (Outside the US) Rhino Entertainment Company (Re-issues) Genre Various Country of origin United States Location Burbank, California, U.S. Official website warnerbrosrecords.com",
+        "score_breakdown": {
+          "dense": 0.049965743926635775,
+          "graph": 0.0495197586352763,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:love_sign_0",
+        "passage_index": 19,
+        "title": "Love Sign",
+        "score": 0.04225453758334928,
+        "text": "Love Sign\n\"Love Sign\" is a song by American musician Prince, from the \"1-800-NEW-FUNK\" compilation album released by his independent record label NPG Records in 1994.",
+        "score_breakdown": {
+          "dense": 0.05014687658962295,
+          "graph": 0.048912518196855534,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:aretha_franklin_0",
+        "passage_index": 10,
+        "title": "Aretha Franklin",
+        "score": 0.04224988289092628,
+        "text": "Aretha Franklin\nAfter turning 18, Franklin confided to her father that she aspired to follow Sam Cooke to record pop music. Serving as her manager, C.L. agreed to the move and helped to produce a two - song demo that soon was brought to the attention of Columbia Records, who agreed to sign her in 1960. Franklin was signed as a ``five - percent artist ''. During this period, Franklin would be coached by choreographer Cholly Atkins to prepare for her pop performances. Before signing with Columbia, Sam Cooke tried to persuade Franklin's father to have his label, RCA sign Franklin. He had also been courted by local record label owner Berry Gordy to sign Franklin and her elder sister Erma to his Tamla label. Franklin's father felt the label was not established enough yet. Franklin's first Columbia single,`` Today I Sing the Blues'', was issued in September 1960 and later reached the top ten of the Hot Rhythm & Blues Sellers chart.",
+        "score_breakdown": {
+          "dense": 0.05012580218674667,
+          "graph": 0.0489356389607187,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:a_king_in_the_kindness_room_0",
+        "passage_index": 8,
+        "title": "A King in the Kindness Room",
+        "score": 0.04222471405743916,
+        "text": "A King in the Kindness Room\nA King in the Kindness Room is the ninth solo album by Australian guitarist and songwriter Ed Kuepper recorded in 1995 and released on the Hot label.",
+        "score_breakdown": {
+          "dense": 0.05009301767997455,
+          "graph": 0.04891184777817718,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bob_shad_0",
+        "passage_index": 6,
+        "title": "Bob Shad",
+        "score": 0.04218951888994043,
+        "text": "Bob Shad\nRobert \"Bob\" Shad (born Abraham Shadrinsky; February 12, 1920 – March 13, 1985) was an American record producer and record label owner. He produced the first album by Big Brother and the Holding Company (featuring Janis Joplin). Among his more successful labels were Time Records, Brent Records, and Mainstream Records.",
+        "score_breakdown": {
+          "dense": 0.05002787217785198,
+          "graph": 0.048913963973739476,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the name of the performer of What Kind of Love?",
+        "resolved_sub_question": "What is the name of the performer of What Kind of Love?",
+        "sentence_id": "sentence:what_kind_of_love_0_0_what_kind_of_love_is_a_song_co_written_and_recorded_by_american_country_music",
+        "sentence": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell.",
+        "score": 0.49980358141572134,
+        "source_title": "What Kind of Love",
+        "hop_answer": "Rodney Crowell",
+        "hop_thought": "The performer of \"What Kind of Love\" is mentioned in the text as Rodney Crowell.",
+        "hop_raw_response": "The performer of \"What Kind of Love\" is mentioned in the text as Rodney Crowell.\nAnswer: Rodney Crowell",
+        "evidence_passages": [
+          {
+            "title": "What Kind of Love",
+            "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+          },
+          {
+            "title": "What Kind of Love",
+            "text": "What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. It was released in June 1992 as the second single from the album \"Life Is Messy\". The song reached number 11 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and peaked at number 2 on the \"RPM\" Country Tracks in Canada."
+          },
+          {
+            "title": "Sound of Love",
+            "text": "Sound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the name of the record label of this performer?",
+        "resolved_sub_question": "What is the name of the record label of this performer? Context: Rodney Crowell.",
+        "sentence_id": "sentence:ain_t_living_long_like_this_0_0_ain_t_living_long_like_this_is_the_debut_studio_album_by_american_country_music",
+        "sentence": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.",
+        "score": 0.526829376211896,
+        "source_title": "Ain't Living Long Like This",
+        "hop_answer": "Warner Bros. Records",
+        "hop_thought": "The context indicates that Rodney Crowell released his debut album \"Ain't Living Long Like This\" through Warner Bros. Records.",
+        "hop_raw_response": "The context indicates that Rodney Crowell released his debut album \"Ain't Living Long Like This\" through Warner Bros. Records.\nAnswer: Warner Bros. Records",
+        "evidence_passages": [
+          {
+            "title": "Ain't Living Long Like This",
+            "text": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros."
+          },
+          {
+            "title": "Ain't Living Long Like This",
+            "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible."
+          },
+          {
+            "title": "What Kind of Love",
+            "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the owner of this record label?",
+        "resolved_sub_question": "Who is the owner of this record label? Context: Rodney Crowell; Warner Bros. Records.",
+        "sentence_id": "sentence:ain_t_living_long_like_this_0_0_ain_t_living_long_like_this_is_the_debut_studio_album_by_american_country_music",
+        "sentence": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.",
+        "score": 0.4864813762118959,
+        "source_title": "Ain't Living Long Like This",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about the ownership of Warner Bros. Records.",
+        "hop_raw_response": "The context provided does not contain information about the ownership of Warner Bros. Records.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ain't Living Long Like This",
+            "text": "Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros."
+          },
+          {
+            "title": "Ain't Living Long Like This",
+            "text": "Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. Records. It failed to enter the Top Country Albums chart. The songs, \"Elvira\", \"Baby Better Start Turnin' 'Em Down\" and \"(Now and Then, There's) A Fool Such as I\" were released as singles but they all failed to chart within the top 40. Despite this, \"Ain't Living Long Like This\" is considered one Crowell's best and most influential albums. Brett Hartenbach of Allmusic says it \"\"not only showcases his songwriting prowess, but also his ability to deliver a song, whether it's one of his own or the work of another writer\"\". Most of the songs on this album were later covered by other artists including The Oak Ridge Boys and Alan Jackson. When the album was re-released in 2002 the font on the cover was enlarged to make it more legible."
+          },
+          {
+            "title": "What Kind of Love",
+            "text": "\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the name of the performer of What Kind of Love? => Rodney Crowell (source: What Kind of Love)\n2. What is the name of the record label of this performer? => Warner Bros. Records (source: Ain't Living Long Like This)\n3. Who is the owner of this record label? (source: Ain't Living Long Like This)\n\nFact hints:\n- Kind of Love is a song by Rodney Crowell\n\nWikipedia Title: What Kind of Love\nWhat Kind of Love \"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell. The song reached number 11 on the U.S.\n\nWikipedia Title: What Kind of Love\n\"What Kind of Love\" is a song co-written and recorded by American country music artist Rodney Crowell.\n\nWikipedia Title: Ain't Living Long Like This\nAin't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros.\n\nWikipedia Title: Ain't Living Long Like This\nAin't Living Long Like This Ain't Living Long Like This is the debut studio album by American country music singer-songwriter Rodney Crowell, released in 1978 by Warner Bros. It failed to enter the Top Country Albums chart.\n\nWikipedia Title: Love Sign\nLove Sign \"Love Sign\" is a song by American musician Prince, from the \"1-800-NEW-FUNK\" compilation album released by his independent record label NPG Records in 1994.\n\nWikipedia Title: Aretha Franklin\nHe had also been courted by local record label owner Berry Gordy to sign Franklin and her elder sister Erma to his Tamla label. Franklin's father felt the label was not established enough yet.\n\nWikipedia Title: Barbara Pittman\nPittman's most popular recordings include \"I Need A Man\" on the Sun label and \"Two Young Fools In Love\", released on Sam Phillips' International label. Barbara Pittman Barbara Pittman (April 6, 1938 – October 29, 2005) was an American singer, one of the few female singers to record at Sun Studio.\n\nWikipedia Title: Larry Norman\nLarry Norman Larry David Norman (April 8, 1947 – February 24, 2008) was an American musician, singer, songwriter, record label owner, and record producer. He is considered to be one of the pioneers of Christian rock music, and released more than 100 albums.\n\nWikipedia Title: Sound of Love\nSound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.\n\nWikipedia Title: Sound of Love\nSound of Love Sound of Love is a live album by jazz drummer Paul Motian recorded at the Village Vanguard in 1995 and on the Winter & Winter label in 1997.\n\nWikipedia Title: Warner Records\nOfficial website warnerbrosrecords.com Warner Records Warner Bros.\n\nQuestion: Who is the owner of the record label of the performer of What Kind of Love?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The performer of \"What Kind of Love\" is Rodney Crowell. Rodney Crowell's record label for his debut album \"Ain't Living Long Like This\" is Warner Bros. Records. To find the owner of Warner Bros. Records, we need information about the ownership of the label. However, the provided passages do not contain specific information about who owns Warner Bros. Records.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The performer of \"What Kind of Love\" is Rodney Crowell. Rodney Crowell's record label for his debut album \"Ain't Living Long Like This\" is Warner Bros. Records. To find the owner of Warner Bros. Records, we need information about the ownership of the label. However, the provided passages do not contain specific information about who owns Warner Bros. Records.\nAnswer: Unknown"
+}

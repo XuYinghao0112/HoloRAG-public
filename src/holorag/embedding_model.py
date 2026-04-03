@@ -72,7 +72,6 @@ class NVEmbedV2Encoder:
                 max_length=max_length,
             )
         except torch.OutOfMemoryError:
-            self._cleanup_cuda()
             if batch_size <= 1:
                 raise
             next_batch_size = max(1, batch_size // 2)
@@ -105,7 +104,6 @@ class NVEmbedV2Encoder:
             else:
                 batch_array = np.asarray(embeddings)
             all_embeddings.append(np.asarray(batch_array, dtype=np.float32))
-            self._cleanup_cuda()
         return np.vstack(all_embeddings)
 
     def _cleanup_cuda(self) -> None:

@@ -1,0 +1,1079 @@
+{
+  "query": "Who was the British general in the battle named after the birth city of the person who recorded Mother-in-Law?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "British general",
+    "Mother-in-Law"
+  ],
+  "raw_query_entities": [
+    "British general",
+    "Mother-in-Law"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "British general",
+      "node_id": "entity:british",
+      "resolved_text": "British",
+      "score": 0.608,
+      "alias_score": 0.5,
+      "relation_score": 0.7,
+      "context_score": 0.6571428571428571,
+      "compatibility_score": 0.775,
+      "score_margin": 0.07933333333333337,
+      "confident": false
+    },
+    {
+      "mention": "Mother-in-Law",
+      "node_id": "entity:title_anchor_mother_in_law_song",
+      "resolved_text": "Mother-in-Law (song)",
+      "score": 0.6512714285714285,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.8,
+      "compatibility_score": 0.61125,
+      "score_margin": 0.1067999999999999,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who recorded Mother-in-Law?",
+    "What is the birth city of the person who recorded Mother-in-Law?",
+    "What battle is named after this birth city?",
+    "Who was the British general in this battle?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_mother_in_law_lounge",
+      "score": 0.601887149284887,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mother_in_law_song",
+      "score": 0.5933884915857077,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:new_orleans",
+      "score": 0.3801037262055412,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:new_orleans_louisiana",
+      "score": 0.3192384533741527,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:k_doe",
+      "score": 0.28411236810094964,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ernie_k_doe",
+      "score": 0.23924503022061944,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:american_revolutionary_war",
+      "score": 0.2172409293800464,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+      "score": 0.20065528155510315,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:war_of_1812",
+      "score": 0.18351624467690505,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_new_orleans",
+      "score": 0.15495050037060726,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:british_soldiers",
+      "score": 0.15374465369974813,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:british_fleet",
+      "score": 0.15124256006273148,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:mother_in_law_lounge_is_located_in_new_orleans_louisiana_sentence_mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a",
+      "text": "Mother-in-Law Lounge is located in New Orleans Louisiana",
+      "head_id": "entity:title_anchor_mother_in_law_lounge",
+      "tail_id": "entity:new_orleans_louisiana",
+      "sentence_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+      "chunk_id": "chunk:mother_in_law_lounge_0",
+      "document_index": 11,
+      "score": 0.31675310517128435
+    },
+    {
+      "fact_id": "fact:mother_in_law_recorded_by_ernie_k_doe_sentence_mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_d",
+      "text": "Mother-in-Law recorded by Ernie K-Doe",
+      "head_id": "entity:title_anchor_mother_in_law_song",
+      "tail_id": "entity:ernie_k_doe",
+      "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+      "chunk_id": "chunk:mother_in_law_song_0",
+      "document_index": 9,
+      "score": 0.29176697736251245
+    },
+    {
+      "fact_id": "fact:mother_in_law_lounge_dedicated_to_ernie_k_doe_sentence_mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music",
+      "text": "Mother-in-Law Lounge dedicated to Ernie K-Doe",
+      "head_id": "entity:title_anchor_mother_in_law_lounge",
+      "tail_id": "entity:ernie_k_doe",
+      "sentence_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+      "chunk_id": "chunk:mother_in_law_lounge_0",
+      "document_index": 11,
+      "score": 0.18175363613907036
+    },
+    {
+      "fact_id": "fact:battle_of_new_orleans_was_part_of_war_of_1812_sentence_battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_",
+      "text": "Battle of New Orleans was part of War of 1812",
+      "head_id": "entity:title_anchor_battle_of_new_orleans",
+      "tail_id": "entity:war_of_1812",
+      "sentence_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "chunk_id": "chunk:battle_of_new_orleans_0",
+      "document_index": 8,
+      "score": 0.18103410781670534
+    },
+    {
+      "fact_id": "fact:british_force_commanded_by_admiral_alexander_cochrane_and_general_edward_pakenham_sentence_battle_of_new_orleans_0_1_ame",
+      "text": "British force commanded by Admiral Alexander Cochrane and General Edward Pakenham",
+      "head_id": "entity:british_force",
+      "tail_id": "entity:admiral_alexander_cochrane_and_general_edward_pakenham",
+      "sentence_id": "sentence:battle_of_new_orleans_0_1_american_combatants_commanded_by_major_general_andrew_jackson_prevented_a_much",
+      "chunk_id": "chunk:battle_of_new_orleans_0",
+      "document_index": 8,
+      "score": 0.12603546671894292
+    },
+    {
+      "fact_id": "fact:battle_of_new_orleans_occurred_on_december_14_1814_to_january_18_1815_sentence_battle_of_new_orleans_0_0_the_battle_of_n",
+      "text": "Battle of New Orleans occurred on December 14 1814 to January 18 1815",
+      "head_id": "entity:title_anchor_battle_of_new_orleans",
+      "tail_id": "entity:december_14_1814_to_january_18_1815",
+      "sentence_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "chunk_id": "chunk:battle_of_new_orleans_0",
+      "document_index": 8,
+      "score": 0.12388998712412515
+    }
+  ],
+  "bridge_entities": [
+    "Ernie K-Doe",
+    "Mother-in-Law Lounge",
+    "New Orleans Louisiana"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who recorded Mother-in-Law?",
+      "resolved_sub_question": "Who recorded Mother-in-Law?",
+      "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+      "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+      "score": 0.6665149834232331,
+      "source_title": "Mother-in-Law (song)",
+      "hop_answer": "Ernie K-Doe",
+      "hop_thought": "The evidence states that \"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+      "hop_raw_response": "The evidence states that \"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.\nAnswer: Ernie K-Doe",
+      "evidence_passages": [
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+        },
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+        },
+        {
+          "title": "Mother-in-Law Lounge",
+          "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the birth city of the person who recorded Mother-in-Law?",
+      "resolved_sub_question": "What is the birth city of the person who recorded Mother-in-Law? Context: Ernie K-Doe.",
+      "sentence_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+      "sentence": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe.",
+      "score": 0.5274257384966896,
+      "source_title": "Mother-in-Law Lounge",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain information about Ernie K-Doe's birth city.",
+      "hop_raw_response": "The evidence provided does not contain information about Ernie K-Doe's birth city.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Mother-in-Law Lounge",
+          "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+        },
+        {
+          "title": "Mother-in-Law Lounge",
+          "text": "Mother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe."
+        },
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+        }
+      ]
+    },
+    {
+      "sub_question": "What battle is named after this birth city?",
+      "resolved_sub_question": "What battle is named after this birth city? Context: Ernie K-Doe.",
+      "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+      "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+      "score": 0.44266223756742473,
+      "source_title": "Mother-in-Law (song)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about a battle named after Ernie K-Doe's birth city, New Orleans. There is no mention of any battle in the given evidence.",
+      "hop_raw_response": "The context provided does not contain information about a battle named after Ernie K-Doe's birth city, New Orleans. There is no mention of any battle in the given evidence.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+        },
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+        },
+        {
+          "title": "Mother-in-Law Lounge",
+          "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was the British general in this battle?",
+      "resolved_sub_question": "Who was the British general in this battle? Context: Ernie K-Doe.",
+      "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+      "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+      "score": 0.4033142375674248,
+      "source_title": "Mother-in-Law (song)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not contain information about a British general or any battle related to Ernie K-Doe or his birth city. There is no direct link between Ernie K-Doe and a specific battle involving a British general.",
+      "hop_raw_response": "The provided context does not contain information about a British general or any battle related to Ernie K-Doe or his birth city. There is no direct link between Ernie K-Doe and a specific battle involving a British general.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+        },
+        {
+          "title": "Mother-in-Law (song)",
+          "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+        },
+        {
+          "title": "Mother-in-Law Lounge",
+          "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_mother_in_law_lounge",
+      "score": 0.08427605959635165,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+      "score": 0.07410873716955842,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_mother_in_law_song",
+      "score": 0.07194139906373144,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ernie_k_doe",
+      "score": 0.05490172013682064,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:new_orleans_louisiana",
+      "score": 0.05430641076992903,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+      "score": 0.04645609163955676,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:new_orleans",
+      "score": 0.04641598703496159,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+      "score": 0.03953366348062449,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:k_doe",
+      "score": 0.03662750132649191,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:battle_of_new_orleans_0_1_american_combatants_commanded_by_major_general_andrew_jackson_prevented_a_much",
+      "score": 0.027703726068610362,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_battle_of_new_orleans",
+      "score": 0.02721102969610581,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_revolutionary_war",
+      "score": 0.02544149661728097,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:war_of_1812",
+      "score": 0.025239669055251455,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mother_in_law_lounge_0_2_the_exterior_of_the_building_is_decorated_with_colorful_murals_depicting_k_doe_a",
+      "score": 0.024100525778083557,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:british_force",
+      "score": 0.023638100882717672,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:mother_in_law_lounge_0",
+      "score": 0.019772220650576863,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:british_infantry",
+      "score": 0.018712098442354465,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:british_soldiers",
+      "score": 0.01830563555759618,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:december_14_1814_to_january_18_1815",
+      "score": 0.016617107279915607,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:british_fleet",
+      "score": 0.01634648800535641,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:mother_in_law_lounge_0",
+      "passage_index": 11,
+      "title": "Mother-in-Law Lounge",
+      "score": 0.10002137847976295,
+      "text": "Mother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.",
+      "score_breakdown": {
+        "dense": 0.053034217993824455,
+        "graph": 0.06063875291597088,
+        "fact": 0.35107288472245496
+      }
+    },
+    {
+      "node_id": "chunk:mother_in_law_song_0",
+      "passage_index": 9,
+      "title": "Mother-in-Law (song)",
+      "score": 0.09772836796825737,
+      "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records.",
+      "score_breakdown": {
+        "dense": 0.053840777111190584,
+        "graph": 0.055848328063896044,
+        "fact": 0.3424096142528917
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_new_orleans_0",
+      "passage_index": 8,
+      "title": "Battle of New Orleans",
+      "score": 0.09198570860755154,
+      "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+      "score_breakdown": {
+        "dense": 0.05272177811919464,
+        "graph": 0.05670368496098824,
+        "fact": 0.3065175010246534
+      }
+    },
+    {
+      "node_id": "chunk:panos_kolokotronis_0",
+      "passage_index": 10,
+      "title": "Panos Kolokotronis",
+      "score": 0.04460407744465966,
+      "text": "Panos Kolokotronis\nPanos Kolokotronis () was the eldest son of the Greek General Theodoros Kolokotronis and his mother was Aikaterini Karousou (). He was born on the island of Zakynthos in 1800, while his father was serving there as a Major in the British Infantry. He fought along with his father in the Greek War of Independence and distinguished himself in many battles.",
+      "score_breakdown": {
+        "dense": 0.05270957655864737,
+        "graph": 0.052046034458012,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_the_saintes_0",
+      "passage_index": 3,
+      "title": "Battle of the Saintes",
+      "score": 0.044566504151019634,
+      "text": "Battle of the Saintes\nThe Battle of the Saintes (known to the French as the Bataille de la Dominique), or Battle of Dominica, was an important naval battle in the Caribbean between the British and the French that took place 9 April 1782 – 12 April 1782, during the American Revolutionary War. The British fleet under Admiral Sir George Rodney defeated a French fleet under the Comte de Grasse, forcing the French and Spanish to abandon a planned invasion of Jamaica.",
+      "score_breakdown": {
+        "dense": 0.052454469873410105,
+        "graph": 0.052388485735480245,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_the_monongahela_0",
+      "passage_index": 5,
+      "title": "Battle of the Monongahela",
+      "score": 0.04455289444078027,
+      "text": "Battle of the Monongahela\nThe Battle of the Monongahela (also known as the Battle of Braddock's Field and the Battle of the Wilderness) took place on 9 July 1755, at the beginning of the French and Indian War, at Braddock's Field in what is now Braddock, Pennsylvania, east of Pittsburgh. A British force under General Edward Braddock, moving to take Fort Duquesne, was defeated by a force of French and Canadian troops under Captain Daniel Liénard de Beaujeu with its American Indian allies.",
+      "score_breakdown": {
+        "dense": 0.05267750483978164,
+        "graph": 0.051934222596334546,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_beauport_0",
+      "passage_index": 2,
+      "title": "Battle of Beauport",
+      "score": 0.04452217519821157,
+      "text": "Battle of Beauport\nThe Battle of Beauport, also known as the Battle of Montmorency, fought on 31 July 1759, was an important confrontation between the British and French Armed Forces during the Seven Years' War (also known as the French and Indian War and the War of Conquest) of the French province of Canada. The attack conducted by the British against the French defense line of Beauport, some east of Quebec was checked, and the British soldiers of General James Wolfe retreated with 443 casualties and losses.",
+      "score_breakdown": {
+        "dense": 0.05260401947915102,
+        "graph": 0.05196654828226168,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_dunkirk_0",
+      "passage_index": 16,
+      "title": "Battle of Dunkirk",
+      "score": 0.044480876277326276,
+      "text": "Battle of Dunkirk\nThe Battle of Dunkirk was a military operation that took place in Dunkirk (Dunkerque), France, during the Second World War. The battle was fought between the Allies and Nazi Germany. As part of the Battle of France on the Western Front, the Battle of Dunkirk was the defence and evacuation to Britain of British and other Allied forces in Europe from 26 May to 4 June 1940.",
+      "score_breakdown": {
+        "dense": 0.05251287405211096,
+        "graph": 0.05199598516221748,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_porto_praya_0",
+      "passage_index": 12,
+      "title": "Battle of Porto Praya",
+      "score": 0.04446712193428622,
+      "text": "Battle of Porto Praya\nThe Battle of Porto Praya was a naval battle that took place during the American Revolutionary War on 16 April 1781 between a British squadron under Commodore George Johnstone and a French squadron under the Bailli de Suffren.",
+      "score_breakdown": {
+        "dense": 0.05251599043967384,
+        "graph": 0.05194442397488537,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:battle_of_alto_de_los_godos_0",
+      "passage_index": 19,
+      "title": "Battle of Alto de los Godos",
+      "score": 0.0444321236388623,
+      "text": "Battle of Alto de los Godos\nThe Battle of Alto de los Godos was a battle that took place on 25 May 1813 in Maturín, Venezuela, in the Spanish colonial Viceroyalty of New Granada. It resulted in a patriot victory against the forces of Spanish general Domingo de Monteverde.",
+      "score_breakdown": {
+        "dense": 0.05272649035806226,
+        "graph": 0.051441846473093515,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_mother_in_law_lounge",
+        "score": 0.08427605959635165,
+        "text": "Mother-in-Law Lounge",
+        "metadata": {
+          "canonical_name": "Mother-in-Law Lounge",
+          "aliases": [
+            "ML",
+            "Mother-in-Law Lounge"
+          ],
+          "surface_forms": [
+            "ML",
+            "Mother-in-Law Lounge"
+          ],
+          "title_anchor": "Mother-in-Law Lounge"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_mother_in_law_song",
+        "score": 0.07194139906373144,
+        "text": "Mother-in-Law (song)",
+        "metadata": {
+          "canonical_name": "Mother-in-Law (song)",
+          "aliases": [
+            "Mother-in-Law"
+          ],
+          "surface_forms": [
+            "Mother-in-Law"
+          ],
+          "title_anchor": "Mother-in-Law (song)"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+        "score": 0.07410873716955842,
+        "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe.",
+        "metadata": {
+          "title": "Mother-in-Law Lounge",
+          "chunk_id": "chunk:mother_in_law_lounge_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Mother-in-Law Lounge",
+              "relation": "is located in",
+              "tail": "New Orleans Louisiana"
+            },
+            {
+              "head": "Mother-in-Law Lounge",
+              "relation": "dedicated to",
+              "tail": "Ernie K-Doe"
+            }
+          ],
+          "entities": [
+            "Mother-in-Law Lounge",
+            "New Orleans Louisiana",
+            "Ernie K-Doe"
+          ],
+          "entity_ids": [
+            "entity:ernie_k_doe",
+            "entity:new_orleans_louisiana",
+            "entity:title_anchor_mother_in_law_lounge"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+        "score": 0.04645609163955676,
+        "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+        "metadata": {
+          "title": "Mother-in-Law (song)",
+          "chunk_id": "chunk:mother_in_law_song_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Mother-in-Law",
+              "relation": "recorded by",
+              "tail": "Ernie K-Doe"
+            }
+          ],
+          "entities": [
+            "Mother-in-Law",
+            "Ernie K-Doe"
+          ],
+          "entity_ids": [
+            "entity:ernie_k_doe",
+            "entity:title_anchor_mother_in_law_song"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:battle_of_new_orleans_0_0_the_battle_of_new_orleans_was_a_series_of_engagements_fought_between_december_14",
+        "score": 0.03953366348062449,
+        "text": "The Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812.",
+        "metadata": {
+          "title": "Battle of New Orleans",
+          "chunk_id": "chunk:battle_of_new_orleans_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Battle of New Orleans",
+              "relation": "was part of",
+              "tail": "War of 1812"
+            },
+            {
+              "head": "Battle of New Orleans",
+              "relation": "occurred on",
+              "tail": "December 14 1814 to January 18 1815"
+            }
+          ],
+          "entities": [
+            "Battle of New Orleans",
+            "War of 1812",
+            "December 14 1814",
+            "January 18 1815"
+          ],
+          "entity_ids": [
+            "entity:december_14_1814",
+            "entity:december_14_1814_to_january_18_1815",
+            "entity:january_18_1815",
+            "entity:title_anchor_battle_of_new_orleans",
+            "entity:war_of_1812"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:battle_of_new_orleans_0_1_american_combatants_commanded_by_major_general_andrew_jackson_prevented_a_much",
+        "score": 0.027703726068610362,
+        "text": "American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+        "metadata": {
+          "title": "Battle of New Orleans",
+          "chunk_id": "chunk:battle_of_new_orleans_0",
+          "sentence_index": 1,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "American combatants",
+              "relation": "commanded by",
+              "tail": "Major General Andrew Jackson"
+            },
+            {
+              "head": "British force",
+              "relation": "commanded by",
+              "tail": "Admiral Alexander Cochrane and General Edward Pakenham"
+            },
+            {
+              "head": "American combatants",
+              "relation": "prevented",
+              "tail": "British force from seizing New Orleans and the Louisiana Purchase territory"
+            }
+          ],
+          "entities": [
+            "American combatants",
+            "Major General Andrew Jackson",
+            "British force",
+            "Admiral Alexander Cochrane",
+            "General Edward Pakenham",
+            "New Orleans",
+            "Louisiana Purchase"
+          ],
+          "entity_ids": [
+            "entity:admiral_alexander_cochrane",
+            "entity:admiral_alexander_cochrane_and_general_edward_pakenham",
+            "entity:american_combatants",
+            "entity:british_force",
+            "entity:british_force_from_seizing_new_orleans_and_the_louisiana_purchase_territory",
+            "entity:general_edward_pakenham",
+            "entity:louisiana_purchase",
+            "entity:major_general_andrew_jackson",
+            "entity:new_orleans"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mother_in_law_lounge_0_2_the_exterior_of_the_building_is_decorated_with_colorful_murals_depicting_k_doe_a",
+        "score": 0.024100525778083557,
+        "text": "The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.",
+        "metadata": {
+          "title": "Mother-in-Law Lounge",
+          "chunk_id": "chunk:mother_in_law_lounge_0",
+          "sentence_index": 2,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "prominent figures in New Orleans music",
+              "relation": "collaborated with",
+              "tail": "K-Doe"
+            }
+          ],
+          "entities": [
+            "K-Doe",
+            "New Orleans"
+          ],
+          "entity_ids": [
+            "entity:k_doe",
+            "entity:new_orleans",
+            "entity:prominent_figures_in_new_orleans_music"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mother_in_law_lounge_0_1_it_is_at_the_downtown_river_corner_of_claiborne_avenue_and_columbus_street_in_th",
+        "score": 0.01162158995341528,
+        "text": "It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans.",
+        "metadata": {
+          "title": "Mother-in-Law Lounge",
+          "chunk_id": "chunk:mother_in_law_lounge_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Claiborne Avenue and Columbus Street",
+              "relation": "located in",
+              "tail": "7th Ward of New Orleans"
+            }
+          ],
+          "entities": [
+            "Claiborne Avenue",
+            "Columbus Street",
+            "7th Ward of New Orleans"
+          ],
+          "entity_ids": [
+            "entity:7th_ward_of_new_orleans",
+            "entity:claiborne_avenue",
+            "entity:claiborne_avenue_and_columbus_street",
+            "entity:columbus_street"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:mother_in_law_lounge_0",
+        "score": 0.019772220650576863,
+        "text": "Mother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.",
+        "metadata": {
+          "title": "Mother-in-Law Lounge",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:7th_ward_of_new_orleans",
+            "entity:claiborne_avenue",
+            "entity:claiborne_avenue_and_columbus_street",
+            "entity:columbus_street",
+            "entity:ernie_k_doe",
+            "entity:k_doe",
+            "entity:new_orleans",
+            "entity:new_orleans_louisiana",
+            "entity:prominent_figures_in_new_orleans_music",
+            "entity:title_anchor_mother_in_law_lounge"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_new_orleans_0",
+        "score": 0.01364131647750014,
+        "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+        "metadata": {
+          "title": "Battle of New Orleans",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:admiral_alexander_cochrane",
+            "entity:admiral_alexander_cochrane_and_general_edward_pakenham",
+            "entity:american_combatants",
+            "entity:british_force",
+            "entity:british_force_from_seizing_new_orleans_and_the_louisiana_purchase_territory",
+            "entity:december_14_1814",
+            "entity:december_14_1814_to_january_18_1815",
+            "entity:general_edward_pakenham",
+            "entity:january_18_1815",
+            "entity:louisiana_purchase",
+            "entity:major_general_andrew_jackson",
+            "entity:new_orleans",
+            "entity:title_anchor_battle_of_new_orleans",
+            "entity:war_of_1812"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mother_in_law_song_0",
+        "score": 0.01332606325768275,
+        "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records.",
+        "metadata": {
+          "title": "Mother-in-Law (song)",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:allen_toussaint",
+            "entity:billboard",
+            "entity:billboard_hot_100_chart",
+            "entity:billboard_r_b_chart",
+            "entity:ernie_k_doe",
+            "entity:hot",
+            "entity:minit_records",
+            "entity:title_anchor_mother_in_law_song"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:panos_kolokotronis_0",
+        "score": 0.0022369223114833033,
+        "text": "Panos Kolokotronis\nPanos Kolokotronis () was the eldest son of the Greek General Theodoros Kolokotronis and his mother was Aikaterini Karousou (). He was born on the island of Zakynthos in 1800, while his father was serving there as a Major in the British Infantry. He fought along with his father in the Greek War of Independence and distinguished himself in many battles.",
+        "metadata": {
+          "title": "Panos Kolokotronis",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:aikaterini_karousou",
+            "entity:british_infantry",
+            "entity:greek_general",
+            "entity:greek_war",
+            "entity:greek_war_of_independence",
+            "entity:independence",
+            "entity:major",
+            "entity:theodoros_kolokotronis",
+            "entity:title_anchor_panos_kolokotronis",
+            "entity:zakynthos"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Mother-in-Law Lounge\nMother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.\n\nMother-in-Law (song)\nMother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records.\n\nBattle of New Orleans\nBattle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.\n\nPanos Kolokotronis\nPanos Kolokotronis\nPanos Kolokotronis () was the eldest son of the Greek General Theodoros Kolokotronis and his mother was Aikaterini Karousou (). He was born on the island of Zakynthos in 1800, while his father was serving there as a Major in the British Infantry. He fought along with his father in the Greek War of Independence and distinguished himself in many battles.\n\nBattle of the Saintes\nBattle of the Saintes\nThe Battle of the Saintes (known to the French as the Bataille de la Dominique), or Battle of Dominica, was an important naval battle in the Caribbean between the British and the French that took place 9 April 1782 – 12 April 1782, during the American Revolutionary War. The British fleet under Admiral Sir George Rodney defeated a French fleet under the Comte de Grasse, forcing the French and Spanish to abandon a planned invasion of Jamaica.\n\nMother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.\n\nMother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe.\n\nMeredith Grey\nMeredith Grey\nAfter Derek's death, Meredith returns to Grey Sloan Memorial to inform the others of his passing. Following the funeral service, Meredith impulsively packs up her belongings and leaves with the children to San Diego. Months pass by while her friends and family are unaware of her whereabouts. Eventually, parallels show similarities in Meredith's and Ellis' lives: Both have lost the love of their life, both run away from Seattle following their loss, and both eventually give birth to a daughter. Meredith names her newborn daughter after her mother. Although still grieving over Derek, Meredith returns to Seattle with the children and later becomes chief of general surgery. She sells the ``dream house ''and moves back to her mother's house, having purchased it back from Alex, and now lives there with Maggie and Amelia Shepherd, her sister - in - law.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:mother_in_law_lounge_0",
+        "passage_index": 11,
+        "title": "Mother-in-Law Lounge",
+        "score": 0.10002137847976295,
+        "text": "Mother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.",
+        "score_breakdown": {
+          "dense": 0.053034217993824455,
+          "graph": 0.06063875291597088,
+          "fact": 0.35107288472245496
+        }
+      },
+      {
+        "node_id": "chunk:mother_in_law_song_0",
+        "passage_index": 9,
+        "title": "Mother-in-Law (song)",
+        "score": 0.09772836796825737,
+        "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records.",
+        "score_breakdown": {
+          "dense": 0.053840777111190584,
+          "graph": 0.055848328063896044,
+          "fact": 0.3424096142528917
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_new_orleans_0",
+        "passage_index": 8,
+        "title": "Battle of New Orleans",
+        "score": 0.09198570860755154,
+        "text": "Battle of New Orleans\nThe Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812. American combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase.",
+        "score_breakdown": {
+          "dense": 0.05272177811919464,
+          "graph": 0.05670368496098824,
+          "fact": 0.3065175010246534
+        }
+      },
+      {
+        "node_id": "chunk:panos_kolokotronis_0",
+        "passage_index": 10,
+        "title": "Panos Kolokotronis",
+        "score": 0.04460407744465966,
+        "text": "Panos Kolokotronis\nPanos Kolokotronis () was the eldest son of the Greek General Theodoros Kolokotronis and his mother was Aikaterini Karousou (). He was born on the island of Zakynthos in 1800, while his father was serving there as a Major in the British Infantry. He fought along with his father in the Greek War of Independence and distinguished himself in many battles.",
+        "score_breakdown": {
+          "dense": 0.05270957655864737,
+          "graph": 0.052046034458012,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_the_saintes_0",
+        "passage_index": 3,
+        "title": "Battle of the Saintes",
+        "score": 0.044566504151019634,
+        "text": "Battle of the Saintes\nThe Battle of the Saintes (known to the French as the Bataille de la Dominique), or Battle of Dominica, was an important naval battle in the Caribbean between the British and the French that took place 9 April 1782 – 12 April 1782, during the American Revolutionary War. The British fleet under Admiral Sir George Rodney defeated a French fleet under the Comte de Grasse, forcing the French and Spanish to abandon a planned invasion of Jamaica.",
+        "score_breakdown": {
+          "dense": 0.052454469873410105,
+          "graph": 0.052388485735480245,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_the_monongahela_0",
+        "passage_index": 5,
+        "title": "Battle of the Monongahela",
+        "score": 0.04455289444078027,
+        "text": "Battle of the Monongahela\nThe Battle of the Monongahela (also known as the Battle of Braddock's Field and the Battle of the Wilderness) took place on 9 July 1755, at the beginning of the French and Indian War, at Braddock's Field in what is now Braddock, Pennsylvania, east of Pittsburgh. A British force under General Edward Braddock, moving to take Fort Duquesne, was defeated by a force of French and Canadian troops under Captain Daniel Liénard de Beaujeu with its American Indian allies.",
+        "score_breakdown": {
+          "dense": 0.05267750483978164,
+          "graph": 0.051934222596334546,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_beauport_0",
+        "passage_index": 2,
+        "title": "Battle of Beauport",
+        "score": 0.04452217519821157,
+        "text": "Battle of Beauport\nThe Battle of Beauport, also known as the Battle of Montmorency, fought on 31 July 1759, was an important confrontation between the British and French Armed Forces during the Seven Years' War (also known as the French and Indian War and the War of Conquest) of the French province of Canada. The attack conducted by the British against the French defense line of Beauport, some east of Quebec was checked, and the British soldiers of General James Wolfe retreated with 443 casualties and losses.",
+        "score_breakdown": {
+          "dense": 0.05260401947915102,
+          "graph": 0.05196654828226168,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_dunkirk_0",
+        "passage_index": 16,
+        "title": "Battle of Dunkirk",
+        "score": 0.044480876277326276,
+        "text": "Battle of Dunkirk\nThe Battle of Dunkirk was a military operation that took place in Dunkirk (Dunkerque), France, during the Second World War. The battle was fought between the Allies and Nazi Germany. As part of the Battle of France on the Western Front, the Battle of Dunkirk was the defence and evacuation to Britain of British and other Allied forces in Europe from 26 May to 4 June 1940.",
+        "score_breakdown": {
+          "dense": 0.05251287405211096,
+          "graph": 0.05199598516221748,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_porto_praya_0",
+        "passage_index": 12,
+        "title": "Battle of Porto Praya",
+        "score": 0.04446712193428622,
+        "text": "Battle of Porto Praya\nThe Battle of Porto Praya was a naval battle that took place during the American Revolutionary War on 16 April 1781 between a British squadron under Commodore George Johnstone and a French squadron under the Bailli de Suffren.",
+        "score_breakdown": {
+          "dense": 0.05251599043967384,
+          "graph": 0.05194442397488537,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:battle_of_alto_de_los_godos_0",
+        "passage_index": 19,
+        "title": "Battle of Alto de los Godos",
+        "score": 0.0444321236388623,
+        "text": "Battle of Alto de los Godos\nThe Battle of Alto de los Godos was a battle that took place on 25 May 1813 in Maturín, Venezuela, in the Spanish colonial Viceroyalty of New Granada. It resulted in a patriot victory against the forces of Spanish general Domingo de Monteverde.",
+        "score_breakdown": {
+          "dense": 0.05272649035806226,
+          "graph": 0.051441846473093515,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who recorded Mother-in-Law?",
+        "resolved_sub_question": "Who recorded Mother-in-Law?",
+        "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+        "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+        "score": 0.6665149834232331,
+        "source_title": "Mother-in-Law (song)",
+        "hop_answer": "Ernie K-Doe",
+        "hop_thought": "The evidence states that \"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+        "hop_raw_response": "The evidence states that \"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.\nAnswer: Ernie K-Doe",
+        "evidence_passages": [
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+          },
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+          },
+          {
+            "title": "Mother-in-Law Lounge",
+            "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the birth city of the person who recorded Mother-in-Law?",
+        "resolved_sub_question": "What is the birth city of the person who recorded Mother-in-Law? Context: Ernie K-Doe.",
+        "sentence_id": "sentence:mother_in_law_lounge_0_0_the_mother_in_law_lounge_is_a_live_music_venue_pub_and_a_shrine_in_new_orleans",
+        "sentence": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe.",
+        "score": 0.5274257384966896,
+        "source_title": "Mother-in-Law Lounge",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain information about Ernie K-Doe's birth city.",
+        "hop_raw_response": "The evidence provided does not contain information about Ernie K-Doe's birth city.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Mother-in-Law Lounge",
+            "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+          },
+          {
+            "title": "Mother-in-Law Lounge",
+            "text": "Mother-in-Law Lounge\nThe Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. It is at the downtown river corner of Claiborne Avenue and Columbus Street in the 7th Ward of New Orleans. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe."
+          },
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+          }
+        ]
+      },
+      {
+        "sub_question": "What battle is named after this birth city?",
+        "resolved_sub_question": "What battle is named after this birth city? Context: Ernie K-Doe.",
+        "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+        "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+        "score": 0.44266223756742473,
+        "source_title": "Mother-in-Law (song)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about a battle named after Ernie K-Doe's birth city, New Orleans. There is no mention of any battle in the given evidence.",
+        "hop_raw_response": "The context provided does not contain information about a battle named after Ernie K-Doe's birth city, New Orleans. There is no mention of any battle in the given evidence.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+          },
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+          },
+          {
+            "title": "Mother-in-Law Lounge",
+            "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was the British general in this battle?",
+        "resolved_sub_question": "Who was the British general in this battle? Context: Ernie K-Doe.",
+        "sentence_id": "sentence:mother_in_law_song_0_0_mother_in_law_is_a_1961_song_recorded_by_ernie_k_doe",
+        "sentence": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe.",
+        "score": 0.4033142375674248,
+        "source_title": "Mother-in-Law (song)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not contain information about a British general or any battle related to Ernie K-Doe or his birth city. There is no direct link between Ernie K-Doe and a specific battle involving a British general.",
+        "hop_raw_response": "The provided context does not contain information about a British general or any battle related to Ernie K-Doe or his birth city. There is no direct link between Ernie K-Doe and a specific battle involving a British general.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe."
+          },
+          {
+            "title": "Mother-in-Law (song)",
+            "text": "Mother-in-Law (song)\n\"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was a number-one hit in the U.S. on both the \"Billboard\" Hot 100 chart and the \"Billboard\" R&B chart. The song was written and produced by Allen Toussaint, who also played the piano solo. It was issued by Minit Records."
+          },
+          {
+            "title": "Mother-in-Law Lounge",
+            "text": "The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who recorded Mother-in-Law? => Ernie K-Doe (source: Mother-in-Law (song))\n2. What is the birth city of the person who recorded Mother-in-Law? (source: Mother-in-Law Lounge)\n3. What battle is named after this birth city? (source: Mother-in-Law (song))\n4. Who was the British general in this battle? (source: Mother-in-Law (song))\n\nFact hints:\n- British force commanded by Admiral Alexander Cochrane and General Edward Pakenham\n- Mother-in-Law recorded by Ernie K-Doe\n- Mother-in-Law Lounge dedicated to Ernie K-Doe\n- Mother-in-Law Lounge is located in New Orleans Louisiana\n\nWikipedia Title: Mother-in-Law Lounge\nMother-in-Law Lounge The Mother-in-Law Lounge is a live music venue, pub and a shrine in New Orleans, Louisiana dedicated to the memory of rhythm and blues singer, Ernie K-Doe. The exterior of the building is decorated with colorful murals depicting K-Doe and other prominent figures in New Orleans music, especially people who collaborated with K-Doe.\n\nWikipedia Title: Mother-in-Law (song)\nMother-in-Law (song) \"Mother-in-Law\" is a 1961 song recorded by Ernie K-Doe. It was issued by Minit Records.\n\nWikipedia Title: Battle of New Orleans\nAmerican combatants, commanded by Major General Andrew Jackson, prevented a much larger British force, commanded by Admiral Alexander Cochrane and General Edward Pakenham, from seizing New Orleans and the vast territory the United States had acquired with the Louisiana Purchase. Battle of New Orleans The Battle of New Orleans was a series of engagements fought between December 14, 1814 and January 18, 1815, constituting the last major battle of the War of 1812.\n\nWikipedia Title: Meredith Grey\nShe sells the ``dream house ''and moves back to her mother's house, having purchased it back from Alex, and now lives there with Maggie and Amelia Shepherd, her sister - in - law. Meredith names her newborn daughter after her mother.\n\nWikipedia Title: Battle of the Monongahela\nA British force under General Edward Braddock, moving to take Fort Duquesne, was defeated by a force of French and Canadian troops under Captain Daniel Liénard de Beaujeu with its American Indian allies. Battle of the Monongahela The Battle of the Monongahela (also known as the Battle of Braddock's Field and the Battle of the Wilderness) took place on 9 July 1755, at the beginning of the French and Indian War, at Braddock's Field in what is now Braddock, Pennsylvania, east of Pittsburgh.\n\nQuestion: Who was the British general in the battle named after the birth city of the person who recorded Mother-in-Law?\nDraft Answer: General Edward Pakenham\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "Ernie K-Doe, the person who recorded \"Mother-in-Law,\" was born in New Orleans, Louisiana. The battle named after this city is the Battle of New Orleans. The British general in this battle was General Edward Pakenham.",
+  "predicted_answer": "General Edward Pakenham",
+  "qa_raw_response": "Ernie K-Doe, the person who recorded \"Mother-in-Law,\" was born in New Orleans, Louisiana. The battle named after this city is the Battle of New Orleans. The British general in this battle was General Edward Pakenham.\nAnswer: General Edward Pakenham"
+}

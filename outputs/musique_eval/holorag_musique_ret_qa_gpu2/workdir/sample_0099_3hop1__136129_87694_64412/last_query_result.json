@@ -1,0 +1,1104 @@
+{
+  "query": "When did the place where the head of the catholic region named after the same saint as the Dakovo Cathedral become its own country?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Dakovo Cathedral"
+  ],
+  "raw_query_entities": [
+    "Dakovo Cathedral"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Dakovo Cathedral",
+      "node_id": "entity:baroque_cathedral",
+      "resolved_text": "Baroque cathedral",
+      "score": 0.5449999999999999,
+      "alias_score": 0.3333333333333333,
+      "relation_score": 0.7,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.00543333333333329,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What is the name of the saint after whom the Dakovo Cathedral is named?",
+    "Which catholic region is named after this saint?",
+    "Who is the head of this catholic region?",
+    "When did the place where this head of the catholic region is located become its own country?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:cathedral_cathedral",
+      "score": 0.3314710886156274,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_of_st",
+      "score": 0.3314709466325067,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:papal_basilica_of_st",
+      "score": 0.3294692190226888,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_basilica_of_saint_cecilia",
+      "score": 0.3294692190226888,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_albi_cathedral",
+      "score": 0.2994650592813231,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:alatri",
+      "score": 0.2994650592813231,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rione_sant_eustachio",
+      "score": 0.29417656095285216,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saint_eustace",
+      "score": 0.28750183911286487,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:vatican_city",
+      "score": 0.2817494879441172,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_vatican_city",
+      "score": 0.2817494879441172,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_akovo_cathedral",
+      "score": 0.2765661024706094,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_basilica_of_st",
+      "score": 0.2765536830326797,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:sant_eustachio_named_for_saint_eustace_sentence_sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and",
+      "text": "Sant'Eustachio named for Saint Eustace",
+      "head_id": "entity:title_anchor_sant_eustachio",
+      "tail_id": "entity:saint_eustace",
+      "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+      "chunk_id": "chunk:sant_eustachio_0",
+      "document_index": 15,
+      "score": 0.28550561131569413
+    },
+    {
+      "fact_id": "fact:akovo_cathedral_also_known_as_cathedral_basilica_of_st_sentence_akovo_cathedral_0_0_the_akovo_cathedral_or_cathedral_bas",
+      "text": "akovo Cathedral also_known_as Cathedral basilica of St",
+      "head_id": "entity:title_anchor_akovo_cathedral",
+      "tail_id": "entity:cathedral_basilica_of_st",
+      "sentence_id": "sentence:akovo_cathedral_0_0_the_akovo_cathedral_or_cathedral_basilica_of_st",
+      "chunk_id": "chunk:akovo_cathedral_0",
+      "document_index": 1,
+      "score": 0.27455768251890733
+    },
+    {
+      "fact_id": "fact:alatri_cathedral_is_located_in_alatri_lazio_italy_sentence_alatri_cathedral_0_0_alatri_cathedral_otherwise_the_basilica_",
+      "text": "Alatri Cathedral is located in Alatri Lazio Italy",
+      "head_id": "entity:title_anchor_alatri_cathedral",
+      "tail_id": "entity:alatri_lazio_italy",
+      "sentence_id": "sentence:alatri_cathedral_0_0_alatri_cathedral_otherwise_the_basilica_of_saint_paul_basilica_concattedral",
+      "chunk_id": "chunk:alatri_cathedral_0",
+      "document_index": 4,
+      "score": 0.24955421606776926
+    },
+    {
+      "fact_id": "fact:peter_located_in_vatican_sentence_st_peter_s_basilica_0_1_peter_in_the_vatican_italian_basilica_papale_di_san_pietro_in_",
+      "text": "Peter located in Vatican",
+      "head_id": "entity:peter",
+      "tail_id": "entity:vatican",
+      "sentence_id": "sentence:st_peter_s_basilica_0_1_peter_in_the_vatican_italian_basilica_papale_di_san_pietro_in_vaticano_or_si",
+      "chunk_id": "chunk:st_peter_s_basilica_0",
+      "document_index": 0,
+      "score": 0.23479123995343099
+    },
+    {
+      "fact_id": "fact:vitus_cathedral_named_after_golden_14th_century_mosaic_of_the_last_judgement_sentence_mosaic_0_5_vitus_cathedral_in_prag",
+      "text": "Vitus Cathedral named after golden 14th-century mosaic of the Last Judgement",
+      "head_id": "entity:vitus_cathedral",
+      "tail_id": "entity:golden_14th_century_mosaic_of_the_last_judgement",
+      "sentence_id": "sentence:mosaic_0_5_vitus_cathedral_in_prague_got_its_name_from_the_golden_14th_century_mosaic_of_th",
+      "chunk_id": "chunk:mosaic_0",
+      "document_index": 14,
+      "score": 0.21455254930300943
+    },
+    {
+      "fact_id": "fact:peter_is_cathedral_of_roman_catholic_archdiocese_of_akovo_osijek_sentence_akovo_cathedral_0_1_peter_is_the_cathedral_of_",
+      "text": "Peter is cathedral of Roman Catholic Archdiocese of akovo-Osijek",
+      "head_id": "entity:peter",
+      "tail_id": "entity:roman_catholic_archdiocese_of_akovo_osijek",
+      "sentence_id": "sentence:akovo_cathedral_0_1_peter_is_the_cathedral_of_the_roman_catholic_archdiocese_of_akovo_osijek_in",
+      "chunk_id": "chunk:akovo_cathedral_0",
+      "document_index": 1,
+      "score": 0.21122723439626043
+    },
+    {
+      "fact_id": "fact:sant_eustachio_located_in_rome_sentence_sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_b",
+      "text": "Sant'Eustachio located in Rome",
+      "head_id": "entity:title_anchor_sant_eustachio",
+      "tail_id": "entity:rome",
+      "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+      "chunk_id": "chunk:sant_eustachio_0",
+      "document_index": 15,
+      "score": 0.20478865693905945
+    },
+    {
+      "fact_id": "fact:washington_archidioecesis_vashingtonensis_location_related_to_country_united_states_territory_sentence_roman_catholic_ar",
+      "text": "Washington Archidioecesis Vashingtonensis Location related_to Country United States Territory",
+      "head_id": "entity:washington_archidioecesis_vashingtonensis_location",
+      "tail_id": "entity:country_united_states_territory",
+      "sentence_id": "sentence:roman_catholic_archdiocese_of_washington_0_0_archdiocese_of_washington_archidioecesis_vashingtonensis_location_country_u",
+      "chunk_id": "chunk:roman_catholic_archdiocese_of_washington_0",
+      "document_index": 2,
+      "score": 0.17979206621572244
+    }
+  ],
+  "bridge_entities": [
+    "rione Sant'Eustachio"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the name of the saint after whom the Dakovo Cathedral is named?",
+      "resolved_sub_question": "What is the name of the saint after whom the Dakovo Cathedral is named?",
+      "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+      "sentence": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.",
+      "score": 0.399634181461727,
+      "source_title": "Sant'Eustachio",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain the full name of the saint after whom the Đakovo Cathedral is named, only mentioning \"Cathedral basilica of St.\" without completing the name.",
+      "hop_raw_response": "The evidence provided does not contain the full name of the saint after whom the Đakovo Cathedral is named, only mentioning \"Cathedral basilica of St.\" without completing the name.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Đakovo Cathedral",
+          "text": "The Đakovo Cathedral or Cathedral basilica of St."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which catholic region is named after this saint?",
+      "resolved_sub_question": "Which catholic region is named after this saint?",
+      "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+      "sentence": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.",
+      "score": 0.3760378034508569,
+      "source_title": "Sant'Eustachio",
+      "hop_answer": "rione Sant'Eustachio",
+      "hop_thought": "The rione mentioned in the text is named after Saint Eustace, as it is referred to as \"rione Sant'Eustachio.\"",
+      "hop_raw_response": "The rione mentioned in the text is named after Saint Eustace, as it is referred to as \"rione Sant'Eustachio.\"\nAnswer: rione Sant'Eustachio",
+      "evidence_passages": [
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Alatri Cathedral",
+          "text": "Alatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the head of this catholic region?",
+      "resolved_sub_question": "Who is the head of this catholic region? Context: rione Sant'Eustachio.",
+      "sentence_id": "sentence:sant_eustachio_0_1_it_is_located_on_via_di_sant_eustachio_in_the_rione_sant_eustachio_a_block_west",
+      "sentence": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+      "score": 0.5263893524868041,
+      "source_title": "Sant'Eustachio",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not specify who the head of the rione Sant'Eustachio is.",
+      "hop_raw_response": "The evidence provided does not specify who the head of the rione Sant'Eustachio is.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Sant'Eustachio",
+          "text": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did the place where this head of the catholic region is located become its own country?",
+      "resolved_sub_question": "When did the place where this head of the catholic region is located become its own country? Context: rione Sant'Eustachio.",
+      "sentence_id": "sentence:sant_eustachio_0_1_it_is_located_on_via_di_sant_eustachio_in_the_rione_sant_eustachio_a_block_west",
+      "sentence": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+      "score": 0.45185323258512744,
+      "source_title": "Sant'Eustachio",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about when the area where the rione Sant'Eustachio is located became its own country. The rione is part of Rome, Italy, but there is no specific date given for when Italy became a unified country or when this particular area gained any form of independent status.",
+      "hop_raw_response": "The context provided does not contain information about when the area where the rione Sant'Eustachio is located became its own country. The rione is part of Rome, Italy, but there is no specific date given for when Italy became a unified country or when this particular area gained any form of independent status.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Sant'Eustachio",
+          "text": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+        },
+        {
+          "title": "Sant'Eustachio",
+          "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+      "score": 0.03195131934929825,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:cathedral_basilica_of_st",
+      "score": 0.031191970939840014,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_sant_eustachio",
+      "score": 0.028893591883083655,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_of_st",
+      "score": 0.02873085080918618,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_basilica_of_saint_cecilia",
+      "score": 0.026895945414813036,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:cathedral_cathedral",
+      "score": 0.025171288433916545,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_alatri_cathedral",
+      "score": 0.02460561291201844,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_akovo_cathedral",
+      "score": 0.0244536967022651,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:vatican_city",
+      "score": 0.024268288934702627,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:alatri",
+      "score": 0.024054922169128842,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_albi_cathedral",
+      "score": 0.023804664941299444,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:papal_basilica_of_st",
+      "score": 0.02356780503029594,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:akovo_cathedral_0_0_the_akovo_cathedral_or_cathedral_basilica_of_st",
+      "score": 0.02339948682814559,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:rione_sant_eustachio",
+      "score": 0.02324373128241866,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:archdiocese",
+      "score": 0.023167313699008034,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saint_eustace",
+      "score": 0.022767643559442947,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:peter",
+      "score": 0.02249228363213434,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:vatican",
+      "score": 0.02237603957307949,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_vatican_city",
+      "score": 0.022204672888074962,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:roman_catholic_archdiocese_of_chihuahua",
+      "score": 0.02178278859059376,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:akovo_cathedral_0",
+      "passage_index": 1,
+      "title": "Đakovo Cathedral",
+      "score": 0.06944086231055893,
+      "text": "Đakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St. Peter () is the cathedral of the Roman Catholic Archdiocese of Đakovo-Osijek in Đakovo, Croatia.",
+      "score_breakdown": {
+        "dense": 0.05079073774543161,
+        "graph": 0.052126582832653263,
+        "fact": 0.1724532113385038
+      }
+    },
+    {
+      "node_id": "chunk:sant_eustachio_0",
+      "passage_index": 15,
+      "title": "Sant'Eustachio",
+      "score": 0.06923956822801194,
+      "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+      "score_breakdown": {
+        "dense": 0.04980115067222852,
+        "graph": 0.052320656439088425,
+        "fact": 0.1743515895103982
+      }
+    },
+    {
+      "node_id": "chunk:alatri_cathedral_0",
+      "passage_index": 4,
+      "title": "Alatri Cathedral",
+      "score": 0.06808557652522164,
+      "text": "Alatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul. It was formerly the cathedral of the Diocese of Alatri. Since 30 September 1986 it has been a co-cathedral of the Diocese of Anagni-Alatri. Pope Pius XII declared it a basilica minor on 10 September 1950.",
+      "score_breakdown": {
+        "dense": 0.04997877629491221,
+        "graph": 0.05122679354022157,
+        "fact": 0.16819474333968962
+      }
+    },
+    {
+      "node_id": "chunk:st_peter_s_basilica_0",
+      "passage_index": 0,
+      "title": "St. Peter's Basilica",
+      "score": 0.06771931326393099,
+      "text": "St. Peter's Basilica\nThe Papal Basilica of St. Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.",
+      "score_breakdown": {
+        "dense": 0.04983456658210763,
+        "graph": 0.05150270857656135,
+        "fact": 0.16572992713868923
+      }
+    },
+    {
+      "node_id": "chunk:mosaic_0",
+      "passage_index": 14,
+      "title": "Mosaic",
+      "score": 0.06699394898496908,
+      "text": "Mosaic\nLater fresco replaced the more labor-intensive technique of mosaic in Western-Europe, although mosaics were sometimes used as decoration on medieval cathedrals. The Royal Basilica of the Hungarian kings in Székesfehérvár (Alba Regia) had a mosaic decoration in the apse. It was probably a work of Venetian or Ravennese craftsmen, executed in the first decades of the 11th century. The mosaic was almost totally destroyed together with the basilica in the 17th century. The Golden Gate of the St. Vitus Cathedral in Prague got its name from the golden 14th-century mosaic of the Last Judgement above the portal. It was executed by Venetian craftsmen.",
+      "score_breakdown": {
+        "dense": 0.04990764734209529,
+        "graph": 0.05061106759460992,
+        "fact": 0.1624094844562246
+      }
+    },
+    {
+      "node_id": "chunk:roman_catholic_archdiocese_of_washington_0",
+      "passage_index": 2,
+      "title": "Roman Catholic Archdiocese of Washington",
+      "score": 0.0664461301649575,
+      "text": "Roman Catholic Archdiocese of Washington\nArchdiocese of Washington Archidioecesis Vashingtonensis Location Country United States Territory District of Columbia plus counties of Montgomery, Prince George's, St. Mary's, Calvert, and Charles in Maryland Ecclesiastical province Washington Statistics Area 2,104 sq mi (5,450 km) Population - Total - Catholics (as of 2014) 2,867,377 630,823 (22.0%) Parishes 139 Information Denomination Roman Catholic Rite Roman Rite Established November 15, 1947 (70 years ago) Cathedral Cathedral of St. Matthew the Apostle Patron saint St. Matthew Current leadership Pope Francis Metropolital Archbishop Cardinal Donald Wuerl Auxiliary Bishops Mario E. Dorsonville Roy Edward Campbell Emeritus Bishops Theodore Edgar Cardinal McCarrick Francisco González Valer Website www.adw.org",
+      "score_breakdown": {
+        "dense": 0.0500509582646437,
+        "graph": 0.05129648828976421,
+        "fact": 0.15686104421649463
+      }
+    },
+    {
+      "node_id": "chunk:albi_cathedral_0",
+      "passage_index": 18,
+      "title": "Albi Cathedral",
+      "score": 0.042575788164452705,
+      "text": "Albi Cathedral\nThe Cathedral Basilica of Saint Cecilia (French: \"Basilique Cathédrale Sainte-Cécile d'Albi\"), also known as Albi Cathedral, is the most important Catholic building in Albi, France and is the seat of the Catholic Archbishop of Albi. First built as a fortress in the aftermath of the Albigensian Crusade; begun in 1282 and under construction for 200 years, it is claimed to be the largest brick building in the world.",
+      "score_breakdown": {
+        "dense": 0.049938798278564796,
+        "graph": 0.050364830370806885,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:vatican_city_0",
+      "passage_index": 12,
+      "title": "Vatican City",
+      "score": 0.04244979507969811,
+      "text": "Vatican City\nThe name Vatican city was first used in the Lateran Treaty, signed on 11 February 1929, which established the modern city - state. The name is taken from Vatican Hill, the geographic location of the state. ``Vatican ''is derived from the name of an Etruscan settlement, Vatica or Vaticum meaning garden, located in the general area the Romans called vaticanus ager,`` Vatican territory''.",
+      "score_breakdown": {
+        "dense": 0.049912094450555,
+        "graph": 0.04999381043964287,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:innsbruck_cathedral_0",
+      "passage_index": 19,
+      "title": "Innsbruck Cathedral",
+      "score": 0.042414826356329455,
+      "text": "Innsbruck Cathedral\nInnsbruck Cathedral, also known as the Cathedral of St. James (), is an eighteenth-century Baroque cathedral of the Roman Catholic Diocese of Innsbruck in the city of Innsbruck, Austria, dedicated to the apostle Saint James, son of Zebedee. Based on designs by the architect Johann Jakob Herkomer, the cathedral was built between 1717 and 1724 on the site of a twelfth-century Romanesque church. The interior is enclosed by three domed vaults spanning the nave, and a dome with lantern above the chancel. With its lavish Baroque interior, executed in part by the Asam brothers, St. James is considered among the most important Baroque buildings in the Tyrol.",
+      "score_breakdown": {
+        "dense": 0.050004912328129626,
+        "graph": 0.0497070819195272,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cathedral_of_chihuahua_0",
+      "passage_index": 9,
+      "title": "Cathedral of Chihuahua",
+      "score": 0.04239917583299003,
+      "text": "Cathedral of Chihuahua\nThe Metropolitan Cathedral Church of the Holy Cross, Our Lady of Regla, and St Francis of Assisi is the main ecclesiastical building of the Catholic Church in Chihuahua, Chihuahua, Mexico. It is considered perhaps the finest example of colonial architecture in northern Mexico and dates from 1725. The cathedral is also the seat of the Roman Catholic Archdiocese of Chihuahua. the archbishop was Constancio Miranda Weckmann.",
+      "score_breakdown": {
+        "dense": 0.05002458553270475,
+        "graph": 0.04961884596667471,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:cathedral_basilica_of_st",
+        "score": 0.031191970939840014,
+        "text": "Cathedral basilica of St",
+        "metadata": {
+          "canonical_name": "Cathedral basilica of St",
+          "aliases": [
+            "CBOS",
+            "Cathedral basilica of St"
+          ],
+          "surface_forms": [
+            "CBOS",
+            "Cathedral basilica of St"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_sant_eustachio",
+        "score": 0.028893591883083655,
+        "text": "Sant'Eustachio",
+        "metadata": {
+          "canonical_name": "Sant'Eustachio",
+          "aliases": [
+            "Sant'Eustachio"
+          ],
+          "surface_forms": [
+            "Sant'Eustachio"
+          ],
+          "title_anchor": "Sant'Eustachio"
+        }
+      },
+      {
+        "node_id": "entity:cathedral_of_st",
+        "score": 0.02873085080918618,
+        "text": "Cathedral of St",
+        "metadata": {
+          "canonical_name": "Cathedral of St",
+          "aliases": [
+            "COS",
+            "Cathedral of St"
+          ],
+          "surface_forms": [
+            "COS",
+            "Cathedral of St"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:cathedral_basilica_of_saint_cecilia",
+        "score": 0.026895945414813036,
+        "text": "Cathedral Basilica of Saint Cecilia",
+        "metadata": {
+          "canonical_name": "Cathedral Basilica of Saint Cecilia",
+          "aliases": [
+            "CBOSC",
+            "Cathedral Basilica of Saint Cecilia"
+          ],
+          "surface_forms": [
+            "CBOSC",
+            "Cathedral Basilica of Saint Cecilia"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:cathedral_cathedral",
+        "score": 0.025171288433916545,
+        "text": "Cathedral Cathedral",
+        "metadata": {
+          "canonical_name": "Cathedral Cathedral",
+          "aliases": [
+            "CC",
+            "Cathedral Cathedral"
+          ],
+          "surface_forms": [
+            "CC",
+            "Cathedral Cathedral"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+        "score": 0.03195131934929825,
+        "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.",
+        "metadata": {
+          "title": "Sant'Eustachio",
+          "chunk_id": "chunk:sant_eustachio_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Sant'Eustachio",
+              "relation": "is a",
+              "tail": "Roman Catholic titular church"
+            },
+            {
+              "head": "Sant'Eustachio",
+              "relation": "located in",
+              "tail": "Rome"
+            },
+            {
+              "head": "Sant'Eustachio",
+              "relation": "named for",
+              "tail": "Saint Eustace"
+            }
+          ],
+          "entities": [
+            "Sant'Eustachio",
+            "Roman Catholic titular church",
+            "Rome",
+            "Saint Eustace"
+          ],
+          "entity_ids": [
+            "entity:roman_catholic_titular_church",
+            "entity:rome",
+            "entity:saint_eustace",
+            "entity:title_anchor_sant_eustachio"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:akovo_cathedral_0_0_the_akovo_cathedral_or_cathedral_basilica_of_st",
+        "score": 0.02339948682814559,
+        "text": "The Đakovo Cathedral or Cathedral basilica of St.",
+        "metadata": {
+          "title": "Đakovo Cathedral",
+          "chunk_id": "chunk:akovo_cathedral_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "akovo Cathedral",
+              "relation": "also_known_as",
+              "tail": "Cathedral basilica of St"
+            }
+          ],
+          "entities": [
+            "akovo Cathedral",
+            "Cathedral basilica of St"
+          ],
+          "entity_ids": [
+            "entity:cathedral_basilica_of_st",
+            "entity:title_anchor_akovo_cathedral"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:alatri_cathedral_0_0_alatri_cathedral_otherwise_the_basilica_of_saint_paul_basilica_concattedral",
+        "score": 0.020912064596108185,
+        "text": "Alatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul.",
+        "metadata": {
+          "title": "Alatri Cathedral",
+          "chunk_id": "chunk:alatri_cathedral_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Alatri Cathedral",
+              "relation": "is also known as",
+              "tail": "Basilica of Saint Paul"
+            },
+            {
+              "head": "Alatri Cathedral",
+              "relation": "is located in",
+              "tail": "Alatri Lazio Italy"
+            },
+            {
+              "head": "Alatri Cathedral",
+              "relation": "is dedicated to",
+              "tail": "Saint Paul"
+            },
+            {
+              "head": "Alatri Cathedral",
+              "relation": "is a",
+              "tail": "Roman Catholic cathedral"
+            }
+          ],
+          "entities": [
+            "Alatri Cathedral",
+            "Basilica of Saint Paul",
+            "Alatri",
+            "Lazio",
+            "Italy",
+            "Saint Paul",
+            "Roman Catholic cathedral"
+          ],
+          "entity_ids": [
+            "entity:alatri",
+            "entity:alatri_lazio_italy",
+            "entity:basilica_of_saint_paul",
+            "entity:italy",
+            "entity:lazio",
+            "entity:roman_catholic_cathedral",
+            "entity:saint_paul",
+            "entity:title_anchor_alatri_cathedral"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:roman_catholic_archdiocese_of_washington_0_0_archdiocese_of_washington_archidioecesis_vashingtonensis_location_country_u",
+        "score": 0.01901413726483668,
+        "text": "Archdiocese of Washington Archidioecesis Vashingtonensis Location Country United States Territory District of Columbia plus counties of Montgomery, Prince George's, St.",
+        "metadata": {
+          "title": "Roman Catholic Archdiocese of Washington",
+          "chunk_id": "chunk:roman_catholic_archdiocese_of_washington_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Archdiocese",
+              "relation": "related_to",
+              "tail": "Washington Archidioecesis Vashingtonensis Location"
+            },
+            {
+              "head": "Washington Archidioecesis Vashingtonensis Location",
+              "relation": "related_to",
+              "tail": "Country United States Territory"
+            },
+            {
+              "head": "Country United States Territory",
+              "relation": "related_to",
+              "tail": "District"
+            }
+          ],
+          "entities": [
+            "Archdiocese",
+            "Washington Archidioecesis Vashingtonensis Location",
+            "Country United States Territory",
+            "District",
+            "Columbia",
+            "Montgomery",
+            "Prince George",
+            "St"
+          ],
+          "entity_ids": [
+            "entity:archdiocese",
+            "entity:columbia",
+            "entity:country_united_states_territory",
+            "entity:district",
+            "entity:montgomery",
+            "entity:prince_george",
+            "entity:st",
+            "entity:washington_archidioecesis_vashingtonensis_location"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:akovo_cathedral_0",
+        "score": 0.010401994882935216,
+        "text": "Đakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St. Peter () is the cathedral of the Roman Catholic Archdiocese of Đakovo-Osijek in Đakovo, Croatia.",
+        "metadata": {
+          "title": "Đakovo Cathedral",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:cathedral_basilica_of_st",
+            "entity:croatia",
+            "entity:peter",
+            "entity:roman_catholic_archdiocese_of_akovo_osijek",
+            "entity:title_anchor_akovo_cathedral"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:sant_eustachio_0",
+        "score": 0.008866567359426442,
+        "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+        "metadata": {
+          "title": "Sant'Eustachio",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:pantheon",
+            "entity:pantheon_and_via_della_rotonda",
+            "entity:rione_sant_eustachio",
+            "entity:roman_catholic_titular_church",
+            "entity:rome",
+            "entity:saint_eustace",
+            "entity:sant_ivo_alla_sapienza",
+            "entity:sant_ivo_alla_sapienza_and_the_via_della_dogana_vecchia",
+            "entity:title_anchor_sant_eustachio",
+            "entity:via_della_dogana_vecchia",
+            "entity:via_della_rotonda",
+            "entity:via_di_sant_eustachio"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:alatri_cathedral_0",
+        "score": 0.005304821205349399,
+        "text": "Alatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul. It was formerly the cathedral of the Diocese of Alatri. Since 30 September 1986 it has been a co-cathedral of the Diocese of Anagni-Alatri. Pope Pius XII declared it a basilica minor on 10 September 1950.",
+        "metadata": {
+          "title": "Alatri Cathedral",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:10_september_1950",
+            "entity:alatri",
+            "entity:alatri_lazio_italy",
+            "entity:anagni",
+            "entity:basilica_of_saint_paul",
+            "entity:diocese",
+            "entity:diocese_of_alatri",
+            "entity:diocese_of_anagni_alatri",
+            "entity:italy",
+            "entity:lazio",
+            "entity:pope_pius_xii",
+            "entity:roman_catholic_cathedral",
+            "entity:saint_paul",
+            "entity:september",
+            "entity:since",
+            "entity:title_anchor_alatri_cathedral"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:st_peter_s_basilica_0",
+        "score": 0.00522489532121298,
+        "text": "St. Peter's Basilica\nThe Papal Basilica of St. Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.",
+        "metadata": {
+          "title": "St. Peter's Basilica",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:basilica_papale_di_san_pietro_in_vaticano",
+            "entity:basilica_sancti_petri",
+            "entity:italian_renaissance_church",
+            "entity:papal_basilica",
+            "entity:papal_basilica_of_st",
+            "entity:peter",
+            "entity:peter_s_basilica",
+            "entity:rome",
+            "entity:st",
+            "entity:st_peter",
+            "entity:vatican",
+            "entity:vatican_city"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Đakovo Cathedral\nĐakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St. Peter () is the cathedral of the Roman Catholic Archdiocese of Đakovo-Osijek in Đakovo, Croatia.\n\nSant'Eustachio\nSant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.\n\nAlatri Cathedral\nAlatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul. It was formerly the cathedral of the Diocese of Alatri. Since 30 September 1986 it has been a co-cathedral of the Diocese of Anagni-Alatri. Pope Pius XII declared it a basilica minor on 10 September 1950.\n\nSt. Peter's Basilica\nSt. Peter's Basilica\nThe Papal Basilica of St. Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.\n\nMosaic\nMosaic\nLater fresco replaced the more labor-intensive technique of mosaic in Western-Europe, although mosaics were sometimes used as decoration on medieval cathedrals. The Royal Basilica of the Hungarian kings in Székesfehérvár (Alba Regia) had a mosaic decoration in the apse. It was probably a work of Venetian or Ravennese craftsmen, executed in the first decades of the 11th century. The mosaic was almost totally destroyed together with the basilica in the 17th century. The Golden Gate of the St. Vitus Cathedral in Prague got its name from the golden 14th-century mosaic of the Last Judgement above the portal. It was executed by Venetian craftsmen.\n\nSant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.\n\nĐakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St.\n\nAlatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul.\n\nSant'Eustachio\nIt is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.\n\nAlbi Cathedral\nAlbi Cathedral\nThe Cathedral Basilica of Saint Cecilia (French: \"Basilique Cathédrale Sainte-Cécile d'Albi\"), also known as Albi Cathedral, is the most important Catholic building in Albi, France and is the seat of the Catholic Archbishop of Albi. First built as a fortress in the aftermath of the Albigensian Crusade; begun in 1282 and under construction for 200 years, it is claimed to be the largest brick building in the world.\n\nRoman Catholic Archdiocese of Washington\nRoman Catholic Archdiocese of Washington\nArchdiocese of Washington Archidioecesis Vashingtonensis Location Country United States Territory District of Columbia plus counties of Montgomery, Prince George's, St. Mary's, Calvert, and Charles in Maryland Ecclesiastical province Washington Statistics Area 2,104 sq mi (5,450 km) Population - Total - Catholics (as of 2014) 2,867,377 630,823 (22.0%) Parishes 139 Information Denomination Roman Catholic Rite Roman Rite Established November 15, 1947 (70 years ago) Cathedral Cathedral of St. Matthew the Apostle Patron saint St. Matthew Current leadership Pope Francis Metropolital Archbishop Cardinal Donald Wuerl Auxiliary Bishops Mario E. Dorsonville Roy Edward Campbell Emeritus Bishops Theodore Edgar Cardinal McCarrick Francisco González Valer Website www.adw.org",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:akovo_cathedral_0",
+        "passage_index": 1,
+        "title": "Đakovo Cathedral",
+        "score": 0.06944086231055893,
+        "text": "Đakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St. Peter () is the cathedral of the Roman Catholic Archdiocese of Đakovo-Osijek in Đakovo, Croatia.",
+        "score_breakdown": {
+          "dense": 0.05079073774543161,
+          "graph": 0.052126582832653263,
+          "fact": 0.1724532113385038
+        }
+      },
+      {
+        "node_id": "chunk:sant_eustachio_0",
+        "passage_index": 15,
+        "title": "Sant'Eustachio",
+        "score": 0.06923956822801194,
+        "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+        "score_breakdown": {
+          "dense": 0.04980115067222852,
+          "graph": 0.052320656439088425,
+          "fact": 0.1743515895103982
+        }
+      },
+      {
+        "node_id": "chunk:alatri_cathedral_0",
+        "passage_index": 4,
+        "title": "Alatri Cathedral",
+        "score": 0.06808557652522164,
+        "text": "Alatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul. It was formerly the cathedral of the Diocese of Alatri. Since 30 September 1986 it has been a co-cathedral of the Diocese of Anagni-Alatri. Pope Pius XII declared it a basilica minor on 10 September 1950.",
+        "score_breakdown": {
+          "dense": 0.04997877629491221,
+          "graph": 0.05122679354022157,
+          "fact": 0.16819474333968962
+        }
+      },
+      {
+        "node_id": "chunk:st_peter_s_basilica_0",
+        "passage_index": 0,
+        "title": "St. Peter's Basilica",
+        "score": 0.06771931326393099,
+        "text": "St. Peter's Basilica\nThe Papal Basilica of St. Peter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.",
+        "score_breakdown": {
+          "dense": 0.04983456658210763,
+          "graph": 0.05150270857656135,
+          "fact": 0.16572992713868923
+        }
+      },
+      {
+        "node_id": "chunk:mosaic_0",
+        "passage_index": 14,
+        "title": "Mosaic",
+        "score": 0.06699394898496908,
+        "text": "Mosaic\nLater fresco replaced the more labor-intensive technique of mosaic in Western-Europe, although mosaics were sometimes used as decoration on medieval cathedrals. The Royal Basilica of the Hungarian kings in Székesfehérvár (Alba Regia) had a mosaic decoration in the apse. It was probably a work of Venetian or Ravennese craftsmen, executed in the first decades of the 11th century. The mosaic was almost totally destroyed together with the basilica in the 17th century. The Golden Gate of the St. Vitus Cathedral in Prague got its name from the golden 14th-century mosaic of the Last Judgement above the portal. It was executed by Venetian craftsmen.",
+        "score_breakdown": {
+          "dense": 0.04990764734209529,
+          "graph": 0.05061106759460992,
+          "fact": 0.1624094844562246
+        }
+      },
+      {
+        "node_id": "chunk:roman_catholic_archdiocese_of_washington_0",
+        "passage_index": 2,
+        "title": "Roman Catholic Archdiocese of Washington",
+        "score": 0.0664461301649575,
+        "text": "Roman Catholic Archdiocese of Washington\nArchdiocese of Washington Archidioecesis Vashingtonensis Location Country United States Territory District of Columbia plus counties of Montgomery, Prince George's, St. Mary's, Calvert, and Charles in Maryland Ecclesiastical province Washington Statistics Area 2,104 sq mi (5,450 km) Population - Total - Catholics (as of 2014) 2,867,377 630,823 (22.0%) Parishes 139 Information Denomination Roman Catholic Rite Roman Rite Established November 15, 1947 (70 years ago) Cathedral Cathedral of St. Matthew the Apostle Patron saint St. Matthew Current leadership Pope Francis Metropolital Archbishop Cardinal Donald Wuerl Auxiliary Bishops Mario E. Dorsonville Roy Edward Campbell Emeritus Bishops Theodore Edgar Cardinal McCarrick Francisco González Valer Website www.adw.org",
+        "score_breakdown": {
+          "dense": 0.0500509582646437,
+          "graph": 0.05129648828976421,
+          "fact": 0.15686104421649463
+        }
+      },
+      {
+        "node_id": "chunk:albi_cathedral_0",
+        "passage_index": 18,
+        "title": "Albi Cathedral",
+        "score": 0.042575788164452705,
+        "text": "Albi Cathedral\nThe Cathedral Basilica of Saint Cecilia (French: \"Basilique Cathédrale Sainte-Cécile d'Albi\"), also known as Albi Cathedral, is the most important Catholic building in Albi, France and is the seat of the Catholic Archbishop of Albi. First built as a fortress in the aftermath of the Albigensian Crusade; begun in 1282 and under construction for 200 years, it is claimed to be the largest brick building in the world.",
+        "score_breakdown": {
+          "dense": 0.049938798278564796,
+          "graph": 0.050364830370806885,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:vatican_city_0",
+        "passage_index": 12,
+        "title": "Vatican City",
+        "score": 0.04244979507969811,
+        "text": "Vatican City\nThe name Vatican city was first used in the Lateran Treaty, signed on 11 February 1929, which established the modern city - state. The name is taken from Vatican Hill, the geographic location of the state. ``Vatican ''is derived from the name of an Etruscan settlement, Vatica or Vaticum meaning garden, located in the general area the Romans called vaticanus ager,`` Vatican territory''.",
+        "score_breakdown": {
+          "dense": 0.049912094450555,
+          "graph": 0.04999381043964287,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:innsbruck_cathedral_0",
+        "passage_index": 19,
+        "title": "Innsbruck Cathedral",
+        "score": 0.042414826356329455,
+        "text": "Innsbruck Cathedral\nInnsbruck Cathedral, also known as the Cathedral of St. James (), is an eighteenth-century Baroque cathedral of the Roman Catholic Diocese of Innsbruck in the city of Innsbruck, Austria, dedicated to the apostle Saint James, son of Zebedee. Based on designs by the architect Johann Jakob Herkomer, the cathedral was built between 1717 and 1724 on the site of a twelfth-century Romanesque church. The interior is enclosed by three domed vaults spanning the nave, and a dome with lantern above the chancel. With its lavish Baroque interior, executed in part by the Asam brothers, St. James is considered among the most important Baroque buildings in the Tyrol.",
+        "score_breakdown": {
+          "dense": 0.050004912328129626,
+          "graph": 0.0497070819195272,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cathedral_of_chihuahua_0",
+        "passage_index": 9,
+        "title": "Cathedral of Chihuahua",
+        "score": 0.04239917583299003,
+        "text": "Cathedral of Chihuahua\nThe Metropolitan Cathedral Church of the Holy Cross, Our Lady of Regla, and St Francis of Assisi is the main ecclesiastical building of the Catholic Church in Chihuahua, Chihuahua, Mexico. It is considered perhaps the finest example of colonial architecture in northern Mexico and dates from 1725. The cathedral is also the seat of the Roman Catholic Archdiocese of Chihuahua. the archbishop was Constancio Miranda Weckmann.",
+        "score_breakdown": {
+          "dense": 0.05002458553270475,
+          "graph": 0.04961884596667471,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the name of the saint after whom the Dakovo Cathedral is named?",
+        "resolved_sub_question": "What is the name of the saint after whom the Dakovo Cathedral is named?",
+        "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+        "sentence": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.",
+        "score": 0.399634181461727,
+        "source_title": "Sant'Eustachio",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain the full name of the saint after whom the Đakovo Cathedral is named, only mentioning \"Cathedral basilica of St.\" without completing the name.",
+        "hop_raw_response": "The evidence provided does not contain the full name of the saint after whom the Đakovo Cathedral is named, only mentioning \"Cathedral basilica of St.\" without completing the name.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Đakovo Cathedral",
+            "text": "The Đakovo Cathedral or Cathedral basilica of St."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which catholic region is named after this saint?",
+        "resolved_sub_question": "Which catholic region is named after this saint?",
+        "sentence_id": "sentence:sant_eustachio_0_0_sant_eustachio_is_a_roman_catholic_titular_church_and_minor_basilica_in_rome_na",
+        "sentence": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.",
+        "score": 0.3760378034508569,
+        "source_title": "Sant'Eustachio",
+        "hop_answer": "rione Sant'Eustachio",
+        "hop_thought": "The rione mentioned in the text is named after Saint Eustace, as it is referred to as \"rione Sant'Eustachio.\"",
+        "hop_raw_response": "The rione mentioned in the text is named after Saint Eustace, as it is referred to as \"rione Sant'Eustachio.\"\nAnswer: rione Sant'Eustachio",
+        "evidence_passages": [
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Alatri Cathedral",
+            "text": "Alatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the head of this catholic region?",
+        "resolved_sub_question": "Who is the head of this catholic region? Context: rione Sant'Eustachio.",
+        "sentence_id": "sentence:sant_eustachio_0_1_it_is_located_on_via_di_sant_eustachio_in_the_rione_sant_eustachio_a_block_west",
+        "sentence": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+        "score": 0.5263893524868041,
+        "source_title": "Sant'Eustachio",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not specify who the head of the rione Sant'Eustachio is.",
+        "hop_raw_response": "The evidence provided does not specify who the head of the rione Sant'Eustachio is.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Sant'Eustachio",
+            "text": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did the place where this head of the catholic region is located become its own country?",
+        "resolved_sub_question": "When did the place where this head of the catholic region is located become its own country? Context: rione Sant'Eustachio.",
+        "sentence_id": "sentence:sant_eustachio_0_1_it_is_located_on_via_di_sant_eustachio_in_the_rione_sant_eustachio_a_block_west",
+        "sentence": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.",
+        "score": 0.45185323258512744,
+        "source_title": "Sant'Eustachio",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about when the area where the rione Sant'Eustachio is located became its own country. The rione is part of Rome, Italy, but there is no specific date given for when Italy became a unified country or when this particular area gained any form of independent status.",
+        "hop_raw_response": "The context provided does not contain information about when the area where the rione Sant'Eustachio is located became its own country. The rione is part of Rome, Italy, but there is no specific date given for when Italy became a unified country or when this particular area gained any form of independent status.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Sant'Eustachio",
+            "text": "It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace. It is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia."
+          },
+          {
+            "title": "Sant'Eustachio",
+            "text": "Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the name of the saint after whom the Dakovo Cathedral is named? (source: Sant'Eustachio)\n2. Which catholic region is named after this saint? => rione Sant'Eustachio (source: Sant'Eustachio)\n3. Who is the head of this catholic region? (source: Sant'Eustachio)\n4. When did the place where this head of the catholic region is located become its own country? (source: Sant'Eustachio)\n\nFact hints:\n- Sant'Eustachio named for Saint Eustace\n- Sant'Eustachio located in Rome\n\nWikipedia Title: Sant'Eustachio\nIt is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia. Sant'Eustachio Sant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.\n\nWikipedia Title: Sant'Eustachio\nIt is located on Via di Sant'Eustachio in the rione Sant'Eustachio, a block west of the Pantheon and via della Rotonda, and a block east of Sant'Ivo alla Sapienza and the Via della Dogana Vecchia.\n\nWikipedia Title: Sant'Eustachio\nSant'Eustachio is a Roman Catholic titular church and minor basilica in Rome, named for the martyr Saint Eustace.\n\nWikipedia Title: Albi Cathedral\nAlbi Cathedral The Cathedral Basilica of Saint Cecilia (French: \"Basilique Cathédrale Sainte-Cécile d'Albi\"), also known as Albi Cathedral, is the most important Catholic building in Albi, France and is the seat of the Catholic Archbishop of Albi. First built as a fortress in the aftermath of the Albigensian Crusade; begun in 1282 and under construction for 200 years, it is claimed to be the largest brick building in the world.\n\nWikipedia Title: Đakovo Cathedral\nThe Đakovo Cathedral or Cathedral basilica of St.\n\nWikipedia Title: Alatri Cathedral\nAlatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul.\n\nWikipedia Title: Mosaic\nThe Golden Gate of the St. Vitus Cathedral in Prague got its name from the golden 14th-century mosaic of the Last Judgement above the portal.\n\nWikipedia Title: Roman Catholic Archdiocese of Washington\nMatthew the Apostle Patron saint St. Roman Catholic Archdiocese of Washington Archdiocese of Washington Archidioecesis Vashingtonensis Location Country United States Territory District of Columbia plus counties of Montgomery, Prince George's, St.\n\nWikipedia Title: Đakovo Cathedral\nĐakovo Cathedral The Đakovo Cathedral or Cathedral basilica of St. Peter () is the cathedral of the Roman Catholic Archdiocese of Đakovo-Osijek in Đakovo, Croatia.\n\nWikipedia Title: Alatri Cathedral\nAlatri Cathedral Alatri Cathedral, otherwise the Basilica of Saint Paul (; \"Basilica concattedrale di San Paolo apostolo\"), is a Roman Catholic cathedral in Alatri, Lazio, Italy, dedicated to Saint Paul. It was formerly the cathedral of the Diocese of Alatri.\n\nWikipedia Title: St. Peter's Basilica\nPeter in the Vatican (Italian: Basilica Papale di San Pietro in Vaticano), or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.\n\nQuestion: When did the place where the head of the catholic region named after the same saint as the Dakovo Cathedral become its own country?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The question involves several steps to determine the correct answer. First, we need to identify the saint after whom the Dakovo Cathedral is named. The passage about the Đakovo Cathedral indicates that it is dedicated to St. Peter. \n\nNext, we need to find out if there is a Catholic region named after St. Peter. The provided information does not mention a specific region named after St. Peter, but it does mention the rione Sant'Eustachio in Rome, which is named after Saint Eustace. This does not align with the saint associated with the Dakovo Cathedral.\n\nSince the information provided does not contain details about a Catholic region named after St. Peter, and the rione Sant'Eustachio is named after a different saint, we cannot determine when the place where the head of such a region became its own country.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The question involves several steps to determine the correct answer. First, we need to identify the saint after whom the Dakovo Cathedral is named. The passage about the Đakovo Cathedral indicates that it is dedicated to St. Peter. \n\nNext, we need to find out if there is a Catholic region named after St. Peter. The provided information does not mention a specific region named after St. Peter, but it does mention the rione Sant'Eustachio in Rome, which is named after Saint Eustace. This does not align with the saint associated with the Dakovo Cathedral.\n\nSince the information provided does not contain details about a Catholic region named after St. Peter, and the rione Sant'Eustachio is named after a different saint, we cannot determine when the place where the head of such a region became its own country.\n\nAnswer: Unknown"
+}

@@ -3,13 +3,13 @@
     "num_examples": 10,
     "passage_recall_at_5": 0.9,
     "passage_hit_at_5": 1.0,
-    "context_contains_answer_rate": 0.9,
-    "answer_match_rate": 0.9,
-    "avg_qa_context_words": 665.3,
-    "avg_ranked_facts": 6.9,
+    "context_contains_answer_rate": 0.5,
+    "answer_match_rate": 0.8,
+    "avg_qa_context_words": 139,
+    "avg_ranked_facts": 6.5,
     "avg_reasoning_chain_count": 2,
     "qa_exact_match": 0.3,
-    "qa_f1": 0.3571,
+    "qa_f1": 0.3,
     "qa_non_empty_prediction_rate": 1.0
   },
   "settings": {
@@ -49,13 +49,13 @@
         "Green (Steve Hillage album)",
         "Miquette Giraudy"
       ],
-      "context_contains_answer": 1.0,
+      "context_contains_answer": 0.0,
       "answer_match_flag": true,
       "answer_match_candidates": [
         "Miquette Giraudy"
       ],
-      "qa_context_words": 655,
-      "qa_context_chars": 4115,
+      "qa_context_words": 149,
+      "qa_context_chars": 957,
       "ranked_passages_count": 10,
       "ranked_facts_count": 6,
       "bridge_entities": [],
@@ -86,23 +86,15 @@
           "resolved_sub_question": "Who is the Green performer?",
           "sentence_id": "sentence:list_of_show_business_families_0_0_actress_director_singer_phylicia_rash_d_is_the_older_sister_of_performer_deb",
           "sentence": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon.",
-          "score": 0.45740736658620834,
+          "score": 0.4574179455165863,
           "source_title": "List of show business families",
           "hop_answer": "Unknown",
-          "hop_thought": "The question seems to be asking about a performer with the name \"Green\" but there is no such performer mentioned in the provided evidence. The only reference to \"Green\" is in the context of \"Martin-Green's performance\" in the \"Star Trek: Discovery\" article, which refers to an actress named Sonequa Martin-Green. However, she is not referred to as a \"Green performer.\"",
-          "hop_raw_response": "The question seems to be asking about a performer with the name \"Green\" but there is no such performer mentioned in the provided evidence. The only reference to \"Green\" is in the context of \"Martin-Green's performance\" in the \"Star Trek: Discovery\" article, which refers to an actress named Sonequa Martin-Green. However, she is not referred to as a \"Green performer.\"\nAnswer: Unknown",
+          "hop_thought": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.",
+          "hop_raw_response": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "List of show business families",
               "text": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon."
-            },
-            {
-              "title": "List of show business families",
-              "text": "List of show business families\nActress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon. Phylicia Rashād is the former spouse of both Victor Willis, former lead singer of the group Village People, and former NFL football player turned sportscaster, Ahmad Rashād. Phylicia and Ahmad Rashād are the parents of actress Condola Rashād."
-            },
-            {
-              "title": "Star Trek: Discovery",
-              "text": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance."
             }
           ]
         },
@@ -111,23 +103,15 @@
           "resolved_sub_question": "Who is the spouse of this person?",
           "sentence_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
           "sentence": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.",
-          "score": 0.30788607166767124,
+          "score": 0.30787025146245955,
           "source_title": "Star Trek: Discovery",
           "hop_answer": "Unknown",
-          "hop_thought": "The question asks about the spouse of the Green performer, but the evidence provided does not mention a specific \"Green performer\" or their spouse. The only reference to a performer named Green is Sonequa Martin-Green, but there is no information about her spouse in the given evidence.",
-          "hop_raw_response": "The question asks about the spouse of the Green performer, but the evidence provided does not mention a specific \"Green performer\" or their spouse. The only reference to a performer named Green is Sonequa Martin-Green, but there is no information about her spouse in the given evidence.\nAnswer: Unknown",
+          "hop_thought": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.",
+          "hop_raw_response": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Star Trek: Discovery",
               "text": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance."
-            },
-            {
-              "title": "Star Trek: Discovery",
-              "text": "Star Trek: Discovery\nStar Trek: Discovery premiered on September 19, 2017, at ArcLight Hollywood, before debuting on CBS and CBS All Access on September 24. The rest of the 15 - episode first season was streamed weekly on All Access. The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance. A second season was ordered in October 2017."
-            },
-            {
-              "title": "List of show business families",
-              "text": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon."
             }
           ]
         }
@@ -136,51 +120,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Miquette Giraudy",
-          "score": 0.09104839399307221,
+          "score": 0.09104837993826417,
           "words": 69,
           "score_breakdown": {
-            "dense": 0.0588241297749638,
-            "graph": 0.06639600208773559,
-            "fact": 0.2585088132701429
+            "dense": 0.058824103653905585,
+            "graph": 0.06639600359344504,
+            "fact": 0.25850881233721723
           }
         },
         {
           "title": "Mok Kwai-lan",
-          "score": 0.08908016849536896,
+          "score": 0.08908006121817492,
           "words": 23,
           "score_breakdown": {
-            "dense": 0.05906772408367894,
-            "graph": 0.06257772376663567,
-            "fact": 0.25213068746236567
+            "dense": 0.05906752970202863,
+            "graph": 0.06257772223839299,
+            "fact": 0.2521306880702752
           }
         },
         {
           "title": "Green (Steve Hillage album)",
-          "score": 0.0879098002430741,
+          "score": 0.0879097473845514,
           "words": 83,
           "score_breakdown": {
-            "dense": 0.05931519227924451,
-            "graph": 0.06194829474598464,
-            "fact": 0.24467970710462822
+            "dense": 0.05931509641258258,
+            "graph": 0.06194829498636958,
+            "fact": 0.24467970574480077
           }
         },
         {
           "title": "Star Trek: Discovery",
-          "score": 0.08717870444299461,
+          "score": 0.08717875037828857,
           "words": 69,
           "score_breakdown": {
-            "dense": 0.0583706653518713,
-            "graph": 0.06124239891678638,
-            "fact": 0.24468079216286318
+            "dense": 0.058370732933364144,
+            "graph": 0.061242427292607565,
+            "fact": 0.24468079384770675
           }
         },
         {
           "title": "Green",
-          "score": 0.05016987303815945,
+          "score": 0.05016984362344391,
           "words": 179,
           "score_breakdown": {
-            "dense": 0.05898556758787123,
-            "graph": 0.05909270288276758,
+            "dense": 0.058985558996346894,
+            "graph": 0.05909262058484372,
             "fact": 0.0
           }
         }
@@ -205,23 +189,21 @@
       "retrieved_titles_top5": [
         "SModcast Pictures",
         "Amblin Entertainment",
-        "Mike Medavoy",
         "UHF (film)",
-        "Marketwired"
+        "Marketwired",
+        "Mike Medavoy"
       ],
       "matched_support_titles": [
         "Mike Medavoy",
         "UHF (film)"
       ],
-      "context_contains_answer": 1.0,
-      "answer_match_flag": true,
-      "answer_match_candidates": [
-        "Mike Medavoy"
-      ],
-      "qa_context_words": 597,
-      "qa_context_chars": 3896,
+      "context_contains_answer": 0.0,
+      "answer_match_flag": false,
+      "answer_match_candidates": [],
+      "qa_context_words": 161,
+      "qa_context_chars": 1066,
       "ranked_passages_count": 10,
-      "ranked_facts_count": 7,
+      "ranked_facts_count": 5,
       "bridge_entities": [
         "Kevin Smith"
       ],
@@ -252,23 +234,15 @@
           "resolved_sub_question": "What company distributed the film UHF?",
           "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
           "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
-          "score": 0.4249862487546674,
+          "score": 0.4139617058741948,
           "source_title": "SModcast Pictures",
           "hop_answer": "Unknown",
-          "hop_thought": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".",
-          "hop_raw_response": "The provided evidence does not mention any information about the distribution of the film UHF. It only talks about SModcast Pictures and its involvement with the film \"Red State\".\nAnswer: Unknown",
+          "hop_thought": "The evidence provided does not mention which company distributed the film UHF, nor does it provide any information about the film UHF itself.",
+          "hop_raw_response": "The evidence provided does not mention which company distributed the film UHF, nor does it provide any information about the film UHF itself.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "SModcast Pictures",
               "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
-            },
-            {
-              "title": "SModcast Pictures",
-              "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
-            },
-            {
-              "title": "SModcast Pictures",
-              "text": "Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
             }
           ]
         },
@@ -277,23 +251,15 @@
           "resolved_sub_question": "Who founded this company?",
           "sentence_id": "sentence:smodcast_pictures_0_0_smodcast_pictures_is_an_american_film_distribution_company_and_a_film_and_televi",
           "sentence": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011.",
-          "score": 0.34510358208800074,
+          "score": 0.3340790392075282,
           "source_title": "SModcast Pictures",
           "hop_answer": "Kevin Smith",
-          "hop_thought": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.",
-          "hop_raw_response": "The question asks about the founder of the company mentioned in the previous context, which is SModcast Pictures. According to the evidence, SModcast Pictures was founded by Kevin Smith.\nAnswer: Kevin Smith",
+          "hop_thought": "The evidence states that SModcast Pictures was founded by Kevin Smith.",
+          "hop_raw_response": "The evidence states that SModcast Pictures was founded by Kevin Smith.\nAnswer: Kevin Smith",
           "evidence_passages": [
             {
               "title": "SModcast Pictures",
               "text": "SModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011."
-            },
-            {
-              "title": "SModcast Pictures",
-              "text": "SModcast Pictures\nSModcast Pictures is an American film distribution company and a film and television production company founded by Kevin Smith in 2011. Kevin Smith announced at the 2011 Sundance Film Festival that he would release his latest movie \"Red State\" himself under his own distribution company \"SModcast Pictures\" by touring the film instead of having a traditional release."
-            },
-            {
-              "title": "Amblin Entertainment",
-              "text": "Amblin Entertainment is an American film production company founded by director and producer Steven Spielberg, and film producers Kathleen Kennedy and Frank Marshall in 1981."
             }
           ]
         }
@@ -302,51 +268,51 @@
       "retrieved_passages_top5": [
         {
           "title": "SModcast Pictures",
-          "score": 0.09783733296142158,
+          "score": 0.12265531220507012,
           "words": 59,
           "score_breakdown": {
-            "dense": 0.05041503564685969,
-            "graph": 0.05638324232616515,
-            "fact": 0.3546272710519947
+            "dense": 0.050414744827313965,
+            "graph": 0.05892648289759182,
+            "fact": 0.5149950512051326
           }
         },
         {
           "title": "Amblin Entertainment",
-          "score": 0.09485035829195368,
+          "score": 0.11810603215821032,
           "words": 57,
           "score_breakdown": {
-            "dense": 0.05035041422871315,
-            "graph": 0.05687076767680416,
-            "fact": 0.333976001087468
-          }
-        },
-        {
-          "title": "Mike Medavoy",
-          "score": 0.09026202253230095,
-          "words": 42,
-          "score_breakdown": {
-            "dense": 0.050116674444791766,
-            "graph": 0.053294474695282965,
-            "fact": 0.31139672786053724
+            "dense": 0.050350478329329915,
+            "graph": 0.0588750891928292,
+            "fact": 0.48500494879486744
           }
         },
         {
           "title": "UHF (film)",
-          "score": 0.04284547473442599,
+          "score": 0.042586288613729734,
           "words": 100,
           "score_breakdown": {
-            "dense": 0.05066440745515194,
-            "graph": 0.0499335021136414,
+            "dense": 0.05066491543139387,
+            "graph": 0.04906861708821033,
             "fact": 0.0
           }
         },
         {
           "title": "Marketwired",
-          "score": 0.0422569015870143,
+          "score": 0.04226932761019421,
           "words": 46,
           "score_breakdown": {
-            "dense": 0.05011366627215358,
-            "graph": 0.04898128379109943,
+            "dense": 0.05011353410076043,
+            "graph": 0.049022946182586576,
+            "fact": 0.0
+          }
+        },
+        {
+          "title": "Mike Medavoy",
+          "score": 0.042260357951053804,
+          "words": 42,
+          "score_breakdown": {
+            "dense": 0.050116892789629934,
+            "graph": 0.048986889722524456,
             "fact": 0.0
           }
         }
@@ -373,7 +339,7 @@
         "Ciudad Deportiva (Nuevo Laredo)",
         "Buenos Aires Argentina Temple",
         "Sportivo Italiano",
-        "Ciudad del Niño metro station"
+        "Chihuahua (state)"
       ],
       "matched_support_titles": [
         "Ciudad Deportiva (Nuevo Laredo)",
@@ -384,15 +350,15 @@
       "answer_match_candidates": [
         "Tamaulipas"
       ],
-      "qa_context_words": 673,
-      "qa_context_chars": 4188,
+      "qa_context_words": 117,
+      "qa_context_chars": 737,
       "ranked_passages_count": 10,
       "ranked_facts_count": 5,
       "bridge_entities": [
+        "Mexico",
         "Tamaulipas",
         "Nuevo Laredo municipality",
         "R o Grande",
-        "Mexico",
         "Municipality of Nuevo Laredo",
         "Mexican state",
         "Nuevo Laredo Mexico"
@@ -424,23 +390,15 @@
           "resolved_sub_question": "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
           "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
           "sentence": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.",
-          "score": 0.6626640000000001,
+          "score": 0.6771360000000002,
           "source_title": "Ciudad Deportiva (Nuevo Laredo)",
           "hop_answer": "Nuevo Laredo, Mexico",
-          "hop_thought": "The text clearly states that the Ciudad Deportiva is located in Nuevo Laredo, Mexico.",
-          "hop_raw_response": "The text clearly states that the Ciudad Deportiva is located in Nuevo Laredo, Mexico.\nAnswer: Nuevo Laredo, Mexico",
+          "hop_thought": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.",
+          "hop_raw_response": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.\nAnswer: Nuevo Laredo, Mexico",
           "evidence_passages": [
             {
               "title": "Ciudad Deportiva (Nuevo Laredo)",
               "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
-            },
-            {
-              "title": "Ciudad Deportiva (Nuevo Laredo)",
-              "text": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game."
-            },
-            {
-              "title": "Ciudad Deportiva (Nuevo Laredo)",
-              "text": "The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game."
             }
           ]
         },
@@ -452,20 +410,12 @@
           "score": 0.5514909090909093,
           "source_title": "Ciudad Deportiva (Nuevo Laredo)",
           "hop_answer": "Tamaulipas",
-          "hop_thought": "Nuevo Laredo is a city located in Mexico, specifically in the state of Tamaulipas.",
-          "hop_raw_response": "Nuevo Laredo is a city located in Mexico, specifically in the state of Tamaulipas.\nAnswer: Tamaulipas",
+          "hop_thought": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.",
+          "hop_raw_response": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.\nAnswer: Tamaulipas",
           "evidence_passages": [
             {
               "title": "Ciudad Deportiva (Nuevo Laredo)",
               "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
-            },
-            {
-              "title": "Ciudad Deportiva (Nuevo Laredo)",
-              "text": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game."
-            },
-            {
-              "title": "Ciudad Deportiva (Nuevo Laredo)",
-              "text": "The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game."
             }
           ]
         }
@@ -474,51 +424,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Nuevo Laredo Municipality",
-          "score": 0.09465423818660626,
+          "score": 0.09379022584175231,
           "words": 112,
           "score_breakdown": {
-            "dense": 0.05013180249308039,
-            "graph": 0.05313237722946728,
-            "fact": 0.34094689097714564
+            "dense": 0.050132036723310784,
+            "graph": 0.052491720222664136,
+            "fact": 0.3364672638475476
           }
         },
         {
           "title": "Ciudad Deportiva (Nuevo Laredo)",
-          "score": 0.09211318715796099,
+          "score": 0.09238638547073158,
           "words": 79,
           "score_breakdown": {
-            "dense": 0.050852189633131956,
-            "graph": 0.04683411131408631,
-            "fact": 0.33396166310341685
+            "dense": 0.050851879700696906,
+            "graph": 0.04661039255875429,
+            "fact": 0.3362315591181467
           }
         },
         {
           "title": "Buenos Aires Argentina Temple",
-          "score": 0.08958686377636858,
+          "score": 0.0898739463811358,
           "words": 33,
           "score_breakdown": {
-            "dense": 0.049946548354527255,
-            "graph": 0.044508484311543195,
-            "fact": 0.32509144591943756
+            "dense": 0.049946517722715945,
+            "graph": 0.04436061692832057,
+            "fact": 0.3273011770343057
           }
         },
         {
           "title": "Sportivo Italiano",
-          "score": 0.04069837628629345,
+          "score": 0.04067537334044642,
           "words": 38,
           "score_breakdown": {
-            "dense": 0.05017526872720849,
-            "graph": 0.04367326162109592,
+            "dense": 0.05017531347775028,
+            "graph": 0.04359650309227922,
             "fact": 0.0
           }
         },
         {
-          "title": "Ciudad del Niño metro station",
-          "score": 0.040373844038415034,
-          "words": 37,
+          "title": "Chihuahua (state)",
+          "score": 0.04041736649851255,
+          "words": 182,
           "score_breakdown": {
-            "dense": 0.05011953081905102,
-            "graph": 0.042693673626456576,
+            "dense": 0.049943617203771225,
+            "graph": 0.04316125678812791,
             "fact": 0.0
           }
         }
@@ -551,13 +501,13 @@
         "Philae (spacecraft)",
         "Ulrich Walter"
       ],
-      "context_contains_answer": 1.0,
+      "context_contains_answer": 0.0,
       "answer_match_flag": true,
       "answer_match_candidates": [
         "Cologne"
       ],
-      "qa_context_words": 487,
-      "qa_context_chars": 3105,
+      "qa_context_words": 129,
+      "qa_context_chars": 803,
       "ranked_passages_count": 10,
       "ranked_facts_count": 6,
       "bridge_entities": [
@@ -596,20 +546,12 @@
           "score": 0.364964,
           "source_title": "Ulrich Walser House",
           "hop_answer": "Unknown",
-          "hop_thought": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.",
-          "hop_raw_response": "The provided evidence does not mention any employer of Ulrich Walser. It only states that he constructed the Ulrich Walser House in 1895.\nAnswer: Unknown",
+          "hop_thought": "The text does not provide any information about Ulrich Walser's employment or employer; it only mentions that he constructed the Ulrich Walser House in 1895.",
+          "hop_raw_response": "The text does not provide any information about Ulrich Walser's employment or employer; it only mentions that he constructed the Ulrich Walser House in 1895.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Ulrich Walser House",
               "text": "It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
-            },
-            {
-              "title": "Ulrich Walser House",
-              "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
-            },
-            {
-              "title": "Ulrich Walser House",
-              "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
             }
           ]
         },
@@ -618,23 +560,15 @@
           "resolved_sub_question": "Where is this employer headquartered?",
           "sentence_id": "sentence:ulrich_walser_house_0_0_the_ulrich_walser_house_is_a_house_located_at_711_north_2nd_street_in_alma_wisc",
           "sentence": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States.",
-          "score": 0.3576358877959009,
+          "score": 0.35762907305034636,
           "source_title": "Ulrich Walser House",
           "hop_answer": "Unknown",
-          "hop_thought": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.",
-          "hop_raw_response": "The evidence provided does not contain information about the headquarters of Ulrich Walter's employer. There is no mention of his employer or where it is based.\nAnswer: Unknown",
+          "hop_thought": "The question asks about the headquarters of Ulrich Walter's employer, but the provided evidence only mentions the Ulrich Walser House, which is a location in Alma, Wisconsin, and does not provide any information about Ulrich Walter or his employer. Therefore, there is no information to determine the headquarters of the employer.",
+          "hop_raw_response": "The question asks about the headquarters of Ulrich Walter's employer, but the provided evidence only mentions the Ulrich Walser House, which is a location in Alma, Wisconsin, and does not provide any information about Ulrich Walter or his employer. Therefore, there is no information to determine the headquarters of the employer.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Ulrich Walser House",
               "text": "The Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States."
-            },
-            {
-              "title": "Ulrich Walser House",
-              "text": "Ulrich Walser House\nThe Ulrich Walser House is a house located at 711 North 2nd Street in Alma, Wisconsin, United States. It was constructed in 1895 by Ulrich Walser and was placed on the National Register of Historic Places in 1982."
-            },
-            {
-              "title": "Full-time",
-              "text": "This is a matter generally to be determined by the employer (US Department of Labor)."
             }
           ]
         }
@@ -643,51 +577,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Ulrich Walser House",
-          "score": 0.08383341110381784,
+          "score": 0.0838337066981937,
           "words": 41,
           "score_breakdown": {
-            "dense": 0.050229519043072456,
-            "graph": 0.05623769600016977,
-            "fact": 0.2622391122005137
+            "dense": 0.05022954887589116,
+            "graph": 0.05623863682047621,
+            "fact": 0.2622390918020714
           }
         },
         {
           "title": "Mount Meigs Campus",
-          "score": 0.08101425643704387,
+          "score": 0.08101166434068538,
           "words": 73,
           "score_breakdown": {
-            "dense": 0.04988696744087652,
-            "graph": 0.050065498321374705,
-            "fact": 0.25704516565432917
+            "dense": 0.049886693576318045,
+            "graph": 0.05005735824600165,
+            "fact": 0.2570451693327331
           }
         },
         {
           "title": "Philae (spacecraft)",
-          "score": 0.0799624471896786,
+          "score": 0.07996236502182297,
           "words": 40,
           "score_breakdown": {
-            "dense": 0.04984275622698064,
-            "graph": 0.05168017725252936,
-            "fact": 0.24696585392720297
+            "dense": 0.04984266021593108,
+            "graph": 0.0516800734646694,
+            "fact": 0.2469658657577337
           }
         },
         {
           "title": "Ulrich Walter",
-          "score": 0.07749761032092717,
+          "score": 0.077497934202136,
           "words": 61,
           "score_breakdown": {
-            "dense": 0.05058148688850925,
-            "graph": 0.04871770766517992,
-            "fact": 0.23374986821795407
+            "dense": 0.050582008541094944,
+            "graph": 0.04871782846138176,
+            "fact": 0.23374987310746176
           }
         },
         {
           "title": "John Deere World Headquarters",
-          "score": 0.04159807598455161,
+          "score": 0.04159829962656633,
           "words": 41,
           "score_breakdown": {
-            "dense": 0.05016197421974382,
-            "graph": 0.04669663387897503,
+            "dense": 0.050162174652891814,
+            "graph": 0.04669701189158611,
             "fact": 0.0
           }
         }
@@ -701,7 +635,7 @@
         "Bombardier Inc.",
         "Bombardier"
       ],
-      "predicted_answer": "Bombardier Inc",
+      "predicted_answer": "Bombardier",
       "qa_exact_match": 1.0,
       "qa_f1": 1.0,
       "passage_recall_at_5": 1.0,
@@ -712,10 +646,10 @@
       ],
       "retrieved_titles_top5": [
         "Learjet 60",
-        "EMD E6",
         "List of Bombardier CRJ operators",
-        "David Copperfield (illusionist)",
-        "Tip Top Bakeries"
+        "EMD E6",
+        "Aerojet",
+        "David Copperfield (illusionist)"
       ],
       "matched_support_titles": [
         "Learjet 60",
@@ -727,14 +661,14 @@
         "Bombardier Inc.",
         "Bombardier"
       ],
-      "qa_context_words": 737,
-      "qa_context_chars": 4777,
+      "qa_context_words": 108,
+      "qa_context_chars": 707,
       "ranked_passages_count": 10,
-      "ranked_facts_count": 8,
+      "ranked_facts_count": 7,
       "bridge_entities": [
         "Bombardier Aerospace",
         "Wichita Kansas",
-        "Bombardier Inc"
+        "Bombardier"
       ],
       "query_entities": [
         "Learjet 60"
@@ -763,23 +697,15 @@
           "resolved_sub_question": "Who is the manufacturer of Learjet 60?",
           "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
           "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
-          "score": 0.5274140815650941,
+          "score": 0.5274442125617982,
           "source_title": "Learjet 60",
           "hop_answer": "Bombardier Aerospace",
-          "hop_thought": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.",
-          "hop_raw_response": "The text clearly states that the Learjet 60 is manufactured by Bombardier Aerospace.\nAnswer: Bombardier Aerospace",
+          "hop_thought": "The evidence states that the Learjet 60 is manufactured by Bombardier Aerospace.",
+          "hop_raw_response": "The evidence states that the Learjet 60 is manufactured by Bombardier Aerospace.\nAnswer: Bombardier Aerospace",
           "evidence_passages": [
             {
               "title": "Learjet 60",
               "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
-            },
-            {
-              "title": "Learjet 60",
-              "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
-            },
-            {
-              "title": "Learjet 60",
-              "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
             }
           ]
         },
@@ -788,23 +714,15 @@
           "resolved_sub_question": "Which company owns this manufacturer? Context: Bombardier Aerospace.",
           "sentence_id": "sentence:learjet_60_0_0_the_learjet_60_is_a_mid_size_cabin_medium_range_business_jet_aircraft_manufactu",
           "sentence": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas.",
-          "score": 0.46531026563644406,
+          "score": 0.4653227675914764,
           "source_title": "Learjet 60",
-          "hop_answer": "Bombardier Inc",
-          "hop_thought": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.",
-          "hop_raw_response": "Bombardier Aerospace is the manufacturer of the Learjet 60, and it is owned by Bombardier Inc.\nAnswer: Bombardier Inc.",
+          "hop_answer": "Bombardier",
+          "hop_thought": "Bombardier Aerospace is the manufacturer of the Learjet 60. Bombardier Aerospace is owned by Bombardier.",
+          "hop_raw_response": "Bombardier Aerospace is the manufacturer of the Learjet 60. Bombardier Aerospace is owned by Bombardier.\nAnswer: Bombardier",
           "evidence_passages": [
             {
               "title": "Learjet 60",
               "text": "The Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas."
-            },
-            {
-              "title": "Learjet 60",
-              "text": "Learjet 60\nThe Learjet 60 is a mid-size cabin, medium-range business jet aircraft manufactured by Bombardier Aerospace in Wichita, Kansas. Powered by two Pratt & Whitney Canada PW305A engines, it has a range (with 4 passengers and 2 crew) of with NBAA reserves, ISA. In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
-            },
-            {
-              "title": "Learjet 60",
-              "text": "In July 2012 Bombardier Aerospace announced a temporary \"production pause\" of the latest variant Learjet 60XR to begin in the fourth quarter of 2012."
             }
           ]
         }
@@ -813,51 +731,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Learjet 60",
-          "score": 0.09822611519622962,
+          "score": 0.08520848427440508,
           "words": 68,
           "score_breakdown": {
-            "dense": 0.051263201199918354,
-            "graph": 0.05604993306205001,
-            "fact": 0.3547758307843968
-          }
-        },
-        {
-          "title": "EMD E6",
-          "score": 0.09293896587217075,
-          "words": 105,
-          "score_breakdown": {
-            "dense": 0.05012122537511192,
-            "graph": 0.055795198905914625,
-            "fact": 0.32422488162723206
+            "dense": 0.05126322713546339,
+            "graph": 0.056418151222772044,
+            "fact": 0.26725509322045743
           }
         },
         {
           "title": "List of Bombardier CRJ operators",
-          "score": 0.09178389866464264,
+          "score": 0.08005017140902415,
           "words": 52,
           "score_breakdown": {
-            "dense": 0.05033699433787494,
-            "graph": 0.053162195468519156,
-            "fact": 0.32099928758837115
+            "dense": 0.050337045735675004,
+            "graph": 0.05364367272386545,
+            "fact": 0.2418112962482884
+          }
+        },
+        {
+          "title": "EMD E6",
+          "score": 0.0800047363324099,
+          "words": 105,
+          "score_breakdown": {
+            "dense": 0.050121392552418764,
+            "graph": 0.051446572731413974,
+            "fact": 0.24669332406103592
+          }
+        },
+        {
+          "title": "Aerojet",
+          "score": 0.07972056050961404,
+          "words": 52,
+          "score_breakdown": {
+            "dense": 0.050018342850434,
+            "graph": 0.051914763237808685,
+            "fact": 0.24424028647021823
           }
         },
         {
           "title": "David Copperfield (illusionist)",
-          "score": 0.0427715914498457,
+          "score": 0.04281748774625166,
           "words": 103,
           "score_breakdown": {
-            "dense": 0.04983398257988058,
-            "graph": 0.05120967010303793,
-            "fact": 0.0
-          }
-        },
-        {
-          "title": "Tip Top Bakeries",
-          "score": 0.0422563582270882,
-          "words": 27,
-          "score_breakdown": {
-            "dense": 0.05011345545759407,
-            "graph": 0.048979859084704896,
+            "dense": 0.049833874940533804,
+            "graph": 0.051362855096526876,
             "fact": 0.0
           }
         }
@@ -894,16 +812,15 @@
       "answer_match_candidates": [
         "Fletcher Webster"
       ],
-      "qa_context_words": 690,
-      "qa_context_chars": 4102,
+      "qa_context_words": 178,
+      "qa_context_chars": 1067,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
       "bridge_entities": [
         "New York City",
         "Daniel Webster",
         "September 28 1797",
-        "February 26 1882",
-        "Fletcher Webster"
+        "February 26 1882"
       ],
       "query_entities": [
         "Caroline LeRoy Webster"
@@ -935,20 +852,12 @@
           "score": 0.604516,
           "source_title": "Caroline LeRoy",
           "hop_answer": "Daniel Webster",
-          "hop_thought": "The text clearly states that Caroline LeRoy Webster was the second wife of Daniel Webster, a 19th Century statesman.",
-          "hop_raw_response": "The text clearly states that Caroline LeRoy Webster was the second wife of Daniel Webster, a 19th Century statesman.\nAnswer: Daniel Webster",
+          "hop_thought": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.",
+          "hop_raw_response": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.\nAnswer: Daniel Webster",
           "evidence_passages": [
             {
               "title": "Caroline LeRoy",
               "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
-            },
-            {
-              "title": "Caroline LeRoy",
-              "text": "Caroline LeRoy\nCaroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell."
-            },
-            {
-              "title": "Caroline LeRoy",
-              "text": "Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world."
             }
           ]
         },
@@ -959,21 +868,13 @@
           "sentence": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
           "score": 0.5532444444444445,
           "source_title": "Caroline LeRoy",
-          "hop_answer": "Fletcher Webster",
-          "hop_thought": "Daniel Webster had a son named Fletcher Webster, who was born to his first wife, Grace Fletcher Webster, not to Caroline LeRoy Webster.",
-          "hop_raw_response": "Daniel Webster had a son named Fletcher Webster, who was born to his first wife, Grace Fletcher Webster, not to Caroline LeRoy Webster.\nAnswer: Fletcher Webster",
+          "hop_answer": "Unknown",
+          "hop_thought": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.",
+          "hop_raw_response": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Caroline LeRoy",
               "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
-            },
-            {
-              "title": "Caroline LeRoy",
-              "text": "Caroline LeRoy\nCaroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell."
-            },
-            {
-              "title": "Fletcher Webster",
-              "text": "Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster."
             }
           ]
         }
@@ -982,52 +883,52 @@
       "retrieved_passages_top5": [
         {
           "title": "Caroline LeRoy",
-          "score": 0.07452221231408265,
+          "score": 0.07455276111650565,
           "words": 94,
           "score_breakdown": {
-            "dense": 0.05093490228581692,
-            "graph": 0.05535930733218636,
-            "fact": 0.19933482571484956
+            "dense": 0.05093544436433576,
+            "graph": 0.05546014255711896,
+            "fact": 0.19933482632656863
           }
         },
         {
           "title": "Margareta von Ascheberg",
-          "score": 0.07428789913078315,
+          "score": 0.07428818324396345,
           "words": 86,
           "score_breakdown": {
-            "dense": 0.04995834901118308,
-            "graph": 0.053540037364007614,
-            "fact": 0.20499197310286787
+            "dense": 0.04995821311382416,
+            "graph": 0.053541233796378304,
+            "fact": 0.2049919726163112
           }
         },
         {
           "title": "The Memory Keeper's Daughter",
-          "score": 0.07315299420332533,
+          "score": 0.07315319353786615,
           "words": 93,
           "score_breakdown": {
-            "dense": 0.04985320999726809,
-            "graph": 0.052978932333580656,
-            "fact": 0.19893366003169122
+            "dense": 0.04985292712361592,
+            "graph": 0.052980115598076256,
+            "fact": 0.19893365960303008
           }
         },
         {
           "title": "Elmer, the Great",
-          "score": 0.07301456196885395,
+          "score": 0.07301482593558645,
           "words": 24,
           "score_breakdown": {
-            "dense": 0.04971850105739959,
-            "graph": 0.051261284325132474,
-            "fact": 0.20194000726496295
+            "dense": 0.04971835379916958,
+            "graph": 0.05126243421920829,
+            "fact": 0.20194000720187125
           }
         },
         {
           "title": "The FBI Story",
-          "score": 0.07184013296771596,
+          "score": 0.07184047827770665,
           "words": 39,
           "score_breakdown": {
-            "dense": 0.04964309803934497,
-            "graph": 0.0510549965441066,
-            "fact": 0.19479953388562832
+            "dense": 0.04964310104570978,
+            "graph": 0.05105614188244485,
+            "fact": 0.19479953425221877
           }
         }
       ]
@@ -1039,9 +940,9 @@
       "gold_answers": [
         "Marie de' Medici"
       ],
-      "predicted_answer": "Françoise Marie de Bourbon",
+      "predicted_answer": "Anne of Austria",
       "qa_exact_match": 0.0,
-      "qa_f1": 0.5714285714285715,
+      "qa_f1": 0.0,
       "passage_recall_at_5": 0.5,
       "passage_hit_at_5": 1.0,
       "support_titles": [
@@ -1051,9 +952,9 @@
       "retrieved_titles_top5": [
         "Philippe I, Duke of Orléans",
         "Emmanuelle Boidron",
+        "Louise Élisabeth d'Orléans",
         "Edward VIII",
-        "Jean-Michel Oughourlian",
-        "Louise Élisabeth d'Orléans"
+        "Jean-Michel Oughourlian"
       ],
       "matched_support_titles": [
         "Philippe I, Duke of Orléans"
@@ -1061,16 +962,15 @@
       "context_contains_answer": 0.0,
       "answer_match_flag": false,
       "answer_match_candidates": [],
-      "qa_context_words": 758,
-      "qa_context_chars": 4536,
+      "qa_context_words": 105,
+      "qa_context_chars": 645,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
       "bridge_entities": [
         "Philippe",
         "Duke of Orl ans",
-        "Louis XIII",
-        "Anne of Austria",
-        "Fran oise Marie de Bourbon"
+        "Louis XIII of France",
+        "Anne of Austria"
       ],
       "query_entities": [
         "Philippe Duke of Orl ans"
@@ -1099,23 +999,15 @@
           "resolved_sub_question": "Who is the mother of Philippe, Duke of Orléans?",
           "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
           "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-          "score": 0.5937312849164327,
+          "score": 0.5937176080346427,
           "source_title": "Philippe I, Duke of Orléans",
           "hop_answer": "Anne of Austria",
-          "hop_thought": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-          "hop_raw_response": "The passage states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria.\nAnswer: Anne of Austria",
+          "hop_thought": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.",
+          "hop_raw_response": "The text states that Philippe, Duke of Orléans, was the younger son of Louis XIII of France and his wife, Anne of Austria. Therefore, the mother of Philippe, Duke of Orléans, is Anne of Austria.\nAnswer: Anne of Austria",
           "evidence_passages": [
             {
               "title": "Philippe I, Duke of Orléans",
               "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-            },
-            {
-              "title": "Philippe I, Duke of Orléans",
-              "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-            },
-            {
-              "title": "Louise Élisabeth d'Orléans",
-              "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
             }
           ]
         },
@@ -1124,23 +1016,15 @@
           "resolved_sub_question": "Who is the mother of this person? Context: Anne of Austria.",
           "sentence_id": "sentence:philippe_i_duke_of_orl_ans_0_0_philippe_duke_of_orl_ans_21_september_1640_9_june_1701_was_the_younger_son",
           "sentence": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria.",
-          "score": 0.5183587515830994,
+          "score": 0.5183450747013092,
           "source_title": "Philippe I, Duke of Orléans",
-          "hop_answer": "Françoise Marie de Bourbon",
-          "hop_thought": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.",
-          "hop_raw_response": "The context provided is incorrect for the specific question about Louise Élisabeth d'Orléans. The correct information is that Louise Élisabeth d'Orléans is a daughter of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon.\nAnswer: Françoise Marie de Bourbon",
+          "hop_answer": "Anne of Austria",
+          "hop_thought": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.",
+          "hop_raw_response": "The context specifies that the person in question is Philippe, Duke of Orléans, and it is stated that his mother is Anne of Austria.\nAnswer: Anne of Austria",
           "evidence_passages": [
             {
               "title": "Philippe I, Duke of Orléans",
               "text": "Philippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria."
-            },
-            {
-              "title": "Philippe I, Duke of Orléans",
-              "text": "Philippe I, Duke of Orléans\nPhilippe, Duke of Orléans (21 September 1640 – 9 June 1701) was the younger son of Louis XIII of France and his wife, Anne of Austria. His older brother was the famous \"Sun King\", Louis XIV. Styled Duke of Anjou from birth, Philippe became Duke of Orléans upon the death of his uncle Gaston in 1660. In 1661, Philippe also received the dukedoms of Valois and Chartres. Following Philippe's victory in battle in 1671, Louis XIV added the dukedom of Nemours, the marquisates of Coucy and Folembray, and the countships of Dourdan and Romorantin. During the reign of his brother he was known simply as \"Monsieur\", the traditional style at the court of France for the younger brother of the king."
-            },
-            {
-              "title": "Louise Élisabeth d'Orléans",
-              "text": "Louise Élisabeth d'Orléans was one of the seven daughters of Philippe II, Duke of Orléans, and his wife, Françoise Marie de Bourbon."
             }
           ]
         }
@@ -1149,52 +1033,52 @@
       "retrieved_passages_top5": [
         {
           "title": "Philippe I, Duke of Orléans",
-          "score": 0.07995666314048497,
+          "score": 0.07320033972492292,
           "words": 126,
           "score_breakdown": {
-            "dense": 0.05067680148287878,
-            "graph": 0.050812615250600615,
-            "fact": 0.24560425166480973
+            "dense": 0.050677497965095346,
+            "graph": 0.05059807761907868,
+            "fact": 0.20098861705597912
           }
         },
         {
           "title": "Emmanuelle Boidron",
-          "score": 0.07990795486952268,
+          "score": 0.07224259364355186,
           "words": 29,
           "score_breakdown": {
-            "dense": 0.04979627606155544,
-            "graph": 0.04915648113173601,
-            "fact": 0.25182039130764255
-          }
-        },
-        {
-          "title": "Edward VIII",
-          "score": 0.0781941652647117,
-          "words": 104,
-          "score_breakdown": {
-            "dense": 0.05001657310784677,
-            "graph": 0.048580140175447414,
-            "fact": 0.240740053351745
-          }
-        },
-        {
-          "title": "Jean-Michel Oughourlian",
-          "score": 0.054444125228202134,
-          "words": 35,
-          "score_breakdown": {
-            "dense": 0.0,
-            "graph": 0.05056276558943911,
-            "fact": 0.2618353036758027
+            "dense": 0.0497963923761939,
+            "graph": 0.048517767064447874,
+            "fact": 0.20199498478207237
           }
         },
         {
           "title": "Louise Élisabeth d'Orléans",
-          "score": 0.042259911105502285,
+          "score": 0.07174879356115137,
           "words": 62,
           "score_breakdown": {
-            "dense": 0.050496753024594075,
-            "graph": 0.04828898980658512,
-            "fact": 0.0
+            "dense": 0.05049693354990503,
+            "graph": 0.04964440919063715,
+            "fact": 0.19388104901008302
+          }
+        },
+        {
+          "title": "Edward VIII",
+          "score": 0.07113401899140245,
+          "words": 104,
+          "score_breakdown": {
+            "dense": 0.05001615886241485,
+            "graph": 0.04886359949274473,
+            "fact": 0.1931070117950058
+          }
+        },
+        {
+          "title": "Jean-Michel Oughourlian",
+          "score": 0.046363887757983224,
+          "words": 35,
+          "score_breakdown": {
+            "dense": 0.0,
+            "graph": 0.04953212384818094,
+            "fact": 0.21002833735685966
           }
         }
       ]
@@ -1231,8 +1115,8 @@
       "answer_match_candidates": [
         "European integration"
       ],
-      "qa_context_words": 524,
-      "qa_context_chars": 3420,
+      "qa_context_words": 116,
+      "qa_context_chars": 772,
       "ranked_passages_count": 10,
       "ranked_facts_count": 7,
       "bridge_entities": [
@@ -1271,20 +1155,12 @@
           "score": 0.5474824,
           "source_title": "Bernd Hüttemann",
           "hop_answer": "European Movement International",
-          "hop_thought": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.",
-          "hop_raw_response": "European Movement Germany is a member of the European Movement International, as the latter coordinates the efforts of national councils like the former.\nAnswer: European Movement International",
+          "hop_thought": "European Movement Germany is associated with the European Movement International since Bernd Hüttemann holds positions in both organizations.",
+          "hop_raw_response": "European Movement Germany is associated with the European Movement International since Bernd Hüttemann holds positions in both organizations.\nAnswer: European Movement International",
           "evidence_passages": [
             {
               "title": "Bernd Hüttemann",
               "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
-            },
-            {
-              "title": "Bernd Hüttemann",
-              "text": "Bernd Hüttemann\nBernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
-            },
-            {
-              "title": "European Movement International",
-              "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
             }
           ]
         },
@@ -1293,7 +1169,7 @@
           "resolved_sub_question": "What is the goal of this group? Context: European Movement International.",
           "sentence_id": "sentence:european_movement_international_0_0_the_european_movement_international_is_a_lobbying_association_that_coordinates_t",
           "sentence": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it.",
-          "score": 0.5338809576884377,
+          "score": 0.5338767352954017,
           "source_title": "European Movement International",
           "hop_answer": "Unknown",
           "hop_thought": "The goal of the European Movement International is to promote European integration and disseminate information about it.",
@@ -1302,14 +1178,6 @@
             {
               "title": "European Movement International",
               "text": "The European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
-            },
-            {
-              "title": "European Movement International",
-              "text": "European Movement International\nThe European Movement International is a lobbying association that coordinates the efforts of associations and national councils with the goal of promoting European integration, and disseminating information about it."
-            },
-            {
-              "title": "Bernd Hüttemann",
-              "text": "Bernd Hüttemann (born December 8, 1970 in Paderborn) is Vice President of the European Movement International and Secretary General of the European Movement Germany."
             }
           ]
         }
@@ -1318,51 +1186,51 @@
       "retrieved_passages_top5": [
         {
           "title": "European Movement International",
-          "score": 0.0816599779918287,
+          "score": 0.08165994340966706,
           "words": 32,
           "score_breakdown": {
-            "dense": 0.050890394831998746,
-            "graph": 0.052867521831923364,
-            "fact": 0.2520666952310158
+            "dense": 0.05089044089296066,
+            "graph": 0.05286732225229606,
+            "fact": 0.2520666949523325
           }
         },
         {
           "title": "Ignazio Corrao",
-          "score": 0.0815204596962735,
+          "score": 0.08152043293773138,
           "words": 28,
           "score_breakdown": {
-            "dense": 0.04999627014369526,
-            "graph": 0.0502050891770479,
-            "fact": 0.2597398957608449
+            "dense": 0.049996200175554416,
+            "graph": 0.0502051281675746,
+            "fact": 0.2597398959393605
           }
         },
         {
           "title": "Constitutional Movement",
-          "score": 0.08053070535050219,
+          "score": 0.0805306789440991,
           "words": 54,
           "score_breakdown": {
-            "dense": 0.050051495427948345,
-            "graph": 0.05127125984648805,
-            "fact": 0.25080669940789463
+            "dense": 0.05005138763197256,
+            "graph": 0.05127136913491786,
+            "fact": 0.2508067000402589
           }
         },
         {
           "title": "Bernd Hüttemann",
-          "score": 0.0800424202345222,
+          "score": 0.08004249784876022,
           "words": 26,
           "score_breakdown": {
-            "dense": 0.05050088696661073,
-            "graph": 0.055529753209498635,
-            "fact": 0.2373867096002447
+            "dense": 0.05050080678236367,
+            "graph": 0.05553015919417662,
+            "fact": 0.23738670906804815
           }
         },
         {
           "title": "Ivo Visković",
-          "score": 0.04300562934932047,
+          "score": 0.04300562823513348,
           "words": 56,
           "score_breakdown": {
-            "dense": 0.05013684092973635,
-            "graph": 0.05143455612655158,
+            "dense": 0.0501369015166875,
+            "graph": 0.05143444133651784,
             "fact": 0.0
           }
         }
@@ -1389,23 +1257,23 @@
         "Empire Sports Network",
         "Ottoman Empire",
         "Nova Sports",
-        "Fox Sports West and Prime Ticket",
-        "Windjammer Communications"
+        "Windjammer Communications",
+        "EA Sports"
       ],
       "matched_support_titles": [
         "Empire Sports Network",
         "Windjammer Communications"
       ],
-      "context_contains_answer": 1.0,
+      "context_contains_answer": 0.0,
       "answer_match_flag": true,
       "answer_match_candidates": [
         "Time Warner Cable",
         "Time Warner"
       ],
-      "qa_context_words": 856,
-      "qa_context_chars": 5572,
+      "qa_context_words": 238,
+      "qa_context_chars": 1586,
       "ranked_passages_count": 10,
-      "ranked_facts_count": 7,
+      "ranked_facts_count": 6,
       "bridge_entities": [
         "Adelphia Communications Corporation",
         "American regional sports network"
@@ -1437,23 +1305,15 @@
           "resolved_sub_question": "Who was the owner of Empire Sports Network?",
           "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
           "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-          "score": 0.5757278575412206,
+          "score": 0.5756611437312535,
           "source_title": "Empire Sports Network",
           "hop_answer": "Adelphia Communications Corporation",
-          "hop_thought": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
-          "hop_raw_response": "The passage clearly states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
+          "hop_thought": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.",
+          "hop_raw_response": "The evidence states that Empire Sports Network was owned by the Adelphia Communications Corporation.\nAnswer: Adelphia Communications Corporation",
           "evidence_passages": [
             {
               "title": "Empire Sports Network",
               "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-            },
-            {
-              "title": "Empire Sports Network",
-              "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-            },
-            {
-              "title": "Ottoman Empire",
-              "text": "With Constantinople as its capital and control of lands around the Mediterranean basin, the Ottoman Empire was at the centre of interactions between the Eastern and Western worlds for six centuries."
             }
           ]
         },
@@ -1462,23 +1322,15 @@
           "resolved_sub_question": "What company succeeded this owner? Context: Adelphia Communications Corporation.",
           "sentence_id": "sentence:empire_sports_network_0_0_empire_sports_network_was_an_american_regional_sports_network_that_was_owned_by",
           "sentence": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation.",
-          "score": 0.4807376969973246,
+          "score": 0.48069455515543624,
           "source_title": "Empire Sports Network",
           "hop_answer": "Unknown",
-          "hop_thought": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.",
-          "hop_raw_response": "The context provided does not contain information about the company that succeeded Adelphia Communications Corporation in owning Empire Sports Network. The text only mentions that the network ceased operations during Adelphia's financial collapse and bankruptcy.\nAnswer: Unknown",
+          "hop_thought": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.",
+          "hop_raw_response": "The context provided does not contain information about a company succeeding Adelphia Communications Corporation as the owner of Empire Sports Network.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Empire Sports Network",
               "text": "Empire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation."
-            },
-            {
-              "title": "Empire Sports Network",
-              "text": "Empire Sports Network\nEmpire Sports Network was an American regional sports network that was owned by the Adelphia Communications Corporation. The network was available on cable providers in much of upstate New York (stretching from Buffalo to Albany), as well as parts of northern Pennsylvania and eastern Ohio. The network ceased operations on March 7, 2005, in the midst of Adelphia's financial collapse and bankruptcy."
-            },
-            {
-              "title": "Comcast Sports Southwest",
-              "text": "Comcast Sports Southwest (CSS) was an American regional sports network that served Greater Houston, Texas."
             }
           ]
         }
@@ -1487,52 +1339,52 @@
       "retrieved_passages_top5": [
         {
           "title": "Empire Sports Network",
-          "score": 0.07490457510822417,
+          "score": 0.08207545942113473,
           "words": 65,
           "score_breakdown": {
-            "dense": 0.050877577454189415,
-            "graph": 0.05091024703532673,
-            "fact": 0.21099222265214643
+            "dense": 0.050877650135638934,
+            "graph": 0.05159388935056846,
+            "fact": 0.25743056694241856
           }
         },
         {
           "title": "Ottoman Empire",
-          "score": 0.07401999602771896,
+          "score": 0.08199822829699159,
           "words": 182,
           "score_breakdown": {
-            "dense": 0.049761373483890904,
-            "graph": 0.05023503805767032,
-            "fact": 0.21053819462851908
+            "dense": 0.04976133962450667,
+            "graph": 0.051065374091889416,
+            "fact": 0.26206586183964065
           }
         },
         {
           "title": "Nova Sports",
-          "score": 0.07255555651817942,
+          "score": 0.08014401028546564,
           "words": 64,
           "score_breakdown": {
-            "dense": 0.049995625821775413,
-            "graph": 0.04876222961679565,
-            "fact": 0.20286195620776162
-          }
-        },
-        {
-          "title": "Fox Sports West and Prime Ticket",
-          "score": 0.07042792704908567,
-          "words": 76,
-          "score_breakdown": {
-            "dense": 0.0501297302700271,
-            "graph": 0.04848376900237961,
-            "fact": 0.18874296466571247
+            "dense": 0.049995586027181745,
+            "graph": 0.04923266615454768,
+            "fact": 0.2525109208276759
           }
         },
         {
           "title": "Windjammer Communications",
-          "score": 0.07035544521266801,
+          "score": 0.07665382411223999,
           "words": 58,
           "score_breakdown": {
-            "dense": 0.049973347669902954,
-            "graph": 0.049468015724474346,
-            "fact": 0.1868646618458605
+            "dense": 0.0499732875127901,
+            "graph": 0.049898728072218984,
+            "fact": 0.22799265039026495
+          }
+        },
+        {
+          "title": "EA Sports",
+          "score": 0.04199118285868917,
+          "words": 96,
+          "score_breakdown": {
+            "dense": 0.050034212909615704,
+            "graph": 0.04824121919466844,
+            "fact": 0.0
           }
         }
       ]
@@ -1569,14 +1421,13 @@
       "answer_match_candidates": [
         "Cabo Delgado Province"
       ],
-      "qa_context_words": 676,
-      "qa_context_chars": 4230,
+      "qa_context_words": 89,
+      "qa_context_chars": 584,
       "ranked_passages_count": 10,
       "ranked_facts_count": 7,
       "bridge_entities": [
         "Niassa Province",
-        "Mozambique",
-        "Tanzania"
+        "Mozambique"
       ],
       "query_entities": [
         "Lago District"
@@ -1608,20 +1459,12 @@
           "score": 0.5764144,
           "source_title": "Lago District",
           "hop_answer": "Niassa Province",
-          "hop_thought": "The passage clearly states that Lago District is a district of Niassa Province.",
-          "hop_raw_response": "The passage clearly states that Lago District is a district of Niassa Province.\nAnswer: Niassa Province",
+          "hop_thought": "The evidence states that Lago District is a district of Niassa Province.",
+          "hop_raw_response": "The evidence states that Lago District is a district of Niassa Province.\nAnswer: Niassa Province",
           "evidence_passages": [
             {
               "title": "Lago District",
               "text": "Lago District is a district of Niassa Province in north-western Mozambique."
-            },
-            {
-              "title": "Lago District",
-              "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
-            },
-            {
-              "title": "Lago District",
-              "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
             }
           ]
         },
@@ -1630,23 +1473,15 @@
           "resolved_sub_question": "What province shares a border with the province where Lago District is located? Context: Niassa Province.",
           "sentence_id": "sentence:lago_district_0_0_lago_district_is_a_district_of_niassa_province_in_north_western_mozambique",
           "sentence": "Lago District is a district of Niassa Province in north-western Mozambique.",
-          "score": 0.49093904716364545,
+          "score": 0.4909239816652934,
           "source_title": "Lago District",
-          "hop_answer": "Tanzania",
-          "hop_thought": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.",
-          "hop_raw_response": "The context indicates that Lago District is in Niassa Province. The evidence states that Lago District shares its northern boundary with Tanzania, implying that Tanzania borders Niassa Province.\nAnswer: Tanzania",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided mentions that Lago District is in Niassa Province, but it does not specify which provinces border Niassa Province. Without additional information about neighboring provinces, we cannot determine a specific bordering province.",
+          "hop_raw_response": "The context provided mentions that Lago District is in Niassa Province, but it does not specify which provinces border Niassa Province. Without additional information about neighboring provinces, we cannot determine a specific bordering province.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Lago District",
               "text": "Lago District is a district of Niassa Province in north-western Mozambique."
-            },
-            {
-              "title": "Lago District",
-              "text": "Lago District\nLago District is a district of Niassa Province in north-western Mozambique. The principal town is Metangula. Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District. Lago shares its northern boundary with Tanzania."
-            },
-            {
-              "title": "Lago District",
-              "text": "Lago District is bordered to the west by Lake Nyasa, on the south by Lichinga, on the east by Sanga District."
             }
           ]
         }
@@ -1655,51 +1490,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Lago District",
-          "score": 0.09644002990316236,
+          "score": 0.09643985484239964,
           "words": 46,
           "score_breakdown": {
-            "dense": 0.05103849300753884,
-            "graph": 0.05883535096988986,
-            "fact": 0.33812168972032697
+            "dense": 0.05103820868515555,
+            "graph": 0.0588352889834248,
+            "fact": 0.33812168913691104
           }
         },
         {
           "title": "Niassa Reserve",
-          "score": 0.09574254245443042,
+          "score": 0.09574256111196312,
           "words": 57,
           "score_breakdown": {
-            "dense": 0.05000278295942381,
-            "graph": 0.056542055275685156,
-            "fact": 0.3418559682936119
+            "dense": 0.050002844019962016,
+            "graph": 0.05654200553522505,
+            "fact": 0.3418559682694433
           }
         },
         {
           "title": "Swan Miara",
-          "score": 0.09211124897472363,
+          "score": 0.09211138397690832,
           "words": 35,
           "score_breakdown": {
-            "dense": 0.04995462703949621,
-            "graph": 0.055442842683638485,
-            "fact": 0.3200223419860611
+            "dense": 0.04995490222507374,
+            "graph": 0.05544278788023641,
+            "fact": 0.3200223425936456
           }
         },
         {
           "title": "Lago Verde (Queyras)",
-          "score": 0.042301116155452546,
+          "score": 0.042301104213572624,
           "words": 26,
           "score_breakdown": {
-            "dense": 0.0503056064191744,
-            "graph": 0.04877677541635542,
+            "dense": 0.050305613308989416,
+            "graph": 0.0487767229787615,
             "fact": 0.0
           }
         },
         {
           "title": "Novolaksky District",
-          "score": 0.04217868326355965,
+          "score": 0.04217870412992759,
           "words": 99,
           "score_breakdown": {
-            "dense": 0.050069052072432944,
-            "graph": 0.048802348745738425,
+            "dense": 0.050069116855368474,
+            "graph": 0.04880229953158308,
             "fact": 0.0
           }
         }

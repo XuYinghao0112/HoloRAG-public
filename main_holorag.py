@@ -173,7 +173,7 @@ def main() -> None:
     parser.add_argument("--fact_rerank_top_k", type=int, default=8)
     parser.add_argument("--fact_output_top_k", type=int, default=8)
     parser.add_argument("--passage_output_top_k", type=int, default=10)
-    parser.add_argument("--qa_passage_top_k", type=int, default=5)
+    parser.add_argument("--qa_passage_top_k", type=int, default=3)
     parser.add_argument("--dense_passage_weight", type=float, default=0.55)
     parser.add_argument("--graph_passage_weight", type=float, default=0.30)
     parser.add_argument("--fact_passage_weight", type=float, default=0.15)

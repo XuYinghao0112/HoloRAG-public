@@ -1,0 +1,1092 @@
+{
+  "query": "What is the Sarah performer's birth date?",
+  "alpha": {
+    "entity": 0.1,
+    "sentence": 0.8,
+    "chunk": 0.1
+  },
+  "query_entities": [
+    "Sarah"
+  ],
+  "raw_query_entities": [
+    "Sarah"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Sarah",
+      "node_id": "entity:sarah",
+      "resolved_text": "Sarah",
+      "score": 0.762,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4,
+      "compatibility_score": 0.775,
+      "score_margin": 0.10026666666666662,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the Sarah performer?",
+    "What is this performer's birth date?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:sarah",
+      "score": 0.8021265216321355,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:istanbul",
+      "score": 0.38876331622716565,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_shirley_abicair",
+      "score": 0.36875687007813396,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:melbourne",
+      "score": 0.36875687007813396,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_maiysha",
+      "score": 0.3487559093396219,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:minneapolis_minnesota_united_states",
+      "score": 0.3487559093396219,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sarah_skinazi",
+      "score": 0.3412866308878397,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+      "score": 0.3275213404000074,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:melodifestivalen_2007",
+      "score": 0.31876547766563174,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sarah_dawn_finer",
+      "score": 0.2962897185039688,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:eskenazi",
+      "score": 0.2937603988976551,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "score": 0.27287756962009174,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:sarah_skinazi_born_in_istanbul_sentence_roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_j",
+      "text": "Sarah Skinazi born in Istanbul",
+      "head_id": "entity:sarah_skinazi",
+      "tail_id": "entity:istanbul",
+      "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "chunk_id": "chunk:roza_eskenazi_0",
+      "document_index": 0,
+      "score": 0.38667437592882437
+    },
+    {
+      "fact_id": "fact:shirley_abicair_born_in_melbourne_sentence_shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "text": "Shirley Abicair born in Melbourne",
+      "head_id": "entity:title_anchor_shirley_abicair",
+      "tail_id": "entity:melbourne",
+      "sentence_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "chunk_id": "chunk:shirley_abicair_0",
+      "document_index": 12,
+      "score": 0.36666828485484426
+    },
+    {
+      "fact_id": "fact:maiysha_born_in_minneapolis_minnesota_united_states_sentence_maiysha_0_0_born_in_minneapolis_minnesota_united_states_mai",
+      "text": "Maiysha born in Minneapolis Minnesota United States",
+      "head_id": "entity:title_anchor_maiysha",
+      "tail_id": "entity:minneapolis_minnesota_united_states",
+      "sentence_id": "sentence:maiysha_0_0_born_in_minneapolis_minnesota_united_states_maiysha_went_to_sarah_lawrence_co",
+      "chunk_id": "chunk:maiysha_0",
+      "document_index": 11,
+      "score": 0.34666767200540294
+    },
+    {
+      "fact_id": "fact:sarah_dawn_finer_performed_at_melodifestivalen_2007_sentence_i_remember_love_0_0_i_remember_love_is_a_song_written_by_pe",
+      "text": "Sarah Dawn Finer performed at Melodifestivalen 2007",
+      "head_id": "entity:sarah_dawn_finer",
+      "tail_id": "entity:melodifestivalen_2007",
+      "sentence_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+      "chunk_id": "chunk:i_remember_love_0",
+      "document_index": 7,
+      "score": 0.3166777490030104
+    },
+    {
+      "fact_id": "fact:eskenazi_born_as_sarah_skinazi_sentence_roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_j",
+      "text": "Eskenazi born as Sarah Skinazi",
+      "head_id": "entity:eskenazi",
+      "tail_id": "entity:sarah_skinazi",
+      "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "chunk_id": "chunk:roza_eskenazi_0",
+      "document_index": 0,
+      "score": 0.29167308275075454
+    },
+    {
+      "fact_id": "fact:i_remember_love_performed_by_sarah_dawn_finer_sentence_i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_ha",
+      "text": "I Remember Love performed by Sarah Dawn Finer",
+      "head_id": "entity:title_anchor_i_remember_love",
+      "tail_id": "entity:sarah_dawn_finer",
+      "sentence_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+      "chunk_id": "chunk:i_remember_love_0",
+      "document_index": 7,
+      "score": 0.2716761554266739
+    },
+    {
+      "fact_id": "fact:incredible_sarah_directed_by_richard_fleischer_sentence_the_incredible_sarah_0_0_the_incredible_sarah_is_a_1976_british_",
+      "text": "Incredible Sarah directed by Richard Fleischer",
+      "head_id": "entity:title_anchor_the_incredible_sarah",
+      "tail_id": "entity:richard_fleischer",
+      "sentence_id": "sentence:the_incredible_sarah_0_0_the_incredible_sarah_is_a_1976_british_drama_film_directed_by_richard_fleischer",
+      "chunk_id": "chunk:the_incredible_sarah_0",
+      "document_index": 13,
+      "score": 0.2466755886672314
+    },
+    {
+      "fact_id": "fact:i_remember_love_is_a_song_written_by_peter_hallstr_m_sarah_dawn_finer_sentence_i_remember_love_0_0_i_remember_love_is_a_",
+      "text": "I Remember Love is a song written by Peter Hallstr m Sarah Dawn Finer",
+      "head_id": "entity:title_anchor_i_remember_love",
+      "tail_id": "entity:peter_hallstr_m_sarah_dawn_finer",
+      "sentence_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+      "chunk_id": "chunk:i_remember_love_0",
+      "document_index": 7,
+      "score": 0.226668668848148
+    }
+  ],
+  "bridge_entities": [
+    "Eskenazi",
+    "Sarah Skinazi",
+    "Sephardic Jewish family",
+    "Istanbul",
+    "Constantinople Vilayet",
+    "Ottoman Empire"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the Sarah performer?",
+      "resolved_sub_question": "Who is the Sarah performer?",
+      "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "sentence": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.",
+      "score": 0.4892413067608535,
+      "source_title": "Roza Eskenazi",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question asks about a performer named Sarah, but the evidence provided does not clearly indicate which Sarah is being referred to. \"Sarah Skinazi\" is mentioned, but she is known as Roza Eskenazi, not primarily as \"Sarah.\" Another reference is to Sarah Bernhardt, but this is from a different context (a dramatization of her acting career). There is no clear indication that either of these is the specific \"Sarah performer\" the question is asking about.",
+      "hop_raw_response": "The question asks about a performer named Sarah, but the evidence provided does not clearly indicate which Sarah is being referred to. \"Sarah Skinazi\" is mentioned, but she is known as Roza Eskenazi, not primarily as \"Sarah.\" Another reference is to Sarah Bernhardt, but this is from a different context (a dramatization of her acting career). There is no clear indication that either of these is the specific \"Sarah performer\" the question is asking about.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Roza Eskenazi",
+          "text": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire."
+        },
+        {
+          "title": "Roza Eskenazi",
+          "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami."
+        },
+        {
+          "title": "The Incredible Sarah",
+          "text": "It presents a dramatization of the acting career of Sarah Bernhardt."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is this performer's birth date?",
+      "resolved_sub_question": "What is this performer's birth date?",
+      "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "sentence": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.",
+      "score": 0.5660000000000001,
+      "source_title": "Roza Eskenazi",
+      "hop_answer": "1895-1897",
+      "hop_thought": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.",
+      "hop_raw_response": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.\nAnswer: 1895-1897",
+      "evidence_passages": [
+        {
+          "title": "Roza Eskenazi",
+          "text": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire."
+        },
+        {
+          "title": "Roza Eskenazi",
+          "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami."
+        },
+        {
+          "title": "Shirley Abicair",
+          "text": "Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+      "score": 0.0785251248743439,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+      "score": 0.06775961628852754,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:sarah",
+      "score": 0.063550301618964,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "score": 0.044108739662592655,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:sarah_skinazi",
+      "score": 0.03776748177253238,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:istanbul",
+      "score": 0.03644657401805601,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sarah_dawn_finer",
+      "score": 0.036269511146149146,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:melbourne",
+      "score": 0.036229010308502015,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_maiysha",
+      "score": 0.036087960305232605,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:maiysha_0_0_born_in_minneapolis_minnesota_united_states_maiysha_went_to_sarah_lawrence_co",
+      "score": 0.034761818563963466,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_i_remember_love",
+      "score": 0.03322799064914074,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_shirley_abicair",
+      "score": 0.033026252572031255,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:melodifestivalen_2007",
+      "score": 0.031977569024045596,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_incredible_sarah_0_0_the_incredible_sarah_is_a_1976_british_drama_film_directed_by_richard_fleischer",
+      "score": 0.03159624692929541,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:minneapolis_minnesota_united_states",
+      "score": 0.03062189323515166,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:eskenazi",
+      "score": 0.02710070679688249,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_incredible_sarah",
+      "score": 0.026531477234213393,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:peter_hallstr_m_sarah_dawn_finer",
+      "score": 0.022387534384539005,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:richard_fleischer",
+      "score": 0.02207903591644179,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:rhoda_delaval_0_2_her_siblings_were_anne_hussey_mary_elizabeth_sarah_robert_george_henry_ral",
+      "score": 0.018169119234375045,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:roza_eskenazi_0",
+      "passage_index": 0,
+      "title": "Roza Eskenazi",
+      "score": 0.07552322018478011,
+      "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami.",
+      "score_breakdown": {
+        "dense": 0.05020840086592888,
+        "graph": 0.054270862946606095,
+        "fact": 0.21084893883024936
+      }
+    },
+    {
+      "node_id": "chunk:shirley_abicair_0",
+      "passage_index": 12,
+      "title": "Shirley Abicair",
+      "score": 0.074227582416597,
+      "text": "Shirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.",
+      "score_breakdown": {
+        "dense": 0.050053778661889724,
+        "graph": 0.05232371821802344,
+        "fact": 0.20667259124767073
+      }
+    },
+    {
+      "node_id": "chunk:maiysha_0",
+      "passage_index": 11,
+      "title": "Maiysha",
+      "score": 0.07361124506839364,
+      "text": "Maiysha\nBorn in Minneapolis, Minnesota, United States, Maiysha went to Sarah Lawrence College where she studied vocal performance as well as creative writing and race and gender studies. After graduating, Maiysha moved to New York City to teach at a private school in Manhattan. She also was signed to Ford Models.",
+      "score_breakdown": {
+        "dense": 0.05025181254133312,
+        "graph": 0.0519524561028454,
+        "fact": 0.202580075598712
+      }
+    },
+    {
+      "node_id": "chunk:i_remember_love_0",
+      "passage_index": 7,
+      "title": "I Remember Love",
+      "score": 0.07348254036339477,
+      "text": "I Remember Love\n\"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007. The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.",
+      "score_breakdown": {
+        "dense": 0.05001731526909393,
+        "graph": 0.054945934571067924,
+        "fact": 0.19659491062715154
+      }
+    },
+    {
+      "node_id": "chunk:the_incredible_sarah_0",
+      "passage_index": 13,
+      "title": "The Incredible Sarah",
+      "score": 0.07063244410161112,
+      "text": "The Incredible Sarah\nThe Incredible Sarah is a 1976 British drama film directed by Richard Fleischer and starring Glenda Jackson. It presents a dramatization of the acting career of Sarah Bernhardt.",
+      "score_breakdown": {
+        "dense": 0.05049029941365839,
+        "graph": 0.05122418956555522,
+        "fact": 0.18330348369621635
+      }
+    },
+    {
+      "node_id": "chunk:rhoda_delaval_0",
+      "passage_index": 8,
+      "title": "Rhoda Delaval",
+      "score": 0.04279799966032153,
+      "text": "Rhoda Delaval\nRhoda Delaval was born on 1 July 1725 to Captain Francis Blake Delaval (the elder) and Rhoda Apreece and baptized at St George's, Hanover Square in London on 22 July 1725. She was their oldest daughter of 12 children. Her siblings were Anne Hussey, Mary Elizabeth, Sarah, Robert, George, Henry, Ralph, Francis, Edward, Thomas, John. Two years after her birth, her brother, Sir Francis Blake Delaval (the younger) (1727–1771) was born. A brother George, who died as a young adult, also pursued the art of painting with her instructor, Arthur Pond. She was known to be a talented, beautiful woman. One of her sisters was Sarah, Countess of Mexborough.",
+      "score_breakdown": {
+        "dense": 0.050053790549425554,
+        "graph": 0.05089471619379158,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sarah_mauro_scocco_song_0",
+      "passage_index": 17,
+      "title": "Sarah (Mauro Scocco song)",
+      "score": 0.04234224457021628,
+      "text": "Sarah (Mauro Scocco song)\n\"Sarah\" is a song written and recorded by Mauro Scocco on the 1988 album \"Mauro Scocco\". The song charted at Svensktoppen for 14 veckor weeks between 7 October 1988-22 January 1989, topping the chart. The single was released in 1988, and topped the Swedish singles chart. Sarah also became the most popular Trackslistan song of 1988.",
+      "score_breakdown": {
+        "dense": 0.05031634642677747,
+        "graph": 0.04889418011829556,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_temptation_of_sarah_jane_smith_0",
+      "passage_index": 1,
+      "title": "The Temptation of Sarah Jane Smith",
+      "score": 0.04226406167295153,
+      "text": "The Temptation of Sarah Jane Smith\nThe Temptation of Sarah Jane Smith is a story of \"The Sarah Jane Adventures\" which was broadcast on CBBC on 17 and 24 November 2008. It is the fifth serial of the second series.",
+      "score_breakdown": {
+        "dense": 0.05017720522116053,
+        "graph": 0.04888866267104415,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:mitzi_meyerson_0",
+      "passage_index": 6,
+      "title": "Mitzi Meyerson",
+      "score": 0.042224933000397626,
+      "text": "Mitzi Meyerson\nShe was born into a musical family in Chicago, Illinois, where she began her concert career at the age of seven. After completing her university and graduate studies in Chicago and Oberlin, Ohio, she moved to London to co-found the ensemble Trio Sonnerie (with Monica Huggett and Sarah Cunningham), with whom she performed and recorded extensively.",
+      "score_breakdown": {
+        "dense": 0.05006190206631697,
+        "graph": 0.0489696228797443,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:madonna_entertainer_0",
+      "passage_index": 10,
+      "title": "Madonna (entertainer)",
+      "score": 0.042205337355742015,
+      "text": "Madonna (entertainer)\nMadonna was criticized for her performance of \"Like a Virgin\" at the first 1984 MTV Video Music Awards (VMA). She appeared on stage atop a giant wedding cake, wearing a wedding dress and white gloves. The performance is noted by MTV as an iconic moment in VMA history. In later years, Madonna commented that she was terrified of the performance. The next hit was \"Material Girl\" promoted by her video, a mimicry of Marilyn Monroe's performance of the song \"Diamonds Are a Girl's Best Friend\" from the 1953 film Gentlemen Prefer Blondes. While filming this video, Madonna started dating actor Sean Penn. They married on her birthday in 1985. Like a Virgin was certified diamond by the Recording Industry Association of America and sold more than 25 million copies worldwide. In February 1984, according to the film director Sir Richard Attenborough, Madonna auditioned at the Royale Theatre on Broadway for a dance role in his movie version of A Chorus Line using her birth-name of Ciccone, but he rejected her.",
+      "score_breakdown": {
+        "dense": 0.050067072704841176,
+        "graph": 0.04889482456026456,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:sarah",
+        "score": 0.063550301618964,
+        "text": "Sarah",
+        "metadata": {
+          "canonical_name": "Sarah",
+          "aliases": [
+            "Sarah"
+          ],
+          "surface_forms": [
+            "Sarah"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:i_remember_love_0_0_i_remember_love_is_a_song_written_by_peter_hallstr_m_and_sarah_dawn_finer_and",
+        "score": 0.0785251248743439,
+        "text": "\"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007.",
+        "metadata": {
+          "title": "I Remember Love",
+          "chunk_id": "chunk:i_remember_love_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "I Remember Love",
+              "relation": "is a song written by",
+              "tail": "Peter Hallstr m Sarah Dawn Finer"
+            },
+            {
+              "head": "I Remember Love",
+              "relation": "performed by",
+              "tail": "Sarah Dawn Finer"
+            },
+            {
+              "head": "Sarah Dawn Finer",
+              "relation": "performed at",
+              "tail": "Melodifestivalen 2007"
+            }
+          ],
+          "entities": [
+            "I Remember Love",
+            "Peter Hallstr m",
+            "Sarah Dawn Finer",
+            "Melodifestivalen 2007"
+          ],
+          "entity_ids": [
+            "entity:melodifestivalen_2007",
+            "entity:peter_hallstr_m",
+            "entity:peter_hallstr_m_sarah_dawn_finer",
+            "entity:sarah_dawn_finer",
+            "entity:title_anchor_i_remember_love"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+        "score": 0.06775961628852754,
+        "text": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.",
+        "metadata": {
+          "title": "Roza Eskenazi",
+          "chunk_id": "chunk:roza_eskenazi_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Eskenazi",
+              "relation": "born as",
+              "tail": "Sarah Skinazi"
+            },
+            {
+              "head": "Sarah Skinazi",
+              "relation": "born to",
+              "tail": "impoverished Sephardic Jewish family"
+            },
+            {
+              "head": "Sarah Skinazi",
+              "relation": "born in",
+              "tail": "Istanbul"
+            },
+            {
+              "head": "Istanbul",
+              "relation": "part of",
+              "tail": "Constantinople Vilayet"
+            },
+            {
+              "head": "Constantinople Vilayet",
+              "relation": "part of",
+              "tail": "Ottoman Empire"
+            }
+          ],
+          "entities": [
+            "Eskenazi",
+            "Sarah Skinazi",
+            "Sephardic Jewish family",
+            "Istanbul",
+            "Constantinople Vilayet",
+            "Ottoman Empire"
+          ],
+          "entity_ids": [
+            "entity:constantinople_vilayet",
+            "entity:eskenazi",
+            "entity:impoverished_sephardic_jewish_family",
+            "entity:istanbul",
+            "entity:ottoman_empire",
+            "entity:sarah_skinazi",
+            "entity:sephardic_jewish_family"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+        "score": 0.044108739662592655,
+        "text": "Shirley Abicair was born in Melbourne, Victoria, Australia.",
+        "metadata": {
+          "title": "Shirley Abicair",
+          "chunk_id": "chunk:shirley_abicair_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Shirley Abicair",
+              "relation": "born in",
+              "tail": "Melbourne"
+            },
+            {
+              "head": "Melbourne",
+              "relation": "located in",
+              "tail": "Victoria"
+            },
+            {
+              "head": "Victoria",
+              "relation": "part of",
+              "tail": "Australia"
+            }
+          ],
+          "entities": [
+            "Shirley Abicair",
+            "Melbourne",
+            "Victoria",
+            "Australia"
+          ],
+          "entity_ids": [
+            "entity:australia",
+            "entity:melbourne",
+            "entity:title_anchor_shirley_abicair",
+            "entity:victoria"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:maiysha_0_0_born_in_minneapolis_minnesota_united_states_maiysha_went_to_sarah_lawrence_co",
+        "score": 0.034761818563963466,
+        "text": "Born in Minneapolis, Minnesota, United States, Maiysha went to Sarah Lawrence College where she studied vocal performance as well as creative writing and race and gender studies.",
+        "metadata": {
+          "title": "Maiysha",
+          "chunk_id": "chunk:maiysha_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Maiysha",
+              "relation": "born in",
+              "tail": "Minneapolis Minnesota United States"
+            },
+            {
+              "head": "Maiysha",
+              "relation": "attended",
+              "tail": "Sarah Lawrence College"
+            }
+          ],
+          "entities": [
+            "Maiysha",
+            "Minneapolis Minnesota United States",
+            "Sarah Lawrence College"
+          ],
+          "entity_ids": [
+            "entity:minneapolis_minnesota_united_states",
+            "entity:sarah_lawrence_college",
+            "entity:title_anchor_maiysha"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_incredible_sarah_0_0_the_incredible_sarah_is_a_1976_british_drama_film_directed_by_richard_fleischer",
+        "score": 0.03159624692929541,
+        "text": "The Incredible Sarah is a 1976 British drama film directed by Richard Fleischer and starring Glenda Jackson.",
+        "metadata": {
+          "title": "The Incredible Sarah",
+          "chunk_id": "chunk:the_incredible_sarah_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Incredible Sarah",
+              "relation": "is a",
+              "tail": "1976 British drama film"
+            },
+            {
+              "head": "Incredible Sarah",
+              "relation": "directed by",
+              "tail": "Richard Fleischer"
+            },
+            {
+              "head": "Incredible Sarah",
+              "relation": "starring",
+              "tail": "Glenda Jackson"
+            }
+          ],
+          "entities": [
+            "Incredible Sarah",
+            "Richard Fleischer",
+            "Glenda Jackson"
+          ],
+          "entity_ids": [
+            "entity:1976_british_drama_film",
+            "entity:glenda_jackson",
+            "entity:richard_fleischer",
+            "entity:title_anchor_the_incredible_sarah"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:rhoda_delaval_0_2_her_siblings_were_anne_hussey_mary_elizabeth_sarah_robert_george_henry_ral",
+        "score": 0.018169119234375045,
+        "text": "Her siblings were Anne Hussey, Mary Elizabeth, Sarah, Robert, George, Henry, Ralph, Francis, Edward, Thomas, John.",
+        "metadata": {
+          "title": "Rhoda Delaval",
+          "chunk_id": "chunk:rhoda_delaval_0",
+          "sentence_index": 2,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Anne Hussey",
+              "relation": "related_to",
+              "tail": "Mary Elizabeth"
+            },
+            {
+              "head": "Mary Elizabeth",
+              "relation": "related_to",
+              "tail": "Sarah"
+            },
+            {
+              "head": "Sarah",
+              "relation": "related_to",
+              "tail": "Robert"
+            }
+          ],
+          "entities": [
+            "Anne Hussey",
+            "Mary Elizabeth",
+            "Sarah",
+            "Robert",
+            "George",
+            "Henry",
+            "Ralph",
+            "Francis",
+            "Edward",
+            "Thomas",
+            "John"
+          ],
+          "entity_ids": [
+            "entity:anne_hussey",
+            "entity:edward",
+            "entity:francis",
+            "entity:george",
+            "entity:henry",
+            "entity:john",
+            "entity:mary_elizabeth",
+            "entity:ralph",
+            "entity:robert",
+            "entity:sarah",
+            "entity:thomas"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:maiysha_0_1_after_graduating_maiysha_moved_to_new_york_city_to_teach_at_a_private_school_in",
+        "score": 0.014164959486990708,
+        "text": "After graduating, Maiysha moved to New York City to teach at a private school in Manhattan.",
+        "metadata": {
+          "title": "Maiysha",
+          "chunk_id": "chunk:maiysha_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Maiysha",
+              "relation": "moved to",
+              "tail": "New York City"
+            },
+            {
+              "head": "Maiysha",
+              "relation": "teaches at",
+              "tail": "private school in Manhattan"
+            }
+          ],
+          "entities": [
+            "Maiysha",
+            "New York City",
+            "Manhattan"
+          ],
+          "entity_ids": [
+            "entity:manhattan",
+            "entity:new_york_city",
+            "entity:private_school_in_manhattan",
+            "entity:title_anchor_maiysha"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:rhoda_delaval_0_6_one_of_her_sisters_was_sarah_countess_of_mexborough",
+        "score": 0.012101192559236602,
+        "text": "One of her sisters was Sarah, Countess of Mexborough.",
+        "metadata": {
+          "title": "Rhoda Delaval",
+          "chunk_id": "chunk:rhoda_delaval_0",
+          "sentence_index": 6,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Sarah",
+              "relation": "has title",
+              "tail": "Countess of Mexborough"
+            }
+          ],
+          "entities": [
+            "Sarah",
+            "Countess of Mexborough"
+          ],
+          "entity_ids": [
+            "entity:countess_of_mexborough",
+            "entity:sarah"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:i_remember_love_0_1_the_song_participated_in_the_semifinal_in_g_vle_on_24_february_2007_and_reached",
+        "score": 0.010965722612297106,
+        "text": "The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.",
+        "metadata": {
+          "title": "I Remember Love",
+          "chunk_id": "chunk:i_remember_love_0",
+          "sentence_index": 1,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "semifinal in G vle",
+              "relation": "occurred on",
+              "tail": "24 February 2007"
+            },
+            {
+              "head": "finals in the Stockholm Globe Arena",
+              "relation": "occurred on",
+              "tail": "10 March 2007"
+            }
+          ],
+          "entities": [
+            "G vle",
+            "Stockholm Globe Arena"
+          ],
+          "entity_ids": [
+            "entity:10_march_2007",
+            "entity:24_february_2007",
+            "entity:finals_in_the_stockholm_globe_arena",
+            "entity:g_vle",
+            "entity:semifinal_in_g_vle",
+            "entity:stockholm_globe_arena"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:shirley_abicair_0_1_some_sources_show_her_year_of_birth_as_1935_but_a_contemporary_account_shows_sh",
+        "score": 0.006372157181147707,
+        "text": "Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely.",
+        "metadata": {
+          "title": "Shirley Abicair",
+          "chunk_id": "chunk:shirley_abicair_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Some",
+              "relation": "related_to",
+              "tail": "Britain"
+            },
+            {
+              "head": "Britain",
+              "relation": "related_to",
+              "tail": "Australia"
+            }
+          ],
+          "entities": [
+            "Britain",
+            "Australia"
+          ],
+          "entity_ids": [
+            "entity:australia",
+            "entity:britain",
+            "entity:some"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:i_remember_love_0",
+        "score": 0.017251133342356728,
+        "text": "I Remember Love\n\"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007. The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.",
+        "metadata": {
+          "title": "I Remember Love",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:10_march_2007",
+            "entity:24_february_2007",
+            "entity:finals_in_the_stockholm_globe_arena",
+            "entity:g_vle",
+            "entity:melodifestivalen_2007",
+            "entity:peter_hallstr_m",
+            "entity:peter_hallstr_m_sarah_dawn_finer",
+            "entity:sarah_dawn_finer",
+            "entity:semifinal_in_g_vle",
+            "entity:stockholm_globe_arena",
+            "entity:title_anchor_i_remember_love"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Roza Eskenazi\nRoza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami.\n\nShirley Abicair\nShirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.\n\nMaiysha\nMaiysha\nBorn in Minneapolis, Minnesota, United States, Maiysha went to Sarah Lawrence College where she studied vocal performance as well as creative writing and race and gender studies. After graduating, Maiysha moved to New York City to teach at a private school in Manhattan. She also was signed to Ford Models.\n\nI Remember Love\nI Remember Love\n\"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007. The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.\n\nThe Incredible Sarah\nThe Incredible Sarah\nThe Incredible Sarah is a 1976 British drama film directed by Richard Fleischer and starring Glenda Jackson. It presents a dramatization of the acting career of Sarah Bernhardt.\n\nRoza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.\n\nThe Incredible Sarah\nIt presents a dramatization of the acting career of Sarah Bernhardt.\n\nShirley Abicair\nSome sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely.\n\nRhoda Delaval\nRhoda Delaval\nRhoda Delaval was born on 1 July 1725 to Captain Francis Blake Delaval (the elder) and Rhoda Apreece and baptized at St George's, Hanover Square in London on 22 July 1725. She was their oldest daughter of 12 children. Her siblings were Anne Hussey, Mary Elizabeth, Sarah, Robert, George, Henry, Ralph, Francis, Edward, Thomas, John. Two years after her birth, her brother, Sir Francis Blake Delaval (the younger) (1727–1771) was born. A brother George, who died as a young adult, also pursued the art of painting with her instructor, Arthur Pond. She was known to be a talented, beautiful woman. One of her sisters was Sarah, Countess of Mexborough.\n\nMitzi Meyerson\nMitzi Meyerson\nShe was born into a musical family in Chicago, Illinois, where she began her concert career at the age of seven. After completing her university and graduate studies in Chicago and Oberlin, Ohio, she moved to London to co-found the ensemble Trio Sonnerie (with Monica Huggett and Sarah Cunningham), with whom she performed and recorded extensively.\n\nGiovanni Cifolelli\nGiovanni Cifolelli\nGiovanni Cifolelli was an Italian mandolin virtuoso and dramatic composer whose date and place of birth are unknown. In 1764 he made his appearance in Paris as a mandolin virtuoso and was highly esteemed, both as a performer and teacher. He published his \"Method for the mandolin\" while residing in Paris, which met with great success throughout France, being the most popular of its period.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:roza_eskenazi_0",
+        "passage_index": 0,
+        "title": "Roza Eskenazi",
+        "score": 0.07552322018478011,
+        "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami.",
+        "score_breakdown": {
+          "dense": 0.05020840086592888,
+          "graph": 0.054270862946606095,
+          "fact": 0.21084893883024936
+        }
+      },
+      {
+        "node_id": "chunk:shirley_abicair_0",
+        "passage_index": 12,
+        "title": "Shirley Abicair",
+        "score": 0.074227582416597,
+        "text": "Shirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.",
+        "score_breakdown": {
+          "dense": 0.050053778661889724,
+          "graph": 0.05232371821802344,
+          "fact": 0.20667259124767073
+        }
+      },
+      {
+        "node_id": "chunk:maiysha_0",
+        "passage_index": 11,
+        "title": "Maiysha",
+        "score": 0.07361124506839364,
+        "text": "Maiysha\nBorn in Minneapolis, Minnesota, United States, Maiysha went to Sarah Lawrence College where she studied vocal performance as well as creative writing and race and gender studies. After graduating, Maiysha moved to New York City to teach at a private school in Manhattan. She also was signed to Ford Models.",
+        "score_breakdown": {
+          "dense": 0.05025181254133312,
+          "graph": 0.0519524561028454,
+          "fact": 0.202580075598712
+        }
+      },
+      {
+        "node_id": "chunk:i_remember_love_0",
+        "passage_index": 7,
+        "title": "I Remember Love",
+        "score": 0.07348254036339477,
+        "text": "I Remember Love\n\"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007. The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.",
+        "score_breakdown": {
+          "dense": 0.05001731526909393,
+          "graph": 0.054945934571067924,
+          "fact": 0.19659491062715154
+        }
+      },
+      {
+        "node_id": "chunk:the_incredible_sarah_0",
+        "passage_index": 13,
+        "title": "The Incredible Sarah",
+        "score": 0.07063244410161112,
+        "text": "The Incredible Sarah\nThe Incredible Sarah is a 1976 British drama film directed by Richard Fleischer and starring Glenda Jackson. It presents a dramatization of the acting career of Sarah Bernhardt.",
+        "score_breakdown": {
+          "dense": 0.05049029941365839,
+          "graph": 0.05122418956555522,
+          "fact": 0.18330348369621635
+        }
+      },
+      {
+        "node_id": "chunk:rhoda_delaval_0",
+        "passage_index": 8,
+        "title": "Rhoda Delaval",
+        "score": 0.04279799966032153,
+        "text": "Rhoda Delaval\nRhoda Delaval was born on 1 July 1725 to Captain Francis Blake Delaval (the elder) and Rhoda Apreece and baptized at St George's, Hanover Square in London on 22 July 1725. She was their oldest daughter of 12 children. Her siblings were Anne Hussey, Mary Elizabeth, Sarah, Robert, George, Henry, Ralph, Francis, Edward, Thomas, John. Two years after her birth, her brother, Sir Francis Blake Delaval (the younger) (1727–1771) was born. A brother George, who died as a young adult, also pursued the art of painting with her instructor, Arthur Pond. She was known to be a talented, beautiful woman. One of her sisters was Sarah, Countess of Mexborough.",
+        "score_breakdown": {
+          "dense": 0.050053790549425554,
+          "graph": 0.05089471619379158,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sarah_mauro_scocco_song_0",
+        "passage_index": 17,
+        "title": "Sarah (Mauro Scocco song)",
+        "score": 0.04234224457021628,
+        "text": "Sarah (Mauro Scocco song)\n\"Sarah\" is a song written and recorded by Mauro Scocco on the 1988 album \"Mauro Scocco\". The song charted at Svensktoppen for 14 veckor weeks between 7 October 1988-22 January 1989, topping the chart. The single was released in 1988, and topped the Swedish singles chart. Sarah also became the most popular Trackslistan song of 1988.",
+        "score_breakdown": {
+          "dense": 0.05031634642677747,
+          "graph": 0.04889418011829556,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_temptation_of_sarah_jane_smith_0",
+        "passage_index": 1,
+        "title": "The Temptation of Sarah Jane Smith",
+        "score": 0.04226406167295153,
+        "text": "The Temptation of Sarah Jane Smith\nThe Temptation of Sarah Jane Smith is a story of \"The Sarah Jane Adventures\" which was broadcast on CBBC on 17 and 24 November 2008. It is the fifth serial of the second series.",
+        "score_breakdown": {
+          "dense": 0.05017720522116053,
+          "graph": 0.04888866267104415,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:mitzi_meyerson_0",
+        "passage_index": 6,
+        "title": "Mitzi Meyerson",
+        "score": 0.042224933000397626,
+        "text": "Mitzi Meyerson\nShe was born into a musical family in Chicago, Illinois, where she began her concert career at the age of seven. After completing her university and graduate studies in Chicago and Oberlin, Ohio, she moved to London to co-found the ensemble Trio Sonnerie (with Monica Huggett and Sarah Cunningham), with whom she performed and recorded extensively.",
+        "score_breakdown": {
+          "dense": 0.05006190206631697,
+          "graph": 0.0489696228797443,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:madonna_entertainer_0",
+        "passage_index": 10,
+        "title": "Madonna (entertainer)",
+        "score": 0.042205337355742015,
+        "text": "Madonna (entertainer)\nMadonna was criticized for her performance of \"Like a Virgin\" at the first 1984 MTV Video Music Awards (VMA). She appeared on stage atop a giant wedding cake, wearing a wedding dress and white gloves. The performance is noted by MTV as an iconic moment in VMA history. In later years, Madonna commented that she was terrified of the performance. The next hit was \"Material Girl\" promoted by her video, a mimicry of Marilyn Monroe's performance of the song \"Diamonds Are a Girl's Best Friend\" from the 1953 film Gentlemen Prefer Blondes. While filming this video, Madonna started dating actor Sean Penn. They married on her birthday in 1985. Like a Virgin was certified diamond by the Recording Industry Association of America and sold more than 25 million copies worldwide. In February 1984, according to the film director Sir Richard Attenborough, Madonna auditioned at the Royale Theatre on Broadway for a dance role in his movie version of A Chorus Line using her birth-name of Ciccone, but he rejected her.",
+        "score_breakdown": {
+          "dense": 0.050067072704841176,
+          "graph": 0.04889482456026456,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the Sarah performer?",
+        "resolved_sub_question": "Who is the Sarah performer?",
+        "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+        "sentence": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.",
+        "score": 0.4892413067608535,
+        "source_title": "Roza Eskenazi",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question asks about a performer named Sarah, but the evidence provided does not clearly indicate which Sarah is being referred to. \"Sarah Skinazi\" is mentioned, but she is known as Roza Eskenazi, not primarily as \"Sarah.\" Another reference is to Sarah Bernhardt, but this is from a different context (a dramatization of her acting career). There is no clear indication that either of these is the specific \"Sarah performer\" the question is asking about.",
+        "hop_raw_response": "The question asks about a performer named Sarah, but the evidence provided does not clearly indicate which Sarah is being referred to. \"Sarah Skinazi\" is mentioned, but she is known as Roza Eskenazi, not primarily as \"Sarah.\" Another reference is to Sarah Bernhardt, but this is from a different context (a dramatization of her acting career). There is no clear indication that either of these is the specific \"Sarah performer\" the question is asking about.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Roza Eskenazi",
+            "text": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire."
+          },
+          {
+            "title": "Roza Eskenazi",
+            "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami."
+          },
+          {
+            "title": "The Incredible Sarah",
+            "text": "It presents a dramatization of the acting career of Sarah Bernhardt."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is this performer's birth date?",
+        "resolved_sub_question": "What is this performer's birth date?",
+        "sentence_id": "sentence:roza_eskenazi_0_0_eskenazi_was_born_sarah_skinazi_to_an_impoverished_sephardic_jewish_family_in_is",
+        "sentence": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.",
+        "score": 0.5660000000000001,
+        "source_title": "Roza Eskenazi",
+        "hop_answer": "1895-1897",
+        "hop_thought": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.",
+        "hop_raw_response": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.\nAnswer: 1895-1897",
+        "evidence_passages": [
+          {
+            "title": "Roza Eskenazi",
+            "text": "Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire."
+          },
+          {
+            "title": "Roza Eskenazi",
+            "text": "Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910. In fact, she was at least a decade older, and was likely born sometime between 1895 and 1897. Her father, Avram Skinazi, was a rag dealer. In addition to Roza, he and his wife Flora had two sons, Nisim, the eldest, and Sami."
+          },
+          {
+            "title": "Shirley Abicair",
+            "text": "Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the Sarah performer? (source: Roza Eskenazi)\n2. What is this performer's birth date? => 1895-1897 (source: Roza Eskenazi)\n\nFact hints:\n- Sarah Skinazi born in Istanbul\n- Eskenazi born as Sarah Skinazi\n\nWikipedia Title: Roza Eskenazi\nRoza Eskenazi Eskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire. Throughout her career she hid her real date of birth, and claimed to have been born in 1910.\n\nWikipedia Title: Roza Eskenazi\nEskenazi was born Sarah Skinazi to an impoverished Sephardic Jewish family in Istanbul, in the Constantinople Vilayet of the Ottoman Empire.\n\nWikipedia Title: Rhoda Delaval\nTwo years after her birth, her brother, Sir Francis Blake Delaval (the younger) (1727–1771) was born. One of her sisters was Sarah, Countess of Mexborough.\n\nWikipedia Title: Mitzi Meyerson\nAfter completing her university and graduate studies in Chicago and Oberlin, Ohio, she moved to London to co-found the ensemble Trio Sonnerie (with Monica Huggett and Sarah Cunningham), with whom she performed and recorded extensively. Mitzi Meyerson She was born into a musical family in Chicago, Illinois, where she began her concert career at the age of seven.\n\nWikipedia Title: Maiysha\nMaiysha Born in Minneapolis, Minnesota, United States, Maiysha went to Sarah Lawrence College where she studied vocal performance as well as creative writing and race and gender studies. She also was signed to Ford Models.\n\nWikipedia Title: Shirley Abicair\nSome sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.\n\nWikipedia Title: Shirley Abicair\nSome sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely.\n\nWikipedia Title: Giovanni Cifolelli\nGiovanni Cifolelli Giovanni Cifolelli was an Italian mandolin virtuoso and dramatic composer whose date and place of birth are unknown. In 1764 he made his appearance in Paris as a mandolin virtuoso and was highly esteemed, both as a performer and teacher.\n\nWikipedia Title: The Incredible Sarah\nIt presents a dramatization of the acting career of Sarah Bernhardt.\n\nWikipedia Title: The Incredible Sarah\nIt presents a dramatization of the acting career of Sarah Bernhardt. The Incredible Sarah The Incredible Sarah is a 1976 British drama film directed by Richard Fleischer and starring Glenda Jackson.\n\nWikipedia Title: I Remember Love\nI Remember Love \"I Remember Love\" is a song written by Peter Hallström and Sarah Dawn Finer, and performed by Sarah Dawn Finer at Melodifestivalen 2007. The song participated in the semifinal in Gävle on 24 February 2007, and reached the finals in the Stockholm Globe Arena on 10 March 2007, where it ended up 4th.\n\nQuestion: What is the Sarah performer's birth date?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.",
+  "predicted_answer": "1895-1897",
+  "qa_raw_response": "The performer's real date of birth is not definitively stated, but it is mentioned that she claimed to have been born in 1910 while in reality, she was likely born between 1895 and 1897.\nAnswer: 1895-1897"
+}

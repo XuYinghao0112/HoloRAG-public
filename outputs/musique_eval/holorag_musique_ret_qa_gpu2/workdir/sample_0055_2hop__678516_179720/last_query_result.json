@@ -1,0 +1,1006 @@
+{
+  "query": "Who was married to the creator of Ruby Loftus Screwing a Breech Ring?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Ruby Loftus",
+    "Breech Ring"
+  ],
+  "raw_query_entities": [
+    "Ruby Loftus",
+    "Breech Ring"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Ruby Loftus",
+      "node_id": "entity:ruby_loftus",
+      "resolved_text": "Ruby Loftus",
+      "score": 0.6886,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7714285714285716,
+      "compatibility_score": 0.2525,
+      "score_margin": 0.1110000000000001,
+      "confident": true
+    },
+    {
+      "mention": "Breech Ring",
+      "node_id": "entity:breech_ring",
+      "resolved_text": "Breech Ring",
+      "score": 0.6886,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7714285714285716,
+      "compatibility_score": 0.2525,
+      "score_margin": 0.33459999999999995,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who created the film 'Ruby Loftus Screwing a Breech Ring'?",
+    "Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:breech_ring",
+      "score": 1.0608673209607444,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ruby_loftus",
+      "score": 0.80226152317805,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ruby_loftus_screwing",
+      "score": 0.2608609364042988,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:elko_county",
+      "score": 0.20245138536015436,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ruby_mountains_wilderness",
+      "score": 0.2012948661867742,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ruby_mountains_ranger_district",
+      "score": 0.2012948661867742,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:loftus_versfeld_stadium",
+      "score": 0.18246391945187102,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:laura_knight",
+      "score": 0.17412779337740664,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:harold_knight",
+      "score": 0.17412779337740664,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ruby_mountains",
+      "score": 0.16995827035347605,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:loftus",
+      "score": 0.16747654943613127,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rosie",
+      "score": 0.16745899383650545,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:ruby_loftus_screwing_related_to_breech_ring_sentence_ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breec",
+      "text": "Ruby Loftus Screwing related_to Breech Ring",
+      "head_id": "entity:ruby_loftus_screwing",
+      "tail_id": "entity:breech_ring",
+      "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+      "chunk_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+      "document_index": 14,
+      "score": 0.2586057977826943
+    },
+    {
+      "fact_id": "fact:ruby_mountains_located_in_elko_county_sentence_favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_",
+      "text": "Ruby Mountains located in Elko County",
+      "head_id": "entity:ruby_mountains",
+      "tail_id": "entity:elko_county",
+      "sentence_id": "sentence:favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_of_elko_county_nevada_unite",
+      "chunk_id": "chunk:favre_lake_nevada_0",
+      "document_index": 18,
+      "score": 0.20024626245561833
+    },
+    {
+      "fact_id": "fact:loftus_versfeld_stadium_is_located_in_pretoria_sentence_blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_a",
+      "text": "Loftus Versfeld Stadium is located in Pretoria",
+      "head_id": "entity:loftus_versfeld_stadium",
+      "tail_id": "entity:pretoria",
+      "sentence_id": "sentence:blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_and_are_based_at_loftus_versfeld",
+      "chunk_id": "chunk:blue_bulls_0",
+      "document_index": 10,
+      "score": 0.18024500083401834
+    },
+    {
+      "fact_id": "fact:laura_knight_had_husband_harold_knight_sentence_staithes_group_0_0_the_group_contained_renowned_artists_such_as_laura_kn",
+      "text": "Laura Knight had husband Harold Knight",
+      "head_id": "entity:laura_knight",
+      "tail_id": "entity:harold_knight",
+      "sentence_id": "sentence:staithes_group_0_0_the_group_contained_renowned_artists_such_as_laura_knight_who_kept_a_studio_in",
+      "chunk_id": "chunk:staithes_group_0",
+      "document_index": 9,
+      "score": 0.17192318795645742
+    },
+    {
+      "fact_id": "fact:loftus_related_to_rosie_sentence_ruby_loftus_screwing_a_breech_ring_0_2_the_painting_brought_instant_fame_to_loftus_and_",
+      "text": "Loftus related_to Rosie",
+      "head_id": "entity:loftus",
+      "tail_id": "entity:rosie",
+      "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_2_the_painting_brought_instant_fame_to_loftus_and_has_been_likened_to_the_america",
+      "chunk_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+      "document_index": 14,
+      "score": 0.16525450812301767
+    },
+    {
+      "fact_id": "fact:pretoria_is_in_gauteng_province_sentence_blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_and_are_based_at",
+      "text": "Pretoria is in Gauteng province",
+      "head_id": "entity:pretoria",
+      "tail_id": "entity:gauteng_province",
+      "sentence_id": "sentence:blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_and_are_based_at_loftus_versfeld",
+      "chunk_id": "chunk:blue_bulls_0",
+      "document_index": 10,
+      "score": 0.14690714521137033
+    },
+    {
+      "fact_id": "fact:lidya_jewett_plays_young_ruby_harris_sentence_the_darkest_minds_0_1_lidya_jewett_as_young_ruby_harris_dickinson_as_liam_",
+      "text": "Lidya Jewett plays Young Ruby Harris",
+      "head_id": "entity:lidya_jewett",
+      "tail_id": "entity:young_ruby_harris",
+      "sentence_id": "sentence:the_darkest_minds_0_1_lidya_jewett_as_young_ruby_harris_dickinson_as_liam_stewart_a_kid_with_telekine",
+      "chunk_id": "chunk:the_darkest_minds_0",
+      "document_index": 8,
+      "score": 0.14524697245881862
+    },
+    {
+      "fact_id": "fact:favre_lake_located_in_ruby_mountains_sentence_favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_o",
+      "text": "Favre Lake located in Ruby Mountains",
+      "head_id": "entity:title_anchor_favre_lake_nevada",
+      "tail_id": "entity:ruby_mountains",
+      "sentence_id": "sentence:favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_of_elko_county_nevada_unite",
+      "chunk_id": "chunk:favre_lake_nevada_0",
+      "document_index": 18,
+      "score": 0.13524518118900536
+    }
+  ],
+  "bridge_entities": [
+    "Ruby Loftus Screwing",
+    "British",
+    "Laura Knight",
+    "World War",
+    "Harold Knight"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who created the film 'Ruby Loftus Screwing a Breech Ring'?",
+      "resolved_sub_question": "Who created the film 'Ruby Loftus Screwing a Breech Ring'?",
+      "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+      "sentence": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.",
+      "score": 0.6345549333333333,
+      "source_title": "Ruby Loftus Screwing a Breech Ring",
+      "hop_answer": "Laura Knight",
+      "hop_thought": "The question asks for the creator of 'Ruby Loftus Screwing a Breech Ring', but it is actually a painting, not a film. The painting was created by the British painter Laura Knight.",
+      "hop_raw_response": "The question asks for the creator of 'Ruby Loftus Screwing a Breech Ring', but it is actually a painting, not a film. The painting was created by the British painter Laura Knight.\nAnswer: Laura Knight",
+      "evidence_passages": [
+        {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "text": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II."
+        },
+        {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\"."
+        },
+        {
+          "title": "Staithes group",
+          "text": "The group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'?",
+      "resolved_sub_question": "Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'? Context: Laura Knight.",
+      "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+      "sentence": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.",
+      "score": 0.5824861538461539,
+      "source_title": "Ruby Loftus Screwing a Breech Ring",
+      "hop_answer": "Harold Knight",
+      "hop_thought": "Laura Knight, the creator of 'Ruby Loftus Screwing a Breech Ring', had a husband who was also a painter and they both were part of the Staithes group.",
+      "hop_raw_response": "Laura Knight, the creator of 'Ruby Loftus Screwing a Breech Ring', had a husband who was also a painter and they both were part of the Staithes group.\nAnswer: Harold Knight",
+      "evidence_passages": [
+        {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "text": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II."
+        },
+        {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\"."
+        },
+        {
+          "title": "Staithes group",
+          "text": "The group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:breech_ring",
+      "score": 0.1098187148965411,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+      "score": 0.0979870155778504,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ruby_loftus",
+      "score": 0.0749469314600888,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ruby_loftus_screwing",
+      "score": 0.03856945383775641,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_and_are_based_at_loftus_versfeld",
+      "score": 0.03832755935768165,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_of_elko_county_nevada_unite",
+      "score": 0.03790349598089241,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:laura_knight",
+      "score": 0.027120498919087396,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ruby_mountains_ranger_district",
+      "score": 0.026213398075794096,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ruby_mountains",
+      "score": 0.025945540687641433,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:elko_county",
+      "score": 0.02518282795403484,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pretoria",
+      "score": 0.02516559251377898,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_2_the_painting_brought_instant_fame_to_loftus_and_has_been_likened_to_the_america",
+      "score": 0.024703720144333915,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ruby_mountains_wilderness",
+      "score": 0.022646897640844852,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:loftus_versfeld_stadium",
+      "score": 0.02158172325422129,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_favre_lake_nevada",
+      "score": 0.021275602008342352,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:british",
+      "score": 0.02109641770424427,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:rosie",
+      "score": 0.02085495249493174,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:staithes_group_0_0_the_group_contained_renowned_artists_such_as_laura_knight_who_kept_a_studio_in",
+      "score": 0.020474626562931413,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_darkest_minds_0_1_lidya_jewett_as_young_ruby_harris_dickinson_as_liam_stewart_a_kid_with_telekine",
+      "score": 0.020269095285192478,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:harold_knight",
+      "score": 0.019821314007289342,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+      "passage_index": 14,
+      "title": "Ruby Loftus Screwing a Breech Ring",
+      "score": 0.08042226391131022,
+      "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\".",
+      "score_breakdown": {
+        "dense": 0.053728361825333845,
+        "graph": 0.06268298782350444,
+        "fact": 0.21377845706883516
+      }
+    },
+    {
+      "node_id": "chunk:favre_lake_nevada_0",
+      "passage_index": 18,
+      "title": "Favre Lake (Nevada)",
+      "score": 0.07594454326162312,
+      "text": "Favre Lake (Nevada)\nFavre Lake is a glacial tarn in the Ruby Mountains of Elko County, Nevada, United States. It is within the Ruby Mountains Wilderness, which is administered by the Ruby Mountains Ranger District of the Humboldt-Toiyabe National Forest. The lake is located at the head of Kleckner Canyon, at approximately , and at an elevation of 9511 feet (2899 m). It has an area of approximately 19 acres (7.7 hectares), and a depth of up to 45 feet (13.7 m). It is one of the sources of Kleckner Creek, which after exiting the mountains merges with other streams to form the South Fork of the Humboldt River.",
+      "score_breakdown": {
+        "dense": 0.05245274307861662,
+        "graph": 0.056155358717062814,
+        "fact": 0.20165951302176757
+      }
+    },
+    {
+      "node_id": "chunk:blue_bulls_0",
+      "passage_index": 10,
+      "title": "Blue Bulls",
+      "score": 0.07489416576554885,
+      "text": "Blue Bulls\nThe Blue Bulls, known for sponsorship reasons as the Vodacom Blue Bulls, or more popularly by their Afrikaans name die Blou Bulle, is a South African rugby union team that participates in the annual Currie Cup tournament. They are governed by the Blue Bulls Rugby Union and are based at Loftus Versfeld Stadium in Pretoria, Gauteng province.",
+      "score_breakdown": {
+        "dense": 0.05252740920842316,
+        "graph": 0.054513900131255344,
+        "fact": 0.19766613774359668
+      }
+    },
+    {
+      "node_id": "chunk:staithes_group_0",
+      "passage_index": 9,
+      "title": "Staithes group",
+      "score": 0.07435936288359632,
+      "text": "Staithes group\nThe group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W. Jackson, Edward E. Anderson, Joseph R. Bagshawe, Thomas Barrett and James W. Booth.",
+      "score_breakdown": {
+        "dense": 0.05276007743513802,
+        "graph": 0.053123722999027054,
+        "fact": 0.19602802263041533
+      }
+    },
+    {
+      "node_id": "chunk:the_darkest_minds_0",
+      "passage_index": 8,
+      "title": "The Darkest Minds",
+      "score": 0.07367516831267865,
+      "text": "The Darkest Minds\nAmandla Stenberg as Ruby Daly, a teenager with the ability to get into people's minds who escapes from her government camp and finds a group of runaways looking for East River. Lidya Jewett as Young Ruby Harris Dickinson as Liam Stewart, a kid with telekinesis in the group of runaways. Ruby's love interest. Skylan Brooks as Chubs, a kid with super intelligence in the group of runaways. Miya Cech as Suzume ``Zu '', a kid with electrokinesis in the group of runaways. Patrick Gibson as Clancy Gray, the president's son, who, like Ruby, has the power of getting into people's minds. Mandy Moore as Dr. Cate Connor, a doctor and member of a group fighting against the government Gwendoline Christie as Lady Jane, a bounty hunter of superpowered teens who escape from the camp Golden Brooks as Molly Daly, Ruby's mother and Paul's wife Wallace Langham as Dr. Viceroy Mark O'Brien as Rob Meadows Bradley Whitford as President Gray, Clancy's father",
+      "score_breakdown": {
+        "dense": 0.05254531100039258,
+        "graph": 0.05381688944051642,
+        "fact": 0.19086786953538531
+      }
+    },
+    {
+      "node_id": "chunk:arthur_loftus_tottenham_0",
+      "passage_index": 12,
+      "title": "Arthur Loftus Tottenham",
+      "score": 0.04447449980379784,
+      "text": "Arthur Loftus Tottenham\nArthur Loftus Tottenham (5 April 1838 – 4 December 1887) was a landowner and Conservative politician who sat in the House of Commons from 1880 to 1887.",
+      "score_breakdown": {
+        "dense": 0.05281826322970793,
+        "graph": 0.05141485009152826,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fr_d_ric_sauvage_0",
+      "passage_index": 0,
+      "title": "Frédéric Sauvage",
+      "score": 0.04439362382431823,
+      "text": "Frédéric Sauvage\nFrédéric Sauvage (20 September 1786 – 17 July 1857) was a French boat builder who carried out early tests of screw-type marine propellers.",
+      "score_breakdown": {
+        "dense": 0.052675918167421835,
+        "graph": 0.051406229440787404,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:franco_prussian_war_0",
+      "passage_index": 2,
+      "title": "Franco-Prussian War",
+      "score": 0.04438384402053775,
+      "text": "Franco-Prussian War\nThe army was still equipped with the Dreyse needle gun of Battle of Königgrätz fame, which was by this time showing the age of its 25-year-old design. The rifle had a range of only 600 m (2,000 ft) and lacked the rubber breech seal that permitted aimed shots. The deficiencies of the needle gun were more than compensated for by the famous Krupp 6-pounder (3 kg) steel breech-loading cannons being issued to Prussian artillery batteries. Firing a contact-detonated shell, the Krupp gun had a longer range and a higher rate of fire than the French bronze muzzle loading cannon, which relied on faulty time fuses.",
+      "score_breakdown": {
+        "dense": 0.0526498284658268,
+        "graph": 0.05142146121444335,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:hms_buzzard_1887_0",
+      "passage_index": 16,
+      "title": "HMS Buzzard (1887)",
+      "score": 0.04435294999206907,
+      "text": "HMS Buzzard (1887)\nHMS \"Buzzard\" was a \"Nymphe\"-class composite screw sloop and the fourth ship of the Royal Navy to bear the name.",
+      "score_breakdown": {
+        "dense": 0.05260197583668732,
+        "graph": 0.0514062109396368,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:henry_f_phillips_0",
+      "passage_index": 7,
+      "title": "Henry F. Phillips",
+      "score": 0.044350776993288654,
+      "text": "Henry F. Phillips\nHenry Frank Phillips (June 4, 1889 -- April 13, 1958) was a U.S. businessman from Portland, Oregon. The Phillips - head (``crosshead '') screw and screwdriver are named after him.",
+      "score_breakdown": {
+        "dense": 0.05259991392315094,
+        "graph": 0.05140274778518546,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:breech_ring",
+        "score": 0.1098187148965411,
+        "text": "Breech Ring",
+        "metadata": {
+          "canonical_name": "Breech Ring",
+          "aliases": [
+            "BR",
+            "Breech Ring"
+          ],
+          "surface_forms": [
+            "BR",
+            "Breech Ring"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ruby_loftus",
+        "score": 0.0749469314600888,
+        "text": "Ruby Loftus",
+        "metadata": {
+          "canonical_name": "Ruby Loftus",
+          "aliases": [
+            "RL",
+            "Ruby Loftus"
+          ],
+          "surface_forms": [
+            "RL",
+            "Ruby Loftus"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+        "score": 0.0979870155778504,
+        "text": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.",
+        "metadata": {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "chunk_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+          "sentence_index": 0,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Ruby Loftus Screwing",
+              "relation": "related_to",
+              "tail": "Breech Ring"
+            },
+            {
+              "head": "Breech Ring",
+              "relation": "related_to",
+              "tail": "British"
+            },
+            {
+              "head": "British",
+              "relation": "related_to",
+              "tail": "Laura Knight"
+            }
+          ],
+          "entities": [
+            "Ruby Loftus Screwing",
+            "Breech Ring",
+            "British",
+            "Laura Knight",
+            "Ruby Loftus",
+            "World War"
+          ],
+          "entity_ids": [
+            "entity:breech_ring",
+            "entity:british",
+            "entity:laura_knight",
+            "entity:ruby_loftus",
+            "entity:ruby_loftus_screwing",
+            "entity:world_war"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:blue_bulls_0_1_they_are_governed_by_the_blue_bulls_rugby_union_and_are_based_at_loftus_versfeld",
+        "score": 0.03832755935768165,
+        "text": "They are governed by the Blue Bulls Rugby Union and are based at Loftus Versfeld Stadium in Pretoria, Gauteng province.",
+        "metadata": {
+          "title": "Blue Bulls",
+          "chunk_id": "chunk:blue_bulls_0",
+          "sentence_index": 1,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Loftus Versfeld Stadium",
+              "relation": "is located in",
+              "tail": "Pretoria"
+            },
+            {
+              "head": "Pretoria",
+              "relation": "is in",
+              "tail": "Gauteng province"
+            }
+          ],
+          "entities": [
+            "Blue Bulls Rugby Union",
+            "Loftus Versfeld Stadium",
+            "Pretoria",
+            "Gauteng province"
+          ],
+          "entity_ids": [
+            "entity:blue_bulls_rugby_union",
+            "entity:gauteng_province",
+            "entity:loftus_versfeld_stadium",
+            "entity:pretoria"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:favre_lake_nevada_0_0_favre_lake_is_a_glacial_tarn_in_the_ruby_mountains_of_elko_county_nevada_unite",
+        "score": 0.03790349598089241,
+        "text": "Favre Lake is a glacial tarn in the Ruby Mountains of Elko County, Nevada, United States.",
+        "metadata": {
+          "title": "Favre Lake (Nevada)",
+          "chunk_id": "chunk:favre_lake_nevada_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Favre Lake",
+              "relation": "located in",
+              "tail": "Ruby Mountains"
+            },
+            {
+              "head": "Ruby Mountains",
+              "relation": "located in",
+              "tail": "Elko County"
+            },
+            {
+              "head": "Elko County",
+              "relation": "located in",
+              "tail": "Nevada"
+            }
+          ],
+          "entities": [
+            "Favre Lake",
+            "Ruby Mountains",
+            "Elko County",
+            "Nevada"
+          ],
+          "entity_ids": [
+            "entity:elko_county",
+            "entity:ruby_mountains",
+            "entity:title_anchor_favre_lake_nevada"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_2_the_painting_brought_instant_fame_to_loftus_and_has_been_likened_to_the_america",
+        "score": 0.024703720144333915,
+        "text": "The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\".",
+        "metadata": {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "chunk_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+          "sentence_index": 2,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Loftus",
+              "relation": "related_to",
+              "tail": "Rosie"
+            },
+            {
+              "head": "Rosie",
+              "relation": "related_to",
+              "tail": "Riveter"
+            }
+          ],
+          "entities": [
+            "Loftus",
+            "Rosie the Riveter"
+          ],
+          "entity_ids": [
+            "entity:loftus",
+            "entity:riveter",
+            "entity:rosie",
+            "entity:rosie_the_riveter"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:staithes_group_0_0_the_group_contained_renowned_artists_such_as_laura_knight_who_kept_a_studio_in",
+        "score": 0.020474626562931413,
+        "text": "The group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W.",
+        "metadata": {
+          "title": "Staithes group",
+          "chunk_id": "chunk:staithes_group_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Laura Knight",
+              "relation": "had husband",
+              "tail": "Harold Knight"
+            }
+          ],
+          "entities": [
+            "Laura Knight",
+            "Harold Knight",
+            "Frederick W"
+          ],
+          "entity_ids": [
+            "entity:frederick_w",
+            "entity:harold_knight",
+            "entity:laura_knight"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_darkest_minds_0_1_lidya_jewett_as_young_ruby_harris_dickinson_as_liam_stewart_a_kid_with_telekine",
+        "score": 0.020269095285192478,
+        "text": "Lidya Jewett as Young Ruby Harris Dickinson as Liam Stewart, a kid with telekinesis in the group of runaways.",
+        "metadata": {
+          "title": "The Darkest Minds",
+          "chunk_id": "chunk:the_darkest_minds_0",
+          "sentence_index": 1,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Lidya Jewett",
+              "relation": "plays",
+              "tail": "Young Ruby Harris"
+            },
+            {
+              "head": "Dickinson",
+              "relation": "plays",
+              "tail": "Liam Stewart"
+            }
+          ],
+          "entities": [
+            "Lidya Jewett",
+            "Young Ruby Harris",
+            "Dickinson",
+            "Liam Stewart"
+          ],
+          "entity_ids": [
+            "entity:dickinson",
+            "entity:liam_stewart",
+            "entity:lidya_jewett",
+            "entity:young_ruby_harris"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:favre_lake_nevada_0_1_it_is_within_the_ruby_mountains_wilderness_which_is_administered_by_the_ruby_mo",
+        "score": 0.017781418514226863,
+        "text": "It is within the Ruby Mountains Wilderness, which is administered by the Ruby Mountains Ranger District of the Humboldt-Toiyabe National Forest.",
+        "metadata": {
+          "title": "Favre Lake (Nevada)",
+          "chunk_id": "chunk:favre_lake_nevada_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Ruby Mountains Wilderness",
+              "relation": "administered by",
+              "tail": "Ruby Mountains Ranger District"
+            },
+            {
+              "head": "Ruby Mountains Ranger District",
+              "relation": "part of",
+              "tail": "Humboldt-Toiyabe National Forest"
+            }
+          ],
+          "entities": [
+            "Ruby Mountains Wilderness",
+            "Ruby Mountains Ranger District",
+            "Humboldt-Toiyabe National Forest"
+          ],
+          "entity_ids": [
+            "entity:humboldt_toiyabe_national_forest",
+            "entity:ruby_mountains_ranger_district",
+            "entity:ruby_mountains_wilderness"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+        "score": 0.014823922446563671,
+        "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\".",
+        "metadata": {
+          "title": "Ruby Loftus Screwing a Breech Ring",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:advisory_committee",
+            "entity:breech_ring",
+            "entity:british",
+            "entity:imperial_war_museum",
+            "entity:laura_knight",
+            "entity:loftus",
+            "entity:riveter",
+            "entity:rosie",
+            "entity:rosie_the_riveter",
+            "entity:ruby_loftus",
+            "entity:ruby_loftus_screwing",
+            "entity:war_artists",
+            "entity:war_artists_advisory_committee_waac",
+            "entity:world_war"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:favre_lake_nevada_0",
+        "score": 0.010388091184465764,
+        "text": "Favre Lake (Nevada)\nFavre Lake is a glacial tarn in the Ruby Mountains of Elko County, Nevada, United States. It is within the Ruby Mountains Wilderness, which is administered by the Ruby Mountains Ranger District of the Humboldt-Toiyabe National Forest. The lake is located at the head of Kleckner Canyon, at approximately , and at an elevation of 9511 feet (2899 m). It has an area of approximately 19 acres (7.7 hectares), and a depth of up to 45 feet (13.7 m). It is one of the sources of Kleckner Creek, which after exiting the mountains merges with other streams to form the South Fork of the Humboldt River.",
+        "metadata": {
+          "title": "Favre Lake (Nevada)",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:elko_county",
+            "entity:humboldt_toiyabe_national_forest",
+            "entity:kleckner_canyon",
+            "entity:kleckner_creek",
+            "entity:ruby_mountains",
+            "entity:ruby_mountains_ranger_district",
+            "entity:ruby_mountains_wilderness",
+            "entity:south_fork_of_the_humboldt_river",
+            "entity:title_anchor_favre_lake_nevada"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\".\n\nFavre Lake (Nevada)\nFavre Lake (Nevada)\nFavre Lake is a glacial tarn in the Ruby Mountains of Elko County, Nevada, United States. It is within the Ruby Mountains Wilderness, which is administered by the Ruby Mountains Ranger District of the Humboldt-Toiyabe National Forest. The lake is located at the head of Kleckner Canyon, at approximately , and at an elevation of 9511 feet (2899 m). It has an area of approximately 19 acres (7.7 hectares), and a depth of up to 45 feet (13.7 m). It is one of the sources of Kleckner Creek, which after exiting the mountains merges with other streams to form the South Fork of the Humboldt River.\n\nBlue Bulls\nBlue Bulls\nThe Blue Bulls, known for sponsorship reasons as the Vodacom Blue Bulls, or more popularly by their Afrikaans name die Blou Bulle, is a South African rugby union team that participates in the annual Currie Cup tournament. They are governed by the Blue Bulls Rugby Union and are based at Loftus Versfeld Stadium in Pretoria, Gauteng province.\n\nStaithes group\nStaithes group\nThe group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W. Jackson, Edward E. Anderson, Joseph R. Bagshawe, Thomas Barrett and James W. Booth.\n\nThe Darkest Minds\nThe Darkest Minds\nAmandla Stenberg as Ruby Daly, a teenager with the ability to get into people's minds who escapes from her government camp and finds a group of runaways looking for East River. Lidya Jewett as Young Ruby Harris Dickinson as Liam Stewart, a kid with telekinesis in the group of runaways. Ruby's love interest. Skylan Brooks as Chubs, a kid with super intelligence in the group of runaways. Miya Cech as Suzume ``Zu '', a kid with electrokinesis in the group of runaways. Patrick Gibson as Clancy Gray, the president's son, who, like Ruby, has the power of getting into people's minds. Mandy Moore as Dr. Cate Connor, a doctor and member of a group fighting against the government Gwendoline Christie as Lady Jane, a bounty hunter of superpowered teens who escape from the camp Golden Brooks as Molly Daly, Ruby's mother and Paul's wife Wallace Langham as Dr. Viceroy Mark O'Brien as Rob Meadows Bradley Whitford as President Gray, Clancy's father\n\nRuby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.\n\nStaithes group\nThe group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W.\n\nArthur Loftus Tottenham\nArthur Loftus Tottenham\nArthur Loftus Tottenham (5 April 1838 – 4 December 1887) was a landowner and Conservative politician who sat in the House of Commons from 1880 to 1887.\n\nFranco-Prussian War\nFranco-Prussian War\nThe army was still equipped with the Dreyse needle gun of Battle of Königgrätz fame, which was by this time showing the age of its 25-year-old design. The rifle had a range of only 600 m (2,000 ft) and lacked the rubber breech seal that permitted aimed shots. The deficiencies of the needle gun were more than compensated for by the famous Krupp 6-pounder (3 kg) steel breech-loading cannons being issued to Prussian artillery batteries. Firing a contact-detonated shell, the Krupp gun had a longer range and a higher rate of fire than the French bronze muzzle loading cannon, which relied on faulty time fuses.\n\nReffye 85 mm cannon\nReffye 85 mm cannon\nThe Reffye 85 mm cannon (French: \"Canon de campagne de 7 de Reffye modèle 1870\") was a French artillery piece of the 19th century, developed by the French artillery General Jean-Baptiste Verchère de Reffye, superintendent of the works at Meudon. The weapon was adopted by the French Army from 1870. It was an 85 mm (3.35-inch) rifled breech-loading cannon, equipped with a breech screw, initially made of bronze.\n\nPokémon Omega Ruby and Alpha Sapphire\nPokémon Omega Ruby and Alpha Sapphire\nOmega Ruby and Alpha Sapphire were released in Japan, North America, and Australia on November 21, 2014, exactly twelve years after the release date of the original Ruby and Sapphire, while the European release was one week later on November 28, 2014.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:ruby_loftus_screwing_a_breech_ring_0",
+        "passage_index": 14,
+        "title": "Ruby Loftus Screwing a Breech Ring",
+        "score": 0.08042226391131022,
+        "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\".",
+        "score_breakdown": {
+          "dense": 0.053728361825333845,
+          "graph": 0.06268298782350444,
+          "fact": 0.21377845706883516
+        }
+      },
+      {
+        "node_id": "chunk:favre_lake_nevada_0",
+        "passage_index": 18,
+        "title": "Favre Lake (Nevada)",
+        "score": 0.07594454326162312,
+        "text": "Favre Lake (Nevada)\nFavre Lake is a glacial tarn in the Ruby Mountains of Elko County, Nevada, United States. It is within the Ruby Mountains Wilderness, which is administered by the Ruby Mountains Ranger District of the Humboldt-Toiyabe National Forest. The lake is located at the head of Kleckner Canyon, at approximately , and at an elevation of 9511 feet (2899 m). It has an area of approximately 19 acres (7.7 hectares), and a depth of up to 45 feet (13.7 m). It is one of the sources of Kleckner Creek, which after exiting the mountains merges with other streams to form the South Fork of the Humboldt River.",
+        "score_breakdown": {
+          "dense": 0.05245274307861662,
+          "graph": 0.056155358717062814,
+          "fact": 0.20165951302176757
+        }
+      },
+      {
+        "node_id": "chunk:blue_bulls_0",
+        "passage_index": 10,
+        "title": "Blue Bulls",
+        "score": 0.07489416576554885,
+        "text": "Blue Bulls\nThe Blue Bulls, known for sponsorship reasons as the Vodacom Blue Bulls, or more popularly by their Afrikaans name die Blou Bulle, is a South African rugby union team that participates in the annual Currie Cup tournament. They are governed by the Blue Bulls Rugby Union and are based at Loftus Versfeld Stadium in Pretoria, Gauteng province.",
+        "score_breakdown": {
+          "dense": 0.05252740920842316,
+          "graph": 0.054513900131255344,
+          "fact": 0.19766613774359668
+        }
+      },
+      {
+        "node_id": "chunk:staithes_group_0",
+        "passage_index": 9,
+        "title": "Staithes group",
+        "score": 0.07435936288359632,
+        "text": "Staithes group\nThe group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W. Jackson, Edward E. Anderson, Joseph R. Bagshawe, Thomas Barrett and James W. Booth.",
+        "score_breakdown": {
+          "dense": 0.05276007743513802,
+          "graph": 0.053123722999027054,
+          "fact": 0.19602802263041533
+        }
+      },
+      {
+        "node_id": "chunk:the_darkest_minds_0",
+        "passage_index": 8,
+        "title": "The Darkest Minds",
+        "score": 0.07367516831267865,
+        "text": "The Darkest Minds\nAmandla Stenberg as Ruby Daly, a teenager with the ability to get into people's minds who escapes from her government camp and finds a group of runaways looking for East River. Lidya Jewett as Young Ruby Harris Dickinson as Liam Stewart, a kid with telekinesis in the group of runaways. Ruby's love interest. Skylan Brooks as Chubs, a kid with super intelligence in the group of runaways. Miya Cech as Suzume ``Zu '', a kid with electrokinesis in the group of runaways. Patrick Gibson as Clancy Gray, the president's son, who, like Ruby, has the power of getting into people's minds. Mandy Moore as Dr. Cate Connor, a doctor and member of a group fighting against the government Gwendoline Christie as Lady Jane, a bounty hunter of superpowered teens who escape from the camp Golden Brooks as Molly Daly, Ruby's mother and Paul's wife Wallace Langham as Dr. Viceroy Mark O'Brien as Rob Meadows Bradley Whitford as President Gray, Clancy's father",
+        "score_breakdown": {
+          "dense": 0.05254531100039258,
+          "graph": 0.05381688944051642,
+          "fact": 0.19086786953538531
+        }
+      },
+      {
+        "node_id": "chunk:arthur_loftus_tottenham_0",
+        "passage_index": 12,
+        "title": "Arthur Loftus Tottenham",
+        "score": 0.04447449980379784,
+        "text": "Arthur Loftus Tottenham\nArthur Loftus Tottenham (5 April 1838 – 4 December 1887) was a landowner and Conservative politician who sat in the House of Commons from 1880 to 1887.",
+        "score_breakdown": {
+          "dense": 0.05281826322970793,
+          "graph": 0.05141485009152826,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fr_d_ric_sauvage_0",
+        "passage_index": 0,
+        "title": "Frédéric Sauvage",
+        "score": 0.04439362382431823,
+        "text": "Frédéric Sauvage\nFrédéric Sauvage (20 September 1786 – 17 July 1857) was a French boat builder who carried out early tests of screw-type marine propellers.",
+        "score_breakdown": {
+          "dense": 0.052675918167421835,
+          "graph": 0.051406229440787404,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:franco_prussian_war_0",
+        "passage_index": 2,
+        "title": "Franco-Prussian War",
+        "score": 0.04438384402053775,
+        "text": "Franco-Prussian War\nThe army was still equipped with the Dreyse needle gun of Battle of Königgrätz fame, which was by this time showing the age of its 25-year-old design. The rifle had a range of only 600 m (2,000 ft) and lacked the rubber breech seal that permitted aimed shots. The deficiencies of the needle gun were more than compensated for by the famous Krupp 6-pounder (3 kg) steel breech-loading cannons being issued to Prussian artillery batteries. Firing a contact-detonated shell, the Krupp gun had a longer range and a higher rate of fire than the French bronze muzzle loading cannon, which relied on faulty time fuses.",
+        "score_breakdown": {
+          "dense": 0.0526498284658268,
+          "graph": 0.05142146121444335,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:hms_buzzard_1887_0",
+        "passage_index": 16,
+        "title": "HMS Buzzard (1887)",
+        "score": 0.04435294999206907,
+        "text": "HMS Buzzard (1887)\nHMS \"Buzzard\" was a \"Nymphe\"-class composite screw sloop and the fourth ship of the Royal Navy to bear the name.",
+        "score_breakdown": {
+          "dense": 0.05260197583668732,
+          "graph": 0.0514062109396368,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:henry_f_phillips_0",
+        "passage_index": 7,
+        "title": "Henry F. Phillips",
+        "score": 0.044350776993288654,
+        "text": "Henry F. Phillips\nHenry Frank Phillips (June 4, 1889 -- April 13, 1958) was a U.S. businessman from Portland, Oregon. The Phillips - head (``crosshead '') screw and screwdriver are named after him.",
+        "score_breakdown": {
+          "dense": 0.05259991392315094,
+          "graph": 0.05140274778518546,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who created the film 'Ruby Loftus Screwing a Breech Ring'?",
+        "resolved_sub_question": "Who created the film 'Ruby Loftus Screwing a Breech Ring'?",
+        "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+        "sentence": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.",
+        "score": 0.6345549333333333,
+        "source_title": "Ruby Loftus Screwing a Breech Ring",
+        "hop_answer": "Laura Knight",
+        "hop_thought": "The question asks for the creator of 'Ruby Loftus Screwing a Breech Ring', but it is actually a painting, not a film. The painting was created by the British painter Laura Knight.",
+        "hop_raw_response": "The question asks for the creator of 'Ruby Loftus Screwing a Breech Ring', but it is actually a painting, not a film. The painting was created by the British painter Laura Knight.\nAnswer: Laura Knight",
+        "evidence_passages": [
+          {
+            "title": "Ruby Loftus Screwing a Breech Ring",
+            "text": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II."
+          },
+          {
+            "title": "Ruby Loftus Screwing a Breech Ring",
+            "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\"."
+          },
+          {
+            "title": "Staithes group",
+            "text": "The group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'?",
+        "resolved_sub_question": "Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'? Context: Laura Knight.",
+        "sentence_id": "sentence:ruby_loftus_screwing_a_breech_ring_0_0_ruby_loftus_screwing_a_breech_ring_is_a_1943_painting_by_the_british_painter_lau",
+        "sentence": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II.",
+        "score": 0.5824861538461539,
+        "source_title": "Ruby Loftus Screwing a Breech Ring",
+        "hop_answer": "Harold Knight",
+        "hop_thought": "Laura Knight, the creator of 'Ruby Loftus Screwing a Breech Ring', had a husband who was also a painter and they both were part of the Staithes group.",
+        "hop_raw_response": "Laura Knight, the creator of 'Ruby Loftus Screwing a Breech Ring', had a husband who was also a painter and they both were part of the Staithes group.\nAnswer: Harold Knight",
+        "evidence_passages": [
+          {
+            "title": "Ruby Loftus Screwing a Breech Ring",
+            "text": "Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II."
+          },
+          {
+            "title": "Ruby Loftus Screwing a Breech Ring",
+            "text": "Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection. The painting brought instant fame to Loftus, and has been likened to the American figure of \"Rosie the Riveter\"."
+          },
+          {
+            "title": "Staithes group",
+            "text": "The group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who created the film 'Ruby Loftus Screwing a Breech Ring'? => Laura Knight (source: Ruby Loftus Screwing a Breech Ring)\n2. Who was married to the creator of 'Ruby Loftus Screwing a Breech Ring'? => Harold Knight (source: Ruby Loftus Screwing a Breech Ring)\n\nFact hints:\n- Laura Knight had husband Harold Knight\n- Ruby Loftus Screwing related_to Breech Ring\n\nWikipedia Title: Ruby Loftus Screwing a Breech Ring\nRuby Loftus Screwing a Breech Ring Ruby Loftus Screwing a Breech Ring is a 1943 painting by the British painter Laura Knight depicting a young woman, Ruby Loftus (1921–2004), working at an industrial lathe as part of the British war effort in World War II. The painting was commissioned by the War Artists' Advisory Committee (WAAC), and is now part of the Imperial War Museum's art collection.\n\nWikipedia Title: Staithes group\nThe group contained renowned artists such as Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight), Frederick W.\n\nWikipedia Title: Arthur Loftus Tottenham\nArthur Loftus Tottenham Arthur Loftus Tottenham (5 April 1838 – 4 December 1887) was a landowner and Conservative politician who sat in the House of Commons from 1880 to 1887.\n\nWikipedia Title: Reffye 85 mm cannon\nThe weapon was adopted by the French Army from 1870. It was an 85 mm (3.35-inch) rifled breech-loading cannon, equipped with a breech screw, initially made of bronze.\n\nWikipedia Title: The Darkest Minds\nRuby's love interest. The Darkest Minds Amandla Stenberg as Ruby Daly, a teenager with the ability to get into people's minds who escapes from her government camp and finds a group of runaways looking for East River.\n\nQuestion: Who was married to the creator of Ruby Loftus Screwing a Breech Ring?\nDraft Answer: Harold Knight\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The creator of 'Ruby Loftus Screwing a Breech Ring' is Laura Knight, and Laura Knight's husband was Harold Knight.",
+  "predicted_answer": "Harold Knight",
+  "qa_raw_response": "{\n  \"thought\": \"The creator of 'Ruby Loftus Screwing a Breech Ring' is Laura Knight, and Laura Knight's husband was Harold Knight.\",\n  \"answer\": \"Harold Knight\",\n  \"support\": \"Laura Knight (who kept a studio in the village with her husband and fellow painter Harold Knight)\"\n}"
+}

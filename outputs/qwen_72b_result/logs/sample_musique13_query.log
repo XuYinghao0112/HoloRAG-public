@@ -1,0 +1,943 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 16:53:31,871 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.72it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.64it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.60it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.05it/s]
+2026-04-03 16:53:44,633 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:53:45,619 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:53:47,692 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:53:49,984 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 16:53:51,984 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:05,328 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:08,515 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:12,199 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:17,908 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:21,536 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:27,127 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:54:32,662 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "What administrative territorial entity is the owner of Ciudad Deportiva located?",
+  "alpha": {
+    "entity": 0.5,
+    "sentence": 0.3,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Ciudad Deportiva (Nuevo Laredo)"
+  ],
+  "raw_query_entities": [
+    "Ciudad Deportiva"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Ciudad Deportiva",
+      "node_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "resolved_text": "Ciudad Deportiva (Nuevo Laredo)",
+      "score": 0.7991111111111112,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.5,
+      "score_margin": 0.2601111111111112,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
+    "What administrative territorial entity is this location part of?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "score": 1.107186583384325,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nuevo_laredo",
+      "score": 0.7827305578287613,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:municipality_of_nuevo_laredo",
+      "score": 0.7207101834535554,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nuevo_laredo_municipality",
+      "score": 0.7147104317170113,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:state_of_tamaulipas",
+      "score": 0.3901179664469336,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tamaulipas",
+      "score": 0.3275855241696725,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ciudad_evita",
+      "score": 0.31497569744616954,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_buenos_aires_argentina_temple",
+      "score": 0.314964743850699,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mexico",
+      "score": 0.23758365119738367,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "score": 0.23160739067007788,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "chunk:nuevo_laredo_municipality_0",
+      "score": 0.14964830741440815,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "sentence:nuevo_laredo_municipality_0_4_the_nuevo_laredo_municipality_is_the_northernmost_in_tamaulipas_lying_at_the_ex",
+      "score": 0.13782233299741875,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:nuevo_laredo_municipality_is_located_in_tamaulipas_sentence_nuevo_laredo_municipality_0_4_the_nuevo_laredo_municipality_",
+      "text": "Nuevo Laredo municipality is located in Tamaulipas",
+      "head_id": "entity:title_anchor_nuevo_laredo_municipality",
+      "tail_id": "entity:tamaulipas",
+      "sentence_id": "sentence:nuevo_laredo_municipality_0_4_the_nuevo_laredo_municipality_is_the_northernmost_in_tamaulipas_lying_at_the_ex",
+      "chunk_id": "chunk:nuevo_laredo_municipality_0",
+      "document_index": 3,
+      "score": 0.3400982962348708
+    },
+    {
+      "fact_id": "fact:ciudad_deportiva_is_located_in_nuevo_laredo_sentence_ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_",
+      "text": "Ciudad Deportiva is located in Nuevo Laredo",
+      "head_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "tail_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "chunk_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+      "document_index": 11,
+      "score": 0.3393975227802431
+    },
+    {
+      "fact_id": "fact:buenos_aires_argentina_temple_located_in_ciudad_evita_sentence_buenos_aires_argentina_temple_0_0_the_buenos_aires_argent",
+      "text": "Buenos Aires Argentina Temple located in Ciudad Evita",
+      "head_id": "entity:title_anchor_buenos_aires_argentina_temple",
+      "tail_id": "entity:ciudad_evita",
+      "sentence_id": "sentence:buenos_aires_argentina_temple_0_0_the_buenos_aires_argentina_temple_is_the_39th_operating_temple_of_the_church_of",
+      "chunk_id": "chunk:buenos_aires_argentina_temple_0",
+      "document_index": 4,
+      "score": 0.31247821383412266
+    },
+    {
+      "fact_id": "fact:municipality_of_nuevo_laredo_is_located_in_tamaulipas_sentence_nuevo_laredo_municipality_0_0_the_municipality_of_nuevo_l",
+      "text": "Municipality of Nuevo Laredo is located in Tamaulipas",
+      "head_id": "entity:municipality_of_nuevo_laredo",
+      "tail_id": "entity:tamaulipas",
+      "sentence_id": "sentence:nuevo_laredo_municipality_0_0_the_municipality_of_nuevo_laredo_is_located_in_the_mexican_state_of_tamaulipas",
+      "chunk_id": "chunk:nuevo_laredo_municipality_0",
+      "document_index": 3,
+      "score": 0.3100983145100185
+    },
+    {
+      "fact_id": "fact:nuevo_laredo_is_in_mexico_sentence_ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_comple",
+      "text": "Nuevo Laredo is in Mexico",
+      "head_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "tail_id": "entity:mexico",
+      "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "chunk_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+      "document_index": 11,
+      "score": 0.23509895161757194
+    }
+  ],
+  "bridge_entities": [
+    "Mexico",
+    "Tamaulipas",
+    "Nuevo Laredo municipality",
+    "R o Grande",
+    "Municipality of Nuevo Laredo",
+    "Mexican state",
+    "Nuevo Laredo Mexico"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
+      "resolved_sub_question": "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
+      "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "sentence": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.",
+      "score": 0.6771360000000002,
+      "source_title": "Ciudad Deportiva (Nuevo Laredo)",
+      "hop_answer": "Nuevo Laredo, Mexico",
+      "hop_thought": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.",
+      "hop_raw_response": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.\nAnswer: Nuevo Laredo, Mexico",
+      "evidence_passages": [
+        {
+          "title": "Ciudad Deportiva (Nuevo Laredo)",
+          "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
+        }
+      ]
+    },
+    {
+      "sub_question": "What administrative territorial entity is this location part of?",
+      "resolved_sub_question": "What administrative territorial entity is this location part of? Context: Nuevo Laredo, Mexico.",
+      "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "sentence": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.",
+      "score": 0.5514909090909093,
+      "source_title": "Ciudad Deportiva (Nuevo Laredo)",
+      "hop_answer": "Tamaulipas",
+      "hop_thought": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.",
+      "hop_raw_response": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.\nAnswer: Tamaulipas",
+      "evidence_passages": [
+        {
+          "title": "Ciudad Deportiva (Nuevo Laredo)",
+          "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:tamaulipas",
+      "score": 0.06522993525041113,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+      "score": 0.06317319508089204,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_nuevo_laredo_municipality",
+      "score": 0.055920032327468054,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nuevo_laredo",
+      "score": 0.04959289203078893,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:nuevo_laredo_municipality_0_4_the_nuevo_laredo_municipality_is_the_northernmost_in_tamaulipas_lying_at_the_ex",
+      "score": 0.04667861804262389,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:municipality_of_nuevo_laredo",
+      "score": 0.04573144554711294,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:nuevo_laredo_municipality_0_0_the_municipality_of_nuevo_laredo_is_located_in_the_mexican_state_of_tamaulipas",
+      "score": 0.036127913983334946,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ciudad_deportiva_nuevo_laredo_0_1_it_is_home_to_the_tecolotes_de_nuevo_laredo_mexican_baseball_league_team_and_the",
+      "score": 0.033101635613263104,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:nuevo_laredo_municipality_0_2_the_municipality_contains_more_than_60_localities_which_the_most_important_ones",
+      "score": 0.030859277897219185,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:nuevo_laredo_municipality_0_3_by_population_the_municipality_is_the_third_largest_in_the_state_of_tamaulipas",
+      "score": 0.029838951060392863,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+      "score": 0.029144542481347013,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:buenos_aires_argentina_temple_0_0_the_buenos_aires_argentina_temple_is_the_39th_operating_temple_of_the_church_of",
+      "score": 0.028866462187839108,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ciudad_evita",
+      "score": 0.02462112333513062,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:el_campanario",
+      "score": 0.020134812398028775,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_buenos_aires_argentina_temple",
+      "score": 0.019516609966223307,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mexico",
+      "score": 0.018537169635568986,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:nuevo_laredo_municipality_0",
+      "score": 0.01784698184174166,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:ciudad_deportiva_nuevo_laredo_0_2_the_ciudad_deportiva_s_estadio_nuevo_laredo_baseball_park_can_seat_up_to_12_00",
+      "score": 0.017791367500627063,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:state_of_tamaulipas",
+      "score": 0.017019098928527605,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:toros_de_nuevo_laredo",
+      "score": 0.01560279253433876,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:nuevo_laredo_municipality_0",
+      "passage_index": 3,
+      "title": "Nuevo Laredo Municipality",
+      "score": 0.09379022584175231,
+      "text": "Nuevo Laredo Municipality\nThe Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. Its municipal seat is Nuevo Laredo. The municipality contains more than 60 localities which the most important ones are Nuevo Laredo, El Campanario y Oradel, and Álvarez, the last two being suburbs of the city of Nuevo Laredo. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively). The Nuevo Laredo municipality is the northernmost in Tamaulipas, lying at the extreme northwestern tip of its narrow strip of land along the Río Grande. The city of Nuevo Laredo contains approximately 97.5% of the total population of the municipality.",
+      "score_breakdown": {
+        "dense": 0.050132036723310784,
+        "graph": 0.052491720222664136,
+        "fact": 0.3364672638475476
+      }
+    },
+    {
+      "node_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+      "passage_index": 11,
+      "title": "Ciudad Deportiva (Nuevo Laredo)",
+      "score": 0.09238638547073158,
+      "text": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game.",
+      "score_breakdown": {
+        "dense": 0.050851879700696906,
+        "graph": 0.04661039255875429,
+        "fact": 0.3362315591181467
+      }
+    },
+    {
+      "node_id": "chunk:buenos_aires_argentina_temple_0",
+      "passage_index": 4,
+      "title": "Buenos Aires Argentina Temple",
+      "score": 0.0898739463811358,
+      "text": "Buenos Aires Argentina Temple\nThe Buenos Aires Argentina Temple is the 39th operating temple of The Church of Jesus Christ of Latter-day Saints (LDS Church), located in Ciudad Evita, near Buenos Aires, Argentina.",
+      "score_breakdown": {
+        "dense": 0.049946517722715945,
+        "graph": 0.04436061692832057,
+        "fact": 0.3273011770343057
+      }
+    },
+    {
+      "node_id": "chunk:sportivo_italiano_0",
+      "passage_index": 8,
+      "title": "Sportivo Italiano",
+      "score": 0.04067537334044642,
+      "text": "Sportivo Italiano\nClub Sportivo Italiano is an Argentine football club located in Ciudad Evita, La Matanza Partido, Greater Buenos Aires. The team currently plays in the Primera B Metropolitana, the third division of the Argentine football league system.",
+      "score_breakdown": {
+        "dense": 0.05017531347775028,
+        "graph": 0.04359650309227922,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:chihuahua_state_0",
+      "passage_index": 16,
+      "title": "Chihuahua (state)",
+      "score": 0.04041736649851255,
+      "text": "Chihuahua (state)\nThe Díaz administration made political decisions and took legal measures that allowed the elite throughout Mexico to concentrate the nation's wealth by favoring monopolies. During this time, two-fifths of the state's territory was divided among 17 rich families which owned practically all of the arable land in Chihuahua. The state economy grew at a rapid pace during the Porfiriato; the economy in Chihuahua was dominated by agriculture and mining. The Díaz administration helped Governor Luis Terrazas by funding the Municipal Public Library in Chihuahua City and passing a federal initiative for the construction of the railroad from Chihuahua City to Ciudad Júarez. By 1881, the Central Mexican Railroad was completed which connected Mexico City to Ciudad Juárez. In 1883 telephone lines were installed throughout the state, allowing communication between Chihuahua City and Aldama. By 1888 the telephone services were extended from the capital to the cites of Julimes, Meoqui, and Hidalgo del Parral; the telecommunication network in the state covered an estimated 3,500 kilometers. The need of laborers to construct the extensive infrastructure projects resulted in a significant Asian immigration,",
+      "score_breakdown": {
+        "dense": 0.049943617203771225,
+        "graph": 0.04316125678812791,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:1969_mexican_grand_prix_0",
+      "passage_index": 2,
+      "title": "1969 Mexican Grand Prix",
+      "score": 0.040408884868643455,
+      "text": "1969 Mexican Grand Prix\nThe 1969 Gran Premio de Mexico (Mexican Grand Prix) was a Formula One motor race held at the Ciudad Deportiva Magdalena Mixhuca, Mexico City on October 19, 1969, two weeks after the United States Grand Prix at Watkins Glen. It was race 11 of 11 in both the 1969 World Championship of Drivers and the 1969 International Cup for Formula One Manufacturers. The 65-lap race was won by McLaren driver Denny Hulme after he started from fourth position. Jacky Ickx finished second for the Brabham team and his teammate Jack Brabham came in third.",
+      "score_breakdown": {
+        "dense": 0.049845819884400164,
+        "graph": 0.04331227977407788,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ciudad_del_ni_o_metro_station_0",
+      "passage_index": 9,
+      "title": "Ciudad del Niño metro station",
+      "score": 0.04037530970873471,
+      "text": "Ciudad del Niño metro station\nCiudad del Niño is an underground metro station on the Line 2 of the Santiago Metro, in Santiago, Chile. It is named for the former Ciudad del Niño Presidente Juan Antonio Ríos.",
+      "score_breakdown": {
+        "dense": 0.05011947826577853,
+        "graph": 0.04269865554185505,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:federalism_0",
+      "passage_index": 6,
+      "title": "Federalism",
+      "score": 0.04036622648915637,
+      "text": "Federalism\nUsually, a federation is formed at two levels: the central government and the regions (states, provinces, territories), and little to nothing is said about second or third level administrative political entities. Brazil is an exception, because the 1988 Constitution included the municipalities as autonomous political entities making the federation tripartite, encompassing the Union, the States, and the municipalities. Each state is divided into municipalities (municípios) with their own legislative council (câmara de vereadores) and a mayor (prefeito), which are partly autonomous from both Federal and State Government. Each municipality has a \"little constitution\", called \"organic law\" (lei orgânica). Mexico is an intermediate case, in that municipalities are granted full-autonomy by the federal constitution and their existence as autonomous entities (municipio libre, \"free municipality\") is established by the federal government and cannot be revoked by the states' constitutions. Moreover, the federal constitution determines which powers and competencies belong exclusively to the municipalities and not to the constituent states. However, municipalities do not have an elected legislative assembly.",
+      "score_breakdown": {
+        "dense": 0.04998751038665179,
+        "graph": 0.04291031925499294,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:estadio_uni_n_tarma_0",
+      "passage_index": 13,
+      "title": "Estadio Unión Tarma",
+      "score": 0.04034104501299433,
+      "text": "Estadio Unión Tarma\nEstadio Unión Tarma is a multi-use stadium in Tarma, Peru. It is currently used mostly for football matches and is the home stadium of Asociación Deportiva Tarma of the Copa Perú. The stadium holds 9,000 spectators.",
+      "score_breakdown": {
+        "dense": 0.05004691665929531,
+        "graph": 0.04271746950127302,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:pangi_territory_0",
+      "passage_index": 0,
+      "title": "Pangi Territory",
+      "score": 0.040310952639395964,
+      "text": "Pangi Territory\nPangi Territory is an administrative area in Maniema Province of the Democratic Republic of the Congo. The headquarters is the town of Pangi.",
+      "score_breakdown": {
+        "dense": 0.05000191818479918,
+        "graph": 0.04269965879252136,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:tamaulipas",
+        "score": 0.06522993525041113,
+        "text": "Tamaulipas",
+        "metadata": {
+          "canonical_name": "Tamaulipas",
+          "aliases": [
+            "Tamaulipas"
+          ],
+          "surface_forms": [
+            "Tamaulipas"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+        "score": 0.06317319508089204,
+        "text": "Ciudad Deportiva (Nuevo Laredo)",
+        "metadata": {
+          "canonical_name": "Ciudad Deportiva (Nuevo Laredo)",
+          "aliases": [
+            "CD",
+            "Ciudad Deportiva",
+            "Ciudad Deportiva Nuevo Laredo",
+            "Nuevo Laredo",
+            "NL"
+          ],
+          "surface_forms": [
+            "CD",
+            "Ciudad Deportiva",
+            "Nuevo Laredo",
+            "NL"
+          ],
+          "title_anchor": "Ciudad Deportiva (Nuevo Laredo)"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_nuevo_laredo_municipality",
+        "score": 0.055920032327468054,
+        "text": "Nuevo Laredo Municipality",
+        "metadata": {
+          "canonical_name": "Nuevo Laredo Municipality",
+          "aliases": [
+            "NLM",
+            "Nuevo Laredo Municipality",
+            "Nuevo Laredo municipality"
+          ],
+          "surface_forms": [
+            "NLM",
+            "Nuevo Laredo municipality"
+          ],
+          "title_anchor": "Nuevo Laredo Municipality"
+        }
+      },
+      {
+        "node_id": "entity:nuevo_laredo",
+        "score": 0.04959289203078893,
+        "text": "Nuevo Laredo",
+        "metadata": {
+          "canonical_name": "Nuevo Laredo",
+          "aliases": [
+            "NL",
+            "Nuevo Laredo"
+          ],
+          "surface_forms": [
+            "NL",
+            "Nuevo Laredo"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:municipality_of_nuevo_laredo",
+        "score": 0.04573144554711294,
+        "text": "Municipality of Nuevo Laredo",
+        "metadata": {
+          "canonical_name": "Municipality of Nuevo Laredo",
+          "aliases": [
+            "MONL",
+            "Municipality of Nuevo Laredo"
+          ],
+          "surface_forms": [
+            "MONL",
+            "Municipality of Nuevo Laredo"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:ciudad_evita",
+        "score": 0.02462112333513062,
+        "text": "Ciudad Evita",
+        "metadata": {
+          "canonical_name": "Ciudad Evita",
+          "aliases": [
+            "CE",
+            "Ciudad Evita"
+          ],
+          "surface_forms": [
+            "CE",
+            "Ciudad Evita"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:nuevo_laredo_municipality_0_4_the_nuevo_laredo_municipality_is_the_northernmost_in_tamaulipas_lying_at_the_ex",
+        "score": 0.04667861804262389,
+        "text": "The Nuevo Laredo municipality is the northernmost in Tamaulipas, lying at the extreme northwestern tip of its narrow strip of land along the Río Grande.",
+        "metadata": {
+          "title": "Nuevo Laredo Municipality",
+          "chunk_id": "chunk:nuevo_laredo_municipality_0",
+          "sentence_index": 4,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Nuevo Laredo municipality",
+              "relation": "is located in",
+              "tail": "Tamaulipas"
+            },
+            {
+              "head": "Nuevo Laredo municipality",
+              "relation": "is situated at",
+              "tail": "extreme northwestern tip of Tamaulipas"
+            },
+            {
+              "head": "Tamaulipas",
+              "relation": "has a border along",
+              "tail": "R o Grande"
+            }
+          ],
+          "entities": [
+            "Nuevo Laredo municipality",
+            "Tamaulipas",
+            "R o Grande"
+          ],
+          "entity_ids": [
+            "entity:extreme_northwestern_tip_of_tamaulipas",
+            "entity:r_o_grande",
+            "entity:tamaulipas",
+            "entity:title_anchor_nuevo_laredo_municipality"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:nuevo_laredo_municipality_0_0_the_municipality_of_nuevo_laredo_is_located_in_the_mexican_state_of_tamaulipas",
+        "score": 0.036127913983334946,
+        "text": "The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas.",
+        "metadata": {
+          "title": "Nuevo Laredo Municipality",
+          "chunk_id": "chunk:nuevo_laredo_municipality_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Municipality of Nuevo Laredo",
+              "relation": "is located in",
+              "tail": "Tamaulipas"
+            },
+            {
+              "head": "Tamaulipas",
+              "relation": "is a",
+              "tail": "Mexican state"
+            }
+          ],
+          "entities": [
+            "Municipality of Nuevo Laredo",
+            "Tamaulipas",
+            "Mexican state"
+          ],
+          "entity_ids": [
+            "entity:mexican_state",
+            "entity:municipality_of_nuevo_laredo",
+            "entity:tamaulipas"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:ciudad_deportiva_nuevo_laredo_0_1_it_is_home_to_the_tecolotes_de_nuevo_laredo_mexican_baseball_league_team_and_the",
+        "score": 0.033101635613263104,
+        "text": "It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional.",
+        "metadata": {
+          "title": "Ciudad Deportiva (Nuevo Laredo)",
+          "chunk_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+          "sentence_index": 1,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Nuevo Laredo",
+              "relation": "home to",
+              "tail": "Tecolotes de Nuevo Laredo"
+            },
+            {
+              "head": "Tecolotes de Nuevo Laredo",
+              "relation": "part of",
+              "tail": "Mexican Baseball League"
+            },
+            {
+              "head": "Nuevo Laredo",
+              "relation": "home to",
+              "tail": "Toros de Nuevo Laredo"
+            },
+            {
+              "head": "Toros de Nuevo Laredo",
+              "relation": "part of",
+              "tail": "Liga Nacional de Baloncesto Profesional"
+            }
+          ],
+          "entities": [
+            "Nuevo Laredo",
+            "Tecolotes de Nuevo Laredo",
+            "Mexican Baseball League",
+            "Toros de Nuevo Laredo",
+            "Liga Nacional de Baloncesto Profesional"
+          ],
+          "entity_ids": [
+            "entity:liga_nacional_de_baloncesto_profesional",
+            "entity:mexican_baseball_league",
+            "entity:tecolotes_de_nuevo_laredo",
+            "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+            "entity:toros_de_nuevo_laredo"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:nuevo_laredo_municipality_0_2_the_municipality_contains_more_than_60_localities_which_the_most_important_ones",
+        "score": 0.030859277897219185,
+        "text": "The municipality contains more than 60 localities which the most important ones are Nuevo Laredo, El Campanario y Oradel, and Álvarez, the last two being suburbs of the city of Nuevo Laredo.",
+        "metadata": {
+          "title": "Nuevo Laredo Municipality",
+          "chunk_id": "chunk:nuevo_laredo_municipality_0",
+          "sentence_index": 2,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Nuevo Laredo",
+              "relation": "related_to",
+              "tail": "El Campanario"
+            },
+            {
+              "head": "El Campanario",
+              "relation": "related_to",
+              "tail": "Oradel"
+            }
+          ],
+          "entities": [
+            "Nuevo Laredo",
+            "El Campanario",
+            "Oradel"
+          ],
+          "entity_ids": [
+            "entity:el_campanario",
+            "entity:nuevo_laredo",
+            "entity:oradel"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:nuevo_laredo_municipality_0",
+        "score": 0.01784698184174166,
+        "text": "Nuevo Laredo Municipality\nThe Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. Its municipal seat is Nuevo Laredo. The municipality contains more than 60 localities which the most important ones are Nuevo Laredo, El Campanario y Oradel, and Álvarez, the last two being suburbs of the city of Nuevo Laredo. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively). The Nuevo Laredo municipality is the northernmost in Tamaulipas, lying at the extreme northwestern tip of its narrow strip of land along the Río Grande. The city of Nuevo Laredo contains approximately 97.5% of the total population of the municipality.",
+        "metadata": {
+          "title": "Nuevo Laredo Municipality",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:by",
+            "entity:el_campanario",
+            "entity:extreme_northwestern_tip_of_tamaulipas",
+            "entity:matamoros",
+            "entity:mexican_state",
+            "entity:municipality_of_nuevo_laredo",
+            "entity:nuevo_laredo",
+            "entity:oradel",
+            "entity:r_o_grande",
+            "entity:reynosa",
+            "entity:state_of_tamaulipas",
+            "entity:tamaulipas",
+            "entity:title_anchor_nuevo_laredo_municipality"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+        "score": 0.008938507320634096,
+        "text": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game.",
+        "metadata": {
+          "title": "Ciudad Deportiva (Nuevo Laredo)",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:estadio_nuevo_laredo",
+            "entity:liga_nacional_de_baloncesto_profesional",
+            "entity:mexican_baseball_league",
+            "entity:mexico",
+            "entity:nuevo_laredo_multidisciplinary_gymnasium",
+            "entity:tecolotes_de_nuevo_laredo",
+            "entity:title_anchor_ciudad_deportiva_nuevo_laredo",
+            "entity:toros_de_nuevo_laredo"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.\n\nNuevo Laredo Municipality\nNuevo Laredo Municipality The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively).\n\n1969 Mexican Grand Prix\n1969 Mexican Grand Prix The 1969 Gran Premio de Mexico (Mexican Grand Prix) was a Formula One motor race held at the Ciudad Deportiva Magdalena Mixhuca, Mexico City on October 19, 1969, two weeks after the United States Grand Prix at Watkins Glen. The 65-lap race was won by McLaren driver Denny Hulme after he started from fourth position.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:nuevo_laredo_municipality_0",
+        "passage_index": 3,
+        "title": "Nuevo Laredo Municipality",
+        "score": 0.09379022584175231,
+        "text": "Nuevo Laredo Municipality\nThe Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. Its municipal seat is Nuevo Laredo. The municipality contains more than 60 localities which the most important ones are Nuevo Laredo, El Campanario y Oradel, and Álvarez, the last two being suburbs of the city of Nuevo Laredo. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively). The Nuevo Laredo municipality is the northernmost in Tamaulipas, lying at the extreme northwestern tip of its narrow strip of land along the Río Grande. The city of Nuevo Laredo contains approximately 97.5% of the total population of the municipality.",
+        "score_breakdown": {
+          "dense": 0.050132036723310784,
+          "graph": 0.052491720222664136,
+          "fact": 0.3364672638475476
+        }
+      },
+      {
+        "node_id": "chunk:ciudad_deportiva_nuevo_laredo_0",
+        "passage_index": 11,
+        "title": "Ciudad Deportiva (Nuevo Laredo)",
+        "score": 0.09238638547073158,
+        "text": "Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico. It is home to the Tecolotes de Nuevo Laredo Mexican Baseball League team and the Toros de Nuevo Laredo Mexican professional basketball team from the Liga Nacional de Baloncesto Profesional. The Ciudad Deportiva's Estadio Nuevo Laredo (baseball park) can seat up to 12,000 fans at a baseball game and the Nuevo Laredo Multidisciplinary Gymnasium can seat 4,000 fans at a basketball game.",
+        "score_breakdown": {
+          "dense": 0.050851879700696906,
+          "graph": 0.04661039255875429,
+          "fact": 0.3362315591181467
+        }
+      },
+      {
+        "node_id": "chunk:buenos_aires_argentina_temple_0",
+        "passage_index": 4,
+        "title": "Buenos Aires Argentina Temple",
+        "score": 0.0898739463811358,
+        "text": "Buenos Aires Argentina Temple\nThe Buenos Aires Argentina Temple is the 39th operating temple of The Church of Jesus Christ of Latter-day Saints (LDS Church), located in Ciudad Evita, near Buenos Aires, Argentina.",
+        "score_breakdown": {
+          "dense": 0.049946517722715945,
+          "graph": 0.04436061692832057,
+          "fact": 0.3273011770343057
+        }
+      },
+      {
+        "node_id": "chunk:sportivo_italiano_0",
+        "passage_index": 8,
+        "title": "Sportivo Italiano",
+        "score": 0.04067537334044642,
+        "text": "Sportivo Italiano\nClub Sportivo Italiano is an Argentine football club located in Ciudad Evita, La Matanza Partido, Greater Buenos Aires. The team currently plays in the Primera B Metropolitana, the third division of the Argentine football league system.",
+        "score_breakdown": {
+          "dense": 0.05017531347775028,
+          "graph": 0.04359650309227922,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:chihuahua_state_0",
+        "passage_index": 16,
+        "title": "Chihuahua (state)",
+        "score": 0.04041736649851255,
+        "text": "Chihuahua (state)\nThe Díaz administration made political decisions and took legal measures that allowed the elite throughout Mexico to concentrate the nation's wealth by favoring monopolies. During this time, two-fifths of the state's territory was divided among 17 rich families which owned practically all of the arable land in Chihuahua. The state economy grew at a rapid pace during the Porfiriato; the economy in Chihuahua was dominated by agriculture and mining. The Díaz administration helped Governor Luis Terrazas by funding the Municipal Public Library in Chihuahua City and passing a federal initiative for the construction of the railroad from Chihuahua City to Ciudad Júarez. By 1881, the Central Mexican Railroad was completed which connected Mexico City to Ciudad Juárez. In 1883 telephone lines were installed throughout the state, allowing communication between Chihuahua City and Aldama. By 1888 the telephone services were extended from the capital to the cites of Julimes, Meoqui, and Hidalgo del Parral; the telecommunication network in the state covered an estimated 3,500 kilometers. The need of laborers to construct the extensive infrastructure projects resulted in a significant Asian immigration,",
+        "score_breakdown": {
+          "dense": 0.049943617203771225,
+          "graph": 0.04316125678812791,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:1969_mexican_grand_prix_0",
+        "passage_index": 2,
+        "title": "1969 Mexican Grand Prix",
+        "score": 0.040408884868643455,
+        "text": "1969 Mexican Grand Prix\nThe 1969 Gran Premio de Mexico (Mexican Grand Prix) was a Formula One motor race held at the Ciudad Deportiva Magdalena Mixhuca, Mexico City on October 19, 1969, two weeks after the United States Grand Prix at Watkins Glen. It was race 11 of 11 in both the 1969 World Championship of Drivers and the 1969 International Cup for Formula One Manufacturers. The 65-lap race was won by McLaren driver Denny Hulme after he started from fourth position. Jacky Ickx finished second for the Brabham team and his teammate Jack Brabham came in third.",
+        "score_breakdown": {
+          "dense": 0.049845819884400164,
+          "graph": 0.04331227977407788,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ciudad_del_ni_o_metro_station_0",
+        "passage_index": 9,
+        "title": "Ciudad del Niño metro station",
+        "score": 0.04037530970873471,
+        "text": "Ciudad del Niño metro station\nCiudad del Niño is an underground metro station on the Line 2 of the Santiago Metro, in Santiago, Chile. It is named for the former Ciudad del Niño Presidente Juan Antonio Ríos.",
+        "score_breakdown": {
+          "dense": 0.05011947826577853,
+          "graph": 0.04269865554185505,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:federalism_0",
+        "passage_index": 6,
+        "title": "Federalism",
+        "score": 0.04036622648915637,
+        "text": "Federalism\nUsually, a federation is formed at two levels: the central government and the regions (states, provinces, territories), and little to nothing is said about second or third level administrative political entities. Brazil is an exception, because the 1988 Constitution included the municipalities as autonomous political entities making the federation tripartite, encompassing the Union, the States, and the municipalities. Each state is divided into municipalities (municípios) with their own legislative council (câmara de vereadores) and a mayor (prefeito), which are partly autonomous from both Federal and State Government. Each municipality has a \"little constitution\", called \"organic law\" (lei orgânica). Mexico is an intermediate case, in that municipalities are granted full-autonomy by the federal constitution and their existence as autonomous entities (municipio libre, \"free municipality\") is established by the federal government and cannot be revoked by the states' constitutions. Moreover, the federal constitution determines which powers and competencies belong exclusively to the municipalities and not to the constituent states. However, municipalities do not have an elected legislative assembly.",
+        "score_breakdown": {
+          "dense": 0.04998751038665179,
+          "graph": 0.04291031925499294,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:estadio_uni_n_tarma_0",
+        "passage_index": 13,
+        "title": "Estadio Unión Tarma",
+        "score": 0.04034104501299433,
+        "text": "Estadio Unión Tarma\nEstadio Unión Tarma is a multi-use stadium in Tarma, Peru. It is currently used mostly for football matches and is the home stadium of Asociación Deportiva Tarma of the Copa Perú. The stadium holds 9,000 spectators.",
+        "score_breakdown": {
+          "dense": 0.05004691665929531,
+          "graph": 0.04271746950127302,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:pangi_territory_0",
+        "passage_index": 0,
+        "title": "Pangi Territory",
+        "score": 0.040310952639395964,
+        "text": "Pangi Territory\nPangi Territory is an administrative area in Maniema Province of the Democratic Republic of the Congo. The headquarters is the town of Pangi.",
+        "score_breakdown": {
+          "dense": 0.05000191818479918,
+          "graph": 0.04269965879252136,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
+        "resolved_sub_question": "What is the location of Ciudad Deportiva (Nuevo Laredo)?",
+        "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+        "sentence": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.",
+        "score": 0.6771360000000002,
+        "source_title": "Ciudad Deportiva (Nuevo Laredo)",
+        "hop_answer": "Nuevo Laredo, Mexico",
+        "hop_thought": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.",
+        "hop_raw_response": "The evidence states that Ciudad Deportiva, also known as \"Sports City,\" is located in Nuevo Laredo, Mexico.\nAnswer: Nuevo Laredo, Mexico",
+        "evidence_passages": [
+          {
+            "title": "Ciudad Deportiva (Nuevo Laredo)",
+            "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
+          }
+        ]
+      },
+      {
+        "sub_question": "What administrative territorial entity is this location part of?",
+        "resolved_sub_question": "What administrative territorial entity is this location part of? Context: Nuevo Laredo, Mexico.",
+        "sentence_id": "sentence:ciudad_deportiva_nuevo_laredo_0_0_the_ciudad_deportiva_sports_city_is_a_sports_complex_in_nuevo_laredo_mexico",
+        "sentence": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.",
+        "score": 0.5514909090909093,
+        "source_title": "Ciudad Deportiva (Nuevo Laredo)",
+        "hop_answer": "Tamaulipas",
+        "hop_thought": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.",
+        "hop_raw_response": "Nuevo Laredo is a city in Mexico, and it is part of the state of Tamaulipas.\nAnswer: Tamaulipas",
+        "evidence_passages": [
+          {
+            "title": "Ciudad Deportiva (Nuevo Laredo)",
+            "text": "The Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the location of Ciudad Deportiva (Nuevo Laredo)? => Nuevo Laredo, Mexico (source: Ciudad Deportiva (Nuevo Laredo))\n2. What administrative territorial entity is this location part of? => Tamaulipas (source: Ciudad Deportiva (Nuevo Laredo))\n\nFact hints:\n- Nuevo Laredo municipality is located in Tamaulipas\n- Municipality of Nuevo Laredo is located in Tamaulipas\n- Ciudad Deportiva is located in Nuevo Laredo\n- Nuevo Laredo is in Mexico\n\nWikipedia Title: Ciudad Deportiva (Nuevo Laredo)\nThe Ciudad Deportiva (\"Sports City\") is a sports complex in Nuevo Laredo, Mexico.\n\nWikipedia Title: Nuevo Laredo Municipality\nNuevo Laredo Municipality The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas. By population, the municipality is the third largest in the state of Tamaulipas (behind Reynosa and Matamoros respectively).\n\nWikipedia Title: 1969 Mexican Grand Prix\n1969 Mexican Grand Prix The 1969 Gran Premio de Mexico (Mexican Grand Prix) was a Formula One motor race held at the Ciudad Deportiva Magdalena Mixhuca, Mexico City on October 19, 1969, two weeks after the United States Grand Prix at Watkins Glen. The 65-lap race was won by McLaren driver Denny Hulme after he started from fourth position.\n\nQuestion: What administrative territorial entity is the owner of Ciudad Deportiva located?\nDraft Answer: Tamaulipas\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The location of Ciudad Deportiva is Nuevo Laredo, which is in the municipality of Nuevo Laredo. The municipality of Nuevo Laredo is located in the state of Tamaulipas. Therefore, the administrative territorial entity that owns Ciudad Deportiva is Tamaulipas.",
+  "predicted_answer": "Tamaulipas",
+  "qa_raw_response": "{\n  \"thought\": \"The location of Ciudad Deportiva is Nuevo Laredo, which is in the municipality of Nuevo Laredo. The municipality of Nuevo Laredo is located in the state of Tamaulipas. Therefore, the administrative territorial entity that owns Ciudad Deportiva is Tamaulipas.\",\n  \"answer\": \"Tamaulipas\",\n  \"support\": \"The Municipality of Nuevo Laredo is located in the Mexican state of Tamaulipas.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__701895_752697",
+    "question": "What administrative territorial entity is the owner of Ciudad Deportiva located?",
+    "answer": "Tamaulipas",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Ciudad Deportiva >> owned by",
+      "#1 >> located in the administrative territorial entity"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Tamaulipas",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Tamaulipas"
+    ]
+  }
+}

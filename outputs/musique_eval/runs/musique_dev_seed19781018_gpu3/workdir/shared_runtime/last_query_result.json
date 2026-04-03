@@ -1,0 +1,1141 @@
+{
+  "query": "When did the town WLUJ is licensed in become capitol of the state where Brantley York was born?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "WLUJ"
+  ],
+  "raw_query_entities": [
+    "WLUJ",
+    "Brantley York"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "WLUJ",
+      "node_id": "entity:title_anchor_wluj",
+      "resolved_text": "WLUJ",
+      "score": 0.8602857142857143,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.775,
+      "score_margin": 0.8602857142857143,
+      "confident": true
+    },
+    {
+      "mention": "Brantley York",
+      "node_id": "entity:richard_brantley_york",
+      "resolved_text": "Richard Brantley York",
+      "score": 0.6633333333333333,
+      "alias_score": 0.6666666666666666,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.775,
+      "score_margin": 0.17233333333333334,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What town is WLUJ licensed in?",
+    "What state is this town the capital of?",
+    "Where was Brantley York born?",
+    "When did this town become the capital of the state where Brantley York was born?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_wluj",
+      "score": 1.1542851676675283,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_springfield_illinois",
+      "score": 0.818398526837617,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:springfield_massachusetts",
+      "score": 0.818398526837617,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:springfield",
+      "score": 0.7544475986119891,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:springfield_illinois",
+      "score": 0.7499450775523886,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:second_state_capital_of_illinois",
+      "score": 0.5543798880349196,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:second_capital_of_the_district_of_upper_canada",
+      "score": 0.352492677390175,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:capital_of_upper_canada",
+      "score": 0.352492677390175,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:third_and_current_capital_of_illinois",
+      "score": 0.33173938904794503,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:permanent_capital_of_upper_canada",
+      "score": 0.29574064019688256,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:location_york",
+      "score": 0.27899201633986587,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:town_of_york",
+      "score": 0.27899201633986587,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:wluj_licensed_to_springfield_illinois_sentence_wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illino",
+      "text": "WLUJ licensed to Springfield Illinois",
+      "head_id": "entity:title_anchor_wluj",
+      "tail_id": "entity:springfield_illinois",
+      "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "chunk_id": "chunk:wluj_0",
+      "document_index": 7,
+      "score": 0.35225684130337
+    },
+    {
+      "fact_id": "fact:springfield_became_third_and_current_capital_of_illinois_sentence_springfield_illinois_1_3_springfield_became_the_third_",
+      "text": "Springfield became third and current capital of Illinois",
+      "head_id": "entity:springfield",
+      "tail_id": "entity:third_and_current_capital_of_illinois",
+      "sentence_id": "sentence:springfield_illinois_1_3_springfield_became_the_third_and_current_capital_of_illinois_in_1839",
+      "chunk_id": "chunk:springfield_illinois_1",
+      "document_index": 8,
+      "score": 0.32974193106131094
+    },
+    {
+      "fact_id": "fact:york_became_permanent_capital_of_upper_canada_sentence_york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_",
+      "text": "York became permanent capital of Upper Canada",
+      "head_id": "entity:york",
+      "tail_id": "entity:permanent_capital_of_upper_canada",
+      "sentence_id": "sentence:york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_at_london_and_york_became_the_perman",
+      "chunk_id": "chunk:york_upper_canada_0",
+      "document_index": 5,
+      "score": 0.2937438978251458
+    },
+    {
+      "fact_id": "fact:york_on_february_1_1796_sentence_york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_at_london_and_york_bec",
+      "text": "York on February 1 1796",
+      "head_id": "entity:york",
+      "tail_id": "entity:february_1_1796",
+      "sentence_id": "sentence:york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_at_london_and_york_became_the_perman",
+      "chunk_id": "chunk:york_upper_canada_0",
+      "document_index": 5,
+      "score": 0.17124279607463064
+    },
+    {
+      "fact_id": "fact:richard_brantley_york_born_on_january_3_1805_sentence_brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1",
+      "text": "Richard Brantley York born on January 3 1805",
+      "head_id": "entity:richard_brantley_york",
+      "tail_id": "entity:january_3_1805",
+      "sentence_id": "sentence:brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1891_was_a_methodist_minist",
+      "chunk_id": "chunk:brantley_york_0",
+      "document_index": 3,
+      "score": 0.13924943190398037
+    },
+    {
+      "fact_id": "fact:kaskaskia_is_illinois_s_first_capital_sentence_randolph_county_illinois_0_0_owing_to_its_role_in_the_state_s_history_the",
+      "text": "Kaskaskia is Illinois's first capital",
+      "head_id": "entity:kaskaskia",
+      "tail_id": "entity:illinois_s_first_capital",
+      "sentence_id": "sentence:randolph_county_illinois_0_0_owing_to_its_role_in_the_state_s_history_the_county_motto_is_where_illinois_be",
+      "chunk_id": "chunk:randolph_county_illinois_0",
+      "document_index": 1,
+      "score": 0.13224130896778874
+    },
+    {
+      "fact_id": "fact:richard_brantley_york_died_on_october_7_1891_sentence_brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1",
+      "text": "Richard Brantley York died on October 7 1891",
+      "head_id": "entity:richard_brantley_york",
+      "tail_id": "entity:october_7_1891",
+      "sentence_id": "sentence:brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1891_was_a_methodist_minist",
+      "chunk_id": "chunk:brantley_york_0",
+      "document_index": 3,
+      "score": 0.11836201711838332
+    },
+    {
+      "fact_id": "fact:richard_brantley_york_was_methodist_minister_and_educator_sentence_brantley_york_0_0_richard_brantley_york_january_3_180",
+      "text": "Richard Brantley York was Methodist minister and educator",
+      "head_id": "entity:richard_brantley_york",
+      "tail_id": "entity:methodist_minister_and_educator",
+      "sentence_id": "sentence:brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1891_was_a_methodist_minist",
+      "chunk_id": "chunk:brantley_york_0",
+      "document_index": 3,
+      "score": 0.11836201711838332
+    }
+  ],
+  "bridge_entities": [
+    "Springfield Illinois",
+    "Christian radio station",
+    "89 7 MHz FM",
+    "Springfield",
+    "Illinois"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What town is WLUJ licensed in?",
+      "resolved_sub_question": "What town is WLUJ licensed in?",
+      "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+      "score": 0.5966965714285715,
+      "source_title": "WLUJ",
+      "hop_answer": "Springfield",
+      "hop_thought": "The evidence states that WLUJ is licensed to Springfield, Illinois.",
+      "hop_raw_response": "The evidence states that WLUJ is licensed to Springfield, Illinois.\nAnswer: Springfield",
+      "evidence_passages": [
+        {
+          "title": "WLUJ",
+          "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+        },
+        {
+          "title": "WLUJ",
+          "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+        },
+        {
+          "title": "York, Upper Canada",
+          "text": "The Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834)."
+        }
+      ]
+    },
+    {
+      "sub_question": "What state is this town the capital of?",
+      "resolved_sub_question": "What state is this town the capital of? Context: Springfield.",
+      "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+      "score": 0.5329267252747254,
+      "source_title": "WLUJ",
+      "hop_answer": "Illinois",
+      "hop_thought": "The context indicates that Springfield is the town in question, and it specifies that Springfield became the third and current capital of Illinois in 1839.",
+      "hop_raw_response": "The context indicates that Springfield is the town in question, and it specifies that Springfield became the third and current capital of Illinois in 1839.\nAnswer: Illinois",
+      "evidence_passages": [
+        {
+          "title": "WLUJ",
+          "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+        },
+        {
+          "title": "WLUJ",
+          "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+        },
+        {
+          "title": "Springfield, Illinois",
+          "text": "Springfield became the third and current capital of Illinois in 1839."
+        }
+      ]
+    },
+    {
+      "sub_question": "Where was Brantley York born?",
+      "resolved_sub_question": "Where was Brantley York born? Context: Springfield; Illinois.",
+      "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+      "score": 0.5609267252747254,
+      "source_title": "WLUJ",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context and evidence do not contain any information about Brantley York or his birthplace.",
+      "hop_raw_response": "The provided context and evidence do not contain any information about Brantley York or his birthplace.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "WLUJ",
+          "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+        },
+        {
+          "title": "WLUJ",
+          "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+        },
+        {
+          "title": "Springfield, Illinois",
+          "text": "Springfield became the third and current capital of Illinois in 1839."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did this town become the capital of the state where Brantley York was born?",
+      "resolved_sub_question": "When did this town become the capital of the state where Brantley York was born? Context: Springfield; Illinois.",
+      "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+      "score": 0.48822857142857146,
+      "source_title": "WLUJ",
+      "hop_answer": "1839",
+      "hop_thought": "The question asks for the year Springfield became the capital of Illinois. From the evidence, we know that Springfield became the capital of Illinois in 1839.",
+      "hop_raw_response": "The question asks for the year Springfield became the capital of Illinois. From the evidence, we know that Springfield became the capital of Illinois in 1839.\nAnswer: 1839",
+      "evidence_passages": [
+        {
+          "title": "WLUJ",
+          "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+        },
+        {
+          "title": "WLUJ",
+          "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+        },
+        {
+          "title": "Springfield, Illinois",
+          "text": "Springfield became the third and current capital of Illinois in 1839."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_wluj",
+      "score": 0.08023941838949478,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:springfield",
+      "score": 0.06489761252094586,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:springfield_massachusetts",
+      "score": 0.06234362598981592,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:springfield_illinois",
+      "score": 0.06139717858704906,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_springfield_illinois",
+      "score": 0.05609353657241984,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+      "score": 0.04884441653565065,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:second_state_capital_of_illinois",
+      "score": 0.03837763938309299,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:second_capital_of_the_district_of_upper_canada",
+      "score": 0.027998217728902288,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:capital_of_upper_canada",
+      "score": 0.026895711226620517,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:york",
+      "score": 0.02641491426821453,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:third_and_current_capital_of_illinois",
+      "score": 0.025605069981103325,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:permanent_capital_of_upper_canada",
+      "score": 0.025021141410968305,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1891_was_a_methodist_minist",
+      "score": 0.023441209108003958,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_at_london_and_york_became_the_perman",
+      "score": 0.021938901706435632,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:town_of_york",
+      "score": 0.021618542346494744,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:springfield_illinois_1_3_springfield_became_the_third_and_current_capital_of_illinois_in_1839",
+      "score": 0.01710227356023,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:richard_brantley_york",
+      "score": 0.016821818411689445,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:location_york",
+      "score": 0.016753226254132985,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:illinois_s_first_capital",
+      "score": 0.013786335734245042,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:springfield_illinois_0_8_at_that_time_springfield_massachusetts_was_comparable_to_modern_day_silicon",
+      "score": 0.013125009269894777,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:wluj_0",
+      "passage_index": 7,
+      "title": "WLUJ",
+      "score": 0.07629593359725248,
+      "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio.",
+      "score_breakdown": {
+        "dense": 0.050577274692724855,
+        "graph": 0.051257475938552226,
+        "fact": 0.2206745982312542
+      }
+    },
+    {
+      "node_id": "chunk:springfield_illinois_1",
+      "passage_index": 8,
+      "title": "Springfield, Illinois",
+      "score": 0.07500403873897003,
+      "text": "Springfield, Illinois\nimportantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from its organization in 1809, continuing through statehood in 1818, and through the first year as a state in 1819. Vandalia was the second state capital of Illinois from 1819 to 1839. Springfield became the third and current capital of Illinois in 1839. The designation was largely due to the efforts of Abraham Lincoln and his associates; nicknamed the ``Long Nine ''for their combined height of 54 feet (16 m).",
+      "score_breakdown": {
+        "dense": 0.05013976269749217,
+        "graph": 0.050209742006786226,
+        "fact": 0.21576164435542317
+      }
+    },
+    {
+      "node_id": "chunk:york_upper_canada_0",
+      "passage_index": 5,
+      "title": "York, Upper Canada",
+      "score": 0.0741943704815391,
+      "text": "York, Upper Canada\nThe Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834). It was established in 1793 by Lieutenant - Governor John Graves Simcoe as a ``temporary ''location for the capital of Upper Canada, while he made plans to build a capital near today's London, Ontario. Simcoe renamed the location York after Prince Frederick, Duke of York and Albany, George III's second son. Simcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796. That year Simcoe returned to Britain and was temporarily replaced by Peter Russell.",
+      "score_breakdown": {
+        "dense": 0.050226170707782916,
+        "graph": 0.051166862667003814,
+        "fact": 0.208132785281049
+      }
+    },
+    {
+      "node_id": "chunk:brantley_york_0",
+      "passage_index": 3,
+      "title": "Brantley York",
+      "score": 0.06921828247826879,
+      "text": "Brantley York\nRichard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina. Overall, York founded six schools.",
+      "score_breakdown": {
+        "dense": 0.05062015860106829,
+        "graph": 0.04875487940670998,
+        "fact": 0.17833820950445495
+      }
+    },
+    {
+      "node_id": "chunk:randolph_county_illinois_0",
+      "passage_index": 1,
+      "title": "Randolph County, Illinois",
+      "score": 0.06830311403202535,
+      "text": "Randolph County, Illinois\nOwing to its role in the state's history, the county motto is \"Where Illinois Began.\" It contains the historically important village of Kaskaskia, Illinois's first capital.",
+      "score_breakdown": {
+        "dense": 0.050035106306723295,
+        "graph": 0.0473996372305158,
+        "fact": 0.17709276262781862
+      }
+    },
+    {
+      "node_id": "chunk:springfield_illinois_0",
+      "passage_index": 8,
+      "title": "Springfield, Illinois",
+      "score": 0.04249138126175443,
+      "text": "Springfield, Illinois\nSpringfield's original name was Calhoun, after Senator John C. Calhoun of South Carolina. The land that Springfield now occupies was originally settled by trappers and traders who came to the Sangamon River in 1818. The settlement's first cabin was built in 1820, by John Kelly. It was located at what is now the northwest corner of Second Street and Jefferson Street. In 1821, Calhoun became the county seat of Sangamon County due to fertile soil and trading opportunities. Settlers from Kentucky, Virginia, and as far as North Carolina came to the city. By 1832, Senator Calhoun had fallen out of the favor with the public and the town renamed itself Springfield after Springfield, Massachusetts. At that time, Springfield, Massachusetts was comparable to modern - day Silicon Valley -- known for industrial innovation, concentrated prosperity, and the celebrated Springfield Armory. Most importantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from",
+      "score_breakdown": {
+        "dense": 0.05001845898841031,
+        "graph": 0.04993742939376254,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:birth_certificate_0",
+      "passage_index": 12,
+      "title": "Birth certificate",
+      "score": 0.041507933284265684,
+      "text": "Birth certificate\nIn the U.S., the issuance of birth certificates is a function of the Vital Records Office of the states, capital district, territories and former territories. Birth in the U.S. establishes automatic eligibility for American citizenship, so a birth certificate from a local authority is commonly provided to the federal government to obtain a U.S. passport. However, the U.S. State Department does issue a Consular Report of Birth Abroad for children born to U.S. citizens (who are also eligible for citizenship), including births on military bases in foreign territory.",
+      "score_breakdown": {
+        "dense": 0.049968421846913,
+        "graph": 0.04675100422821178,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:kokkuthoduvai_0",
+      "passage_index": 4,
+      "title": "Kokkuthoduvai",
+      "score": 0.041505457672987196,
+      "text": "Kokkuthoduvai\nKokkuthoduvai or Kokkuththoduvai (pronounced Kokkuth-thodu-vai) is a Town in the Mullaitivu District, Sri Lanka. Some say it translates to 'a-place-where-you-can-touch-the-Egret'. It is located about 30 km South-east of the District capital Mullaitivu. It is a coastal town, located next to Kokkilai lagoon.",
+      "score_breakdown": {
+        "dense": 0.04996211717032094,
+        "graph": 0.04675431076436893,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:cayman_islands_0",
+      "passage_index": 9,
+      "title": "Cayman Islands",
+      "score": 0.04149992375405736,
+      "text": "Cayman Islands\nThe Cayman Islands (/ ˈkeɪmən / or / keɪˈmæn /) is an autonomous British Overseas Territory in the western Caribbean Sea. The 264 - square - kilometre (102 - square - mile) territory comprises the three islands of Grand Cayman, Cayman Brac and Little Cayman located south of Cuba, northeast of Costa Rica, north of Panama, east of Mexico and northwest of Jamaica. Its population is approximately 60,765, and its capital is George Town.",
+      "score_breakdown": {
+        "dense": 0.049954605387647344,
+        "graph": 0.046749635969504384,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bann_na_mohra_0",
+      "passage_index": 2,
+      "title": "Bann Na Mohra",
+      "score": 0.04149647995228289,
+      "text": "Bann Na Mohra\nBann Na Mohra is a town in the Islamabad Capital Territory of Pakistan. It is located at 33° 27' 50N 73° 22' 10E with an altitude of 562 metres (1847 feet).",
+      "score_breakdown": {
+        "dense": 0.049946865018848555,
+        "graph": 0.046752347306387276,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_wluj",
+        "score": 0.08023941838949478,
+        "text": "WLUJ",
+        "metadata": {
+          "canonical_name": "WLUJ",
+          "aliases": [
+            "WLUJ"
+          ],
+          "surface_forms": [
+            "WLUJ"
+          ],
+          "title_anchor": "WLUJ"
+        }
+      },
+      {
+        "node_id": "entity:springfield",
+        "score": 0.06489761252094586,
+        "text": "Springfield",
+        "metadata": {
+          "canonical_name": "Springfield",
+          "aliases": [
+            "Springfield"
+          ],
+          "surface_forms": [
+            "Springfield"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:springfield_massachusetts",
+        "score": 0.06234362598981592,
+        "text": "Springfield Massachusetts",
+        "metadata": {
+          "canonical_name": "Springfield Massachusetts",
+          "aliases": [
+            "SM",
+            "Springfield Massachusetts"
+          ],
+          "surface_forms": [
+            "SM",
+            "Springfield Massachusetts"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:springfield_illinois",
+        "score": 0.06139717858704906,
+        "text": "Springfield Illinois",
+        "metadata": {
+          "canonical_name": "Springfield Illinois",
+          "aliases": [
+            "SI",
+            "Springfield Illinois"
+          ],
+          "surface_forms": [
+            "SI",
+            "Springfield Illinois"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+        "score": 0.04884441653565065,
+        "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+        "metadata": {
+          "title": "WLUJ",
+          "chunk_id": "chunk:wluj_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "WLUJ",
+              "relation": "is a",
+              "tail": "Christian radio station"
+            },
+            {
+              "head": "WLUJ",
+              "relation": "licensed to",
+              "tail": "Springfield Illinois"
+            },
+            {
+              "head": "WLUJ",
+              "relation": "broadcasting on",
+              "tail": "89 7 MHz FM"
+            }
+          ],
+          "entities": [
+            "WLUJ",
+            "Springfield Illinois"
+          ],
+          "entity_ids": [
+            "entity:89_7_mhz_fm",
+            "entity:christian_radio_station",
+            "entity:springfield_illinois",
+            "entity:title_anchor_wluj"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:brantley_york_0_0_richard_brantley_york_january_3_1805_october_7_1891_was_a_methodist_minist",
+        "score": 0.023441209108003958,
+        "text": "Richard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina.",
+        "metadata": {
+          "title": "Brantley York",
+          "chunk_id": "chunk:brantley_york_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Richard Brantley York",
+              "relation": "born on",
+              "tail": "January 3 1805"
+            },
+            {
+              "head": "Richard Brantley York",
+              "relation": "died on",
+              "tail": "October 7 1891"
+            },
+            {
+              "head": "Richard Brantley York",
+              "relation": "was",
+              "tail": "Methodist minister and educator"
+            },
+            {
+              "head": "Richard Brantley York",
+              "relation": "founded",
+              "tail": "Union Institute Academy"
+            },
+            {
+              "head": "Richard Brantley York",
+              "relation": "served as president of",
+              "tail": "Union Institute Academy"
+            },
+            {
+              "head": "Union Institute Academy",
+              "relation": "became",
+              "tail": "Duke University"
+            }
+          ],
+          "entities": [
+            "Richard Brantley York",
+            "Duke University",
+            "Union Institute Academy",
+            "Randolph County",
+            "North Carolina"
+          ],
+          "entity_ids": [
+            "entity:duke_university",
+            "entity:january_3_1805",
+            "entity:methodist_minister_and_educator",
+            "entity:north_carolina",
+            "entity:october_7_1891",
+            "entity:randolph_county",
+            "entity:richard_brantley_york",
+            "entity:union_institute_academy"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:york_upper_canada_0_3_simcoe_gave_up_his_plan_to_build_a_capital_at_london_and_york_became_the_perman",
+        "score": 0.021938901706435632,
+        "text": "Simcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796.",
+        "metadata": {
+          "title": "York, Upper Canada",
+          "chunk_id": "chunk:york_upper_canada_0",
+          "sentence_index": 3,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Simcoe",
+              "relation": "gave up",
+              "tail": "plan to build a capital at London"
+            },
+            {
+              "head": "York",
+              "relation": "became",
+              "tail": "permanent capital of Upper Canada"
+            },
+            {
+              "head": "York",
+              "relation": "on",
+              "tail": "February 1 1796"
+            }
+          ],
+          "entities": [
+            "Simcoe",
+            "London",
+            "York",
+            "Upper Canada"
+          ],
+          "entity_ids": [
+            "entity:february_1_1796",
+            "entity:london",
+            "entity:permanent_capital_of_upper_canada",
+            "entity:plan_to_build_a_capital_at_london",
+            "entity:simcoe",
+            "entity:upper_canada",
+            "entity:york"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:springfield_illinois_1_3_springfield_became_the_third_and_current_capital_of_illinois_in_1839",
+        "score": 0.01710227356023,
+        "text": "Springfield became the third and current capital of Illinois in 1839.",
+        "metadata": {
+          "title": "Springfield, Illinois",
+          "chunk_id": "chunk:springfield_illinois_1",
+          "sentence_index": 3,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Springfield",
+              "relation": "became",
+              "tail": "third and current capital of Illinois"
+            }
+          ],
+          "entities": [
+            "Springfield",
+            "Illinois"
+          ],
+          "entity_ids": [
+            "entity:illinois",
+            "entity:springfield",
+            "entity:third_and_current_capital_of_illinois"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:springfield_illinois_0_8_at_that_time_springfield_massachusetts_was_comparable_to_modern_day_silicon",
+        "score": 0.013125009269894777,
+        "text": "At that time, Springfield, Massachusetts was comparable to modern - day Silicon Valley -- known for industrial innovation, concentrated prosperity, and the celebrated Springfield Armory.",
+        "metadata": {
+          "title": "Springfield, Illinois",
+          "chunk_id": "chunk:springfield_illinois_0",
+          "sentence_index": 8,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Springfield Massachusetts",
+              "relation": "was comparable to",
+              "tail": "modern-day Silicon Valley"
+            },
+            {
+              "head": "Springfield Massachusetts",
+              "relation": "known for",
+              "tail": "celebrated Springfield Armory"
+            }
+          ],
+          "entities": [
+            "Springfield Massachusetts",
+            "Silicon Valley",
+            "Springfield Armory"
+          ],
+          "entity_ids": [
+            "entity:celebrated_springfield_armory",
+            "entity:modern_day_silicon_valley",
+            "entity:silicon_valley",
+            "entity:springfield_armory",
+            "entity:springfield_massachusetts"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:york_upper_canada_0",
+        "score": 0.008364365304931847,
+        "text": "York, Upper Canada\nThe Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834). It was established in 1793 by Lieutenant - Governor John Graves Simcoe as a ``temporary ''location for the capital of Upper Canada, while he made plans to build a capital near today's London, Ontario. Simcoe renamed the location York after Prince Frederick, Duke of York and Albany, George III's second son. Simcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796. That year Simcoe returned to Britain and was temporarily replaced by Peter Russell.",
+        "metadata": {
+          "title": "York, Upper Canada",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:britain",
+            "entity:capital_near_today_s_london_ontario",
+            "entity:capital_of_upper_canada",
+            "entity:february_1_1796",
+            "entity:george_iii",
+            "entity:george_iii_s_second_son",
+            "entity:john_graves_simcoe",
+            "entity:lieutenant_governor_john_graves_simcoe",
+            "entity:location_york",
+            "entity:london",
+            "entity:london_ontario",
+            "entity:permanent_capital_of_upper_canada",
+            "entity:peter_russell",
+            "entity:plan_to_build_a_capital_at_london",
+            "entity:prince_frederick_duke_of_york_and_albany",
+            "entity:second_capital_of_the_district_of_upper_canada",
+            "entity:simcoe",
+            "entity:toronto",
+            "entity:town_of_york",
+            "entity:upper_canada",
+            "entity:york"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:springfield_illinois_1",
+        "score": 0.008231683981862758,
+        "text": "Springfield, Illinois\nimportantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from its organization in 1809, continuing through statehood in 1818, and through the first year as a state in 1819. Vandalia was the second state capital of Illinois from 1819 to 1839. Springfield became the third and current capital of Illinois in 1839. The designation was largely due to the efforts of Abraham Lincoln and his associates; nicknamed the ``Long Nine ''for their combined height of 54 feet (16 m).",
+        "metadata": {
+          "title": "Springfield, Illinois",
+          "chunk_index": 1,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:abraham_lincoln",
+            "entity:abraham_lincoln_and_his_associates",
+            "entity:illinois",
+            "entity:illinois_territory",
+            "entity:kaskaskia",
+            "entity:long_nine",
+            "entity:second_state_capital_of_illinois",
+            "entity:springfield",
+            "entity:third_and_current_capital_of_illinois",
+            "entity:title_anchor_springfield_illinois",
+            "entity:vandalia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wluj_0",
+        "score": 0.008196605466581169,
+        "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio.",
+        "metadata": {
+          "title": "WLUJ",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:89_7_mhz_fm",
+            "entity:christian_radio_station",
+            "entity:cornerstone_community_radio",
+            "entity:springfield_illinois",
+            "entity:title_anchor_wluj"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:brantley_york_0",
+        "score": 0.006115392037728681,
+        "text": "Brantley York\nRichard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina. Overall, York founded six schools.",
+        "metadata": {
+          "title": "Brantley York",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:duke_university",
+            "entity:january_3_1805",
+            "entity:methodist_minister_and_educator",
+            "entity:north_carolina",
+            "entity:october_7_1891",
+            "entity:overall",
+            "entity:randolph_county",
+            "entity:richard_brantley_york",
+            "entity:union_institute_academy",
+            "entity:york"
+          ]
+        }
+      }
+    ],
+    "qa_context": "WLUJ\nWLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio.\n\nSpringfield, Illinois\nSpringfield, Illinois\nimportantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from its organization in 1809, continuing through statehood in 1818, and through the first year as a state in 1819. Vandalia was the second state capital of Illinois from 1819 to 1839. Springfield became the third and current capital of Illinois in 1839. The designation was largely due to the efforts of Abraham Lincoln and his associates; nicknamed the ``Long Nine ''for their combined height of 54 feet (16 m).\n\nYork, Upper Canada\nYork, Upper Canada\nThe Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834). It was established in 1793 by Lieutenant - Governor John Graves Simcoe as a ``temporary ''location for the capital of Upper Canada, while he made plans to build a capital near today's London, Ontario. Simcoe renamed the location York after Prince Frederick, Duke of York and Albany, George III's second son. Simcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796. That year Simcoe returned to Britain and was temporarily replaced by Peter Russell.\n\nBrantley York\nBrantley York\nRichard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina. Overall, York founded six schools.\n\nRandolph County, Illinois\nRandolph County, Illinois\nOwing to its role in the state's history, the county motto is \"Where Illinois Began.\" It contains the historically important village of Kaskaskia, Illinois's first capital.\n\nWLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.\n\nYork, Upper Canada\nThe Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834).\n\nSpringfield, Illinois\nSpringfield became the third and current capital of Illinois in 1839.\n\nSpringfield, Illinois\nSpringfield, Illinois\nSpringfield's original name was Calhoun, after Senator John C. Calhoun of South Carolina. The land that Springfield now occupies was originally settled by trappers and traders who came to the Sangamon River in 1818. The settlement's first cabin was built in 1820, by John Kelly. It was located at what is now the northwest corner of Second Street and Jefferson Street. In 1821, Calhoun became the county seat of Sangamon County due to fertile soil and trading opportunities. Settlers from Kentucky, Virginia, and as far as North Carolina came to the city. By 1832, Senator Calhoun had fallen out of the favor with the public and the town renamed itself Springfield after Springfield, Massachusetts. At that time, Springfield, Massachusetts was comparable to modern - day Silicon Valley -- known for industrial innovation, concentrated prosperity, and the celebrated Springfield Armory. Most importantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:wluj_0",
+        "passage_index": 7,
+        "title": "WLUJ",
+        "score": 0.07629593359725248,
+        "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio.",
+        "score_breakdown": {
+          "dense": 0.050577274692724855,
+          "graph": 0.051257475938552226,
+          "fact": 0.2206745982312542
+        }
+      },
+      {
+        "node_id": "chunk:springfield_illinois_1",
+        "passage_index": 8,
+        "title": "Springfield, Illinois",
+        "score": 0.07500403873897003,
+        "text": "Springfield, Illinois\nimportantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from its organization in 1809, continuing through statehood in 1818, and through the first year as a state in 1819. Vandalia was the second state capital of Illinois from 1819 to 1839. Springfield became the third and current capital of Illinois in 1839. The designation was largely due to the efforts of Abraham Lincoln and his associates; nicknamed the ``Long Nine ''for their combined height of 54 feet (16 m).",
+        "score_breakdown": {
+          "dense": 0.05013976269749217,
+          "graph": 0.050209742006786226,
+          "fact": 0.21576164435542317
+        }
+      },
+      {
+        "node_id": "chunk:york_upper_canada_0",
+        "passage_index": 5,
+        "title": "York, Upper Canada",
+        "score": 0.0741943704815391,
+        "text": "York, Upper Canada\nThe Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834). It was established in 1793 by Lieutenant - Governor John Graves Simcoe as a ``temporary ''location for the capital of Upper Canada, while he made plans to build a capital near today's London, Ontario. Simcoe renamed the location York after Prince Frederick, Duke of York and Albany, George III's second son. Simcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796. That year Simcoe returned to Britain and was temporarily replaced by Peter Russell.",
+        "score_breakdown": {
+          "dense": 0.050226170707782916,
+          "graph": 0.051166862667003814,
+          "fact": 0.208132785281049
+        }
+      },
+      {
+        "node_id": "chunk:brantley_york_0",
+        "passage_index": 3,
+        "title": "Brantley York",
+        "score": 0.06921828247826879,
+        "text": "Brantley York\nRichard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina. Overall, York founded six schools.",
+        "score_breakdown": {
+          "dense": 0.05062015860106829,
+          "graph": 0.04875487940670998,
+          "fact": 0.17833820950445495
+        }
+      },
+      {
+        "node_id": "chunk:randolph_county_illinois_0",
+        "passage_index": 1,
+        "title": "Randolph County, Illinois",
+        "score": 0.06830311403202535,
+        "text": "Randolph County, Illinois\nOwing to its role in the state's history, the county motto is \"Where Illinois Began.\" It contains the historically important village of Kaskaskia, Illinois's first capital.",
+        "score_breakdown": {
+          "dense": 0.050035106306723295,
+          "graph": 0.0473996372305158,
+          "fact": 0.17709276262781862
+        }
+      },
+      {
+        "node_id": "chunk:springfield_illinois_0",
+        "passage_index": 8,
+        "title": "Springfield, Illinois",
+        "score": 0.04249138126175443,
+        "text": "Springfield, Illinois\nSpringfield's original name was Calhoun, after Senator John C. Calhoun of South Carolina. The land that Springfield now occupies was originally settled by trappers and traders who came to the Sangamon River in 1818. The settlement's first cabin was built in 1820, by John Kelly. It was located at what is now the northwest corner of Second Street and Jefferson Street. In 1821, Calhoun became the county seat of Sangamon County due to fertile soil and trading opportunities. Settlers from Kentucky, Virginia, and as far as North Carolina came to the city. By 1832, Senator Calhoun had fallen out of the favor with the public and the town renamed itself Springfield after Springfield, Massachusetts. At that time, Springfield, Massachusetts was comparable to modern - day Silicon Valley -- known for industrial innovation, concentrated prosperity, and the celebrated Springfield Armory. Most importantly, it was a city that had built itself up from frontier outpost to national power through ingenuity -- an example that the newly named Springfield, Illinois, sought to emulate. Kaskaskia was the first capital of the Illinois Territory from",
+        "score_breakdown": {
+          "dense": 0.05001845898841031,
+          "graph": 0.04993742939376254,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:birth_certificate_0",
+        "passage_index": 12,
+        "title": "Birth certificate",
+        "score": 0.041507933284265684,
+        "text": "Birth certificate\nIn the U.S., the issuance of birth certificates is a function of the Vital Records Office of the states, capital district, territories and former territories. Birth in the U.S. establishes automatic eligibility for American citizenship, so a birth certificate from a local authority is commonly provided to the federal government to obtain a U.S. passport. However, the U.S. State Department does issue a Consular Report of Birth Abroad for children born to U.S. citizens (who are also eligible for citizenship), including births on military bases in foreign territory.",
+        "score_breakdown": {
+          "dense": 0.049968421846913,
+          "graph": 0.04675100422821178,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:kokkuthoduvai_0",
+        "passage_index": 4,
+        "title": "Kokkuthoduvai",
+        "score": 0.041505457672987196,
+        "text": "Kokkuthoduvai\nKokkuthoduvai or Kokkuththoduvai (pronounced Kokkuth-thodu-vai) is a Town in the Mullaitivu District, Sri Lanka. Some say it translates to 'a-place-where-you-can-touch-the-Egret'. It is located about 30 km South-east of the District capital Mullaitivu. It is a coastal town, located next to Kokkilai lagoon.",
+        "score_breakdown": {
+          "dense": 0.04996211717032094,
+          "graph": 0.04675431076436893,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:cayman_islands_0",
+        "passage_index": 9,
+        "title": "Cayman Islands",
+        "score": 0.04149992375405736,
+        "text": "Cayman Islands\nThe Cayman Islands (/ ˈkeɪmən / or / keɪˈmæn /) is an autonomous British Overseas Territory in the western Caribbean Sea. The 264 - square - kilometre (102 - square - mile) territory comprises the three islands of Grand Cayman, Cayman Brac and Little Cayman located south of Cuba, northeast of Costa Rica, north of Panama, east of Mexico and northwest of Jamaica. Its population is approximately 60,765, and its capital is George Town.",
+        "score_breakdown": {
+          "dense": 0.049954605387647344,
+          "graph": 0.046749635969504384,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bann_na_mohra_0",
+        "passage_index": 2,
+        "title": "Bann Na Mohra",
+        "score": 0.04149647995228289,
+        "text": "Bann Na Mohra\nBann Na Mohra is a town in the Islamabad Capital Territory of Pakistan. It is located at 33° 27' 50N 73° 22' 10E with an altitude of 562 metres (1847 feet).",
+        "score_breakdown": {
+          "dense": 0.049946865018848555,
+          "graph": 0.046752347306387276,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What town is WLUJ licensed in?",
+        "resolved_sub_question": "What town is WLUJ licensed in?",
+        "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+        "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+        "score": 0.5966965714285715,
+        "source_title": "WLUJ",
+        "hop_answer": "Springfield",
+        "hop_thought": "The evidence states that WLUJ is licensed to Springfield, Illinois.",
+        "hop_raw_response": "The evidence states that WLUJ is licensed to Springfield, Illinois.\nAnswer: Springfield",
+        "evidence_passages": [
+          {
+            "title": "WLUJ",
+            "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+          },
+          {
+            "title": "WLUJ",
+            "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+          },
+          {
+            "title": "York, Upper Canada",
+            "text": "The Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834)."
+          }
+        ]
+      },
+      {
+        "sub_question": "What state is this town the capital of?",
+        "resolved_sub_question": "What state is this town the capital of? Context: Springfield.",
+        "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+        "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+        "score": 0.5329267252747254,
+        "source_title": "WLUJ",
+        "hop_answer": "Illinois",
+        "hop_thought": "The context indicates that Springfield is the town in question, and it specifies that Springfield became the third and current capital of Illinois in 1839.",
+        "hop_raw_response": "The context indicates that Springfield is the town in question, and it specifies that Springfield became the third and current capital of Illinois in 1839.\nAnswer: Illinois",
+        "evidence_passages": [
+          {
+            "title": "WLUJ",
+            "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+          },
+          {
+            "title": "WLUJ",
+            "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+          },
+          {
+            "title": "Springfield, Illinois",
+            "text": "Springfield became the third and current capital of Illinois in 1839."
+          }
+        ]
+      },
+      {
+        "sub_question": "Where was Brantley York born?",
+        "resolved_sub_question": "Where was Brantley York born? Context: Springfield; Illinois.",
+        "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+        "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+        "score": 0.5609267252747254,
+        "source_title": "WLUJ",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context and evidence do not contain any information about Brantley York or his birthplace.",
+        "hop_raw_response": "The provided context and evidence do not contain any information about Brantley York or his birthplace.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "WLUJ",
+            "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+          },
+          {
+            "title": "WLUJ",
+            "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+          },
+          {
+            "title": "Springfield, Illinois",
+            "text": "Springfield became the third and current capital of Illinois in 1839."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did this town become the capital of the state where Brantley York was born?",
+        "resolved_sub_question": "When did this town become the capital of the state where Brantley York was born? Context: Springfield; Illinois.",
+        "sentence_id": "sentence:wluj_0_0_wluj_is_a_christian_radio_station_licensed_to_springfield_illinois_broadcastin",
+        "sentence": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM.",
+        "score": 0.48822857142857146,
+        "source_title": "WLUJ",
+        "hop_answer": "1839",
+        "hop_thought": "The question asks for the year Springfield became the capital of Illinois. From the evidence, we know that Springfield became the capital of Illinois in 1839.",
+        "hop_raw_response": "The question asks for the year Springfield became the capital of Illinois. From the evidence, we know that Springfield became the capital of Illinois in 1839.\nAnswer: 1839",
+        "evidence_passages": [
+          {
+            "title": "WLUJ",
+            "text": "WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM."
+          },
+          {
+            "title": "WLUJ",
+            "text": "WLUJ\nWLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio."
+          },
+          {
+            "title": "Springfield, Illinois",
+            "text": "Springfield became the third and current capital of Illinois in 1839."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What town is WLUJ licensed in? => Springfield (source: WLUJ)\n2. What state is this town the capital of? => Illinois (source: WLUJ)\n3. Where was Brantley York born? (source: WLUJ)\n4. When did this town become the capital of the state where Brantley York was born? => 1839 (source: WLUJ)\n\nFact hints:\n- WLUJ licensed to Springfield Illinois\n- Springfield became third and current capital of Illinois\n- Kaskaskia is Illinois's first capital\n\nWikipedia Title: Springfield, Illinois\nSpringfield became the third and current capital of Illinois in 1839. Vandalia was the second state capital of Illinois from 1819 to 1839.\n\nWikipedia Title: WLUJ\nWLUJ WLUJ is a Christian radio station licensed to Springfield, Illinois, broadcasting on 89.7 MHz FM. The station is owned by Cornerstone Community Radio.\n\nWikipedia Title: Randolph County, Illinois\nRandolph County, Illinois Owing to its role in the state's history, the county motto is \"Where Illinois Began.\" It contains the historically important village of Kaskaskia, Illinois's first capital.\n\nWikipedia Title: York, Upper Canada\nSimcoe gave up his plan to build a capital at London, and York became the permanent capital of Upper Canada on February 1, 1796. York, Upper Canada The Town of York was the second capital of the district of Upper Canada and the predecessor to Toronto (1834).\n\nWikipedia Title: Brantley York\nOverall, York founded six schools. Brantley York Richard Brantley York (January 3, 1805 – October 7, 1891) was a Methodist minister and educator best known for founding and serving as president of the institution that would become Duke University, Union Institute Academy in Randolph County, North Carolina.\n\nQuestion: When did the town WLUJ is licensed in become capitol of the state where Brantley York was born?\nDraft Answer: 1839\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The town WLUJ is licensed in is Springfield, which became the capital of Illinois in 1839. Since Brantley York was born in Illinois, the answer is 1839.",
+  "predicted_answer": "1839",
+  "qa_raw_response": "{\n  \"thought\": \"The town WLUJ is licensed in is Springfield, which became the capital of Illinois in 1839. Since Brantley York was born in Illinois, the answer is 1839.\",\n  \"answer\": \"1839\",\n  \"support\": \"Springfield became the third and current capital of Illinois in 1839.\"\n}"
+}

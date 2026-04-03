@@ -1,0 +1,1101 @@
+{
+  "query": "In what year was Twilight Princess from the game series on which The Legend of Neil was based originally planned for release?",
+  "alpha": {
+    "entity": 0.5,
+    "sentence": 0.3,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Twilight Princess",
+    "The Legend of Neil"
+  ],
+  "raw_query_entities": [
+    "Twilight Princess",
+    "Legend of Neil"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Twilight Princess",
+      "node_id": "entity:twilight_princess",
+      "resolved_text": "Twilight Princess",
+      "score": 0.8364545454545456,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.781818181818182,
+      "compatibility_score": 0.6125,
+      "score_margin": 0.2637454545454546,
+      "confident": true
+    },
+    {
+      "mention": "Legend of Neil",
+      "node_id": "entity:title_anchor_the_legend_of_neil",
+      "resolved_text": "The Legend of Neil",
+      "score": 0.7616470588235295,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7714285714285716,
+      "compatibility_score": 0.5,
+      "score_margin": 0.2036470588235294,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What game series is The Legend of Neil based on?",
+    "What is the name of the game from this series that is called Twilight Princess?",
+    "In what year was Twilight Princess originally planned for release?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:twilight_princess",
+      "score": 1.0433381227877685,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_legend_of_neil",
+      "score": 1.0072772183946188,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:zelda_games",
+      "score": 0.6102080911296844,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_legend_of_zelda_twilight_princess",
+      "score": 0.5976056956626492,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:zelda",
+      "score": 0.5617156358753013,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:legend_of_zelda",
+      "score": 0.5614073351377928,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:november_2010",
+      "score": 0.33489657238029635,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:december_2005",
+      "score": 0.33489657238029635,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:legend_of_zelda_series",
+      "score": 0.3060410291163007,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:playable_version_of_twilight_princess_for_wii",
+      "score": 0.29155366368299274,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:playable_version_of_twilight_princess",
+      "score": 0.29154760985266226,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:november_2005",
+      "score": 0.28128297203916314,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:twilight_princess_planned_release_date_november_2005_sentence_the_legend_of_zelda_twilight_princess_0_2_originally_plann",
+      "text": "Twilight Princess planned release date November 2005",
+      "head_id": "entity:twilight_princess",
+      "tail_id": "entity:november_2005",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+      "chunk_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+      "document_index": 11,
+      "score": 0.2790804769835803
+    },
+    {
+      "fact_id": "fact:legend_of_neil_is_a_parody_of_legend_of_zelda_sentence_the_legend_of_neil_0_0_the_legend_of_neil_is_a_comedy_web_series_",
+      "text": "Legend of Neil is a parody of Legend of Zelda",
+      "head_id": "entity:title_anchor_the_legend_of_neil",
+      "tail_id": "entity:legend_of_zelda",
+      "sentence_id": "sentence:the_legend_of_neil_0_0_the_legend_of_neil_is_a_comedy_web_series_distributed_by_comedy_central_s_partne",
+      "chunk_id": "chunk:the_legend_of_neil_0",
+      "document_index": 5,
+      "score": 0.2550341909302506
+    },
+    {
+      "fact_id": "fact:twilight_princess_is_a_possible_game_zelda_sentence_the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_z",
+      "text": "Twilight Princess is a possible game Zelda",
+      "head_id": "entity:twilight_princess",
+      "tail_id": "entity:zelda",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+      "chunk_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+      "document_index": 4,
+      "score": 0.2534725516778198
+    },
+    {
+      "fact_id": "fact:real_life_i_never_was_the_same_again_written_by_neil_thrasher_and_jim_janosky_sentence_real_life_i_never_was_the_same_ag",
+      "text": "Real Life I Never Was the Same Again written by Neil Thrasher and Jim Janosky",
+      "head_id": "entity:title_anchor_real_life_i_never_was_the_same_again",
+      "tail_id": "entity:neil_thrasher_and_jim_janosky",
+      "sentence_id": "sentence:real_life_i_never_was_the_same_again_0_0_real_life_i_never_was_the_same_again_is_a_song_written_by_neil_thrasher_and",
+      "chunk_id": "chunk:real_life_i_never_was_the_same_again_0",
+      "document_index": 7,
+      "score": 0.25002096382868666
+    },
+    {
+      "fact_id": "fact:twilight_princess_originally_planned_for_release_on_gamecube_sentence_the_legend_of_zelda_twilight_princess_0_2_original",
+      "text": "Twilight Princess originally planned for release on GameCube",
+      "head_id": "entity:twilight_princess",
+      "tail_id": "entity:gamecube",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+      "chunk_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+      "document_index": 11,
+      "score": 0.19074732855333337
+    },
+    {
+      "fact_id": "fact:legend_of_neil_distributed_by_comedy_central_s_partner_atom_com_sentence_the_legend_of_neil_0_0_the_legend_of_neil_is_a_",
+      "text": "Legend of Neil distributed by Comedy Central's partner Atom com",
+      "head_id": "entity:title_anchor_the_legend_of_neil",
+      "tail_id": "entity:comedy_central_s_partner_atom_com",
+      "sentence_id": "sentence:the_legend_of_neil_0_0_the_legend_of_neil_is_a_comedy_web_series_distributed_by_comedy_central_s_partne",
+      "chunk_id": "chunk:the_legend_of_neil_0",
+      "document_index": 5,
+      "score": 0.15502709277514842
+    },
+    {
+      "fact_id": "fact:real_life_i_never_was_the_same_again_recorded_by_jeff_carson_sentence_real_life_i_never_was_the_same_again_0_0_real_life",
+      "text": "Real Life I Never Was the Same Again recorded by Jeff Carson",
+      "head_id": "entity:title_anchor_real_life_i_never_was_the_same_again",
+      "tail_id": "entity:jeff_carson",
+      "sentence_id": "sentence:real_life_i_never_was_the_same_again_0_0_real_life_i_never_was_the_same_again_is_a_song_written_by_neil_thrasher_and",
+      "chunk_id": "chunk:real_life_i_never_was_the_same_again_0",
+      "document_index": 7,
+      "score": 0.13787691622356713
+    }
+  ],
+  "bridge_entities": [
+    "Nintendo",
+    "GameCube",
+    "Zelda",
+    "Wii",
+    "Legend of Zelda",
+    "November 2005",
+    "Legend of Zelda Twilight Princess"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What game series is The Legend of Neil based on?",
+      "resolved_sub_question": "What game series is The Legend of Neil based on?",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+      "sentence": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.",
+      "score": 0.6392471443850267,
+      "source_title": "The Legend of Zelda: Twilight Princess",
+      "hop_answer": "The Legend of Zelda",
+      "hop_thought": "The Legend of Neil is a parody of the Nintendo game \"The Legend of Zelda\".",
+      "hop_raw_response": "The Legend of Neil is a parody of the Nintendo game \"The Legend of Zelda\".\nAnswer: The Legend of Zelda",
+      "evidence_passages": [
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+        },
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+        },
+        {
+          "title": "The Legend of Neil",
+          "text": "The Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\"."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the name of the game from this series that is called Twilight Princess?",
+      "resolved_sub_question": "What is the name of the game from this series that is called Twilight Princess? Context: The Legend of Zelda.",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+      "sentence": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.",
+      "score": 0.6529162352941178,
+      "source_title": "The Legend of Zelda: Twilight Princess",
+      "hop_answer": "The Legend of Zelda: Twilight Princess",
+      "hop_thought": "The game from the Legend of Zelda series that is called Twilight Princess is \"The Legend of Zelda: Twilight Princess\".",
+      "hop_raw_response": "The game from the Legend of Zelda series that is called Twilight Princess is \"The Legend of Zelda: Twilight Princess\".\nAnswer: The Legend of Zelda: Twilight Princess",
+      "evidence_passages": [
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+        },
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+        },
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii."
+        }
+      ]
+    },
+    {
+      "sub_question": "In what year was Twilight Princess originally planned for release?",
+      "resolved_sub_question": "In what year was Twilight Princess originally planned for release? Context: The Legend of Zelda; The Legend of Zelda: Twilight Princess.",
+      "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+      "sentence": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii.",
+      "score": 0.5413049773755656,
+      "source_title": "The Legend of Zelda: Twilight Princess",
+      "hop_answer": "2005",
+      "hop_thought": "The passage states that Twilight Princess was originally planned for release on the GameCube in November 2005.",
+      "hop_raw_response": "The passage states that Twilight Princess was originally planned for release on the GameCube in November 2005.\nAnswer: 2005",
+      "evidence_passages": [
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii."
+        },
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+        },
+        {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:twilight_princess",
+      "score": 0.07875437567247512,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_legend_of_neil",
+      "score": 0.07169326871582088,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:legend_of_zelda",
+      "score": 0.05784379730144429,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_legend_of_zelda_twilight_princess",
+      "score": 0.0504953960959173,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:zelda_games",
+      "score": 0.04692711486944892,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_legend_of_neil_0_0_the_legend_of_neil_is_a_comedy_web_series_distributed_by_comedy_central_s_partne",
+      "score": 0.04222420288282231,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:zelda",
+      "score": 0.04064086743586523,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:legend_of_zelda_series",
+      "score": 0.032649648813115675,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:november_2005",
+      "score": 0.024811916592161372,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:december_2005",
+      "score": 0.023406532200465045,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:november_2010",
+      "score": 0.022904854954473478,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:playable_version_of_twilight_princess_for_wii",
+      "score": 0.021552782824373867,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:real_life_i_never_was_the_same_again_0_0_real_life_i_never_was_the_same_again_is_a_song_written_by_neil_thrasher_and",
+      "score": 0.021067933888763837,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:gamecube",
+      "score": 0.02102694981530271,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:playable_version_of_twilight_princess",
+      "score": 0.020832876274139437,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_real_life_i_never_was_the_same_again",
+      "score": 0.020132531635549185,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:comedy_central_s_partner_atom_com",
+      "score": 0.01981151352073425,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+      "score": 0.01953903200475382,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:gamecube_and_wii",
+      "score": 0.017420451825066706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gamecube_release",
+      "score": 0.016611103168840242,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+      "passage_index": 15,
+      "title": "The Legend of Zelda: Twilight Princess",
+      "score": 0.1112578979516404,
+      "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\",",
+      "score_breakdown": {
+        "dense": 0.06757328910626073,
+        "graph": 0.07734571997894146,
+        "fact": 0.33925915299676374
+      }
+    },
+    {
+      "node_id": "chunk:the_legend_of_neil_0",
+      "passage_index": 5,
+      "title": "The Legend of Neil",
+      "score": 0.10837355041275465,
+      "text": "The Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\". Sandeep Parikh of \"The Guild\" fame directs the series. Tony Janning writes for the series, and acts as the title character Neil. Felicia Day and Mike Rose, who have worked with Parikh on the set of \"The Guild\", appear as recurring characters.",
+      "score_breakdown": {
+        "dense": 0.06801006242929986,
+        "graph": 0.07096078721501006,
+        "fact": 0.33119853274757804
+      }
+    },
+    {
+      "node_id": "chunk:real_life_i_never_was_the_same_again_0",
+      "passage_index": 7,
+      "title": "Real Life (I Never Was the Same Again)",
+      "score": 0.10608062975122273,
+      "text": "Real Life (I Never Was the Same Again)\n\"Real Life (I Never Was the Same Again)\" is a song written by Neil Thrasher and Jim Janosky, and recorded by American country music artist Jeff Carson. It released in May 2001 as the third single from his third album, \"Real Life\". The song was written by Neil Thrasher and Jim Janosky. It was nominated for Song of the Year at the 2001 Christian Country Music Awards.",
+      "score_breakdown": {
+        "dense": 0.06613428577257009,
+        "graph": 0.0675847514598681,
+        "fact": 0.3295423142556583
+      }
+    },
+    {
+      "node_id": "chunk:the_legend_of_zelda_twilight_princess_1",
+      "passage_index": 15,
+      "title": "The Legend of Zelda: Twilight Princess",
+      "score": 0.057205747338705,
+      "text": "The Legend of Zelda: Twilight Princess\nand regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\", although 1UP.com said the remote-swinging sword attacks were \"the most impressive in the entire series\". Gaming Nexus considered Twilight Princess's soundtrack to be the best of this generation, though IGN criticized its MIDI-formatted songs for lacking \"the punch and crispness\" of their orchestrated counterparts. Hyper's Javier Glickman commended the game for its \"very long quests, superb Wii controls and being able to save anytime\". However, he criticised it for \"no voice acting, no orchestral score and slightly outdated graphics\".",
+      "score_breakdown": {
+        "dense": 0.06726588113744852,
+        "graph": 0.06736504237702771,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_twilight_saga_film_series_0",
+      "passage_index": 8,
+      "title": "The Twilight Saga (film series)",
+      "score": 0.056575328154337974,
+      "text": "The Twilight Saga (film series)\nThe series was in development since 2004 at Paramount Pictures, during which time a screen adaptation of Twilight that differed significantly from the novel was written. Three years later, Summit Entertainment acquired the rights to the film. After Twilight grossed $35.7 million on its opening day, Summit Entertainment announced they would begin production on New Moon; they had acquired the rights to the remaining novels earlier that same month. A two - part adaptation of Breaking Dawn began shooting in November 2010 with release dates of November 18, 2011, and November 16, 2012, respectively.",
+      "score_breakdown": {
+        "dense": 0.0669707890541915,
+        "graph": 0.06580464724844216,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:escape_plan_video_game_0",
+      "passage_index": 10,
+      "title": "Escape Plan (video game)",
+      "score": 0.05615428020559035,
+      "text": "Escape Plan (video game)\nEscape Plan is a puzzle video game released for the PlayStation Vita in 2012, as a launch title. \"Escape Plan\" is the first title from new developer Fun Bits Interactive and is produced by Chris Millar, known for his previous work on Fat Princess. In previews of the game it was noted for its sharp, black-and-white visuals, gruesome yet humorous tone and its intuitive use of the PlayStation Vita's inputs including touch and gyroscopic control.",
+      "score_breakdown": {
+        "dense": 0.06659708040053652,
+        "graph": 0.06508628661765087,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:beyond_twilight_0",
+      "passage_index": 2,
+      "title": "Beyond Twilight",
+      "score": 0.056128960701842506,
+      "text": "Beyond Twilight\nBeyond Twilight is a progressive metal band from Denmark. The band was originally formed by Finn Zierler in 1992 under the name \"Twilight\". Twilight attracted international attention releasing the debut album Eye For An Eye selling 25.000 copies. Twilight released 2 albums \"Eye For An Eye\", \"The Edge\" and 1 single \"Sail Away\". In 1999 Finn Zierler decided pursue his own visions and founded Beyond Twilight carrying the almost identical logo and the symbol which is found on all Zierler's releases. Musically the style changed to dark progressive metal with symphonic elements and harmonic vocals.",
+      "score_breakdown": {
+        "dense": 0.06655016416752338,
+        "graph": 0.06508790136568214,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:one_nil_0",
+      "passage_index": 1,
+      "title": "One Nil",
+      "score": 0.056101204083131566,
+      "text": "One Nil\nOne Nil, released in 2001, is the second solo album by New Zealand singer-songwriter, Neil Finn. When released in the United States the following year, the album had a slightly different track listing and was issued under the name \"One All\".",
+      "score_breakdown": {
+        "dense": 0.06649709341947274,
+        "graph": 0.06509267567473852,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:a_series_of_unfortunate_events_tv_series_0",
+      "passage_index": 13,
+      "title": "A Series of Unfortunate Events (TV series)",
+      "score": 0.05609375345979904,
+      "text": "A Series of Unfortunate Events (TV series)\nA Series of Unfortunate Events Genre Drama Black comedy Based on A Series of Unfortunate Events by Lemony Snicket Developed by Mark Hudis Barry Sonnenfeld Starring Neil Patrick Harris Patrick Warburton Malina Weissman Louis Hynes K. Todd Freeman Presley Smith Lucy Punch Avi Lake Dylan Kingwell Theme music composer Nick Urata Daniel Handler Opening theme ``Look Away ''by Neil Patrick Harris Composer (s) James Newton Howard Sven Faulconer Chris Bacon Jim Dooley Country of origin United States Original language (s) English No. of seasons No. of episodes 18 (list of episodes) Production Executive producer (s) Cindy Holland Brian Wright Ted Biaselli Daniel Handler Neil Patrick Harris Rose Lam Barry Sonnenfeld Producer (s) Neil Patrick Harris Location (s) Vancouver, British Columbia Cinematography Bernard Couture Editor (s) Stuart Bass Skip MacDonald Running time 40 -- 64 minutes Production company (s) Paramount Television What is the Question? Sonnenfeld Productions, Inc. Distributor Netflix Release Original network Netflix Picture format 4K (Ultra HD) Original release January 13, 2017 (2017 - 01 - 13) -- present (present)",
+      "score_breakdown": {
+        "dense": 0.06648298600342134,
+        "graph": 0.06509370385972435,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:a_thousand_years_christina_perri_song_0",
+      "passage_index": 6,
+      "title": "A Thousand Years (Christina Perri song)",
+      "score": 0.056043447120121714,
+      "text": "A Thousand Years (Christina Perri song)\n``A Thousand Years ''is a song by American singer - songwriter Christina Perri and David Hodges. It is taken from the album The Twilight Saga: Breaking Dawn -- Part 1: Original Motion Picture Soundtrack. The song serves as the second single from the album. The song was released as a digital download on October 18, 2011 worldwide. Perri re-recorded the song with vocals from Steve Kazee for The Twilight Saga: Breaking Dawn -- Part 2: Original Motion Picture Soundtrack titled A Thousand Years, Pt. 2.",
+      "score_breakdown": {
+        "dense": 0.06638694657033326,
+        "graph": 0.06510208835479475,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:twilight_princess",
+        "score": 0.07875437567247512,
+        "text": "Twilight Princess",
+        "metadata": {
+          "canonical_name": "Twilight Princess",
+          "aliases": [
+            "TP",
+            "Twilight Princess"
+          ],
+          "surface_forms": [
+            "TP",
+            "Twilight Princess"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_legend_of_neil",
+        "score": 0.07169326871582088,
+        "text": "The Legend of Neil",
+        "metadata": {
+          "canonical_name": "The Legend of Neil",
+          "aliases": [
+            "LON",
+            "Legend of Neil"
+          ],
+          "surface_forms": [
+            "LON",
+            "Legend of Neil"
+          ],
+          "title_anchor": "The Legend of Neil"
+        }
+      },
+      {
+        "node_id": "entity:legend_of_zelda",
+        "score": 0.05784379730144429,
+        "text": "Legend of Zelda",
+        "metadata": {
+          "canonical_name": "Legend of Zelda",
+          "aliases": [
+            "LOZ",
+            "Legend of Zelda"
+          ],
+          "surface_forms": [
+            "LOZ",
+            "Legend of Zelda"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_legend_of_zelda_twilight_princess",
+        "score": 0.0504953960959173,
+        "text": "The Legend of Zelda: Twilight Princess",
+        "metadata": {
+          "canonical_name": "The Legend of Zelda: Twilight Princess",
+          "aliases": [
+            "LOZTP",
+            "Legend of Zelda Twilight Princess"
+          ],
+          "surface_forms": [
+            "LOZTP",
+            "Legend of Zelda Twilight Princess"
+          ],
+          "title_anchor": "The Legend of Zelda: Twilight Princess"
+        }
+      },
+      {
+        "node_id": "entity:zelda_games",
+        "score": 0.04692711486944892,
+        "text": "Zelda games",
+        "metadata": {
+          "canonical_name": "Zelda games",
+          "aliases": [
+            "ZG",
+            "Zelda games"
+          ],
+          "surface_forms": [
+            "ZG",
+            "Zelda games"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:zelda",
+        "score": 0.04064086743586523,
+        "text": "Zelda",
+        "metadata": {
+          "canonical_name": "Zelda",
+          "aliases": [
+            "Zelda"
+          ],
+          "surface_forms": [
+            "Zelda"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_legend_of_neil_0_0_the_legend_of_neil_is_a_comedy_web_series_distributed_by_comedy_central_s_partne",
+        "score": 0.04222420288282231,
+        "text": "The Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\".",
+        "metadata": {
+          "title": "The Legend of Neil",
+          "chunk_id": "chunk:the_legend_of_neil_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Legend of Neil",
+              "relation": "distributed by",
+              "tail": "Comedy Central's partner Atom com"
+            },
+            {
+              "head": "Legend of Neil",
+              "relation": "is a parody of",
+              "tail": "Legend of Zelda"
+            }
+          ],
+          "entities": [
+            "Legend of Neil",
+            "Comedy Central",
+            "Atom com",
+            "Legend of Zelda",
+            "Nintendo"
+          ],
+          "entity_ids": [
+            "entity:atom_com",
+            "entity:comedy_central",
+            "entity:comedy_central_s_partner_atom_com",
+            "entity:legend_of_zelda",
+            "entity:nintendo",
+            "entity:title_anchor_the_legend_of_neil"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:real_life_i_never_was_the_same_again_0_0_real_life_i_never_was_the_same_again_is_a_song_written_by_neil_thrasher_and",
+        "score": 0.021067933888763837,
+        "text": "\"Real Life (I Never Was the Same Again)\" is a song written by Neil Thrasher and Jim Janosky, and recorded by American country music artist Jeff Carson.",
+        "metadata": {
+          "title": "Real Life (I Never Was the Same Again)",
+          "chunk_id": "chunk:real_life_i_never_was_the_same_again_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Real Life I Never Was the Same Again",
+              "relation": "written by",
+              "tail": "Neil Thrasher and Jim Janosky"
+            },
+            {
+              "head": "Real Life I Never Was the Same Again",
+              "relation": "recorded by",
+              "tail": "Jeff Carson"
+            },
+            {
+              "head": "Jeff Carson",
+              "relation": "is an",
+              "tail": "American country music artist"
+            }
+          ],
+          "entities": [
+            "Real Life I Never Was the Same Again",
+            "Neil Thrasher",
+            "Jim Janosky",
+            "Jeff Carson",
+            "American country music artist"
+          ],
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:jeff_carson",
+            "entity:jim_janosky",
+            "entity:neil_thrasher",
+            "entity:neil_thrasher_and_jim_janosky",
+            "entity:title_anchor_real_life_i_never_was_the_same_again"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+        "score": 0.01953903200475382,
+        "text": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii.",
+        "metadata": {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "chunk_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+          "sentence_index": 2,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Twilight Princess",
+              "relation": "originally planned for release on",
+              "tail": "GameCube"
+            },
+            {
+              "head": "Twilight Princess",
+              "relation": "planned release date",
+              "tail": "November 2005"
+            },
+            {
+              "head": "Twilight Princess",
+              "relation": "delayed by",
+              "tail": "Nintendo"
+            },
+            {
+              "head": "Nintendo",
+              "relation": "allowed developers to",
+              "tail": "port it to the Wii"
+            }
+          ],
+          "entities": [
+            "Twilight Princess",
+            "GameCube",
+            "Nintendo",
+            "Wii"
+          ],
+          "entity_ids": [
+            "entity:gamecube",
+            "entity:nintendo",
+            "entity:november_2005",
+            "entity:port_it_to_the_wii",
+            "entity:twilight_princess",
+            "entity:wii"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+        "score": 0.014432325482109407,
+        "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.",
+        "metadata": {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "chunk_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+          "sentence_index": 1,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Zelda",
+              "relation": "would appear on",
+              "tail": "Wii"
+            },
+            {
+              "head": "Wii",
+              "relation": "was codenamed",
+              "tail": "Revolution"
+            },
+            {
+              "head": "Twilight Princess",
+              "relation": "is a possible game",
+              "tail": "Zelda"
+            }
+          ],
+          "entities": [
+            "Zelda",
+            "Wii",
+            "Revolution",
+            "Twilight Princess"
+          ],
+          "entity_ids": [
+            "entity:revolution",
+            "entity:twilight_princess",
+            "entity:wii",
+            "entity:zelda"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+        "score": 0.016118305462702653,
+        "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\",",
+        "metadata": {
+          "title": "The Legend of Zelda: Twilight Princess",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:aonuma",
+            "entity:australia",
+            "entity:both_versions_available_at_wii_launch",
+            "entity:computer",
+            "entity:computer_and_video_games",
+            "entity:confirmation_of_revolution_controller_functionality",
+            "entity:cubed3",
+            "entity:december_2005",
+            "entity:december_2006",
+            "entity:details_about_wii_controls",
+            "entity:electronic_gaming_monthly",
+            "entity:europe",
+            "entity:executable",
+            "entity:executable_and_linkable_format_elf_programs",
+            "entity:execution_of_custom_code_from_sd_card",
+            "entity:game_informer",
+            "entity:game_s_atmosphere_was_superior_to_that_of_any_previous_zelda_game",
+            "entity:gamecube",
+            "entity:gamecube_and_wii",
+            "entity:gamecube_development",
+            "entity:gamecube_release",
+            "entity:gamecube_version",
+            "entity:gamerankings",
+            "entity:gamespot",
+            "entity:gamespy",
+            "entity:gamesradar",
+            "entity:gametrailers",
+            "entity:greatest_zelda_game_ever_made",
+            "entity:hollywood",
+            "entity:homebrew_wii_applications",
+            "entity:hyrule",
+            "entity:ign",
+            "entity:it_so_creative_that_it_rivals_the_best_that_hollywood_has_to_offer",
+            "entity:japan",
+            "entity:jeff_gerstmann",
+            "entity:legend",
+            "entity:legend_of_zelda_series",
+            "entity:link",
+            "entity:link_s_movements",
+            "entity:linkable_format",
+            "entity:metacritic",
+            "entity:miyamoto",
+            "entity:ngc_magazine",
+            "entity:nintendo",
+            "entity:nintendo_ds",
+            "entity:nintendo_of_europe",
+            "entity:north_america",
+            "entity:november",
+            "entity:november_2005",
+            "entity:palgn",
+            "entity:playable_version_of_twilight_princess",
+            "entity:port_it_to_the_wii",
+            "entity:preview_trailer_for_twilight_princess",
+            "entity:revolution",
+            "entity:revolution_controller_functionality",
+            "entity:secure_digital_sd_card",
+            "entity:support_for_the_wii_controller",
+            "entity:swing_the_wii_remote_with_the_right_hand_to_control_the_sword_in_link_s_left_hand",
+            "entity:time",
+            "entity:title_anchor_the_legend_of_zelda_twilight_princess",
+            "entity:twilight_hack",
+            "entity:twilight_princess",
+            "entity:twilight_princess_s_hyrule_as_the_best_version_ever_created",
+            "entity:versions",
+            "entity:video_games",
+            "entity:washington_post",
+            "entity:wii",
+            "entity:wii_controller",
+            "entity:wii_controls",
+            "entity:wii_menu",
+            "entity:wii_remote",
+            "entity:wii_version",
+            "entity:worldwide_in_december_2006",
+            "entity:zelda",
+            "entity:zelda_games"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_legend_of_neil_0",
+        "score": 0.007666508546035469,
+        "text": "The Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\". Sandeep Parikh of \"The Guild\" fame directs the series. Tony Janning writes for the series, and acts as the title character Neil. Felicia Day and Mike Rose, who have worked with Parikh on the set of \"The Guild\", appear as recurring characters.",
+        "metadata": {
+          "title": "The Legend of Neil",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:atom_com",
+            "entity:comedy_central",
+            "entity:comedy_central_s_partner_atom_com",
+            "entity:felicia_day",
+            "entity:guild",
+            "entity:legend_of_zelda",
+            "entity:mike_rose",
+            "entity:neil",
+            "entity:nintendo",
+            "entity:parikh",
+            "entity:sandeep_parikh",
+            "entity:title_anchor_the_legend_of_neil",
+            "entity:tony_janning"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Legend of Zelda: Twilight Princess\nThe Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\",\n\nThe Legend of Neil\nThe Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\". Sandeep Parikh of \"The Guild\" fame directs the series. Tony Janning writes for the series, and acts as the title character Neil. Felicia Day and Mike Rose, who have worked with Parikh on the set of \"The Guild\", appear as recurring characters.\n\nReal Life (I Never Was the Same Again)\nReal Life (I Never Was the Same Again)\n\"Real Life (I Never Was the Same Again)\" is a song written by Neil Thrasher and Jim Janosky, and recorded by American country music artist Jeff Carson. It released in May 2001 as the third single from his third album, \"Real Life\". The song was written by Neil Thrasher and Jim Janosky. It was nominated for Song of the Year at the 2001 Christian Country Music Awards.\n\nThe Legend of Zelda: Twilight Princess\nThe Legend of Zelda: Twilight Princess\nand regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\", although 1UP.com said the remote-swinging sword attacks were \"the most impressive in the entire series\". Gaming Nexus considered Twilight Princess's soundtrack to be the best of this generation, though IGN criticized its MIDI-formatted songs for lacking \"the punch and crispness\" of their orchestrated counterparts. Hyper's Javier Glickman commended the game for its \"very long quests, superb Wii controls and being able to save anytime\". However, he criticised it for \"no voice acting, no orchestral score and slightly outdated graphics\".\n\nThe Twilight Saga (film series)\nThe Twilight Saga (film series)\nThe series was in development since 2004 at Paramount Pictures, during which time a screen adaptation of Twilight that differed significantly from the novel was written. Three years later, Summit Entertainment acquired the rights to the film. After Twilight grossed $35.7 million on its opening day, Summit Entertainment announced they would begin production on New Moon; they had acquired the rights to the remaining novels earlier that same month. A two - part adaptation of Breaking Dawn began shooting in November 2010 with release dates of November 18, 2011, and November 16, 2012, respectively.\n\nThe Legend of Zelda: Twilight Princess\nThey also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.\n\nThe Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\".\n\nThe Legend of Zelda: Twilight Princess\nOriginally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii.\n\nFreak Dance (film)\nFreak Dance (film)\nFreak Dance is an American comedy film written and directed by Matt Besser of the Upright Citizens Brigade and co-directed by Neil Mahoney. It premiered at the Austin Film Festival on October 21, 2011. The film had a limited theatrical release in May 2012 and made available on video on demand services. The film was released on DVD on July 10, 2012. The film is based on a stage show created by Besser, which originally ran at the Upright Citizens Brigade Theater in Los Angeles for several years.\n\nBeyond Twilight\nBeyond Twilight\nBeyond Twilight is a progressive metal band from Denmark. The band was originally formed by Finn Zierler in 1992 under the name \"Twilight\". Twilight attracted international attention releasing the debut album Eye For An Eye selling 25.000 copies. Twilight released 2 albums \"Eye For An Eye\", \"The Edge\" and 1 single \"Sail Away\". In 1999 Finn Zierler decided pursue his own visions and founded Beyond Twilight carrying the almost identical logo and the symbol which is found on all Zierler's releases. Musically the style changed to dark progressive metal with symphonic elements and harmonic vocals.\n\nEscape Plan (video game)\nEscape Plan (video game)\nEscape Plan is a puzzle video game released for the PlayStation Vita in 2012, as a launch title. \"Escape Plan\" is the first title from new developer Fun Bits Interactive and is produced by Chris Millar, known for his previous work on Fat Princess. In previews of the game it was noted for its sharp, black-and-white visuals, gruesome yet humorous tone and its intuitive use of the PlayStation Vita's inputs including touch and gyroscopic control.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:the_legend_of_zelda_twilight_princess_0",
+        "passage_index": 15,
+        "title": "The Legend of Zelda: Twilight Princess",
+        "score": 0.1112578979516404,
+        "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\",",
+        "score_breakdown": {
+          "dense": 0.06757328910626073,
+          "graph": 0.07734571997894146,
+          "fact": 0.33925915299676374
+        }
+      },
+      {
+        "node_id": "chunk:the_legend_of_neil_0",
+        "passage_index": 5,
+        "title": "The Legend of Neil",
+        "score": 0.10837355041275465,
+        "text": "The Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\". Sandeep Parikh of \"The Guild\" fame directs the series. Tony Janning writes for the series, and acts as the title character Neil. Felicia Day and Mike Rose, who have worked with Parikh on the set of \"The Guild\", appear as recurring characters.",
+        "score_breakdown": {
+          "dense": 0.06801006242929986,
+          "graph": 0.07096078721501006,
+          "fact": 0.33119853274757804
+        }
+      },
+      {
+        "node_id": "chunk:real_life_i_never_was_the_same_again_0",
+        "passage_index": 7,
+        "title": "Real Life (I Never Was the Same Again)",
+        "score": 0.10608062975122273,
+        "text": "Real Life (I Never Was the Same Again)\n\"Real Life (I Never Was the Same Again)\" is a song written by Neil Thrasher and Jim Janosky, and recorded by American country music artist Jeff Carson. It released in May 2001 as the third single from his third album, \"Real Life\". The song was written by Neil Thrasher and Jim Janosky. It was nominated for Song of the Year at the 2001 Christian Country Music Awards.",
+        "score_breakdown": {
+          "dense": 0.06613428577257009,
+          "graph": 0.0675847514598681,
+          "fact": 0.3295423142556583
+        }
+      },
+      {
+        "node_id": "chunk:the_legend_of_zelda_twilight_princess_1",
+        "passage_index": 15,
+        "title": "The Legend of Zelda: Twilight Princess",
+        "score": 0.057205747338705,
+        "text": "The Legend of Zelda: Twilight Princess\nand regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\", although 1UP.com said the remote-swinging sword attacks were \"the most impressive in the entire series\". Gaming Nexus considered Twilight Princess's soundtrack to be the best of this generation, though IGN criticized its MIDI-formatted songs for lacking \"the punch and crispness\" of their orchestrated counterparts. Hyper's Javier Glickman commended the game for its \"very long quests, superb Wii controls and being able to save anytime\". However, he criticised it for \"no voice acting, no orchestral score and slightly outdated graphics\".",
+        "score_breakdown": {
+          "dense": 0.06726588113744852,
+          "graph": 0.06736504237702771,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_twilight_saga_film_series_0",
+        "passage_index": 8,
+        "title": "The Twilight Saga (film series)",
+        "score": 0.056575328154337974,
+        "text": "The Twilight Saga (film series)\nThe series was in development since 2004 at Paramount Pictures, during which time a screen adaptation of Twilight that differed significantly from the novel was written. Three years later, Summit Entertainment acquired the rights to the film. After Twilight grossed $35.7 million on its opening day, Summit Entertainment announced they would begin production on New Moon; they had acquired the rights to the remaining novels earlier that same month. A two - part adaptation of Breaking Dawn began shooting in November 2010 with release dates of November 18, 2011, and November 16, 2012, respectively.",
+        "score_breakdown": {
+          "dense": 0.0669707890541915,
+          "graph": 0.06580464724844216,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:escape_plan_video_game_0",
+        "passage_index": 10,
+        "title": "Escape Plan (video game)",
+        "score": 0.05615428020559035,
+        "text": "Escape Plan (video game)\nEscape Plan is a puzzle video game released for the PlayStation Vita in 2012, as a launch title. \"Escape Plan\" is the first title from new developer Fun Bits Interactive and is produced by Chris Millar, known for his previous work on Fat Princess. In previews of the game it was noted for its sharp, black-and-white visuals, gruesome yet humorous tone and its intuitive use of the PlayStation Vita's inputs including touch and gyroscopic control.",
+        "score_breakdown": {
+          "dense": 0.06659708040053652,
+          "graph": 0.06508628661765087,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:beyond_twilight_0",
+        "passage_index": 2,
+        "title": "Beyond Twilight",
+        "score": 0.056128960701842506,
+        "text": "Beyond Twilight\nBeyond Twilight is a progressive metal band from Denmark. The band was originally formed by Finn Zierler in 1992 under the name \"Twilight\". Twilight attracted international attention releasing the debut album Eye For An Eye selling 25.000 copies. Twilight released 2 albums \"Eye For An Eye\", \"The Edge\" and 1 single \"Sail Away\". In 1999 Finn Zierler decided pursue his own visions and founded Beyond Twilight carrying the almost identical logo and the symbol which is found on all Zierler's releases. Musically the style changed to dark progressive metal with symphonic elements and harmonic vocals.",
+        "score_breakdown": {
+          "dense": 0.06655016416752338,
+          "graph": 0.06508790136568214,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:one_nil_0",
+        "passage_index": 1,
+        "title": "One Nil",
+        "score": 0.056101204083131566,
+        "text": "One Nil\nOne Nil, released in 2001, is the second solo album by New Zealand singer-songwriter, Neil Finn. When released in the United States the following year, the album had a slightly different track listing and was issued under the name \"One All\".",
+        "score_breakdown": {
+          "dense": 0.06649709341947274,
+          "graph": 0.06509267567473852,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:a_series_of_unfortunate_events_tv_series_0",
+        "passage_index": 13,
+        "title": "A Series of Unfortunate Events (TV series)",
+        "score": 0.05609375345979904,
+        "text": "A Series of Unfortunate Events (TV series)\nA Series of Unfortunate Events Genre Drama Black comedy Based on A Series of Unfortunate Events by Lemony Snicket Developed by Mark Hudis Barry Sonnenfeld Starring Neil Patrick Harris Patrick Warburton Malina Weissman Louis Hynes K. Todd Freeman Presley Smith Lucy Punch Avi Lake Dylan Kingwell Theme music composer Nick Urata Daniel Handler Opening theme ``Look Away ''by Neil Patrick Harris Composer (s) James Newton Howard Sven Faulconer Chris Bacon Jim Dooley Country of origin United States Original language (s) English No. of seasons No. of episodes 18 (list of episodes) Production Executive producer (s) Cindy Holland Brian Wright Ted Biaselli Daniel Handler Neil Patrick Harris Rose Lam Barry Sonnenfeld Producer (s) Neil Patrick Harris Location (s) Vancouver, British Columbia Cinematography Bernard Couture Editor (s) Stuart Bass Skip MacDonald Running time 40 -- 64 minutes Production company (s) Paramount Television What is the Question? Sonnenfeld Productions, Inc. Distributor Netflix Release Original network Netflix Picture format 4K (Ultra HD) Original release January 13, 2017 (2017 - 01 - 13) -- present (present)",
+        "score_breakdown": {
+          "dense": 0.06648298600342134,
+          "graph": 0.06509370385972435,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:a_thousand_years_christina_perri_song_0",
+        "passage_index": 6,
+        "title": "A Thousand Years (Christina Perri song)",
+        "score": 0.056043447120121714,
+        "text": "A Thousand Years (Christina Perri song)\n``A Thousand Years ''is a song by American singer - songwriter Christina Perri and David Hodges. It is taken from the album The Twilight Saga: Breaking Dawn -- Part 1: Original Motion Picture Soundtrack. The song serves as the second single from the album. The song was released as a digital download on October 18, 2011 worldwide. Perri re-recorded the song with vocals from Steve Kazee for The Twilight Saga: Breaking Dawn -- Part 2: Original Motion Picture Soundtrack titled A Thousand Years, Pt. 2.",
+        "score_breakdown": {
+          "dense": 0.06638694657033326,
+          "graph": 0.06510208835479475,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What game series is The Legend of Neil based on?",
+        "resolved_sub_question": "What game series is The Legend of Neil based on?",
+        "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+        "sentence": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.",
+        "score": 0.6392471443850267,
+        "source_title": "The Legend of Zelda: Twilight Princess",
+        "hop_answer": "The Legend of Zelda",
+        "hop_thought": "The Legend of Neil is a parody of the Nintendo game \"The Legend of Zelda\".",
+        "hop_raw_response": "The Legend of Neil is a parody of the Nintendo game \"The Legend of Zelda\".\nAnswer: The Legend of Zelda",
+        "evidence_passages": [
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+          },
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+          },
+          {
+            "title": "The Legend of Neil",
+            "text": "The Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\"."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the name of the game from this series that is called Twilight Princess?",
+        "resolved_sub_question": "What is the name of the game from this series that is called Twilight Princess? Context: The Legend of Zelda.",
+        "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_1_they_also_announced_that_zelda_would_appear_on_the_wii_then_codenamed_revoluti",
+        "sentence": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game.",
+        "score": 0.6529162352941178,
+        "source_title": "The Legend of Zelda: Twilight Princess",
+        "hop_answer": "The Legend of Zelda: Twilight Princess",
+        "hop_thought": "The game from the Legend of Zelda series that is called Twilight Princess is \"The Legend of Zelda: Twilight Princess\".",
+        "hop_raw_response": "The game from the Legend of Zelda series that is called Twilight Princess is \"The Legend of Zelda: Twilight Princess\".\nAnswer: The Legend of Zelda: Twilight Princess",
+        "evidence_passages": [
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+          },
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+          },
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii."
+          }
+        ]
+      },
+      {
+        "sub_question": "In what year was Twilight Princess originally planned for release?",
+        "resolved_sub_question": "In what year was Twilight Princess originally planned for release? Context: The Legend of Zelda; The Legend of Zelda: Twilight Princess.",
+        "sentence_id": "sentence:the_legend_of_zelda_twilight_princess_0_2_originally_planned_for_release_on_the_gamecube_in_november_2005_twilight_princ",
+        "sentence": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii.",
+        "score": 0.5413049773755656,
+        "source_title": "The Legend of Zelda: Twilight Princess",
+        "hop_answer": "2005",
+        "hop_thought": "The passage states that Twilight Princess was originally planned for release on the GameCube in November 2005.",
+        "hop_raw_response": "The passage states that Twilight Princess was originally planned for release on the GameCube in November 2005.\nAnswer: 2005",
+        "evidence_passages": [
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "Originally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii."
+          },
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "The Legend of Zelda: Twilight Princess\nOn release, Twilight Princess was considered to be the greatest Zelda game ever made by many critics including writers for 1UP.com, Computer and Video Games, Electronic Gaming Monthly, Game Informer, GamesRadar, IGN and The Washington Post. Game Informer called it \"so creative that it rivals the best that Hollywood has to offer\". GamesRadar praised Twilight Princess as \"a game that deserves nothing but the absolute highest recommendation\". Cubed3 hailed Twilight Princess as \"the single greatest videogame experience\". Twilight Princess's graphics were praised for the art style and animation, although the game was designed for the GameCube, which is technically lacking compared to the next generation consoles. Both IGN and GameSpy pointed out the existence of blurry textures and low-resolution characters. Despite these complaints, Computer and Video Games felt the game's atmosphere was superior to that of any previous Zelda game, and regarded Twilight Princess's Hyrule as the best version ever created. PALGN praised the game's cinematics, noting that \"the cutscenes are the best ever in Zelda games\". Regarding the Wii version, GameSpot's Jeff Gerstmann said the Wii controls felt \"tacked-on\","
+          },
+          {
+            "title": "The Legend of Zelda: Twilight Princess",
+            "text": "They also announced that Zelda would appear on the Wii (then codenamed \"Revolution\"), but it was not clear to the media if this meant Twilight Princess or a different game."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What game series is The Legend of Neil based on? => The Legend of Zelda (source: The Legend of Zelda: Twilight Princess)\n2. What is the name of the game from this series that is called Twilight Princess? => The Legend of Zelda: Twilight Princess (source: The Legend of Zelda: Twilight Princess)\n3. In what year was Twilight Princess originally planned for release? => 2005 (source: The Legend of Zelda: Twilight Princess)\n\nFact hints:\n- Twilight Princess planned release date November 2005\n- Legend of Neil is a parody of Legend of Zelda\n\nWikipedia Title: The Legend of Zelda: Twilight Princess\nOriginally planned for release on the GameCube in November 2005, Twilight Princess was delayed by Nintendo to allow its developers to refine the game, add more content, and port it to the Wii.\n\nWikipedia Title: The Legend of Neil\nThe Legend of Neil is a comedy web series distributed by Comedy Central's partner Atom.com and is a parody of the Nintendo game \"The Legend of Zelda\".\n\nWikipedia Title: Beyond Twilight\nThe band was originally formed by Finn Zierler in 1992 under the name \"Twilight\". Beyond Twilight Beyond Twilight is a progressive metal band from Denmark.\n\nWikipedia Title: Freak Dance (film)\nThe film is based on a stage show created by Besser, which originally ran at the Upright Citizens Brigade Theater in Los Angeles for several years. The film was released on DVD on July 10, 2012.\n\nWikipedia Title: The Twilight Saga (film series)\nThe Twilight Saga (film series) The series was in development since 2004 at Paramount Pictures, during which time a screen adaptation of Twilight that differed significantly from the novel was written. Three years later, Summit Entertainment acquired the rights to the film.\n\nQuestion: In what year was Twilight Princess from the game series on which The Legend of Neil was based originally planned for release?\nDraft Answer: 2005\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The Legend of Neil is a parody of The Legend of Zelda, and Twilight Princess is a game from the Legend of Zelda series. The passage states that Twilight Princess was originally planned for release in November 2005.",
+  "predicted_answer": "2005",
+  "qa_raw_response": "{\n  \"thought\": \"The Legend of Neil is a parody of The Legend of Zelda, and Twilight Princess is a game from the Legend of Zelda series. The passage states that Twilight Princess was originally planned for release in November 2005.\",\n  \"answer\": \"2005\",\n  \"support\": \"Originally planned for release on the GameCube in November 2005\"\n}"
+}

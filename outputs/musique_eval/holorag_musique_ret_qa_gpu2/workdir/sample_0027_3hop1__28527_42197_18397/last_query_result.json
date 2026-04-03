@@ -1,0 +1,1225 @@
+{
+  "query": "Where did the arguer that the country in control of Estonia before the Germans had become an imperialist power declare he would intervene in the Korean conflict?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Germans"
+  ],
+  "raw_query_entities": [
+    "Estonia",
+    "Germans",
+    "Korean conflict"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Estonia",
+      "node_id": "entity:title_anchor_estonia",
+      "resolved_text": "Estonia",
+      "score": 0.7996842105263158,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.775,
+      "score_margin": 0.07698421052631566,
+      "confident": false
+    },
+    {
+      "mention": "Germans",
+      "node_id": "entity:germans",
+      "resolved_text": "Germans",
+      "score": 0.8269000000000002,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.8269000000000002,
+      "confident": true
+    },
+    {
+      "mention": "Korean conflict",
+      "node_id": "entity:conflict",
+      "resolved_text": "Conflict",
+      "score": 0.5529,
+      "alias_score": 0.5,
+      "relation_score": 0.7,
+      "context_score": 0.4285714285714286,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.24049999999999994,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What country was in control of Estonia before the Germans?",
+    "When did this country become an imperialist power?",
+    "Who was the arguer that claimed this country had become an imperialist power?",
+    "Where did this arguer declare he would intervene in the Korean conflict?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:germans",
+      "score": 0.8019234824737548,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:teutonic_order",
+      "score": 0.7260642924481523,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1941",
+      "score": 0.5040725215138675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1944",
+      "score": 0.47206649201282225,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1940",
+      "score": 0.45396998446884035,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:livonian_order",
+      "score": 0.36303214622407615,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:duchy_of_estonia",
+      "score": 0.3244333324502497,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ordenstaat",
+      "score": 0.3244299786443598,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:estonia",
+      "score": 0.32403688056101837,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:republic_of_estonia",
+      "score": 0.32403688056101837,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:latvia",
+      "score": 0.32403688056101837,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lithuania",
+      "score": 0.32403688056101837,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:duchy_of_estonia_became_part_of_ordenstaat_sentence_estonia_0_2_the_duchy_of_estonia_was_created_out_of_the_northern_par",
+      "text": "Duchy of Estonia became part of Ordenstaat",
+      "head_id": "entity:duchy_of_estonia",
+      "tail_id": "entity:ordenstaat",
+      "sentence_id": "sentence:estonia_0_2_the_duchy_of_estonia_was_created_out_of_the_northern_parts_of_the_country_and_wa",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 4,
+      "score": 0.3225286430544353
+    },
+    {
+      "fact_id": "fact:livonian_brothers_of_the_sword_became_branch_of_teutonic_order_sentence_estonia_0_1_the_southern_parts_of_the_country_we",
+      "text": "Livonian Brothers of the Sword became branch of Teutonic Order",
+      "head_id": "entity:livonian_brothers_of_the_sword",
+      "tail_id": "entity:branch_of_teutonic_order",
+      "sentence_id": "sentence:estonia_0_1_the_southern_parts_of_the_country_were_conquered_by_livonian_brothers_of_the_swo",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 4,
+      "score": 0.3025267885200635
+    },
+    {
+      "fact_id": "fact:estonia_was_occupied_by_soviet_union_sentence_estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_un",
+      "text": "Estonia was occupied by Soviet Union",
+      "head_id": "entity:title_anchor_estonia",
+      "tail_id": "entity:soviet_union",
+      "sentence_id": "sentence:estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_union_in_1940_then",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 17,
+      "score": 0.27003073380084863
+    },
+    {
+      "fact_id": "fact:soviet_union_occupied_estonia_in_1940_sentence_estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_u",
+      "text": "Soviet Union occupied Estonia in 1940",
+      "head_id": "entity:soviet_union",
+      "tail_id": "entity:estonia_in_1940",
+      "sentence_id": "sentence:estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_union_in_1940_then",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 17,
+      "score": 0.26003028708966336
+    },
+    {
+      "fact_id": "fact:mao_zedong_argued_soviet_union_became_imperialist_power_sentence_imperialism_1_4_mao_zedong_once_argued_that_the_soviet_",
+      "text": "Mao Zedong argued Soviet Union became imperialist power",
+      "head_id": "entity:mao_zedong",
+      "tail_id": "entity:soviet_union_became_imperialist_power",
+      "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+      "chunk_id": "chunk:imperialism_1",
+      "document_index": 12,
+      "score": 0.24431776525066187
+    },
+    {
+      "fact_id": "fact:vilnius_was_under_control_of_poland_sentence_molotov_ribbentrop_pact_1_0_vilnius_its_historical_capital_which_was_under_",
+      "text": "Vilnius was under control of Poland",
+      "head_id": "entity:vilnius",
+      "tail_id": "entity:poland",
+      "sentence_id": "sentence:molotov_ribbentrop_pact_1_0_vilnius_its_historical_capital_which_was_under_polish_control_during_the_inte",
+      "chunk_id": "chunk:molotov_ribbentrop_pact_1",
+      "document_index": 14,
+      "score": 0.19002871996242848
+    },
+    {
+      "fact_id": "fact:mao_zedong_would_intervene_in_korea_sentence_korean_war_0_1_on_4_august_1950_with_the_prc_invasion_of_taiwan_aborted_mao",
+      "text": "Mao Zedong would intervene in Korea",
+      "head_id": "entity:mao_zedong",
+      "tail_id": "entity:korea",
+      "sentence_id": "sentence:korean_war_0_1_on_4_august_1950_with_the_prc_invasion_of_taiwan_aborted_mao_zedong_reported_t",
+      "chunk_id": "chunk:korean_war_0",
+      "document_index": 6,
+      "score": 0.17403320571888742
+    },
+    {
+      "fact_id": "fact:soviet_union_re_occupied_estonia_in_1944_sentence_estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_sovie",
+      "text": "Soviet Union re-occupied Estonia in 1944",
+      "head_id": "entity:soviet_union",
+      "tail_id": "entity:estonia_in_1944",
+      "sentence_id": "sentence:estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_union_in_1940_then",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 17,
+      "score": 0.16003014750522618
+    }
+  ],
+  "bridge_entities": [
+    "Soviet Union",
+    "Mao Zedong",
+    "Korea"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What country was in control of Estonia before the Germans?",
+      "resolved_sub_question": "What country was in control of Estonia before the Germans?",
+      "sentence_id": "sentence:estonia_0_0_although_initially_the_germans_were_welcomed_by_most_estonians_as_liberators_fro",
+      "sentence": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power.",
+      "score": 0.5507994105263159,
+      "source_title": "Estonia",
+      "hop_answer": "Soviet Union",
+      "hop_thought": "Before the Germans occupied Estonia, it was under the control of the Soviet Union.",
+      "hop_raw_response": "Before the Germans occupied Estonia, it was under the control of the Soviet Union.\nAnswer: Soviet Union",
+      "evidence_passages": [
+        {
+          "title": "Estonia",
+          "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+        },
+        {
+          "title": "Estonia",
+          "text": "Estonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991."
+        },
+        {
+          "title": "Estonia",
+          "text": "The Germans used Estonia's resources for their war effort; for the duration of the occupation Estonia was incorporated into the German province of Ostland."
+        }
+      ]
+    },
+    {
+      "sub_question": "When did this country become an imperialist power?",
+      "resolved_sub_question": "When did this country become an imperialist power? Context: Soviet Union.",
+      "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+      "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+      "score": 0.5520144188636781,
+      "source_title": "Imperialism",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context suggests that the Soviet Union became an imperialist power during its existence, but no specific date is given for when it transitioned into an imperialist power.",
+      "hop_raw_response": "The context suggests that the Soviet Union became an imperialist power during its existence, but no specific date is given for when it transitioned into an imperialist power.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Imperialism",
+          "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+        },
+        {
+          "title": "Imperialism",
+          "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+        },
+        {
+          "title": "Estonia",
+          "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was the arguer that claimed this country had become an imperialist power?",
+      "resolved_sub_question": "Who was the arguer that claimed this country had become an imperialist power? Context: Soviet Union.",
+      "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+      "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+      "score": 0.5859929689749401,
+      "source_title": "Imperialism",
+      "hop_answer": "Mao Zedong",
+      "hop_thought": "The context indicates that the Soviet Union was accused of becoming an imperialist power. According to the text, Mao Zedong made this argument.",
+      "hop_raw_response": "The context indicates that the Soviet Union was accused of becoming an imperialist power. According to the text, Mao Zedong made this argument.\nAnswer: Mao Zedong",
+      "evidence_passages": [
+        {
+          "title": "Imperialism",
+          "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+        },
+        {
+          "title": "Imperialism",
+          "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+        },
+        {
+          "title": "Estonia",
+          "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+        }
+      ]
+    },
+    {
+      "sub_question": "Where did this arguer declare he would intervene in the Korean conflict?",
+      "resolved_sub_question": "Where did this arguer declare he would intervene in the Korean conflict? Context: Soviet Union; Mao Zedong.",
+      "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+      "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+      "score": 0.4187737933978716,
+      "source_title": "Imperialism",
+      "hop_answer": "Korea",
+      "hop_thought": "The context provided indicates that Mao Zedong, who argued about the Soviet Union being an imperialist power, declared his intervention in the Korean conflict. The specific location for intervention mentioned in the evidence is Korea.",
+      "hop_raw_response": "The context provided indicates that Mao Zedong, who argued about the Soviet Union being an imperialist power, declared his intervention in the Korean conflict. The specific location for intervention mentioned in the evidence is Korea.\nAnswer: Korea",
+      "evidence_passages": [
+        {
+          "title": "Imperialism",
+          "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+        },
+        {
+          "title": "Imperialism",
+          "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+        },
+        {
+          "title": "Korean War",
+          "text": "On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:teutonic_order",
+      "score": 0.05175945949207708,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:germans",
+      "score": 0.04170384213457239,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1941",
+      "score": 0.03661563776109952,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1944",
+      "score": 0.03474637457299959,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:estonia_in_1940",
+      "score": 0.034003697332154546,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_union_in_1940_then",
+      "score": 0.02908918826054937,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:livonian_order",
+      "score": 0.028619304364916998,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:duchy_of_estonia",
+      "score": 0.028582597896435663,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:estonia_0_2_the_duchy_of_estonia_was_created_out_of_the_northern_parts_of_the_country_and_wa",
+      "score": 0.028457067253126293,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:livonian_brothers_of_the_sword",
+      "score": 0.02805307248027345,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:estonia_0_1_the_southern_parts_of_the_country_were_conquered_by_livonian_brothers_of_the_swo",
+      "score": 0.02713229649824678,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:soviet_union",
+      "score": 0.026668372919845487,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:branch_of_teutonic_order",
+      "score": 0.025968961628801773,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_estonia",
+      "score": 0.02553468577185287,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:lithuania",
+      "score": 0.02350409395917566,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:estonia_0",
+      "score": 0.022335354854882448,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:ordenstaat",
+      "score": 0.020337610684715013,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:latvia",
+      "score": 0.02027024357799159,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:estonia",
+      "score": 0.019719763449390335,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:republic_of_estonia",
+      "score": 0.01938163534059827,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:estonia_0",
+      "passage_index": 17,
+      "title": "Estonia",
+      "score": 0.09878647759006012,
+      "text": "Estonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991.",
+      "score_breakdown": {
+        "dense": 0.06319735475174015,
+        "graph": 0.07691424275840045,
+        "fact": 0.27302439766055275
+      }
+    },
+    {
+      "node_id": "chunk:imperialism_1",
+      "passage_index": 12,
+      "title": "Imperialism",
+      "score": 0.09138152867961236,
+      "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism.",
+      "score_breakdown": {
+        "dense": 0.06302074713455423,
+        "graph": 0.06282475598491659,
+        "fact": 0.25248460640088377
+      }
+    },
+    {
+      "node_id": "chunk:molotov_ribbentrop_pact_1",
+      "passage_index": 14,
+      "title": "Molotov–Ribbentrop Pact",
+      "score": 0.08890778483134554,
+      "text": "Molotov–Ribbentrop Pact\nVilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia was joined to the Moldovan ASSR, and become the Moldovan SSR under control of Moscow.",
+      "score_breakdown": {
+        "dense": 0.06261255298813805,
+        "graph": 0.06199815760017075,
+        "fact": 0.23914288938545594
+      }
+    },
+    {
+      "node_id": "chunk:korean_war_0",
+      "passage_index": 6,
+      "title": "Korean War",
+      "score": 0.08882228160186353,
+      "text": "Korean War\nOn 27 June 1950, two days after the KPA invaded and three months before the Chinese entered the war, President Truman dispatched the United States Seventh Fleet to the Taiwan Strait, to prevent hostilities between the Nationalist Republic of China (Taiwan) and the People's Republic of China (PRC). On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force. China justified its entry into the war as a response to \"American aggression in the guise of the UN\".",
+      "score_breakdown": {
+        "dense": 0.06298994343457817,
+        "graph": 0.06291865576626471,
+        "fact": 0.23534810655310748
+      }
+    },
+    {
+      "node_id": "chunk:molotov_ribbentrop_pact_0",
+      "passage_index": 14,
+      "title": "Molotov–Ribbentrop Pact",
+      "score": 0.05343284893370498,
+      "text": "Molotov–Ribbentrop Pact\nMost notably, there was also a secret protocol to the pact, revealed only after Germany's defeat in 1945, although hints about its provisions were leaked much earlier, e.g., to influence Lithuania. According to said protocol Romania, Poland, Lithuania, Latvia, Estonia and Finland were divided into German and Soviet \"spheres of influence\". In the north, Finland, Estonia and Latvia were assigned to the Soviet sphere. Poland was to be partitioned in the event of its \"political rearrangement\"—the areas east of the Pisa, Narev, Vistula and San rivers going to the Soviet Union while Germany would occupy the west. Lithuania, adjacent to East Prussia, would be in the German sphere of influence, although a second secret protocol agreed to in September 1939 reassigned the majority of Lithuania to the USSR. According to the secret protocol, Lithuania would be granted the city of Vilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia",
+      "score_breakdown": {
+        "dense": 0.0625370413646925,
+        "graph": 0.06345825394374702,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:imperialism_0",
+      "passage_index": 19,
+      "title": "Imperialism",
+      "score": 0.052858454070102125,
+      "text": "Imperialism\nCultural imperialism is when a country's influence is felt in social and cultural circles, i.e. its soft power, such that it changes the moral, cultural and societal worldview of another. This is more than just \"foreign\" music, television or film becoming popular with young people, but that popular culture changing their own expectations of life and their desire for their own country to become more like the foreign country depicted. For example, depictions of opulent American lifestyles in the soap opera Dallas during the Cold War changed the expectations of Romanians; a more recent example is the influence of smuggled South Korean drama series in North Korea. The importance of soft power is not lost on authoritarian regimes, fighting such influence with bans on foreign popular culture, control of the internet and unauthorised satellite dishes etc. Nor is such a usage of culture recent, as part of Roman imperialism local elites would be exposed to the benefits and luxuries of Roman culture and lifestyle, with the aim that they would then become willing participants.",
+      "score_breakdown": {
+        "dense": 0.06256929433433134,
+        "graph": 0.061484473954066275,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:korean_war_1",
+      "passage_index": 3,
+      "title": "Korean War",
+      "score": 0.05279587109036481,
+      "text": "Korean War\nhelp the South Koreans and the US immediately began using what air and naval forces that were in the area to that end. The Administration still refrained from committing on the ground because some advisers believed the North Koreans could be stopped by air and naval power alone.",
+      "score_breakdown": {
+        "dense": 0.06269394463255423,
+        "graph": 0.06104733847486657,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:military_history_of_south_africa_during_world_war_ii_0",
+      "passage_index": 16,
+      "title": "Military history of South Africa during World War II",
+      "score": 0.052669840567002406,
+      "text": "Military history of South Africa during World War II\nOn 4 September 1939, the United Party caucus refused to accept Hertzog's stance of neutrality in World War II and deposed him in favour of Smuts. Upon becoming Prime Minister, Smuts declared South Africa officially at war with Germany and the Axis. He immediately set about fortifying South Africa against any possible German sea invasion because of South Africa's global strategic importance controlling the long sea route around the Cape of Good Hope.",
+      "score_breakdown": {
+        "dense": 0.06245196727032805,
+        "graph": 0.0610708618944066,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_blitz_0",
+      "passage_index": 10,
+      "title": "The Blitz",
+      "score": 0.052636642057379904,
+      "text": "The Blitz\nAOC Bomber Command Arthur Harris did see German morale as a major objective. However, he did not believe that the morale-collapse could occur without the destruction of the German economy. The primary goal of Bomber Command's offensives was to destroy the German industrial base (economic warfare), and in doing so reduce morale. In late 1943, just before the Battle of Berlin, he declared the power of Bomber Command would enable it to achieve \"a state of devastation in which surrender is inevitable.\" A summary of Harris' strategic intentions was clear:",
+      "score_breakdown": {
+        "dense": 0.06239310510452637,
+        "graph": 0.061068114166301334,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:1948_arab_israeli_war_0",
+      "passage_index": 15,
+      "title": "1948 Arab–Israeli War",
+      "score": 0.05260439916785636,
+      "text": "1948 Arab–Israeli War\nOn 15 May 1948, the ongoing civil war transformed into an inter-state conflict between Israel and the Arab states, following the Israeli Declaration of Independence the previous day. A combined invasion by Egypt, Jordan and Syria, together with expeditionary forces from Iraq, entered Palestine -- Jordan having declared privately to Yishuv emissaries on 2 May that it would abide by a decision not to attack the Jewish state. The invading forces took control of the Arab areas and immediately attacked Israeli forces and several Jewish settlements. The 10 months of fighting, interrupted by several truce periods, took place mostly on the former territory of the British Mandate and for a short time also in the Sinai Peninsula and southern Lebanon.",
+      "score_breakdown": {
+        "dense": 0.06235703432201739,
+        "graph": 0.06102676763582264,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:teutonic_order",
+        "score": 0.05175945949207708,
+        "text": "Teutonic Order",
+        "metadata": {
+          "canonical_name": "Teutonic Order",
+          "aliases": [
+            "Teutonic Order"
+          ],
+          "surface_forms": [
+            "Teutonic Order"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:germans",
+        "score": 0.04170384213457239,
+        "text": "Germans",
+        "metadata": {
+          "canonical_name": "Germans",
+          "aliases": [
+            "Germans"
+          ],
+          "surface_forms": [
+            "Germans"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:estonia_in_1941",
+        "score": 0.03661563776109952,
+        "text": "Estonia in 1941",
+        "metadata": {
+          "canonical_name": "Estonia in 1941",
+          "aliases": [
+            "EI1",
+            "Estonia in 1941"
+          ],
+          "surface_forms": [
+            "EI1",
+            "Estonia in 1941"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:estonia_in_1944",
+        "score": 0.03474637457299959,
+        "text": "Estonia in 1944",
+        "metadata": {
+          "canonical_name": "Estonia in 1944",
+          "aliases": [
+            "EI1",
+            "Estonia in 1944"
+          ],
+          "surface_forms": [
+            "EI1",
+            "Estonia in 1944"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:estonia_in_1940",
+        "score": 0.034003697332154546,
+        "text": "Estonia in 1940",
+        "metadata": {
+          "canonical_name": "Estonia in 1940",
+          "aliases": [
+            "EI1",
+            "Estonia in 1940"
+          ],
+          "surface_forms": [
+            "EI1",
+            "Estonia in 1940"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:estonia_0_2_during_world_war_ii_estonia_was_then_occupied_by_the_soviet_union_in_1940_then",
+        "score": 0.02908918826054937,
+        "text": "During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic.",
+        "metadata": {
+          "title": "Estonia",
+          "chunk_id": "chunk:estonia_0",
+          "sentence_index": 2,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Estonia",
+              "relation": "was occupied by",
+              "tail": "Soviet Union"
+            },
+            {
+              "head": "Soviet Union",
+              "relation": "occupied",
+              "tail": "Estonia in 1940"
+            },
+            {
+              "head": "Nazi Germany",
+              "relation": "occupied",
+              "tail": "Estonia in 1941"
+            },
+            {
+              "head": "Soviet Union",
+              "relation": "re-occupied",
+              "tail": "Estonia in 1944"
+            },
+            {
+              "head": "Soviet Union",
+              "relation": "established",
+              "tail": "Estonian Soviet Socialist Republic"
+            }
+          ],
+          "entities": [
+            "World War II",
+            "Estonia",
+            "Soviet Union",
+            "Nazi Germany",
+            "Estonian Soviet Socialist Republic"
+          ],
+          "entity_ids": [
+            "entity:estonia_in_1940",
+            "entity:estonia_in_1941",
+            "entity:estonia_in_1944",
+            "entity:estonian_soviet_socialist_republic",
+            "entity:nazi_germany",
+            "entity:soviet_union",
+            "entity:title_anchor_estonia",
+            "entity:world_war_ii"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:estonia_0_2_the_duchy_of_estonia_was_created_out_of_the_northern_parts_of_the_country_and_wa",
+        "score": 0.028457067253126293,
+        "text": "The Duchy of Estonia was created out of the northern parts of the country and was a direct dominion of the King of Denmark from 1219 until 1346, when it was sold to the Teutonic Order and became part of the Ordenstaat.",
+        "metadata": {
+          "title": "Estonia",
+          "chunk_id": "chunk:estonia_0",
+          "sentence_index": 2,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Duchy of Estonia",
+              "relation": "was a direct dominion of",
+              "tail": "King of Denmark"
+            },
+            {
+              "head": "Duchy of Estonia",
+              "relation": "was sold to",
+              "tail": "Teutonic Order"
+            },
+            {
+              "head": "Duchy of Estonia",
+              "relation": "became part of",
+              "tail": "Ordenstaat"
+            }
+          ],
+          "entities": [
+            "Duchy of Estonia",
+            "King of Denmark",
+            "Teutonic Order",
+            "Ordenstaat"
+          ],
+          "entity_ids": [
+            "entity:duchy_of_estonia",
+            "entity:king_of_denmark",
+            "entity:ordenstaat",
+            "entity:teutonic_order"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:estonia_0_1_the_southern_parts_of_the_country_were_conquered_by_livonian_brothers_of_the_swo",
+        "score": 0.02713229649824678,
+        "text": "The southern parts of the country were conquered by Livonian Brothers of the Sword who joined the Teutonic Order in 1237 and became its branch known as the Livonian Order.",
+        "metadata": {
+          "title": "Estonia",
+          "chunk_id": "chunk:estonia_0",
+          "sentence_index": 1,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Livonian Brothers of the Sword",
+              "relation": "joined",
+              "tail": "Teutonic Order"
+            },
+            {
+              "head": "Livonian Brothers of the Sword",
+              "relation": "became",
+              "tail": "branch of Teutonic Order"
+            },
+            {
+              "head": "branch of Teutonic Order",
+              "relation": "known as",
+              "tail": "Livonian Order"
+            }
+          ],
+          "entities": [
+            "Livonian Brothers of the Sword",
+            "Teutonic Order",
+            "Livonian Order"
+          ],
+          "entity_ids": [
+            "entity:branch_of_teutonic_order",
+            "entity:livonian_brothers_of_the_sword",
+            "entity:livonian_order",
+            "entity:teutonic_order"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+        "score": 0.011397969587649114,
+        "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+        "metadata": {
+          "title": "Imperialism",
+          "chunk_id": "chunk:imperialism_1",
+          "sentence_index": 4,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Mao Zedong",
+              "relation": "argued",
+              "tail": "Soviet Union became imperialist power"
+            }
+          ],
+          "entities": [
+            "Mao Zedong",
+            "Soviet Union"
+          ],
+          "entity_ids": [
+            "entity:mao_zedong",
+            "entity:soviet_union",
+            "entity:soviet_union_became_imperialist_power"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:estonia_0",
+        "score": 0.022335354854882448,
+        "text": "Estonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991.",
+        "metadata": {
+          "title": "Estonia",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:16_november_1988",
+            "entity:20_august_1991",
+            "entity:24_february_1918",
+            "entity:31_august_1994",
+            "entity:6_september_1991",
+            "entity:all",
+            "entity:august",
+            "entity:baltic_german_minority",
+            "entity:baltic_way",
+            "entity:branch_of_teutonic_order",
+            "entity:danish",
+            "entity:duchy_of_estonia",
+            "entity:estonia_in_1940",
+            "entity:estonia_in_1941",
+            "entity:estonia_in_1944",
+            "entity:estonia_s_reclaimed_independence",
+            "entity:estonia_s_resources",
+            "entity:estonian_gypsies",
+            "entity:estonian_jews",
+            "entity:estonian_sovereignty_declaration",
+            "entity:estonian_soviet_socialist_republic",
+            "entity:estonian_ssr",
+            "entity:estonian_veterans_of_the_german_and_finnish_armies_and_some_civilians",
+            "entity:estonians",
+            "entity:february",
+            "entity:finland",
+            "entity:forest_brothers",
+            "entity:from",
+            "entity:george",
+            "entity:george_s_night_uprising",
+            "entity:german",
+            "entity:german_and_finnish_armies",
+            "entity:german_province_of_ostland",
+            "entity:german_rule",
+            "entity:germans",
+            "entity:holocaust",
+            "entity:holy_roman_empire",
+            "entity:holy_see",
+            "entity:iceland",
+            "entity:king_of_denmark",
+            "entity:latvia",
+            "entity:liberators_from_ussr",
+            "entity:lithuania",
+            "entity:livonian_brothers_of_the_sword",
+            "entity:livonian_crusade",
+            "entity:livonian_order",
+            "entity:material",
+            "entity:moscow",
+            "entity:nazi_germany",
+            "entity:night_uprising",
+            "entity:ordenstaat",
+            "entity:people_of_northern_estonia_and_saaremaa",
+            "entity:pope_innocent",
+            "entity:republic_of_estonia",
+            "entity:russian_army",
+            "entity:russian_empire",
+            "entity:singing_revolution",
+            "entity:soviet",
+            "entity:soviet_era",
+            "entity:soviet_forces",
+            "entity:soviet_military_coup_attempt",
+            "entity:soviet_military_coup_attempt_in_moscow",
+            "entity:soviet_rule",
+            "entity:soviet_union",
+            "entity:soviets",
+            "entity:sweden",
+            "entity:swedish",
+            "entity:terra_mariana",
+            "entity:teutonic_order",
+            "entity:title_anchor_estonia",
+            "entity:ussr",
+            "entity:world_war_i",
+            "entity:world_war_ii"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:imperialism_1",
+        "score": 0.005183767649187352,
+        "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism.",
+        "metadata": {
+          "title": "Imperialism",
+          "chunk_index": 1,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:although",
+            "entity:mao_zedong",
+            "entity:moreover",
+            "entity:non_russian_marxist",
+            "entity:non_russian_marxists",
+            "entity:russian",
+            "entity:russian_federation",
+            "entity:russian_federation_and_later_the_ussr",
+            "entity:russian_imperialism",
+            "entity:russian_tradition_of_expansion_and_control",
+            "entity:some",
+            "entity:soviet_regime",
+            "entity:soviet_regime_a_renewed_version_of_russian_imperialism_and_colonialism",
+            "entity:soviet_union",
+            "entity:soviet_union_became_imperialist_power",
+            "entity:sultan_galiev",
+            "entity:ussr",
+            "entity:vasyl_shakhrai"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:korean_war_0",
+        "score": 0.0036191204301953854,
+        "text": "Korean War\nOn 27 June 1950, two days after the KPA invaded and three months before the Chinese entered the war, President Truman dispatched the United States Seventh Fleet to the Taiwan Strait, to prevent hostilities between the Nationalist Republic of China (Taiwan) and the People's Republic of China (PRC). On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force. China justified its entry into the war as a response to \"American aggression in the guise of the UN\".",
+        "metadata": {
+          "title": "Korean War",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:4_august_1950",
+            "entity:administration",
+            "entity:china",
+            "entity:chinese",
+            "entity:communist",
+            "entity:europe",
+            "entity:general_war_in_europe",
+            "entity:greece",
+            "entity:hostilities_between_nationalist_republic_of_china_and_people_s_republic_of_china",
+            "entity:italy",
+            "entity:italy_and_greece",
+            "entity:korea",
+            "entity:kpa",
+            "entity:mao_zedong",
+            "entity:national_security_council",
+            "entity:national_security_council_s_post_north_korea_invasion_chief_danger_spots",
+            "entity:nationalist_republic_of_china",
+            "entity:north_korea",
+            "entity:north_koreans",
+            "entity:people_s_liberation_army",
+            "entity:people_s_liberation_army_s_taiwan_invasion_force",
+            "entity:people_s_republic_of_china",
+            "entity:pla_north_east_frontier_force",
+            "entity:politburo",
+            "entity:prc_invasion_of_taiwan",
+            "entity:president_truman",
+            "entity:response_to_american_aggression_in_guise_of_un",
+            "entity:security_council",
+            "entity:south_korea",
+            "entity:south_koreans",
+            "entity:soviet",
+            "entity:taiwan_strait",
+            "entity:tito_stalin_split",
+            "entity:truman",
+            "entity:truman_administration",
+            "entity:un",
+            "entity:un_security_council",
+            "entity:united_nations",
+            "entity:united_states_committed_in_korea",
+            "entity:united_states_seventh_fleet",
+            "entity:us_intervention",
+            "entity:war_in_korea",
+            "entity:yugoslavia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:molotov_ribbentrop_pact_1",
+        "score": 0.0035456532918941948,
+        "text": "Molotov–Ribbentrop Pact\nVilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia was joined to the Moldovan ASSR, and become the Moldovan SSR under control of Moscow.",
+        "metadata": {
+          "title": "Molotov–Ribbentrop Pact",
+          "chunk_index": 1,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:bessarabia",
+            "entity:germany",
+            "entity:lithuania",
+            "entity:moldovan_assr",
+            "entity:moldovan_ssr",
+            "entity:moscow",
+            "entity:poland",
+            "entity:romania",
+            "entity:soviet_union",
+            "entity:soviet_union_s_actions_towards_bessarabia",
+            "entity:vilnius"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Estonia\nEstonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991.\n\nImperialism\nImperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism.\n\nMolotov–Ribbentrop Pact\nMolotov–Ribbentrop Pact\nVilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia was joined to the Moldovan ASSR, and become the Moldovan SSR under control of Moscow.\n\nKorean War\nKorean War\nOn 27 June 1950, two days after the KPA invaded and three months before the Chinese entered the war, President Truman dispatched the United States Seventh Fleet to the Taiwan Strait, to prevent hostilities between the Nationalist Republic of China (Taiwan) and the People's Republic of China (PRC). On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force. China justified its entry into the war as a response to \"American aggression in the guise of the UN\".\n\nMolotov–Ribbentrop Pact\nMolotov–Ribbentrop Pact\nMost notably, there was also a secret protocol to the pact, revealed only after Germany's defeat in 1945, although hints about its provisions were leaked much earlier, e.g., to influence Lithuania. According to said protocol Romania, Poland, Lithuania, Latvia, Estonia and Finland were divided into German and Soviet \"spheres of influence\". In the north, Finland, Estonia and Latvia were assigned to the Soviet sphere. Poland was to be partitioned in the event of its \"political rearrangement\"—the areas east of the Pisa, Narev, Vistula and San rivers going to the Soviet Union while Germany would occupy the west. Lithuania, adjacent to East Prussia, would be in the German sphere of influence, although a second secret protocol agreed to in September 1939 reassigned the majority of Lithuania to the USSR. According to the secret protocol, Lithuania would be granted the city of Vilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia\n\nEstonia\nAlthough initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power.\n\nEstonia\nThe Germans used Estonia's resources for their war effort; for the duration of the occupation Estonia was incorporated into the German province of Ostland.\n\nImperialism\nMao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.\n\nKorean War\nOn 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force.\n\nImperialism\nImperialism\nCultural imperialism is when a country's influence is felt in social and cultural circles, i.e. its soft power, such that it changes the moral, cultural and societal worldview of another. This is more than just \"foreign\" music, television or film becoming popular with young people, but that popular culture changing their own expectations of life and their desire for their own country to become more like the foreign country depicted. For example, depictions of opulent American lifestyles in the soap opera Dallas during the Cold War changed the expectations of Romanians; a more recent example is the influence of smuggled South Korean drama series in North Korea. The importance of soft power is not lost on authoritarian regimes, fighting such influence with bans on foreign popular culture, control of the internet and unauthorised satellite dishes etc. Nor is such a usage of culture recent, as part of Roman imperialism local elites would be exposed to the benefits and luxuries of Roman culture and lifestyle, with the aim that they would then become willing participants.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:estonia_0",
+        "passage_index": 17,
+        "title": "Estonia",
+        "score": 0.09878647759006012,
+        "text": "Estonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991.",
+        "score_breakdown": {
+          "dense": 0.06319735475174015,
+          "graph": 0.07691424275840045,
+          "fact": 0.27302439766055275
+        }
+      },
+      {
+        "node_id": "chunk:imperialism_1",
+        "passage_index": 12,
+        "title": "Imperialism",
+        "score": 0.09138152867961236,
+        "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism.",
+        "score_breakdown": {
+          "dense": 0.06302074713455423,
+          "graph": 0.06282475598491659,
+          "fact": 0.25248460640088377
+        }
+      },
+      {
+        "node_id": "chunk:molotov_ribbentrop_pact_1",
+        "passage_index": 14,
+        "title": "Molotov–Ribbentrop Pact",
+        "score": 0.08890778483134554,
+        "text": "Molotov–Ribbentrop Pact\nVilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia was joined to the Moldovan ASSR, and become the Moldovan SSR under control of Moscow.",
+        "score_breakdown": {
+          "dense": 0.06261255298813805,
+          "graph": 0.06199815760017075,
+          "fact": 0.23914288938545594
+        }
+      },
+      {
+        "node_id": "chunk:korean_war_0",
+        "passage_index": 6,
+        "title": "Korean War",
+        "score": 0.08882228160186353,
+        "text": "Korean War\nOn 27 June 1950, two days after the KPA invaded and three months before the Chinese entered the war, President Truman dispatched the United States Seventh Fleet to the Taiwan Strait, to prevent hostilities between the Nationalist Republic of China (Taiwan) and the People's Republic of China (PRC). On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force. China justified its entry into the war as a response to \"American aggression in the guise of the UN\".",
+        "score_breakdown": {
+          "dense": 0.06298994343457817,
+          "graph": 0.06291865576626471,
+          "fact": 0.23534810655310748
+        }
+      },
+      {
+        "node_id": "chunk:molotov_ribbentrop_pact_0",
+        "passage_index": 14,
+        "title": "Molotov–Ribbentrop Pact",
+        "score": 0.05343284893370498,
+        "text": "Molotov–Ribbentrop Pact\nMost notably, there was also a secret protocol to the pact, revealed only after Germany's defeat in 1945, although hints about its provisions were leaked much earlier, e.g., to influence Lithuania. According to said protocol Romania, Poland, Lithuania, Latvia, Estonia and Finland were divided into German and Soviet \"spheres of influence\". In the north, Finland, Estonia and Latvia were assigned to the Soviet sphere. Poland was to be partitioned in the event of its \"political rearrangement\"—the areas east of the Pisa, Narev, Vistula and San rivers going to the Soviet Union while Germany would occupy the west. Lithuania, adjacent to East Prussia, would be in the German sphere of influence, although a second secret protocol agreed to in September 1939 reassigned the majority of Lithuania to the USSR. According to the secret protocol, Lithuania would be granted the city of Vilnius – its historical capital, which was under Polish control during the inter-war period. Another clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia",
+        "score_breakdown": {
+          "dense": 0.0625370413646925,
+          "graph": 0.06345825394374702,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:imperialism_0",
+        "passage_index": 19,
+        "title": "Imperialism",
+        "score": 0.052858454070102125,
+        "text": "Imperialism\nCultural imperialism is when a country's influence is felt in social and cultural circles, i.e. its soft power, such that it changes the moral, cultural and societal worldview of another. This is more than just \"foreign\" music, television or film becoming popular with young people, but that popular culture changing their own expectations of life and their desire for their own country to become more like the foreign country depicted. For example, depictions of opulent American lifestyles in the soap opera Dallas during the Cold War changed the expectations of Romanians; a more recent example is the influence of smuggled South Korean drama series in North Korea. The importance of soft power is not lost on authoritarian regimes, fighting such influence with bans on foreign popular culture, control of the internet and unauthorised satellite dishes etc. Nor is such a usage of culture recent, as part of Roman imperialism local elites would be exposed to the benefits and luxuries of Roman culture and lifestyle, with the aim that they would then become willing participants.",
+        "score_breakdown": {
+          "dense": 0.06256929433433134,
+          "graph": 0.061484473954066275,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:korean_war_1",
+        "passage_index": 3,
+        "title": "Korean War",
+        "score": 0.05279587109036481,
+        "text": "Korean War\nhelp the South Koreans and the US immediately began using what air and naval forces that were in the area to that end. The Administration still refrained from committing on the ground because some advisers believed the North Koreans could be stopped by air and naval power alone.",
+        "score_breakdown": {
+          "dense": 0.06269394463255423,
+          "graph": 0.06104733847486657,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:military_history_of_south_africa_during_world_war_ii_0",
+        "passage_index": 16,
+        "title": "Military history of South Africa during World War II",
+        "score": 0.052669840567002406,
+        "text": "Military history of South Africa during World War II\nOn 4 September 1939, the United Party caucus refused to accept Hertzog's stance of neutrality in World War II and deposed him in favour of Smuts. Upon becoming Prime Minister, Smuts declared South Africa officially at war with Germany and the Axis. He immediately set about fortifying South Africa against any possible German sea invasion because of South Africa's global strategic importance controlling the long sea route around the Cape of Good Hope.",
+        "score_breakdown": {
+          "dense": 0.06245196727032805,
+          "graph": 0.0610708618944066,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_blitz_0",
+        "passage_index": 10,
+        "title": "The Blitz",
+        "score": 0.052636642057379904,
+        "text": "The Blitz\nAOC Bomber Command Arthur Harris did see German morale as a major objective. However, he did not believe that the morale-collapse could occur without the destruction of the German economy. The primary goal of Bomber Command's offensives was to destroy the German industrial base (economic warfare), and in doing so reduce morale. In late 1943, just before the Battle of Berlin, he declared the power of Bomber Command would enable it to achieve \"a state of devastation in which surrender is inevitable.\" A summary of Harris' strategic intentions was clear:",
+        "score_breakdown": {
+          "dense": 0.06239310510452637,
+          "graph": 0.061068114166301334,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:1948_arab_israeli_war_0",
+        "passage_index": 15,
+        "title": "1948 Arab–Israeli War",
+        "score": 0.05260439916785636,
+        "text": "1948 Arab–Israeli War\nOn 15 May 1948, the ongoing civil war transformed into an inter-state conflict between Israel and the Arab states, following the Israeli Declaration of Independence the previous day. A combined invasion by Egypt, Jordan and Syria, together with expeditionary forces from Iraq, entered Palestine -- Jordan having declared privately to Yishuv emissaries on 2 May that it would abide by a decision not to attack the Jewish state. The invading forces took control of the Arab areas and immediately attacked Israeli forces and several Jewish settlements. The 10 months of fighting, interrupted by several truce periods, took place mostly on the former territory of the British Mandate and for a short time also in the Sinai Peninsula and southern Lebanon.",
+        "score_breakdown": {
+          "dense": 0.06235703432201739,
+          "graph": 0.06102676763582264,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What country was in control of Estonia before the Germans?",
+        "resolved_sub_question": "What country was in control of Estonia before the Germans?",
+        "sentence_id": "sentence:estonia_0_0_although_initially_the_germans_were_welcomed_by_most_estonians_as_liberators_fro",
+        "sentence": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power.",
+        "score": 0.5507994105263159,
+        "source_title": "Estonia",
+        "hop_answer": "Soviet Union",
+        "hop_thought": "Before the Germans occupied Estonia, it was under the control of the Soviet Union.",
+        "hop_raw_response": "Before the Germans occupied Estonia, it was under the control of the Soviet Union.\nAnswer: Soviet Union",
+        "evidence_passages": [
+          {
+            "title": "Estonia",
+            "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+          },
+          {
+            "title": "Estonia",
+            "text": "Estonia\nAfter centuries of Danish, Swedish and German rule the native Estonians started to yearn for independence during the period of national awakening while being governed by the Russian Empire. Established on 24 February 1918, the Republic of Estonia came into existence towards the end of World War I. During World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule. Estonia then restored its independence during the 1991 coup by the Soviets on the night of 20 August 1991."
+          },
+          {
+            "title": "Estonia",
+            "text": "The Germans used Estonia's resources for their war effort; for the duration of the occupation Estonia was incorporated into the German province of Ostland."
+          }
+        ]
+      },
+      {
+        "sub_question": "When did this country become an imperialist power?",
+        "resolved_sub_question": "When did this country become an imperialist power? Context: Soviet Union.",
+        "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+        "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+        "score": 0.5520144188636781,
+        "source_title": "Imperialism",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context suggests that the Soviet Union became an imperialist power during its existence, but no specific date is given for when it transitioned into an imperialist power.",
+        "hop_raw_response": "The context suggests that the Soviet Union became an imperialist power during its existence, but no specific date is given for when it transitioned into an imperialist power.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Imperialism",
+            "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+          },
+          {
+            "title": "Imperialism",
+            "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+          },
+          {
+            "title": "Estonia",
+            "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was the arguer that claimed this country had become an imperialist power?",
+        "resolved_sub_question": "Who was the arguer that claimed this country had become an imperialist power? Context: Soviet Union.",
+        "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+        "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+        "score": 0.5859929689749401,
+        "source_title": "Imperialism",
+        "hop_answer": "Mao Zedong",
+        "hop_thought": "The context indicates that the Soviet Union was accused of becoming an imperialist power. According to the text, Mao Zedong made this argument.",
+        "hop_raw_response": "The context indicates that the Soviet Union was accused of becoming an imperialist power. According to the text, Mao Zedong made this argument.\nAnswer: Mao Zedong",
+        "evidence_passages": [
+          {
+            "title": "Imperialism",
+            "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+          },
+          {
+            "title": "Imperialism",
+            "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+          },
+          {
+            "title": "Estonia",
+            "text": "Although initially the Germans were welcomed by most Estonians as liberators from the USSR and its oppressions, and hopes were raised for the restoration of the country's independence, it was soon realised that the Nazis were but another occupying power."
+          }
+        ]
+      },
+      {
+        "sub_question": "Where did this arguer declare he would intervene in the Korean conflict?",
+        "resolved_sub_question": "Where did this arguer declare he would intervene in the Korean conflict? Context: Soviet Union; Mao Zedong.",
+        "sentence_id": "sentence:imperialism_1_4_mao_zedong_once_argued_that_the_soviet_union_had_itself_become_an_imperialist_po",
+        "sentence": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.",
+        "score": 0.4187737933978716,
+        "source_title": "Imperialism",
+        "hop_answer": "Korea",
+        "hop_thought": "The context provided indicates that Mao Zedong, who argued about the Soviet Union being an imperialist power, declared his intervention in the Korean conflict. The specific location for intervention mentioned in the evidence is Korea.",
+        "hop_raw_response": "The context provided indicates that Mao Zedong, who argued about the Soviet Union being an imperialist power, declared his intervention in the Korean conflict. The specific location for intervention mentioned in the evidence is Korea.\nAnswer: Korea",
+        "evidence_passages": [
+          {
+            "title": "Imperialism",
+            "text": "Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade."
+          },
+          {
+            "title": "Imperialism",
+            "text": "Imperialism\nin 1960, he announced the continuation of the war on imperialism, stating that soon the people of different countries will come together and overthrow their imperialist leaders. Although the Soviet Union declared itself anti-imperialist, critics argue that it exhibited tendencies common to historic empires. Some scholars hold that the Soviet Union was a hybrid entity containing elements common to both multinational empires and nation states. It has also been argued that the USSR practiced colonialism as did other imperial powers and was carrying on the old Russian tradition of expansion and control. Mao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade. Moreover, the ideas of imperialism were widely spread in action on the higher levels of government. Non Russian Marxists within the Russian Federation and later the USSR, like Sultan Galiev and Vasyl Shakhrai, considered the Soviet Regime a renewed version of the Russian imperialism and colonialism."
+          },
+          {
+            "title": "Korean War",
+            "text": "On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What country was in control of Estonia before the Germans? => Soviet Union (source: Estonia)\n2. When did this country become an imperialist power? (source: Imperialism)\n3. Who was the arguer that claimed this country had become an imperialist power? => Mao Zedong (source: Imperialism)\n4. Where did this arguer declare he would intervene in the Korean conflict? => Korea (source: Imperialism)\n\nFact hints:\n- Mao Zedong would intervene in Korea\n- Mao Zedong argued Soviet Union became imperialist power\n- Estonia was occupied by Soviet Union\n- Soviet Union occupied Estonia in 1940\n- Soviet Union re-occupied Estonia in 1944\n\nWikipedia Title: Imperialism\nMao Zedong once argued that the Soviet Union had itself become an imperialist power while maintaining a socialist façade.\n\nWikipedia Title: Molotov–Ribbentrop Pact\nAnother clause of the treaty was that Germany would not interfere with the Soviet Union's actions towards Bessarabia, then part of Romania; as the result, Bessarabia In the north, Finland, Estonia and Latvia were assigned to the Soviet sphere.\n\nWikipedia Title: Estonia\nDuring World War II, Estonia was then occupied by the Soviet Union in 1940, then Nazi Germany a year later and again in 1944 establishing the Estonian Soviet Socialist Republic. In 1988, during the Singing Revolution, the Estonian SSR issued the Estonian Sovereignty Declaration to defy against the illegal Soviet rule.\n\nWikipedia Title: Korean War\nOn 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force. China justified its entry into the war as a response to \"American aggression in the guise of the UN\".\n\nWikipedia Title: Military history of the United States\nSome US politicians were disappointed by this move, believing Bush should have pressed on to Baghdad and removed Hussein from power; there is little doubt that coalition forces could have accomplished this if they had desired. Still, the political ramifications of removing Hussein would have broadened the scope of the conflict greatly, and many coalition nations refused to participate in such an action, believing it would create a power vacuum and destabilize the region.\n\nQuestion: Where did the arguer that the country in control of Estonia before the Germans had become an imperialist power declare he would intervene in the Korean conflict?\nDraft Answer: Korea\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The Soviet Union controlled Estonia before the Germans, and Mao Zedong argued that the Soviet Union had become an imperialist power. Mao Zedong declared he would intervene in Korea.",
+  "predicted_answer": "Korea",
+  "qa_raw_response": "{\n  \"thought\": \"The Soviet Union controlled Estonia before the Germans, and Mao Zedong argued that the Soviet Union had become an imperialist power. Mao Zedong declared he would intervene in Korea.\",\n  \"answer\": \"Korea\",\n  \"support\": \"On 4 August 1950, with the PRC invasion of Taiwan aborted, Mao Zedong reported to the Politburo that he would intervene in Korea when the People's Liberation Army's (PLA) Taiwan invasion force was reorganized into the PLA North East Frontier Force.\"\n}"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "MuSiQue",
+  "dataset_file": "/data/xyh/code/HoloRAG/reproduce/dataset/musique_ans_v1.0_dev.jsonl",
+  "split": "dev",
+  "seed": 19781018,
+  "num_eval_queries": 1000,
+  "eval_qa": true,
+  "topk_triples": 5,
+  "topk_passages": 5,
+  "synonym_threshold": 0.8,
+  "ppr_damping": 0.5,
+  "temperature": 0.0,
+  "passage_node_weight": 0.05,
+  "retrieval_top_k": 20,
+  "llm_base_url": "http://127.0.0.1:8000/v1",
+  "llm_name": "/data/xyh/models/Qwen2.5-72B-Instruct",
+  "embedding_name": "/data/xyh/models/NV-Embed-v2",
+  "embedding_device": "cuda:0",
+  "run_name": "musique_dev_seed19781018_gpu3",
+  "run_dir": "/data/xyh/code/HoloRAG/outputs/musique_eval/runs/musique_dev_seed19781018_gpu3"
+}

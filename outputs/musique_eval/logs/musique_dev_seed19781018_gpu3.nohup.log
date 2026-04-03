@@ -1,0 +1,686 @@
+nohup: ignoring input
+2026-04-02 19:00:51,623 INFO Starting MuSiQue evaluation run: musique_dev_seed19781018_gpu3
+2026-04-02 19:00:51,623 INFO Output dir: /data/xyh/code/HoloRAG/outputs/musique_eval/runs/musique_dev_seed19781018_gpu3
+2026-04-02 19:00:51,762 INFO No explicit split field found in dataset; using all samples and recording split='dev'.
+2026-04-02 19:00:51,763 INFO Sampled 1000 queries from 2417 with seed=19781018.
+Loading weights:   0%|          | 0/304 [00:00<?, ?it/s]Loading weights:  10%|▉         | 30/304 [00:00<00:00, 294.85it/s]Loading weights:  20%|█▉        | 60/304 [00:00<00:00, 275.83it/s]Loading weights:  29%|██▉       | 88/304 [00:00<00:00, 274.29it/s]Loading weights:  38%|███▊      | 116/304 [00:00<00:00, 265.93it/s]Loading weights:  47%|████▋     | 144/304 [00:00<00:00, 262.12it/s]Loading weights:  57%|█████▋    | 174/304 [00:00<00:00, 252.26it/s]Loading weights:  66%|██████▌   | 201/304 [00:00<00:00, 253.67it/s]Loading weights:  75%|███████▌  | 229/304 [00:00<00:00, 259.53it/s]Loading weights:  84%|████████▍ | 256/304 [00:00<00:00, 259.09it/s]Loading weights:  93%|█████████▎| 284/304 [00:01<00:00, 255.98it/s]Loading weights: 100%|██████████| 304/304 [00:01<00:00, 262.27it/s]
+2026-04-02 19:01:05,287 INFO Initialized HoloRAG once and will reuse model weights for all samples.
+2026-04-02 19:01:05,287 INFO [1/1000] start sample 4hop3__813358_24325_125104_10557
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/site-packages/transformers/modeling_attn_mask_utils.py:202: FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-02 19:06:39,152 INFO [1/1000] 4hop3__813358_24325_125104_10557 | recall@5=0.5000 | running_recall@5=0.5000 | f1=1.0000 | running_f1=1.0000 | index=268.947s | query=64.918s | qa=included_in_query_pipeline
+2026-04-02 19:06:39,153 INFO [2/1000] start sample 2hop__81682_707195
+2026-04-02 19:11:00,536 INFO [2/1000] 2hop__81682_707195 | recall@5=1.0000 | running_recall@5=0.7500 | f1=1.0000 | running_f1=1.0000 | index=220.478s | query=40.904s | qa=included_in_query_pipeline
+2026-04-02 19:11:00,537 INFO [3/1000] start sample 2hop__20433_157939
+2026-04-02 19:15:13,937 INFO [3/1000] 2hop__20433_157939 | recall@5=0.5000 | running_recall@5=0.6667 | f1=0.0000 | running_f1=0.6667 | index=219.555s | query=33.844s | qa=included_in_query_pipeline
+2026-04-02 19:15:13,937 INFO [4/1000] start sample 2hop__14092_8311
+2026-04-02 19:19:42,868 INFO [4/1000] 2hop__14092_8311 | recall@5=1.0000 | running_recall@5=0.7500 | f1=1.0000 | running_f1=0.7500 | index=225.521s | query=43.409s | qa=included_in_query_pipeline
+2026-04-02 19:19:42,868 INFO [5/1000] start sample 3hop1__268450_503371_21711
+2026-04-02 19:24:58,780 INFO [5/1000] 3hop1__268450_503371_21711 | recall@5=0.6667 | running_recall@5=0.7333 | f1=1.0000 | running_f1=0.8000 | index=226.256s | query=89.655s | qa=included_in_query_pipeline
+2026-04-02 19:24:58,780 INFO [6/1000] start sample 3hop1__106042_64399_52278
+2026-04-02 19:30:23,535 INFO [6/1000] 3hop1__106042_64399_52278 | recall@5=0.3333 | running_recall@5=0.6667 | f1=0.4000 | running_f1=0.7333 | index=245.970s | query=78.784s | qa=included_in_query_pipeline
+2026-04-02 19:30:23,535 INFO [7/1000] start sample 3hop2__304722_230978_63959
+2026-04-02 19:35:49,601 INFO [7/1000] 3hop2__304722_230978_63959 | recall@5=0.6667 | running_recall@5=0.6667 | f1=0.0000 | running_f1=0.6286 | index=257.247s | query=68.818s | qa=included_in_query_pipeline
+2026-04-02 19:35:49,601 INFO [8/1000] start sample 3hop1__305282_282081_73772
+2026-04-02 19:41:00,936 INFO [8/1000] 3hop1__305282_282081_73772 | recall@5=0.6667 | running_recall@5=0.6667 | f1=0.0000 | running_f1=0.5500 | index=240.142s | query=71.192s | qa=included_in_query_pipeline
+2026-04-02 19:41:00,936 INFO [9/1000] start sample 4hop1__145422_698949_157828_162309
+2026-04-02 19:46:21,265 INFO [9/1000] 4hop1__145422_698949_157828_162309 | recall@5=0.5000 | running_recall@5=0.6481 | f1=1.0000 | running_f1=0.6000 | index=239.212s | query=81.117s | qa=included_in_query_pipeline
+2026-04-02 19:46:21,265 INFO [10/1000] start sample 3hop1__135794_87694_64412
+2026-04-02 19:51:16,590 INFO [10/1000] 3hop1__135794_87694_64412 | recall@5=0.6667 | running_recall@5=0.6500 | f1=0.0000 | running_f1=0.5400 | index=227.652s | query=67.672s | qa=included_in_query_pipeline
+2026-04-02 19:51:16,590 INFO [11/1000] start sample 2hop__619265_45326
+2026-04-02 19:54:41,499 INFO [11/1000] 2hop__619265_45326 | recall@5=1.0000 | running_recall@5=0.6818 | f1=1.0000 | running_f1=0.5818 | index=165.020s | query=39.889s | qa=included_in_query_pipeline
+2026-04-02 19:54:41,499 INFO [12/1000] start sample 3hop1__141138_2053_52946
+2026-04-02 19:59:33,242 INFO [12/1000] 3hop1__141138_2053_52946 | recall@5=0.6667 | running_recall@5=0.6806 | f1=0.0000 | running_f1=0.5333 | index=212.853s | query=78.889s | qa=included_in_query_pipeline
+2026-04-02 19:59:33,242 INFO [13/1000] start sample 4hop3__373866_5189_276146_86687
+2026-04-02 20:04:31,966 INFO [13/1000] 4hop3__373866_5189_276146_86687 | recall@5=0.5000 | running_recall@5=0.6667 | f1=1.0000 | running_f1=0.5692 | index=216.588s | query=82.136s | qa=included_in_query_pipeline
+2026-04-02 20:04:31,967 INFO [14/1000] start sample 3hop1__51933_40769_64047
+2026-04-02 20:08:55,453 INFO [14/1000] 3hop1__51933_40769_64047 | recall@5=0.6667 | running_recall@5=0.6667 | f1=0.0000 | running_f1=0.5286 | index=217.607s | query=45.879s | qa=included_in_query_pipeline
+2026-04-02 20:08:55,454 INFO [15/1000] start sample 2hop__59048_827343
+2026-04-02 20:13:33,254 INFO [15/1000] 2hop__59048_827343 | recall@5=0.0000 | running_recall@5=0.6222 | f1=0.0000 | running_f1=0.4933 | index=239.343s | query=38.457s | qa=included_in_query_pipeline
+2026-04-02 20:13:33,254 INFO [16/1000] start sample 4hop2__160585_39078_8987_8974
+2026-04-02 20:19:24,096 INFO [16/1000] 4hop2__160585_39078_8987_8974 | recall@5=0.2500 | running_recall@5=0.5990 | f1=0.0000 | running_f1=0.4625 | index=251.462s | query=99.379s | qa=included_in_query_pipeline
+2026-04-02 20:19:24,096 INFO [17/1000] start sample 3hop2__304722_796034_63959
+2026-04-02 20:21:47,384 INFO [17/1000] 3hop2__304722_796034_63959 | recall@5=0.3333 | running_recall@5=0.5833 | f1=0.0000 | running_f1=0.4353 | index=72.023s | query=71.263s | qa=included_in_query_pipeline
+2026-04-02 20:21:47,384 INFO [18/1000] start sample 2hop__763840_144857
+2026-04-02 20:25:55,031 INFO [18/1000] 2hop__763840_144857 | recall@5=1.0000 | running_recall@5=0.6065 | f1=1.0000 | running_f1=0.4667 | index=211.023s | query=36.623s | qa=included_in_query_pipeline
+2026-04-02 20:25:55,031 INFO [19/1000] start sample 4hop1__58323_375563_161848_44231
+2026-04-02 20:30:46,461 INFO [19/1000] 4hop1__58323_375563_161848_44231 | recall@5=0.7500 | running_recall@5=0.6140 | f1=0.0000 | running_f1=0.4421 | index=211.670s | query=79.759s | qa=included_in_query_pipeline
+2026-04-02 20:30:46,461 INFO [20/1000] start sample 3hop1__857_846_7795
+2026-04-02 20:35:07,481 INFO [20/1000] 3hop1__857_846_7795 | recall@5=0.3333 | running_recall@5=0.6000 | f1=1.0000 | running_f1=0.4700 | index=203.896s | query=57.124s | qa=included_in_query_pipeline
+2026-04-02 20:35:07,482 INFO [21/1000] start sample 3hop1__109422_720914_41132
+2026-04-02 20:39:43,064 INFO [21/1000] 3hop1__109422_720914_41132 | recall@5=0.6667 | running_recall@5=0.6032 | f1=0.0000 | running_f1=0.4476 | index=240.925s | query=34.656s | qa=included_in_query_pipeline
+2026-04-02 20:39:43,064 INFO [22/1000] start sample 3hop1__145290_443779_52195
+2026-04-02 20:44:57,080 INFO [22/1000] 3hop1__145290_443779_52195 | recall@5=1.0000 | running_recall@5=0.6212 | f1=1.0000 | running_f1=0.4727 | index=253.352s | query=60.664s | qa=included_in_query_pipeline
+2026-04-02 20:44:57,081 INFO [23/1000] start sample 2hop__76314_177869
+2026-04-02 20:49:12,452 INFO [23/1000] 2hop__76314_177869 | recall@5=1.0000 | running_recall@5=0.6377 | f1=1.0000 | running_f1=0.4957 | index=218.517s | query=36.854s | qa=included_in_query_pipeline
+2026-04-02 20:49:12,453 INFO [24/1000] start sample 3hop1__84887_538202_84283
+2026-04-02 20:53:44,280 INFO [24/1000] 3hop1__84887_538202_84283 | recall@5=0.6667 | running_recall@5=0.6389 | f1=0.0000 | running_f1=0.4750 | index=223.166s | query=48.661s | qa=included_in_query_pipeline
+2026-04-02 20:53:44,280 INFO [25/1000] start sample 4hop3__746868_88460_30152_20999
+2026-04-02 20:58:27,714 INFO [25/1000] 4hop3__746868_88460_30152_20999 | recall@5=0.5000 | running_recall@5=0.6333 | f1=0.0000 | running_f1=0.4560 | index=225.098s | query=58.335s | qa=included_in_query_pipeline
+2026-04-02 20:58:27,714 INFO [26/1000] start sample 3hop1__139862_2053_52946
+2026-04-02 21:00:33,044 INFO [26/1000] 3hop1__139862_2053_52946 | recall@5=1.0000 | running_recall@5=0.6474 | f1=0.0000 | running_f1=0.4385 | index=38.979s | query=86.350s | qa=included_in_query_pipeline
+2026-04-02 21:00:33,044 INFO [27/1000] start sample 2hop__95172_152907
+2026-04-02 21:04:54,962 INFO [27/1000] 2hop__95172_152907 | recall@5=1.0000 | running_recall@5=0.6605 | f1=1.0000 | running_f1=0.4593 | index=220.773s | query=41.144s | qa=included_in_query_pipeline
+2026-04-02 21:04:54,962 INFO [28/1000] start sample 2hop__85713_84469
+2026-04-02 21:10:10,814 INFO [28/1000] 2hop__85713_84469 | recall@5=1.0000 | running_recall@5=0.6726 | f1=1.0000 | running_f1=0.4786 | index=251.557s | query=64.294s | qa=included_in_query_pipeline
+2026-04-02 21:10:10,814 INFO [29/1000] start sample 3hop1__540585_568433_47686
+2026-04-02 21:14:19,406 INFO [29/1000] 3hop1__540585_568433_47686 | recall@5=0.3333 | running_recall@5=0.6609 | f1=0.0000 | running_f1=0.4621 | index=195.205s | query=53.387s | qa=included_in_query_pipeline
+2026-04-02 21:14:19,407 INFO [30/1000] start sample 2hop__161273_92673
+2026-04-02 21:18:24,073 INFO [30/1000] 2hop__161273_92673 | recall@5=1.0000 | running_recall@5=0.6722 | f1=0.0000 | running_f1=0.4467 | index=212.986s | query=31.679s | qa=included_in_query_pipeline
+2026-04-02 21:18:24,073 INFO [31/1000] start sample 4hop2__71753_261673_70784_61381
+2026-04-02 21:22:37,473 INFO [31/1000] 4hop2__71753_261673_70784_61381 | recall@5=0.2500 | running_recall@5=0.6586 | f1=0.0000 | running_f1=0.4323 | index=203.801s | query=49.598s | qa=included_in_query_pipeline
+2026-04-02 21:22:37,473 INFO [32/1000] start sample 4hop1__93661_59747_211319_557671
+2026-04-02 21:27:49,510 INFO [32/1000] 4hop1__93661_59747_211319_557671 | recall@5=0.7500 | running_recall@5=0.6615 | f1=0.0000 | running_f1=0.4188 | index=246.961s | query=65.075s | qa=included_in_query_pipeline
+2026-04-02 21:27:49,510 INFO [33/1000] start sample 2hop__132929_120537
+2026-04-02 21:31:59,191 INFO [33/1000] 2hop__132929_120537 | recall@5=1.0000 | running_recall@5=0.6717 | f1=0.0000 | running_f1=0.4061 | index=217.599s | query=32.081s | qa=included_in_query_pipeline
+2026-04-02 21:31:59,191 INFO [34/1000] start sample 4hop1__788226_32392_823060_610794
+2026-04-02 21:36:09,696 INFO [34/1000] 4hop1__788226_32392_823060_610794 | recall@5=0.7500 | running_recall@5=0.6740 | f1=1.0000 | running_f1=0.4235 | index=197.301s | query=53.203s | qa=included_in_query_pipeline
+2026-04-02 21:36:09,696 INFO [35/1000] start sample 4hop1__131820_59747_211319_557671
+2026-04-02 21:38:33,771 INFO [35/1000] 4hop1__131820_59747_211319_557671 | recall@5=0.2500 | running_recall@5=0.6619 | f1=0.0000 | running_f1=0.4114 | index=95.019s | query=49.056s | qa=included_in_query_pipeline
+2026-04-02 21:38:33,771 INFO [36/1000] start sample 2hop__603598_25719
+2026-04-02 21:44:26,444 INFO [36/1000] 2hop__603598_25719 | recall@5=1.0000 | running_recall@5=0.6713 | f1=0.5000 | running_f1=0.4139 | index=275.262s | query=77.410s | qa=included_in_query_pipeline
+2026-04-02 21:44:26,444 INFO [37/1000] start sample 2hop__676045_7292
+2026-04-02 21:48:56,027 INFO [37/1000] 2hop__676045_7292 | recall@5=1.0000 | running_recall@5=0.6802 | f1=1.0000 | running_f1=0.4297 | index=212.255s | query=57.328s | qa=included_in_query_pipeline
+2026-04-02 21:48:56,027 INFO [38/1000] start sample 2hop__160223_58067
+2026-04-02 21:54:16,728 INFO [38/1000] 2hop__160223_58067 | recall@5=1.0000 | running_recall@5=0.6886 | f1=1.0000 | running_f1=0.4447 | index=266.506s | query=54.194s | qa=included_in_query_pipeline
+2026-04-02 21:54:16,729 INFO [39/1000] start sample 2hop__503085_110222
+2026-04-02 21:58:30,720 INFO [39/1000] 2hop__503085_110222 | recall@5=1.0000 | running_recall@5=0.6966 | f1=0.5000 | running_f1=0.4462 | index=203.663s | query=50.328s | qa=included_in_query_pipeline
+2026-04-02 21:58:30,720 INFO [40/1000] start sample 3hop2__27069_92991_76291
+2026-04-02 22:02:53,642 INFO [40/1000] 3hop2__27069_92991_76291 | recall@5=0.3333 | running_recall@5=0.6875 | f1=0.0000 | running_f1=0.4350 | index=198.772s | query=64.149s | qa=included_in_query_pipeline
+2026-04-02 22:02:53,642 INFO [41/1000] start sample 2hop__736167_74735
+2026-04-02 22:07:03,399 INFO [41/1000] 2hop__736167_74735 | recall@5=1.0000 | running_recall@5=0.6951 | f1=1.0000 | running_f1=0.4488 | index=213.858s | query=35.898s | qa=included_in_query_pipeline
+2026-04-02 22:07:03,400 INFO [42/1000] start sample 2hop__706038_14251
+2026-04-02 22:11:59,083 INFO [42/1000] 2hop__706038_14251 | recall@5=0.5000 | running_recall@5=0.6905 | f1=1.0000 | running_f1=0.4619 | index=236.348s | query=59.335s | qa=included_in_query_pipeline
+2026-04-02 22:11:59,083 INFO [43/1000] start sample 2hop__299142_347613
+2026-04-02 22:16:08,101 INFO [43/1000] 2hop__299142_347613 | recall@5=1.0000 | running_recall@5=0.6977 | f1=0.0000 | running_f1=0.4512 | index=208.311s | query=40.706s | qa=included_in_query_pipeline
+2026-04-02 22:16:08,101 INFO [44/1000] start sample 2hop__204146_850295
+2026-04-02 22:19:54,460 INFO [44/1000] 2hop__204146_850295 | recall@5=0.5000 | running_recall@5=0.6932 | f1=0.0000 | running_f1=0.4409 | index=194.148s | query=32.210s | qa=included_in_query_pipeline
+2026-04-02 22:19:54,461 INFO [45/1000] start sample 2hop__487706_40501
+2026-04-02 22:24:49,331 INFO [45/1000] 2hop__487706_40501 | recall@5=1.0000 | running_recall@5=0.7000 | f1=1.0000 | running_f1=0.4533 | index=238.927s | query=55.943s | qa=included_in_query_pipeline
+2026-04-02 22:24:49,332 INFO [46/1000] start sample 3hop1__389069_132457_51423
+2026-04-02 22:28:56,087 INFO [46/1000] 3hop1__389069_132457_51423 | recall@5=0.3333 | running_recall@5=0.6920 | f1=0.0000 | running_f1=0.4435 | index=207.341s | query=39.414s | qa=included_in_query_pipeline
+2026-04-02 22:28:56,087 INFO [47/1000] start sample 2hop__754682_730690
+2026-04-02 22:33:17,672 INFO [47/1000] 2hop__754682_730690 | recall@5=0.5000 | running_recall@5=0.6879 | f1=0.0000 | running_f1=0.4340 | index=220.672s | query=40.913s | qa=included_in_query_pipeline
+2026-04-02 22:33:17,672 INFO [48/1000] start sample 2hop__84439_482364
+2026-04-02 22:37:35,738 INFO [48/1000] 2hop__84439_482364 | recall@5=1.0000 | running_recall@5=0.6944 | f1=1.0000 | running_f1=0.4458 | index=223.109s | query=34.956s | qa=included_in_query_pipeline
+2026-04-02 22:37:35,738 INFO [49/1000] start sample 3hop1__145194_160545_60577
+2026-04-02 22:41:40,316 INFO [49/1000] 3hop1__145194_160545_60577 | recall@5=1.0000 | running_recall@5=0.7007 | f1=0.0000 | running_f1=0.4367 | index=207.883s | query=36.694s | qa=included_in_query_pipeline
+2026-04-02 22:41:40,316 INFO [50/1000] start sample 2hop__84937_148696
+2026-04-02 22:46:33,582 INFO [50/1000] 2hop__84937_148696 | recall@5=1.0000 | running_recall@5=0.7067 | f1=0.2857 | running_f1=0.4337 | index=242.033s | query=51.233s | qa=included_in_query_pipeline
+2026-04-02 22:46:33,582 INFO [51/1000] start sample 3hop1__132968_40769_64047
+2026-04-02 22:49:50,615 INFO [51/1000] 3hop1__132968_40769_64047 | recall@5=1.0000 | running_recall@5=0.7124 | f1=0.0000 | running_f1=0.4252 | index=147.440s | query=49.593s | qa=included_in_query_pipeline
+2026-04-02 22:49:50,616 INFO [52/1000] start sample 2hop__554145_88622
+2026-04-02 22:54:01,180 INFO [52/1000] 2hop__554145_88622 | recall@5=0.5000 | running_recall@5=0.7083 | f1=0.0000 | running_f1=0.4170 | index=223.944s | query=26.620s | qa=included_in_query_pipeline
+2026-04-02 22:54:01,181 INFO [53/1000] start sample 2hop__698577_851686
+2026-04-02 22:58:16,399 INFO [53/1000] 2hop__698577_851686 | recall@5=1.0000 | running_recall@5=0.7138 | f1=1.0000 | running_f1=0.4280 | index=220.607s | query=34.611s | qa=included_in_query_pipeline
+2026-04-02 22:58:16,399 INFO [54/1000] start sample 2hop__64323_55840
+2026-04-02 23:02:39,886 INFO [54/1000] 2hop__64323_55840 | recall@5=0.5000 | running_recall@5=0.7099 | f1=1.0000 | running_f1=0.4386 | index=224.236s | query=39.251s | qa=included_in_query_pipeline
+2026-04-02 23:02:39,886 INFO [55/1000] start sample 2hop__809785_606637
+2026-04-02 23:05:53,110 INFO [55/1000] 2hop__809785_606637 | recall@5=1.0000 | running_recall@5=0.7152 | f1=1.0000 | running_f1=0.4488 | index=154.905s | query=38.318s | qa=included_in_query_pipeline
+2026-04-02 23:05:53,110 INFO [56/1000] start sample 2hop__595747_31270
+2026-04-02 23:09:51,054 INFO [56/1000] 2hop__595747_31270 | recall@5=1.0000 | running_recall@5=0.7202 | f1=0.6667 | running_f1=0.4527 | index=203.151s | query=34.792s | qa=included_in_query_pipeline
+2026-04-02 23:09:51,054 INFO [57/1000] start sample 3hop1__19768_19788_15107
+2026-04-02 23:15:08,111 INFO [57/1000] 3hop1__19768_19788_15107 | recall@5=0.6667 | running_recall@5=0.7193 | f1=0.0000 | running_f1=0.4448 | index=258.013s | query=59.044s | qa=included_in_query_pipeline
+2026-04-02 23:15:08,112 INFO [58/1000] start sample 2hop__29368_29376
+2026-04-02 23:19:29,623 INFO [58/1000] 2hop__29368_29376 | recall@5=0.5000 | running_recall@5=0.7155 | f1=0.6667 | running_f1=0.4486 | index=224.182s | query=37.329s | qa=included_in_query_pipeline
+2026-04-02 23:19:29,624 INFO [59/1000] start sample 3hop1__254856_400692_51423
+2026-04-02 23:23:12,420 INFO [59/1000] 3hop1__254856_400692_51423 | recall@5=0.6667 | running_recall@5=0.7147 | f1=0.0000 | running_f1=0.4410 | index=175.883s | query=46.912s | qa=included_in_query_pipeline
+2026-04-02 23:23:12,420 INFO [60/1000] start sample 3hop1__742464_15840_36002
+2026-04-02 23:28:08,389 INFO [60/1000] 3hop1__742464_15840_36002 | recall@5=0.6667 | running_recall@5=0.7139 | f1=0.0000 | running_f1=0.4337 | index=248.192s | query=47.776s | qa=included_in_query_pipeline
+2026-04-02 23:28:08,390 INFO [61/1000] start sample 3hop1__140345_2053_52946
+2026-04-02 23:31:50,947 INFO [61/1000] 3hop1__140345_2053_52946 | recall@5=0.6667 | running_recall@5=0.7131 | f1=0.4000 | running_f1=0.4331 | index=144.968s | query=77.589s | qa=included_in_query_pipeline
+2026-04-02 23:31:50,948 INFO [62/1000] start sample 3hop1__159728_91191_156667
+2026-04-02 23:37:24,695 INFO [62/1000] 3hop1__159728_91191_156667 | recall@5=1.0000 | running_recall@5=0.7177 | f1=1.0000 | running_f1=0.4422 | index=275.000s | query=58.748s | qa=included_in_query_pipeline
+2026-04-02 23:37:24,696 INFO [63/1000] start sample 3hop1__786067_228453_10972
+2026-04-02 23:41:24,339 INFO [63/1000] 3hop1__786067_228453_10972 | recall@5=1.0000 | running_recall@5=0.7222 | f1=0.0000 | running_f1=0.4352 | index=197.181s | query=42.461s | qa=included_in_query_pipeline
+2026-04-02 23:41:24,339 INFO [64/1000] start sample 4hop1__708184_153080_33897_81096
+2026-04-02 23:46:08,312 INFO [64/1000] 4hop1__708184_153080_33897_81096 | recall@5=0.7500 | running_recall@5=0.7227 | f1=1.0000 | running_f1=0.4440 | index=215.865s | query=68.107s | qa=included_in_query_pipeline
+2026-04-02 23:46:08,313 INFO [65/1000] start sample 2hop__272714_113442
+2026-04-02 23:50:30,368 INFO [65/1000] 2hop__272714_113442 | recall@5=1.0000 | running_recall@5=0.7269 | f1=1.0000 | running_f1=0.4526 | index=217.011s | query=45.044s | qa=included_in_query_pipeline
+2026-04-02 23:50:30,368 INFO [66/1000] start sample 2hop__847760_80026
+2026-04-02 23:55:21,032 INFO [66/1000] 2hop__847760_80026 | recall@5=0.5000 | running_recall@5=0.7235 | f1=0.0000 | running_f1=0.4457 | index=234.877s | query=55.786s | qa=included_in_query_pipeline
+2026-04-02 23:55:21,032 INFO [67/1000] start sample 2hop__130867_54221
+2026-04-02 23:58:48,065 INFO [67/1000] 2hop__130867_54221 | recall@5=1.0000 | running_recall@5=0.7276 | f1=0.0000 | running_f1=0.4391 | index=175.499s | query=31.534s | qa=included_in_query_pipeline
+2026-04-02 23:58:48,065 INFO [68/1000] start sample 3hop1__365934_87694_124169
+2026-04-03 00:02:46,211 INFO [68/1000] 3hop1__365934_87694_124169 | recall@5=1.0000 | running_recall@5=0.7316 | f1=1.0000 | running_f1=0.4473 | index=164.877s | query=73.269s | qa=included_in_query_pipeline
+2026-04-03 00:02:46,212 INFO [69/1000] start sample 3hop2__43283_12039_93690
+2026-04-03 00:07:00,478 INFO [69/1000] 3hop2__43283_12039_93690 | recall@5=0.3333 | running_recall@5=0.7258 | f1=0.0000 | running_f1=0.4409 | index=195.904s | query=58.362s | qa=included_in_query_pipeline
+2026-04-03 00:07:00,478 INFO [70/1000] start sample 4hop1__56635_49925_13759_736921
+2026-04-03 00:12:00,159 INFO [70/1000] 4hop1__56635_49925_13759_736921 | recall@5=0.5000 | running_recall@5=0.7226 | f1=0.0000 | running_f1=0.4346 | index=218.557s | query=81.123s | qa=included_in_query_pipeline
+2026-04-03 00:12:00,159 INFO [71/1000] start sample 3hop1__406043_831637_91775
+2026-04-03 00:16:00,454 INFO [71/1000] 3hop1__406043_831637_91775 | recall@5=1.0000 | running_recall@5=0.7265 | f1=0.0000 | running_f1=0.4284 | index=176.085s | query=64.210s | qa=included_in_query_pipeline
+2026-04-03 00:16:00,454 INFO [72/1000] start sample 3hop1__358853_339990_54675
+2026-04-03 00:18:46,591 INFO [72/1000] 3hop1__358853_339990_54675 | recall@5=1.0000 | running_recall@5=0.7303 | f1=0.0000 | running_f1=0.4225 | index=136.066s | query=30.070s | qa=included_in_query_pipeline
+2026-04-03 00:18:46,591 INFO [73/1000] start sample 2hop__391873_88622
+2026-04-03 00:22:33,453 INFO [73/1000] 2hop__391873_88622 | recall@5=1.0000 | running_recall@5=0.7340 | f1=0.5000 | running_f1=0.4235 | index=193.136s | query=33.725s | qa=included_in_query_pipeline
+2026-04-03 00:22:33,453 INFO [74/1000] start sample 3hop1__829944_474097_84283
+2026-04-03 00:24:07,950 INFO [74/1000] 3hop1__829944_474097_84283 | recall@5=1.0000 | running_recall@5=0.7376 | f1=0.0000 | running_f1=0.4178 | index=58.133s | query=36.362s | qa=included_in_query_pipeline
+2026-04-03 00:24:07,950 INFO [75/1000] start sample 3hop2__304722_423353_63959
+2026-04-03 00:25:37,406 INFO [75/1000] 3hop2__304722_423353_63959 | recall@5=0.0000 | running_recall@5=0.7278 | f1=0.0000 | running_f1=0.4123 | index=28.645s | query=60.812s | qa=included_in_query_pipeline
+2026-04-03 00:25:37,407 INFO [76/1000] start sample 4hop1__163763_49925_13759_736921
+2026-04-03 00:29:13,472 INFO [76/1000] 4hop1__163763_49925_13759_736921 | recall@5=0.5000 | running_recall@5=0.7248 | f1=0.4000 | running_f1=0.4121 | index=155.296s | query=60.768s | qa=included_in_query_pipeline
+2026-04-03 00:29:13,472 INFO [77/1000] start sample 2hop__245835_762148
+2026-04-03 00:33:02,127 INFO [77/1000] 2hop__245835_762148 | recall@5=1.0000 | running_recall@5=0.7284 | f1=1.0000 | running_f1=0.4197 | index=200.843s | query=27.811s | qa=included_in_query_pipeline
+2026-04-03 00:33:02,127 INFO [78/1000] start sample 3hop1__857_846_7870
+2026-04-03 00:36:08,758 INFO [78/1000] 3hop1__857_846_7870 | recall@5=0.0000 | running_recall@5=0.7190 | f1=0.0000 | running_f1=0.4143 | index=119.874s | query=66.756s | qa=included_in_query_pipeline
+2026-04-03 00:36:08,758 INFO [79/1000] start sample 4hop1__151903_5274_458768_33637
+2026-04-03 00:40:41,283 INFO [79/1000] 4hop1__151903_5274_458768_33637 | recall@5=1.0000 | running_recall@5=0.7226 | f1=0.0000 | running_f1=0.4091 | index=212.757s | query=59.766s | qa=included_in_query_pipeline
+2026-04-03 00:40:41,283 INFO [80/1000] start sample 2hop__351045_47134
+2026-04-03 00:43:53,343 INFO [80/1000] 2hop__351045_47134 | recall@5=1.0000 | running_recall@5=0.7260 | f1=1.0000 | running_f1=0.4165 | index=155.909s | query=36.150s | qa=included_in_query_pipeline
+2026-04-03 00:43:53,343 INFO [81/1000] start sample 2hop__130508_32379
+2026-04-03 00:48:12,699 INFO [81/1000] 2hop__130508_32379 | recall@5=1.0000 | running_recall@5=0.7294 | f1=1.0000 | running_f1=0.4237 | index=213.566s | query=45.790s | qa=included_in_query_pipeline
+2026-04-03 00:48:12,699 INFO [82/1000] start sample 2hop__107690_124896
+2026-04-03 00:52:32,571 INFO [82/1000] 2hop__107690_124896 | recall@5=1.0000 | running_recall@5=0.7327 | f1=1.0000 | running_f1=0.4307 | index=218.159s | query=41.713s | qa=included_in_query_pipeline
+2026-04-03 00:52:32,571 INFO [83/1000] start sample 2hop__201704_135481
+2026-04-03 00:56:32,592 INFO [83/1000] 2hop__201704_135481 | recall@5=1.0000 | running_recall@5=0.7359 | f1=0.4000 | running_f1=0.4303 | index=208.678s | query=31.342s | qa=included_in_query_pipeline
+2026-04-03 00:56:32,592 INFO [84/1000] start sample 2hop__62951_64006
+2026-04-03 01:00:36,226 INFO [84/1000] 2hop__62951_64006 | recall@5=1.0000 | running_recall@5=0.7391 | f1=0.4000 | running_f1=0.4300 | index=206.129s | query=37.505s | qa=included_in_query_pipeline
+2026-04-03 01:00:36,226 INFO [85/1000] start sample 2hop__84847_148696
+2026-04-03 01:03:15,335 INFO [85/1000] 2hop__84847_148696 | recall@5=0.0000 | running_recall@5=0.7304 | f1=1.0000 | running_f1=0.4367 | index=107.398s | query=51.711s | qa=included_in_query_pipeline
+2026-04-03 01:03:15,335 INFO [86/1000] start sample 4hop1__31333_59747_211319_557671
+2026-04-03 01:04:51,599 INFO [86/1000] 4hop1__31333_59747_211319_557671 | recall@5=0.2500 | running_recall@5=0.7248 | f1=0.0000 | running_f1=0.4316 | index=37.900s | query=58.364s | qa=included_in_query_pipeline
+2026-04-03 01:04:51,600 INFO [87/1000] start sample 3hop1__516535_834494_34088
+2026-04-03 01:06:54,225 INFO [87/1000] 3hop1__516535_834494_34088 | recall@5=1.0000 | running_recall@5=0.7280 | f1=1.0000 | running_f1=0.4381 | index=82.546s | query=40.080s | qa=included_in_query_pipeline
+2026-04-03 01:06:54,225 INFO [88/1000] start sample 3hop2__222979_380281_40768
+2026-04-03 01:11:14,705 INFO [88/1000] 3hop2__222979_380281_40768 | recall@5=0.3333 | running_recall@5=0.7235 | f1=0.0000 | running_f1=0.4332 | index=204.473s | query=56.007s | qa=included_in_query_pipeline
+2026-04-03 01:11:14,706 INFO [89/1000] start sample 3hop1__818422_160545_34754
+2026-04-03 01:15:17,126 INFO [89/1000] 3hop1__818422_160545_34754 | recall@5=0.6667 | running_recall@5=0.7228 | f1=0.6667 | running_f1=0.4358 | index=197.692s | query=44.728s | qa=included_in_query_pipeline
+2026-04-03 01:15:17,126 INFO [90/1000] start sample 4hop1__88342_49853_128008_86588
+2026-04-03 01:21:06,480 INFO [90/1000] 4hop1__88342_49853_128008_86588 | recall@5=0.5000 | running_recall@5=0.7204 | f1=0.3333 | running_f1=0.4347 | index=249.990s | query=99.364s | qa=included_in_query_pipeline
+2026-04-03 01:21:06,481 INFO [91/1000] start sample 2hop__82910_75184
+2026-04-03 01:25:38,114 INFO [91/1000] 2hop__82910_75184 | recall@5=0.5000 | running_recall@5=0.7179 | f1=0.0000 | running_f1=0.4299 | index=214.324s | query=57.308s | qa=included_in_query_pipeline
+2026-04-03 01:25:38,114 INFO [92/1000] start sample 2hop__30390_92972
+2026-04-03 01:30:28,488 INFO [92/1000] 2hop__30390_92972 | recall@5=0.5000 | running_recall@5=0.7156 | f1=0.0000 | running_f1=0.4252 | index=238.402s | query=51.971s | qa=included_in_query_pipeline
+2026-04-03 01:30:28,488 INFO [93/1000] start sample 2hop__748615_123956
+2026-04-03 01:35:45,537 INFO [93/1000] 2hop__748615_123956 | recall@5=1.0000 | running_recall@5=0.7186 | f1=0.0000 | running_f1=0.4206 | index=256.360s | query=60.688s | qa=included_in_query_pipeline
+2026-04-03 01:35:45,537 INFO [94/1000] start sample 2hop__286093_361551
+2026-04-03 01:39:13,218 INFO [94/1000] 2hop__286093_361551 | recall@5=1.0000 | running_recall@5=0.7216 | f1=1.0000 | running_f1=0.4268 | index=165.261s | query=42.419s | qa=included_in_query_pipeline
+2026-04-03 01:39:13,218 INFO [95/1000] start sample 3hop1__131783_131926_89261
+2026-04-03 01:43:32,429 INFO [95/1000] 3hop1__131783_131926_89261 | recall@5=0.6667 | running_recall@5=0.7211 | f1=0.0000 | running_f1=0.4223 | index=183.538s | query=75.672s | qa=included_in_query_pipeline
+2026-04-03 01:43:32,429 INFO [96/1000] start sample 3hop2__43892_23308_28343
+2026-04-03 01:48:28,236 INFO [96/1000] 3hop2__43892_23308_28343 | recall@5=0.3333 | running_recall@5=0.7170 | f1=0.0000 | running_f1=0.4179 | index=232.800s | query=63.007s | qa=included_in_query_pipeline
+2026-04-03 01:48:28,236 INFO [97/1000] start sample 3hop1__622497_160088_821792
+2026-04-03 01:52:51,566 INFO [97/1000] 3hop1__622497_160088_821792 | recall@5=0.6667 | running_recall@5=0.7165 | f1=0.0000 | running_f1=0.4136 | index=213.436s | query=49.894s | qa=included_in_query_pipeline
+2026-04-03 01:52:51,567 INFO [98/1000] start sample 2hop__35136_35117
+2026-04-03 01:57:35,382 INFO [98/1000] 2hop__35136_35117 | recall@5=0.5000 | running_recall@5=0.7143 | f1=1.0000 | running_f1=0.4196 | index=251.562s | query=32.253s | qa=included_in_query_pipeline
+2026-04-03 01:57:35,382 INFO [99/1000] start sample 3hop2__831456_467331_162182
+2026-04-03 02:01:22,665 INFO [99/1000] 3hop2__831456_467331_162182 | recall@5=0.6667 | running_recall@5=0.7138 | f1=0.4000 | running_f1=0.4194 | index=167.702s | query=59.580s | qa=included_in_query_pipeline
+2026-04-03 02:01:22,665 INFO [100/1000] start sample 2hop__776377_857193
+2026-04-03 02:05:25,683 INFO [100/1000] 2hop__776377_857193 | recall@5=1.0000 | running_recall@5=0.7167 | f1=1.0000 | running_f1=0.4252 | index=203.135s | query=39.882s | qa=included_in_query_pipeline
+2026-04-03 02:05:25,683 INFO [101/1000] start sample 3hop1__593597_40769_64047
+2026-04-03 02:08:07,527 INFO [101/1000] 3hop1__593597_40769_64047 | recall@5=1.0000 | running_recall@5=0.7195 | f1=0.2500 | running_f1=0.4235 | index=111.494s | query=50.349s | qa=included_in_query_pipeline
+2026-04-03 02:08:07,527 INFO [102/1000] start sample 3hop1__617062_127905_48717
+2026-04-03 02:13:44,060 INFO [102/1000] 3hop1__617062_127905_48717 | recall@5=0.6667 | running_recall@5=0.7190 | f1=0.0000 | running_f1=0.4193 | index=291.845s | query=44.687s | qa=included_in_query_pipeline
+2026-04-03 02:13:44,060 INFO [103/1000] start sample 2hop__70338_160040
+2026-04-03 02:18:21,725 INFO [103/1000] 2hop__70338_160040 | recall@5=1.0000 | running_recall@5=0.7217 | f1=0.0000 | running_f1=0.4152 | index=237.221s | query=40.443s | qa=included_in_query_pipeline
+2026-04-03 02:18:21,725 INFO [104/1000] start sample 2hop__25797_25839
+2026-04-03 02:22:30,876 INFO [104/1000] 2hop__25797_25839 | recall@5=0.0000 | running_recall@5=0.7147 | f1=0.0000 | running_f1=0.4112 | index=208.773s | query=40.378s | qa=included_in_query_pipeline
+2026-04-03 02:22:30,877 INFO [105/1000] start sample 3hop1__346416_831637_91775
+2026-04-03 02:25:47,955 INFO [105/1000] 3hop1__346416_831637_91775 | recall@5=0.6667 | running_recall@5=0.7143 | f1=0.0000 | running_f1=0.4073 | index=152.382s | query=44.696s | qa=included_in_query_pipeline
+2026-04-03 02:25:47,955 INFO [106/1000] start sample 3hop1__108062_720914_41132
+2026-04-03 02:27:45,181 INFO [106/1000] 3hop1__108062_720914_41132 | recall@5=0.6667 | running_recall@5=0.7138 | f1=0.0000 | running_f1=0.4035 | index=82.883s | query=34.343s | qa=included_in_query_pipeline
+2026-04-03 02:27:45,181 INFO [107/1000] start sample 4hop1__567737_141375_458768_33677
+2026-04-03 02:31:13,103 INFO [107/1000] 4hop1__567737_141375_458768_33677 | recall@5=0.5000 | running_recall@5=0.7118 | f1=1.0000 | running_f1=0.4091 | index=167.209s | query=40.712s | qa=included_in_query_pipeline
+2026-04-03 02:31:13,103 INFO [108/1000] start sample 3hop1__140855_2053_52946
+2026-04-03 02:33:42,579 INFO [108/1000] 3hop1__140855_2053_52946 | recall@5=1.0000 | running_recall@5=0.7145 | f1=1.0000 | running_f1=0.4145 | index=81.817s | query=67.659s | qa=included_in_query_pipeline
+2026-04-03 02:33:42,580 INFO [109/1000] start sample 3hop1__695430_831637_91775
+2026-04-03 02:34:51,349 INFO [109/1000] 3hop1__695430_831637_91775 | recall@5=0.6667 | running_recall@5=0.7141 | f1=0.0000 | running_f1=0.4107 | index=12.226s | query=56.542s | qa=included_in_query_pipeline
+2026-04-03 02:34:51,349 INFO [110/1000] start sample 2hop__166484_798067
+2026-04-03 02:35:52,312 INFO [110/1000] 2hop__166484_798067 | recall@5=1.0000 | running_recall@5=0.7167 | f1=0.6667 | running_f1=0.4131 | index=36.716s | query=24.247s | qa=included_in_query_pipeline
+2026-04-03 02:35:52,312 INFO [111/1000] start sample 2hop__152229_604644
+2026-04-03 02:38:57,611 INFO [111/1000] 2hop__152229_604644 | recall@5=1.0000 | running_recall@5=0.7192 | f1=0.0000 | running_f1=0.4093 | index=154.307s | query=30.991s | qa=included_in_query_pipeline
+2026-04-03 02:38:57,611 INFO [112/1000] start sample 3hop1__6362_14336_21111
+2026-04-03 02:43:48,673 INFO [112/1000] 3hop1__6362_14336_21111 | recall@5=0.6667 | running_recall@5=0.7188 | f1=0.0000 | running_f1=0.4057 | index=261.119s | query=29.943s | qa=included_in_query_pipeline
+2026-04-03 02:43:48,674 INFO [113/1000] start sample 4hop3__862_846_326964_7713
+2026-04-03 02:48:53,539 INFO [113/1000] 4hop3__862_846_326964_7713 | recall@5=0.5000 | running_recall@5=0.7168 | f1=0.0000 | running_f1=0.4021 | index=206.179s | query=98.686s | qa=included_in_query_pipeline
+2026-04-03 02:48:53,540 INFO [114/1000] start sample 3hop1__103197_214799_259594
+2026-04-03 02:53:00,310 INFO [114/1000] 3hop1__103197_214799_259594 | recall@5=1.0000 | running_recall@5=0.7193 | f1=1.0000 | running_f1=0.4073 | index=191.825s | query=54.945s | qa=included_in_query_pipeline
+2026-04-03 02:53:00,310 INFO [115/1000] start sample 2hop__28287_89399
+2026-04-03 02:58:21,671 INFO [115/1000] 2hop__28287_89399 | recall@5=1.0000 | running_recall@5=0.7217 | f1=0.0000 | running_f1=0.4038 | index=258.730s | query=62.629s | qa=included_in_query_pipeline
+2026-04-03 02:58:21,671 INFO [116/1000] start sample 3hop1__132967_40769_64047
+2026-04-03 03:00:26,686 INFO [116/1000] 3hop1__132967_40769_64047 | recall@5=0.6667 | running_recall@5=0.7213 | f1=0.0000 | running_f1=0.4003 | index=82.904s | query=42.111s | qa=included_in_query_pipeline
+2026-04-03 03:00:26,686 INFO [117/1000] start sample 2hop__133116_533882
+2026-04-03 03:03:49,515 INFO [117/1000] 2hop__133116_533882 | recall@5=1.0000 | running_recall@5=0.7236 | f1=0.8000 | running_f1=0.4037 | index=155.603s | query=47.225s | qa=included_in_query_pipeline
+2026-04-03 03:03:49,515 INFO [118/1000] start sample 2hop__439614_349102
+2026-04-03 03:07:39,780 INFO [118/1000] 2hop__439614_349102 | recall@5=1.0000 | running_recall@5=0.7260 | f1=1.0000 | running_f1=0.4088 | index=194.050s | query=36.215s | qa=included_in_query_pipeline
+2026-04-03 03:07:39,780 INFO [119/1000] start sample 2hop__723404_58556
+2026-04-03 03:11:46,375 INFO [119/1000] 2hop__723404_58556 | recall@5=1.0000 | running_recall@5=0.7283 | f1=0.0000 | running_f1=0.4053 | index=219.359s | query=27.235s | qa=included_in_query_pipeline
+2026-04-03 03:11:46,375 INFO [120/1000] start sample 4hop1__342858_131850_33952_34109
+2026-04-03 03:15:54,214 INFO [120/1000] 4hop1__342858_131850_33952_34109 | recall@5=0.7500 | running_recall@5=0.7285 | f1=1.0000 | running_f1=0.4103 | index=197.331s | query=50.507s | qa=included_in_query_pipeline
+2026-04-03 03:15:54,214 INFO [121/1000] start sample 2hop__35137_22901
+2026-04-03 03:19:49,117 INFO [121/1000] 2hop__35137_22901 | recall@5=0.5000 | running_recall@5=0.7266 | f1=0.0000 | running_f1=0.4069 | index=194.291s | query=40.612s | qa=included_in_query_pipeline
+2026-04-03 03:19:49,117 INFO [122/1000] start sample 3hop1__136083_87694_64412
+2026-04-03 03:21:44,850 INFO [122/1000] 3hop1__136083_87694_64412 | recall@5=0.6667 | running_recall@5=0.7261 | f1=0.5000 | running_f1=0.4077 | index=38.319s | query=77.413s | qa=included_in_query_pipeline
+2026-04-03 03:21:44,850 INFO [123/1000] start sample 3hop2__573858_613770_7713
+2026-04-03 03:24:43,888 INFO [123/1000] 3hop2__573858_613770_7713 | recall@5=1.0000 | running_recall@5=0.7283 | f1=0.8000 | running_f1=0.4109 | index=126.822s | query=52.215s | qa=included_in_query_pipeline
+2026-04-03 03:24:43,888 INFO [124/1000] start sample 3hop1__92251_34179_23375
+2026-04-03 03:30:19,947 INFO [124/1000] 3hop1__92251_34179_23375 | recall@5=0.6667 | running_recall@5=0.7278 | f1=0.0000 | running_f1=0.4075 | index=261.281s | query=74.777s | qa=included_in_query_pipeline
+2026-04-03 03:30:19,947 INFO [125/1000] start sample 2hop__428940_135373
+2026-04-03 03:34:31,573 INFO [125/1000] 2hop__428940_135373 | recall@5=1.0000 | running_recall@5=0.7300 | f1=1.0000 | running_f1=0.4123 | index=211.957s | query=39.668s | qa=included_in_query_pipeline
+2026-04-03 03:34:31,573 INFO [126/1000] start sample 2hop__635544_110949
+2026-04-03 03:37:00,984 INFO [126/1000] 2hop__635544_110949 | recall@5=1.0000 | running_recall@5=0.7321 | f1=1.0000 | running_f1=0.4170 | index=109.658s | query=39.752s | qa=included_in_query_pipeline
+2026-04-03 03:37:00,984 INFO [127/1000] start sample 2hop__132472_684936
+2026-04-03 03:40:01,835 INFO [127/1000] 2hop__132472_684936 | recall@5=1.0000 | running_recall@5=0.7343 | f1=1.0000 | running_f1=0.4215 | index=148.988s | query=31.863s | qa=included_in_query_pipeline
+2026-04-03 03:40:01,835 INFO [128/1000] start sample 3hop1__161433_33952_34099
+2026-04-03 03:44:34,520 INFO [128/1000] 3hop1__161433_33952_34099 | recall@5=0.6667 | running_recall@5=0.7337 | f1=0.0000 | running_f1=0.4182 | index=223.174s | query=49.510s | qa=included_in_query_pipeline
+2026-04-03 03:44:34,520 INFO [129/1000] start sample 2hop__765678_310556
+2026-04-03 03:48:53,225 INFO [129/1000] 2hop__765678_310556 | recall@5=1.0000 | running_recall@5=0.7358 | f1=1.0000 | running_f1=0.4228 | index=219.208s | query=39.496s | qa=included_in_query_pipeline
+2026-04-03 03:48:53,225 INFO [130/1000] start sample 4hop1__264443_49925_13759_736921
+2026-04-03 03:51:08,952 INFO [130/1000] 4hop1__264443_49925_13759_736921 | recall@5=0.5000 | running_recall@5=0.7340 | f1=0.4000 | running_f1=0.4226 | index=76.164s | query=59.563s | qa=included_in_query_pipeline
+2026-04-03 03:51:08,953 INFO [131/1000] start sample 4hop2__105527_14670_8987_8974
+2026-04-03 03:55:21,301 INFO [131/1000] 4hop2__105527_14670_8987_8974 | recall@5=0.7500 | running_recall@5=0.7341 | f1=0.5000 | running_f1=0.4232 | index=166.556s | query=85.792s | qa=included_in_query_pipeline
+2026-04-03 03:55:21,301 INFO [132/1000] start sample 3hop2__49541_121067_51068
+2026-04-03 03:59:39,710 INFO [132/1000] 3hop2__49541_121067_51068 | recall@5=1.0000 | running_recall@5=0.7361 | f1=0.0000 | running_f1=0.4200 | index=205.028s | query=53.379s | qa=included_in_query_pipeline
+2026-04-03 03:59:39,710 INFO [133/1000] start sample 2hop__423972_540249
+2026-04-03 04:04:06,499 INFO [133/1000] 2hop__423972_540249 | recall@5=1.0000 | running_recall@5=0.7381 | f1=0.6667 | running_f1=0.4218 | index=238.795s | query=27.993s | qa=included_in_query_pipeline
+2026-04-03 04:04:06,499 INFO [134/1000] start sample 3hop1__19768_19788_10117
+2026-04-03 04:07:23,557 INFO [134/1000] 3hop1__19768_19788_10117 | recall@5=0.3333 | running_recall@5=0.7351 | f1=0.8000 | running_f1=0.4246 | index=144.617s | query=52.441s | qa=included_in_query_pipeline
+2026-04-03 04:07:23,558 INFO [135/1000] start sample 3hop1__147225_30587_83479
+2026-04-03 04:12:17,297 INFO [135/1000] 3hop1__147225_30587_83479 | recall@5=1.0000 | running_recall@5=0.7370 | f1=0.1250 | running_f1=0.4224 | index=235.011s | query=58.728s | qa=included_in_query_pipeline
+2026-04-03 04:12:17,297 INFO [136/1000] start sample 3hop1__389955_132457_51423
+2026-04-03 04:15:13,104 INFO [136/1000] 3hop1__389955_132457_51423 | recall@5=1.0000 | running_recall@5=0.7390 | f1=1.0000 | running_f1=0.4267 | index=135.830s | query=39.976s | qa=included_in_query_pipeline
+2026-04-03 04:15:13,104 INFO [137/1000] start sample 2hop__341176_711757
+2026-04-03 04:18:30,635 INFO [137/1000] 2hop__341176_711757 | recall@5=1.0000 | running_recall@5=0.7409 | f1=1.0000 | running_f1=0.4309 | index=160.834s | query=36.697s | qa=included_in_query_pipeline
+2026-04-03 04:18:30,636 INFO [138/1000] start sample 2hop__109131_343058
+2026-04-03 04:22:25,040 INFO [138/1000] 2hop__109131_343058 | recall@5=1.0000 | running_recall@5=0.7428 | f1=0.0000 | running_f1=0.4277 | index=209.415s | query=24.990s | qa=included_in_query_pipeline
+2026-04-03 04:22:25,040 INFO [139/1000] start sample 4hop3__426860_88460_30152_20999
+2026-04-03 04:24:30,836 INFO [139/1000] 4hop3__426860_88460_30152_20999 | recall@5=0.2500 | running_recall@5=0.7392 | f1=0.0000 | running_f1=0.4247 | index=65.054s | query=60.741s | qa=included_in_query_pipeline
+2026-04-03 04:24:30,836 INFO [140/1000] start sample 2hop__857585_14251
+2026-04-03 04:28:25,531 INFO [140/1000] 2hop__857585_14251 | recall@5=0.5000 | running_recall@5=0.7375 | f1=1.0000 | running_f1=0.4288 | index=163.761s | query=70.934s | qa=included_in_query_pipeline
+2026-04-03 04:28:25,532 INFO [141/1000] start sample 2hop__61714_64633
+2026-04-03 04:33:17,047 INFO [141/1000] 2hop__61714_64633 | recall@5=0.5000 | running_recall@5=0.7358 | f1=1.0000 | running_f1=0.4328 | index=239.565s | query=51.949s | qa=included_in_query_pipeline
+2026-04-03 04:33:17,047 INFO [142/1000] start sample 2hop__228_90265
+2026-04-03 04:37:46,326 INFO [142/1000] 2hop__228_90265 | recall@5=0.5000 | running_recall@5=0.7342 | f1=0.0000 | running_f1=0.4298 | index=231.977s | query=37.302s | qa=included_in_query_pipeline
+2026-04-03 04:37:46,327 INFO [143/1000] start sample 3hop1__255970_831637_91775
+2026-04-03 04:39:13,278 INFO [143/1000] 3hop1__255970_831637_91775 | recall@5=0.6667 | running_recall@5=0.7337 | f1=0.0000 | running_f1=0.4268 | index=26.941s | query=60.010s | qa=included_in_query_pipeline
+2026-04-03 04:39:13,278 INFO [144/1000] start sample 3hop1__604797_443779_52195
+2026-04-03 04:41:45,901 INFO [144/1000] 3hop1__604797_443779_52195 | recall@5=0.6667 | running_recall@5=0.7332 | f1=1.0000 | running_f1=0.4307 | index=78.441s | query=74.181s | qa=included_in_query_pipeline
+2026-04-03 04:41:45,901 INFO [145/1000] start sample 4hop1__88342_75218_128008_89859
+2026-04-03 04:46:04,903 INFO [145/1000] 4hop1__88342_75218_128008_89859 | recall@5=0.5000 | running_recall@5=0.7316 | f1=0.6667 | running_f1=0.4324 | index=173.418s | query=85.582s | qa=included_in_query_pipeline
+2026-04-03 04:46:04,903 INFO [146/1000] start sample 2hop__527400_159673
+2026-04-03 04:50:56,037 INFO [146/1000] 2hop__527400_159673 | recall@5=0.5000 | running_recall@5=0.7300 | f1=1.0000 | running_f1=0.4363 | index=200.316s | query=90.818s | qa=included_in_query_pipeline
+2026-04-03 04:50:56,038 INFO [147/1000] start sample 4hop3__524186_219173_862998_72134
+2026-04-03 04:54:19,055 INFO [147/1000] 4hop3__524186_219173_862998_72134 | recall@5=0.7500 | running_recall@5=0.7302 | f1=0.0000 | running_f1=0.4333 | index=139.914s | query=63.102s | qa=included_in_query_pipeline
+2026-04-03 04:54:19,055 INFO [148/1000] start sample 4hop2__161602_474028_88460_20985
+2026-04-03 04:57:46,495 INFO [148/1000] 4hop2__161602_474028_88460_20985 | recall@5=0.5000 | running_recall@5=0.7286 | f1=0.0000 | running_f1=0.4304 | index=145.243s | query=62.196s | qa=included_in_query_pipeline
+2026-04-03 04:57:46,495 INFO [149/1000] start sample 2hop__83405_158262
+2026-04-03 05:02:26,583 INFO [149/1000] 2hop__83405_158262 | recall@5=0.5000 | running_recall@5=0.7271 | f1=1.0000 | running_f1=0.4342 | index=225.822s | query=54.265s | qa=included_in_query_pipeline
+2026-04-03 05:02:26,583 INFO [150/1000] start sample 3hop1__140786_2053_52946
+2026-04-03 05:04:37,252 INFO [150/1000] 3hop1__140786_2053_52946 | recall@5=1.0000 | running_recall@5=0.7289 | f1=1.0000 | running_f1=0.4380 | index=54.768s | query=75.900s | qa=included_in_query_pipeline
+2026-04-03 05:04:37,252 INFO [151/1000] start sample 2hop__85463_54688
+2026-04-03 05:09:19,779 INFO [151/1000] 2hop__85463_54688 | recall@5=0.5000 | running_recall@5=0.7274 | f1=0.0000 | running_f1=0.4351 | index=225.891s | query=56.636s | qa=included_in_query_pipeline
+2026-04-03 05:09:19,780 INFO [152/1000] start sample 3hop1__160324_131905_41948
+2026-04-03 05:13:55,866 INFO [152/1000] 3hop1__160324_131905_41948 | recall@5=0.6667 | running_recall@5=0.7270 | f1=0.0000 | running_f1=0.4322 | index=212.512s | query=63.574s | qa=included_in_query_pipeline
+2026-04-03 05:13:55,866 INFO [153/1000] start sample 2hop__158275_35739
+2026-04-03 05:19:32,879 INFO [153/1000] 2hop__158275_35739 | recall@5=0.0000 | running_recall@5=0.7222 | f1=1.0000 | running_f1=0.4359 | index=265.975s | query=71.037s | qa=included_in_query_pipeline
+2026-04-03 05:19:32,879 INFO [154/1000] start sample 3hop2__87184_92991_76291
+2026-04-03 05:23:53,696 INFO [154/1000] 3hop2__87184_92991_76291 | recall@5=0.6667 | running_recall@5=0.7219 | f1=1.0000 | running_f1=0.4396 | index=158.757s | query=102.060s | qa=included_in_query_pipeline
+2026-04-03 05:23:53,696 INFO [155/1000] start sample 2hop__259228_793698
+2026-04-03 05:27:52,493 INFO [155/1000] 2hop__259228_793698 | recall@5=1.0000 | running_recall@5=0.7237 | f1=0.0000 | running_f1=0.4367 | index=208.133s | query=30.664s | qa=included_in_query_pipeline
+2026-04-03 05:27:52,493 INFO [156/1000] start sample 2hop__632234_122868
+2026-04-03 05:31:38,442 INFO [156/1000] 2hop__632234_122868 | recall@5=1.0000 | running_recall@5=0.7254 | f1=1.0000 | running_f1=0.4403 | index=190.880s | query=35.067s | qa=included_in_query_pipeline
+2026-04-03 05:31:38,442 INFO [157/1000] start sample 2hop__488811_30110
+2026-04-03 05:36:04,574 INFO [157/1000] 2hop__488811_30110 | recall@5=0.5000 | running_recall@5=0.7240 | f1=0.0000 | running_f1=0.4375 | index=209.663s | query=56.468s | qa=included_in_query_pipeline
+2026-04-03 05:36:04,574 INFO [158/1000] start sample 2hop__284613_87295
+2026-04-03 05:40:10,820 INFO [158/1000] 2hop__284613_87295 | recall@5=1.0000 | running_recall@5=0.7257 | f1=1.0000 | running_f1=0.4411 | index=209.110s | query=37.135s | qa=included_in_query_pipeline
+2026-04-03 05:40:10,820 INFO [159/1000] start sample 2hop__79875_72187
+2026-04-03 05:42:36,040 INFO [159/1000] 2hop__79875_72187 | recall@5=1.0000 | running_recall@5=0.7275 | f1=1.0000 | running_f1=0.4446 | index=90.000s | query=55.219s | qa=included_in_query_pipeline
+2026-04-03 05:42:36,040 INFO [160/1000] start sample 4hop1__842143_153080_33897_81096
+2026-04-03 05:45:00,103 INFO [160/1000] 4hop1__842143_153080_33897_81096 | recall@5=0.7500 | running_recall@5=0.7276 | f1=0.0000 | running_f1=0.4418 | index=95.872s | query=48.190s | qa=included_in_query_pipeline
+2026-04-03 05:45:00,103 INFO [161/1000] start sample 2hop__538735_3296
+2026-04-03 05:48:33,123 INFO [161/1000] 2hop__538735_3296 | recall@5=1.0000 | running_recall@5=0.7293 | f1=1.0000 | running_f1=0.4453 | index=180.131s | query=32.889s | qa=included_in_query_pipeline
+2026-04-03 05:48:33,123 INFO [162/1000] start sample 2hop__852122_150107
+2026-04-03 05:52:38,208 INFO [162/1000] 2hop__852122_150107 | recall@5=1.0000 | running_recall@5=0.7310 | f1=0.8889 | running_f1=0.4480 | index=201.860s | query=43.224s | qa=included_in_query_pipeline
+2026-04-03 05:52:38,208 INFO [163/1000] start sample 2hop__123145_80420
+2026-04-03 05:56:33,964 INFO [163/1000] 2hop__123145_80420 | recall@5=1.0000 | running_recall@5=0.7326 | f1=1.0000 | running_f1=0.4514 | index=187.986s | query=47.770s | qa=included_in_query_pipeline
+2026-04-03 05:56:33,965 INFO [164/1000] start sample 4hop1__342858_131850_33897_81096
+2026-04-03 05:58:42,376 INFO [164/1000] 4hop1__342858_131850_33897_81096 | recall@5=0.5000 | running_recall@5=0.7312 | f1=1.0000 | running_f1=0.4548 | index=79.115s | query=49.295s | qa=included_in_query_pipeline
+2026-04-03 05:58:42,376 INFO [165/1000] start sample 2hop__43776_162341
+2026-04-03 06:03:20,699 INFO [165/1000] 2hop__43776_162341 | recall@5=0.0000 | running_recall@5=0.7268 | f1=0.0000 | running_f1=0.4520 | index=230.289s | query=48.034s | qa=included_in_query_pipeline
+2026-04-03 06:03:20,699 INFO [166/1000] start sample 2hop__159737_27110
+2026-04-03 06:07:44,364 INFO [166/1000] 2hop__159737_27110 | recall@5=1.0000 | running_recall@5=0.7284 | f1=0.0000 | running_f1=0.4493 | index=200.457s | query=63.207s | qa=included_in_query_pipeline
+2026-04-03 06:07:44,364 INFO [167/1000] start sample 3hop1__691197_15840_36014
+2026-04-03 06:12:19,716 INFO [167/1000] 3hop1__691197_15840_36014 | recall@5=0.6667 | running_recall@5=0.7280 | f1=0.0000 | running_f1=0.4466 | index=232.968s | query=42.384s | qa=included_in_query_pipeline
+2026-04-03 06:12:19,716 INFO [168/1000] start sample 3hop1__239036_15840_36014
+2026-04-03 06:14:11,760 INFO [168/1000] 3hop1__239036_15840_36014 | recall@5=1.0000 | running_recall@5=0.7297 | f1=0.0000 | running_f1=0.4439 | index=61.361s | query=50.683s | qa=included_in_query_pipeline
+2026-04-03 06:14:11,760 INFO [169/1000] start sample 3hop1__90327_83076_319330
+2026-04-03 06:19:01,440 INFO [169/1000] 3hop1__90327_83076_319330 | recall@5=1.0000 | running_recall@5=0.7313 | f1=1.0000 | running_f1=0.4472 | index=222.496s | query=67.183s | qa=included_in_query_pipeline
+2026-04-03 06:19:01,441 INFO [170/1000] start sample 2hop__223823_29898
+2026-04-03 06:22:58,199 INFO [170/1000] 2hop__223823_29898 | recall@5=0.5000 | running_recall@5=0.7299 | f1=0.5000 | running_f1=0.4475 | index=184.263s | query=52.495s | qa=included_in_query_pipeline
+2026-04-03 06:22:58,199 INFO [171/1000] start sample 3hop2__326964_7721_7713
+2026-04-03 06:26:52,003 INFO [171/1000] 3hop2__326964_7721_7713 | recall@5=1.0000 | running_recall@5=0.7315 | f1=0.8000 | running_f1=0.4496 | index=155.967s | query=77.836s | qa=included_in_query_pipeline
+2026-04-03 06:26:52,004 INFO [172/1000] start sample 2hop__75207_46837
+2026-04-03 06:31:46,738 INFO [172/1000] 2hop__75207_46837 | recall@5=0.5000 | running_recall@5=0.7301 | f1=1.0000 | running_f1=0.4528 | index=244.154s | query=50.580s | qa=included_in_query_pipeline
+2026-04-03 06:31:46,738 INFO [173/1000] start sample 4hop2__161602_474028_88460_63559
+2026-04-03 06:35:42,132 INFO [173/1000] 4hop2__161602_474028_88460_63559 | recall@5=0.5000 | running_recall@5=0.7288 | f1=0.0000 | running_f1=0.4502 | index=167.831s | query=67.563s | qa=included_in_query_pipeline
+2026-04-03 06:35:42,133 INFO [174/1000] start sample 2hop__846388_19320
+2026-04-03 06:40:17,519 INFO [174/1000] 2hop__846388_19320 | recall@5=1.0000 | running_recall@5=0.7304 | f1=1.0000 | running_f1=0.4534 | index=238.366s | query=37.020s | qa=included_in_query_pipeline
+2026-04-03 06:40:17,519 INFO [175/1000] start sample 3hop1__79039_131926_90707
+2026-04-03 06:43:35,772 INFO [175/1000] 3hop1__79039_131926_90707 | recall@5=0.6667 | running_recall@5=0.7300 | f1=0.0000 | running_f1=0.4508 | index=142.109s | query=56.143s | qa=included_in_query_pipeline
+2026-04-03 06:43:35,772 INFO [176/1000] start sample 3hop1__222497_309482_89834
+2026-04-03 06:48:26,465 INFO [176/1000] 3hop1__222497_309482_89834 | recall@5=0.6667 | running_recall@5=0.7296 | f1=1.0000 | running_f1=0.4539 | index=227.275s | query=63.418s | qa=included_in_query_pipeline
+2026-04-03 06:48:26,465 INFO [177/1000] start sample 2hop__435184_84856
+2026-04-03 06:52:28,586 INFO [177/1000] 2hop__435184_84856 | recall@5=0.5000 | running_recall@5=0.7283 | f1=0.0000 | running_f1=0.4513 | index=195.022s | query=47.098s | qa=included_in_query_pipeline
+2026-04-03 06:52:28,586 INFO [178/1000] start sample 3hop1__152880_131926_13165
+2026-04-03 06:57:08,772 INFO [178/1000] 3hop1__152880_131926_13165 | recall@5=0.3333 | running_recall@5=0.7261 | f1=0.8571 | running_f1=0.4536 | index=207.388s | query=72.797s | qa=included_in_query_pipeline
+2026-04-03 06:57:08,772 INFO [179/1000] start sample 2hop__17508_17335
+2026-04-03 07:01:25,588 INFO [179/1000] 2hop__17508_17335 | recall@5=0.5000 | running_recall@5=0.7249 | f1=1.0000 | running_f1=0.4566 | index=224.226s | query=32.589s | qa=included_in_query_pipeline
+2026-04-03 07:01:25,588 INFO [180/1000] start sample 3hop1__617062_127905_80487
+2026-04-03 07:04:50,970 INFO [180/1000] 3hop1__617062_127905_80487 | recall@5=0.6667 | running_recall@5=0.7245 | f1=0.5000 | running_f1=0.4569 | index=165.722s | query=39.659s | qa=included_in_query_pipeline
+2026-04-03 07:04:50,970 INFO [181/1000] start sample 4hop2__567956_14670_8987_8529
+2026-04-03 07:08:55,277 INFO [181/1000] 4hop2__567956_14670_8987_8529 | recall@5=0.7500 | running_recall@5=0.7247 | f1=0.0000 | running_f1=0.4544 | index=156.832s | query=87.474s | qa=included_in_query_pipeline
+2026-04-03 07:08:55,277 INFO [182/1000] start sample 3hop1__458916_651917_47686
+2026-04-03 07:12:33,212 INFO [182/1000] 3hop1__458916_651917_47686 | recall@5=0.6667 | running_recall@5=0.7244 | f1=1.0000 | running_f1=0.4574 | index=169.369s | query=48.566s | qa=included_in_query_pipeline
+2026-04-03 07:12:33,212 INFO [183/1000] start sample 4hop3__827497_354093_254885_76356
+2026-04-03 07:17:12,786 INFO [183/1000] 4hop3__827497_354093_254885_76356 | recall@5=1.0000 | running_recall@5=0.7259 | f1=1.0000 | running_f1=0.4603 | index=215.349s | query=64.224s | qa=included_in_query_pipeline
+2026-04-03 07:17:12,787 INFO [184/1000] start sample 2hop__543050_245420
+2026-04-03 07:19:53,651 INFO [184/1000] 2hop__543050_245420 | recall@5=1.0000 | running_recall@5=0.7274 | f1=1.0000 | running_f1=0.4633 | index=125.265s | query=35.600s | qa=included_in_query_pipeline
+2026-04-03 07:19:53,652 INFO [185/1000] start sample 2hop__88372_83837
+2026-04-03 07:24:05,803 INFO [185/1000] 2hop__88372_83837 | recall@5=1.0000 | running_recall@5=0.7288 | f1=1.0000 | running_f1=0.4662 | index=203.122s | query=49.029s | qa=included_in_query_pipeline
+2026-04-03 07:24:05,804 INFO [186/1000] start sample 4hop3__15567_29339_508306_70744
+2026-04-03 07:28:28,490 INFO [186/1000] 4hop3__15567_29339_508306_70744 | recall@5=0.7500 | running_recall@5=0.7289 | f1=1.0000 | running_f1=0.4690 | index=178.428s | query=84.257s | qa=included_in_query_pipeline
+2026-04-03 07:28:28,490 INFO [187/1000] start sample 2hop__203985_524737
+2026-04-03 07:31:32,174 INFO [187/1000] 2hop__203985_524737 | recall@5=1.0000 | running_recall@5=0.7304 | f1=0.5714 | running_f1=0.4696 | index=140.945s | query=42.739s | qa=included_in_query_pipeline
+2026-04-03 07:31:32,174 INFO [188/1000] start sample 2hop__242753_658778
+2026-04-03 07:35:48,087 INFO [188/1000] 2hop__242753_658778 | recall@5=1.0000 | running_recall@5=0.7318 | f1=0.8000 | running_f1=0.4713 | index=208.957s | query=46.956s | qa=included_in_query_pipeline
+2026-04-03 07:35:48,088 INFO [189/1000] start sample 2hop__607517_161450
+2026-04-03 07:39:03,513 INFO [189/1000] 2hop__607517_161450 | recall@5=1.0000 | running_recall@5=0.7332 | f1=0.8000 | running_f1=0.4731 | index=167.496s | query=27.929s | qa=included_in_query_pipeline
+2026-04-03 07:39:03,514 INFO [190/1000] start sample 2hop__461639_83837
+2026-04-03 07:42:37,916 INFO [190/1000] 2hop__461639_83837 | recall@5=1.0000 | running_recall@5=0.7346 | f1=1.0000 | running_f1=0.4759 | index=166.594s | query=47.808s | qa=included_in_query_pipeline
+2026-04-03 07:42:37,916 INFO [191/1000] start sample 3hop1__469478_15840_36002
+2026-04-03 07:44:06,821 INFO [191/1000] 3hop1__469478_15840_36002 | recall@5=0.3333 | running_recall@5=0.7325 | f1=0.0000 | running_f1=0.4734 | index=51.377s | query=37.527s | qa=included_in_query_pipeline
+2026-04-03 07:44:06,821 INFO [192/1000] start sample 2hop__15650_77173
+2026-04-03 07:48:15,726 INFO [192/1000] 2hop__15650_77173 | recall@5=1.0000 | running_recall@5=0.7339 | f1=1.0000 | running_f1=0.4761 | index=208.359s | query=40.544s | qa=included_in_query_pipeline
+2026-04-03 07:48:15,726 INFO [193/1000] start sample 2hop__20256_74481
+2026-04-03 07:53:06,142 INFO [193/1000] 2hop__20256_74481 | recall@5=0.5000 | running_recall@5=0.7327 | f1=0.0000 | running_f1=0.4736 | index=244.825s | query=45.591s | qa=included_in_query_pipeline
+2026-04-03 07:53:06,142 INFO [194/1000] start sample 2hop__149710_108549
+2026-04-03 07:57:15,536 INFO [194/1000] 2hop__149710_108549 | recall@5=1.0000 | running_recall@5=0.7341 | f1=0.0000 | running_f1=0.4712 | index=202.143s | query=47.250s | qa=included_in_query_pipeline
+2026-04-03 07:57:15,536 INFO [195/1000] start sample 2hop__25788_25839
+2026-04-03 08:00:59,913 INFO [195/1000] 2hop__25788_25839 | recall@5=0.0000 | running_recall@5=0.7303 | f1=0.0000 | running_f1=0.4688 | index=188.758s | query=35.618s | qa=included_in_query_pipeline
+2026-04-03 08:00:59,913 INFO [196/1000] start sample 2hop__335418_279684
+2026-04-03 08:04:48,678 INFO [196/1000] 2hop__335418_279684 | recall@5=1.0000 | running_recall@5=0.7317 | f1=0.0000 | running_f1=0.4664 | index=184.327s | query=44.437s | qa=included_in_query_pipeline
+2026-04-03 08:04:48,678 INFO [197/1000] start sample 2hop__500379_126537
+2026-04-03 08:09:12,633 INFO [197/1000] 2hop__500379_126537 | recall@5=1.0000 | running_recall@5=0.7331 | f1=1.0000 | running_f1=0.4691 | index=221.042s | query=42.912s | qa=included_in_query_pipeline
+2026-04-03 08:09:12,633 INFO [198/1000] start sample 2hop__29339_40482
+2026-04-03 08:15:19,740 INFO [198/1000] 2hop__29339_40482 | recall@5=0.5000 | running_recall@5=0.7319 | f1=0.6667 | running_f1=0.4701 | index=257.183s | query=109.924s | qa=included_in_query_pipeline
+2026-04-03 08:15:19,740 INFO [199/1000] start sample 4hop2__71753_158985_70784_61381
+2026-04-03 08:18:11,980 INFO [199/1000] 4hop2__71753_158985_70784_61381 | recall@5=0.5000 | running_recall@5=0.7307 | f1=0.0000 | running_f1=0.4677 | index=124.627s | query=47.613s | qa=included_in_query_pipeline
+2026-04-03 08:18:11,981 INFO [200/1000] start sample 4hop2__105527_39078_8987_8974
+2026-04-03 08:20:53,838 INFO [200/1000] 4hop2__105527_39078_8987_8974 | recall@5=0.5000 | running_recall@5=0.7296 | f1=0.5000 | running_f1=0.4679 | index=84.644s | query=77.212s | qa=included_in_query_pipeline
+2026-04-03 08:20:53,838 INFO [201/1000] start sample 4hop2__161602_474028_88460_21034
+2026-04-03 08:23:05,614 INFO [201/1000] 4hop2__161602_474028_88460_21034 | recall@5=0.5000 | running_recall@5=0.7284 | f1=0.0000 | running_f1=0.4656 | index=79.896s | query=51.880s | qa=included_in_query_pipeline
+2026-04-03 08:23:05,614 INFO [202/1000] start sample 3hop1__756602_831637_91775
+2026-04-03 08:24:21,201 INFO [202/1000] 3hop1__756602_831637_91775 | recall@5=0.6667 | running_recall@5=0.7281 | f1=0.0000 | running_f1=0.4633 | index=19.305s | query=56.282s | qa=included_in_query_pipeline
+2026-04-03 08:24:21,201 INFO [203/1000] start sample 3hop2__28727_92991_76291
+2026-04-03 08:27:52,530 INFO [203/1000] 3hop2__28727_92991_76291 | recall@5=0.6667 | running_recall@5=0.7278 | f1=0.0000 | running_f1=0.4610 | index=158.646s | query=52.683s | qa=included_in_query_pipeline
+2026-04-03 08:27:52,530 INFO [204/1000] start sample 4hop1__88342_75218_128008_86588
+2026-04-03 08:30:08,493 INFO [204/1000] 4hop1__88342_75218_128008_86588 | recall@5=0.5000 | running_recall@5=0.7267 | f1=0.0000 | running_f1=0.4587 | index=69.038s | query=66.924s | qa=included_in_query_pipeline
+2026-04-03 08:30:08,493 INFO [205/1000] start sample 2hop__703767_37168
+2026-04-03 08:34:21,447 INFO [205/1000] 2hop__703767_37168 | recall@5=1.0000 | running_recall@5=0.7280 | f1=1.0000 | running_f1=0.4614 | index=204.510s | query=48.443s | qa=included_in_query_pipeline
+2026-04-03 08:34:21,447 INFO [206/1000] start sample 4hop1__130404_59747_211319_557671
+2026-04-03 08:35:45,679 INFO [206/1000] 4hop1__130404_59747_211319_557671 | recall@5=0.7500 | running_recall@5=0.7282 | f1=0.0000 | running_f1=0.4591 | index=29.980s | query=54.252s | qa=included_in_query_pipeline
+2026-04-03 08:35:45,679 INFO [207/1000] start sample 2hop__135668_561444
+2026-04-03 08:40:36,257 INFO [207/1000] 2hop__135668_561444 | recall@5=1.0000 | running_recall@5=0.7295 | f1=0.0000 | running_f1=0.4569 | index=246.871s | query=43.707s | qa=included_in_query_pipeline
+2026-04-03 08:40:36,257 INFO [208/1000] start sample 4hop3__257340_88460_30152_20999
+2026-04-03 08:43:11,637 INFO [208/1000] 4hop3__257340_88460_30152_20999 | recall@5=0.2500 | running_recall@5=0.7272 | f1=0.0000 | running_f1=0.4547 | index=84.725s | query=70.654s | qa=included_in_query_pipeline
+2026-04-03 08:43:11,638 INFO [209/1000] start sample 2hop__35137_22932
+2026-04-03 08:47:11,021 INFO [209/1000] 2hop__35137_22932 | recall@5=0.0000 | running_recall@5=0.7237 | f1=0.0000 | running_f1=0.4525 | index=175.740s | query=63.643s | qa=included_in_query_pipeline
+2026-04-03 08:47:11,021 INFO [210/1000] start sample 3hop1__208108_547811_80702
+2026-04-03 08:51:17,403 INFO [210/1000] 3hop1__208108_547811_80702 | recall@5=1.0000 | running_recall@5=0.7250 | f1=1.0000 | running_f1=0.4551 | index=199.918s | query=46.463s | qa=included_in_query_pipeline
+2026-04-03 08:51:17,403 INFO [211/1000] start sample 2hop__747306_72813
+2026-04-03 08:54:24,207 INFO [211/1000] 2hop__747306_72813 | recall@5=0.5000 | running_recall@5=0.7239 | f1=0.0000 | running_f1=0.4530 | index=132.940s | query=53.864s | qa=included_in_query_pipeline
+2026-04-03 08:54:24,207 INFO [212/1000] start sample 2hop__636597_480615
+2026-04-03 08:55:28,030 INFO [212/1000] 2hop__636597_480615 | recall@5=1.0000 | running_recall@5=0.7252 | f1=1.0000 | running_f1=0.4556 | index=30.742s | query=33.080s | qa=included_in_query_pipeline
+2026-04-03 08:55:28,030 INFO [213/1000] start sample 3hop1__30885_160713_77246
+2026-04-03 09:00:31,973 INFO [213/1000] 3hop1__30885_160713_77246 | recall@5=1.0000 | running_recall@5=0.7265 | f1=0.0000 | running_f1=0.4534 | index=198.952s | query=104.991s | qa=included_in_query_pipeline
+2026-04-03 09:00:31,974 INFO [214/1000] start sample 3hop1__699507_792411_51423
+2026-04-03 09:03:15,072 INFO [214/1000] 3hop1__699507_792411_51423 | recall@5=0.3333 | running_recall@5=0.7247 | f1=0.0000 | running_f1=0.4513 | index=124.652s | query=38.446s | qa=included_in_query_pipeline
+2026-04-03 09:03:15,072 INFO [215/1000] start sample 4hop1__152146_5274_458768_33632
+2026-04-03 09:06:08,731 INFO [215/1000] 4hop1__152146_5274_458768_33632 | recall@5=0.2500 | running_recall@5=0.7225 | f1=0.0000 | running_f1=0.4492 | index=111.599s | query=62.060s | qa=included_in_query_pipeline
+2026-04-03 09:06:08,731 INFO [216/1000] start sample 3hop2__92991_72083_76291
+2026-04-03 09:08:42,779 INFO [216/1000] 3hop2__92991_72083_76291 | recall@5=0.6667 | running_recall@5=0.7222 | f1=0.0000 | running_f1=0.4471 | index=94.029s | query=60.019s | qa=included_in_query_pipeline
+2026-04-03 09:08:42,779 INFO [217/1000] start sample 2hop__763380_74735
+2026-04-03 09:10:42,988 INFO [217/1000] 2hop__763380_74735 | recall@5=1.0000 | running_recall@5=0.7235 | f1=0.0000 | running_f1=0.4451 | index=82.857s | query=37.351s | qa=included_in_query_pipeline
+2026-04-03 09:10:42,988 INFO [218/1000] start sample 3hop1__401538_132457_47686
+2026-04-03 09:14:10,627 INFO [218/1000] 3hop1__401538_132457_47686 | recall@5=0.6667 | running_recall@5=0.7232 | f1=0.0000 | running_f1=0.4430 | index=145.803s | query=61.834s | qa=included_in_query_pipeline
+2026-04-03 09:14:10,627 INFO [219/1000] start sample 2hop__142130_67668
+2026-04-03 09:18:45,826 INFO [219/1000] 2hop__142130_67668 | recall@5=1.0000 | running_recall@5=0.7245 | f1=1.0000 | running_f1=0.4456 | index=223.871s | query=51.327s | qa=included_in_query_pipeline
+2026-04-03 09:18:45,826 INFO [220/1000] start sample 2hop__80834_148696
+2026-04-03 09:22:17,933 INFO [220/1000] 2hop__80834_148696 | recall@5=0.0000 | running_recall@5=0.7212 | f1=1.0000 | running_f1=0.4481 | index=166.505s | query=45.602s | qa=included_in_query_pipeline
+2026-04-03 09:22:17,933 INFO [221/1000] start sample 3hop1__649930_15840_36002
+2026-04-03 09:24:47,879 INFO [221/1000] 3hop1__649930_15840_36002 | recall@5=0.3333 | running_recall@5=0.7195 | f1=0.0000 | running_f1=0.4461 | index=116.842s | query=33.103s | qa=included_in_query_pipeline
+2026-04-03 09:24:47,879 INFO [222/1000] start sample 2hop__215124_83837
+2026-04-03 09:27:36,748 INFO [222/1000] 2hop__215124_83837 | recall@5=1.0000 | running_recall@5=0.7207 | f1=1.0000 | running_f1=0.4486 | index=119.308s | query=49.561s | qa=included_in_query_pipeline
+2026-04-03 09:27:36,749 INFO [223/1000] start sample 2hop__804417_126089
+2026-04-03 09:30:14,207 INFO [223/1000] 2hop__804417_126089 | recall@5=0.5000 | running_recall@5=0.7197 | f1=0.0000 | running_f1=0.4465 | index=128.782s | query=28.676s | qa=included_in_query_pipeline
+2026-04-03 09:30:14,207 INFO [224/1000] start sample 2hop__434218_29898
+2026-04-03 09:34:18,350 INFO [224/1000] 2hop__434218_29898 | recall@5=1.0000 | running_recall@5=0.7210 | f1=0.5000 | running_f1=0.4468 | index=198.601s | query=45.542s | qa=included_in_query_pipeline
+2026-04-03 09:34:18,350 INFO [225/1000] start sample 3hop1__804367_160713_77246
+2026-04-03 09:37:16,809 INFO [225/1000] 3hop1__804367_160713_77246 | recall@5=1.0000 | running_recall@5=0.7222 | f1=0.0000 | running_f1=0.4448 | index=89.283s | query=89.176s | qa=included_in_query_pipeline
+2026-04-03 09:37:16,810 INFO [226/1000] start sample 3hop2__131820_132454_61019
+2026-04-03 09:40:47,072 INFO [226/1000] 3hop2__131820_132454_61019 | recall@5=1.0000 | running_recall@5=0.7235 | f1=1.0000 | running_f1=0.4472 | index=158.643s | query=51.619s | qa=included_in_query_pipeline
+2026-04-03 09:40:47,072 INFO [227/1000] start sample 2hop__673655_316668
+2026-04-03 09:44:46,819 INFO [227/1000] 2hop__673655_316668 | recall@5=1.0000 | running_recall@5=0.7247 | f1=1.0000 | running_f1=0.4497 | index=203.618s | query=36.129s | qa=included_in_query_pipeline
+2026-04-03 09:44:46,819 INFO [228/1000] start sample 3hop1__843207_755530_88011
+2026-04-03 09:49:19,399 INFO [228/1000] 3hop1__843207_755530_88011 | recall@5=1.0000 | running_recall@5=0.7259 | f1=0.0000 | running_f1=0.4477 | index=219.797s | query=52.781s | qa=included_in_query_pipeline
+2026-04-03 09:49:19,399 INFO [229/1000] start sample 2hop__40697_46621
+2026-04-03 09:53:52,546 INFO [229/1000] 2hop__40697_46621 | recall@5=0.5000 | running_recall@5=0.7249 | f1=0.0000 | running_f1=0.4458 | index=220.839s | query=52.308s | qa=included_in_query_pipeline
+2026-04-03 09:53:52,547 INFO [230/1000] start sample 3hop1__92991_73181_68042
+2026-04-03 09:56:25,485 INFO [230/1000] 3hop1__92991_73181_68042 | recall@5=0.6667 | running_recall@5=0.7246 | f1=0.6667 | running_f1=0.4467 | index=91.913s | query=61.025s | qa=included_in_query_pipeline
+2026-04-03 09:56:25,485 INFO [231/1000] start sample 2hop__754753_57816
+2026-04-03 10:00:12,361 INFO [231/1000] 2hop__754753_57816 | recall@5=1.0000 | running_recall@5=0.7258 | f1=1.0000 | running_f1=0.4491 | index=182.135s | query=44.740s | qa=included_in_query_pipeline
+2026-04-03 10:00:12,361 INFO [232/1000] start sample 4hop3__862_846_613770_7713
+2026-04-03 10:02:02,325 INFO [232/1000] 4hop3__862_846_613770_7713 | recall@5=0.5000 | running_recall@5=0.7249 | f1=0.0000 | running_f1=0.4472 | index=22.472s | query=87.492s | qa=included_in_query_pipeline
+2026-04-03 10:02:02,326 INFO [233/1000] start sample 2hop__612719_6455
+2026-04-03 10:04:22,990 INFO [233/1000] 2hop__612719_6455 | recall@5=1.0000 | running_recall@5=0.7260 | f1=1.0000 | running_f1=0.4495 | index=108.320s | query=32.344s | qa=included_in_query_pipeline
+2026-04-03 10:04:22,990 INFO [234/1000] start sample 3hop2__326964_7855_7713
+2026-04-03 10:08:15,925 INFO [234/1000] 3hop2__326964_7855_7713 | recall@5=0.6667 | running_recall@5=0.7258 | f1=0.8000 | running_f1=0.4510 | index=155.288s | query=77.646s | qa=included_in_query_pipeline
+2026-04-03 10:08:15,926 INFO [235/1000] start sample 4hop1__131002_53706_795904_580996
+2026-04-03 10:11:40,879 INFO [235/1000] 4hop1__131002_53706_795904_580996 | recall@5=1.0000 | running_recall@5=0.7270 | f1=1.0000 | running_f1=0.4534 | index=156.116s | query=48.836s | qa=included_in_query_pipeline
+2026-04-03 10:11:40,879 INFO [236/1000] start sample 3hop1__326941_366209_84283
+2026-04-03 10:12:38,934 INFO [236/1000] 3hop1__326941_366209_84283 | recall@5=1.0000 | running_recall@5=0.7281 | f1=0.0000 | running_f1=0.4515 | index=21.349s | query=36.705s | qa=included_in_query_pipeline
+2026-04-03 10:12:38,934 INFO [237/1000] start sample 3hop2__132957_800948_40768
+2026-04-03 10:15:32,622 INFO [237/1000] 3hop2__132957_800948_40768 | recall@5=1.0000 | running_recall@5=0.7293 | f1=0.0000 | running_f1=0.4496 | index=114.656s | query=59.031s | qa=included_in_query_pipeline
+2026-04-03 10:15:32,622 INFO [238/1000] start sample 3hop1__106042_64399_59680
+2026-04-03 10:19:21,397 INFO [238/1000] 3hop1__106042_64399_59680 | recall@5=0.6667 | running_recall@5=0.7290 | f1=0.0000 | running_f1=0.4477 | index=154.300s | query=74.474s | qa=included_in_query_pipeline
+2026-04-03 10:19:21,397 INFO [239/1000] start sample 2hop__144763_599630
+2026-04-03 10:21:56,812 INFO [239/1000] 2hop__144763_599630 | recall@5=1.0000 | running_recall@5=0.7301 | f1=1.0000 | running_f1=0.4500 | index=115.893s | query=39.522s | qa=included_in_query_pipeline
+2026-04-03 10:21:56,813 INFO [240/1000] start sample 2hop__71294_494136
+2026-04-03 10:25:48,080 INFO [240/1000] 2hop__71294_494136 | recall@5=1.0000 | running_recall@5=0.7313 | f1=0.0000 | running_f1=0.4481 | index=198.827s | query=32.440s | qa=included_in_query_pipeline
+2026-04-03 10:25:48,080 INFO [241/1000] start sample 3hop1__379231_40769_64047
+2026-04-03 10:27:19,266 INFO [241/1000] 3hop1__379231_40769_64047 | recall@5=1.0000 | running_recall@5=0.7324 | f1=0.2500 | running_f1=0.4473 | index=38.481s | query=52.705s | qa=included_in_query_pipeline
+2026-04-03 10:27:19,266 INFO [242/1000] start sample 2hop__58939_213732
+2026-04-03 10:31:40,371 INFO [242/1000] 2hop__58939_213732 | recall@5=0.5000 | running_recall@5=0.7314 | f1=0.0000 | running_f1=0.4454 | index=218.634s | query=42.470s | qa=included_in_query_pipeline
+2026-04-03 10:31:40,371 INFO [243/1000] start sample 2hop__34594_160249
+2026-04-03 10:36:10,668 INFO [243/1000] 2hop__34594_160249 | recall@5=0.5000 | running_recall@5=0.7305 | f1=0.5000 | running_f1=0.4457 | index=220.313s | query=49.983s | qa=included_in_query_pipeline
+2026-04-03 10:36:10,668 INFO [244/1000] start sample 2hop__53433_59035
+2026-04-03 10:41:07,972 INFO [244/1000] 2hop__53433_59035 | recall@5=0.0000 | running_recall@5=0.7275 | f1=1.0000 | running_f1=0.4479 | index=253.635s | query=43.669s | qa=included_in_query_pipeline
+2026-04-03 10:41:07,973 INFO [245/1000] start sample 2hop__123545_47134
+2026-04-03 10:44:14,742 INFO [245/1000] 2hop__123545_47134 | recall@5=1.0000 | running_recall@5=0.7286 | f1=1.0000 | running_f1=0.4502 | index=153.919s | query=32.850s | qa=included_in_query_pipeline
+2026-04-03 10:44:14,742 INFO [246/1000] start sample 2hop__31995_8583
+2026-04-03 10:49:12,899 INFO [246/1000] 2hop__31995_8583 | recall@5=0.5000 | running_recall@5=0.7276 | f1=0.0000 | running_f1=0.4484 | index=263.645s | query=34.511s | qa=included_in_query_pipeline
+2026-04-03 10:49:12,899 INFO [247/1000] start sample 3hop1__28404_160713_77246
+2026-04-03 10:51:05,559 INFO [247/1000] 3hop1__28404_160713_77246 | recall@5=0.6667 | running_recall@5=0.7274 | f1=0.0000 | running_f1=0.4465 | index=22.824s | query=89.835s | qa=included_in_query_pipeline
+2026-04-03 10:51:05,560 INFO [248/1000] start sample 2hop__203437_152093
+2026-04-03 10:55:09,708 INFO [248/1000] 2hop__203437_152093 | recall@5=0.5000 | running_recall@5=0.7265 | f1=1.0000 | running_f1=0.4488 | index=198.768s | query=45.380s | qa=included_in_query_pipeline
+2026-04-03 10:55:09,708 INFO [249/1000] start sample 3hop1__836699_15840_36014
+2026-04-03 10:56:11,630 INFO [249/1000] 3hop1__836699_15840_36014 | recall@5=1.0000 | running_recall@5=0.7276 | f1=0.0000 | running_f1=0.4470 | index=17.699s | query=44.221s | qa=included_in_query_pipeline
+2026-04-03 10:56:11,630 INFO [250/1000] start sample 2hop__781079_9237
+2026-04-03 11:00:52,803 INFO [250/1000] 2hop__781079_9237 | recall@5=1.0000 | running_recall@5=0.7287 | f1=1.0000 | running_f1=0.4492 | index=214.274s | query=66.899s | qa=included_in_query_pipeline
+2026-04-03 11:00:52,803 INFO [251/1000] start sample 2hop__54651_169233
+2026-04-03 11:05:35,219 INFO [251/1000] 2hop__54651_169233 | recall@5=1.0000 | running_recall@5=0.7297 | f1=1.0000 | running_f1=0.4514 | index=232.668s | query=49.747s | qa=included_in_query_pipeline
+2026-04-03 11:05:35,219 INFO [252/1000] start sample 2hop__678516_179720
+2026-04-03 11:09:42,873 INFO [252/1000] 2hop__678516_179720 | recall@5=1.0000 | running_recall@5=0.7308 | f1=1.0000 | running_f1=0.4536 | index=209.375s | query=38.277s | qa=included_in_query_pipeline
+2026-04-03 11:09:42,873 INFO [253/1000] start sample 2hop__771727_93362
+2026-04-03 11:14:22,416 INFO [253/1000] 2hop__771727_93362 | recall@5=0.5000 | running_recall@5=0.7299 | f1=1.0000 | running_f1=0.4557 | index=213.220s | query=66.323s | qa=included_in_query_pipeline
+2026-04-03 11:14:22,417 INFO [254/1000] start sample 3hop1__545624_2053_52946
+2026-04-03 11:15:46,715 INFO [254/1000] 3hop1__545624_2053_52946 | recall@5=1.0000 | running_recall@5=0.7310 | f1=0.0000 | running_f1=0.4539 | index=23.138s | query=61.160s | qa=included_in_query_pipeline
+2026-04-03 11:15:46,715 INFO [255/1000] start sample 3hop1__102087_214799_259594
+2026-04-03 11:17:36,069 INFO [255/1000] 3hop1__102087_214799_259594 | recall@5=1.0000 | running_recall@5=0.7320 | f1=0.0000 | running_f1=0.4521 | index=66.196s | query=43.157s | qa=included_in_query_pipeline
+2026-04-03 11:17:36,069 INFO [256/1000] start sample 3hop2__230_89048_66294
+2026-04-03 11:22:18,832 INFO [256/1000] 3hop2__230_89048_66294 | recall@5=0.6667 | running_recall@5=0.7318 | f1=0.0000 | running_f1=0.4504 | index=208.640s | query=74.122s | qa=included_in_query_pipeline
+2026-04-03 11:22:18,833 INFO [257/1000] start sample 3hop1__103662_443779_52195
+2026-04-03 11:24:19,555 INFO [257/1000] 3hop1__103662_443779_52195 | recall@5=0.6667 | running_recall@5=0.7315 | f1=1.0000 | running_f1=0.4525 | index=27.620s | query=93.102s | qa=included_in_query_pipeline
+2026-04-03 11:24:19,555 INFO [258/1000] start sample 2hop__257831_123283
+2026-04-03 11:28:30,380 INFO [258/1000] 2hop__257831_123283 | recall@5=1.0000 | running_recall@5=0.7326 | f1=0.5714 | running_f1=0.4530 | index=210.120s | query=40.705s | qa=included_in_query_pipeline
+2026-04-03 11:28:30,380 INFO [259/1000] start sample 2hop__207597_63853
+2026-04-03 11:31:38,267 INFO [259/1000] 2hop__207597_63853 | recall@5=1.0000 | running_recall@5=0.7336 | f1=0.0000 | running_f1=0.4512 | index=144.629s | query=43.258s | qa=included_in_query_pipeline
+2026-04-03 11:31:38,267 INFO [260/1000] start sample 3hop1__754160_831637_91775
+2026-04-03 11:32:43,409 INFO [260/1000] 3hop1__754160_831637_91775 | recall@5=0.6667 | running_recall@5=0.7333 | f1=0.0000 | running_f1=0.4495 | index=12.876s | query=52.266s | qa=included_in_query_pipeline
+2026-04-03 11:32:43,409 INFO [261/1000] start sample 3hop1__28841_547811_80702
+2026-04-03 11:36:29,310 INFO [261/1000] 3hop1__28841_547811_80702 | recall@5=1.0000 | running_recall@5=0.7344 | f1=1.0000 | running_f1=0.4516 | index=178.258s | query=47.642s | qa=included_in_query_pipeline
+2026-04-03 11:36:29,310 INFO [262/1000] start sample 2hop__1845_38366
+2026-04-03 11:40:45,343 INFO [262/1000] 2hop__1845_38366 | recall@5=1.0000 | running_recall@5=0.7354 | f1=0.0000 | running_f1=0.4499 | index=210.218s | query=45.815s | qa=included_in_query_pipeline
+2026-04-03 11:40:45,343 INFO [263/1000] start sample 2hop__88834_356793
+2026-04-03 11:45:25,152 INFO [263/1000] 2hop__88834_356793 | recall@5=0.5000 | running_recall@5=0.7345 | f1=1.0000 | running_f1=0.4520 | index=232.950s | query=46.858s | qa=included_in_query_pipeline
+2026-04-03 11:45:25,152 INFO [264/1000] start sample 3hop1__354480_834494_34109
+2026-04-03 11:48:20,835 INFO [264/1000] 3hop1__354480_834494_34109 | recall@5=1.0000 | running_recall@5=0.7355 | f1=0.0000 | running_f1=0.4503 | index=132.435s | query=43.248s | qa=included_in_query_pipeline
+2026-04-03 11:48:20,835 INFO [265/1000] start sample 2hop__10620_79092
+2026-04-03 11:52:54,801 INFO [265/1000] 2hop__10620_79092 | recall@5=0.5000 | running_recall@5=0.7346 | f1=0.0000 | running_f1=0.4486 | index=224.353s | query=49.612s | qa=included_in_query_pipeline
+2026-04-03 11:52:54,801 INFO [266/1000] start sample 4hop1__88342_75218_128008_80286
+2026-04-03 11:55:25,109 INFO [266/1000] 4hop1__88342_75218_128008_80286 | recall@5=0.2500 | running_recall@5=0.7328 | f1=1.0000 | running_f1=0.4506 | index=76.395s | query=73.913s | qa=included_in_query_pipeline
+2026-04-03 11:55:25,110 INFO [267/1000] start sample 4hop3__754156_88460_30152_20999
+2026-04-03 11:57:39,139 INFO [267/1000] 4hop3__754156_88460_30152_20999 | recall@5=0.5000 | running_recall@5=0.7319 | f1=0.0000 | running_f1=0.4489 | index=59.541s | query=74.488s | qa=included_in_query_pipeline
+2026-04-03 11:57:39,139 INFO [268/1000] start sample 4hop1__28352_53706_795904_580996
+2026-04-03 12:00:53,778 INFO [268/1000] 4hop1__28352_53706_795904_580996 | recall@5=0.7500 | running_recall@5=0.7320 | f1=0.0000 | running_f1=0.4473 | index=137.539s | query=57.100s | qa=included_in_query_pipeline
+2026-04-03 12:00:53,779 INFO [269/1000] start sample 2hop__813461_31270
+2026-04-03 12:02:52,816 INFO [269/1000] 2hop__813461_31270 | recall@5=1.0000 | running_recall@5=0.7330 | f1=1.0000 | running_f1=0.4493 | index=83.288s | query=35.749s | qa=included_in_query_pipeline
+2026-04-03 12:02:52,816 INFO [270/1000] start sample 2hop__734582_74481
+2026-04-03 12:06:12,914 INFO [270/1000] 2hop__734582_74481 | recall@5=1.0000 | running_recall@5=0.7340 | f1=1.0000 | running_f1=0.4514 | index=158.220s | query=41.877s | qa=included_in_query_pipeline
+2026-04-03 12:06:12,914 INFO [271/1000] start sample 4hop2__71753_648517_70784_79935
+2026-04-03 12:08:50,188 INFO [271/1000] 4hop2__71753_648517_70784_79935 | recall@5=0.5000 | running_recall@5=0.7331 | f1=0.0000 | running_f1=0.4497 | index=102.964s | query=54.309s | qa=included_in_query_pipeline
+2026-04-03 12:08:50,188 INFO [272/1000] start sample 4hop1__860115_798482_131926_90707
+2026-04-03 12:11:21,864 INFO [272/1000] 4hop1__860115_798482_131926_90707 | recall@5=0.7500 | running_recall@5=0.7331 | f1=0.0000 | running_f1=0.4480 | index=101.526s | query=50.151s | qa=included_in_query_pipeline
+2026-04-03 12:11:21,865 INFO [273/1000] start sample 4hop1__819901_32392_823060_610794
+2026-04-03 12:13:01,092 INFO [273/1000] 4hop1__819901_32392_823060_610794 | recall@5=0.5000 | running_recall@5=0.7323 | f1=1.0000 | running_f1=0.4501 | index=43.378s | query=55.849s | qa=included_in_query_pipeline
+2026-04-03 12:13:01,093 INFO [274/1000] start sample 2hop__49887_573255
+2026-04-03 12:17:02,194 INFO [274/1000] 2hop__49887_573255 | recall@5=1.0000 | running_recall@5=0.7333 | f1=1.0000 | running_f1=0.4521 | index=198.417s | query=42.684s | qa=included_in_query_pipeline
+2026-04-03 12:17:02,194 INFO [275/1000] start sample 2hop__159902_362941
+2026-04-03 12:21:16,621 INFO [275/1000] 2hop__159902_362941 | recall@5=1.0000 | running_recall@5=0.7342 | f1=0.0000 | running_f1=0.4504 | index=220.190s | query=34.236s | qa=included_in_query_pipeline
+2026-04-03 12:21:16,621 INFO [276/1000] start sample 3hop1__586087_339990_54675
+2026-04-03 12:22:49,044 INFO [276/1000] 3hop1__586087_339990_54675 | recall@5=1.0000 | running_recall@5=0.7352 | f1=0.0000 | running_f1=0.4488 | index=62.316s | query=30.107s | qa=included_in_query_pipeline
+2026-04-03 12:22:49,044 INFO [277/1000] start sample 3hop2__140194_16797_51068
+2026-04-03 12:27:37,344 INFO [277/1000] 3hop2__140194_16797_51068 | recall@5=0.6667 | running_recall@5=0.7350 | f1=1.0000 | running_f1=0.4508 | index=217.214s | query=71.085s | qa=included_in_query_pipeline
+2026-04-03 12:27:37,344 INFO [278/1000] start sample 3hop1__313670_42197_18397
+2026-04-03 12:32:43,107 INFO [278/1000] 3hop1__313670_42197_18397 | recall@5=0.6667 | running_recall@5=0.7347 | f1=0.0000 | running_f1=0.4492 | index=240.865s | query=64.898s | qa=included_in_query_pipeline
+2026-04-03 12:32:43,107 INFO [279/1000] start sample 3hop2__30152_105395_20999
+2026-04-03 12:35:46,275 INFO [279/1000] 3hop2__30152_105395_20999 | recall@5=0.3333 | running_recall@5=0.7333 | f1=0.0000 | running_f1=0.4475 | index=122.572s | query=60.596s | qa=included_in_query_pipeline
+2026-04-03 12:35:46,275 INFO [280/1000] start sample 2hop__107185_64006
+2026-04-03 12:38:18,159 INFO [280/1000] 2hop__107185_64006 | recall@5=1.0000 | running_recall@5=0.7342 | f1=1.0000 | running_f1=0.4495 | index=113.058s | query=38.825s | qa=included_in_query_pipeline
+2026-04-03 12:38:18,160 INFO [281/1000] start sample 3hop1__365934_87694_64412
+2026-04-03 12:39:57,579 INFO [281/1000] 3hop1__365934_87694_64412 | recall@5=1.0000 | running_recall@5=0.7352 | f1=0.5000 | running_f1=0.4497 | index=34.221s | query=65.198s | qa=included_in_query_pipeline
+2026-04-03 12:39:57,579 INFO [282/1000] start sample 4hop1__39871_314549_131976_56103
+2026-04-03 12:44:30,761 INFO [282/1000] 4hop1__39871_314549_131976_56103 | recall@5=0.5000 | running_recall@5=0.7343 | f1=0.0000 | running_f1=0.4481 | index=201.583s | query=71.599s | qa=included_in_query_pipeline
+2026-04-03 12:44:30,761 INFO [283/1000] start sample 3hop1__337705_132457_47686
+2026-04-03 12:46:46,403 INFO [283/1000] 3hop1__337705_132457_47686 | recall@5=1.0000 | running_recall@5=0.7353 | f1=0.0000 | running_f1=0.4465 | index=76.124s | query=59.517s | qa=included_in_query_pipeline
+2026-04-03 12:46:46,403 INFO [284/1000] start sample 2hop__197470_271394
+2026-04-03 12:50:55,195 INFO [284/1000] 2hop__197470_271394 | recall@5=0.5000 | running_recall@5=0.7344 | f1=0.5714 | running_f1=0.4470 | index=212.240s | query=36.552s | qa=included_in_query_pipeline
+2026-04-03 12:50:55,195 INFO [285/1000] start sample 2hop__496792_392646
+2026-04-03 12:54:35,952 INFO [285/1000] 2hop__496792_392646 | recall@5=1.0000 | running_recall@5=0.7354 | f1=0.0000 | running_f1=0.4454 | index=181.383s | query=39.374s | qa=included_in_query_pipeline
+2026-04-03 12:54:35,953 INFO [286/1000] start sample 2hop__862994_69048
+2026-04-03 12:58:10,239 INFO [286/1000] 2hop__862994_69048 | recall@5=1.0000 | running_recall@5=0.7363 | f1=0.0000 | running_f1=0.4438 | index=170.514s | query=43.773s | qa=included_in_query_pipeline
+2026-04-03 12:58:10,240 INFO [287/1000] start sample 4hop1__525129_315334_131926_89261
+2026-04-03 13:00:55,047 INFO [287/1000] 4hop1__525129_315334_131926_89261 | recall@5=0.7500 | running_recall@5=0.7364 | f1=1.0000 | running_f1=0.4458 | index=92.747s | query=72.060s | qa=included_in_query_pipeline
+2026-04-03 13:00:55,047 INFO [288/1000] start sample 2hop__87589_362941
+2026-04-03 13:04:58,643 INFO [288/1000] 2hop__87589_362941 | recall@5=1.0000 | running_recall@5=0.7373 | f1=0.0000 | running_f1=0.4442 | index=204.698s | query=38.898s | qa=included_in_query_pipeline
+2026-04-03 13:04:58,644 INFO [289/1000] start sample 3hop2__67618_30587_44003
+2026-04-03 13:08:22,713 INFO [289/1000] 3hop2__67618_30587_44003 | recall@5=1.0000 | running_recall@5=0.7382 | f1=0.0000 | running_f1=0.4427 | index=143.319s | query=60.750s | qa=included_in_query_pipeline
+2026-04-03 13:08:22,713 INFO [290/1000] start sample 3hop1__850160_15840_36002
+2026-04-03 13:09:48,044 INFO [290/1000] 3hop1__850160_15840_36002 | recall@5=0.3333 | running_recall@5=0.7368 | f1=0.0000 | running_f1=0.4412 | index=19.939s | query=65.390s | qa=included_in_query_pipeline
+2026-04-03 13:09:48,044 INFO [291/1000] start sample 2hop__62311_62279
+2026-04-03 13:14:30,142 INFO [291/1000] 2hop__62311_62279 | recall@5=1.0000 | running_recall@5=0.7377 | f1=0.7500 | running_f1=0.4422 | index=239.301s | query=42.796s | qa=included_in_query_pipeline
+2026-04-03 13:14:30,142 INFO [292/1000] start sample 2hop__70338_36240
+2026-04-03 13:18:07,841 INFO [292/1000] 2hop__70338_36240 | recall@5=1.0000 | running_recall@5=0.7386 | f1=0.0000 | running_f1=0.4407 | index=184.217s | query=33.482s | qa=included_in_query_pipeline
+2026-04-03 13:18:07,841 INFO [293/1000] start sample 2hop__235471_565925
+2026-04-03 13:20:16,890 INFO [293/1000] 2hop__235471_565925 | recall@5=1.0000 | running_recall@5=0.7395 | f1=0.5000 | running_f1=0.4409 | index=84.716s | query=44.332s | qa=included_in_query_pipeline
+2026-04-03 13:20:16,891 INFO [294/1000] start sample 2hop__157285_556157
+2026-04-03 13:22:13,458 INFO [294/1000] 2hop__157285_556157 | recall@5=1.0000 | running_recall@5=0.7404 | f1=1.0000 | running_f1=0.4428 | index=78.943s | query=37.624s | qa=included_in_query_pipeline
+2026-04-03 13:22:13,458 INFO [295/1000] start sample 2hop__35173_17335
+2026-04-03 13:26:47,508 INFO [295/1000] 2hop__35173_17335 | recall@5=0.0000 | running_recall@5=0.7379 | f1=1.0000 | running_f1=0.4447 | index=226.941s | query=47.108s | qa=included_in_query_pipeline
+2026-04-03 13:26:47,508 INFO [296/1000] start sample 3hop2__792915_223623_162182
+2026-04-03 13:30:32,250 INFO [296/1000] 3hop2__792915_223623_162182 | recall@5=1.0000 | running_recall@5=0.7387 | f1=0.0000 | running_f1=0.4432 | index=183.611s | query=41.130s | qa=included_in_query_pipeline
+2026-04-03 13:30:32,250 INFO [297/1000] start sample 2hop__46376_158105
+2026-04-03 13:34:35,625 INFO [297/1000] 2hop__46376_158105 | recall@5=1.0000 | running_recall@5=0.7396 | f1=0.0000 | running_f1=0.4417 | index=205.102s | query=38.272s | qa=included_in_query_pipeline
+2026-04-03 13:34:35,625 INFO [298/1000] start sample 4hop1__88342_49853_128008_67954
+2026-04-03 13:37:05,810 INFO [298/1000] 4hop1__88342_49853_128008_67954 | recall@5=0.2500 | running_recall@5=0.7380 | f1=0.0000 | running_f1=0.4402 | index=50.654s | query=99.530s | qa=included_in_query_pipeline
+2026-04-03 13:37:05,810 INFO [299/1000] start sample 2hop__68162_482364
+2026-04-03 13:40:48,677 INFO [299/1000] 2hop__68162_482364 | recall@5=1.0000 | running_recall@5=0.7389 | f1=1.0000 | running_f1=0.4421 | index=188.664s | query=34.202s | qa=included_in_query_pipeline
+2026-04-03 13:40:48,677 INFO [300/1000] start sample 2hop__252311_366220
+2026-04-03 13:44:36,974 INFO [300/1000] 2hop__252311_366220 | recall@5=1.0000 | running_recall@5=0.7397 | f1=0.0000 | running_f1=0.4406 | index=195.947s | query=32.349s | qa=included_in_query_pipeline
+2026-04-03 13:44:36,974 INFO [301/1000] start sample 2hop__353836_80026
+2026-04-03 13:46:52,892 INFO [301/1000] 2hop__353836_80026 | recall@5=1.0000 | running_recall@5=0.7406 | f1=1.0000 | running_f1=0.4425 | index=71.688s | query=64.229s | qa=included_in_query_pipeline
+2026-04-03 13:46:52,892 INFO [302/1000] start sample 2hop__787538_31270
+2026-04-03 13:49:25,052 INFO [302/1000] 2hop__787538_31270 | recall@5=1.0000 | running_recall@5=0.7414 | f1=1.0000 | running_f1=0.4443 | index=117.984s | query=34.176s | qa=included_in_query_pipeline
+2026-04-03 13:49:25,053 INFO [303/1000] start sample 2hop__89632_40480
+2026-04-03 13:53:25,477 INFO [303/1000] 2hop__89632_40480 | recall@5=0.5000 | running_recall@5=0.7406 | f1=0.0000 | running_f1=0.4429 | index=198.216s | query=42.208s | qa=included_in_query_pipeline
+2026-04-03 13:53:25,477 INFO [304/1000] start sample 3hop2__101809_30152_20999
+2026-04-03 13:55:24,488 INFO [304/1000] 3hop2__101809_30152_20999 | recall@5=0.6667 | running_recall@5=0.7404 | f1=0.0000 | running_f1=0.4414 | index=73.589s | query=45.422s | qa=included_in_query_pipeline
+2026-04-03 13:55:24,488 INFO [305/1000] start sample 3hop2__79512_16214_84681
+2026-04-03 13:58:38,919 INFO [305/1000] 3hop2__79512_16214_84681 | recall@5=0.6667 | running_recall@5=0.7402 | f1=1.0000 | running_f1=0.4432 | index=136.595s | query=57.836s | qa=included_in_query_pipeline
+2026-04-03 13:58:38,920 INFO [306/1000] start sample 2hop__6745_6731
+2026-04-03 14:03:05,786 INFO [306/1000] 2hop__6745_6731 | recall@5=0.0000 | running_recall@5=0.7377 | f1=0.2857 | running_f1=0.4427 | index=220.646s | query=46.220s | qa=included_in_query_pipeline
+2026-04-03 14:03:05,787 INFO [307/1000] start sample 2hop__403580_37168
+2026-04-03 14:04:45,698 INFO [307/1000] 2hop__403580_37168 | recall@5=1.0000 | running_recall@5=0.7386 | f1=1.0000 | running_f1=0.4445 | index=32.915s | query=66.997s | qa=included_in_query_pipeline
+2026-04-03 14:04:45,699 INFO [308/1000] start sample 3hop1__759384_42197_18397
+2026-04-03 14:07:55,656 INFO [308/1000] 3hop1__759384_42197_18397 | recall@5=0.6667 | running_recall@5=0.7384 | f1=0.0000 | running_f1=0.4431 | index=120.588s | query=69.369s | qa=included_in_query_pipeline
+2026-04-03 14:07:55,656 INFO [309/1000] start sample 3hop2__90098_156850_10557
+2026-04-03 14:12:36,707 INFO [309/1000] 3hop2__90098_156850_10557 | recall@5=1.0000 | running_recall@5=0.7392 | f1=1.0000 | running_f1=0.4449 | index=221.557s | query=59.493s | qa=included_in_query_pipeline
+2026-04-03 14:12:36,707 INFO [310/1000] start sample 3hop1__751782_2053_5289
+2026-04-03 14:14:17,712 INFO [310/1000] 3hop1__751782_2053_5289 | recall@5=1.0000 | running_recall@5=0.7401 | f1=1.0000 | running_f1=0.4467 | index=41.523s | query=59.482s | qa=included_in_query_pipeline
+2026-04-03 14:14:17,712 INFO [311/1000] start sample 3hop2__132957_133264_40768
+2026-04-03 14:16:04,916 INFO [311/1000] 3hop2__132957_133264_40768 | recall@5=0.6667 | running_recall@5=0.7398 | f1=0.0000 | running_f1=0.4453 | index=58.526s | query=48.678s | qa=included_in_query_pipeline
+2026-04-03 14:16:04,917 INFO [312/1000] start sample 2hop__807257_590611
+2026-04-03 14:19:03,043 INFO [312/1000] 2hop__807257_590611 | recall@5=1.0000 | running_recall@5=0.7407 | f1=0.0000 | running_f1=0.4438 | index=140.302s | query=37.824s | qa=included_in_query_pipeline
+2026-04-03 14:19:03,044 INFO [313/1000] start sample 3hop1__222497_737465_93723
+2026-04-03 14:23:21,124 INFO [313/1000] 3hop1__222497_737465_93723 | recall@5=0.6667 | running_recall@5=0.7404 | f1=1.0000 | running_f1=0.4456 | index=177.869s | query=80.210s | qa=included_in_query_pipeline
+2026-04-03 14:23:21,124 INFO [314/1000] start sample 3hop1__841091_339990_54675
+2026-04-03 14:24:29,237 INFO [314/1000] 3hop1__841091_339990_54675 | recall@5=1.0000 | running_recall@5=0.7412 | f1=0.0000 | running_f1=0.4442 | index=32.546s | query=35.567s | qa=included_in_query_pipeline
+2026-04-03 14:24:29,237 INFO [315/1000] start sample 3hop2__89048_228_66294
+2026-04-03 14:27:27,717 INFO [315/1000] 3hop2__89048_228_66294 | recall@5=0.0000 | running_recall@5=0.7389 | f1=0.0000 | running_f1=0.4428 | index=110.060s | query=68.420s | qa=included_in_query_pipeline
+2026-04-03 14:27:27,717 INFO [316/1000] start sample 2hop__549146_223121
+2026-04-03 14:31:14,556 INFO [316/1000] 2hop__549146_223121 | recall@5=1.0000 | running_recall@5=0.7397 | f1=1.0000 | running_f1=0.4445 | index=194.850s | query=31.988s | qa=included_in_query_pipeline
+2026-04-03 14:31:14,556 INFO [317/1000] start sample 2hop__207476_625987
+2026-04-03 14:36:23,243 INFO [317/1000] 2hop__207476_625987 | recall@5=0.5000 | running_recall@5=0.7390 | f1=0.0000 | running_f1=0.4431 | index=254.675s | query=54.010s | qa=included_in_query_pipeline
+2026-04-03 14:36:23,243 INFO [318/1000] start sample 3hop2__304722_692815_63959
+2026-04-03 14:37:59,923 INFO [318/1000] 3hop2__304722_692815_63959 | recall@5=0.3333 | running_recall@5=0.7377 | f1=0.0000 | running_f1=0.4417 | index=23.361s | query=73.319s | qa=included_in_query_pipeline
+2026-04-03 14:37:59,923 INFO [319/1000] start sample 4hop1__473563_309800_355213_203322
+2026-04-03 14:40:16,290 INFO [319/1000] 4hop1__473563_309800_355213_203322 | recall@5=0.7500 | running_recall@5=0.7377 | f1=0.0000 | running_f1=0.4404 | index=70.764s | query=65.603s | qa=included_in_query_pipeline
+2026-04-03 14:40:16,291 INFO [320/1000] start sample 2hop__56270_68396
+2026-04-03 14:44:32,687 INFO [320/1000] 2hop__56270_68396 | recall@5=1.0000 | running_recall@5=0.7385 | f1=1.0000 | running_f1=0.4421 | index=206.701s | query=49.695s | qa=included_in_query_pipeline
+2026-04-03 14:44:32,688 INFO [321/1000] start sample 3hop1__132795_40769_64047
+2026-04-03 14:46:36,163 INFO [321/1000] 3hop1__132795_40769_64047 | recall@5=1.0000 | running_recall@5=0.7394 | f1=0.0000 | running_f1=0.4407 | index=78.071s | query=45.404s | qa=included_in_query_pipeline
+2026-04-03 14:46:36,164 INFO [322/1000] start sample 3hop2__31398_2130_2232
+2026-04-03 14:50:31,289 INFO [322/1000] 3hop2__31398_2130_2232 | recall@5=0.3333 | running_recall@5=0.7381 | f1=1.0000 | running_f1=0.4425 | index=188.504s | query=46.621s | qa=included_in_query_pipeline
+2026-04-03 14:50:31,289 INFO [323/1000] start sample 4hop2__71753_158279_70784_61381
+2026-04-03 14:52:30,057 INFO [323/1000] 4hop2__71753_158279_70784_61381 | recall@5=0.0000 | running_recall@5=0.7358 | f1=0.0000 | running_f1=0.4411 | index=76.334s | query=42.434s | qa=included_in_query_pipeline
+2026-04-03 14:52:30,057 INFO [324/1000] start sample 2hop__502473_634689
+2026-04-03 14:56:06,724 INFO [324/1000] 2hop__502473_634689 | recall@5=1.0000 | running_recall@5=0.7366 | f1=1.0000 | running_f1=0.4428 | index=170.468s | query=46.198s | qa=included_in_query_pipeline
+2026-04-03 14:56:06,724 INFO [325/1000] start sample 3hop1__64694_34179_23375
+2026-04-03 15:01:52,762 INFO [325/1000] 3hop1__64694_34179_23375 | recall@5=0.6667 | running_recall@5=0.7364 | f1=1.0000 | running_f1=0.4445 | index=232.315s | query=113.722s | qa=included_in_query_pipeline
+2026-04-03 15:01:52,762 INFO [326/1000] start sample 4hop1__88342_75218_128008_87812
+2026-04-03 15:04:56,838 INFO [326/1000] 4hop1__88342_75218_128008_87812 | recall@5=0.5000 | running_recall@5=0.7357 | f1=0.0000 | running_f1=0.4432 | index=97.800s | query=86.275s | qa=included_in_query_pipeline
+2026-04-03 15:04:56,839 INFO [327/1000] start sample 2hop__13986_40169
+2026-04-03 15:09:43,828 INFO [327/1000] 2hop__13986_40169 | recall@5=1.0000 | running_recall@5=0.7365 | f1=0.0000 | running_f1=0.4418 | index=227.847s | query=59.142s | qa=included_in_query_pipeline
+2026-04-03 15:09:43,828 INFO [328/1000] start sample 2hop__778212_22458
+2026-04-03 15:13:42,313 INFO [328/1000] 2hop__778212_22458 | recall@5=1.0000 | running_recall@5=0.7373 | f1=1.0000 | running_f1=0.4435 | index=193.860s | query=44.624s | qa=included_in_query_pipeline
+2026-04-03 15:13:42,313 INFO [329/1000] start sample 2hop__559273_152023
+2026-04-03 15:16:00,375 INFO [329/1000] 2hop__559273_152023 | recall@5=1.0000 | running_recall@5=0.7381 | f1=1.0000 | running_f1=0.4452 | index=100.016s | query=38.045s | qa=included_in_query_pipeline
+2026-04-03 15:16:00,375 INFO [330/1000] start sample 2hop__161151_42429
+2026-04-03 15:21:17,327 INFO [330/1000] 2hop__161151_42429 | recall@5=0.0000 | running_recall@5=0.7359 | f1=0.5000 | running_f1=0.4454 | index=253.449s | query=63.504s | qa=included_in_query_pipeline
+2026-04-03 15:21:17,328 INFO [331/1000] start sample 3hop1__104762_24918_24991
+2026-04-03 15:25:55,236 INFO [331/1000] 3hop1__104762_24918_24991 | recall@5=0.6667 | running_recall@5=0.7356 | f1=0.0000 | running_f1=0.4440 | index=214.519s | query=63.388s | qa=included_in_query_pipeline
+2026-04-03 15:25:55,236 INFO [332/1000] start sample 4hop1__3496_5274_458768_33637
+2026-04-03 15:29:08,696 INFO [332/1000] 4hop1__3496_5274_458768_33637 | recall@5=0.5000 | running_recall@5=0.7349 | f1=0.0000 | running_f1=0.4427 | index=131.776s | query=61.683s | qa=included_in_query_pipeline
+2026-04-03 15:29:08,696 INFO [333/1000] start sample 2hop__358582_189042
+2026-04-03 15:30:53,577 INFO [333/1000] 2hop__358582_189042 | recall@5=1.0000 | running_recall@5=0.7357 | f1=0.4000 | running_f1=0.4426 | index=71.025s | query=33.856s | qa=included_in_query_pipeline
+2026-04-03 15:30:53,578 INFO [334/1000] start sample 3hop2__106842_30645_84681
+2026-04-03 15:35:44,781 INFO [334/1000] 3hop2__106842_30645_84681 | recall@5=0.6667 | running_recall@5=0.7355 | f1=0.0000 | running_f1=0.4412 | index=234.083s | query=57.120s | qa=included_in_query_pipeline
+2026-04-03 15:35:44,782 INFO [335/1000] start sample 2hop__233551_746883
+2026-04-03 15:39:59,392 INFO [335/1000] 2hop__233551_746883 | recall@5=1.0000 | running_recall@5=0.7363 | f1=0.0000 | running_f1=0.4399 | index=214.697s | query=39.912s | qa=included_in_query_pipeline
+2026-04-03 15:39:59,392 INFO [336/1000] start sample 2hop__42578_55840
+2026-04-03 15:43:34,483 INFO [336/1000] 2hop__42578_55840 | recall@5=0.5000 | running_recall@5=0.7356 | f1=1.0000 | running_f1=0.4416 | index=171.141s | query=43.950s | qa=included_in_query_pipeline
+2026-04-03 15:43:34,483 INFO [337/1000] start sample 4hop3__193820_466199_128875_72134
+2026-04-03 15:45:55,258 INFO [337/1000] 4hop3__193820_466199_128875_72134 | recall@5=1.0000 | running_recall@5=0.7364 | f1=1.0000 | running_f1=0.4432 | index=78.224s | query=62.551s | qa=included_in_query_pipeline
+2026-04-03 15:45:55,259 INFO [338/1000] start sample 3hop1__241085_42197_18397

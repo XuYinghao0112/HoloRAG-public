@@ -1,0 +1,1061 @@
+{
+  "query": "Who is the president of the newly declared independent country that is part of the Commission of Truth and Friendship with the country where Jenggawah is located?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Commission of Truth and Friendship",
+    "Jenggawah"
+  ],
+  "raw_query_entities": [
+    "Commission of Truth and Friendship",
+    "Jenggawah"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Commission of Truth and Friendship",
+      "node_id": "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+      "resolved_text": "Indonesia–Timor Leste Commission of Truth and Friendship",
+      "score": 0.6305960784313724,
+      "alias_score": 0.625,
+      "relation_score": 0.7,
+      "context_score": 0.5333333333333334,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.14036274509803914,
+      "confident": false
+    },
+    {
+      "mention": "Jenggawah",
+      "node_id": "entity:jenggawah_district",
+      "resolved_text": "Jenggawah District",
+      "score": 0.5489333333333334,
+      "alias_score": 0.5,
+      "relation_score": 1.0,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.39,
+      "score_margin": 0.5489333333333334,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What country is Jenggawah located in?",
+    "What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located?",
+    "Who is the president of the newly declared independent country?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:first_small_island_country_in_the_pacific",
+      "score": 0.3729165084182736,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_samoa",
+      "score": 0.37290391329751554,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:indonesia",
+      "score": 0.3139982135922935,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lithuania",
+      "score": 0.29852820205822017,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:latvia",
+      "score": 0.29852820205822017,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:jember_regency",
+      "score": 0.27432207846324586,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+      "score": 0.27227282680187104,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:governments_of_indonesia_and_east_timor",
+      "score": 0.2722265729604421,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:jenggawah_district",
+      "score": 0.2715211967410311,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_estonia",
+      "score": 0.25111562705311846,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:russia",
+      "score": 0.25111562705311846,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:southern_jember_regency",
+      "score": 0.22899202271612396,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:samoa_became_independent_as_first_small_island_country_in_the_pacific_sentence_samoa_0_2_samoa_the_first_small_island_co",
+      "text": "Samoa became independent as first small-island country in the Pacific",
+      "head_id": "entity:title_anchor_samoa",
+      "tail_id": "entity:first_small_island_country_in_the_pacific",
+      "sentence_id": "sentence:samoa_0_2_samoa_the_first_small_island_country_in_the_pacific_to_become_independent_join",
+      "chunk_id": "chunk:samoa_0",
+      "document_index": 16,
+      "score": 0.3705587292944702
+    },
+    {
+      "fact_id": "fact:jenggawah_district_is_part_of_indonesia_sentence_jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jembe",
+      "text": "Jenggawah District is part of Indonesia",
+      "head_id": "entity:jenggawah_district",
+      "tail_id": "entity:indonesia",
+      "sentence_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+      "chunk_id": "chunk:jenggawah_jember_0",
+      "document_index": 7,
+      "score": 0.3116545560099605
+    },
+    {
+      "fact_id": "fact:indonesia_timor_leste_commission_on_truth_and_friendship_was_established_by_governments_of_indonesia_and_east_timor_sent",
+      "text": "Indonesia Timor Leste Commission on Truth and Friendship was established by governments of Indonesia and East Timor",
+      "head_id": "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+      "tail_id": "entity:governments_of_indonesia_and_east_timor",
+      "sentence_id": "sentence:indonesia_timor_leste_commission_of_truth_and_friendship_0_0_the_indonesia_timor_leste_commission_on_truth_and_friendshi",
+      "chunk_id": "chunk:indonesia_timor_leste_commission_of_truth_and_friendship_0",
+      "document_index": 0,
+      "score": 0.26987600010922425
+    },
+    {
+      "fact_id": "fact:estonia_declared_independence_from_russia_sentence_estonia_0_1_after_declaring_independence_from_russia_in_1918_estonia_",
+      "text": "Estonia declared independence from Russia",
+      "head_id": "entity:title_anchor_estonia",
+      "tail_id": "entity:russia",
+      "sentence_id": "sentence:estonia_0_1_after_declaring_independence_from_russia_in_1918_estonia_first_competed_as_a_na",
+      "chunk_id": "chunk:estonia_0",
+      "document_index": 18,
+      "score": 0.2487735017151835
+    },
+    {
+      "fact_id": "fact:jenggawah_district_is_located_in_southern_jember_regency_sentence_jenggawah_jember_0_0_jenggawah_district_is_a_district_",
+      "text": "Jenggawah District is located in southern Jember Regency",
+      "head_id": "entity:jenggawah_district",
+      "tail_id": "entity:southern_jember_regency",
+      "sentence_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+      "chunk_id": "chunk:jenggawah_jember_0",
+      "document_index": 7,
+      "score": 0.22664719034411696
+    },
+    {
+      "fact_id": "fact:xanana_gusm_o_sworn_in_as_prime_minister_sentence_estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_sworn_in",
+      "text": "Xanana Gusm o sworn in as Prime Minister",
+      "head_id": "entity:xanana_gusm_o",
+      "tail_id": "entity:prime_minister",
+      "sentence_id": "sentence:estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_sworn_in_as_prime_minister_on_8_august_200",
+      "chunk_id": "chunk:estanislau_da_silva_0",
+      "document_index": 6,
+      "score": 0.1716313873945604
+    },
+    {
+      "fact_id": "fact:xanana_gusm_o_date_of_swearing_in_8_august_2007_sentence_estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_s",
+      "text": "Xanana Gusm o date of swearing in 8 August 2007",
+      "head_id": "entity:xanana_gusm_o",
+      "tail_id": "entity:8_august_2007",
+      "sentence_id": "sentence:estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_sworn_in_as_prime_minister_on_8_august_200",
+      "chunk_id": "chunk:estanislau_da_silva_0",
+      "document_index": 6,
+      "score": 0.13663013719781858
+    }
+  ],
+  "bridge_entities": [
+    "Jember Regency",
+    "Indonesia",
+    "Jenggawah District",
+    "East Timor",
+    "Francisco Guterres"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What country is Jenggawah located in?",
+      "resolved_sub_question": "What country is Jenggawah located in?",
+      "sentence_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+      "sentence": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+      "score": 0.43646763887203444,
+      "source_title": "Jenggawah, Jember",
+      "hop_answer": "Indonesia",
+      "hop_thought": "Jenggawah District is mentioned to be in Jember Regency, Indonesia, according to the provided evidence.",
+      "hop_raw_response": "Jenggawah District is mentioned to be in Jember Regency, Indonesia, according to the provided evidence.\nAnswer: Indonesia",
+      "evidence_passages": [
+        {
+          "title": "Jenggawah, Jember",
+          "text": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+        },
+        {
+          "title": "Jenggawah, Jember",
+          "text": "Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+        },
+        {
+          "title": "Samoa",
+          "text": "Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located?",
+      "resolved_sub_question": "What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located? Context: Indonesia.",
+      "sentence_id": "sentence:indonesia_timor_leste_commission_of_truth_and_friendship_0_0_the_indonesia_timor_leste_commission_on_truth_and_friendshi",
+      "sentence": "The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005.",
+      "score": 0.4493480733473355,
+      "source_title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+      "hop_answer": "East Timor",
+      "hop_thought": "The country where Jenggawah is located is Indonesia. The Commission of Truth and Friendship was between Indonesia and East Timor, which declared independence from Indonesia in 1999.",
+      "hop_raw_response": "The country where Jenggawah is located is Indonesia. The Commission of Truth and Friendship was between Indonesia and East Timor, which declared independence from Indonesia in 1999.\nAnswer: East Timor",
+      "evidence_passages": [
+        {
+          "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+          "text": "The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005."
+        },
+        {
+          "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+          "text": "Indonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral."
+        },
+        {
+          "title": "Jenggawah, Jember",
+          "text": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the president of the newly declared independent country?",
+      "resolved_sub_question": "Who is the president of the newly declared independent country? Context: Indonesia; East Timor.",
+      "sentence_id": "sentence:east_timor_0_0_democratic_republic_of_timor_leste_rep_blika_demokr_tika_tim_r_lorosa_e_tetum",
+      "sentence": "Democratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950",
+      "score": 0.4225010384809321,
+      "source_title": "East Timor",
+      "hop_answer": "Francisco Guterres",
+      "hop_thought": "The president of East Timor, which is the newly declared independent country that has a Commission of Truth and Friendship with Indonesia, is Francisco Guterres.",
+      "hop_raw_response": "The president of East Timor, which is the newly declared independent country that has a Commission of Truth and Friendship with Indonesia, is Francisco Guterres.\nAnswer: Francisco Guterres",
+      "evidence_passages": [
+        {
+          "title": "East Timor",
+          "text": "Democratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950"
+        },
+        {
+          "title": "East Timor",
+          "text": "East Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950"
+        },
+        {
+          "title": "East Timor",
+          "text": "Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950 sq mi) (154th) Water (%) negligible Population 2015 census 1,167,242 Density 78 / km (202.0 / sq mi) GDP (PPP) 2017 estimate Total $4.567 billion Per capita $5,479 (148th) GDP (nominal) 2014 estimate Total $2.498 billion Per capita $3,330 HDI (2015) 0.605 medium 133rd Currency United States Dollar (USD) Time zone (UTC + 9) Drives on the left Calling code + 670 ISO 3166 code TL Internet TLD. tl Website timor-leste.gov.tl Fifteen further ``national languages ''are recognised by the Constitution."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+      "score": 0.06352361157640778,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_samoa",
+      "score": 0.05544792818376326,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:jenggawah_district",
+      "score": 0.04962487995385485,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_estonia",
+      "score": 0.0442715037732356,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:southern_jember_regency",
+      "score": 0.04278998854166572,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+      "score": 0.04213793526278665,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:indonesia",
+      "score": 0.04205492383460662,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:first_small_island_country_in_the_pacific",
+      "score": 0.03887101317322456,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:jember_regency",
+      "score": 0.03751330975017317,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:samoa_0_2_samoa_the_first_small_island_country_in_the_pacific_to_become_independent_join",
+      "score": 0.03727491782158533,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:latvia",
+      "score": 0.0371068092733533,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:indonesia_timor_leste_commission_of_truth_and_friendship_0_0_the_indonesia_timor_leste_commission_on_truth_and_friendshi",
+      "score": 0.03597781203036987,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lithuania",
+      "score": 0.03493164276908806,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:governments_of_indonesia_and_east_timor",
+      "score": 0.032369199250986726,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_sworn_in_as_prime_minister_on_8_august_200",
+      "score": 0.030669001611848892,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:russia",
+      "score": 0.02652505358652913,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:xanana_gusm_o",
+      "score": 0.02433240116705282,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:estonia_0_1_after_declaring_independence_from_russia_in_1918_estonia_first_competed_as_a_na",
+      "score": 0.022168630106988156,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:prime_minister",
+      "score": 0.02096423738202406,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:8_august_2007",
+      "score": 0.018209745337062305,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:samoa_0",
+      "passage_index": 16,
+      "title": "Samoa",
+      "score": 0.07621222539503783,
+      "text": "Samoa\nAfter repeated efforts by the Samoan independence movement, the New Zealand Western Samoa Act 1961 of 24 November 1961 granted Samoa independence effective 1 January 1962, upon which the Trusteeship Agreement terminated. Samoa also signed a friendship treaty with New Zealand. Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970. While independence was achieved at the beginning of January, Samoa annually celebrates 1 June as its independence day.",
+      "score_breakdown": {
+        "dense": 0.04996564376782096,
+        "graph": 0.05259439672638707,
+        "fact": 0.2196853486988013
+      }
+    },
+    {
+      "node_id": "chunk:jenggawah_jember_0",
+      "passage_index": 7,
+      "title": "Jenggawah, Jember",
+      "score": 0.07538937922784798,
+      "text": "Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+      "score_breakdown": {
+        "dense": 0.05104645647093285,
+        "graph": 0.05415340463381229,
+        "fact": 0.2071187118579415
+      }
+    },
+    {
+      "node_id": "chunk:indonesia_timor_leste_commission_of_truth_and_friendship_0",
+      "passage_index": 0,
+      "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+      "score": 0.07330629405480488,
+      "text": "Indonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral.",
+      "score_breakdown": {
+        "dense": 0.05058106444189415,
+        "graph": 0.052300433323397975,
+        "fact": 0.19864385743162472
+      }
+    },
+    {
+      "node_id": "chunk:estonia_0",
+      "passage_index": 18,
+      "title": "Estonia",
+      "score": 0.072549401044085,
+      "text": "Estonia\nSport plays an important role in Estonian culture. After declaring independence from Russia in 1918, Estonia first competed as a nation at the 1920 Summer Olympics, although the National Olympic Committee was established in 1923. Estonian athletes took part of the Olympic Games until the country was annexed by the Soviet Union in 1940. The 1980 Summer Olympics Sailing regatta was held in the capital city Tallinn. After regaining independence in 1991, Estonia has participated in all Olympics. Estonia has won most of its medals in athletics, weightlifting, wrestling and cross-country skiing. Estonia has had very good success at the Olympic games given the country's small population. Estonia's best results were being ranked 13th in the medal table at the 1936 Summer Olympics, and 12th at the 2006 Winter Olympics.",
+      "score_breakdown": {
+        "dense": 0.04969175839000023,
+        "graph": 0.053481831838486774,
+        "fact": 0.19449589585359225
+      }
+    },
+    {
+      "node_id": "chunk:estanislau_da_silva_0",
+      "passage_index": 6,
+      "title": "Estanislau da Silva",
+      "score": 0.0699992737047881,
+      "text": "Estanislau da Silva\nAfter Timor Leste achieved independence in 2002, Da Silva was appointed as the country's first Minister for Agriculture, Forestry and Fisheries. On 10 July 2006, he was sworn in as the First Deputy Prime Minister of Timor Leste. He was sworn in as the acting Prime Minister on 19 May 2007 to replace José Ramos-Horta who had been elected President of the young nation. He left office when Xanana Gusmão was sworn in as Prime Minister on 8 August 2007, following the June 2007 parliamentary election.",
+      "score_breakdown": {
+        "dense": 0.05000244484881142,
+        "graph": 0.05163167038078598,
+        "fact": 0.18005618615804017
+      }
+    },
+    {
+      "node_id": "chunk:east_timor_0",
+      "passage_index": 11,
+      "title": "East Timor",
+      "score": 0.04234679156365214,
+      "text": "East Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950",
+      "score_breakdown": {
+        "dense": 0.05008960168416909,
+        "graph": 0.049325035457863806,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:east_timor_1",
+      "passage_index": 11,
+      "title": "East Timor",
+      "score": 0.04232823366008215,
+      "text": "East Timor\nGuterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950 sq mi) (154th) Water (%) negligible Population 2015 census 1,167,242 Density 78 / km (202.0 / sq mi) GDP (PPP) 2017 estimate Total $4.567 billion Per capita $5,479 (148th) GDP (nominal) 2014 estimate Total $2.498 billion Per capita $3,330 HDI (2015) 0.605 medium 133rd Currency United States Dollar (USD) Time zone (UTC + 9) Drives on the left Calling code + 670 ISO 3166 code TL Internet TLD. tl Website timor-leste.gov.tl Fifteen further ``national languages ''are recognised by the Constitution. Centavo coins also used.. tp has been phased out.",
+      "score_breakdown": {
+        "dense": 0.05003754790907177,
+        "graph": 0.0493586077003089,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:johan_ferrier_0",
+      "passage_index": 1,
+      "title": "Johan Ferrier",
+      "score": 0.042253358511093096,
+      "text": "Johan Ferrier\nJohan Henri Eliza Ferrier (12 May 1910 – 4 January 2010) was a Surinamese politician who served as the 1st President of Suriname from 25 November 1975 to 13 August 1980. He was that country's last governor before independence, from 1968 to 1975, and first president after it gained independence from the Netherlands.",
+      "score_breakdown": {
+        "dense": 0.05007097148587259,
+        "graph": 0.04904774731287724,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:kenya_0",
+      "passage_index": 17,
+      "title": "Kenya",
+      "score": 0.04223429158863371,
+      "text": "Kenya\nKenya is a presidential representative democratic republic. The president is both the head of state and head of government, and of a multi-party system. Executive power is exercised by the government. Legislative power is vested in both the government and the National Assembly and the Senate. The Judiciary is independent of the executive and the legislature. There was growing concern especially during former president Daniel arap Moi's tenure that the executive was increasingly meddling with the affairs of the judiciary.Kenya has a high degree of corruption according to Transparency International's Corruption Perception Index (CPI), a metric which attempts to gauge the prevalence of public sector corruption in various countries. In 2012, the nation placed 139th out of 176 total countries in the CPI, with a score of 27/100. However, there are several rather significant developments with regards to curbing corruption from the Kenyan government, for instance, the establishment of a new and independent Ethics and Anti-Corruption Commission (EACC).",
+      "score_breakdown": {
+        "dense": 0.050050294829198594,
+        "graph": 0.04902209810858161,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:namibia_0",
+      "passage_index": 8,
+      "title": "Namibia",
+      "score": 0.04219848788828944,
+      "text": "Namibia\nThe Namibian Constitution adopted in February 1990 incorporated protection for human rights, compensation for state expropriations of private property, an independent judiciary and an executive presidency (the constituent assembly became the national assembly). The country officially became independent on 21 March 1990. Sam Nujoma was sworn in as the first President of Namibia watched by Nelson Mandela (who had been released from prison the previous month) and representatives from 147 countries, including 20 heads of state. Walvis Bay was ceded to Namibia in 1994 upon the end of Apartheid in South Africa.[citation needed]",
+      "score_breakdown": {
+        "dense": 0.04998992661125662,
+        "graph": 0.049013427506994334,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_samoa",
+        "score": 0.05544792818376326,
+        "text": "Samoa",
+        "metadata": {
+          "canonical_name": "Samoa",
+          "aliases": [
+            "Samoa"
+          ],
+          "surface_forms": [
+            "Samoa"
+          ],
+          "title_anchor": "Samoa"
+        }
+      },
+      {
+        "node_id": "entity:jenggawah_district",
+        "score": 0.04962487995385485,
+        "text": "Jenggawah District",
+        "metadata": {
+          "canonical_name": "Jenggawah District",
+          "aliases": [
+            "JD",
+            "Jenggawah District"
+          ],
+          "surface_forms": [
+            "JD",
+            "Jenggawah District"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_estonia",
+        "score": 0.0442715037732356,
+        "text": "Estonia",
+        "metadata": {
+          "canonical_name": "Estonia",
+          "aliases": [
+            "Estonia"
+          ],
+          "surface_forms": [
+            "Estonia"
+          ],
+          "title_anchor": "Estonia"
+        }
+      },
+      {
+        "node_id": "entity:southern_jember_regency",
+        "score": 0.04278998854166572,
+        "text": "southern Jember Regency",
+        "metadata": {
+          "canonical_name": "southern Jember Regency",
+          "aliases": [
+            "SJR",
+            "southern Jember Regency"
+          ],
+          "surface_forms": [
+            "SJR",
+            "southern Jember Regency"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+        "score": 0.04213793526278665,
+        "text": "Indonesia–Timor Leste Commission of Truth and Friendship",
+        "metadata": {
+          "canonical_name": "Indonesia–Timor Leste Commission of Truth and Friendship",
+          "aliases": [
+            "ITLCOTAF",
+            "Indonesia Timor Leste Commission of Truth and Friendship",
+            "Indonesia Timor Leste Commission on Truth and Friendship"
+          ],
+          "surface_forms": [
+            "ITLCOTAF",
+            "Indonesia Timor Leste Commission on Truth and Friendship"
+          ],
+          "title_anchor": "Indonesia–Timor Leste Commission of Truth and Friendship"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+        "score": 0.06352361157640778,
+        "text": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+        "metadata": {
+          "title": "Jenggawah, Jember",
+          "chunk_id": "chunk:jenggawah_jember_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Jenggawah District",
+              "relation": "is located in",
+              "tail": "southern Jember Regency"
+            },
+            {
+              "head": "Jenggawah District",
+              "relation": "is part of",
+              "tail": "Indonesia"
+            }
+          ],
+          "entities": [
+            "Jenggawah District",
+            "Jember Regency",
+            "Indonesia"
+          ],
+          "entity_ids": [
+            "entity:indonesia",
+            "entity:jember_regency",
+            "entity:jenggawah_district",
+            "entity:southern_jember_regency"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:samoa_0_2_samoa_the_first_small_island_country_in_the_pacific_to_become_independent_join",
+        "score": 0.03727491782158533,
+        "text": "Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970.",
+        "metadata": {
+          "title": "Samoa",
+          "chunk_id": "chunk:samoa_0",
+          "sentence_index": 2,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Samoa",
+              "relation": "became independent as",
+              "tail": "first small-island country in the Pacific"
+            },
+            {
+              "head": "Samoa",
+              "relation": "joined",
+              "tail": "Commonwealth of Nations"
+            },
+            {
+              "head": "Samoa",
+              "relation": "joined on",
+              "tail": "28 August 1970"
+            }
+          ],
+          "entities": [
+            "Samoa",
+            "Pacific",
+            "Commonwealth of Nations"
+          ],
+          "entity_ids": [
+            "entity:28_august_1970",
+            "entity:commonwealth_of_nations",
+            "entity:first_small_island_country_in_the_pacific",
+            "entity:pacific",
+            "entity:title_anchor_samoa"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:indonesia_timor_leste_commission_of_truth_and_friendship_0_0_the_indonesia_timor_leste_commission_on_truth_and_friendshi",
+        "score": 0.03597781203036987,
+        "text": "The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005.",
+        "metadata": {
+          "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+          "chunk_id": "chunk:indonesia_timor_leste_commission_of_truth_and_friendship_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Indonesia Timor Leste Commission on Truth and Friendship",
+              "relation": "was established by",
+              "tail": "governments of Indonesia and East Timor"
+            },
+            {
+              "head": "Indonesia Timor Leste Commission on Truth and Friendship",
+              "relation": "was established in",
+              "tail": "August 2005"
+            }
+          ],
+          "entities": [
+            "Indonesia Timor Leste Commission on Truth and Friendship",
+            "Indonesia",
+            "East Timor"
+          ],
+          "entity_ids": [
+            "entity:august_2005",
+            "entity:east_timor",
+            "entity:governments_of_indonesia_and_east_timor",
+            "entity:indonesia",
+            "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:estanislau_da_silva_0_3_he_left_office_when_xanana_gusm_o_was_sworn_in_as_prime_minister_on_8_august_200",
+        "score": 0.030669001611848892,
+        "text": "He left office when Xanana Gusmão was sworn in as Prime Minister on 8 August 2007, following the June 2007 parliamentary election.",
+        "metadata": {
+          "title": "Estanislau da Silva",
+          "chunk_id": "chunk:estanislau_da_silva_0",
+          "sentence_index": 3,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Xanana Gusm o",
+              "relation": "sworn in as",
+              "tail": "Prime Minister"
+            },
+            {
+              "head": "Xanana Gusm o",
+              "relation": "date of swearing in",
+              "tail": "8 August 2007"
+            },
+            {
+              "head": "June 2007 parliamentary election",
+              "relation": "preceded",
+              "tail": "Xanana Gusm o's swearing"
+            }
+          ],
+          "entities": [
+            "Xanana Gusm o",
+            "Prime Minister",
+            "8 August 2007",
+            "June 2007 parliamentary election"
+          ],
+          "entity_ids": [
+            "entity:8_august_2007",
+            "entity:june_2007_parliamentary_election",
+            "entity:prime_minister",
+            "entity:xanana_gusm_o",
+            "entity:xanana_gusm_o_s_swearing"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:jenggawah_jember_0",
+        "score": 0.01599801718732284,
+        "text": "Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+        "metadata": {
+          "title": "Jenggawah, Jember",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:indonesia",
+            "entity:jember_regency",
+            "entity:jenggawah_district",
+            "entity:southern_jember_regency"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:samoa_0",
+        "score": 0.011556675553833913,
+        "text": "Samoa\nAfter repeated efforts by the Samoan independence movement, the New Zealand Western Samoa Act 1961 of 24 November 1961 granted Samoa independence effective 1 January 1962, upon which the Trusteeship Agreement terminated. Samoa also signed a friendship treaty with New Zealand. Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970. While independence was achieved at the beginning of January, Samoa annually celebrates 1 June as its independence day.",
+        "metadata": {
+          "title": "Samoa",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:1_january_1962",
+            "entity:1_june",
+            "entity:28_august_1970",
+            "entity:commonwealth_of_nations",
+            "entity:first_small_island_country_in_the_pacific",
+            "entity:new_zealand",
+            "entity:new_zealand_western_samoa_act_1961",
+            "entity:pacific",
+            "entity:samoa_independence",
+            "entity:samoan_independence_movement",
+            "entity:title_anchor_samoa",
+            "entity:trusteeship_agreement"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:indonesia_timor_leste_commission_of_truth_and_friendship_0",
+        "score": 0.009685496848838857,
+        "text": "Indonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral.",
+        "metadata": {
+          "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:after",
+            "entity:august_2005",
+            "entity:east_timor",
+            "entity:governments_of_indonesia_and_east_timor",
+            "entity:indonesia",
+            "entity:indonesian_government",
+            "entity:indonesian_president_susilo_bambang",
+            "entity:indonesian_president_susilo_bambang_yudhoyono",
+            "entity:july",
+            "entity:timor",
+            "entity:title_anchor_indonesia_timor_leste_commission_of_truth_and_friendship",
+            "entity:yudhoyono"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:estonia_0",
+        "score": 0.009426622459684479,
+        "text": "Estonia\nSport plays an important role in Estonian culture. After declaring independence from Russia in 1918, Estonia first competed as a nation at the 1920 Summer Olympics, although the National Olympic Committee was established in 1923. Estonian athletes took part of the Olympic Games until the country was annexed by the Soviet Union in 1940. The 1980 Summer Olympics Sailing regatta was held in the capital city Tallinn. After regaining independence in 1991, Estonia has participated in all Olympics. Estonia has won most of its medals in athletics, weightlifting, wrestling and cross-country skiing. Estonia has had very good success at the Olympic games given the country's small population. Estonia's best results were being ranked 13th in the medal table at the 1936 Summer Olympics, and 12th at the 2006 Winter Olympics.",
+        "metadata": {
+          "title": "Estonia",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:12th_at_the_2006_winter_olympics",
+            "entity:13th_in_the_medal_table_at_the_1936_summer_olympics",
+            "entity:16_november_1988",
+            "entity:1920_summer_olympics",
+            "entity:1936_summer_olympics",
+            "entity:1980_summer_olympics_sailing_regatta",
+            "entity:2006_winter_olympics",
+            "entity:20_august_1991",
+            "entity:31_august_1994",
+            "entity:6_september_1991",
+            "entity:all",
+            "entity:all_olympics",
+            "entity:baltic_way",
+            "entity:estonia_s_reclaimed_independence",
+            "entity:estonian_athletes",
+            "entity:estonian_culture",
+            "entity:estonian_sovereignty_declaration",
+            "entity:iceland",
+            "entity:latvia",
+            "entity:lithuania",
+            "entity:moscow",
+            "entity:national_olympic_committee",
+            "entity:olympic_games",
+            "entity:olympics",
+            "entity:russia",
+            "entity:russian_army",
+            "entity:singing_revolution",
+            "entity:soviet_military_coup_attempt",
+            "entity:soviet_military_coup_attempt_in_moscow",
+            "entity:soviet_union",
+            "entity:sport",
+            "entity:tallinn",
+            "entity:title_anchor_estonia",
+            "entity:very_good_success_at_the_olympic_games"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Samoa\nSamoa\nAfter repeated efforts by the Samoan independence movement, the New Zealand Western Samoa Act 1961 of 24 November 1961 granted Samoa independence effective 1 January 1962, upon which the Trusteeship Agreement terminated. Samoa also signed a friendship treaty with New Zealand. Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970. While independence was achieved at the beginning of January, Samoa annually celebrates 1 June as its independence day.\n\nJenggawah, Jember\nJenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.\n\nIndonesia–Timor Leste Commission of Truth and Friendship\nIndonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral.\n\nEstonia\nEstonia\nSport plays an important role in Estonian culture. After declaring independence from Russia in 1918, Estonia first competed as a nation at the 1920 Summer Olympics, although the National Olympic Committee was established in 1923. Estonian athletes took part of the Olympic Games until the country was annexed by the Soviet Union in 1940. The 1980 Summer Olympics Sailing regatta was held in the capital city Tallinn. After regaining independence in 1991, Estonia has participated in all Olympics. Estonia has won most of its medals in athletics, weightlifting, wrestling and cross-country skiing. Estonia has had very good success at the Olympic games given the country's small population. Estonia's best results were being ranked 13th in the medal table at the 1936 Summer Olympics, and 12th at the 2006 Winter Olympics.\n\nEstanislau da Silva\nEstanislau da Silva\nAfter Timor Leste achieved independence in 2002, Da Silva was appointed as the country's first Minister for Agriculture, Forestry and Fisheries. On 10 July 2006, he was sworn in as the First Deputy Prime Minister of Timor Leste. He was sworn in as the acting Prime Minister on 19 May 2007 to replace José Ramos-Horta who had been elected President of the young nation. He left office when Xanana Gusmão was sworn in as Prime Minister on 8 August 2007, following the June 2007 parliamentary election.\n\nJenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.\n\nSamoa\nSamoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970.\n\nIndonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005.\n\nEast Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950\n\nEast Timor\nEast Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950\n\nEast Timor\nGuterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950 sq mi) (154th) Water (%) negligible Population 2015 census 1,167,242 Density 78 / km (202.0 / sq mi) GDP (PPP) 2017 estimate Total $4.567 billion Per capita $5,479 (148th) GDP (nominal) 2014 estimate Total $2.498 billion Per capita $3,330 HDI (2015) 0.605 medium 133rd Currency United States Dollar (USD) Time zone (UTC + 9) Drives on the left Calling code + 670 ISO 3166 code TL Internet TLD. tl Website timor-leste.gov.tl Fifteen further ``national languages ''are recognised by the Constitution.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:samoa_0",
+        "passage_index": 16,
+        "title": "Samoa",
+        "score": 0.07621222539503783,
+        "text": "Samoa\nAfter repeated efforts by the Samoan independence movement, the New Zealand Western Samoa Act 1961 of 24 November 1961 granted Samoa independence effective 1 January 1962, upon which the Trusteeship Agreement terminated. Samoa also signed a friendship treaty with New Zealand. Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970. While independence was achieved at the beginning of January, Samoa annually celebrates 1 June as its independence day.",
+        "score_breakdown": {
+          "dense": 0.04996564376782096,
+          "graph": 0.05259439672638707,
+          "fact": 0.2196853486988013
+        }
+      },
+      {
+        "node_id": "chunk:jenggawah_jember_0",
+        "passage_index": 7,
+        "title": "Jenggawah, Jember",
+        "score": 0.07538937922784798,
+        "text": "Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+        "score_breakdown": {
+          "dense": 0.05104645647093285,
+          "graph": 0.05415340463381229,
+          "fact": 0.2071187118579415
+        }
+      },
+      {
+        "node_id": "chunk:indonesia_timor_leste_commission_of_truth_and_friendship_0",
+        "passage_index": 0,
+        "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+        "score": 0.07330629405480488,
+        "text": "Indonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral.",
+        "score_breakdown": {
+          "dense": 0.05058106444189415,
+          "graph": 0.052300433323397975,
+          "fact": 0.19864385743162472
+        }
+      },
+      {
+        "node_id": "chunk:estonia_0",
+        "passage_index": 18,
+        "title": "Estonia",
+        "score": 0.072549401044085,
+        "text": "Estonia\nSport plays an important role in Estonian culture. After declaring independence from Russia in 1918, Estonia first competed as a nation at the 1920 Summer Olympics, although the National Olympic Committee was established in 1923. Estonian athletes took part of the Olympic Games until the country was annexed by the Soviet Union in 1940. The 1980 Summer Olympics Sailing regatta was held in the capital city Tallinn. After regaining independence in 1991, Estonia has participated in all Olympics. Estonia has won most of its medals in athletics, weightlifting, wrestling and cross-country skiing. Estonia has had very good success at the Olympic games given the country's small population. Estonia's best results were being ranked 13th in the medal table at the 1936 Summer Olympics, and 12th at the 2006 Winter Olympics.",
+        "score_breakdown": {
+          "dense": 0.04969175839000023,
+          "graph": 0.053481831838486774,
+          "fact": 0.19449589585359225
+        }
+      },
+      {
+        "node_id": "chunk:estanislau_da_silva_0",
+        "passage_index": 6,
+        "title": "Estanislau da Silva",
+        "score": 0.0699992737047881,
+        "text": "Estanislau da Silva\nAfter Timor Leste achieved independence in 2002, Da Silva was appointed as the country's first Minister for Agriculture, Forestry and Fisheries. On 10 July 2006, he was sworn in as the First Deputy Prime Minister of Timor Leste. He was sworn in as the acting Prime Minister on 19 May 2007 to replace José Ramos-Horta who had been elected President of the young nation. He left office when Xanana Gusmão was sworn in as Prime Minister on 8 August 2007, following the June 2007 parliamentary election.",
+        "score_breakdown": {
+          "dense": 0.05000244484881142,
+          "graph": 0.05163167038078598,
+          "fact": 0.18005618615804017
+        }
+      },
+      {
+        "node_id": "chunk:east_timor_0",
+        "passage_index": 11,
+        "title": "East Timor",
+        "score": 0.04234679156365214,
+        "text": "East Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950",
+        "score_breakdown": {
+          "dense": 0.05008960168416909,
+          "graph": 0.049325035457863806,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:east_timor_1",
+        "passage_index": 11,
+        "title": "East Timor",
+        "score": 0.04232823366008215,
+        "text": "East Timor\nGuterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950 sq mi) (154th) Water (%) negligible Population 2015 census 1,167,242 Density 78 / km (202.0 / sq mi) GDP (PPP) 2017 estimate Total $4.567 billion Per capita $5,479 (148th) GDP (nominal) 2014 estimate Total $2.498 billion Per capita $3,330 HDI (2015) 0.605 medium 133rd Currency United States Dollar (USD) Time zone (UTC + 9) Drives on the left Calling code + 670 ISO 3166 code TL Internet TLD. tl Website timor-leste.gov.tl Fifteen further ``national languages ''are recognised by the Constitution. Centavo coins also used.. tp has been phased out.",
+        "score_breakdown": {
+          "dense": 0.05003754790907177,
+          "graph": 0.0493586077003089,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:johan_ferrier_0",
+        "passage_index": 1,
+        "title": "Johan Ferrier",
+        "score": 0.042253358511093096,
+        "text": "Johan Ferrier\nJohan Henri Eliza Ferrier (12 May 1910 – 4 January 2010) was a Surinamese politician who served as the 1st President of Suriname from 25 November 1975 to 13 August 1980. He was that country's last governor before independence, from 1968 to 1975, and first president after it gained independence from the Netherlands.",
+        "score_breakdown": {
+          "dense": 0.05007097148587259,
+          "graph": 0.04904774731287724,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:kenya_0",
+        "passage_index": 17,
+        "title": "Kenya",
+        "score": 0.04223429158863371,
+        "text": "Kenya\nKenya is a presidential representative democratic republic. The president is both the head of state and head of government, and of a multi-party system. Executive power is exercised by the government. Legislative power is vested in both the government and the National Assembly and the Senate. The Judiciary is independent of the executive and the legislature. There was growing concern especially during former president Daniel arap Moi's tenure that the executive was increasingly meddling with the affairs of the judiciary.Kenya has a high degree of corruption according to Transparency International's Corruption Perception Index (CPI), a metric which attempts to gauge the prevalence of public sector corruption in various countries. In 2012, the nation placed 139th out of 176 total countries in the CPI, with a score of 27/100. However, there are several rather significant developments with regards to curbing corruption from the Kenyan government, for instance, the establishment of a new and independent Ethics and Anti-Corruption Commission (EACC).",
+        "score_breakdown": {
+          "dense": 0.050050294829198594,
+          "graph": 0.04902209810858161,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:namibia_0",
+        "passage_index": 8,
+        "title": "Namibia",
+        "score": 0.04219848788828944,
+        "text": "Namibia\nThe Namibian Constitution adopted in February 1990 incorporated protection for human rights, compensation for state expropriations of private property, an independent judiciary and an executive presidency (the constituent assembly became the national assembly). The country officially became independent on 21 March 1990. Sam Nujoma was sworn in as the first President of Namibia watched by Nelson Mandela (who had been released from prison the previous month) and representatives from 147 countries, including 20 heads of state. Walvis Bay was ceded to Namibia in 1994 upon the end of Apartheid in South Africa.[citation needed]",
+        "score_breakdown": {
+          "dense": 0.04998992661125662,
+          "graph": 0.049013427506994334,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What country is Jenggawah located in?",
+        "resolved_sub_question": "What country is Jenggawah located in?",
+        "sentence_id": "sentence:jenggawah_jember_0_0_jenggawah_district_is_a_district_in_southern_jember_regency_indonesia_which_has",
+        "sentence": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.",
+        "score": 0.43646763887203444,
+        "source_title": "Jenggawah, Jember",
+        "hop_answer": "Indonesia",
+        "hop_thought": "Jenggawah District is mentioned to be in Jember Regency, Indonesia, according to the provided evidence.",
+        "hop_raw_response": "Jenggawah District is mentioned to be in Jember Regency, Indonesia, according to the provided evidence.\nAnswer: Indonesia",
+        "evidence_passages": [
+          {
+            "title": "Jenggawah, Jember",
+            "text": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+          },
+          {
+            "title": "Jenggawah, Jember",
+            "text": "Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+          },
+          {
+            "title": "Samoa",
+            "text": "Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located?",
+        "resolved_sub_question": "What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located? Context: Indonesia.",
+        "sentence_id": "sentence:indonesia_timor_leste_commission_of_truth_and_friendship_0_0_the_indonesia_timor_leste_commission_on_truth_and_friendshi",
+        "sentence": "The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005.",
+        "score": 0.4493480733473355,
+        "source_title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+        "hop_answer": "East Timor",
+        "hop_thought": "The country where Jenggawah is located is Indonesia. The Commission of Truth and Friendship was between Indonesia and East Timor, which declared independence from Indonesia in 1999.",
+        "hop_raw_response": "The country where Jenggawah is located is Indonesia. The Commission of Truth and Friendship was between Indonesia and East Timor, which declared independence from Indonesia in 1999.\nAnswer: East Timor",
+        "evidence_passages": [
+          {
+            "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+            "text": "The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005."
+          },
+          {
+            "title": "Indonesia–Timor Leste Commission of Truth and Friendship",
+            "text": "Indonesia–Timor Leste Commission of Truth and Friendship\nThe Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005. The commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. After holding private hearings and document reviews, the commission handed in the final report on July 15, 2008 to the presidents of both nations, and was fully endorsed by Indonesian President Susilo Bambang Yudhoyono, providing the first acknowledgement by the government of Indonesia of the human rights violations committed by state institutions in Timor. The commission is notable for being the first modern truth commission to be bilateral."
+          },
+          {
+            "title": "Jenggawah, Jember",
+            "text": "Jenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the president of the newly declared independent country?",
+        "resolved_sub_question": "Who is the president of the newly declared independent country? Context: Indonesia; East Timor.",
+        "sentence_id": "sentence:east_timor_0_0_democratic_republic_of_timor_leste_rep_blika_demokr_tika_tim_r_lorosa_e_tetum",
+        "sentence": "Democratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950",
+        "score": 0.4225010384809321,
+        "source_title": "East Timor",
+        "hop_answer": "Francisco Guterres",
+        "hop_thought": "The president of East Timor, which is the newly declared independent country that has a Commission of Truth and Friendship with Indonesia, is Francisco Guterres.",
+        "hop_raw_response": "The president of East Timor, which is the newly declared independent country that has a Commission of Truth and Friendship with Indonesia, is Francisco Guterres.\nAnswer: Francisco Guterres",
+        "evidence_passages": [
+          {
+            "title": "East Timor",
+            "text": "Democratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950"
+          },
+          {
+            "title": "East Timor",
+            "text": "East Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950"
+          },
+          {
+            "title": "East Timor",
+            "text": "Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950 sq mi) (154th) Water (%) negligible Population 2015 census 1,167,242 Density 78 / km (202.0 / sq mi) GDP (PPP) 2017 estimate Total $4.567 billion Per capita $5,479 (148th) GDP (nominal) 2014 estimate Total $2.498 billion Per capita $3,330 HDI (2015) 0.605 medium 133rd Currency United States Dollar (USD) Time zone (UTC + 9) Drives on the left Calling code + 670 ISO 3166 code TL Internet TLD. tl Website timor-leste.gov.tl Fifteen further ``national languages ''are recognised by the Constitution."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What country is Jenggawah located in? => Indonesia (source: Jenggawah, Jember)\n2. What is the name of the newly declared independent country that has a Commission of Truth and Friendship with the country where Jenggawah is located? => East Timor (source: Indonesia–Timor Leste Commission of Truth and Friendship)\n3. Who is the president of the newly declared independent country? => Francisco Guterres (source: East Timor)\n\nFact hints:\n- Indonesia Timor Leste Commission on Truth and Friendship was established by governments of Indonesia and East Timor\n- Jenggawah District is part of Indonesia\n\nWikipedia Title: East Timor\nDemocratic Republic of Timor - Leste Repúblika Demokrátika Timór Lorosa'e (Tetum) República Democrática de Timor - Leste (Portuguese) Flag Coat of arms Motto: Unidade, Acção, Progresso (Portuguese) Unidade, Asaun, Progresu (Tetum) (English: ``Unity, Action, Progress '') Anthem: Pátria (Portuguese) (English:`` Fatherland'') Capital and largest city Dili 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Coordinates: 8 ° 20 ′ S 125 ° 20 ′ E ﻿ / ﻿ 8.34 ° S 125.34 ° E ﻿ / - 8.34; 125.34 Official languages Tetum Portuguese National languages 15 languages (show) Atauru Baikeno Bekais Bunak Fataluku Galoli Habun Idalaka Kawaimina Kemak Makalero Makasae Makuva Mambai Tokodede Religion (2010) 96.9% Roman Catholic 3.1% other religions Demonym East Timorese Timorese Maubere (informal) Government Unitary semi-presidential constitutional republic President Francisco Guterres Prime Minister Mari Alkatiri Legislature National Parliament Formation Portuguese Timor 16th century Independence declared 28 November 1975 Annexation by Indonesia 17 July 1976 Administered by UNTAET 25 October 1999 Independence restored 20 May 2002 Area Total 15,410 km (5,950\n\nWikipedia Title: Indonesia–Timor Leste Commission of Truth and Friendship\nThe commission was officially created to investigate acts of violence that occurred around the independence referendum held in East Timor in 1999 and sought to find the \"conclusive truth\" behind the events. Indonesia–Timor Leste Commission of Truth and Friendship The Indonesia–Timor Leste Commission on Truth and Friendship was a truth commission established jointly by the governments of Indonesia and East Timor in August 2005.\n\nWikipedia Title: Jenggawah, Jember\nJenggawah District is a district in southern Jember Regency, Indonesia which has a small hill in the center of district.\n\nWikipedia Title: Estanislau da Silva\nEstanislau da Silva After Timor Leste achieved independence in 2002, Da Silva was appointed as the country's first Minister for Agriculture, Forestry and Fisheries. He was sworn in as the acting Prime Minister on 19 May 2007 to replace José Ramos-Horta who had been elected President of the young nation.\n\nWikipedia Title: Samoa\nSamoa also signed a friendship treaty with New Zealand. Samoa, the first small-island country in the Pacific to become independent, joined the Commonwealth of Nations on 28 August 1970.\n\nQuestion: Who is the president of the newly declared independent country that is part of the Commission of Truth and Friendship with the country where Jenggawah is located?\nDraft Answer: Francisco Guterres\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The country where Jenggawah is located is Indonesia. The newly declared independent country that has a Commission of Truth and Friendship with Indonesia is East Timor. The president of East Timor is Francisco Guterres.",
+  "predicted_answer": "Francisco Guterres",
+  "qa_raw_response": "{\n  \"thought\": \"The country where Jenggawah is located is Indonesia. The newly declared independent country that has a Commission of Truth and Friendship with Indonesia is East Timor. The president of East Timor is Francisco Guterres.\",\n  \"answer\": \"Francisco Guterres\",\n  \"support\": \"President Francisco Guterres\"\n}"
+}

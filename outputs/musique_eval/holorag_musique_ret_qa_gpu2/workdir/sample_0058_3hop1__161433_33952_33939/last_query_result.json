@@ -1,0 +1,1047 @@
+{
+  "query": "In 1900, what was the population of the second largest city, in the state that the cross-border transactions committee focuses on?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [],
+  "raw_query_entities": [],
+  "query_entity_resolutions": [],
+  "sub_questions": [
+    "What state does the cross-border transactions committee focus on?",
+    "What is the second largest city in this state?",
+    "What was the population of this city in 1900?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:united_states_mexico_border",
+      "score": 0.64396710535416,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:united_states_canada_border",
+      "score": 0.5960556612103151,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:between_us_and_a_bordering_country",
+      "score": 0.5934593437930525,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "score": 0.3621917739602005,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:city_of_tucson",
+      "score": 0.34684258289732356,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:greater_tucson_metro",
+      "score": 0.34684258289732356,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:southern_arizona",
+      "score": 0.34684258289732356,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_san_diego",
+      "score": 0.3382712642951195,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:san_diego",
+      "score": 0.3382712642951195,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lone_star_state",
+      "score": 0.30398423984602035,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:oklahoma",
+      "score": 0.30398423984602035,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tucson",
+      "score": 0.2934787936839653,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:tucson_is_the_second_largest_city_in_arizona_sentence_tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson",
+      "text": "Tucson is the second largest city in Arizona",
+      "head_id": "entity:tucson",
+      "tail_id": "entity:arizona",
+      "sentence_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+      "chunk_id": "chunk:tucson_arizona_0",
+      "document_index": 8,
+      "score": 0.28903548574776966
+    },
+    {
+      "fact_id": "fact:san_antonio_is_the_second_most_populous_city_in_texas_sentence_texas_0_0_houston_is_the_most_populous_city_in_texas_and_",
+      "text": "San Antonio is the second most populous city in Texas",
+      "head_id": "entity:san_antonio",
+      "tail_id": "entity:title_anchor_texas",
+      "sentence_id": "sentence:texas_0_0_houston_is_the_most_populous_city_in_texas_and_the_fourth_largest_in_the_u_s_w",
+      "chunk_id": "chunk:texas_0",
+      "document_index": 1,
+      "score": 0.2818927202459329
+    },
+    {
+      "fact_id": "fact:detroit_windsor_is_the_largest_transborder_agglomeration_between_us_and_a_bordering_country_sentence_san_diego_0_1_it_is",
+      "text": "Detroit Windsor is the largest transborder agglomeration between US and a bordering country",
+      "head_id": "entity:detroit_windsor",
+      "tail_id": "entity:between_us_and_a_bordering_country",
+      "sentence_id": "sentence:san_diego_0_1_it_is_part_of_the_san_diego_tijuana_conurbation_the_second_largest_transborder",
+      "chunk_id": "chunk:san_diego_0",
+      "document_index": 3,
+      "score": 0.27474821965026586
+    },
+    {
+      "fact_id": "fact:detroit_is_the_largest_city_on_united_states_canada_border_sentence_detroit_0_0_detroit_d_tr_t_is_the_most_populous_city",
+      "text": "Detroit is the largest city on United States Canada border",
+      "head_id": "entity:title_anchor_detroit",
+      "tail_id": "entity:united_states_canada_border",
+      "sentence_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "chunk_id": "chunk:detroit_0",
+      "document_index": 9,
+      "score": 0.26189103481153425
+    },
+    {
+      "fact_id": "fact:houston_is_the_most_populous_city_in_texas_sentence_texas_0_0_houston_is_the_most_populous_city_in_texas_and_the_fourth_",
+      "text": "Houston is the most populous city in Texas",
+      "head_id": "entity:houston",
+      "tail_id": "entity:title_anchor_texas",
+      "sentence_id": "sentence:texas_0_0_houston_is_the_most_populous_city_in_texas_and_the_fourth_largest_in_the_u_s_w",
+      "chunk_id": "chunk:texas_0",
+      "document_index": 1,
+      "score": 0.22474767949743435
+    },
+    {
+      "fact_id": "fact:detroit_is_the_most_populous_city_in_michigan_sentence_detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_s",
+      "text": "Detroit is the most populous city in Michigan",
+      "head_id": "entity:title_anchor_detroit",
+      "tail_id": "entity:michigan",
+      "sentence_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "chunk_id": "chunk:detroit_0",
+      "document_index": 9,
+      "score": 0.22260737958980412
+    },
+    {
+      "fact_id": "fact:detroit_is_the_fourth_largest_city_in_midwest_sentence_detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_s",
+      "text": "Detroit is the fourth-largest city in Midwest",
+      "head_id": "entity:title_anchor_detroit",
+      "tail_id": "entity:midwest",
+      "sentence_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "chunk_id": "chunk:detroit_0",
+      "document_index": 9,
+      "score": 0.22260737958980412
+    },
+    {
+      "fact_id": "fact:detroit_is_located_in_michigan_sentence_detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michiga",
+      "text": "Detroit is located in Michigan",
+      "head_id": "entity:title_anchor_detroit",
+      "tail_id": "entity:michigan",
+      "sentence_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "chunk_id": "chunk:detroit_0",
+      "document_index": 9,
+      "score": 0.19546013053858907
+    }
+  ],
+  "bridge_entities": [
+    "Arizona",
+    "Tucson"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What state does the cross-border transactions committee focus on?",
+      "resolved_sub_question": "What state does the cross-border transactions committee focus on?",
+      "sentence_id": "sentence:jeffrey_peterson_0_1_the_committee_is_focused_on_international_real_estate_transactions_between_resid",
+      "sentence": "The committee is focused on international real estate transactions between residents of Arizona and Mexico.",
+      "score": 0.4266640041205088,
+      "source_title": "Jeffrey Peterson",
+      "hop_answer": "Arizona",
+      "hop_thought": "The cross-border transactions committee focuses on international real estate transactions between residents of Arizona and Mexico. Therefore, the state in question is Arizona.",
+      "hop_raw_response": "The cross-border transactions committee focuses on international real estate transactions between residents of Arizona and Mexico. Therefore, the state in question is Arizona.\nAnswer: Arizona",
+      "evidence_passages": [
+        {
+          "title": "Jeffrey Peterson",
+          "text": "The committee is focused on international real estate transactions between residents of Arizona and Mexico."
+        },
+        {
+          "title": "Jeffrey Peterson",
+          "text": "Jeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate. The committee is focused on international real estate transactions between residents of Arizona and Mexico. In the same year, he was appointed as the chairman of the Technology Subcommittee of the 2006 Executive Bond Committee, by Phoenix Mayor Phil Gordon. The $850 million bond initiative was approved by voters in March 2006. He also financially supported the March 25, 2006, and April 10, 2006, reform marches organized by immigrants and he was a co-host at a June 1, 2006, fundraiser for Arizona Senatorial candidate Jim Pederson, featuring former president, Bill Clinton. Jeffrey held a fundraiser at his residence for Barack Obama featuring Democratic National Committee Chairman Howard Dean and actress Scarlett Johansson on August 21, 2008. Peterson was named as a co-host at an October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector"
+        },
+        {
+          "title": "Jeffrey Peterson",
+          "text": "In 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the second largest city in this state?",
+      "resolved_sub_question": "What is the second largest city in this state? Context: Arizona.",
+      "sentence_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+      "sentence": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.",
+      "score": 0.6913655043388549,
+      "source_title": "Tucson, Arizona",
+      "hop_answer": "Tucson",
+      "hop_thought": "The context specifies Arizona, and within Arizona, the second largest city after Phoenix is mentioned in the passage about Tucson.",
+      "hop_raw_response": "The context specifies Arizona, and within Arizona, the second largest city after Phoenix is mentioned in the passage about Tucson.\nAnswer: Tucson",
+      "evidence_passages": [
+        {
+          "title": "Tucson, Arizona",
+          "text": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+        },
+        {
+          "title": "Las Cruces, New Mexico",
+          "text": "As of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque."
+        }
+      ]
+    },
+    {
+      "sub_question": "What was the population of this city in 1900?",
+      "resolved_sub_question": "What was the population of this city in 1900? Context: Arizona; Tucson.",
+      "sentence_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+      "sentence": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.",
+      "score": 0.5035152652069793,
+      "source_title": "Tucson, Arizona",
+      "hop_answer": "7,531",
+      "hop_thought": "The population of Tucson in 1900 is directly stated in the evidence.",
+      "hop_raw_response": "The population of Tucson in 1900 is directly stated in the evidence.\nAnswer: 7,531",
+      "evidence_passages": [
+        {
+          "title": "Tucson, Arizona",
+          "text": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+        },
+        {
+          "title": "Tucson, Arizona",
+          "text": "In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:united_states_canada_border",
+      "score": 0.04924033028621387,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:between_us_and_a_bordering_country",
+      "score": 0.048661712546656286,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:united_states_mexico_border",
+      "score": 0.04486299107626175,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+      "score": 0.04131381849528026,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_detroit",
+      "score": 0.03307232992845714,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tucson",
+      "score": 0.031633568233557445,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_texas",
+      "score": 0.025202599466471833,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:metro_detroit",
+      "score": 0.02410510968313287,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:detroit_windsor",
+      "score": 0.023074950769086874,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_san_diego",
+      "score": 0.022870407271790728,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:san_diego",
+      "score": 0.02139568911352191,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:arizona",
+      "score": 0.02082449554951679,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:midwest",
+      "score": 0.02080412627357366,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:texas_0_0_houston_is_the_most_populous_city_in_texas_and_the_fourth_largest_in_the_u_s_w",
+      "score": 0.020743131324631292,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:southern_arizona",
+      "score": 0.020490722918986494,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:san_diego_0_1_it_is_part_of_the_san_diego_tijuana_conurbation_the_second_largest_transborder",
+      "score": 0.020369891851664698,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:michigan",
+      "score": 0.020102568091550622,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:lone_star_state",
+      "score": 0.01990920935185341,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:houston",
+      "score": 0.019582837739583532,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:san_antonio",
+      "score": 0.01957583314570403,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:tucson_arizona_0",
+      "passage_index": 15,
+      "title": "Tucson, Arizona",
+      "score": 0.08370372920056403,
+      "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000.",
+      "score_breakdown": {
+        "dense": 0.05278806168511772,
+        "graph": 0.05571346240157175,
+        "fact": 0.253041710355185
+      }
+    },
+    {
+      "node_id": "chunk:texas_0",
+      "passage_index": 1,
+      "title": "Texas",
+      "score": 0.08330043068479115,
+      "text": "Texas\nHouston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S. Dallas -- Fort Worth and Greater Houston are the fourth and fifth largest metropolitan statistical areas in the country, respectively. Other major cities include Austin, the second most populous state capital in the U.S., and El Paso. Texas is nicknamed ``The Lone Star State ''to signify its former status as an independent republic, and as a reminder of the state's struggle for independence from Mexico. The`` Lone Star'' can be found on the Texas state flag and on the Texan state seal. The origin of Texas's name is from the word ``Tejas, ''which means`` friends'' in the Caddo language.",
+      "score_breakdown": {
+        "dense": 0.05263527097262779,
+        "graph": 0.05554973930219935,
+        "fact": 0.2512407323945738
+      }
+    },
+    {
+      "node_id": "chunk:detroit_0",
+      "passage_index": 9,
+      "title": "Detroit",
+      "score": 0.08316818422938152,
+      "text": "Detroit\nDetroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border. It is the seat of Wayne County, the most populous county in the state. Detroit's metropolitan area, known as Metro Detroit, is home to 5.3 million people, making it the fourteenth-most populous metropolitan area in the United States and the second-largest in the Midwestern United States (behind Chicago). It is a major port on the Detroit River, a strait that connects the Great Lakes system to the Saint Lawrence Seaway. The City of Detroit anchors the second-largest economic region in the Midwest, behind Chicago, and the thirteenth-largest in the United States.",
+      "score_breakdown": {
+        "dense": 0.05253265535368769,
+        "graph": 0.0577847038615661,
+        "fact": 0.2462654175092231
+      }
+    },
+    {
+      "node_id": "chunk:san_diego_0",
+      "passage_index": 3,
+      "title": "San Diego",
+      "score": 0.08274269848360433,
+      "text": "San Diego\nWith an estimated population of 1,381,069 as of July 1, 2014, San Diego is the eighth-largest city in the United States and second-largest in California. It is part of the San Diego–Tijuana conurbation, the second-largest transborder agglomeration between the US and a bordering country after Detroit–Windsor, with a population of 4,922,723 people. San Diego is the birthplace of California and is known for its mild year-round climate, natural deep-water harbor, extensive beaches, long association with the United States Navy and recent emergence as a healthcare and biotechnology development center.",
+      "score_breakdown": {
+        "dense": 0.052734009334264996,
+        "graph": 0.05440390796201947,
+        "fact": 0.24945213974101818
+      }
+    },
+    {
+      "node_id": "chunk:jeffrey_peterson_0",
+      "passage_index": 17,
+      "title": "Jeffrey Peterson",
+      "score": 0.04472148900880893,
+      "text": "Jeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate. The committee is focused on international real estate transactions between residents of Arizona and Mexico. In the same year, he was appointed as the chairman of the Technology Subcommittee of the 2006 Executive Bond Committee, by Phoenix Mayor Phil Gordon. The $850 million bond initiative was approved by voters in March 2006. He also financially supported the March 25, 2006, and April 10, 2006, reform marches organized by immigrants and he was a co-host at a June 1, 2006, fundraiser for Arizona Senatorial candidate Jim Pederson, featuring former president, Bill Clinton. Jeffrey held a fundraiser at his residence for Barack Obama featuring Democratic National Committee Chairman Howard Dean and actress Scarlett Johansson on August 21, 2008. Peterson was named as a co-host at an October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector",
+      "score_breakdown": {
+        "dense": 0.05297921351554278,
+        "graph": 0.051943071917534674,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:southern_california_0",
+      "passage_index": 10,
+      "title": "Southern California",
+      "score": 0.04463801249638161,
+      "text": "Southern California\nWithin southern California are two major cities, Los Angeles and San Diego, as well as three of the country's largest metropolitan areas. With a population of 3,792,621, Los Angeles is the most populous city in California and the second most populous in the United States. To the south and with a population of 1,307,402 is San Diego, the second most populous city in the state and the eighth most populous in the nation.",
+      "score_breakdown": {
+        "dense": 0.05276671265641205,
+        "graph": 0.05205440178451659,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:las_cruces_new_mexico_0",
+      "passage_index": 12,
+      "title": "Las Cruces, New Mexico",
+      "score": 0.044620676286423314,
+      "text": "Las Cruces, New Mexico\nLas Cruces, also known as ``The City of the Crosses '', is the seat of Doña Ana County, New Mexico, United States. As of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque. Las Cruces is the largest city in both Doña Ana County and southern New Mexico. The Las Cruces metropolitan area had an estimated population of 213,676 in 2014. It is the principal city of a metropolitan statistical area which encompasses all of Doña Ana County and is part of the larger El Paso -- Las Cruces combined statistical area.",
+      "score_breakdown": {
+        "dense": 0.05296152731980424,
+        "graph": 0.05163945420176994,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:saint_paul_minnesota_0",
+      "passage_index": 14,
+      "title": "Saint Paul, Minnesota",
+      "score": 0.044592820716256316,
+      "text": "Saint Paul, Minnesota\nSaint Paul (abbreviated St. Paul) is the capital and second-most populous city of the U.S. state of Minnesota. As of 2016, the city's estimated population was 304,442. Saint Paul is the county seat of Ramsey County, the smallest and most densely populated county in Minnesota. The city lies mostly on the east bank of the Mississippi River in the area surrounding its point of confluence with the Minnesota River, and adjoins Minneapolis, the state's largest city. Known as the ``Twin Cities '', the two form the core of Minneapolis -- Saint Paul, the 16th - largest metropolitan area in the United States, with about 3.52 million residents.",
+      "score_breakdown": {
+        "dense": 0.05266497724758722,
+        "graph": 0.052090277433611144,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:staunton_illinois_0",
+      "passage_index": 0,
+      "title": "Staunton, Illinois",
+      "score": 0.04453499163284001,
+      "text": "Staunton, Illinois\nStaunton is the second largest city in Macoupin County, Illinois, United States. As of the 2010 Census, the population was 5,139.",
+      "score_breakdown": {
+        "dense": 0.052553057185366056,
+        "graph": 0.052102700602962286,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:oklahoma_city_0",
+      "passage_index": 4,
+      "title": "Oklahoma City",
+      "score": 0.04451750473073576,
+      "text": "Oklahoma City\nOklahoma City is the capital and largest city of the state of Oklahoma. The county seat of Oklahoma County, the city ranks 27th among United States cities in population. The population grew following the 2010 Census, with the population estimated to have increased to 620,602 as of July 2014. As of 2014, the Oklahoma City metropolitan area had a population of 1,322,429, and the Oklahoma City-Shawnee Combined Statistical Area had a population of 1,459,758 (Chamber of Commerce) residents, making it Oklahoma's largest metropolitan area. Oklahoma City's city limits extend into Canadian, Cleveland, and Pottawatomie counties, though much of those areas outside of the core Oklahoma County area are suburban or rural (watershed). The city ranks as the eighth-largest city in the United States by land area (including consolidated city-counties; it is the largest city in the United States by land area whose government is not consolidated with that of a county or borough).",
+      "score_breakdown": {
+        "dense": 0.05254468442367297,
+        "graph": 0.052059760992385413,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:united_states_canada_border",
+        "score": 0.04924033028621387,
+        "text": "United States Canada border",
+        "metadata": {
+          "canonical_name": "United States Canada border",
+          "aliases": [
+            "USCB",
+            "United States Canada border"
+          ],
+          "surface_forms": [
+            "USCB",
+            "United States Canada border"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:between_us_and_a_bordering_country",
+        "score": 0.048661712546656286,
+        "text": "between US and a bordering country",
+        "metadata": {
+          "canonical_name": "between US and a bordering country",
+          "aliases": [
+            "BUAABC",
+            "between US and a bordering country",
+            "between and a bordering country"
+          ],
+          "surface_forms": [
+            "BUAABC",
+            "between US and a bordering country",
+            "between and a bordering country"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:united_states_mexico_border",
+        "score": 0.04486299107626175,
+        "text": "United States Mexico border",
+        "metadata": {
+          "canonical_name": "United States Mexico border",
+          "aliases": [
+            "USMB",
+            "United States Mexico border"
+          ],
+          "surface_forms": [
+            "USMB",
+            "United States Mexico border"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_detroit",
+        "score": 0.03307232992845714,
+        "text": "Detroit",
+        "metadata": {
+          "canonical_name": "Detroit",
+          "aliases": [
+            "Detroit"
+          ],
+          "surface_forms": [
+            "Detroit"
+          ],
+          "title_anchor": "Detroit"
+        }
+      },
+      {
+        "node_id": "entity:tucson",
+        "score": 0.031633568233557445,
+        "text": "Tucson",
+        "metadata": {
+          "canonical_name": "Tucson",
+          "aliases": [
+            "Tucson"
+          ],
+          "surface_forms": [
+            "Tucson"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:detroit_0_0_detroit_d_tr_t_is_the_most_populous_city_in_the_u_s_state_of_michigan_th",
+        "score": 0.04131381849528026,
+        "text": "Detroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border.",
+        "metadata": {
+          "title": "Detroit",
+          "chunk_id": "chunk:detroit_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Detroit",
+              "relation": "is located in",
+              "tail": "Michigan"
+            },
+            {
+              "head": "Detroit",
+              "relation": "is the most populous city in",
+              "tail": "Michigan"
+            },
+            {
+              "head": "Detroit",
+              "relation": "is the fourth-largest city in",
+              "tail": "Midwest"
+            },
+            {
+              "head": "Detroit",
+              "relation": "is the largest city on",
+              "tail": "United States Canada border"
+            }
+          ],
+          "entities": [
+            "Detroit",
+            "Michigan",
+            "Midwest",
+            "United States Canada border"
+          ],
+          "entity_ids": [
+            "entity:michigan",
+            "entity:midwest",
+            "entity:title_anchor_detroit",
+            "entity:united_states_canada_border"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:texas_0_0_houston_is_the_most_populous_city_in_texas_and_the_fourth_largest_in_the_u_s_w",
+        "score": 0.020743131324631292,
+        "text": "Houston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S.",
+        "metadata": {
+          "title": "Texas",
+          "chunk_id": "chunk:texas_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Houston",
+              "relation": "is the most populous city in",
+              "tail": "Texas"
+            },
+            {
+              "head": "San Antonio",
+              "relation": "is the second most populous city in",
+              "tail": "Texas"
+            }
+          ],
+          "entities": [
+            "Houston",
+            "Texas",
+            "San Antonio"
+          ],
+          "entity_ids": [
+            "entity:houston",
+            "entity:san_antonio",
+            "entity:title_anchor_texas"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:san_diego_0_1_it_is_part_of_the_san_diego_tijuana_conurbation_the_second_largest_transborder",
+        "score": 0.020369891851664698,
+        "text": "It is part of the San Diego–Tijuana conurbation, the second-largest transborder agglomeration between the US and a bordering country after Detroit–Windsor, with a population of 4,922,723 people.",
+        "metadata": {
+          "title": "San Diego",
+          "chunk_id": "chunk:san_diego_0",
+          "sentence_index": 1,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Detroit Windsor",
+              "relation": "is the largest transborder agglomeration",
+              "tail": "between US and a bordering country"
+            }
+          ],
+          "entities": [
+            "San Diego Tijuana conurbation",
+            "Detroit Windsor"
+          ],
+          "entity_ids": [
+            "entity:between_us_and_a_bordering_country",
+            "entity:detroit_windsor",
+            "entity:san_diego_tijuana_conurbation"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+        "score": 0.017455043379615107,
+        "text": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.",
+        "metadata": {
+          "title": "Tucson, Arizona",
+          "chunk_id": "chunk:tucson_arizona_0",
+          "sentence_index": 3,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Tucson",
+              "relation": "is located in",
+              "tail": "Arizona Sun Corridor"
+            },
+            {
+              "head": "Tucson",
+              "relation": "is the largest city in",
+              "tail": "southern Arizona"
+            },
+            {
+              "head": "Tucson",
+              "relation": "is the second largest city in",
+              "tail": "Arizona"
+            },
+            {
+              "head": "Phoenix",
+              "relation": "is the largest city in",
+              "tail": "Arizona"
+            }
+          ],
+          "entities": [
+            "Tucson",
+            "Arizona Sun Corridor",
+            "southern Arizona",
+            "Arizona",
+            "Phoenix"
+          ],
+          "entity_ids": [
+            "entity:arizona",
+            "entity:arizona_sun_corridor",
+            "entity:phoenix",
+            "entity:southern_arizona",
+            "entity:tucson"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:detroit_0",
+        "score": 0.012459333253045365,
+        "text": "Detroit\nDetroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border. It is the seat of Wayne County, the most populous county in the state. Detroit's metropolitan area, known as Metro Detroit, is home to 5.3 million people, making it the fourteenth-most populous metropolitan area in the United States and the second-largest in the Midwestern United States (behind Chicago). It is a major port on the Detroit River, a strait that connects the Great Lakes system to the Saint Lawrence Seaway. The City of Detroit anchors the second-largest economic region in the Midwest, behind Chicago, and the thirteenth-largest in the United States.",
+        "metadata": {
+          "title": "Detroit",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:chicago",
+            "entity:city_of_detroit",
+            "entity:detroit_river",
+            "entity:detroit_s_metropolitan_area",
+            "entity:fourteenth_most_populous_metropolitan_area_in_the_united_states",
+            "entity:great_lakes_system",
+            "entity:metro_detroit",
+            "entity:michigan",
+            "entity:midwest",
+            "entity:midwestern_united_states",
+            "entity:saint_lawrence_seaway",
+            "entity:second_largest_economic_region_in_the_midwest",
+            "entity:second_largest_in_the_midwestern_united_states",
+            "entity:thirteenth_largest_economic_region_in_the_united_states",
+            "entity:title_anchor_detroit",
+            "entity:united_states_canada_border",
+            "entity:wayne_county"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:texas_0",
+        "score": 0.008223251426534375,
+        "text": "Texas\nHouston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S. Dallas -- Fort Worth and Greater Houston are the fourth and fifth largest metropolitan statistical areas in the country, respectively. Other major cities include Austin, the second most populous state capital in the U.S., and El Paso. Texas is nicknamed ``The Lone Star State ''to signify its former status as an independent republic, and as a reminder of the state's struggle for independence from Mexico. The`` Lone Star'' can be found on the Texas state flag and on the Texan state seal. The origin of Texas's name is from the word ``Tejas, ''which means`` friends'' in the Caddo language.",
+        "metadata": {
+          "title": "Texas",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:austin",
+            "entity:caddo",
+            "entity:dallas",
+            "entity:dallas_fort_worth",
+            "entity:el_paso",
+            "entity:fort_worth",
+            "entity:greater_houston",
+            "entity:houston",
+            "entity:lone_star",
+            "entity:lone_star_state",
+            "entity:mexico",
+            "entity:other_major_cities",
+            "entity:san_antonio",
+            "entity:second_most_populous_state_capital_in_the_u_s",
+            "entity:struggle_for_independence_from_mexico",
+            "entity:tejas",
+            "entity:texan_state_seal",
+            "entity:texas_state_flag",
+            "entity:title_anchor_texas"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:tucson_arizona_0",
+        "score": 0.006490402470448935,
+        "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000.",
+        "metadata": {
+          "title": "Tucson, Arizona",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:118_mi_southeast_of_phoenix",
+            "entity:2010_united_states_census",
+            "entity:32nd_largest_city_in_the_united_states",
+            "entity:52nd_largest_metropolitan_area_in_the_united_states",
+            "entity:60_mi_north_of_the_united_states_mexico_border",
+            "entity:arizona",
+            "entity:arizona_sun_corridor",
+            "entity:as",
+            "entity:by",
+            "entity:city_of_tucson",
+            "entity:gadsden_purchase",
+            "entity:greater_tucson_metro",
+            "entity:greater_tucson_metro_area",
+            "entity:many",
+            "entity:over",
+            "entity:phoenix",
+            "entity:pima_county",
+            "entity:present_veterans_hospital",
+            "entity:southern_arizona",
+            "entity:tucson",
+            "entity:united_states_mexico_border",
+            "entity:veterans_administration",
+            "entity:veterans_hospital",
+            "entity:world_war",
+            "entity:world_war_i"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:san_diego_0",
+        "score": 0.00572078578156434,
+        "text": "San Diego\nWith an estimated population of 1,381,069 as of July 1, 2014, San Diego is the eighth-largest city in the United States and second-largest in California. It is part of the San Diego–Tijuana conurbation, the second-largest transborder agglomeration between the US and a bordering country after Detroit–Windsor, with a population of 4,922,723 people. San Diego is the birthplace of California and is known for its mild year-round climate, natural deep-water harbor, extensive beaches, long association with the United States Navy and recent emergence as a healthcare and biotechnology development center.",
+        "metadata": {
+          "title": "San Diego",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:between_us_and_a_bordering_country",
+            "entity:california",
+            "entity:detroit_windsor",
+            "entity:eighth_largest_city_in_the_united_states",
+            "entity:san_diego_tijuana_conurbation",
+            "entity:second_largest_city_in_california",
+            "entity:title_anchor_san_diego",
+            "entity:united_states_navy"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Tucson, Arizona\nTucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000.\n\nTexas\nTexas\nHouston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S. Dallas -- Fort Worth and Greater Houston are the fourth and fifth largest metropolitan statistical areas in the country, respectively. Other major cities include Austin, the second most populous state capital in the U.S., and El Paso. Texas is nicknamed ``The Lone Star State ''to signify its former status as an independent republic, and as a reminder of the state's struggle for independence from Mexico. The`` Lone Star'' can be found on the Texas state flag and on the Texan state seal. The origin of Texas's name is from the word ``Tejas, ''which means`` friends'' in the Caddo language.\n\nDetroit\nDetroit\nDetroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border. It is the seat of Wayne County, the most populous county in the state. Detroit's metropolitan area, known as Metro Detroit, is home to 5.3 million people, making it the fourteenth-most populous metropolitan area in the United States and the second-largest in the Midwestern United States (behind Chicago). It is a major port on the Detroit River, a strait that connects the Great Lakes system to the Saint Lawrence Seaway. The City of Detroit anchors the second-largest economic region in the Midwest, behind Chicago, and the thirteenth-largest in the United States.\n\nSan Diego\nSan Diego\nWith an estimated population of 1,381,069 as of July 1, 2014, San Diego is the eighth-largest city in the United States and second-largest in California. It is part of the San Diego–Tijuana conurbation, the second-largest transborder agglomeration between the US and a bordering country after Detroit–Windsor, with a population of 4,922,723 people. San Diego is the birthplace of California and is known for its mild year-round climate, natural deep-water harbor, extensive beaches, long association with the United States Navy and recent emergence as a healthcare and biotechnology development center.\n\nJeffrey Peterson\nJeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate. The committee is focused on international real estate transactions between residents of Arizona and Mexico. In the same year, he was appointed as the chairman of the Technology Subcommittee of the 2006 Executive Bond Committee, by Phoenix Mayor Phil Gordon. The $850 million bond initiative was approved by voters in March 2006. He also financially supported the March 25, 2006, and April 10, 2006, reform marches organized by immigrants and he was a co-host at a June 1, 2006, fundraiser for Arizona Senatorial candidate Jim Pederson, featuring former president, Bill Clinton. Jeffrey held a fundraiser at his residence for Barack Obama featuring Democratic National Committee Chairman Howard Dean and actress Scarlett Johansson on August 21, 2008. Peterson was named as a co-host at an October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector\n\nJeffrey Peterson\nThe committee is focused on international real estate transactions between residents of Arizona and Mexico.\n\nJeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate.\n\nTucson, Arizona\nA major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.\n\nLas Cruces, New Mexico\nAs of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque.\n\nTucson, Arizona\nIn 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000.\n\nJeffrey Peterson\nJeffrey Peterson\nan October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector initiative chaired by U.S. Ambassador John Negroponte and former AIG Chairman Maurice \"Hank\" Greenberg. A prominent picture of Peterson with Benigno Aquino III, former President of the Philippines, was set at the Malacañang Palace and featured in a 2017 print publication.According to Maricopa County's property records, Peterson owned a residence in the same condominium as Arizona Senator John McCain.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:tucson_arizona_0",
+        "passage_index": 15,
+        "title": "Tucson, Arizona",
+        "score": 0.08370372920056403,
+        "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000.",
+        "score_breakdown": {
+          "dense": 0.05278806168511772,
+          "graph": 0.05571346240157175,
+          "fact": 0.253041710355185
+        }
+      },
+      {
+        "node_id": "chunk:texas_0",
+        "passage_index": 1,
+        "title": "Texas",
+        "score": 0.08330043068479115,
+        "text": "Texas\nHouston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S. Dallas -- Fort Worth and Greater Houston are the fourth and fifth largest metropolitan statistical areas in the country, respectively. Other major cities include Austin, the second most populous state capital in the U.S., and El Paso. Texas is nicknamed ``The Lone Star State ''to signify its former status as an independent republic, and as a reminder of the state's struggle for independence from Mexico. The`` Lone Star'' can be found on the Texas state flag and on the Texan state seal. The origin of Texas's name is from the word ``Tejas, ''which means`` friends'' in the Caddo language.",
+        "score_breakdown": {
+          "dense": 0.05263527097262779,
+          "graph": 0.05554973930219935,
+          "fact": 0.2512407323945738
+        }
+      },
+      {
+        "node_id": "chunk:detroit_0",
+        "passage_index": 9,
+        "title": "Detroit",
+        "score": 0.08316818422938152,
+        "text": "Detroit\nDetroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border. It is the seat of Wayne County, the most populous county in the state. Detroit's metropolitan area, known as Metro Detroit, is home to 5.3 million people, making it the fourteenth-most populous metropolitan area in the United States and the second-largest in the Midwestern United States (behind Chicago). It is a major port on the Detroit River, a strait that connects the Great Lakes system to the Saint Lawrence Seaway. The City of Detroit anchors the second-largest economic region in the Midwest, behind Chicago, and the thirteenth-largest in the United States.",
+        "score_breakdown": {
+          "dense": 0.05253265535368769,
+          "graph": 0.0577847038615661,
+          "fact": 0.2462654175092231
+        }
+      },
+      {
+        "node_id": "chunk:san_diego_0",
+        "passage_index": 3,
+        "title": "San Diego",
+        "score": 0.08274269848360433,
+        "text": "San Diego\nWith an estimated population of 1,381,069 as of July 1, 2014, San Diego is the eighth-largest city in the United States and second-largest in California. It is part of the San Diego–Tijuana conurbation, the second-largest transborder agglomeration between the US and a bordering country after Detroit–Windsor, with a population of 4,922,723 people. San Diego is the birthplace of California and is known for its mild year-round climate, natural deep-water harbor, extensive beaches, long association with the United States Navy and recent emergence as a healthcare and biotechnology development center.",
+        "score_breakdown": {
+          "dense": 0.052734009334264996,
+          "graph": 0.05440390796201947,
+          "fact": 0.24945213974101818
+        }
+      },
+      {
+        "node_id": "chunk:jeffrey_peterson_0",
+        "passage_index": 17,
+        "title": "Jeffrey Peterson",
+        "score": 0.04472148900880893,
+        "text": "Jeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate. The committee is focused on international real estate transactions between residents of Arizona and Mexico. In the same year, he was appointed as the chairman of the Technology Subcommittee of the 2006 Executive Bond Committee, by Phoenix Mayor Phil Gordon. The $850 million bond initiative was approved by voters in March 2006. He also financially supported the March 25, 2006, and April 10, 2006, reform marches organized by immigrants and he was a co-host at a June 1, 2006, fundraiser for Arizona Senatorial candidate Jim Pederson, featuring former president, Bill Clinton. Jeffrey held a fundraiser at his residence for Barack Obama featuring Democratic National Committee Chairman Howard Dean and actress Scarlett Johansson on August 21, 2008. Peterson was named as a co-host at an October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector",
+        "score_breakdown": {
+          "dense": 0.05297921351554278,
+          "graph": 0.051943071917534674,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:southern_california_0",
+        "passage_index": 10,
+        "title": "Southern California",
+        "score": 0.04463801249638161,
+        "text": "Southern California\nWithin southern California are two major cities, Los Angeles and San Diego, as well as three of the country's largest metropolitan areas. With a population of 3,792,621, Los Angeles is the most populous city in California and the second most populous in the United States. To the south and with a population of 1,307,402 is San Diego, the second most populous city in the state and the eighth most populous in the nation.",
+        "score_breakdown": {
+          "dense": 0.05276671265641205,
+          "graph": 0.05205440178451659,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:las_cruces_new_mexico_0",
+        "passage_index": 12,
+        "title": "Las Cruces, New Mexico",
+        "score": 0.044620676286423314,
+        "text": "Las Cruces, New Mexico\nLas Cruces, also known as ``The City of the Crosses '', is the seat of Doña Ana County, New Mexico, United States. As of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque. Las Cruces is the largest city in both Doña Ana County and southern New Mexico. The Las Cruces metropolitan area had an estimated population of 213,676 in 2014. It is the principal city of a metropolitan statistical area which encompasses all of Doña Ana County and is part of the larger El Paso -- Las Cruces combined statistical area.",
+        "score_breakdown": {
+          "dense": 0.05296152731980424,
+          "graph": 0.05163945420176994,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:saint_paul_minnesota_0",
+        "passage_index": 14,
+        "title": "Saint Paul, Minnesota",
+        "score": 0.044592820716256316,
+        "text": "Saint Paul, Minnesota\nSaint Paul (abbreviated St. Paul) is the capital and second-most populous city of the U.S. state of Minnesota. As of 2016, the city's estimated population was 304,442. Saint Paul is the county seat of Ramsey County, the smallest and most densely populated county in Minnesota. The city lies mostly on the east bank of the Mississippi River in the area surrounding its point of confluence with the Minnesota River, and adjoins Minneapolis, the state's largest city. Known as the ``Twin Cities '', the two form the core of Minneapolis -- Saint Paul, the 16th - largest metropolitan area in the United States, with about 3.52 million residents.",
+        "score_breakdown": {
+          "dense": 0.05266497724758722,
+          "graph": 0.052090277433611144,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:staunton_illinois_0",
+        "passage_index": 0,
+        "title": "Staunton, Illinois",
+        "score": 0.04453499163284001,
+        "text": "Staunton, Illinois\nStaunton is the second largest city in Macoupin County, Illinois, United States. As of the 2010 Census, the population was 5,139.",
+        "score_breakdown": {
+          "dense": 0.052553057185366056,
+          "graph": 0.052102700602962286,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:oklahoma_city_0",
+        "passage_index": 4,
+        "title": "Oklahoma City",
+        "score": 0.04451750473073576,
+        "text": "Oklahoma City\nOklahoma City is the capital and largest city of the state of Oklahoma. The county seat of Oklahoma County, the city ranks 27th among United States cities in population. The population grew following the 2010 Census, with the population estimated to have increased to 620,602 as of July 2014. As of 2014, the Oklahoma City metropolitan area had a population of 1,322,429, and the Oklahoma City-Shawnee Combined Statistical Area had a population of 1,459,758 (Chamber of Commerce) residents, making it Oklahoma's largest metropolitan area. Oklahoma City's city limits extend into Canadian, Cleveland, and Pottawatomie counties, though much of those areas outside of the core Oklahoma County area are suburban or rural (watershed). The city ranks as the eighth-largest city in the United States by land area (including consolidated city-counties; it is the largest city in the United States by land area whose government is not consolidated with that of a county or borough).",
+        "score_breakdown": {
+          "dense": 0.05254468442367297,
+          "graph": 0.052059760992385413,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What state does the cross-border transactions committee focus on?",
+        "resolved_sub_question": "What state does the cross-border transactions committee focus on?",
+        "sentence_id": "sentence:jeffrey_peterson_0_1_the_committee_is_focused_on_international_real_estate_transactions_between_resid",
+        "sentence": "The committee is focused on international real estate transactions between residents of Arizona and Mexico.",
+        "score": 0.4266640041205088,
+        "source_title": "Jeffrey Peterson",
+        "hop_answer": "Arizona",
+        "hop_thought": "The cross-border transactions committee focuses on international real estate transactions between residents of Arizona and Mexico. Therefore, the state in question is Arizona.",
+        "hop_raw_response": "The cross-border transactions committee focuses on international real estate transactions between residents of Arizona and Mexico. Therefore, the state in question is Arizona.\nAnswer: Arizona",
+        "evidence_passages": [
+          {
+            "title": "Jeffrey Peterson",
+            "text": "The committee is focused on international real estate transactions between residents of Arizona and Mexico."
+          },
+          {
+            "title": "Jeffrey Peterson",
+            "text": "Jeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate. The committee is focused on international real estate transactions between residents of Arizona and Mexico. In the same year, he was appointed as the chairman of the Technology Subcommittee of the 2006 Executive Bond Committee, by Phoenix Mayor Phil Gordon. The $850 million bond initiative was approved by voters in March 2006. He also financially supported the March 25, 2006, and April 10, 2006, reform marches organized by immigrants and he was a co-host at a June 1, 2006, fundraiser for Arizona Senatorial candidate Jim Pederson, featuring former president, Bill Clinton. Jeffrey held a fundraiser at his residence for Barack Obama featuring Democratic National Committee Chairman Howard Dean and actress Scarlett Johansson on August 21, 2008. Peterson was named as a co-host at an October 19, 2016 fundraising event for Democratic candidate Hillary Clinton featuring Chelsea Clinton at a private residence in Phoenix.In 2013, Peterson was appointed to the Board of Directors of the U.S. Philippines Society, a Washington, D.C. based private sector"
+          },
+          {
+            "title": "Jeffrey Peterson",
+            "text": "In 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the second largest city in this state?",
+        "resolved_sub_question": "What is the second largest city in this state? Context: Arizona.",
+        "sentence_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+        "sentence": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.",
+        "score": 0.6913655043388549,
+        "source_title": "Tucson, Arizona",
+        "hop_answer": "Tucson",
+        "hop_thought": "The context specifies Arizona, and within Arizona, the second largest city after Phoenix is mentioned in the passage about Tucson.",
+        "hop_raw_response": "The context specifies Arizona, and within Arizona, the second largest city after Phoenix is mentioned in the passage about Tucson.\nAnswer: Tucson",
+        "evidence_passages": [
+          {
+            "title": "Tucson, Arizona",
+            "text": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+          },
+          {
+            "title": "Las Cruces, New Mexico",
+            "text": "As of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque."
+          }
+        ]
+      },
+      {
+        "sub_question": "What was the population of this city in 1900?",
+        "resolved_sub_question": "What was the population of this city in 1900? Context: Arizona; Tucson.",
+        "sentence_id": "sentence:tucson_arizona_0_3_a_major_city_in_the_arizona_sun_corridor_tucson_is_the_largest_city_in_southern",
+        "sentence": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix.",
+        "score": 0.5035152652069793,
+        "source_title": "Tucson, Arizona",
+        "hop_answer": "7,531",
+        "hop_thought": "The population of Tucson in 1900 is directly stated in the evidence.",
+        "hop_raw_response": "The population of Tucson in 1900 is directly stated in the evidence.\nAnswer: 7,531",
+        "evidence_passages": [
+          {
+            "title": "Tucson, Arizona",
+            "text": "A major city in the Arizona Sun Corridor, Tucson is the largest city in southern Arizona, the second largest in the state after Phoenix."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "Tucson, Arizona\nBy 1900, 7,531 people lived in the city. The population increased gradually to 13,913 in 1910. At about this time, the U.S. Veterans Administration had begun construction on the present Veterans Hospital. Many veterans who had been gassed in World War I and were in need of respiratory therapy began coming to Tucson after the war, due to the clean dry air. Over the following years the city continued to grow, with the population increasing to 20,292 in 1920 and 36,818 in 1940. In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+          },
+          {
+            "title": "Tucson, Arizona",
+            "text": "In 2006 the population of Pima County, in which Tucson is located, passed one million while the City of Tucson's population was 535,000."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What state does the cross-border transactions committee focus on? => Arizona (source: Jeffrey Peterson)\n2. What is the second largest city in this state? => Tucson (source: Tucson, Arizona)\n3. What was the population of this city in 1900? => 7,531 (source: Tucson, Arizona)\n\nFact hints:\n- Tucson is the second largest city in Arizona\n\nWikipedia Title: Tucson, Arizona\nTucson, Arizona By 1900, 7,531 people lived in the city. At about this time, the U.S.\n\nWikipedia Title: Jeffrey Peterson\nIn 2005, Peterson was appointed to the cross-border transactions committee of the Arizona Department of Real Estate.\n\nWikipedia Title: Las Cruces, New Mexico\nAs of the 2010 census the population was 97,618, and in 2015 the estimated population was 101,643, making it the second largest city in the state, after Albuquerque.\n\nWikipedia Title: Detroit\nDetroit Detroit (/dᵻˈtrɔɪt/) is the most populous city in the U.S. state of Michigan, the fourth-largest city in the Midwest and the largest city on the United States–Canada border. The City of Detroit anchors the second-largest economic region in the Midwest, behind Chicago, and the thirteenth-largest in the United States.\n\nWikipedia Title: Texas\nTexas Houston is the most populous city in Texas and the fourth largest in the U.S., while San Antonio is the second most populous in the state and seventh largest in the U.S. Other major cities include Austin, the second most populous state capital in the U.S., and El Paso.\n\nQuestion: In 1900, what was the population of the second largest city, in the state that the cross-border transactions committee focuses on?\nDraft Answer: 7,531\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The cross-border transactions committee focuses on Arizona. Tucson is the second largest city in Arizona. The population of Tucson in 1900 was 7,531.",
+  "predicted_answer": "7,531",
+  "qa_raw_response": "{\n  \"thought\": \"The cross-border transactions committee focuses on Arizona. Tucson is the second largest city in Arizona. The population of Tucson in 1900 was 7,531.\",\n  \"answer\": \"7,531\",\n  \"support\": \"By 1900, 7,531 people lived in the city.\"\n}"
+}

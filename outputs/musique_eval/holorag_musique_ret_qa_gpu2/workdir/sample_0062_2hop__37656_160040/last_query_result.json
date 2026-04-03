@@ -1,0 +1,973 @@
+{
+  "query": "Who is the guy defending this stuff from the highest authority in Protestantism for morals?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Protestantism"
+  ],
+  "raw_query_entities": [
+    "Protestantism"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Protestantism",
+      "node_id": "entity:title_anchor_protestantism",
+      "resolved_text": "Protestantism",
+      "score": 0.782,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.775,
+      "score_margin": 0.016000000000000014,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What is the highest authority in Protestantism for morals?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:protestant",
+      "score": 0.5502895136108276,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:fulfillment_of_old_testament_prophecy",
+      "score": 0.3565570368919727,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:old_testament_prophecy",
+      "score": 0.3548982033314805,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_protestantism",
+      "score": 0.27634395967467723,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:branch_of_protestantism",
+      "score": 0.27634008581445124,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:evangelical_protestantism",
+      "score": 0.27633948708073847,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:protestant_denominations",
+      "score": 0.2763195273744744,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:protestants",
+      "score": 0.2763194673446184,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:busted_stuff",
+      "score": 0.263506861769027,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_where_are_you_going",
+      "score": 0.26350000251487254,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:protestantism",
+      "score": 0.23068249841686866,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lutheran",
+      "score": 0.23065560533677235,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:you_going_is_song_from_busted_stuff_sentence_where_are_you_going_0_5_where_are_you_going_is_one_of_two_songs_from_busted",
+      "text": "You Going is song from Busted Stuff",
+      "head_id": "entity:title_anchor_where_are_you_going",
+      "tail_id": "entity:busted_stuff",
+      "sentence_id": "sentence:where_are_you_going_0_5_where_are_you_going_is_one_of_two_songs_from_busted_stuff_that_did_not_origi",
+      "chunk_id": "chunk:where_are_you_going_0",
+      "document_index": 1,
+      "score": 0.27115755262490154
+    },
+    {
+      "fact_id": "fact:you_going_is_first_single_from_busted_stuff_sentence_where_are_you_going_0_0_where_are_you_going_is_the_first_single_fro",
+      "text": "You Going is first single from Busted Stuff",
+      "head_id": "entity:title_anchor_where_are_you_going",
+      "tail_id": "entity:busted_stuff",
+      "sentence_id": "sentence:where_are_you_going_0_0_where_are_you_going_is_the_first_single_from_dave_matthews_band_s_album_buste",
+      "chunk_id": "chunk:where_are_you_going_0",
+      "document_index": 1,
+      "score": 0.2511574978377832
+    },
+    {
+      "fact_id": "fact:lutheran_related_to_protestantism_sentence_catholic_church_in_england_and_wales_0_4_at_the_time_they_were_neither_calvin",
+      "text": "Lutheran related_to Protestantism",
+      "head_id": "entity:lutheran",
+      "tail_id": "entity:protestantism",
+      "sentence_id": "sentence:catholic_church_in_england_and_wales_0_4_at_the_time_they_were_neither_calvinist_nor_lutheran_but_certainly_leaning_towa",
+      "chunk_id": "chunk:catholic_church_in_england_and_wales_0",
+      "document_index": 19,
+      "score": 0.22830731899649048
+    },
+    {
+      "fact_id": "fact:johann_christoph_wagenseil_attempted_refutation_of_abraham_s_arguments_sentence_criticism_of_christianity_0_4_while_the_",
+      "text": "Johann Christoph Wagenseil attempted refutation of Abraham's arguments",
+      "head_id": "entity:johann_christoph_wagenseil",
+      "tail_id": "entity:abraham_s_arguments",
+      "sentence_id": "sentence:criticism_of_christianity_0_4_while_the_well_known_christian_hebraist_johann_christoph_wagenseil_attempted_an",
+      "chunk_id": "chunk:criticism_of_christianity_0",
+      "document_index": 12,
+      "score": 0.19116136676343692
+    },
+    {
+      "fact_id": "fact:old_testament_prophecy_supports_christianity_sentence_criticism_of_christianity_1_2_apologist_josh_mcdowell_defends_the_",
+      "text": "Old Testament prophecy supports Christianity",
+      "head_id": "entity:old_testament_prophecy",
+      "tail_id": "entity:christianity",
+      "sentence_id": "sentence:criticism_of_christianity_1_2_apologist_josh_mcdowell_defends_the_fulfillment_of_old_testament_prophecy_as_sup",
+      "chunk_id": "chunk:criticism_of_christianity_1",
+      "document_index": 12,
+      "score": 0.17116082665361762
+    },
+    {
+      "fact_id": "fact:josh_mcdowell_defends_fulfillment_of_old_testament_prophecy_sentence_criticism_of_christianity_1_2_apologist_josh_mcdowe",
+      "text": "Josh McDowell defends fulfillment of Old Testament prophecy",
+      "head_id": "entity:josh_mcdowell",
+      "tail_id": "entity:fulfillment_of_old_testament_prophecy",
+      "sentence_id": "sentence:criticism_of_christianity_1_2_apologist_josh_mcdowell_defends_the_fulfillment_of_old_testament_prophecy_as_sup",
+      "chunk_id": "chunk:criticism_of_christianity_1",
+      "document_index": 12,
+      "score": 0.15116404490763158
+    },
+    {
+      "fact_id": "fact:n_t_sweat_the_small_stuff_and_it_s_all_small_stuff_was_usa_today_s_bestselling_book_for_two_consecutive_years_sentence_r",
+      "text": "n't Sweat the Small Stuff and it's all Small Stuff was USA Today's bestselling book for two consecutive years",
+      "head_id": "entity:n_t_sweat_the_small_stuff_and_it_s_all_small_stuff",
+      "tail_id": "entity:usa_today_s_bestselling_book_for_two_consecutive_years",
+      "sentence_id": "sentence:richard_carlson_author_0_1_his_book_do_n_t_sweat_the_small_stuff_and_it_s_all_small_stuff_1997_was_u",
+      "chunk_id": "chunk:richard_carlson_author_0",
+      "document_index": 5,
+      "score": 0.12544274160040136
+    }
+  ],
+  "bridge_entities": [
+    "Lutheran",
+    "Protestant",
+    "Calvinist",
+    "Bible alone"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the highest authority in Protestantism for morals?",
+      "resolved_sub_question": "What is the highest authority in Protestantism for morals?",
+      "sentence_id": "sentence:protestantism_0_1_the_various_denominations_generally_emphasize_the_priesthood_of_all_believers_t",
+      "sentence": "The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura).",
+      "score": 0.3798236251904624,
+      "source_title": "Protestantism",
+      "hop_answer": "the Bible alone",
+      "hop_thought": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).",
+      "hop_raw_response": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).\nAnswer: the Bible alone",
+      "evidence_passages": [
+        {
+          "title": "Protestantism",
+          "text": "The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura)."
+        },
+        {
+          "title": "Protestantism",
+          "text": "Protestantism\nAll Protestant denominations reject the notion of papal supremacy over the Church universal and generally deny the Roman Catholic doctrine of transubstantiation, but they disagree among themselves regarding the real presence of Christ in the Eucharist. The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day."
+        },
+        {
+          "title": "Supreme court",
+          "text": "It is also the highest authority in the interpretation of the law."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:protestant",
+      "score": 0.05497508264215189,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:protestantism",
+      "score": 0.034347281684002626,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:old_testament_prophecy",
+      "score": 0.03408092201785946,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:fulfillment_of_old_testament_prophecy",
+      "score": 0.03399097667427137,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_protestantism",
+      "score": 0.03147511849131218,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:criticism_of_christianity_1_2_apologist_josh_mcdowell_defends_the_fulfillment_of_old_testament_prophecy_as_sup",
+      "score": 0.03036006511011819,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:protestants",
+      "score": 0.028114372768851828,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:catholic_church_in_england_and_wales_0_4_at_the_time_they_were_neither_calvinist_nor_lutheran_but_certainly_leaning_towa",
+      "score": 0.028075795900195977,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:christianity",
+      "score": 0.027613082950603635,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:protestant_denominations",
+      "score": 0.027596985880989737,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:busted_stuff",
+      "score": 0.026558750007546008,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_where_are_you_going",
+      "score": 0.02655691692836952,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:branch_of_protestantism",
+      "score": 0.024133763675876364,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:evangelical_protestantism",
+      "score": 0.023827455364247435,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:lutheran",
+      "score": 0.023788485249966823,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:johann_christoph_wagenseil",
+      "score": 0.022887814154932032,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:criticism_of_christianity_0_4_while_the_well_known_christian_hebraist_johann_christoph_wagenseil_attempted_an",
+      "score": 0.022101796368680673,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:old_testament",
+      "score": 0.021316744802123613,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:wagenseil",
+      "score": 0.021004523649379048,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:christians",
+      "score": 0.019149312023709706,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:where_are_you_going_0",
+      "passage_index": 1,
+      "title": "Where Are You Going",
+      "score": 0.07508719343881029,
+      "text": "Where Are You Going\n\"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\". The single reached #39 on the Billboard Hot 100, #20 on the Modern Rock Tracks, and topped the Triple A chart. The song was featured in the 2002 Adam Sandler motion picture, \"Mr. Deeds\". It is also featured in the trailer for the 2008 film \"Flash of Genius\". \"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".",
+      "score_breakdown": {
+        "dense": 0.04974485614484169,
+        "graph": 0.051574555143741325,
+        "fact": 0.2150343734401664
+      }
+    },
+    {
+      "node_id": "chunk:catholic_church_in_england_and_wales_0",
+      "passage_index": 19,
+      "title": "Catholic Church in England and Wales",
+      "score": 0.07444567114254844,
+      "text": "Catholic Church in England and Wales\nThe English Church was brought back under papal authority in 1553 and doctrinal and liturgical conformity at the beginning of the reign of Queen Mary I. The restoration of papal authority was celebrated by the majority of the nation and enforced by the Marian persecutions against Protestants. Her harshness was a success but at the cost of alienating a fairly large section of English society which had been moving away from some traditional Catholic devotional practices. The English it seems were quite caught up with the reforming movement on the Continent. At the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant).",
+      "score_breakdown": {
+        "dense": 0.050123053843225206,
+        "graph": 0.05325260809151472,
+        "fact": 0.20601472734213438
+      }
+    },
+    {
+      "node_id": "chunk:criticism_of_christianity_0",
+      "passage_index": 12,
+      "title": "Criticism of Christianity",
+      "score": 0.07337256052824595,
+      "text": "Criticism of Christianity\nThe 16th-century Jewish theologian Isaac ben Abraham, who lived in Trakai, Lithuania, penned a work called Chizzuk Emunah (Faith Strengthened) that attempted to refute the ideas that Jesus was the Messiah prophesied in the Old Testament and that Christianity was the \"New Covenant\" of God. He systematically identified a number of inconsistencies in the New Testament, contradictions between the New Testament and the Old Testament, and Old Testament prophesies which remained unfulfilled in Jesus' lifetime. In addition, he questioned a number of Christian practices, such as Sunday Sabbath. Written originally for Jews to persuade them not to convert to Christianity, the work was eventually read by Christians. While the well-known Christian Hebraist Johann Christoph Wagenseil attempted an elaborate refutation of Abraham's arguments, Wagenseil's Latin translation of it only increased interest in the work and inspired later Christian freethinkers. Chizzuk Emunah was praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over",
+      "score_breakdown": {
+        "dense": 0.05001570715145487,
+        "graph": 0.053628487513706614,
+        "fact": 0.19850250227222527
+      }
+    },
+    {
+      "node_id": "chunk:criticism_of_christianity_1",
+      "passage_index": 12,
+      "title": "Criticism of Christianity",
+      "score": 0.07244737628856436,
+      "text": "Criticism of Christianity\nwas praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over a span of four thousand years. Apologist Josh McDowell defends the fulfillment of Old Testament prophecy as supporting Christianity, arguing that prophecies fulfilled by Christ include ones relating to his ancestral line, birthplace, virgin birth, miracles, manner of death, and resurrection. He says that even the timing of the Messiah in years and in relation to events is predicted, and that the Jewish Talmud (not accepting Jesus as the Messiah, see also Rejection of Jesus) laments that the Messiah had not appeared despite the scepter being taken away from Judah.",
+      "score_breakdown": {
+        "dense": 0.050139685634425855,
+        "graph": 0.05228260515619376,
+        "fact": 0.19457178428514676
+      }
+    },
+    {
+      "node_id": "chunk:richard_carlson_author_0",
+      "passage_index": 5,
+      "title": "Richard Carlson (author)",
+      "score": 0.07038726025714107,
+      "text": "Richard Carlson (author)\nRichard Carlson (May 16, 1961 -- December 13, 2006) was an American author, psychotherapist, and motivational speaker. His book, Do n't Sweat the Small Stuff... and it's all Small Stuff (1997), was USA Today's bestselling book for two consecutive years. and spent over 101 weeks on the New York Times Best Seller list. It was published in 135 countries and translated into Latvian, Polish, Icelandic, Serbian and 26 other languages. Carlson went on to write 20 books.",
+      "score_breakdown": {
+        "dense": 0.04996771601298363,
+        "graph": 0.05007841516983663,
+        "fact": 0.18587661266032723
+      }
+    },
+    {
+      "node_id": "chunk:protestantism_0",
+      "passage_index": 18,
+      "title": "Protestantism",
+      "score": 0.04322499591999604,
+      "text": "Protestantism\nAll Protestant denominations reject the notion of papal supremacy over the Church universal and generally deny the Roman Catholic doctrine of transubstantiation, but they disagree among themselves regarding the real presence of Christ in the Eucharist. The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day.",
+      "score_breakdown": {
+        "dense": 0.05046527269633238,
+        "graph": 0.051563653123377434,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:s_bastien_fath_0",
+      "passage_index": 16,
+      "title": "Sébastien Fath",
+      "score": 0.042622289280608454,
+      "text": "Sébastien Fath\nSébastien Fath (born 1968 in Strasbourg) is a French professional historian and a Ph.D at the Sorbonne University. Also trained in Sociology, he is the main French specialist in the study of Evangelical Protestantism. Author of sixteen books, he is a permanent researcher at the National Center for Scientific Research (CNRS). He is a full member of the GSRL (Groupe Sociétés Religions Laïcités), a research team working on religion and secularism. As a social scientist and a citizen, cross-cultural reflexion on Civil Society, Politics and Religion is his focus.",
+      "score_breakdown": {
+        "dense": 0.05010180875186943,
+        "graph": 0.05022098155693422,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sexual_morality_and_the_law_0",
+      "passage_index": 6,
+      "title": "Sexual Morality and the Law",
+      "score": 0.04232168592732415,
+      "text": "Sexual Morality and the Law\nSexual Morality and the Law is the transcription of a 1978 radio conversation in Paris between philosopher Michel Foucault, playwright/actor/lawyer Jean Danet, and novelist/gay activist Guy Hocquenghem, debating the idea of abolishing age of consent laws in France.",
+      "score_breakdown": {
+        "dense": 0.050206800433656815,
+        "graph": 0.049026485629376344,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:supreme_court_0",
+      "passage_index": 13,
+      "title": "Supreme court",
+      "score": 0.04224711119222126,
+      "text": "Supreme court\nThe Supreme Court is the highest court in Ireland. It has authority to interpret the constitution, and strike down laws and activities of the state that it finds to be unconstitutional. It is also the highest authority in the interpretation of the law. Constitutionally it must have authority to interpret the constitution but its further appellate jurisdiction from lower courts is defined by law. The Irish Supreme Court consists of its presiding member, the Chief Justice, and seven other judges. Judges of the Supreme Court are appointed by the President in accordance with the binding advice of the Government. The Supreme Court sits in the Four Courts in Dublin.",
+      "score_breakdown": {
+        "dense": 0.05005315850363929,
+        "graph": 0.04905958005073214,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:to_kill_a_mockingbird_0",
+      "passage_index": 7,
+      "title": "To Kill a Mockingbird",
+      "score": 0.042238574662687656,
+      "text": "To Kill a Mockingbird\nThe novel has been noted for its poignant exploration of different forms of courage. Scout's impulsive inclination to fight students who insult Atticus reflects her attempt to stand up for him and defend him. Atticus is the moral center of the novel, however, and he teaches Jem one of the most significant lessons of courage. In a statement that foreshadows Atticus' motivation for defending Tom Robinson and describes Mrs. Dubose, who is determined to break herself of a morphine addiction, Atticus tells Jem that courage is \"when you're licked before you begin but you begin anyway and you see it through no matter what\".",
+      "score_breakdown": {
+        "dense": 0.050049714589799926,
+        "graph": 0.049037438794325656,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:protestant",
+        "score": 0.05497508264215189,
+        "text": "Protestant",
+        "metadata": {
+          "canonical_name": "Protestant",
+          "aliases": [
+            "Protestant"
+          ],
+          "surface_forms": [
+            "Protestant"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:protestantism",
+        "score": 0.034347281684002626,
+        "text": "Protestantism",
+        "metadata": {
+          "canonical_name": "Protestantism",
+          "aliases": [
+            "Protestantism"
+          ],
+          "surface_forms": [
+            "Protestantism"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:old_testament_prophecy",
+        "score": 0.03408092201785946,
+        "text": "Old Testament prophecy",
+        "metadata": {
+          "canonical_name": "Old Testament prophecy",
+          "aliases": [
+            "OTP",
+            "Old Testament prophecy"
+          ],
+          "surface_forms": [
+            "OTP",
+            "Old Testament prophecy"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:fulfillment_of_old_testament_prophecy",
+        "score": 0.03399097667427137,
+        "text": "fulfillment of Old Testament prophecy",
+        "metadata": {
+          "canonical_name": "fulfillment of Old Testament prophecy",
+          "aliases": [
+            "FOOTP",
+            "fulfillment of Old Testament prophecy"
+          ],
+          "surface_forms": [
+            "FOOTP",
+            "fulfillment of Old Testament prophecy"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:criticism_of_christianity_1_2_apologist_josh_mcdowell_defends_the_fulfillment_of_old_testament_prophecy_as_sup",
+        "score": 0.03036006511011819,
+        "text": "Apologist Josh McDowell defends the fulfillment of Old Testament prophecy as supporting Christianity, arguing that prophecies fulfilled by Christ include ones relating to his ancestral line, birthplace, virgin birth, miracles, manner of death, and resurrection.",
+        "metadata": {
+          "title": "Criticism of Christianity",
+          "chunk_id": "chunk:criticism_of_christianity_1",
+          "sentence_index": 2,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Josh McDowell",
+              "relation": "defends",
+              "tail": "fulfillment of Old Testament prophecy"
+            },
+            {
+              "head": "Old Testament prophecy",
+              "relation": "supports",
+              "tail": "Christianity"
+            }
+          ],
+          "entities": [
+            "Josh McDowell",
+            "Old Testament",
+            "Christianity",
+            "Christ"
+          ],
+          "entity_ids": [
+            "entity:christ",
+            "entity:christianity",
+            "entity:fulfillment_of_old_testament_prophecy",
+            "entity:josh_mcdowell",
+            "entity:old_testament",
+            "entity:old_testament_prophecy"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:catholic_church_in_england_and_wales_0_4_at_the_time_they_were_neither_calvinist_nor_lutheran_but_certainly_leaning_towa",
+        "score": 0.028075795900195977,
+        "text": "At the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant).",
+        "metadata": {
+          "title": "Catholic Church in England and Wales",
+          "chunk_id": "chunk:catholic_church_in_england_and_wales_0",
+          "sentence_index": 4,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Calvinist",
+              "relation": "related_to",
+              "tail": "Lutheran"
+            },
+            {
+              "head": "Lutheran",
+              "relation": "related_to",
+              "tail": "Protestantism"
+            },
+            {
+              "head": "Protestantism",
+              "relation": "related_to",
+              "tail": "Protestant"
+            }
+          ],
+          "entities": [
+            "Calvinist",
+            "Lutheran",
+            "Protestantism",
+            "Protestant"
+          ],
+          "entity_ids": [
+            "entity:calvinist",
+            "entity:lutheran",
+            "entity:protestant",
+            "entity:protestantism"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:criticism_of_christianity_0_4_while_the_well_known_christian_hebraist_johann_christoph_wagenseil_attempted_an",
+        "score": 0.022101796368680673,
+        "text": "While the well-known Christian Hebraist Johann Christoph Wagenseil attempted an elaborate refutation of Abraham's arguments, Wagenseil's Latin translation of it only increased interest in the work and inspired later Christian freethinkers.",
+        "metadata": {
+          "title": "Criticism of Christianity",
+          "chunk_id": "chunk:criticism_of_christianity_0",
+          "sentence_index": 4,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Johann Christoph Wagenseil",
+              "relation": "attempted refutation of",
+              "tail": "Abraham's arguments"
+            },
+            {
+              "head": "Wagenseil",
+              "relation": "translated into Latin",
+              "tail": "Abraham's work"
+            },
+            {
+              "head": "Wagenseil's Latin translation",
+              "relation": "inspired",
+              "tail": "later Christian freethinkers"
+            }
+          ],
+          "entities": [
+            "Johann Christoph Wagenseil",
+            "Abraham",
+            "Christian freethinkers"
+          ],
+          "entity_ids": [
+            "entity:abraham",
+            "entity:abraham_s_arguments",
+            "entity:abraham_s_work",
+            "entity:christian_freethinkers",
+            "entity:johann_christoph_wagenseil",
+            "entity:later_christian_freethinkers",
+            "entity:wagenseil",
+            "entity:wagenseil_s_latin_translation"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:where_are_you_going_0_5_where_are_you_going_is_one_of_two_songs_from_busted_stuff_that_did_not_origi",
+        "score": 0.01866576247404808,
+        "text": "\"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".",
+        "metadata": {
+          "title": "Where Are You Going",
+          "chunk_id": "chunk:where_are_you_going_0",
+          "sentence_index": 5,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "You Going",
+              "relation": "is song from",
+              "tail": "Busted Stuff"
+            },
+            {
+              "head": "You Going",
+              "relation": "did not originally appear on",
+              "tail": "Lillywhite Sessions"
+            }
+          ],
+          "entities": [
+            "You Going",
+            "Busted Stuff",
+            "Lillywhite Sessions"
+          ],
+          "entity_ids": [
+            "entity:busted_stuff",
+            "entity:lillywhite_sessions",
+            "entity:title_anchor_where_are_you_going"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:where_are_you_going_0_0_where_are_you_going_is_the_first_single_from_dave_matthews_band_s_album_buste",
+        "score": 0.017941198438335658,
+        "text": "\"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\".",
+        "metadata": {
+          "title": "Where Are You Going",
+          "chunk_id": "chunk:where_are_you_going_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "You Going",
+              "relation": "is first single from",
+              "tail": "Busted Stuff"
+            },
+            {
+              "head": "Busted Stuff",
+              "relation": "is album by",
+              "tail": "Dave Matthews Band"
+            }
+          ],
+          "entities": [
+            "You Going",
+            "Dave Matthews Band",
+            "Busted Stuff"
+          ],
+          "entity_ids": [
+            "entity:busted_stuff",
+            "entity:dave_matthews_band",
+            "entity:title_anchor_where_are_you_going"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:where_are_you_going_0",
+        "score": 0.010940241853139823,
+        "text": "Where Are You Going\n\"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\". The single reached #39 on the Billboard Hot 100, #20 on the Modern Rock Tracks, and topped the Triple A chart. The song was featured in the 2002 Adam Sandler motion picture, \"Mr. Deeds\". It is also featured in the trailer for the 2008 film \"Flash of Genius\". \"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".",
+        "metadata": {
+          "title": "Where Are You Going",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:adam_sandler",
+            "entity:billboard_hot",
+            "entity:billboard_hot_100",
+            "entity:busted_stuff",
+            "entity:dave_matthews_band",
+            "entity:deeds",
+            "entity:flash",
+            "entity:flash_of_genius",
+            "entity:genius",
+            "entity:lillywhite_sessions",
+            "entity:modern_rock_tracks",
+            "entity:mr",
+            "entity:title_anchor_where_are_you_going",
+            "entity:triple",
+            "entity:triple_a_chart"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:criticism_of_christianity_1",
+        "score": 0.007836812466313514,
+        "text": "Criticism of Christianity\nwas praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over a span of four thousand years. Apologist Josh McDowell defends the fulfillment of Old Testament prophecy as supporting Christianity, arguing that prophecies fulfilled by Christ include ones relating to his ancestral line, birthplace, virgin birth, miracles, manner of death, and resurrection. He says that even the timing of the Messiah in years and in relation to events is predicted, and that the Jewish Talmud (not accepting Jesus as the Messiah, see also Rejection of Jesus) laments that the Messiah had not appeared despite the scepter being taken away from Judah.",
+        "metadata": {
+          "title": "Criticism of Christianity",
+          "chunk_index": 1,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:blaise_pascal",
+            "entity:christ",
+            "entity:christianity",
+            "entity:fulfillment_of_old_testament_prophecy",
+            "entity:jesus",
+            "entity:jesus_as_messiah",
+            "entity:jesus_christ",
+            "entity:jewish_talmud",
+            "entity:josh_mcdowell",
+            "entity:judah",
+            "entity:messiah",
+            "entity:messiah_not_appearing",
+            "entity:old_testament",
+            "entity:old_testament_prophecy",
+            "entity:prophecies_are_the_strongest_proof_of_jesus_christ",
+            "entity:voltaire"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:catholic_church_in_england_and_wales_0",
+        "score": 0.0066257902797973115,
+        "text": "Catholic Church in England and Wales\nThe English Church was brought back under papal authority in 1553 and doctrinal and liturgical conformity at the beginning of the reign of Queen Mary I. The restoration of papal authority was celebrated by the majority of the nation and enforced by the Marian persecutions against Protestants. Her harshness was a success but at the cost of alienating a fairly large section of English society which had been moving away from some traditional Catholic devotional practices. The English it seems were quite caught up with the reforming movement on the Continent. At the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant).",
+        "metadata": {
+          "title": "Catholic Church in England and Wales",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:calvinist",
+            "entity:catholic",
+            "entity:continent",
+            "entity:english",
+            "entity:english_church",
+            "entity:english_society",
+            "entity:lutheran",
+            "entity:marian_persecutions",
+            "entity:protestant",
+            "entity:protestantism",
+            "entity:protestants",
+            "entity:queen_mary",
+            "entity:queen_mary_i",
+            "entity:some_traditional_catholic_devotional_practices"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:criticism_of_christianity_0",
+        "score": 0.0063693556955054294,
+        "text": "Criticism of Christianity\nThe 16th-century Jewish theologian Isaac ben Abraham, who lived in Trakai, Lithuania, penned a work called Chizzuk Emunah (Faith Strengthened) that attempted to refute the ideas that Jesus was the Messiah prophesied in the Old Testament and that Christianity was the \"New Covenant\" of God. He systematically identified a number of inconsistencies in the New Testament, contradictions between the New Testament and the Old Testament, and Old Testament prophesies which remained unfulfilled in Jesus' lifetime. In addition, he questioned a number of Christian practices, such as Sunday Sabbath. Written originally for Jews to persuade them not to convert to Christianity, the work was eventually read by Christians. While the well-known Christian Hebraist Johann Christoph Wagenseil attempted an elaborate refutation of Abraham's arguments, Wagenseil's Latin translation of it only increased interest in the work and inspired later Christian freethinkers. Chizzuk Emunah was praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over",
+        "metadata": {
+          "title": "Criticism of Christianity",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:abraham",
+            "entity:abraham_s_arguments",
+            "entity:abraham_s_work",
+            "entity:blaise_pascal",
+            "entity:chizzuk_emunah",
+            "entity:chizzuk_emunah_faith_strengthened",
+            "entity:christian_freethinkers",
+            "entity:christian_practices",
+            "entity:christianity",
+            "entity:christianity_as_the_new_covenant",
+            "entity:christians",
+            "entity:isaac_ben_abraham",
+            "entity:jesus",
+            "entity:jesus_as_the_messiah",
+            "entity:jesus_christ",
+            "entity:jews",
+            "entity:johann_christoph_wagenseil",
+            "entity:later_christian_freethinkers",
+            "entity:masterpiece_by_voltaire",
+            "entity:new_testament",
+            "entity:old_testament",
+            "entity:prophecies_are_the_strongest_proof_of_jesus_christ",
+            "entity:sunday_sabbath",
+            "entity:trakai_lithuania",
+            "entity:voltaire",
+            "entity:wagenseil",
+            "entity:wagenseil_s_latin_translation",
+            "entity:written"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Where Are You Going\nWhere Are You Going\n\"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\". The single reached #39 on the Billboard Hot 100, #20 on the Modern Rock Tracks, and topped the Triple A chart. The song was featured in the 2002 Adam Sandler motion picture, \"Mr. Deeds\". It is also featured in the trailer for the 2008 film \"Flash of Genius\". \"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".\n\nCatholic Church in England and Wales\nCatholic Church in England and Wales\nThe English Church was brought back under papal authority in 1553 and doctrinal and liturgical conformity at the beginning of the reign of Queen Mary I. The restoration of papal authority was celebrated by the majority of the nation and enforced by the Marian persecutions against Protestants. Her harshness was a success but at the cost of alienating a fairly large section of English society which had been moving away from some traditional Catholic devotional practices. The English it seems were quite caught up with the reforming movement on the Continent. At the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant).\n\nCriticism of Christianity\nCriticism of Christianity\nThe 16th-century Jewish theologian Isaac ben Abraham, who lived in Trakai, Lithuania, penned a work called Chizzuk Emunah (Faith Strengthened) that attempted to refute the ideas that Jesus was the Messiah prophesied in the Old Testament and that Christianity was the \"New Covenant\" of God. He systematically identified a number of inconsistencies in the New Testament, contradictions between the New Testament and the Old Testament, and Old Testament prophesies which remained unfulfilled in Jesus' lifetime. In addition, he questioned a number of Christian practices, such as Sunday Sabbath. Written originally for Jews to persuade them not to convert to Christianity, the work was eventually read by Christians. While the well-known Christian Hebraist Johann Christoph Wagenseil attempted an elaborate refutation of Abraham's arguments, Wagenseil's Latin translation of it only increased interest in the work and inspired later Christian freethinkers. Chizzuk Emunah was praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over\n\nCriticism of Christianity\nCriticism of Christianity\nwas praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over a span of four thousand years. Apologist Josh McDowell defends the fulfillment of Old Testament prophecy as supporting Christianity, arguing that prophecies fulfilled by Christ include ones relating to his ancestral line, birthplace, virgin birth, miracles, manner of death, and resurrection. He says that even the timing of the Messiah in years and in relation to events is predicted, and that the Jewish Talmud (not accepting Jesus as the Messiah, see also Rejection of Jesus) laments that the Messiah had not appeared despite the scepter being taken away from Judah.\n\nRichard Carlson (author)\nRichard Carlson (author)\nRichard Carlson (May 16, 1961 -- December 13, 2006) was an American author, psychotherapist, and motivational speaker. His book, Do n't Sweat the Small Stuff... and it's all Small Stuff (1997), was USA Today's bestselling book for two consecutive years. and spent over 101 weeks on the New York Times Best Seller list. It was published in 135 countries and translated into Latvian, Polish, Icelandic, Serbian and 26 other languages. Carlson went on to write 20 books.\n\nProtestantism\nThe various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura).\n\nProtestantism\nProtestantism\nAll Protestant denominations reject the notion of papal supremacy over the Church universal and generally deny the Roman Catholic doctrine of transubstantiation, but they disagree among themselves regarding the real presence of Christ in the Eucharist. The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day.\n\nSupreme court\nIt is also the highest authority in the interpretation of the law.\n\nSébastien Fath\nSébastien Fath\nSébastien Fath (born 1968 in Strasbourg) is a French professional historian and a Ph.D at the Sorbonne University. Also trained in Sociology, he is the main French specialist in the study of Evangelical Protestantism. Author of sixteen books, he is a permanent researcher at the National Center for Scientific Research (CNRS). He is a full member of the GSRL (Groupe Sociétés Religions Laïcités), a research team working on religion and secularism. As a social scientist and a citizen, cross-cultural reflexion on Civil Society, Politics and Religion is his focus.\n\nSupreme court\nSupreme court\nThe Supreme Court is the highest court in Ireland. It has authority to interpret the constitution, and strike down laws and activities of the state that it finds to be unconstitutional. It is also the highest authority in the interpretation of the law. Constitutionally it must have authority to interpret the constitution but its further appellate jurisdiction from lower courts is defined by law. The Irish Supreme Court consists of its presiding member, the Chief Justice, and seven other judges. Judges of the Supreme Court are appointed by the President in accordance with the binding advice of the Government. The Supreme Court sits in the Four Courts in Dublin.\n\nTo Kill a Mockingbird\nTo Kill a Mockingbird\nThe novel has been noted for its poignant exploration of different forms of courage. Scout's impulsive inclination to fight students who insult Atticus reflects her attempt to stand up for him and defend him. Atticus is the moral center of the novel, however, and he teaches Jem one of the most significant lessons of courage. In a statement that foreshadows Atticus' motivation for defending Tom Robinson and describes Mrs. Dubose, who is determined to break herself of a morphine addiction, Atticus tells Jem that courage is \"when you're licked before you begin but you begin anyway and you see it through no matter what\".",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:where_are_you_going_0",
+        "passage_index": 1,
+        "title": "Where Are You Going",
+        "score": 0.07508719343881029,
+        "text": "Where Are You Going\n\"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\". The single reached #39 on the Billboard Hot 100, #20 on the Modern Rock Tracks, and topped the Triple A chart. The song was featured in the 2002 Adam Sandler motion picture, \"Mr. Deeds\". It is also featured in the trailer for the 2008 film \"Flash of Genius\". \"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".",
+        "score_breakdown": {
+          "dense": 0.04974485614484169,
+          "graph": 0.051574555143741325,
+          "fact": 0.2150343734401664
+        }
+      },
+      {
+        "node_id": "chunk:catholic_church_in_england_and_wales_0",
+        "passage_index": 19,
+        "title": "Catholic Church in England and Wales",
+        "score": 0.07444567114254844,
+        "text": "Catholic Church in England and Wales\nThe English Church was brought back under papal authority in 1553 and doctrinal and liturgical conformity at the beginning of the reign of Queen Mary I. The restoration of papal authority was celebrated by the majority of the nation and enforced by the Marian persecutions against Protestants. Her harshness was a success but at the cost of alienating a fairly large section of English society which had been moving away from some traditional Catholic devotional practices. The English it seems were quite caught up with the reforming movement on the Continent. At the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant).",
+        "score_breakdown": {
+          "dense": 0.050123053843225206,
+          "graph": 0.05325260809151472,
+          "fact": 0.20601472734213438
+        }
+      },
+      {
+        "node_id": "chunk:criticism_of_christianity_0",
+        "passage_index": 12,
+        "title": "Criticism of Christianity",
+        "score": 0.07337256052824595,
+        "text": "Criticism of Christianity\nThe 16th-century Jewish theologian Isaac ben Abraham, who lived in Trakai, Lithuania, penned a work called Chizzuk Emunah (Faith Strengthened) that attempted to refute the ideas that Jesus was the Messiah prophesied in the Old Testament and that Christianity was the \"New Covenant\" of God. He systematically identified a number of inconsistencies in the New Testament, contradictions between the New Testament and the Old Testament, and Old Testament prophesies which remained unfulfilled in Jesus' lifetime. In addition, he questioned a number of Christian practices, such as Sunday Sabbath. Written originally for Jews to persuade them not to convert to Christianity, the work was eventually read by Christians. While the well-known Christian Hebraist Johann Christoph Wagenseil attempted an elaborate refutation of Abraham's arguments, Wagenseil's Latin translation of it only increased interest in the work and inspired later Christian freethinkers. Chizzuk Emunah was praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over",
+        "score_breakdown": {
+          "dense": 0.05001570715145487,
+          "graph": 0.053628487513706614,
+          "fact": 0.19850250227222527
+        }
+      },
+      {
+        "node_id": "chunk:criticism_of_christianity_1",
+        "passage_index": 12,
+        "title": "Criticism of Christianity",
+        "score": 0.07244737628856436,
+        "text": "Criticism of Christianity\nwas praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\". He wrote that Jesus was foretold, and that the prophecies came from a succession of people over a span of four thousand years. Apologist Josh McDowell defends the fulfillment of Old Testament prophecy as supporting Christianity, arguing that prophecies fulfilled by Christ include ones relating to his ancestral line, birthplace, virgin birth, miracles, manner of death, and resurrection. He says that even the timing of the Messiah in years and in relation to events is predicted, and that the Jewish Talmud (not accepting Jesus as the Messiah, see also Rejection of Jesus) laments that the Messiah had not appeared despite the scepter being taken away from Judah.",
+        "score_breakdown": {
+          "dense": 0.050139685634425855,
+          "graph": 0.05228260515619376,
+          "fact": 0.19457178428514676
+        }
+      },
+      {
+        "node_id": "chunk:richard_carlson_author_0",
+        "passage_index": 5,
+        "title": "Richard Carlson (author)",
+        "score": 0.07038726025714107,
+        "text": "Richard Carlson (author)\nRichard Carlson (May 16, 1961 -- December 13, 2006) was an American author, psychotherapist, and motivational speaker. His book, Do n't Sweat the Small Stuff... and it's all Small Stuff (1997), was USA Today's bestselling book for two consecutive years. and spent over 101 weeks on the New York Times Best Seller list. It was published in 135 countries and translated into Latvian, Polish, Icelandic, Serbian and 26 other languages. Carlson went on to write 20 books.",
+        "score_breakdown": {
+          "dense": 0.04996771601298363,
+          "graph": 0.05007841516983663,
+          "fact": 0.18587661266032723
+        }
+      },
+      {
+        "node_id": "chunk:protestantism_0",
+        "passage_index": 18,
+        "title": "Protestantism",
+        "score": 0.04322499591999604,
+        "text": "Protestantism\nAll Protestant denominations reject the notion of papal supremacy over the Church universal and generally deny the Roman Catholic doctrine of transubstantiation, but they disagree among themselves regarding the real presence of Christ in the Eucharist. The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day.",
+        "score_breakdown": {
+          "dense": 0.05046527269633238,
+          "graph": 0.051563653123377434,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:s_bastien_fath_0",
+        "passage_index": 16,
+        "title": "Sébastien Fath",
+        "score": 0.042622289280608454,
+        "text": "Sébastien Fath\nSébastien Fath (born 1968 in Strasbourg) is a French professional historian and a Ph.D at the Sorbonne University. Also trained in Sociology, he is the main French specialist in the study of Evangelical Protestantism. Author of sixteen books, he is a permanent researcher at the National Center for Scientific Research (CNRS). He is a full member of the GSRL (Groupe Sociétés Religions Laïcités), a research team working on religion and secularism. As a social scientist and a citizen, cross-cultural reflexion on Civil Society, Politics and Religion is his focus.",
+        "score_breakdown": {
+          "dense": 0.05010180875186943,
+          "graph": 0.05022098155693422,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sexual_morality_and_the_law_0",
+        "passage_index": 6,
+        "title": "Sexual Morality and the Law",
+        "score": 0.04232168592732415,
+        "text": "Sexual Morality and the Law\nSexual Morality and the Law is the transcription of a 1978 radio conversation in Paris between philosopher Michel Foucault, playwright/actor/lawyer Jean Danet, and novelist/gay activist Guy Hocquenghem, debating the idea of abolishing age of consent laws in France.",
+        "score_breakdown": {
+          "dense": 0.050206800433656815,
+          "graph": 0.049026485629376344,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:supreme_court_0",
+        "passage_index": 13,
+        "title": "Supreme court",
+        "score": 0.04224711119222126,
+        "text": "Supreme court\nThe Supreme Court is the highest court in Ireland. It has authority to interpret the constitution, and strike down laws and activities of the state that it finds to be unconstitutional. It is also the highest authority in the interpretation of the law. Constitutionally it must have authority to interpret the constitution but its further appellate jurisdiction from lower courts is defined by law. The Irish Supreme Court consists of its presiding member, the Chief Justice, and seven other judges. Judges of the Supreme Court are appointed by the President in accordance with the binding advice of the Government. The Supreme Court sits in the Four Courts in Dublin.",
+        "score_breakdown": {
+          "dense": 0.05005315850363929,
+          "graph": 0.04905958005073214,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:to_kill_a_mockingbird_0",
+        "passage_index": 7,
+        "title": "To Kill a Mockingbird",
+        "score": 0.042238574662687656,
+        "text": "To Kill a Mockingbird\nThe novel has been noted for its poignant exploration of different forms of courage. Scout's impulsive inclination to fight students who insult Atticus reflects her attempt to stand up for him and defend him. Atticus is the moral center of the novel, however, and he teaches Jem one of the most significant lessons of courage. In a statement that foreshadows Atticus' motivation for defending Tom Robinson and describes Mrs. Dubose, who is determined to break herself of a morphine addiction, Atticus tells Jem that courage is \"when you're licked before you begin but you begin anyway and you see it through no matter what\".",
+        "score_breakdown": {
+          "dense": 0.050049714589799926,
+          "graph": 0.049037438794325656,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the highest authority in Protestantism for morals?",
+        "resolved_sub_question": "What is the highest authority in Protestantism for morals?",
+        "sentence_id": "sentence:protestantism_0_1_the_various_denominations_generally_emphasize_the_priesthood_of_all_believers_t",
+        "sentence": "The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura).",
+        "score": 0.3798236251904624,
+        "source_title": "Protestantism",
+        "hop_answer": "the Bible alone",
+        "hop_thought": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).",
+        "hop_raw_response": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).\nAnswer: the Bible alone",
+        "evidence_passages": [
+          {
+            "title": "Protestantism",
+            "text": "The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura)."
+          },
+          {
+            "title": "Protestantism",
+            "text": "Protestantism\nAll Protestant denominations reject the notion of papal supremacy over the Church universal and generally deny the Roman Catholic doctrine of transubstantiation, but they disagree among themselves regarding the real presence of Christ in the Eucharist. The various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day."
+          },
+          {
+            "title": "Supreme court",
+            "text": "It is also the highest authority in the interpretation of the law."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the highest authority in Protestantism for morals? => the Bible alone (source: Protestantism)\n\nFact hints:\n- Lutheran related_to Protestantism\n\nWikipedia Title: Protestantism\nThe various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura).\n\nWikipedia Title: Protestantism\nThe various denominations generally emphasize the priesthood of all believers, the doctrine of justification by faith alone (sola fide) rather than by or with good works, and a belief in the Bible alone (rather than with Catholic tradition) as the highest authority in matters of faith and morals (sola scriptura). The \"Five solae\" summarize the reformers' basic differences in theological beliefs in opposition to the teaching of the Roman Catholic Church of the day.\n\nWikipedia Title: Sébastien Fath\nAlso trained in Sociology, he is the main French specialist in the study of Evangelical Protestantism. Author of sixteen books, he is a permanent researcher at the National Center for Scientific Research (CNRS).\n\nWikipedia Title: Catholic Church in England and Wales\nAt the time they were neither Calvinist nor Lutheran, but certainly leaning toward Protestantism (and by the late 16th century, were certainly Protestant). Catholic Church in England and Wales The English Church was brought back under papal authority in 1553 and doctrinal and liturgical conformity at the beginning of the reign of Queen Mary I.\n\nWikipedia Title: Supreme court\nIt is also the highest authority in the interpretation of the law.\n\nWikipedia Title: Supreme court\nIt is also the highest authority in the interpretation of the law. Constitutionally it must have authority to interpret the constitution but its further appellate jurisdiction from lower courts is defined by law.\n\nWikipedia Title: To Kill a Mockingbird\nIn a statement that foreshadows Atticus' motivation for defending Tom Robinson and describes Mrs. To Kill a Mockingbird The novel has been noted for its poignant exploration of different forms of courage.\n\nWikipedia Title: Criticism of Christianity\nWritten originally for Jews to persuade them not to convert to Christianity, the work was eventually read by Christians. He wrote that Jesus was foretold, and that the prophecies came from a succession of people over\n\nWikipedia Title: Where Are You Going\nWhere Are You Going \"Where Are You Going\" is the first single from Dave Matthews Band's album \"Busted Stuff\". \"Where Are You Going\" is one of two songs from \"Busted Stuff\" that did not originally appear on \"The Lillywhite Sessions\".\n\nWikipedia Title: Richard Carlson (author)\nHis book, Do n't Sweat the Small Stuff... and it's all Small Stuff (1997), was USA Today's bestselling book for two consecutive years. and spent over 101 weeks on the New York Times Best Seller list. Carlson went on to write 20 books.\n\nWikipedia Title: Criticism of Christianity\nHe wrote that Jesus was foretold, and that the prophecies came from a succession of people over a span of four thousand years. Criticism of Christianity was praised as a masterpiece by Voltaire.On the other hand, Blaise Pascal believed that \"[t]he prophecies are the strongest proof of Jesus Christ\".\n\nQuestion: Who is the guy defending this stuff from the highest authority in Protestantism for morals?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).",
+  "predicted_answer": "the Bible alone",
+  "qa_raw_response": "The passage states that Protestant denominations believe in the Bible alone as the highest authority in matters of faith and morals (sola scriptura).\nAnswer: the Bible alone"
+}

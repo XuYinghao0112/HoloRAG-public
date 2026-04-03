@@ -1,0 +1,986 @@
+{
+  "query": "When is the date of birth of the creator of A Burial at Ornans?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "A Burial At Ornans"
+  ],
+  "raw_query_entities": [
+    "Burial at Ornans"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Burial at Ornans",
+      "node_id": "entity:title_anchor_a_burial_at_ornans",
+      "resolved_text": "A Burial At Ornans",
+      "score": 0.818342857142857,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.775,
+      "score_margin": 0.20714285714285707,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the creator of A Burial at Ornans?",
+    "What is the date of birth of this creator?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_a_burial_at_ornans",
+      "score": 1.2036004526204216,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:courbet",
+      "score": 0.4105398330997687,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:funeral_at_ornans",
+      "score": 0.40888312538510346,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gustave_courbet",
+      "score": 0.3925656229480263,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gustave_courbet",
+      "score": 0.3605061659659781,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_shirley_abicair",
+      "score": 0.3496267811441237,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:melbourne",
+      "score": 0.3496267811441237,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "score": 0.23800445567785875,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_maureen_payne",
+      "score": 0.23571240000521654,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:south_africa",
+      "score": 0.23571240000521654,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:19th_century_french_painting",
+      "score": 0.20668247913116902,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_africa_was_a_south_afric",
+      "score": 0.18836970833271996,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:shirley_abicair_born_in_melbourne_sentence_shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "text": "Shirley Abicair born in Melbourne",
+      "head_id": "entity:title_anchor_shirley_abicair",
+      "tail_id": "entity:melbourne",
+      "sentence_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "chunk_id": "chunk:shirley_abicair_0",
+      "document_index": 5,
+      "score": 0.347137512604322
+    },
+    {
+      "fact_id": "fact:maureen_payne_place_of_death_south_africa_sentence_maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south",
+      "text": "Maureen Payne place of death South Africa",
+      "head_id": "entity:title_anchor_maureen_payne",
+      "tail_id": "entity:south_africa",
+      "sentence_id": "sentence:maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_africa_was_a_south_afric",
+      "chunk_id": "chunk:maureen_payne_0",
+      "document_index": 6,
+      "score": 0.2521358678041741
+    },
+    {
+      "fact_id": "fact:burial_at_ornans_is_painting_by_gustave_courbet_sentence_a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funer",
+      "text": "Burial At Ornans is_painting_by Gustave Courbet",
+      "head_id": "entity:title_anchor_a_burial_at_ornans",
+      "tail_id": "entity:gustave_courbet",
+      "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "chunk_id": "chunk:a_burial_at_ornans_0",
+      "document_index": 1,
+      "score": 0.25016905168307146
+    },
+    {
+      "fact_id": "fact:maureen_payne_nationality_south_africa_sentence_maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_af",
+      "text": "Maureen Payne nationality South Africa",
+      "head_id": "entity:title_anchor_maureen_payne",
+      "tail_id": "entity:south_africa",
+      "sentence_id": "sentence:maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_africa_was_a_south_afric",
+      "chunk_id": "chunk:maureen_payne_0",
+      "document_index": 6,
+      "score": 0.21431548763354796
+    },
+    {
+      "fact_id": "fact:burial_at_ornans_also_known_as_funeral_at_ornans_sentence_a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_fune",
+      "text": "Burial At Ornans also_known_as Funeral At Ornans",
+      "head_id": "entity:title_anchor_a_burial_at_ornans",
+      "tail_id": "entity:funeral_at_ornans",
+      "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "chunk_id": "chunk:a_burial_at_ornans_0",
+      "document_index": 1,
+      "score": 0.170160208295698
+    },
+    {
+      "fact_id": "fact:burial_at_ornans_is_major_turning_point_of_19th_century_french_art_sentence_a_burial_at_ornans_0_0_a_burial_at_ornans_al",
+      "text": "Burial At Ornans is_major_turning_point_of 19th-century French art",
+      "head_id": "entity:title_anchor_a_burial_at_ornans",
+      "tail_id": "entity:19th_century_french_art",
+      "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "chunk_id": "chunk:a_burial_at_ornans_0",
+      "document_index": 1,
+      "score": 0.17016005018601504
+    },
+    {
+      "fact_id": "fact:gustave_courbet_was_born_on_10_june_1819_sentence_gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_decembe",
+      "text": "Gustave Courbet was born on 10 June 1819",
+      "head_id": "entity:title_anchor_gustave_courbet",
+      "tail_id": "entity:10_june_1819",
+      "sentence_id": "sentence:gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_december_1877_was_a_french_pai",
+      "chunk_id": "chunk:gustave_courbet_0",
+      "document_index": 8,
+      "score": 0.09715866671747148
+    },
+    {
+      "fact_id": "fact:gustave_courbet_was_french_painter_sentence_gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_december_1877",
+      "text": "Gustave Courbet was French painter",
+      "head_id": "entity:title_anchor_gustave_courbet",
+      "tail_id": "entity:french_painter",
+      "sentence_id": "sentence:gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_december_1877_was_a_french_pai",
+      "chunk_id": "chunk:gustave_courbet_0",
+      "document_index": 8,
+      "score": 0.08258486670985075
+    }
+  ],
+  "bridge_entities": [
+    "Funeral At Ornans",
+    "Gustave Courbet",
+    "19th-century French art",
+    "10 June 1819"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the creator of A Burial at Ornans?",
+      "resolved_sub_question": "Who is the creator of A Burial at Ornans?",
+      "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "sentence": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.",
+      "score": 0.5598657142857144,
+      "source_title": "A Burial At Ornans",
+      "hop_answer": "Gustave Courbet",
+      "hop_thought": "The creator of A Burial at Ornans is mentioned in the passage as Gustave Courbet.",
+      "hop_raw_response": "The creator of A Burial at Ornans is mentioned in the passage as Gustave Courbet.\nAnswer: Gustave Courbet",
+      "evidence_passages": [
+        {
+          "title": "A Burial At Ornans",
+          "text": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art."
+        },
+        {
+          "title": "A Burial At Ornans",
+          "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France."
+        },
+        {
+          "title": "Gustave Courbet",
+          "text": "Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the date of birth of this creator?",
+      "resolved_sub_question": "What is the date of birth of this creator? Context: Gustave Courbet.",
+      "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "sentence": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.",
+      "score": 0.492152380952381,
+      "source_title": "A Burial At Ornans",
+      "hop_answer": "10 June 1819",
+      "hop_thought": "The context provides the date of birth for Gustave Courbet, who is the creator of A Burial at Ornans.",
+      "hop_raw_response": "The context provides the date of birth for Gustave Courbet, who is the creator of A Burial at Ornans.\nAnswer: 10 June 1819",
+      "evidence_passages": [
+        {
+          "title": "A Burial At Ornans",
+          "text": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art."
+        },
+        {
+          "title": "A Burial At Ornans",
+          "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France."
+        },
+        {
+          "title": "Gustave Courbet",
+          "text": "Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_a_burial_at_ornans",
+      "score": 0.13558642496253928,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+      "score": 0.10367112164034198,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:funeral_at_ornans",
+      "score": 0.06085711289531434,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gustave_courbet",
+      "score": 0.051173160545117,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gustave_courbet",
+      "score": 0.04963503714011576,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+      "score": 0.04613448855572588,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:courbet",
+      "score": 0.04557048704225779,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:melbourne",
+      "score": 0.0408710457193152,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_december_1877_was_a_french_pai",
+      "score": 0.03831605537282309,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_africa_was_a_south_afric",
+      "score": 0.037312039993050654,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_shirley_abicair",
+      "score": 0.03677403677662882,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:19th_century_french_art",
+      "score": 0.03145359300949782,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_maureen_payne",
+      "score": 0.030932092244885297,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:south_africa",
+      "score": 0.03014738790934205,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:19th_century_french_painting",
+      "score": 0.02478582347751653,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:a_burial_at_ornans_0",
+      "score": 0.018106107057609695,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:maureen_payne_0",
+      "score": 0.012670643618603466,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:gustave_courbet_0_3_courbet_occupies_an_important_place_in_19th_century_french_painting_as_an_innova",
+      "score": 0.01172872598920058,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:10_june_1819",
+      "score": 0.011448684196783706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:french_painter",
+      "score": 0.011265976656613831,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:shirley_abicair_0",
+      "passage_index": 5,
+      "title": "Shirley Abicair",
+      "score": 0.0848921587920434,
+      "text": "Shirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.",
+      "score_breakdown": {
+        "dense": 0.04980716437365775,
+        "graph": 0.05260858129674328,
+        "fact": 0.2781042933167243
+      }
+    },
+    {
+      "node_id": "chunk:a_burial_at_ornans_0",
+      "passage_index": 1,
+      "title": "A Burial At Ornans",
+      "score": 0.08395588767132803,
+      "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France.",
+      "score_breakdown": {
+        "dense": 0.051250271127197274,
+        "graph": 0.05969253741989083,
+        "fact": 0.2524031821693485
+      }
+    },
+    {
+      "node_id": "chunk:maureen_payne_0",
+      "passage_index": 6,
+      "title": "Maureen Payne",
+      "score": 0.08088230926248557,
+      "text": "Maureen Payne\nMaureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer. She captained the side for their second series, played against New Zealand in 1971–72. She appeared in five Tests for South Africa, claiming eight wickets.",
+      "score_breakdown": {
+        "dense": 0.049704924029438276,
+        "graph": 0.05203195282205979,
+        "fact": 0.2529001013311772
+      }
+    },
+    {
+      "node_id": "chunk:gustave_courbet_0",
+      "passage_index": 8,
+      "title": "Gustave Courbet",
+      "score": 0.07627467445122635,
+      "text": "Gustave Courbet\nJean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting. Committed to painting only what he could see, he rejected academic convention and the Romanticism of the previous generation of visual artists. His independence set an example that was important to later artists, such as the Impressionists and the Cubists. Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.",
+      "score_breakdown": {
+        "dense": 0.05066262923993992,
+        "graph": 0.05307121630615623,
+        "fact": 0.21659242318275007
+      }
+    },
+    {
+      "node_id": "chunk:william_shakespeare_0",
+      "passage_index": 7,
+      "title": "William Shakespeare",
+      "score": 0.04222694655231059,
+      "text": "William Shakespeare\nWilliam Shakespeare was the son of John Shakespeare, an alderman and a successful glover (glove-maker) originally from Snitterfield, and Mary Arden, the daughter of an affluent landowning farmer. He was born in Stratford-upon-Avon and baptised there on 26 April 1564. His actual date of birth remains unknown, but is traditionally observed on 23 April, Saint George's Day. This date, which can be traced to a mistake made by an 18th-century scholar, has proved appealing to biographers because Shakespeare died on the same date in 1616. He was the third of eight children, and the eldest surviving son.",
+      "score_breakdown": {
+        "dense": 0.05009105087705664,
+        "graph": 0.04892289523309812,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bonnevaux_le_prieur_0",
+      "passage_index": 4,
+      "title": "Bonnevaux-le-Prieuré",
+      "score": 0.04218395643191288,
+      "text": "Bonnevaux-le-Prieuré\nBonnevaux-le-Prieuré is a former commune in the Doubs department in the Bourgogne-Franche-Comté region in eastern France. On 1 January 2016, it was merged into the commune Ornans.",
+      "score_breakdown": {
+        "dense": 0.05000177022890236,
+        "graph": 0.048943276020055264,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:channel_islands_0",
+      "passage_index": 3,
+      "title": "Channel Islands",
+      "score": 0.042158125058145826,
+      "text": "Channel Islands\nThe earliest evidence of human occupation of the Channel Islands has been dated to 250,000 years ago when they were attached to the landmass of continental Europe. The islands became detached by rising sea levels in the Neolithic period. The numerous dolmens and other archaeological sites extant and recorded in history demonstrate the existence of a population large enough and organised enough to undertake constructions of considerable size and sophistication, such as the burial mound at La Hougue Bie in Jersey or the statue menhirs of Guernsey.",
+      "score_breakdown": {
+        "dense": 0.04997298299982851,
+        "graph": 0.048909948027467155,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:southampton_old_cemetery_0",
+      "passage_index": 12,
+      "title": "Southampton Old Cemetery",
+      "score": 0.04215742518944113,
+      "text": "Southampton Old Cemetery\nThe cemetery has had various titles including The Cemetery by the Common, Hill Lane Cemetery and is currently known as Southampton Old Cemetery. An Act of Parliament was required in 1843 to acquire the land from Southampton Common. It covers an area of and the total number of burials is estimated at 116,800. Currently there are 6 to 8 burials a year to existing family plots.",
+      "score_breakdown": {
+        "dense": 0.04997514182411064,
+        "graph": 0.048903657287267595,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:vitrigaila_0",
+      "passage_index": 15,
+      "title": "Švitrigaila",
+      "score": 0.04215501103105847,
+      "text": "Švitrigaila\nŠvitrigaila was born to Algirdas, Grand Duke of Lithuania, and his second wife Uliana of Tver. His date of birth is unknown, but it is believed that he was the youngest or second youngest son of Algirdas. He first appeared in politics in October 1382 when he witnessed the Treaty of Dubysa between his elder brother Jogaila and the Teutonic Knights. Historians believe that would indicate that at the time Švitrigaila was no younger than 12 which would put his date of birth sometime before 1370. In a complaint submitted to the Council of Florence, Švitrigaila claimed that he and Jogaila were favorite sons of Algirdas. Before his death in 1377, Algirdas transferred his throne to Jogaila but made him swear to make Švitrigaila his heir. Jogaila's representatives did not outright deny the arrangement and instead claimed that it had been modified by mutual agreement between the brothers.",
+      "score_breakdown": {
+        "dense": 0.04996165405597158,
+        "graph": 0.04892033766758031,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:domestication_of_the_horse_0",
+      "passage_index": 17,
+      "title": "Domestication of the horse",
+      "score": 0.042150986477917846,
+      "text": "Domestication of the horse\nA number of hypotheses exist on many of the key issues regarding the domestication of the horse. Although horses appeared in Paleolithic cave art as early as 30,000 BCE, these were wild horses and were probably hunted for meat. How and when horses became domesticated is disputed. The clearest evidence of early use of the horse as a means of transport is from chariot burials dated c. 2000 BCE. However, an increasing amount of evidence supports the hypothesis that horses were domesticated in the Eurasian Steppes approximately 3500 BCE; recent discoveries in the context of the Botai culture suggest that Botai settlements in the Akmola Province of Kazakhstan are the location of the earliest domestication of the horse. Regardless of the specific date of domestication, use of horses spread rapidly across Eurasia for transportation, agricultural work and warfare.",
+      "score_breakdown": {
+        "dense": 0.04996284772811449,
+        "graph": 0.04890473409151626,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_a_burial_at_ornans",
+        "score": 0.13558642496253928,
+        "text": "A Burial At Ornans",
+        "metadata": {
+          "canonical_name": "A Burial At Ornans",
+          "aliases": [
+            "BAO",
+            "Burial At Ornans"
+          ],
+          "surface_forms": [
+            "BAO",
+            "Burial At Ornans"
+          ],
+          "title_anchor": "A Burial At Ornans"
+        }
+      },
+      {
+        "node_id": "entity:funeral_at_ornans",
+        "score": 0.06085711289531434,
+        "text": "Funeral At Ornans",
+        "metadata": {
+          "canonical_name": "Funeral At Ornans",
+          "aliases": [
+            "FAO",
+            "Funeral At Ornans"
+          ],
+          "surface_forms": [
+            "FAO",
+            "Funeral At Ornans"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+        "score": 0.10367112164034198,
+        "text": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.",
+        "metadata": {
+          "title": "A Burial At Ornans",
+          "chunk_id": "chunk:a_burial_at_ornans_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Burial At Ornans",
+              "relation": "also_known_as",
+              "tail": "Funeral At Ornans"
+            },
+            {
+              "head": "Burial At Ornans",
+              "relation": "is_painting_by",
+              "tail": "Gustave Courbet"
+            },
+            {
+              "head": "Burial At Ornans",
+              "relation": "is_major_turning_point_of",
+              "tail": "19th-century French art"
+            }
+          ],
+          "entities": [
+            "Burial At Ornans",
+            "Funeral At Ornans",
+            "Gustave Courbet",
+            "19th-century French art"
+          ],
+          "entity_ids": [
+            "entity:19th_century_french_art",
+            "entity:funeral_at_ornans",
+            "entity:gustave_courbet",
+            "entity:title_anchor_a_burial_at_ornans"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:shirley_abicair_0_0_shirley_abicair_was_born_in_melbourne_victoria_australia",
+        "score": 0.04613448855572588,
+        "text": "Shirley Abicair was born in Melbourne, Victoria, Australia.",
+        "metadata": {
+          "title": "Shirley Abicair",
+          "chunk_id": "chunk:shirley_abicair_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Shirley Abicair",
+              "relation": "born in",
+              "tail": "Melbourne"
+            },
+            {
+              "head": "Melbourne",
+              "relation": "located in",
+              "tail": "Victoria"
+            },
+            {
+              "head": "Victoria",
+              "relation": "part of",
+              "tail": "Australia"
+            }
+          ],
+          "entities": [
+            "Shirley Abicair",
+            "Melbourne",
+            "Victoria",
+            "Australia"
+          ],
+          "entity_ids": [
+            "entity:australia",
+            "entity:melbourne",
+            "entity:title_anchor_shirley_abicair",
+            "entity:victoria"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:gustave_courbet_0_0_jean_d_sir_gustave_courbet_10_june_1819_31_december_1877_was_a_french_pai",
+        "score": 0.03831605537282309,
+        "text": "Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting.",
+        "metadata": {
+          "title": "Gustave Courbet",
+          "chunk_id": "chunk:gustave_courbet_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Gustave Courbet",
+              "relation": "was born on",
+              "tail": "10 June 1819"
+            },
+            {
+              "head": "Gustave Courbet",
+              "relation": "died on",
+              "tail": "31 December 1877"
+            },
+            {
+              "head": "Gustave Courbet",
+              "relation": "was",
+              "tail": "French painter"
+            },
+            {
+              "head": "Gustave Courbet",
+              "relation": "led",
+              "tail": "Realism movement"
+            },
+            {
+              "head": "Realism movement",
+              "relation": "occurred in",
+              "tail": "19th-century French painting"
+            }
+          ],
+          "entities": [
+            "Gustave Courbet",
+            "French painter",
+            "Realism movement",
+            "19th-century French painting"
+          ],
+          "entity_ids": [
+            "entity:10_june_1819",
+            "entity:19th_century_french_painting",
+            "entity:31_december_1877",
+            "entity:french_painter",
+            "entity:realism_movement",
+            "entity:title_anchor_gustave_courbet"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:maureen_payne_0_0_maureen_payne_date_of_birth_unknown_died_1997_south_africa_was_a_south_afric",
+        "score": 0.037312039993050654,
+        "text": "Maureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer.",
+        "metadata": {
+          "title": "Maureen Payne",
+          "chunk_id": "chunk:maureen_payne_0",
+          "sentence_index": 0,
+          "document_index": 6,
+          "triples": [
+            {
+              "head": "Maureen Payne",
+              "relation": "place of death",
+              "tail": "South Africa"
+            },
+            {
+              "head": "Maureen Payne",
+              "relation": "was",
+              "tail": "Test cricketer"
+            },
+            {
+              "head": "Maureen Payne",
+              "relation": "nationality",
+              "tail": "South Africa"
+            }
+          ],
+          "entities": [
+            "Maureen Payne",
+            "South Africa"
+          ],
+          "entity_ids": [
+            "entity:south_africa",
+            "entity:test_cricketer",
+            "entity:title_anchor_maureen_payne"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:gustave_courbet_0_3_courbet_occupies_an_important_place_in_19th_century_french_painting_as_an_innova",
+        "score": 0.01172872598920058,
+        "text": "Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.",
+        "metadata": {
+          "title": "Gustave Courbet",
+          "chunk_id": "chunk:gustave_courbet_0",
+          "sentence_index": 3,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Courbet",
+              "relation": "occupies",
+              "tail": "important place in 19th-century French painting"
+            }
+          ],
+          "entities": [
+            "Courbet",
+            "19th-century French painting"
+          ],
+          "entity_ids": [
+            "entity:19th_century_french_painting",
+            "entity:courbet",
+            "entity:important_place_in_19th_century_french_painting"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:a_burial_at_ornans_0_3_its_exhibition_at_the_1850_51_paris_salon_created_an_explosive_reaction_and_br",
+        "score": 0.010454280776038749,
+        "text": "Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame.",
+        "metadata": {
+          "title": "A Burial At Ornans",
+          "chunk_id": "chunk:a_burial_at_ornans_0",
+          "sentence_index": 3,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Paris Salon",
+              "relation": "related_to",
+              "tail": "Courbet"
+            }
+          ],
+          "entities": [
+            "1850-51 Paris Salon",
+            "Courbet"
+          ],
+          "entity_ids": [
+            "entity:1850_51_paris_salon",
+            "entity:courbet",
+            "entity:paris_salon"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:a_burial_at_ornans_0_1_the_painting_records_the_funeral_in_september_1848_of_his_great_uncle_in_the_pai",
+        "score": 0.008768248803368751,
+        "text": "The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans.",
+        "metadata": {
+          "title": "A Burial At Ornans",
+          "chunk_id": "chunk:a_burial_at_ornans_0",
+          "sentence_index": 1,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "September",
+              "relation": "related_to",
+              "tail": "Ornans"
+            }
+          ],
+          "entities": [
+            "Ornans"
+          ],
+          "entity_ids": [
+            "entity:ornans",
+            "entity:september"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:a_burial_at_ornans_0",
+        "score": 0.018106107057609695,
+        "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France.",
+        "metadata": {
+          "title": "A Burial At Ornans",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:1850_51_paris_salon",
+            "entity:19th_century_french_art",
+            "entity:courbet",
+            "entity:france",
+            "entity:funeral_at_ornans",
+            "entity:gustave_courbet",
+            "entity:mus_e_d_orsay",
+            "entity:ornans",
+            "entity:paris",
+            "entity:paris_salon",
+            "entity:september",
+            "entity:title_anchor_a_burial_at_ornans"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:maureen_payne_0",
+        "score": 0.012670643618603466,
+        "text": "Maureen Payne\nMaureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer. She captained the side for their second series, played against New Zealand in 1971–72. She appeared in five Tests for South Africa, claiming eight wickets.",
+        "metadata": {
+          "title": "Maureen Payne",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:new_zealand",
+            "entity:south_africa",
+            "entity:test_cricketer",
+            "entity:tests",
+            "entity:title_anchor_maureen_payne"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Shirley Abicair\nShirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.\n\nA Burial At Ornans\nA Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France.\n\nMaureen Payne\nMaureen Payne\nMaureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer. She captained the side for their second series, played against New Zealand in 1971–72. She appeared in five Tests for South Africa, claiming eight wickets.\n\nGustave Courbet\nGustave Courbet\nJean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting. Committed to painting only what he could see, he rejected academic convention and the Romanticism of the previous generation of visual artists. His independence set an example that was important to later artists, such as the Impressionists and the Cubists. Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.\n\nWilliam Shakespeare\nWilliam Shakespeare\nWilliam Shakespeare was the son of John Shakespeare, an alderman and a successful glover (glove-maker) originally from Snitterfield, and Mary Arden, the daughter of an affluent landowning farmer. He was born in Stratford-upon-Avon and baptised there on 26 April 1564. His actual date of birth remains unknown, but is traditionally observed on 23 April, Saint George's Day. This date, which can be traced to a mistake made by an 18th-century scholar, has proved appealing to biographers because Shakespeare died on the same date in 1616. He was the third of eight children, and the eldest surviving son.\n\nA Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.\n\nGustave Courbet\nJean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting.\n\nŠvitrigaila\nŠvitrigaila\nŠvitrigaila was born to Algirdas, Grand Duke of Lithuania, and his second wife Uliana of Tver. His date of birth is unknown, but it is believed that he was the youngest or second youngest son of Algirdas. He first appeared in politics in October 1382 when he witnessed the Treaty of Dubysa between his elder brother Jogaila and the Teutonic Knights. Historians believe that would indicate that at the time Švitrigaila was no younger than 12 which would put his date of birth sometime before 1370. In a complaint submitted to the Council of Florence, Švitrigaila claimed that he and Jogaila were favorite sons of Algirdas. Before his death in 1377, Algirdas transferred his throne to Jogaila but made him swear to make Švitrigaila his heir. Jogaila's representatives did not outright deny the arrangement and instead claimed that it had been modified by mutual agreement between the brothers.\n\nKanye West\nKanye West\nThe funeral and burial for Donda West was held in Oklahoma City on November 20, 2007. West played his first concert following the funeral at The O2 in London on November 22. He dedicated a performance of \"Hey Mama\", as well as a cover of Journey's \"Don't Stop Believin'\", to his mother, and did so on all other dates of his Glow in the Dark tour.\n\nMeet the Press\nMeet the Press\nThe program has been hosted by 12 different moderators to date, beginning with creator Martha Rountree. The show's moderator since 2014 is Chuck Todd, who also serves as political director for NBC News.\n\nChannel Islands\nChannel Islands\nThe earliest evidence of human occupation of the Channel Islands has been dated to 250,000 years ago when they were attached to the landmass of continental Europe. The islands became detached by rising sea levels in the Neolithic period. The numerous dolmens and other archaeological sites extant and recorded in history demonstrate the existence of a population large enough and organised enough to undertake constructions of considerable size and sophistication, such as the burial mound at La Hougue Bie in Jersey or the statue menhirs of Guernsey.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:shirley_abicair_0",
+        "passage_index": 5,
+        "title": "Shirley Abicair",
+        "score": 0.0848921587920434,
+        "text": "Shirley Abicair\nShirley Abicair was born in Melbourne, Victoria, Australia. Some sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. She was the only daughter of a Wing Commander in the RAAF.",
+        "score_breakdown": {
+          "dense": 0.04980716437365775,
+          "graph": 0.05260858129674328,
+          "fact": 0.2781042933167243
+        }
+      },
+      {
+        "node_id": "chunk:a_burial_at_ornans_0",
+        "passage_index": 1,
+        "title": "A Burial At Ornans",
+        "score": 0.08395588767132803,
+        "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France.",
+        "score_breakdown": {
+          "dense": 0.051250271127197274,
+          "graph": 0.05969253741989083,
+          "fact": 0.2524031821693485
+        }
+      },
+      {
+        "node_id": "chunk:maureen_payne_0",
+        "passage_index": 6,
+        "title": "Maureen Payne",
+        "score": 0.08088230926248557,
+        "text": "Maureen Payne\nMaureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer. She captained the side for their second series, played against New Zealand in 1971–72. She appeared in five Tests for South Africa, claiming eight wickets.",
+        "score_breakdown": {
+          "dense": 0.049704924029438276,
+          "graph": 0.05203195282205979,
+          "fact": 0.2529001013311772
+        }
+      },
+      {
+        "node_id": "chunk:gustave_courbet_0",
+        "passage_index": 8,
+        "title": "Gustave Courbet",
+        "score": 0.07627467445122635,
+        "text": "Gustave Courbet\nJean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting. Committed to painting only what he could see, he rejected academic convention and the Romanticism of the previous generation of visual artists. His independence set an example that was important to later artists, such as the Impressionists and the Cubists. Courbet occupies an important place in 19th-century French painting as an innovator and as an artist willing to make bold social statements through his work.",
+        "score_breakdown": {
+          "dense": 0.05066262923993992,
+          "graph": 0.05307121630615623,
+          "fact": 0.21659242318275007
+        }
+      },
+      {
+        "node_id": "chunk:william_shakespeare_0",
+        "passage_index": 7,
+        "title": "William Shakespeare",
+        "score": 0.04222694655231059,
+        "text": "William Shakespeare\nWilliam Shakespeare was the son of John Shakespeare, an alderman and a successful glover (glove-maker) originally from Snitterfield, and Mary Arden, the daughter of an affluent landowning farmer. He was born in Stratford-upon-Avon and baptised there on 26 April 1564. His actual date of birth remains unknown, but is traditionally observed on 23 April, Saint George's Day. This date, which can be traced to a mistake made by an 18th-century scholar, has proved appealing to biographers because Shakespeare died on the same date in 1616. He was the third of eight children, and the eldest surviving son.",
+        "score_breakdown": {
+          "dense": 0.05009105087705664,
+          "graph": 0.04892289523309812,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bonnevaux_le_prieur_0",
+        "passage_index": 4,
+        "title": "Bonnevaux-le-Prieuré",
+        "score": 0.04218395643191288,
+        "text": "Bonnevaux-le-Prieuré\nBonnevaux-le-Prieuré is a former commune in the Doubs department in the Bourgogne-Franche-Comté region in eastern France. On 1 January 2016, it was merged into the commune Ornans.",
+        "score_breakdown": {
+          "dense": 0.05000177022890236,
+          "graph": 0.048943276020055264,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:channel_islands_0",
+        "passage_index": 3,
+        "title": "Channel Islands",
+        "score": 0.042158125058145826,
+        "text": "Channel Islands\nThe earliest evidence of human occupation of the Channel Islands has been dated to 250,000 years ago when they were attached to the landmass of continental Europe. The islands became detached by rising sea levels in the Neolithic period. The numerous dolmens and other archaeological sites extant and recorded in history demonstrate the existence of a population large enough and organised enough to undertake constructions of considerable size and sophistication, such as the burial mound at La Hougue Bie in Jersey or the statue menhirs of Guernsey.",
+        "score_breakdown": {
+          "dense": 0.04997298299982851,
+          "graph": 0.048909948027467155,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:southampton_old_cemetery_0",
+        "passage_index": 12,
+        "title": "Southampton Old Cemetery",
+        "score": 0.04215742518944113,
+        "text": "Southampton Old Cemetery\nThe cemetery has had various titles including The Cemetery by the Common, Hill Lane Cemetery and is currently known as Southampton Old Cemetery. An Act of Parliament was required in 1843 to acquire the land from Southampton Common. It covers an area of and the total number of burials is estimated at 116,800. Currently there are 6 to 8 burials a year to existing family plots.",
+        "score_breakdown": {
+          "dense": 0.04997514182411064,
+          "graph": 0.048903657287267595,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:vitrigaila_0",
+        "passage_index": 15,
+        "title": "Švitrigaila",
+        "score": 0.04215501103105847,
+        "text": "Švitrigaila\nŠvitrigaila was born to Algirdas, Grand Duke of Lithuania, and his second wife Uliana of Tver. His date of birth is unknown, but it is believed that he was the youngest or second youngest son of Algirdas. He first appeared in politics in October 1382 when he witnessed the Treaty of Dubysa between his elder brother Jogaila and the Teutonic Knights. Historians believe that would indicate that at the time Švitrigaila was no younger than 12 which would put his date of birth sometime before 1370. In a complaint submitted to the Council of Florence, Švitrigaila claimed that he and Jogaila were favorite sons of Algirdas. Before his death in 1377, Algirdas transferred his throne to Jogaila but made him swear to make Švitrigaila his heir. Jogaila's representatives did not outright deny the arrangement and instead claimed that it had been modified by mutual agreement between the brothers.",
+        "score_breakdown": {
+          "dense": 0.04996165405597158,
+          "graph": 0.04892033766758031,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:domestication_of_the_horse_0",
+        "passage_index": 17,
+        "title": "Domestication of the horse",
+        "score": 0.042150986477917846,
+        "text": "Domestication of the horse\nA number of hypotheses exist on many of the key issues regarding the domestication of the horse. Although horses appeared in Paleolithic cave art as early as 30,000 BCE, these were wild horses and were probably hunted for meat. How and when horses became domesticated is disputed. The clearest evidence of early use of the horse as a means of transport is from chariot burials dated c. 2000 BCE. However, an increasing amount of evidence supports the hypothesis that horses were domesticated in the Eurasian Steppes approximately 3500 BCE; recent discoveries in the context of the Botai culture suggest that Botai settlements in the Akmola Province of Kazakhstan are the location of the earliest domestication of the horse. Regardless of the specific date of domestication, use of horses spread rapidly across Eurasia for transportation, agricultural work and warfare.",
+        "score_breakdown": {
+          "dense": 0.04996284772811449,
+          "graph": 0.04890473409151626,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the creator of A Burial at Ornans?",
+        "resolved_sub_question": "Who is the creator of A Burial at Ornans?",
+        "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+        "sentence": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.",
+        "score": 0.5598657142857144,
+        "source_title": "A Burial At Ornans",
+        "hop_answer": "Gustave Courbet",
+        "hop_thought": "The creator of A Burial at Ornans is mentioned in the passage as Gustave Courbet.",
+        "hop_raw_response": "The creator of A Burial at Ornans is mentioned in the passage as Gustave Courbet.\nAnswer: Gustave Courbet",
+        "evidence_passages": [
+          {
+            "title": "A Burial At Ornans",
+            "text": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art."
+          },
+          {
+            "title": "A Burial At Ornans",
+            "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France."
+          },
+          {
+            "title": "Gustave Courbet",
+            "text": "Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the date of birth of this creator?",
+        "resolved_sub_question": "What is the date of birth of this creator? Context: Gustave Courbet.",
+        "sentence_id": "sentence:a_burial_at_ornans_0_0_a_burial_at_ornans_also_known_as_a_funeral_at_ornans_is_a_painting_of_1849_5",
+        "sentence": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.",
+        "score": 0.492152380952381,
+        "source_title": "A Burial At Ornans",
+        "hop_answer": "10 June 1819",
+        "hop_thought": "The context provides the date of birth for Gustave Courbet, who is the creator of A Burial at Ornans.",
+        "hop_raw_response": "The context provides the date of birth for Gustave Courbet, who is the creator of A Burial at Ornans.\nAnswer: 10 June 1819",
+        "evidence_passages": [
+          {
+            "title": "A Burial At Ornans",
+            "text": "A Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art."
+          },
+          {
+            "title": "A Burial At Ornans",
+            "text": "A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art. The painting records the funeral in September 1848 of his great-uncle in the painter's birthplace, the small town of Ornans. It treats an ordinary provincial funeral with unflattering realism, and on the giant scale traditionally reserved for the heroic or religious scenes of history painting. Its exhibition at the 1850–51 Paris Salon created an \"explosive reaction\" and brought Courbet instant fame. It is currently displayed at the Musée d'Orsay in Paris, France."
+          },
+          {
+            "title": "Gustave Courbet",
+            "text": "Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the creator of A Burial at Ornans? => Gustave Courbet (source: A Burial At Ornans)\n2. What is the date of birth of this creator? => 10 June 1819 (source: A Burial At Ornans)\n\nFact hints:\n- Gustave Courbet was born on 10 June 1819\n- Burial At Ornans is_painting_by Gustave Courbet\n- Burial At Ornans also_known_as Funeral At Ornans\n- Burial At Ornans is_major_turning_point_of 19th-century French art\n- Gustave Courbet was French painter\n\nWikipedia Title: A Burial At Ornans\nA Burial At Ornans (, also known as A Funeral At Ornans) is a painting of 1849–50 by Gustave Courbet, and one of the major turning points of 19th-century French art.\n\nWikipedia Title: Gustave Courbet\nJean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting.\n\nWikipedia Title: Shirley Abicair\nSome sources show her year of birth as 1935, but a contemporary account shows she was 23 or 24 on arrival in Britain and, as she had completed tertiary studies in Australia, the earlier date seems more likely. Shirley Abicair Shirley Abicair was born in Melbourne, Victoria, Australia.\n\nWikipedia Title: Kanye West\nKanye West The funeral and burial for Donda West was held in Oklahoma City on November 20, 2007. West played his first concert following the funeral at The O2 in London on November 22.\n\nWikipedia Title: Maureen Payne\nMaureen Payne Maureen Payne (date of birth unknown, died 1997, South Africa) was a South Africa Test cricketer. She captained the side for their second series, played against New Zealand in 1971–72.\n\nQuestion: When is the date of birth of the creator of A Burial at Ornans?\nDraft Answer: 10 June 1819\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The creator of A Burial at Ornans is Gustave Courbet, and his date of birth is 10 June 1819.",
+  "predicted_answer": "10 June 1819",
+  "qa_raw_response": "{\n  \"thought\": \"The creator of A Burial at Ornans is Gustave Courbet, and his date of birth is 10 June 1819.\",\n  \"answer\": \"10 June 1819\",\n  \"support\": \"Jean Désiré Gustave Courbet (; 10 June 1819 – 31 December 1877) was a French painter who led the Realism movement in 19th-century French painting.\"\n}"
+}

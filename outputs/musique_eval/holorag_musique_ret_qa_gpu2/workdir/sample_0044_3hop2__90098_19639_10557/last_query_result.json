@@ -1,0 +1,1063 @@
+{
+  "query": "What was the form of the language that the last name Sylvester comes from, used in the era of the king who united the 9th century tribes, later known as?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Sylvester"
+  ],
+  "raw_query_entities": [
+    "Sylvester"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Sylvester",
+      "node_id": "entity:title_anchor_sylvester",
+      "resolved_text": "Sylvester",
+      "score": 0.6809904761904761,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.41333333333333333,
+      "compatibility_score": 0.39,
+      "score_margin": 0.26472380952380953,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who was the king that united the 9th century tribes?",
+    "What was this king later known as?",
+    "What form of language was used during the era of this king?",
+    "What is the origin of the last name Sylvester in terms of language?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_sylvester",
+      "score": 1.0771079642889616,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:latin_adjective_silvestris",
+      "score": 0.2770776770362616,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kings_canyon_national_park",
+      "score": 0.2770704077876731,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mount_clarence_king",
+      "score": 0.2645747065722927,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:clarence_king",
+      "score": 0.2520744661526864,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:latin_language",
+      "score": 0.2279697758214305,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:classical_latin",
+      "score": 0.2279697758214305,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:frankish_king_charlemagne",
+      "score": 0.22796947286299496,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_canyon_national_park_is_named_for_cla",
+      "score": 0.21114120540353049,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:first_chief_of_the_united_states_geological_survey",
+      "score": 0.1995771149797362,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:king",
+      "score": 0.19957458429310315,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:medieval_latin",
+      "score": 0.19207155516651156,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:sylvester_is_derived_from_latin_adjective_silvestris_sentence_sylvester_0_0_sylvester_is_a_name_derived_from_the_latin_a",
+      "text": "Sylvester is derived from Latin adjective silvestris",
+      "head_id": "entity:title_anchor_sylvester",
+      "tail_id": "entity:latin_adjective_silvestris",
+      "sentence_id": "sentence:sylvester_0_0_sylvester_is_a_name_derived_from_the_latin_adjective_silvestris_meaning_wooded",
+      "chunk_id": "chunk:sylvester_0",
+      "document_index": 11,
+      "score": 0.2749792550602443
+    },
+    {
+      "fact_id": "fact:mount_clarence_king_located_in_kings_canyon_national_park_sentence_mount_clarence_king_0_0_mount_clarence_king_located_i",
+      "text": "Mount Clarence King located in Kings Canyon National Park",
+      "head_id": "entity:title_anchor_mount_clarence_king",
+      "tail_id": "entity:kings_canyon_national_park",
+      "sentence_id": "sentence:mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_canyon_national_park_is_named_for_cla",
+      "chunk_id": "chunk:mount_clarence_king_0",
+      "document_index": 15,
+      "score": 0.27497198596157135
+    },
+    {
+      "fact_id": "fact:mount_clarence_king_named_for_clarence_king_sentence_mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_ca",
+      "text": "Mount Clarence King named for Clarence King",
+      "head_id": "entity:title_anchor_mount_clarence_king",
+      "tail_id": "entity:clarence_king",
+      "sentence_id": "sentence:mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_canyon_national_park_is_named_for_cla",
+      "chunk_id": "chunk:mount_clarence_king_0",
+      "document_index": 15,
+      "score": 0.2499727195611118
+    },
+    {
+      "fact_id": "fact:king_became_first_chief_of_the_united_states_geological_survey_sentence_mount_clarence_king_0_1_king_later_became_the_fi",
+      "text": "King became first chief of the United States Geological Survey",
+      "head_id": "entity:king",
+      "tail_id": "entity:first_chief_of_the_united_states_geological_survey",
+      "sentence_id": "sentence:mount_clarence_king_0_1_king_later_became_the_first_chief_of_the_united_states_geological_survey",
+      "chunk_id": "chunk:mount_clarence_king_0",
+      "document_index": 15,
+      "score": 0.19747295253340527
+    },
+    {
+      "fact_id": "fact:charlemagne_related_to_medieval_latin_sentence_middle_ages_1_2_by_the_reign_of_charlemagne_the_language_had_so_diverged_",
+      "text": "Charlemagne related_to Medieval Latin",
+      "head_id": "entity:charlemagne",
+      "tail_id": "entity:medieval_latin",
+      "sentence_id": "sentence:middle_ages_1_2_by_the_reign_of_charlemagne_the_language_had_so_diverged_from_the_classical_tha",
+      "chunk_id": "chunk:middle_ages_1",
+      "document_index": 10,
+      "score": 0.18997481318452542
+    },
+    {
+      "fact_id": "fact:charlemagne_known_in_german_as_karl_der_gro_e_sentence_germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_th",
+      "text": "Charlemagne known in German as Karl der Gro e",
+      "head_id": "entity:charlemagne",
+      "tail_id": "entity:karl_der_gro_e",
+      "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "chunk_id": "chunk:germans_0",
+      "document_index": 16,
+      "score": 0.18997430825379955
+    },
+    {
+      "fact_id": "fact:charlemagne_s_chancery_made_use_of_carolingian_minuscule_sentence_middle_ages_0_4_charlemagne_s_chancery_or_writing_offi",
+      "text": "Charlemagne's chancery made use of Carolingian minuscule",
+      "head_id": "entity:charlemagne_s_chancery",
+      "tail_id": "entity:carolingian_minuscule",
+      "sentence_id": "sentence:middle_ages_0_4_charlemagne_s_chancery_or_writing_office_made_use_of_a_new_script_today_known_as",
+      "chunk_id": "chunk:middle_ages_0",
+      "document_index": 10,
+      "score": 0.14997384057799013
+    }
+  ],
+  "bridge_entities": [
+    "Latin adjective silvestris",
+    "Latin",
+    "Charlemagne",
+    "Karl der Gro e",
+    "Medieval Latin"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was the king that united the 9th century tribes?",
+      "resolved_sub_question": "Who was the king that united the 9th century tribes?",
+      "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+      "score": 0.5708124369881948,
+      "source_title": "Germans",
+      "hop_answer": "Charlemagne",
+      "hop_thought": "The text mentions that the large tribes living on the territory of modern Germany were united under the rule of the Frankish king Charlemagne, also known as Karl der Große, in the 9th century.",
+      "hop_raw_response": "The text mentions that the large tribes living on the territory of modern Germany were united under the rule of the Frankish king Charlemagne, also known as Karl der Große, in the 9th century.\nAnswer: Charlemagne",
+      "evidence_passages": [
+        {
+          "title": "Germans",
+          "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+        },
+        {
+          "title": "Germans",
+          "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+        },
+        {
+          "title": "Erik Björnsson",
+          "text": "Erik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century."
+        }
+      ]
+    },
+    {
+      "sub_question": "What was this king later known as?",
+      "resolved_sub_question": "What was this king later known as? Context: Charlemagne.",
+      "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+      "score": 0.5039089806167603,
+      "source_title": "Germans",
+      "hop_answer": "Karl der Große",
+      "hop_thought": "The text mentions that Charlemagne is also known in German as Karl der Große.",
+      "hop_raw_response": "The text mentions that Charlemagne is also known in German as Karl der Große.\nAnswer: Karl der Große",
+      "evidence_passages": [
+        {
+          "title": "Germans",
+          "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+        },
+        {
+          "title": "Germans",
+          "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+        },
+        {
+          "title": "Middle Ages",
+          "text": "By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin."
+        }
+      ]
+    },
+    {
+      "sub_question": "What form of language was used during the era of this king?",
+      "resolved_sub_question": "What form of language was used during the era of this king? Context: Charlemagne; Karl der Große.",
+      "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+      "score": 0.5051997806167602,
+      "source_title": "Germans",
+      "hop_answer": "Medieval Latin",
+      "hop_thought": "The context indicates that by the time of Charlemagne, also known as Karl der Große, the language had diverged significantly from classical Latin and was referred to as Medieval Latin.",
+      "hop_raw_response": "The context indicates that by the time of Charlemagne, also known as Karl der Große, the language had diverged significantly from classical Latin and was referred to as Medieval Latin.\nAnswer: Medieval Latin",
+      "evidence_passages": [
+        {
+          "title": "Germans",
+          "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+        },
+        {
+          "title": "Germans",
+          "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+        },
+        {
+          "title": "Middle Ages",
+          "text": "By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the origin of the last name Sylvester in terms of language?",
+      "resolved_sub_question": "What is the origin of the last name Sylvester in terms of language? Context: Karl der Große; Medieval Latin.",
+      "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+      "score": 0.43738978061676026,
+      "source_title": "Germans",
+      "hop_answer": "Latin",
+      "hop_thought": "The name Sylvester originates from Latin, specifically the Latin adjective silvestris, which means \"wooded\" or \"wild.\"",
+      "hop_raw_response": "The name Sylvester originates from Latin, specifically the Latin adjective silvestris, which means \"wooded\" or \"wild.\"\nAnswer: Latin",
+      "evidence_passages": [
+        {
+          "title": "Germans",
+          "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+        },
+        {
+          "title": "Germans",
+          "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+        },
+        {
+          "title": "Sylvester",
+          "text": "Sylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_sylvester",
+      "score": 0.12182953199996249,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:sylvester_0_0_sylvester_is_a_name_derived_from_the_latin_adjective_silvestris_meaning_wooded",
+      "score": 0.06353950734836854,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_canyon_national_park_is_named_for_cla",
+      "score": 0.06081330106799204,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:latin_adjective_silvestris",
+      "score": 0.05429918748634151,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mount_clarence_king",
+      "score": 0.04006573641432847,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:charlemagne",
+      "score": 0.03687586356386704,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:clarence_king",
+      "score": 0.034361485539323944,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kings_canyon_national_park",
+      "score": 0.033370365477840606,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:classical_latin",
+      "score": 0.031598852185824436,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:mount_clarence_king_0_1_king_later_became_the_first_chief_of_the_united_states_geological_survey",
+      "score": 0.030249917277886774,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:king",
+      "score": 0.03012310187336012,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:latin_language",
+      "score": 0.027867056494340254,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:first_chief_of_the_united_states_geological_survey",
+      "score": 0.026499169604333104,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:frankish_king_charlemagne",
+      "score": 0.023606866781985758,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:medieval_latin",
+      "score": 0.023338856625958852,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:charlemagne_s_chancery",
+      "score": 0.021615125741715837,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:karl_der_gro_e",
+      "score": 0.021605068174667362,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:charlemagne_s_court",
+      "score": 0.021478465097841827,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+      "score": 0.02064724635139171,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:mount_clarence_king_0",
+      "score": 0.018821352276783217,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:sylvester_0",
+      "passage_index": 11,
+      "title": "Sylvester",
+      "score": 0.07632904938101817,
+      "text": "Sylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''. Classical Latin spells this with i. In Classical Latin y represented a separate sound distinct from i, not a native Latin sound but one used in transcriptions of foreign words. After the Classical period y came to be pronounced as i. Spellings with Sylv - in place of Silv - date from after the Classical period.",
+      "score_breakdown": {
+        "dense": 0.050766946202979286,
+        "graph": 0.05541402165637373,
+        "fact": 0.21188681648311636
+      }
+    },
+    {
+      "node_id": "chunk:mount_clarence_king_0",
+      "passage_index": 15,
+      "title": "Mount Clarence King",
+      "score": 0.07599422396302793,
+      "text": "Mount Clarence King\nMount Clarence King, located in the Kings Canyon National Park, is named for Clarence King, who worked on the Whitney Survey, the first geological survey of California. King later became the first chief of the United States Geological Survey.",
+      "score_breakdown": {
+        "dense": 0.04983202716300117,
+        "graph": 0.05601272527998874,
+        "fact": 0.21188527626253784
+      }
+    },
+    {
+      "node_id": "chunk:germans_0",
+      "passage_index": 16,
+      "title": "Germans",
+      "score": 0.07234744409189067,
+      "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire.",
+      "score_breakdown": {
+        "dense": 0.050618935475649836,
+        "graph": 0.05104692472051808,
+        "fact": 0.1946196810941856
+      }
+    },
+    {
+      "node_id": "chunk:middle_ages_1",
+      "passage_index": 10,
+      "title": "Middle Ages",
+      "score": 0.07211500023205017,
+      "text": "Middle Ages\non religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government. By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.",
+      "score_breakdown": {
+        "dense": 0.05017578262295289,
+        "graph": 0.05108450961625334,
+        "fact": 0.19461977936366723
+      }
+    },
+    {
+      "node_id": "chunk:middle_ages_0",
+      "passage_index": 10,
+      "title": "Middle Ages",
+      "score": 0.07126297134163932,
+      "text": "Middle Ages\nCharlemagne's court in Aachen was the centre of the cultural revival sometimes referred to as the \"Carolingian Renaissance\". Literacy increased, as did development in the arts, architecture and jurisprudence, as well as liturgical and scriptural studies. The English monk Alcuin (d. 804) was invited to Aachen and brought the education available in the monasteries of Northumbria. Charlemagne's chancery—or writing office—made use of a new script today known as Carolingian minuscule,[M] allowing a common writing style that advanced communication across much of Europe. Charlemagne sponsored changes in church liturgy, imposing the Roman form of church service on his domains, as well as the Gregorian chant in liturgical music for the churches. An important activity for scholars during this period was the copying, correcting, and dissemination of basic works on religious and secular topics, with the aim of encouraging learning. New works on religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government.",
+      "score_breakdown": {
+        "dense": 0.05005149489833768,
+        "graph": 0.0522879404269322,
+        "fact": 0.18698844679649293
+      }
+    },
+    {
+      "node_id": "chunk:erik_bj_rnsson_0",
+      "passage_index": 12,
+      "title": "Erik Björnsson",
+      "score": 0.04229845101855657,
+      "text": "Erik Björnsson\nErik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century. One of the few surviving Scandinavian sources that deal with Swedish kings from this time is \"Hervarar saga\". It says:",
+      "score_breakdown": {
+        "dense": 0.05020875388456676,
+        "graph": 0.04894545460681616,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:seisyllwg_0",
+      "passage_index": 14,
+      "title": "Seisyllwg",
+      "score": 0.04226771728634107,
+      "text": "Seisyllwg\nSeisyllwg () was a petty kingdom of medieval Wales. It is unclear when it emerged as a distinct unit, but according to later sources it consisted of the former Kingdom of Ceredigion plus the region known as Ystrad Tywi. Thus it covered the modern county of Ceredigion, part of Carmarthenshire, and the Gower Peninsula. It is evidently named after Seisyll, king of Ceredigion in the 7th or early 8th century, but it is unknown if he was directly responsible for its establishment. In the 10th century Seisyllwg became the center of power for Hywel Dda, who came to rule most of Wales. In 920 Hywel merged Seisyllwg with the Kingdom of Dyfed to form the new kingdom of Deheubarth.",
+      "score_breakdown": {
+        "dense": 0.05014185595708115,
+        "graph": 0.04896565503315478,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:kievan_rus_0",
+      "passage_index": 9,
+      "title": "Kievan Rus'",
+      "score": 0.042263755821541404,
+      "text": "Kievan Rus'\nPrior to the emergence of Kievan Rus' in the 9th century AD, the lands between the Baltic Sea and Black Sea were primarily populated by eastern Slavic tribes. In the northern region around Novgorod were the Ilmen Slavs and neighboring Krivichi, who occupied territories surrounding the headwaters of the West Dvina, Dnieper, and Volga Rivers. To their north, in the Ladoga and Karelia regions, were the Finnic Chud tribe. In the south, in the area around Kiev, were the Poliane, a group of Slavicized tribes with Iranian origins, the Drevliane to the west of the Dnieper, and the Severiane to the east. To their north and east were the Vyatichi, and to their south was forested land settled by Slav farmers, giving way to steppelands populated by nomadic herdsmen.",
+      "score_breakdown": {
+        "dense": 0.0501407953809395,
+        "graph": 0.048954394540082276,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:crimthann_mac_fidaig_0",
+      "passage_index": 3,
+      "title": "Crimthann mac Fidaig",
+      "score": 0.04220208574682111,
+      "text": "Crimthann mac Fidaig\nCrimthann Mór, son of Fidach , also written Crimthand Mór, was a semi-mythological king of Munster and High King of Ireland of the 4th century. He gained territory in Britain and Gaul, but died poisoned by his sister Mongfind. It is possible that he was also recognised as king of Scotland or Alba. As his Gaelic name means fox, Crimthand Mór mac Fidaig becomes Great Fox, son of Woodsman (Fidach) in English. This Crimthann is to be distinguished from two previous High Kings of Ireland of the same name, two Kings of Leinster, and another King of Munster, among others. Importantly, he is included in the Baile Chuinn Chétchathaig (summary), and is thus the last High King of Ireland from Munster until Brian Bóruma, over six hundred years later.",
+      "score_breakdown": {
+        "dense": 0.050030483574529896,
+        "graph": 0.048951065936098895,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:davidic_line_0",
+      "passage_index": 2,
+      "title": "Davidic line",
+      "score": 0.04218176258609965,
+      "text": "Davidic line\nAfter the death of David's son, King Solomon, the ten northern tribes of the Kingdom of Israel rejected the Davidic line, refusing to accept Solomon's son, Rehoboam, and instead chose as king Jeroboam and formed the northern Kingdom of Israel. This kingdom was conquered by Assyria in the 8th century BCE which exiled much of the Northern Kingdom population and ended its sovereign status. The bulk population of the Northern Kingdom of Israel was forced to relocate to Mesopotamia and mostly disappeared from history as The Ten Lost Tribes or intermixed with exiled Judean populations two centuries later, while the remaining Israelite peoples in Samaria highlands have become known as Samaritans during the classic era and to modern times.",
+      "score_breakdown": {
+        "dense": 0.049994599912638715,
+        "graph": 0.048949108780494535,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_sylvester",
+        "score": 0.12182953199996249,
+        "text": "Sylvester",
+        "metadata": {
+          "canonical_name": "Sylvester",
+          "aliases": [
+            "Sylvester"
+          ],
+          "surface_forms": [
+            "Sylvester"
+          ],
+          "title_anchor": "Sylvester"
+        }
+      },
+      {
+        "node_id": "entity:latin_adjective_silvestris",
+        "score": 0.05429918748634151,
+        "text": "Latin adjective silvestris",
+        "metadata": {
+          "canonical_name": "Latin adjective silvestris",
+          "aliases": [
+            "LAS",
+            "Latin adjective silvestris"
+          ],
+          "surface_forms": [
+            "LAS",
+            "Latin adjective silvestris"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_mount_clarence_king",
+        "score": 0.04006573641432847,
+        "text": "Mount Clarence King",
+        "metadata": {
+          "canonical_name": "Mount Clarence King",
+          "aliases": [
+            "MCK",
+            "Mount Clarence King"
+          ],
+          "surface_forms": [
+            "MCK",
+            "Mount Clarence King"
+          ],
+          "title_anchor": "Mount Clarence King"
+        }
+      },
+      {
+        "node_id": "entity:charlemagne",
+        "score": 0.03687586356386704,
+        "text": "Charlemagne",
+        "metadata": {
+          "canonical_name": "Charlemagne",
+          "aliases": [
+            "Charlemagne"
+          ],
+          "surface_forms": [
+            "Charlemagne"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:clarence_king",
+        "score": 0.034361485539323944,
+        "text": "Clarence King",
+        "metadata": {
+          "canonical_name": "Clarence King",
+          "aliases": [
+            "CK",
+            "Clarence King"
+          ],
+          "surface_forms": [
+            "CK",
+            "Clarence King"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:sylvester_0_0_sylvester_is_a_name_derived_from_the_latin_adjective_silvestris_meaning_wooded",
+        "score": 0.06353950734836854,
+        "text": "Sylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''.",
+        "metadata": {
+          "title": "Sylvester",
+          "chunk_id": "chunk:sylvester_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Sylvester",
+              "relation": "is derived from",
+              "tail": "Latin adjective silvestris"
+            }
+          ],
+          "entities": [
+            "Sylvester",
+            "Latin"
+          ],
+          "entity_ids": [
+            "entity:latin",
+            "entity:latin_adjective_silvestris",
+            "entity:title_anchor_sylvester"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mount_clarence_king_0_0_mount_clarence_king_located_in_the_kings_canyon_national_park_is_named_for_cla",
+        "score": 0.06081330106799204,
+        "text": "Mount Clarence King, located in the Kings Canyon National Park, is named for Clarence King, who worked on the Whitney Survey, the first geological survey of California.",
+        "metadata": {
+          "title": "Mount Clarence King",
+          "chunk_id": "chunk:mount_clarence_king_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Mount Clarence King",
+              "relation": "located in",
+              "tail": "Kings Canyon National Park"
+            },
+            {
+              "head": "Mount Clarence King",
+              "relation": "named for",
+              "tail": "Clarence King"
+            },
+            {
+              "head": "Clarence King",
+              "relation": "worked on",
+              "tail": "Whitney Survey"
+            },
+            {
+              "head": "Whitney Survey",
+              "relation": "is",
+              "tail": "first geological survey of California"
+            }
+          ],
+          "entities": [
+            "Mount Clarence King",
+            "Kings Canyon National Park",
+            "Clarence King",
+            "Whitney Survey",
+            "California"
+          ],
+          "entity_ids": [
+            "entity:california",
+            "entity:clarence_king",
+            "entity:first_geological_survey_of_california",
+            "entity:kings_canyon_national_park",
+            "entity:title_anchor_mount_clarence_king",
+            "entity:whitney_survey"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mount_clarence_king_0_1_king_later_became_the_first_chief_of_the_united_states_geological_survey",
+        "score": 0.030249917277886774,
+        "text": "King later became the first chief of the United States Geological Survey.",
+        "metadata": {
+          "title": "Mount Clarence King",
+          "chunk_id": "chunk:mount_clarence_king_0",
+          "sentence_index": 1,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "King",
+              "relation": "became",
+              "tail": "first chief of the United States Geological Survey"
+            }
+          ],
+          "entities": [
+            "King",
+            "United States Geological Survey"
+          ],
+          "entity_ids": [
+            "entity:first_chief_of_the_united_states_geological_survey",
+            "entity:king",
+            "entity:united_states_geological_survey"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+        "score": 0.02064724635139171,
+        "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+        "metadata": {
+          "title": "Germans",
+          "chunk_id": "chunk:germans_0",
+          "sentence_index": 4,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Charlemagne",
+              "relation": "known in German as",
+              "tail": "Karl der Gro e"
+            }
+          ],
+          "entities": [
+            "Germany",
+            "Frankish king Charlemagne",
+            "Karl der Gro e"
+          ],
+          "entity_ids": [
+            "entity:charlemagne",
+            "entity:frankish_king_charlemagne",
+            "entity:germany",
+            "entity:karl_der_gro_e"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:mount_clarence_king_0",
+        "score": 0.018821352276783217,
+        "text": "Mount Clarence King\nMount Clarence King, located in the Kings Canyon National Park, is named for Clarence King, who worked on the Whitney Survey, the first geological survey of California. King later became the first chief of the United States Geological Survey.",
+        "metadata": {
+          "title": "Mount Clarence King",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:california",
+            "entity:clarence_king",
+            "entity:first_chief_of_the_united_states_geological_survey",
+            "entity:first_geological_survey_of_california",
+            "entity:king",
+            "entity:kings_canyon_national_park",
+            "entity:title_anchor_mount_clarence_king",
+            "entity:united_states_geological_survey",
+            "entity:whitney_survey"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:sylvester_0",
+        "score": 0.013392549514231866,
+        "text": "Sylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''. Classical Latin spells this with i. In Classical Latin y represented a separate sound distinct from i, not a native Latin sound but one used in transcriptions of foreign words. After the Classical period y came to be pronounced as i. Spellings with Sylv - in place of Silv - date from after the Classical period.",
+        "metadata": {
+          "title": "Sylvester",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:after",
+            "entity:after_the_classical_period",
+            "entity:classical",
+            "entity:classical_latin",
+            "entity:classical_period",
+            "entity:latin",
+            "entity:latin_adjective_silvestris",
+            "entity:silv",
+            "entity:spellings",
+            "entity:spellings_with_sylv",
+            "entity:sylv",
+            "entity:title_anchor_sylvester"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:middle_ages_1",
+        "score": 0.00694468127590167,
+        "text": "Middle Ages\non religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government. By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.",
+        "metadata": {
+          "title": "Middle Ages",
+          "chunk_index": 1,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:by",
+            "entity:charlemagne",
+            "entity:classical_latin",
+            "entity:grammarians",
+            "entity:latin_language",
+            "entity:medieval_latin",
+            "entity:roman_empire"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:middle_ages_0",
+        "score": 0.006607765493933941,
+        "text": "Middle Ages\nCharlemagne's court in Aachen was the centre of the cultural revival sometimes referred to as the \"Carolingian Renaissance\". Literacy increased, as did development in the arts, architecture and jurisprudence, as well as liturgical and scriptural studies. The English monk Alcuin (d. 804) was invited to Aachen and brought the education available in the monasteries of Northumbria. Charlemagne's chancery—or writing office—made use of a new script today known as Carolingian minuscule,[M] allowing a common writing style that advanced communication across much of Europe. Charlemagne sponsored changes in church liturgy, imposing the Roman form of church service on his domains, as well as the Gregorian chant in liturgical music for the churches. An important activity for scholars during this period was the copying, correcting, and dissemination of basic works on religious and secular topics, with the aim of encouraging learning. New works on religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government.",
+        "metadata": {
+          "title": "Middle Ages",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:aachen",
+            "entity:alcuin",
+            "entity:carolingian_minuscule",
+            "entity:carolingian_renaissance",
+            "entity:charlemagne",
+            "entity:charlemagne_s_chancery",
+            "entity:charlemagne_s_court",
+            "entity:classical_latin",
+            "entity:english_monk",
+            "entity:europe",
+            "entity:grammarians",
+            "entity:gregorian_chant",
+            "entity:gregorian_chant_in_liturgical_music",
+            "entity:latin_language",
+            "entity:literacy",
+            "entity:new",
+            "entity:northumbria",
+            "entity:roman_empire",
+            "entity:roman_form_of_church_service"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Sylvester\nSylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''. Classical Latin spells this with i. In Classical Latin y represented a separate sound distinct from i, not a native Latin sound but one used in transcriptions of foreign words. After the Classical period y came to be pronounced as i. Spellings with Sylv - in place of Silv - date from after the Classical period.\n\nMount Clarence King\nMount Clarence King\nMount Clarence King, located in the Kings Canyon National Park, is named for Clarence King, who worked on the Whitney Survey, the first geological survey of California. King later became the first chief of the United States Geological Survey.\n\nGermans\nGermans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire.\n\nMiddle Ages\nMiddle Ages\non religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government. By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.\n\nMiddle Ages\nMiddle Ages\nCharlemagne's court in Aachen was the centre of the cultural revival sometimes referred to as the \"Carolingian Renaissance\". Literacy increased, as did development in the arts, architecture and jurisprudence, as well as liturgical and scriptural studies. The English monk Alcuin (d. 804) was invited to Aachen and brought the education available in the monasteries of Northumbria. Charlemagne's chancery—or writing office—made use of a new script today known as Carolingian minuscule,[M] allowing a common writing style that advanced communication across much of Europe. Charlemagne sponsored changes in church liturgy, imposing the Roman form of church service on his domains, as well as the Gregorian chant in liturgical music for the churches. An important activity for scholars during this period was the copying, correcting, and dissemination of basic works on religious and secular topics, with the aim of encouraging learning. New works on religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government.\n\nGermans\nBy the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.\n\nErik Björnsson\nErik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century.\n\nMiddle Ages\nBy the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.\n\nSylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''.\n\nHimachal Pradesh\nHimachal Pradesh\nThe history of the area that now constitutes Himachal Pradesh dates back to the time when the Indus valley civilisation flourished between 2250 and 1750 BCE. Tribes such as the Koilis, Halis, Dagis, Dhaugris, Dasa, Khasas, Kinnars, and Kirats inhabited the region from the prehistoric era. During the Vedic period, several small republics known as \"Janapada\" existed which were later conquered by the Gupta Empire. After a brief period of supremacy by King Harshavardhana, the region was once again divided into several local powers headed by chieftains, including some Rajput principalities. These kingdoms enjoyed a large degree of independence and were invaded by Delhi Sultanate a number of times. Mahmud Ghaznavi conquered Kangra at the beginning of the 10th century. Timur and Sikander Lodi also marched through the lower hills of the state and captured a number of forts and fought many battles. Several hill states acknowledged Mughal suzerainty and paid regular tribute to the Mughals.\n\nCrimthann mac Fidaig\nCrimthann mac Fidaig\nCrimthann Mór, son of Fidach , also written Crimthand Mór, was a semi-mythological king of Munster and High King of Ireland of the 4th century. He gained territory in Britain and Gaul, but died poisoned by his sister Mongfind. It is possible that he was also recognised as king of Scotland or Alba. As his Gaelic name means fox, Crimthand Mór mac Fidaig becomes Great Fox, son of Woodsman (Fidach) in English. This Crimthann is to be distinguished from two previous High Kings of Ireland of the same name, two Kings of Leinster, and another King of Munster, among others. Importantly, he is included in the Baile Chuinn Chétchathaig (summary), and is thus the last High King of Ireland from Munster until Brian Bóruma, over six hundred years later.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:sylvester_0",
+        "passage_index": 11,
+        "title": "Sylvester",
+        "score": 0.07632904938101817,
+        "text": "Sylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''. Classical Latin spells this with i. In Classical Latin y represented a separate sound distinct from i, not a native Latin sound but one used in transcriptions of foreign words. After the Classical period y came to be pronounced as i. Spellings with Sylv - in place of Silv - date from after the Classical period.",
+        "score_breakdown": {
+          "dense": 0.050766946202979286,
+          "graph": 0.05541402165637373,
+          "fact": 0.21188681648311636
+        }
+      },
+      {
+        "node_id": "chunk:mount_clarence_king_0",
+        "passage_index": 15,
+        "title": "Mount Clarence King",
+        "score": 0.07599422396302793,
+        "text": "Mount Clarence King\nMount Clarence King, located in the Kings Canyon National Park, is named for Clarence King, who worked on the Whitney Survey, the first geological survey of California. King later became the first chief of the United States Geological Survey.",
+        "score_breakdown": {
+          "dense": 0.04983202716300117,
+          "graph": 0.05601272527998874,
+          "fact": 0.21188527626253784
+        }
+      },
+      {
+        "node_id": "chunk:germans_0",
+        "passage_index": 16,
+        "title": "Germans",
+        "score": 0.07234744409189067,
+        "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire.",
+        "score_breakdown": {
+          "dense": 0.050618935475649836,
+          "graph": 0.05104692472051808,
+          "fact": 0.1946196810941856
+        }
+      },
+      {
+        "node_id": "chunk:middle_ages_1",
+        "passage_index": 10,
+        "title": "Middle Ages",
+        "score": 0.07211500023205017,
+        "text": "Middle Ages\non religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government. By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.",
+        "score_breakdown": {
+          "dense": 0.05017578262295289,
+          "graph": 0.05108450961625334,
+          "fact": 0.19461977936366723
+        }
+      },
+      {
+        "node_id": "chunk:middle_ages_0",
+        "passage_index": 10,
+        "title": "Middle Ages",
+        "score": 0.07126297134163932,
+        "text": "Middle Ages\nCharlemagne's court in Aachen was the centre of the cultural revival sometimes referred to as the \"Carolingian Renaissance\". Literacy increased, as did development in the arts, architecture and jurisprudence, as well as liturgical and scriptural studies. The English monk Alcuin (d. 804) was invited to Aachen and brought the education available in the monasteries of Northumbria. Charlemagne's chancery—or writing office—made use of a new script today known as Carolingian minuscule,[M] allowing a common writing style that advanced communication across much of Europe. Charlemagne sponsored changes in church liturgy, imposing the Roman form of church service on his domains, as well as the Gregorian chant in liturgical music for the churches. An important activity for scholars during this period was the copying, correcting, and dissemination of basic works on religious and secular topics, with the aim of encouraging learning. New works on religious topics and schoolbooks were also produced. Grammarians of the period modified the Latin language, changing it from the Classical Latin of the Roman Empire into a more flexible form to fit the needs of the church and government.",
+        "score_breakdown": {
+          "dense": 0.05005149489833768,
+          "graph": 0.0522879404269322,
+          "fact": 0.18698844679649293
+        }
+      },
+      {
+        "node_id": "chunk:erik_bj_rnsson_0",
+        "passage_index": 12,
+        "title": "Erik Björnsson",
+        "score": 0.04229845101855657,
+        "text": "Erik Björnsson\nErik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century. One of the few surviving Scandinavian sources that deal with Swedish kings from this time is \"Hervarar saga\". It says:",
+        "score_breakdown": {
+          "dense": 0.05020875388456676,
+          "graph": 0.04894545460681616,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:seisyllwg_0",
+        "passage_index": 14,
+        "title": "Seisyllwg",
+        "score": 0.04226771728634107,
+        "text": "Seisyllwg\nSeisyllwg () was a petty kingdom of medieval Wales. It is unclear when it emerged as a distinct unit, but according to later sources it consisted of the former Kingdom of Ceredigion plus the region known as Ystrad Tywi. Thus it covered the modern county of Ceredigion, part of Carmarthenshire, and the Gower Peninsula. It is evidently named after Seisyll, king of Ceredigion in the 7th or early 8th century, but it is unknown if he was directly responsible for its establishment. In the 10th century Seisyllwg became the center of power for Hywel Dda, who came to rule most of Wales. In 920 Hywel merged Seisyllwg with the Kingdom of Dyfed to form the new kingdom of Deheubarth.",
+        "score_breakdown": {
+          "dense": 0.05014185595708115,
+          "graph": 0.04896565503315478,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:kievan_rus_0",
+        "passage_index": 9,
+        "title": "Kievan Rus'",
+        "score": 0.042263755821541404,
+        "text": "Kievan Rus'\nPrior to the emergence of Kievan Rus' in the 9th century AD, the lands between the Baltic Sea and Black Sea were primarily populated by eastern Slavic tribes. In the northern region around Novgorod were the Ilmen Slavs and neighboring Krivichi, who occupied territories surrounding the headwaters of the West Dvina, Dnieper, and Volga Rivers. To their north, in the Ladoga and Karelia regions, were the Finnic Chud tribe. In the south, in the area around Kiev, were the Poliane, a group of Slavicized tribes with Iranian origins, the Drevliane to the west of the Dnieper, and the Severiane to the east. To their north and east were the Vyatichi, and to their south was forested land settled by Slav farmers, giving way to steppelands populated by nomadic herdsmen.",
+        "score_breakdown": {
+          "dense": 0.0501407953809395,
+          "graph": 0.048954394540082276,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:crimthann_mac_fidaig_0",
+        "passage_index": 3,
+        "title": "Crimthann mac Fidaig",
+        "score": 0.04220208574682111,
+        "text": "Crimthann mac Fidaig\nCrimthann Mór, son of Fidach , also written Crimthand Mór, was a semi-mythological king of Munster and High King of Ireland of the 4th century. He gained territory in Britain and Gaul, but died poisoned by his sister Mongfind. It is possible that he was also recognised as king of Scotland or Alba. As his Gaelic name means fox, Crimthand Mór mac Fidaig becomes Great Fox, son of Woodsman (Fidach) in English. This Crimthann is to be distinguished from two previous High Kings of Ireland of the same name, two Kings of Leinster, and another King of Munster, among others. Importantly, he is included in the Baile Chuinn Chétchathaig (summary), and is thus the last High King of Ireland from Munster until Brian Bóruma, over six hundred years later.",
+        "score_breakdown": {
+          "dense": 0.050030483574529896,
+          "graph": 0.048951065936098895,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:davidic_line_0",
+        "passage_index": 2,
+        "title": "Davidic line",
+        "score": 0.04218176258609965,
+        "text": "Davidic line\nAfter the death of David's son, King Solomon, the ten northern tribes of the Kingdom of Israel rejected the Davidic line, refusing to accept Solomon's son, Rehoboam, and instead chose as king Jeroboam and formed the northern Kingdom of Israel. This kingdom was conquered by Assyria in the 8th century BCE which exiled much of the Northern Kingdom population and ended its sovereign status. The bulk population of the Northern Kingdom of Israel was forced to relocate to Mesopotamia and mostly disappeared from history as The Ten Lost Tribes or intermixed with exiled Judean populations two centuries later, while the remaining Israelite peoples in Samaria highlands have become known as Samaritans during the classic era and to modern times.",
+        "score_breakdown": {
+          "dense": 0.049994599912638715,
+          "graph": 0.048949108780494535,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was the king that united the 9th century tribes?",
+        "resolved_sub_question": "Who was the king that united the 9th century tribes?",
+        "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+        "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+        "score": 0.5708124369881948,
+        "source_title": "Germans",
+        "hop_answer": "Charlemagne",
+        "hop_thought": "The text mentions that the large tribes living on the territory of modern Germany were united under the rule of the Frankish king Charlemagne, also known as Karl der Große, in the 9th century.",
+        "hop_raw_response": "The text mentions that the large tribes living on the territory of modern Germany were united under the rule of the Frankish king Charlemagne, also known as Karl der Große, in the 9th century.\nAnswer: Charlemagne",
+        "evidence_passages": [
+          {
+            "title": "Germans",
+            "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+          },
+          {
+            "title": "Germans",
+            "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+          },
+          {
+            "title": "Erik Björnsson",
+            "text": "Erik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century."
+          }
+        ]
+      },
+      {
+        "sub_question": "What was this king later known as?",
+        "resolved_sub_question": "What was this king later known as? Context: Charlemagne.",
+        "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+        "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+        "score": 0.5039089806167603,
+        "source_title": "Germans",
+        "hop_answer": "Karl der Große",
+        "hop_thought": "The text mentions that Charlemagne is also known in German as Karl der Große.",
+        "hop_raw_response": "The text mentions that Charlemagne is also known in German as Karl der Große.\nAnswer: Karl der Große",
+        "evidence_passages": [
+          {
+            "title": "Germans",
+            "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+          },
+          {
+            "title": "Germans",
+            "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+          },
+          {
+            "title": "Middle Ages",
+            "text": "By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin."
+          }
+        ]
+      },
+      {
+        "sub_question": "What form of language was used during the era of this king?",
+        "resolved_sub_question": "What form of language was used during the era of this king? Context: Charlemagne; Karl der Große.",
+        "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+        "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+        "score": 0.5051997806167602,
+        "source_title": "Germans",
+        "hop_answer": "Medieval Latin",
+        "hop_thought": "The context indicates that by the time of Charlemagne, also known as Karl der Große, the language had diverged significantly from classical Latin and was referred to as Medieval Latin.",
+        "hop_raw_response": "The context indicates that by the time of Charlemagne, also known as Karl der Große, the language had diverged significantly from classical Latin and was referred to as Medieval Latin.\nAnswer: Medieval Latin",
+        "evidence_passages": [
+          {
+            "title": "Germans",
+            "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+          },
+          {
+            "title": "Germans",
+            "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+          },
+          {
+            "title": "Middle Ages",
+            "text": "By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the origin of the last name Sylvester in terms of language?",
+        "resolved_sub_question": "What is the origin of the last name Sylvester in terms of language? Context: Karl der Große; Medieval Latin.",
+        "sentence_id": "sentence:germans_0_4_by_the_9th_century_the_large_tribes_which_lived_on_the_territory_of_modern_germ",
+        "sentence": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große.",
+        "score": 0.43738978061676026,
+        "source_title": "Germans",
+        "hop_answer": "Latin",
+        "hop_thought": "The name Sylvester originates from Latin, specifically the Latin adjective silvestris, which means \"wooded\" or \"wild.\"",
+        "hop_raw_response": "The name Sylvester originates from Latin, specifically the Latin adjective silvestris, which means \"wooded\" or \"wild.\"\nAnswer: Latin",
+        "evidence_passages": [
+          {
+            "title": "Germans",
+            "text": "By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große."
+          },
+          {
+            "title": "Germans",
+            "text": "Germans\nThe migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii. These five tribes, sometimes with inclusion of the Frisians, are considered as the major groups to take part in the formation of the Germans. The varieties of the German language are still divided up into these groups. Linguists distinguish low Saxon, Franconian, Bavarian, Thuringian and Alemannic varieties in modern German. By the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Much of what is now Eastern Germany became Slavonic-speaking (Sorbs and Veleti), after these areas were vacated by Germanic tribes (Vandals, Lombards, Burgundians and Suebi amongst others) which had migrated into the former areas of the Roman Empire."
+          },
+          {
+            "title": "Sylvester",
+            "text": "Sylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who was the king that united the 9th century tribes? => Charlemagne (source: Germans)\n2. What was this king later known as? => Karl der Große (source: Germans)\n3. What form of language was used during the era of this king? => Medieval Latin (source: Germans)\n4. What is the origin of the last name Sylvester in terms of language? => Latin (source: Germans)\n\nFact hints:\n- Charlemagne related_to Medieval Latin\n- Charlemagne known in German as Karl der Gro e\n- Sylvester is derived from Latin adjective silvestris\n- Charlemagne's chancery made use of Carolingian minuscule\n\nWikipedia Title: Middle Ages\nBy the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.\n\nWikipedia Title: Germans\nBy the 9th century, the large tribes which lived on the territory of modern Germany had been united under the rule of the Frankish king Charlemagne, known in German as Karl der Große. Germans The migration-period peoples who later coalesced into a \"German\" ethnicity were the Germanic tribes of the Saxons, Franci, Thuringii, Alamanni and Bavarii.\n\nWikipedia Title: Sylvester\nSylvester is a name derived from the Latin adjective silvestris meaning ``wooded ''or`` wild'', which derives from the noun silva meaning ``woodland ''.\n\nWikipedia Title: Crimthann mac Fidaig\nImportantly, he is included in the Baile Chuinn Chétchathaig (summary), and is thus the last High King of Ireland from Munster until Brian Bóruma, over six hundred years later. Crimthann mac Fidaig Crimthann Mór, son of Fidach , also written Crimthand Mór, was a semi-mythological king of Munster and High King of Ireland of the 4th century.\n\nWikipedia Title: Erik Björnsson\nErik Björnsson was one of the sons of Björn Ironside and a semi-legendary king of Sweden of the House of Munsö, who would have lived in the late 9th century.\n\nQuestion: What was the form of the language that the last name Sylvester comes from, used in the era of the king who united the 9th century tribes, later known as?\nDraft Answer: Medieval Latin\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The king who united the 9th century tribes was Charlemagne, also known as Karl der Große. During his era, the language used was Medieval Latin. The last name Sylvester originates from the Latin adjective silvestris, indicating that the form of the language it comes from is Latin.",
+  "predicted_answer": "Latin",
+  "qa_raw_response": "{\n  \"thought\": \"The king who united the 9th century tribes was Charlemagne, also known as Karl der Große. During his era, the language used was Medieval Latin. The last name Sylvester originates from the Latin adjective silvestris, indicating that the form of the language it comes from is Latin.\",\n  \"answer\": \"Latin\",\n  \"support\": \"By the reign of Charlemagne, the language had so diverged from the classical that it was later called Medieval Latin.\"\n}"
+}

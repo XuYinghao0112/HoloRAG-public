@@ -1,0 +1,925 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 17:56:29,526 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.72it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.67it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.09it/s]
+2026-04-03 17:56:39,895 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:56:40,829 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:56:42,695 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 17:56:44,803 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:56:59,537 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:01,020 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:03,401 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:07,613 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:10,002 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:14,733 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:57:18,912 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "In what county is William W. Blair's birthplace located?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "William W Blair"
+  ],
+  "raw_query_entities": [
+    "William W Blair"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "William W Blair",
+      "node_id": "entity:blair_athol",
+      "resolved_text": "Blair Athol",
+      "score": 0.5463333333333333,
+      "alias_score": 0.25,
+      "relation_score": 1.0,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.775,
+      "score_margin": 0.009333333333333305,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What is William W. Blair's birthplace?",
+    "In what county is this birthplace located?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "score": 0.38201001204661117,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:orleans_county",
+      "score": 0.3268760096570637,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:town_of_murray",
+      "score": 0.32485867288356884,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:new_york",
+      "score": 0.30685602135417006,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:holley",
+      "score": 0.3028571072730487,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:holley_new_york",
+      "score": 0.2788721170504624,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:blair",
+      "score": 0.21639711921529323,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:holley_new_york_0",
+      "score": 0.20963080439513304,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "chunk:william_w_blair_0",
+      "score": 0.1291220397354712,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:william_smith",
+      "score": 0.12888582418399874,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_0_blair_was_born_in_holley_new_york",
+      "score": 0.11280031449923068,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+      "score": 0.10341830971087874,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:town_of_murray_located_in_orleans_county_sentence_holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orlea",
+      "text": "town of Murray located in Orleans County",
+      "head_id": "entity:town_of_murray",
+      "tail_id": "entity:orleans_county",
+      "sentence_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "chunk_id": "chunk:holley_new_york_0",
+      "document_index": 17,
+      "score": 0.34452265784971375
+    },
+    {
+      "fact_id": "fact:orleans_county_located_in_new_york_sentence_holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_cou",
+      "text": "Orleans County located in New York",
+      "head_id": "entity:orleans_county",
+      "tail_id": "entity:new_york",
+      "sentence_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "chunk_id": "chunk:holley_new_york_0",
+      "document_index": 17,
+      "score": 0.3045206442396861
+    },
+    {
+      "fact_id": "fact:holley_located_in_town_of_murray_sentence_holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_count",
+      "text": "Holley located in town of Murray",
+      "head_id": "entity:holley",
+      "tail_id": "entity:town_of_murray",
+      "sentence_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "chunk_id": "chunk:holley_new_york_0",
+      "document_index": 17,
+      "score": 0.3005218328470655
+    },
+    {
+      "fact_id": "fact:blair_was_born_in_holley_new_york_sentence_william_w_blair_0_0_blair_was_born_in_holley_new_york",
+      "text": "Blair was born in Holley New York",
+      "head_id": "entity:blair",
+      "tail_id": "entity:holley_new_york",
+      "sentence_id": "sentence:william_w_blair_0_0_blair_was_born_in_holley_new_york",
+      "chunk_id": "chunk:william_w_blair_0",
+      "document_index": 15,
+      "score": 0.2765374499018054
+    },
+    {
+      "fact_id": "fact:blair_was_baptized_by_william_smith_sentence_william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_t",
+      "text": "Blair was baptized by William Smith",
+      "head_id": "entity:blair",
+      "tail_id": "entity:william_smith",
+      "sentence_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+      "chunk_id": "chunk:william_w_blair_0",
+      "document_index": 15,
+      "score": 0.1515306766458744
+    },
+    {
+      "fact_id": "fact:william_smith_is_younger_brother_of_joseph_smith_sentence_william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_wi",
+      "text": "William Smith is younger brother of Joseph Smith",
+      "head_id": "entity:william_smith",
+      "tail_id": "entity:joseph_smith",
+      "sentence_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+      "chunk_id": "chunk:william_w_blair_0",
+      "document_index": 15,
+      "score": 0.10152171312474759
+    }
+  ],
+  "bridge_entities": [
+    "Orleans County"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is William W. Blair's birthplace?",
+      "resolved_sub_question": "What is William W. Blair's birthplace?",
+      "sentence_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+      "sentence": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+      "score": 0.3843582361501694,
+      "source_title": "William W. Blair",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not contain any information about William W. Blair's birthplace.",
+      "hop_raw_response": "The provided evidence does not contain any information about William W. Blair's birthplace.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "William W. Blair",
+          "text": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement."
+        }
+      ]
+    },
+    {
+      "sub_question": "In what county is this birthplace located?",
+      "resolved_sub_question": "In what county is this birthplace located?",
+      "sentence_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "sentence": "Holley is a village in the town of Murray in Orleans County, New York, United States.",
+      "score": 0.2902874618173426,
+      "source_title": "Holley, New York",
+      "hop_answer": "Orleans County",
+      "hop_thought": "The birthplace of William W. Blair is Holley, which is located in Orleans County, New York.",
+      "hop_raw_response": "The birthplace of William W. Blair is Holley, which is located in Orleans County, New York.\nAnswer: Orleans County",
+      "evidence_passages": [
+        {
+          "title": "Holley, New York",
+          "text": "Holley is a village in the town of Murray in Orleans County, New York, United States."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+      "score": 0.18785713433294898,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:orleans_county",
+      "score": 0.07606485883923403,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:town_of_murray",
+      "score": 0.07594476526344363,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+      "score": 0.056622250411864875,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:new_york",
+      "score": 0.050465329433399576,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:holley",
+      "score": 0.050268192169344,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:holley_new_york_0",
+      "score": 0.0430557517849367,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:blair",
+      "score": 0.04232946649071921,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_0_blair_was_born_in_holley_new_york",
+      "score": 0.04005125192033747,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:holley_new_york_0_1_the_population_was_1_811_at_the_2010_census",
+      "score": 0.0368133763699429,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:holley_new_york_0_2_it_is_part_of_the_rochester_metropolitan_statistical_area",
+      "score": 0.029507372997229667,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_2_in_1851_blair_encountered_missionaries_from_the_latter_day_saint_movement",
+      "score": 0.028231699451060886,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:holley_new_york",
+      "score": 0.027278277956573768,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:william_smith",
+      "score": 0.02543415530354675,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:william_w_blair_0",
+      "score": 0.02398591199910134,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:joseph_smith",
+      "score": 0.023521425546156417,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:william_w_blair_0_1_in_1839_his_family_moved_to_lasalle_county_illinois",
+      "score": 0.022782889608701087,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:latter_day_saint_movement",
+      "score": 0.019423748199754735,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:rochester_metropolitan_statistical_area",
+      "score": 0.0071984042325711935,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:county",
+      "score": 0.005097106124632794,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:holley_new_york_0",
+      "passage_index": 17,
+      "title": "Holley, New York",
+      "score": 0.12297691564762245,
+      "text": "Holley, New York\nHolley is a village in the town of Murray in Orleans County, New York, United States. The population was 1,811 at the 2010 census. It is part of the Rochester Metropolitan Statistical Area.",
+      "score_breakdown": {
+        "dense": 0.05004807632367426,
+        "graph": 0.05967336625603654,
+        "fact": 0.5169897586186043
+      }
+    },
+    {
+      "node_id": "chunk:william_w_blair_0",
+      "passage_index": 15,
+      "title": "William W. Blair",
+      "score": 0.1162092402374779,
+      "text": "William W. Blair\nBlair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+      "score_breakdown": {
+        "dense": 0.05119729224431681,
+        "graph": 0.05199731098631434,
+        "fact": 0.4830102413813957
+      }
+    },
+    {
+      "node_id": "chunk:john_blair_smith_todd_0",
+      "passage_index": 13,
+      "title": "John Blair Smith Todd",
+      "score": 0.040987403148261985,
+      "text": "John Blair Smith Todd\nJohn Blair Smith Todd (April 4, 1814 – January 5, 1872) was a Delegate from Dakota Territory to the United States House of Representatives and a general in the Union Army during the American Civil War.",
+      "score_breakdown": {
+        "dense": 0.050291910311069846,
+        "graph": 0.04442284159057857,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:blair_athol_new_south_wales_0",
+      "passage_index": 8,
+      "title": "Blair Athol, New South Wales",
+      "score": 0.04098216794402974,
+      "text": "Blair Athol, New South Wales\nBlair Athol is a suburb of Sydney, in the state of New South Wales, Australia. Blair Athol is located 57 kilometres south-west of the Sydney central business district, in the local government area of the City of Campbelltown and is part of the Macarthur region.",
+      "score_breakdown": {
+        "dense": 0.05028239861822569,
+        "graph": 0.044422829013352046,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:port_blair_0",
+      "passage_index": 2,
+      "title": "Port Blair",
+      "score": 0.04091250108676817,
+      "text": "Port Blair\nPort Blair (pronunciation (help info)) is the capital of the Andaman and Nicobar Islands, a union territory of India situated in the Bay of Bengal. It is also the local administrative sub-division (tehsil) of the islands, the headquarters for the district of South Andaman, and is the territory's only notified town. It houses the headquarters of the Andaman and Nicobar Police and the Andaman and Nicobar Command, the first integrated tri-command of the armed forces of India.",
+      "score_breakdown": {
+        "dense": 0.05013895860124798,
+        "graph": 0.04445357952027262,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:james_w_clise_house_0",
+      "passage_index": 19,
+      "title": "James W. Clise House",
+      "score": 0.04084781073738669,
+      "text": "James W. Clise House\nThe James W. Clise House is a house located within Marymoor Park in Redmond, Washington, United States, listed on the National Register of Historic Places.",
+      "score_breakdown": {
+        "dense": 0.05003079693397602,
+        "graph": 0.04443624141233295,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:billy_goat_tavern_0",
+      "passage_index": 9,
+      "title": "Billy Goat Tavern",
+      "score": 0.0408374017826741,
+      "text": "Billy Goat Tavern\nThe first location, at 1855 W. Madison St., was opened in 1934 when William ``Billy Goat ''Sianis bought the Lincoln Tavern, near Chicago Stadium, for $205 with a bounced check (he made good on it with the proceeds from the first weekend they were open). When the 1944 Republican National Convention came to town, he posted a sign saying`` No Republicans allowed,'' causing the place to be packed with Republicans demanding to be served. Of course, a great deal of publicity followed, which Sianis characteristically took advantage of.",
+      "score_breakdown": {
+        "dense": 0.05000006260966625,
+        "graph": 0.04445789115785888,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:birth_certificate_0",
+      "passage_index": 12,
+      "title": "Birth certificate",
+      "score": 0.04082207361107859,
+      "text": "Birth certificate\nIn the U.S., the issuance of birth certificates is a function of the Vital Records Office of the states, capital district, territories and former territories. Birth in the U.S. establishes automatic eligibility for American citizenship, so a birth certificate from a local authority is commonly provided to the federal government to obtain a U.S. passport. However, the U.S. State Department does issue a Consular Report of Birth Abroad for children born to U.S. citizens (who are also eligible for citizenship), including births on military bases in foreign territory.",
+      "score_breakdown": {
+        "dense": 0.04997973620625999,
+        "graph": 0.044444062325451984,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:scariest_places_on_earth_0",
+      "passage_index": 18,
+      "title": "Scariest Places on Earth",
+      "score": 0.040807740950794556,
+      "text": "Scariest Places on Earth\nScariest Places on Earth is an American paranormal reality television series that originally aired from October 23, 2000, to October 29, 2006, on Fox Family, and later ABC Family. The show was hosted by Linda Blair, with narration by Zelda Rubinstein. The show featured reported cases of the paranormal by detailing the location's history, and then sending an ordinary family to visit the location in a reality TV-style vigil.",
+      "score_breakdown": {
+        "dense": 0.04995822245887134,
+        "graph": 0.04443572866138439,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sant_mart_d_emp_ries_0",
+      "passage_index": 7,
+      "title": "Sant Martí d'Empúries",
+      "score": 0.040782799556697336,
+      "text": "Sant Martí d'Empúries\nSant Martí d'Empúries is an entity of the town of L'Escala. It is located next to the ruins of Empúries or Empòrion. Ancient Greeks established the settlement in the 6th century BC. It was the county seat until 1079 Empúries moved to Castelló d'Empúries place less exposed to attack.",
+      "score_breakdown": {
+        "dense": 0.049910751779743474,
+        "graph": 0.04443962025946141,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:orleans_county",
+        "score": 0.07606485883923403,
+        "text": "Orleans County",
+        "metadata": {
+          "canonical_name": "Orleans County",
+          "aliases": [
+            "OC",
+            "Orleans County"
+          ],
+          "surface_forms": [
+            "OC",
+            "Orleans County"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:town_of_murray",
+        "score": 0.07594476526344363,
+        "text": "town of Murray",
+        "metadata": {
+          "canonical_name": "town of Murray",
+          "aliases": [
+            "TOM",
+            "town of Murray"
+          ],
+          "surface_forms": [
+            "TOM",
+            "town of Murray"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+        "score": 0.18785713433294898,
+        "text": "Holley is a village in the town of Murray in Orleans County, New York, United States.",
+        "metadata": {
+          "title": "Holley, New York",
+          "chunk_id": "chunk:holley_new_york_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Holley",
+              "relation": "located in",
+              "tail": "town of Murray"
+            },
+            {
+              "head": "town of Murray",
+              "relation": "located in",
+              "tail": "Orleans County"
+            },
+            {
+              "head": "Orleans County",
+              "relation": "located in",
+              "tail": "New York"
+            }
+          ],
+          "entities": [
+            "Holley",
+            "town of Murray",
+            "Orleans County",
+            "New York"
+          ],
+          "entity_ids": [
+            "entity:holley",
+            "entity:new_york",
+            "entity:orleans_county",
+            "entity:town_of_murray"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+        "score": 0.056622250411864875,
+        "text": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+        "metadata": {
+          "title": "William W. Blair",
+          "chunk_id": "chunk:william_w_blair_0",
+          "sentence_index": 3,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Blair",
+              "relation": "was baptized by",
+              "tail": "William Smith"
+            },
+            {
+              "head": "William Smith",
+              "relation": "is younger brother of",
+              "tail": "Joseph Smith"
+            },
+            {
+              "head": "Joseph Smith",
+              "relation": "is founder of",
+              "tail": "Latter Day Saint movement"
+            }
+          ],
+          "entities": [
+            "Blair",
+            "William Smith",
+            "Joseph Smith",
+            "Latter Day Saint movement"
+          ],
+          "entity_ids": [
+            "entity:blair",
+            "entity:joseph_smith",
+            "entity:latter_day_saint_movement",
+            "entity:william_smith"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:william_w_blair_0_0_blair_was_born_in_holley_new_york",
+        "score": 0.04005125192033747,
+        "text": "Blair was born in Holley, New York.",
+        "metadata": {
+          "title": "William W. Blair",
+          "chunk_id": "chunk:william_w_blair_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Blair",
+              "relation": "was born in",
+              "tail": "Holley New York"
+            }
+          ],
+          "entities": [
+            "Blair",
+            "Holley New York"
+          ],
+          "entity_ids": [
+            "entity:blair",
+            "entity:holley_new_york"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:holley_new_york_0_1_the_population_was_1_811_at_the_2010_census",
+        "score": 0.0368133763699429,
+        "text": "The population was 1,811 at the 2010 census.",
+        "metadata": {
+          "title": "Holley, New York",
+          "chunk_id": "chunk:holley_new_york_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [],
+          "entities": []
+        }
+      },
+      {
+        "node_id": "sentence:holley_new_york_0_2_it_is_part_of_the_rochester_metropolitan_statistical_area",
+        "score": 0.029507372997229667,
+        "text": "It is part of the Rochester Metropolitan Statistical Area.",
+        "metadata": {
+          "title": "Holley, New York",
+          "chunk_id": "chunk:holley_new_york_0",
+          "sentence_index": 2,
+          "document_index": 17,
+          "triples": [],
+          "entities": [
+            "Rochester Metropolitan Statistical Area"
+          ],
+          "entity_ids": [
+            "entity:rochester_metropolitan_statistical_area"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:william_w_blair_0_2_in_1851_blair_encountered_missionaries_from_the_latter_day_saint_movement",
+        "score": 0.028231699451060886,
+        "text": "In 1851, Blair encountered missionaries from the Latter Day Saint movement.",
+        "metadata": {
+          "title": "William W. Blair",
+          "chunk_id": "chunk:william_w_blair_0",
+          "sentence_index": 2,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Blair",
+              "relation": "encountered missionaries from",
+              "tail": "Latter Day Saint movement"
+            }
+          ],
+          "entities": [
+            "Blair",
+            "Latter Day Saint movement"
+          ],
+          "entity_ids": [
+            "entity:blair",
+            "entity:latter_day_saint_movement"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:holley_new_york_0",
+        "score": 0.0430557517849367,
+        "text": "Holley, New York\nHolley is a village in the town of Murray in Orleans County, New York, United States. The population was 1,811 at the 2010 census. It is part of the Rochester Metropolitan Statistical Area.",
+        "metadata": {
+          "title": "Holley, New York",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:holley",
+            "entity:new_york",
+            "entity:orleans_county",
+            "entity:rochester_metropolitan_statistical_area",
+            "entity:town_of_murray"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:william_w_blair_0",
+        "score": 0.02398591199910134,
+        "text": "William W. Blair\nBlair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+        "metadata": {
+          "title": "William W. Blair",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:blair",
+            "entity:county",
+            "entity:holley_new_york",
+            "entity:illinois",
+            "entity:joseph_smith",
+            "entity:lasalle_county_illinois",
+            "entity:latter_day_saint_movement",
+            "entity:william_smith"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:billy_goat_tavern_0",
+        "score": 0.0014089344391668038,
+        "text": "Billy Goat Tavern\nThe first location, at 1855 W. Madison St., was opened in 1934 when William ``Billy Goat ''Sianis bought the Lincoln Tavern, near Chicago Stadium, for $205 with a bounced check (he made good on it with the proceeds from the first weekend they were open). When the 1944 Republican National Convention came to town, he posted a sign saying`` No Republicans allowed,'' causing the place to be packed with Republicans demanding to be served. Of course, a great deal of publicity followed, which Sianis characteristically took advantage of.",
+        "metadata": {
+          "title": "Billy Goat Tavern",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:1944_republican_national_convention",
+            "entity:chicago_stadium",
+            "entity:lincoln_tavern",
+            "entity:madison_st",
+            "entity:no_republicans",
+            "entity:republican_national_convention",
+            "entity:republicans",
+            "entity:sianis",
+            "entity:william_sianis"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:birth_certificate_0",
+        "score": 0.0013870274486459061,
+        "text": "Birth certificate\nIn the U.S., the issuance of birth certificates is a function of the Vital Records Office of the states, capital district, territories and former territories. Birth in the U.S. establishes automatic eligibility for American citizenship, so a birth certificate from a local authority is commonly provided to the federal government to obtain a U.S. passport. However, the U.S. State Department does issue a Consular Report of Birth Abroad for children born to U.S. citizens (who are also eligible for citizenship), including births on military bases in foreign territory.",
+        "metadata": {
+          "title": "Birth certificate",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:american_citizenship",
+            "entity:automatic_eligibility_for_american_citizenship",
+            "entity:birth_in_the_u_s",
+            "entity:children_born_to_u_s_citizens",
+            "entity:consular_report_of_birth_abroad",
+            "entity:however",
+            "entity:state_department",
+            "entity:u_s_citizens",
+            "entity:u_s_passport",
+            "entity:vital_records_office"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Holley, New York\nHolley is a village in the town of Murray in Orleans County, New York, United States.\n\nWilliam W. Blair\nBlair Blair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois.\n\nSant Martí d'Empúries\nIt is located next to the ruins of Empúries or Empòrion. It was the county seat until 1079 Empúries moved to Castelló d'Empúries place less exposed to attack.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:holley_new_york_0",
+        "passage_index": 17,
+        "title": "Holley, New York",
+        "score": 0.12297691564762245,
+        "text": "Holley, New York\nHolley is a village in the town of Murray in Orleans County, New York, United States. The population was 1,811 at the 2010 census. It is part of the Rochester Metropolitan Statistical Area.",
+        "score_breakdown": {
+          "dense": 0.05004807632367426,
+          "graph": 0.05967336625603654,
+          "fact": 0.5169897586186043
+        }
+      },
+      {
+        "node_id": "chunk:william_w_blair_0",
+        "passage_index": 15,
+        "title": "William W. Blair",
+        "score": 0.1162092402374779,
+        "text": "William W. Blair\nBlair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois. In 1851, Blair encountered missionaries from the Latter Day Saint movement. On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+        "score_breakdown": {
+          "dense": 0.05119729224431681,
+          "graph": 0.05199731098631434,
+          "fact": 0.4830102413813957
+        }
+      },
+      {
+        "node_id": "chunk:john_blair_smith_todd_0",
+        "passage_index": 13,
+        "title": "John Blair Smith Todd",
+        "score": 0.040987403148261985,
+        "text": "John Blair Smith Todd\nJohn Blair Smith Todd (April 4, 1814 – January 5, 1872) was a Delegate from Dakota Territory to the United States House of Representatives and a general in the Union Army during the American Civil War.",
+        "score_breakdown": {
+          "dense": 0.050291910311069846,
+          "graph": 0.04442284159057857,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:blair_athol_new_south_wales_0",
+        "passage_index": 8,
+        "title": "Blair Athol, New South Wales",
+        "score": 0.04098216794402974,
+        "text": "Blair Athol, New South Wales\nBlair Athol is a suburb of Sydney, in the state of New South Wales, Australia. Blair Athol is located 57 kilometres south-west of the Sydney central business district, in the local government area of the City of Campbelltown and is part of the Macarthur region.",
+        "score_breakdown": {
+          "dense": 0.05028239861822569,
+          "graph": 0.044422829013352046,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:port_blair_0",
+        "passage_index": 2,
+        "title": "Port Blair",
+        "score": 0.04091250108676817,
+        "text": "Port Blair\nPort Blair (pronunciation (help info)) is the capital of the Andaman and Nicobar Islands, a union territory of India situated in the Bay of Bengal. It is also the local administrative sub-division (tehsil) of the islands, the headquarters for the district of South Andaman, and is the territory's only notified town. It houses the headquarters of the Andaman and Nicobar Police and the Andaman and Nicobar Command, the first integrated tri-command of the armed forces of India.",
+        "score_breakdown": {
+          "dense": 0.05013895860124798,
+          "graph": 0.04445357952027262,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:james_w_clise_house_0",
+        "passage_index": 19,
+        "title": "James W. Clise House",
+        "score": 0.04084781073738669,
+        "text": "James W. Clise House\nThe James W. Clise House is a house located within Marymoor Park in Redmond, Washington, United States, listed on the National Register of Historic Places.",
+        "score_breakdown": {
+          "dense": 0.05003079693397602,
+          "graph": 0.04443624141233295,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:billy_goat_tavern_0",
+        "passage_index": 9,
+        "title": "Billy Goat Tavern",
+        "score": 0.0408374017826741,
+        "text": "Billy Goat Tavern\nThe first location, at 1855 W. Madison St., was opened in 1934 when William ``Billy Goat ''Sianis bought the Lincoln Tavern, near Chicago Stadium, for $205 with a bounced check (he made good on it with the proceeds from the first weekend they were open). When the 1944 Republican National Convention came to town, he posted a sign saying`` No Republicans allowed,'' causing the place to be packed with Republicans demanding to be served. Of course, a great deal of publicity followed, which Sianis characteristically took advantage of.",
+        "score_breakdown": {
+          "dense": 0.05000006260966625,
+          "graph": 0.04445789115785888,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:birth_certificate_0",
+        "passage_index": 12,
+        "title": "Birth certificate",
+        "score": 0.04082207361107859,
+        "text": "Birth certificate\nIn the U.S., the issuance of birth certificates is a function of the Vital Records Office of the states, capital district, territories and former territories. Birth in the U.S. establishes automatic eligibility for American citizenship, so a birth certificate from a local authority is commonly provided to the federal government to obtain a U.S. passport. However, the U.S. State Department does issue a Consular Report of Birth Abroad for children born to U.S. citizens (who are also eligible for citizenship), including births on military bases in foreign territory.",
+        "score_breakdown": {
+          "dense": 0.04997973620625999,
+          "graph": 0.044444062325451984,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:scariest_places_on_earth_0",
+        "passage_index": 18,
+        "title": "Scariest Places on Earth",
+        "score": 0.040807740950794556,
+        "text": "Scariest Places on Earth\nScariest Places on Earth is an American paranormal reality television series that originally aired from October 23, 2000, to October 29, 2006, on Fox Family, and later ABC Family. The show was hosted by Linda Blair, with narration by Zelda Rubinstein. The show featured reported cases of the paranormal by detailing the location's history, and then sending an ordinary family to visit the location in a reality TV-style vigil.",
+        "score_breakdown": {
+          "dense": 0.04995822245887134,
+          "graph": 0.04443572866138439,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sant_mart_d_emp_ries_0",
+        "passage_index": 7,
+        "title": "Sant Martí d'Empúries",
+        "score": 0.040782799556697336,
+        "text": "Sant Martí d'Empúries\nSant Martí d'Empúries is an entity of the town of L'Escala. It is located next to the ruins of Empúries or Empòrion. Ancient Greeks established the settlement in the 6th century BC. It was the county seat until 1079 Empúries moved to Castelló d'Empúries place less exposed to attack.",
+        "score_breakdown": {
+          "dense": 0.049910751779743474,
+          "graph": 0.04443962025946141,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is William W. Blair's birthplace?",
+        "resolved_sub_question": "What is William W. Blair's birthplace?",
+        "sentence_id": "sentence:william_w_blair_0_3_on_october_8_1851_blair_was_baptized_by_william_smith_the_younger_brother_of",
+        "sentence": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement.",
+        "score": 0.3843582361501694,
+        "source_title": "William W. Blair",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not contain any information about William W. Blair's birthplace.",
+        "hop_raw_response": "The provided evidence does not contain any information about William W. Blair's birthplace.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "William W. Blair",
+            "text": "On October 8, 1851, Blair was baptized by William Smith, the younger brother of Joseph Smith, the founder of the Latter Day Saint movement."
+          }
+        ]
+      },
+      {
+        "sub_question": "In what county is this birthplace located?",
+        "resolved_sub_question": "In what county is this birthplace located?",
+        "sentence_id": "sentence:holley_new_york_0_0_holley_is_a_village_in_the_town_of_murray_in_orleans_county_new_york_united_st",
+        "sentence": "Holley is a village in the town of Murray in Orleans County, New York, United States.",
+        "score": 0.2902874618173426,
+        "source_title": "Holley, New York",
+        "hop_answer": "Orleans County",
+        "hop_thought": "The birthplace of William W. Blair is Holley, which is located in Orleans County, New York.",
+        "hop_raw_response": "The birthplace of William W. Blair is Holley, which is located in Orleans County, New York.\nAnswer: Orleans County",
+        "evidence_passages": [
+          {
+            "title": "Holley, New York",
+            "text": "Holley is a village in the town of Murray in Orleans County, New York, United States."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is William W. Blair's birthplace? (source: William W. Blair)\n2. In what county is this birthplace located? => Orleans County (source: Holley, New York)\n\nFact hints:\n- town of Murray located in Orleans County\n- Orleans County located in New York\n- Blair was born in Holley New York\n\nWikipedia Title: Holley, New York\nHolley is a village in the town of Murray in Orleans County, New York, United States.\n\nWikipedia Title: William W. Blair\nBlair Blair was born in Holley, New York. In 1839, his family moved to LaSalle County, Illinois.\n\nWikipedia Title: Sant Martí d'Empúries\nIt is located next to the ruins of Empúries or Empòrion. It was the county seat until 1079 Empúries moved to Castelló d'Empúries place less exposed to attack.\n\nQuestion: In what county is William W. Blair's birthplace located?\nDraft Answer: Orleans County\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The passages indicate that William W. Blair was born in Holley, New York, and Holley is a village in the town of Murray, which is in Orleans County, New York.",
+  "predicted_answer": "Orleans County",
+  "qa_raw_response": "{\n  \"thought\": \"The passages indicate that William W. Blair was born in Holley, New York, and Holley is a village in the town of Murray, which is in Orleans County, New York.\",\n  \"answer\": \"Orleans County\",\n  \"support\": \"Holley is a village in the town of Murray in Orleans County, New York, United States.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__195917_575657",
+    "question": "In what county is William W. Blair's birthplace located?",
+    "answer": "Orleans County",
+    "answer_aliases": [
+      "Orleans County, New York"
+    ],
+    "question_decomposition": [
+      "William W. Blair >> place of birth",
+      "#1 >> located in the administrative territorial entity"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Orleans County",
+    "gold_aliases": [
+      "Orleans County, New York"
+    ],
+    "matched": true,
+    "matched_candidates": [
+      "Orleans County",
+      "Orleans County, New York"
+    ]
+  }
+}

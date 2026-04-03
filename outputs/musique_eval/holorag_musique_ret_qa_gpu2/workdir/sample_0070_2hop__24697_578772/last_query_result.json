@@ -1,0 +1,1023 @@
+{
+  "query": "The name of the Chinese capitol Kanmu modeled his government after is an instance of what?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Kanmu"
+  ],
+  "raw_query_entities": [
+    "Chinese capitol",
+    "Kanmu"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Chinese capitol",
+      "node_id": "entity:chinese_citizen",
+      "resolved_text": "Chinese citizen",
+      "score": 0.6736000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4285714285714286,
+      "compatibility_score": 0.39,
+      "score_margin": 0.03300000000000003,
+      "confident": false
+    },
+    {
+      "mention": "Kanmu",
+      "node_id": "entity:kanmu",
+      "resolved_text": "Kanmu",
+      "score": 0.7983333333333333,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4666666666666667,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.18066666666666675,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is the name of the Chinese capital that Kanmu modeled his government after?",
+    "What is an instance of the name of the Chinese capital that Kanmu modeled his government after?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:kanmu",
+      "score": 0.8021329224974537,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chang_an",
+      "score": 0.589946419641026,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:heian",
+      "score": 0.4890567418349025,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:heian_ky_ky",
+      "score": 0.4504769256562395,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:heian_capital",
+      "score": 0.44647563904457077,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chinese_tang_capital",
+      "score": 0.4367740915567163,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:chinese_tang_capital_at_chang_an",
+      "score": 0.39629672712442415,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kammu",
+      "score": 0.36465244278938164,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:emperor_kammu",
+      "score": 0.3522897765817124,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:xi_an",
+      "score": 0.33449076217192614,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_palacio_de_gobierno_nuevo_le_n",
+      "score": 0.333443482961226,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nuevo_le_n_state",
+      "score": 0.3243579140798737,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:heian_capital_was_patterned_on_chinese_tang_capital_at_chang_an_sentence_heian_period_0_3_the_early_heian_period_784_967",
+      "text": "Heian capital was patterned on Chinese Tang capital at Chang'an",
+      "head_id": "entity:heian_capital",
+      "tail_id": "entity:chinese_tang_capital_at_chang_an",
+      "sentence_id": "sentence:heian_period_0_3_the_early_heian_period_784_967_continued_nara_culture_the_heian_capital_was_p",
+      "chunk_id": "chunk:heian_period_0",
+      "document_index": 15,
+      "score": 0.21290123897262436
+    },
+    {
+      "fact_id": "fact:monterrey_is_the_capital_of_nuevo_le_n_state_sentence_palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_",
+      "text": "Monterrey is the capital of Nuevo Le n state",
+      "head_id": "entity:monterrey",
+      "tail_id": "entity:nuevo_le_n_state",
+      "sentence_id": "sentence:palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_government_palace_of_nuevo_le_n_is_a_state_gove",
+      "chunk_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+      "document_index": 11,
+      "score": 0.20788872346249307
+    },
+    {
+      "fact_id": "fact:emperor_kammu_moved_the_capital_to_heian_ky_ky_sentence_heian_period_0_0_when_emperor_kammu_moved_the_capital_to_heian_k",
+      "text": "Emperor Kammu moved the capital to Heian-ky Ky",
+      "head_id": "entity:emperor_kammu",
+      "tail_id": "entity:heian_ky_ky",
+      "sentence_id": "sentence:heian_period_0_0_when_emperor_kammu_moved_the_capital_to_heian_ky_ky_to_which_remained_the_im",
+      "chunk_id": "chunk:heian_period_0",
+      "document_index": 15,
+      "score": 0.19289571585223603
+    },
+    {
+      "fact_id": "fact:qing_dynasty_founded_after_fall_of_the_ming_sentence_modern_history_0_0_the_qing_dynasty_1644_1911_was_founded_after_the",
+      "text": "Qing dynasty founded after fall of the Ming",
+      "head_id": "entity:qing_dynasty",
+      "tail_id": "entity:fall_of_the_ming",
+      "sentence_id": "sentence:modern_history_0_0_the_qing_dynasty_1644_1911_was_founded_after_the_fall_of_the_ming_the_last_ha",
+      "chunk_id": "chunk:modern_history_0",
+      "document_index": 17,
+      "score": 0.18288864358600398
+    },
+    {
+      "fact_id": "fact:chang_an_is_modern_xi_an_sentence_han_dynasty_0_1_during_this_period_the_capital_was_at_chang_an_modern_xi_an",
+      "text": "Chang'an is modern Xi'an",
+      "head_id": "entity:chang_an",
+      "tail_id": "entity:xi_an",
+      "sentence_id": "sentence:han_dynasty_0_1_during_this_period_the_capital_was_at_chang_an_modern_xi_an",
+      "chunk_id": "chunk:han_dynasty_0",
+      "document_index": 2,
+      "score": 0.1510771706579726
+    },
+    {
+      "fact_id": "fact:nuevo_le_n_state_is_located_in_northern_mexico_sentence_palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_th",
+      "text": "Nuevo Le n state is located in northern Mexico",
+      "head_id": "entity:nuevo_le_n_state",
+      "tail_id": "entity:northern_mexico",
+      "sentence_id": "sentence:palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_government_palace_of_nuevo_le_n_is_a_state_gove",
+      "chunk_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+      "document_index": 11,
+      "score": 0.146067747334338
+    },
+    {
+      "fact_id": "fact:kammu_endeavoured_to_improve_tang_style_administrative_system_sentence_heian_period_0_4_kammu_endeavoured_to_improve_the",
+      "text": "Kammu endeavoured to improve Tang-style administrative system",
+      "head_id": "entity:kammu",
+      "tail_id": "entity:tang_style_administrative_system",
+      "sentence_id": "sentence:heian_period_0_4_kammu_endeavoured_to_improve_the_tang_style_administrative_system_which_was_in_u",
+      "chunk_id": "chunk:heian_period_0",
+      "document_index": 15,
+      "score": 0.13107613000197116
+    },
+    {
+      "fact_id": "fact:palacio_de_gobierno_is_located_in_monterrey_sentence_palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_g",
+      "text": "Palacio de Gobierno is located in Monterrey",
+      "head_id": "entity:title_anchor_palacio_de_gobierno_nuevo_le_n",
+      "tail_id": "entity:monterrey",
+      "sentence_id": "sentence:palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_government_palace_of_nuevo_le_n_is_a_state_gove",
+      "chunk_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+      "document_index": 11,
+      "score": 0.12106960048312736
+    }
+  ],
+  "bridge_entities": [
+    "Chang'an"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the name of the Chinese capital that Kanmu modeled his government after?",
+      "resolved_sub_question": "What is the name of the Chinese capital that Kanmu modeled his government after?",
+      "sentence_id": "sentence:heian_period_0_0_when_emperor_kammu_moved_the_capital_to_heian_ky_ky_to_which_remained_the_im",
+      "sentence": "When Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically.",
+      "score": 0.41027008218721916,
+      "source_title": "Heian period",
+      "hop_answer": "Chang'an",
+      "hop_thought": "The passage mentions that the Heian capital was patterned on the Chinese Tang capital at Chang'an.",
+      "hop_raw_response": "The passage mentions that the Heian capital was patterned on the Chinese Tang capital at Chang'an.\nAnswer: Chang'an",
+      "evidence_passages": [
+        {
+          "title": "Heian period",
+          "text": "When Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically."
+        },
+        {
+          "title": "Heian period",
+          "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he"
+        },
+        {
+          "title": "Heian period",
+          "text": "Kanmu first tried to move the capital to Nagaoka-kyō, but a series of disasters befell the city, prompting the emperor to relocate the capital a second time, to Heian."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is an instance of the name of the Chinese capital that Kanmu modeled his government after?",
+      "resolved_sub_question": "What is an instance of the name of the Chinese capital that Kanmu modeled his government after? Context: Chang'an.",
+      "sentence_id": "sentence:heian_period_0_3_the_early_heian_period_784_967_continued_nara_culture_the_heian_capital_was_p",
+      "sentence": "The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara.",
+      "score": 0.4391787511042303,
+      "source_title": "Heian period",
+      "hop_answer": "Chang'an",
+      "hop_thought": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.",
+      "hop_raw_response": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.\nAnswer: Chang'an",
+      "evidence_passages": [
+        {
+          "title": "Heian period",
+          "text": "The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara."
+        },
+        {
+          "title": "Heian period",
+          "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he"
+        },
+        {
+          "title": "Han dynasty",
+          "text": "During this period the capital was at Chang'an (modern Xi'an)."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:kanmu",
+      "score": 0.0588382457644466,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chang_an",
+      "score": 0.058601340236052166,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_government_palace_of_nuevo_le_n_is_a_state_gove",
+      "score": 0.047689539081199,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:chinese_tang_capital_at_chang_an",
+      "score": 0.04349239081294222,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:heian_ky_ky",
+      "score": 0.0426253334813619,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:heian",
+      "score": 0.041812052756741075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:heian_capital",
+      "score": 0.04129707966807902,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:chinese_tang_capital",
+      "score": 0.037404968368613706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:xi_an",
+      "score": 0.03540778975935978,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:emperor_kammu",
+      "score": 0.035001166933743645,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_palacio_de_gobierno_nuevo_le_n",
+      "score": 0.03371450782361199,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kammu",
+      "score": 0.03305846387249681,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:heian_period_0_3_the_early_heian_period_784_967_continued_nara_culture_the_heian_capital_was_p",
+      "score": 0.03262449923622402,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:nuevo_le_n_state",
+      "score": 0.031894727688534526,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:emperor_kanmu",
+      "score": 0.029809567020888106,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:han_dynasty_0_1_during_this_period_the_capital_was_at_chang_an_modern_xi_an",
+      "score": 0.02235803707145157,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_heian_period",
+      "score": 0.022009174211777956,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:monterrey",
+      "score": 0.021351776716787688,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:government_palace_of_nuevo_le_n",
+      "score": 0.01931865655034685,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:heian_period_0_1_kanmu_first_tried_to_move_the_capital_to_nagaoka_ky_but_a_series_of_disasters",
+      "score": 0.01926896122357861,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:heian_period_0",
+      "passage_index": 15,
+      "title": "Heian period",
+      "score": 0.08450731272613074,
+      "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he",
+      "score_breakdown": {
+        "dense": 0.05064986106695312,
+        "graph": 0.060807779689269044,
+        "fact": 0.2560503682168387
+      }
+    },
+    {
+      "node_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+      "passage_index": 11,
+      "title": "Palacio de Gobierno (Nuevo León)",
+      "score": 0.08159472164766093,
+      "text": "Palacio de Gobierno (Nuevo León)\nThe Palacio de Gobierno, or the Government Palace of Nuevo León, is a state government building in Monterrey, the capital city of Nuevo León state, in northern Mexico.",
+      "score_breakdown": {
+        "dense": 0.04999626511306435,
+        "graph": 0.05293752457843887,
+        "fact": 0.2547701230796259
+      }
+    },
+    {
+      "node_id": "chunk:modern_history_0",
+      "passage_index": 17,
+      "title": "Modern history",
+      "score": 0.07987878322323114,
+      "text": "Modern history\nThe Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Manchus were formerly known as the Jurchens. When Beijing was captured by Li Zicheng's peasant rebels in 1644, the Chongzhen Emperor, the last Ming emperor, committed suicide. The Manchus then allied with former Ming general Wu Sangui and seized control of Beijing, which became the new capital of the Qing dynasty. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper. Schoppa, the editor of The Columbia Guide to Modern Chinese History argues, \"A date around 1780 as the beginning of modern China is thus closer to what we know today as historical 'reality'. It also allows us to have a better baseline to understand the precipitous decline of the Chinese polity in the nineteenth and twentieth centuries.\"",
+      "score_breakdown": {
+        "dense": 0.05008019479743732,
+        "graph": 0.05020901704186438,
+        "fact": 0.24847980648054205
+      }
+    },
+    {
+      "node_id": "chunk:han_dynasty_0",
+      "passage_index": 2,
+      "title": "Han dynasty",
+      "score": 0.07909909012511962,
+      "text": "Han dynasty\nThe period between the foundation of the Han dynasty and Wang Mang's reign is known as the Western Han dynasty (simplified Chinese: 西汉; traditional Chinese: 西漢; pinyin: Xī Hàn) or Former Han dynasty (simplified Chinese: 前汉; traditional Chinese: 前漢; pinyin: Qiánhàn) (206 BC – 9 AD). During this period the capital was at Chang'an (modern Xi'an). From the reign of Guangwu the capital was moved eastward to Luoyang. The era from his reign until the fall of Han is known as the Eastern Han dynasty (simplified Chinese: 东汉; traditional Chinese: 東漢; pinyin: Dōng Hàn) or the Later Han dynasty (simplified Chinese: 后汉; traditional Chinese: 後漢; pinyin: Hòu Hàn) (25–220 AD).",
+      "score_breakdown": {
+        "dense": 0.05026741125179178,
+        "graph": 0.0511568620106171,
+        "fact": 0.24069970222299344
+      }
+    },
+    {
+      "node_id": "chunk:heian_period_1",
+      "passage_index": 15,
+      "title": "Heian period",
+      "score": 0.042442111145354885,
+      "text": "Heian period\ndifferences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he became recognized as one of Japan's most forceful emperors.",
+      "score_breakdown": {
+        "dense": 0.050096918371324996,
+        "graph": 0.049629353470420454,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:t_ng_surname_0",
+      "passage_index": 3,
+      "title": "Táng (surname)",
+      "score": 0.04230658057385199,
+      "text": "Táng (surname)\nTang (; Chinese: 唐, mandarin Pinyin: \"Táng\"; Japanese: 唐/とう/から; Korean: 당/唐; Cantonese : Tong; old Chinese read Dang), is a Chinese surname. The three languages also have the surname with the same character but different pronunciation/romanization. In Korean, it is usually romanized also as Dang. In Japanese, the surname is often romanized as To. In Vietnamese, it is commonly written as Đường (the anglicized variation is Duong, not be confused with Vietnamese surname Dương which is also anglicized as Duong). It is pronounced dhɑng in Middle Chinese, and lhāŋ in Old Chinese.",
+      "score_breakdown": {
+        "dense": 0.0501765117763666,
+        "graph": 0.049031663656167845,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:yuan_dynasty_0",
+      "passage_index": 10,
+      "title": "Yuan dynasty",
+      "score": 0.04227137288823108,
+      "text": "Yuan dynasty\nKublai's government after 1262 was a compromise between preserving Mongol interests in China and satisfying the demands of his Chinese subjects. He instituted the reforms proposed by his Chinese advisers by centralizing the bureaucracy, expanding the circulation of paper money, and maintaining the traditional monopolies on salt and iron. He restored the Imperial Secretariat and left the local administrative structure of past Chinese dynasties unchanged. However, Kublai rejected plans to revive the Confucian imperial examinations and divided Yuan society into three, later four, classes with the Han Chinese occupying the lowest rank. Kublai's Chinese advisers still wielded significant power in the government, but their official rank was nebulous.",
+      "score_breakdown": {
+        "dense": 0.05010646482711236,
+        "graph": 0.049042724111064265,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:edo_period_0",
+      "passage_index": 16,
+      "title": "Edo period",
+      "score": 0.04222049026652881,
+      "text": "Edo period\nAdvanced studies and growing applications of neo-Confucianism contributed to the transition of the social and political order from feudal norms to class- and large-group-oriented practices. The rule of the people or Confucian man was gradually replaced by the rule of law. New laws were developed, and new administrative devices were instituted. A new theory of government and a new vision of society emerged as a means of justifying more comprehensive governance by the bakufu. Each person had a distinct place in society and was expected to work to fulfill his or her mission in life. The people were to be ruled with benevolence by those whose assigned duty it was to rule. Government was all-powerful but responsible and humane. Although the class system was influenced by neo-Confucianism, it was not identical to it. Whereas soldiers and clergy were at the bottom of the hierarchy in the Chinese model, in Japan, some members of these classes constituted the ruling elite.",
+      "score_breakdown": {
+        "dense": 0.05000700790570679,
+        "graph": 0.04905545306130026,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:shang_dynasty_0",
+      "passage_index": 1,
+      "title": "Shang dynasty",
+      "score": 0.04220248401537123,
+      "text": "Shang dynasty\nShang 商 Kingdom c. 1600 BC -- c. 1046 BC Remnants of advanced, stratified societies dating back to the Shang period have been found in the Yellow River Valley. Capital Yin (modern Anyang) Languages Old Chinese Religion Chinese folk religion Government monarchy Historical era Bronze Age Established c. 1600 BC Zhou conquest c. 1046 BC Area 1122 BC est. 1,250,000 km (480,000 sq mi) Preceded by Succeeded by Xia dynasty Zhou dynasty Today part of China",
+      "score_breakdown": {
+        "dense": 0.049995649523592034,
+        "graph": 0.04901625592465202,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:ottoman_empire_0",
+      "passage_index": 6,
+      "title": "Ottoman Empire",
+      "score": 0.04219295141061788,
+      "text": "Ottoman Empire\nOttoman cuisine refers to the cuisine of the capital, Istanbul, and the regional capital cities, where the melting pot of cultures created a common cuisine that most of the population regardless of ethnicity shared. This diverse cuisine was honed in the Imperial Palace's kitchens by chefs brought from certain parts of the Empire to create and experiment with different ingredients. The creations of the Ottoman Palace's kitchens filtered to the population, for instance through Ramadan events, and through the cooking at the Yalıs of the Pashas, and from there on spread to the rest of the population.",
+      "score_breakdown": {
+        "dense": 0.04997857382419916,
+        "graph": 0.04901578602436113,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:kanmu",
+        "score": 0.0588382457644466,
+        "text": "Kanmu",
+        "metadata": {
+          "canonical_name": "Kanmu",
+          "aliases": [
+            "Kanmu"
+          ],
+          "surface_forms": [
+            "Kanmu"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:chang_an",
+        "score": 0.058601340236052166,
+        "text": "Chang'an",
+        "metadata": {
+          "canonical_name": "Chang'an",
+          "aliases": [
+            "Chang'an"
+          ],
+          "surface_forms": [
+            "Chang'an"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:chinese_tang_capital_at_chang_an",
+        "score": 0.04349239081294222,
+        "text": "Chinese Tang capital at Chang'an",
+        "metadata": {
+          "canonical_name": "Chinese Tang capital at Chang'an",
+          "aliases": [
+            "CTCAC",
+            "Chinese Tang capital at Chang'an"
+          ],
+          "surface_forms": [
+            "CTCAC",
+            "Chinese Tang capital at Chang'an"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:heian_ky_ky",
+        "score": 0.0426253334813619,
+        "text": "Heian-ky Ky",
+        "metadata": {
+          "canonical_name": "Heian-ky Ky",
+          "aliases": [
+            "HK",
+            "Heian-ky Ky"
+          ],
+          "surface_forms": [
+            "HK",
+            "Heian-ky Ky"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:heian",
+        "score": 0.041812052756741075,
+        "text": "Heian",
+        "metadata": {
+          "canonical_name": "Heian",
+          "aliases": [
+            "Heian"
+          ],
+          "surface_forms": [
+            "Heian"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:palacio_de_gobierno_nuevo_le_n_0_0_the_palacio_de_gobierno_or_the_government_palace_of_nuevo_le_n_is_a_state_gove",
+        "score": 0.047689539081199,
+        "text": "The Palacio de Gobierno, or the Government Palace of Nuevo León, is a state government building in Monterrey, the capital city of Nuevo León state, in northern Mexico.",
+        "metadata": {
+          "title": "Palacio de Gobierno (Nuevo León)",
+          "chunk_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Palacio de Gobierno",
+              "relation": "is also known as",
+              "tail": "Government Palace of Nuevo Le n"
+            },
+            {
+              "head": "Palacio de Gobierno",
+              "relation": "is located in",
+              "tail": "Monterrey"
+            },
+            {
+              "head": "Monterrey",
+              "relation": "is the capital of",
+              "tail": "Nuevo Le n state"
+            },
+            {
+              "head": "Nuevo Le n state",
+              "relation": "is located in",
+              "tail": "northern Mexico"
+            }
+          ],
+          "entities": [
+            "Palacio de Gobierno",
+            "Government Palace of Nuevo Le n",
+            "Monterrey",
+            "Nuevo Le n state",
+            "northern Mexico"
+          ],
+          "entity_ids": [
+            "entity:government_palace_of_nuevo_le_n",
+            "entity:monterrey",
+            "entity:northern_mexico",
+            "entity:nuevo_le_n_state",
+            "entity:title_anchor_palacio_de_gobierno_nuevo_le_n"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:heian_period_0_3_the_early_heian_period_784_967_continued_nara_culture_the_heian_capital_was_p",
+        "score": 0.03262449923622402,
+        "text": "The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara.",
+        "metadata": {
+          "title": "Heian period",
+          "chunk_id": "chunk:heian_period_0",
+          "sentence_index": 3,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "early Heian period",
+              "relation": "continued",
+              "tail": "Nara culture"
+            },
+            {
+              "head": "Heian capital",
+              "relation": "was patterned on",
+              "tail": "Chinese Tang capital at Chang'an"
+            },
+            {
+              "head": "Nara",
+              "relation": "was patterned on",
+              "tail": "Chinese Tang capital at Chang'an"
+            },
+            {
+              "head": "Heian capital",
+              "relation": "was on a larger scale than",
+              "tail": "Nara"
+            }
+          ],
+          "entities": [
+            "early Heian period",
+            "Nara culture",
+            "Heian capital",
+            "Chinese Tang capital",
+            "Chang'an",
+            "Nara"
+          ],
+          "entity_ids": [
+            "entity:chang_an",
+            "entity:chinese_tang_capital",
+            "entity:chinese_tang_capital_at_chang_an",
+            "entity:early_heian_period",
+            "entity:heian_capital",
+            "entity:nara",
+            "entity:nara_culture"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:han_dynasty_0_1_during_this_period_the_capital_was_at_chang_an_modern_xi_an",
+        "score": 0.02235803707145157,
+        "text": "During this period the capital was at Chang'an (modern Xi'an).",
+        "metadata": {
+          "title": "Han dynasty",
+          "chunk_id": "chunk:han_dynasty_0",
+          "sentence_index": 1,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Chang'an",
+              "relation": "is modern",
+              "tail": "Xi'an"
+            }
+          ],
+          "entities": [
+            "Chang'an",
+            "Xi'an"
+          ],
+          "entity_ids": [
+            "entity:chang_an",
+            "entity:xi_an"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:heian_period_0_1_kanmu_first_tried_to_move_the_capital_to_nagaoka_ky_but_a_series_of_disasters",
+        "score": 0.01926896122357861,
+        "text": "Kanmu first tried to move the capital to Nagaoka-kyō, but a series of disasters befell the city, prompting the emperor to relocate the capital a second time, to Heian.",
+        "metadata": {
+          "title": "Heian period",
+          "chunk_id": "chunk:heian_period_0",
+          "sentence_index": 1,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Kanmu",
+              "relation": "tried to move",
+              "tail": "Nagaoka-ky"
+            }
+          ],
+          "entities": [
+            "Kanmu",
+            "Nagaoka-ky",
+            "Heian"
+          ],
+          "entity_ids": [
+            "entity:heian",
+            "entity:kanmu",
+            "entity:nagaoka_ky"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:heian_period_0",
+        "score": 0.014895300625952868,
+        "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he",
+        "metadata": {
+          "title": "Heian period",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:abandonment_of_nara",
+            "entity:ascendancy_of_d_ky",
+            "entity:buddhist_institutions",
+            "entity:chang_an",
+            "entity:chinese_tang_capital",
+            "entity:chinese_tang_capital_at_chang_an",
+            "entity:d_ky",
+            "entity:during_early_heian_period",
+            "entity:early_heian_period",
+            "entity:emperor_kammu",
+            "entity:emperor_kanmu",
+            "entity:encroaching_secular_power_of_buddhist_institutions",
+            "entity:feudal_period_of_japan",
+            "entity:heian",
+            "entity:heian_capital",
+            "entity:heian_ky_ky",
+            "entity:high_point_in_japanese_culture",
+            "entity:indeed",
+            "entity:japan",
+            "entity:japanese_culture",
+            "entity:kammu",
+            "entity:kanmu",
+            "entity:ky",
+            "entity:nagaoka_ky",
+            "entity:nara",
+            "entity:nara_culture",
+            "entity:taika_taih_reforms",
+            "entity:tang_imperium",
+            "entity:tang_style_administrative_system",
+            "entity:title_anchor_heian_period"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+        "score": 0.008798845532444803,
+        "text": "Palacio de Gobierno (Nuevo León)\nThe Palacio de Gobierno, or the Government Palace of Nuevo León, is a state government building in Monterrey, the capital city of Nuevo León state, in northern Mexico.",
+        "metadata": {
+          "title": "Palacio de Gobierno (Nuevo León)",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:government_palace_of_nuevo_le_n",
+            "entity:monterrey",
+            "entity:northern_mexico",
+            "entity:nuevo_le_n_state",
+            "entity:title_anchor_palacio_de_gobierno_nuevo_le_n"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:han_dynasty_0",
+        "score": 0.004838029457927631,
+        "text": "Han dynasty\nThe period between the foundation of the Han dynasty and Wang Mang's reign is known as the Western Han dynasty (simplified Chinese: 西汉; traditional Chinese: 西漢; pinyin: Xī Hàn) or Former Han dynasty (simplified Chinese: 前汉; traditional Chinese: 前漢; pinyin: Qiánhàn) (206 BC – 9 AD). During this period the capital was at Chang'an (modern Xi'an). From the reign of Guangwu the capital was moved eastward to Luoyang. The era from his reign until the fall of Han is known as the Eastern Han dynasty (simplified Chinese: 东汉; traditional Chinese: 東漢; pinyin: Dōng Hàn) or the Later Han dynasty (simplified Chinese: 后汉; traditional Chinese: 後漢; pinyin: Hòu Hàn) (25–220 AD).",
+        "metadata": {
+          "title": "Han dynasty",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:206_bc",
+            "entity:206_bc_9_ad",
+            "entity:25_220_ad",
+            "entity:9_ad",
+            "entity:chang_an",
+            "entity:eastern_han_dynasty",
+            "entity:fall_of_han",
+            "entity:former_han_dynasty",
+            "entity:from",
+            "entity:guangwu",
+            "entity:later_han_dynasty",
+            "entity:luoyang",
+            "entity:title_anchor_han_dynasty",
+            "entity:wang_mang",
+            "entity:western_han_dynasty",
+            "entity:xi_an"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:modern_history_0",
+        "score": 0.004319952399356505,
+        "text": "Modern history\nThe Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Manchus were formerly known as the Jurchens. When Beijing was captured by Li Zicheng's peasant rebels in 1644, the Chongzhen Emperor, the last Ming emperor, committed suicide. The Manchus then allied with former Ming general Wu Sangui and seized control of Beijing, which became the new capital of the Qing dynasty. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper. Schoppa, the editor of The Columbia Guide to Modern Chinese History argues, \"A date around 1780 as the beginning of modern China is thus closer to what we know today as historical 'reality'. It also allows us to have a better baseline to understand the precipitous decline of the Chinese polity in the nineteenth and twentieth centuries.\"",
+        "metadata": {
+          "title": "Modern history",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:1780_as_the_beginning_of_modern_china_is_closer_to_historical_reality",
+            "entity:beijing",
+            "entity:china_proper",
+            "entity:chinese_polity",
+            "entity:chongzhen_emperor",
+            "entity:columbia_guide_to_modern_chinese_history",
+            "entity:confucian_norms",
+            "entity:fall_of_the_ming",
+            "entity:han_chinese",
+            "entity:jurchens",
+            "entity:last_ming_emperor",
+            "entity:li_zicheng",
+            "entity:li_zicheng_s_peasant_rebels",
+            "entity:manchus",
+            "entity:mancus",
+            "entity:ming",
+            "entity:new_capital_of_qing_dynasty",
+            "entity:qing_dynasty",
+            "entity:schoppa",
+            "entity:traditional_chinese_government",
+            "entity:wu_sangui"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Heian period\nHeian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he\n\nPalacio de Gobierno (Nuevo León)\nPalacio de Gobierno (Nuevo León)\nThe Palacio de Gobierno, or the Government Palace of Nuevo León, is a state government building in Monterrey, the capital city of Nuevo León state, in northern Mexico.\n\nModern history\nModern history\nThe Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Manchus were formerly known as the Jurchens. When Beijing was captured by Li Zicheng's peasant rebels in 1644, the Chongzhen Emperor, the last Ming emperor, committed suicide. The Manchus then allied with former Ming general Wu Sangui and seized control of Beijing, which became the new capital of the Qing dynasty. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper. Schoppa, the editor of The Columbia Guide to Modern Chinese History argues, \"A date around 1780 as the beginning of modern China is thus closer to what we know today as historical 'reality'. It also allows us to have a better baseline to understand the precipitous decline of the Chinese polity in the nineteenth and twentieth centuries.\"\n\nHan dynasty\nHan dynasty\nThe period between the foundation of the Han dynasty and Wang Mang's reign is known as the Western Han dynasty (simplified Chinese: 西汉; traditional Chinese: 西漢; pinyin: Xī Hàn) or Former Han dynasty (simplified Chinese: 前汉; traditional Chinese: 前漢; pinyin: Qiánhàn) (206 BC – 9 AD). During this period the capital was at Chang'an (modern Xi'an). From the reign of Guangwu the capital was moved eastward to Luoyang. The era from his reign until the fall of Han is known as the Eastern Han dynasty (simplified Chinese: 东汉; traditional Chinese: 東漢; pinyin: Dōng Hàn) or the Later Han dynasty (simplified Chinese: 后汉; traditional Chinese: 後漢; pinyin: Hòu Hàn) (25–220 AD).\n\nHeian period\nHeian period\ndifferences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he became recognized as one of Japan's most forceful emperors.\n\nHeian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically.\n\nHeian period\nKanmu first tried to move the capital to Nagaoka-kyō, but a series of disasters befell the city, prompting the emperor to relocate the capital a second time, to Heian.\n\nHeian period\nThe early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara.\n\nHan dynasty\nDuring this period the capital was at Chang'an (modern Xi'an).\n\nShang dynasty\nShang dynasty\nShang 商 Kingdom c. 1600 BC -- c. 1046 BC Remnants of advanced, stratified societies dating back to the Shang period have been found in the Yellow River Valley. Capital Yin (modern Anyang) Languages Old Chinese Religion Chinese folk religion Government monarchy Historical era Bronze Age Established c. 1600 BC Zhou conquest c. 1046 BC Area 1122 BC est. 1,250,000 km (480,000 sq mi) Preceded by Succeeded by Xia dynasty Zhou dynasty Today part of China\n\nYuan dynasty\nYuan dynasty\nKublai's government after 1262 was a compromise between preserving Mongol interests in China and satisfying the demands of his Chinese subjects. He instituted the reforms proposed by his Chinese advisers by centralizing the bureaucracy, expanding the circulation of paper money, and maintaining the traditional monopolies on salt and iron. He restored the Imperial Secretariat and left the local administrative structure of past Chinese dynasties unchanged. However, Kublai rejected plans to revive the Confucian imperial examinations and divided Yuan society into three, later four, classes with the Han Chinese occupying the lowest rank. Kublai's Chinese advisers still wielded significant power in the government, but their official rank was nebulous.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:heian_period_0",
+        "passage_index": 15,
+        "title": "Heian period",
+        "score": 0.08450731272613074,
+        "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he",
+        "score_breakdown": {
+          "dense": 0.05064986106695312,
+          "graph": 0.060807779689269044,
+          "fact": 0.2560503682168387
+        }
+      },
+      {
+        "node_id": "chunk:palacio_de_gobierno_nuevo_le_n_0",
+        "passage_index": 11,
+        "title": "Palacio de Gobierno (Nuevo León)",
+        "score": 0.08159472164766093,
+        "text": "Palacio de Gobierno (Nuevo León)\nThe Palacio de Gobierno, or the Government Palace of Nuevo León, is a state government building in Monterrey, the capital city of Nuevo León state, in northern Mexico.",
+        "score_breakdown": {
+          "dense": 0.04999626511306435,
+          "graph": 0.05293752457843887,
+          "fact": 0.2547701230796259
+        }
+      },
+      {
+        "node_id": "chunk:modern_history_0",
+        "passage_index": 17,
+        "title": "Modern history",
+        "score": 0.07987878322323114,
+        "text": "Modern history\nThe Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Manchus were formerly known as the Jurchens. When Beijing was captured by Li Zicheng's peasant rebels in 1644, the Chongzhen Emperor, the last Ming emperor, committed suicide. The Manchus then allied with former Ming general Wu Sangui and seized control of Beijing, which became the new capital of the Qing dynasty. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper. Schoppa, the editor of The Columbia Guide to Modern Chinese History argues, \"A date around 1780 as the beginning of modern China is thus closer to what we know today as historical 'reality'. It also allows us to have a better baseline to understand the precipitous decline of the Chinese polity in the nineteenth and twentieth centuries.\"",
+        "score_breakdown": {
+          "dense": 0.05008019479743732,
+          "graph": 0.05020901704186438,
+          "fact": 0.24847980648054205
+        }
+      },
+      {
+        "node_id": "chunk:han_dynasty_0",
+        "passage_index": 2,
+        "title": "Han dynasty",
+        "score": 0.07909909012511962,
+        "text": "Han dynasty\nThe period between the foundation of the Han dynasty and Wang Mang's reign is known as the Western Han dynasty (simplified Chinese: 西汉; traditional Chinese: 西漢; pinyin: Xī Hàn) or Former Han dynasty (simplified Chinese: 前汉; traditional Chinese: 前漢; pinyin: Qiánhàn) (206 BC – 9 AD). During this period the capital was at Chang'an (modern Xi'an). From the reign of Guangwu the capital was moved eastward to Luoyang. The era from his reign until the fall of Han is known as the Eastern Han dynasty (simplified Chinese: 东汉; traditional Chinese: 東漢; pinyin: Dōng Hàn) or the Later Han dynasty (simplified Chinese: 后汉; traditional Chinese: 後漢; pinyin: Hòu Hàn) (25–220 AD).",
+        "score_breakdown": {
+          "dense": 0.05026741125179178,
+          "graph": 0.0511568620106171,
+          "fact": 0.24069970222299344
+        }
+      },
+      {
+        "node_id": "chunk:heian_period_1",
+        "passage_index": 15,
+        "title": "Heian period",
+        "score": 0.042442111145354885,
+        "text": "Heian period\ndifferences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he became recognized as one of Japan's most forceful emperors.",
+        "score_breakdown": {
+          "dense": 0.050096918371324996,
+          "graph": 0.049629353470420454,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:t_ng_surname_0",
+        "passage_index": 3,
+        "title": "Táng (surname)",
+        "score": 0.04230658057385199,
+        "text": "Táng (surname)\nTang (; Chinese: 唐, mandarin Pinyin: \"Táng\"; Japanese: 唐/とう/から; Korean: 당/唐; Cantonese : Tong; old Chinese read Dang), is a Chinese surname. The three languages also have the surname with the same character but different pronunciation/romanization. In Korean, it is usually romanized also as Dang. In Japanese, the surname is often romanized as To. In Vietnamese, it is commonly written as Đường (the anglicized variation is Duong, not be confused with Vietnamese surname Dương which is also anglicized as Duong). It is pronounced dhɑng in Middle Chinese, and lhāŋ in Old Chinese.",
+        "score_breakdown": {
+          "dense": 0.0501765117763666,
+          "graph": 0.049031663656167845,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:yuan_dynasty_0",
+        "passage_index": 10,
+        "title": "Yuan dynasty",
+        "score": 0.04227137288823108,
+        "text": "Yuan dynasty\nKublai's government after 1262 was a compromise between preserving Mongol interests in China and satisfying the demands of his Chinese subjects. He instituted the reforms proposed by his Chinese advisers by centralizing the bureaucracy, expanding the circulation of paper money, and maintaining the traditional monopolies on salt and iron. He restored the Imperial Secretariat and left the local administrative structure of past Chinese dynasties unchanged. However, Kublai rejected plans to revive the Confucian imperial examinations and divided Yuan society into three, later four, classes with the Han Chinese occupying the lowest rank. Kublai's Chinese advisers still wielded significant power in the government, but their official rank was nebulous.",
+        "score_breakdown": {
+          "dense": 0.05010646482711236,
+          "graph": 0.049042724111064265,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:edo_period_0",
+        "passage_index": 16,
+        "title": "Edo period",
+        "score": 0.04222049026652881,
+        "text": "Edo period\nAdvanced studies and growing applications of neo-Confucianism contributed to the transition of the social and political order from feudal norms to class- and large-group-oriented practices. The rule of the people or Confucian man was gradually replaced by the rule of law. New laws were developed, and new administrative devices were instituted. A new theory of government and a new vision of society emerged as a means of justifying more comprehensive governance by the bakufu. Each person had a distinct place in society and was expected to work to fulfill his or her mission in life. The people were to be ruled with benevolence by those whose assigned duty it was to rule. Government was all-powerful but responsible and humane. Although the class system was influenced by neo-Confucianism, it was not identical to it. Whereas soldiers and clergy were at the bottom of the hierarchy in the Chinese model, in Japan, some members of these classes constituted the ruling elite.",
+        "score_breakdown": {
+          "dense": 0.05000700790570679,
+          "graph": 0.04905545306130026,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:shang_dynasty_0",
+        "passage_index": 1,
+        "title": "Shang dynasty",
+        "score": 0.04220248401537123,
+        "text": "Shang dynasty\nShang 商 Kingdom c. 1600 BC -- c. 1046 BC Remnants of advanced, stratified societies dating back to the Shang period have been found in the Yellow River Valley. Capital Yin (modern Anyang) Languages Old Chinese Religion Chinese folk religion Government monarchy Historical era Bronze Age Established c. 1600 BC Zhou conquest c. 1046 BC Area 1122 BC est. 1,250,000 km (480,000 sq mi) Preceded by Succeeded by Xia dynasty Zhou dynasty Today part of China",
+        "score_breakdown": {
+          "dense": 0.049995649523592034,
+          "graph": 0.04901625592465202,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:ottoman_empire_0",
+        "passage_index": 6,
+        "title": "Ottoman Empire",
+        "score": 0.04219295141061788,
+        "text": "Ottoman Empire\nOttoman cuisine refers to the cuisine of the capital, Istanbul, and the regional capital cities, where the melting pot of cultures created a common cuisine that most of the population regardless of ethnicity shared. This diverse cuisine was honed in the Imperial Palace's kitchens by chefs brought from certain parts of the Empire to create and experiment with different ingredients. The creations of the Ottoman Palace's kitchens filtered to the population, for instance through Ramadan events, and through the cooking at the Yalıs of the Pashas, and from there on spread to the rest of the population.",
+        "score_breakdown": {
+          "dense": 0.04997857382419916,
+          "graph": 0.04901578602436113,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the name of the Chinese capital that Kanmu modeled his government after?",
+        "resolved_sub_question": "What is the name of the Chinese capital that Kanmu modeled his government after?",
+        "sentence_id": "sentence:heian_period_0_0_when_emperor_kammu_moved_the_capital_to_heian_ky_ky_to_which_remained_the_im",
+        "sentence": "When Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically.",
+        "score": 0.41027008218721916,
+        "source_title": "Heian period",
+        "hop_answer": "Chang'an",
+        "hop_thought": "The passage mentions that the Heian capital was patterned on the Chinese Tang capital at Chang'an.",
+        "hop_raw_response": "The passage mentions that the Heian capital was patterned on the Chinese Tang capital at Chang'an.\nAnswer: Chang'an",
+        "evidence_passages": [
+          {
+            "title": "Heian period",
+            "text": "When Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically."
+          },
+          {
+            "title": "Heian period",
+            "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he"
+          },
+          {
+            "title": "Heian period",
+            "text": "Kanmu first tried to move the capital to Nagaoka-kyō, but a series of disasters befell the city, prompting the emperor to relocate the capital a second time, to Heian."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is an instance of the name of the Chinese capital that Kanmu modeled his government after?",
+        "resolved_sub_question": "What is an instance of the name of the Chinese capital that Kanmu modeled his government after? Context: Chang'an.",
+        "sentence_id": "sentence:heian_period_0_3_the_early_heian_period_784_967_continued_nara_culture_the_heian_capital_was_p",
+        "sentence": "The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara.",
+        "score": 0.4391787511042303,
+        "source_title": "Heian period",
+        "hop_answer": "Chang'an",
+        "hop_thought": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.",
+        "hop_raw_response": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.\nAnswer: Chang'an",
+        "evidence_passages": [
+          {
+            "title": "Heian period",
+            "text": "The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara."
+          },
+          {
+            "title": "Heian period",
+            "text": "Heian period\nWhen Emperor Kammu moved the capital to Heian-kyō (Kyōto), which remained the imperial capital for the next 1,000 years, he did so not only to strengthen imperial authority but also to improve his seat of government geopolitically. Nara was abandoned after only 70 years in part due to the ascendancy of Dōkyō and the encroaching secular power of the Buddhist institutions there. Kyōto had good river access to the sea and could be reached by land routes from the eastern provinces. The early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara. Kammu endeavoured to improve the Tang-style administrative system which was in use. Known as the ritsuryō, this system attempted to recreate the Tang imperium in Japan, despite the \"tremendous differences in the levels of development between the two countries\". Despite the decline of the Taika-Taihō reforms, imperial government was vigorous during the early Heian period. Indeed, Kammu's avoidance of drastic reform decreased the intensity of political struggles, and he"
+          },
+          {
+            "title": "Han dynasty",
+            "text": "During this period the capital was at Chang'an (modern Xi'an)."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the name of the Chinese capital that Kanmu modeled his government after? => Chang'an (source: Heian period)\n2. What is an instance of the name of the Chinese capital that Kanmu modeled his government after? => Chang'an (source: Heian period)\n\nFact hints:\n- Heian capital was patterned on Chinese Tang capital at Chang'an\n- Chang'an is modern Xi'an\n\nWikipedia Title: Heian period\nThe early Heian period (784–967) continued Nara culture; the Heian capital was patterned on the Chinese Tang capital at Chang'an, as was Nara, but on a larger scale than Nara.\n\nWikipedia Title: Han dynasty\nDuring this period the capital was at Chang'an (modern Xi'an).\n\nWikipedia Title: Modern history\nModern history The Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper.\n\nWikipedia Title: Shang dynasty\nCapital Yin (modern Anyang) Languages Old Chinese Religion Chinese folk religion Government monarchy Historical era Bronze Age Established c. 1600 BC -- c.\n\nWikipedia Title: Yuan dynasty\nYuan dynasty Kublai's government after 1262 was a compromise between preserving Mongol interests in China and satisfying the demands of his Chinese subjects. He instituted the reforms proposed by his Chinese advisers by centralizing the bureaucracy, expanding the circulation of paper money, and maintaining the traditional monopolies on salt and iron.\n\nQuestion: The name of the Chinese capitol Kanmu modeled his government after is an instance of what?\nDraft Answer: Chang'an\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.",
+  "predicted_answer": "Chang'an",
+  "qa_raw_response": "The context provides the name of the Chinese capital that Emperor Kammu modeled his government after, which is Chang'an.\nAnswer: Chang'an"
+}

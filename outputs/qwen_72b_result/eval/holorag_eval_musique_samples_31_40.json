@@ -3,13 +3,13 @@
     "num_examples": 10,
     "passage_recall_at_5": 0.95,
     "passage_hit_at_5": 1.0,
-    "context_contains_answer_rate": 1.0,
-    "answer_match_rate": 1.0,
-    "avg_qa_context_words": 641.3,
+    "context_contains_answer_rate": 0.8,
+    "answer_match_rate": 0.9,
+    "avg_qa_context_words": 111.8,
     "avg_ranked_facts": 6.1,
     "avg_reasoning_chain_count": 2.1,
-    "qa_exact_match": 0.7,
-    "qa_f1": 0.7286,
+    "qa_exact_match": 0.6,
+    "qa_f1": 0.62,
     "qa_non_empty_prediction_rate": 1.0
   },
   "settings": {
@@ -54,8 +54,8 @@
       "answer_match_candidates": [
         "Derrty Entertainment"
       ],
-      "qa_context_words": 722,
-      "qa_context_chars": 4377,
+      "qa_context_words": 111,
+      "qa_context_chars": 661,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
       "bridge_entities": [
@@ -89,23 +89,15 @@
           "resolved_sub_question": "Who is the performer of Almost Made Ya?",
           "sentence_id": "sentence:almost_made_ya_0_0_almost_made_ya_is_an_r_b_song_by_american_duo_ali_gipp_for_the_debut_album",
           "sentence": "Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007).",
-          "score": 0.4889138032283783,
+          "score": 0.4889610481348038,
           "source_title": "Almost Made Ya",
           "hop_answer": "Ali & Gipp",
-          "hop_thought": "The performers of \"Almost Made Ya\" are Ali & Gipp, as stated in the provided evidence.",
-          "hop_raw_response": "The performers of \"Almost Made Ya\" are Ali & Gipp, as stated in the provided evidence.\nAnswer: Ali & Gipp",
+          "hop_thought": "The performers of \"Almost Made Ya\" are the American duo Ali & Gipp.",
+          "hop_raw_response": "The performers of \"Almost Made Ya\" are the American duo Ali & Gipp.\nAnswer: Ali & Gipp",
           "evidence_passages": [
             {
               "title": "Almost Made Ya",
               "text": "Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007)."
-            },
-            {
-              "title": "Almost Made Ya",
-              "text": "Almost Made Ya\nAlmost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007). The song samples Brandy's \"Almost Doesn't Count\". The song is about a relationship between a female and a male; LeToya sings that she is \"almost done\" with her man, that \"they\" need improve the relationship, while the men say about the situation they've been passing. The song leaked on April 13, 2007 and officially released (for commercial purposes) on Sunday, June 13, 2007. The song was written by LeToya Luckett, Jermaine Dupri, Ali Vaskabi-Waski-Jones, Cameron Gipp, Shelly Peiken and Guy Roche"
-            },
-            {
-              "title": "Kinfolk (album)",
-              "text": "The fourth and final single is \"Almost Made Ya\" featuring LeToya Luckett."
             }
           ]
         },
@@ -114,23 +106,15 @@
           "resolved_sub_question": "What record label is this performer signed to? Context: Ali & Gipp.",
           "sentence_id": "sentence:almost_made_ya_0_0_almost_made_ya_is_an_r_b_song_by_american_duo_ali_gipp_for_the_debut_album",
           "sentence": "Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007).",
-          "score": 0.4066075810061561,
+          "score": 0.4066548259125816,
           "source_title": "Almost Made Ya",
           "hop_answer": "Unknown",
-          "hop_thought": "The context indicates that Ali & Gipp released their album \"Kinfolk\" through Derrty Entertainment and Universal Records.",
-          "hop_raw_response": "The context indicates that Ali & Gipp released their album \"Kinfolk\" through Derrty Entertainment and Universal Records.\nAnswer: Derrty Entertainment and Universal Records",
+          "hop_thought": "The context provided does not contain information about the specific record label that Ali & Gipp are signed to.",
+          "hop_raw_response": "The context provided does not contain information about the specific record label that Ali & Gipp are signed to.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Almost Made Ya",
               "text": "Almost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007)."
-            },
-            {
-              "title": "Almost Made Ya",
-              "text": "Almost Made Ya\nAlmost Made Ya is an R&B song by American duo Ali & Gipp, for the debut album, \"Kinfolk\" (2007). The song samples Brandy's \"Almost Doesn't Count\". The song is about a relationship between a female and a male; LeToya sings that she is \"almost done\" with her man, that \"they\" need improve the relationship, while the men say about the situation they've been passing. The song leaked on April 13, 2007 and officially released (for commercial purposes) on Sunday, June 13, 2007. The song was written by LeToya Luckett, Jermaine Dupri, Ali Vaskabi-Waski-Jones, Cameron Gipp, Shelly Peiken and Guy Roche"
-            },
-            {
-              "title": "Kinfolk (album)",
-              "text": "Kinfolk is the debut and only album by American rap duo Ali & Gipp, released on August 14, 2007, through Derrty Entertainment and Universal Records."
             }
           ]
         }
@@ -139,51 +123,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Almost Made Ya",
-          "score": 0.08293446016886571,
+          "score": 0.08293449453554187,
           "words": 103,
           "score_breakdown": {
-            "dense": 0.050977975320680824,
-            "graph": 0.055065434591765015,
-            "fact": 0.255846289099745
+            "dense": 0.05097802613231338,
+            "graph": 0.05506545567940322,
+            "fact": 0.2558462897263237
           }
         },
         {
           "title": "It's What's Happenin'",
-          "score": 0.08153734815410356,
+          "score": 0.08153724640874248,
           "words": 64,
           "score_breakdown": {
-            "dense": 0.049796561261818216,
-            "graph": 0.05232087274533758,
-            "fact": 0.25635318424334846
+            "dense": 0.049796522765349654,
+            "graph": 0.05232060411398033,
+            "fact": 0.2563531843573738
           }
         },
         {
           "title": "Kinfolk (album)",
-          "score": 0.08113888662230259,
+          "score": 0.08113906156317269,
           "words": 74,
           "score_breakdown": {
-            "dense": 0.05040909109194248,
-            "graph": 0.058534439162182955,
-            "fact": 0.23902369848719557
+            "dense": 0.050409396826518856,
+            "graph": 0.058534461921441704,
+            "fact": 0.23902369821436534
           }
         },
         {
           "title": "More Blues and the Abstract Truth",
-          "score": 0.08040841498950699,
+          "score": 0.08040845267522431,
           "words": 33,
           "score_breakdown": {
-            "dense": 0.04987291704142696,
-            "graph": 0.052205954637551656,
-            "fact": 0.2487768281697111
+            "dense": 0.04987299371623777,
+            "graph": 0.05220593992000992,
+            "fact": 0.24877682770193715
           }
         },
         {
           "title": "Crystal Kay",
-          "score": 0.04235565967637973,
+          "score": 0.04235564309446033,
           "words": 80,
           "score_breakdown": {
-            "dense": 0.05036532662768223,
-            "graph": 0.04884910010384833,
+            "dense": 0.05036528617463495,
+            "graph": 0.04884911899470367,
             "fact": 0.0
           }
         }
@@ -215,20 +199,17 @@
       "matched_support_titles": [
         "Hannibal and Scipio"
       ],
-      "context_contains_answer": 1.0,
-      "answer_match_flag": true,
-      "answer_match_candidates": [
-        "Exeter College"
-      ],
-      "qa_context_words": 763,
-      "qa_context_chars": 4574,
+      "context_contains_answer": 0.0,
+      "answer_match_flag": false,
+      "answer_match_candidates": [],
+      "qa_context_words": 150,
+      "qa_context_chars": 939,
       "ranked_passages_count": 10,
       "ranked_facts_count": 4,
       "bridge_entities": [
         "Hannibal and Scipio",
         "Caroline era",
-        "Thomas Nabbes",
-        "Silius Italicus"
+        "Thomas Nabbes"
       ],
       "query_entities": [
         "Hannibal",
@@ -272,46 +253,30 @@
           "sentence": "Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus.",
           "score": 0.5712024,
           "source_title": "Punica (poem)",
-          "hop_answer": "Silius Italicus",
-          "hop_thought": "The work 'Hannibal and Scipio' is actually part of the epic poem \"Punica\" by Silius Italicus, which covers the Second Punic War and the conflict between these two generals.",
-          "hop_raw_response": "The work 'Hannibal and Scipio' is actually part of the epic poem \"Punica\" by Silius Italicus, which covers the Second Punic War and the conflict between these two generals.\nAnswer: Silius Italicus",
+          "hop_answer": "Unknown",
+          "hop_thought": "The question asks for the author of 'Hannibal and Scipio', but the evidence provided only mentions a poem titled 'Punica' that covers the theme of the Second Punic War and the conflict between Hannibal and Scipio Africanus. There is no specific mention of a work called 'Hannibal and Scipio'.",
+          "hop_raw_response": "The question asks for the author of 'Hannibal and Scipio', but the evidence provided only mentions a poem titled 'Punica' that covers the theme of the Second Punic War and the conflict between Hannibal and Scipio Africanus. There is no specific mention of a work called 'Hannibal and Scipio'.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Punica (poem)",
               "text": "Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus."
-            },
-            {
-              "title": "Punica (poem)",
-              "text": "Punica (poem)\nThe Punica is a Latin epic poem in seventeen books in dactylic hexameter written by Silius Italicus (c. 28 – c. 103 AD) comprising some twelve thousand lines (12,202, to be exact, if one includes a probably spurious passage in book 8). It is the longest surviving Latin poem from antiquity. Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus. The poem was re-discovered in either 1416 or 1417 by the Italian humanist and scholar Poggio Bracciolini."
-            },
-            {
-              "title": "Scipio Africanus",
-              "text": "In 211 BC, both Scipio's father, Publius Scipio, and uncle, Gnaeus Cornelius Scipio Calvus, were killed at the Battle of the Upper Baetis in Spain against Hannibal's brother, Hasdrubal Barca."
             }
           ]
         },
         {
           "sub_question": "Where was this author educated?",
-          "resolved_sub_question": "Where was this author educated? Context: Silius Italicus.",
+          "resolved_sub_question": "Where was this author educated?",
           "sentence_id": "sentence:punica_poem_0_4_its_theme_is_the_second_punic_war_and_the_conflict_between_the_two_great_general",
           "sentence": "Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus.",
           "score": 0.39880000000000004,
           "source_title": "Punica (poem)",
           "hop_answer": "Unknown",
-          "hop_thought": "The provided context does not contain information about where Silius Italicus was educated.",
-          "hop_raw_response": "The provided context does not contain information about where Silius Italicus was educated.\nAnswer: Unknown",
+          "hop_thought": "The question asks about the education of the author of 'Hannibal and Scipio', but the provided evidence does not contain information about the author's education.",
+          "hop_raw_response": "The question asks about the education of the author of 'Hannibal and Scipio', but the provided evidence does not contain information about the author's education.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Punica (poem)",
               "text": "Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus."
-            },
-            {
-              "title": "Punica (poem)",
-              "text": "Punica (poem)\nThe Punica is a Latin epic poem in seventeen books in dactylic hexameter written by Silius Italicus (c. 28 – c. 103 AD) comprising some twelve thousand lines (12,202, to be exact, if one includes a probably spurious passage in book 8). It is the longest surviving Latin poem from antiquity. Its theme is the Second Punic War and the conflict between the two great generals Hannibal and Scipio Africanus. The poem was re-discovered in either 1416 or 1417 by the Italian humanist and scholar Poggio Bracciolini."
-            },
-            {
-              "title": "Punica (poem)",
-              "text": "The Punica is a Latin epic poem in seventeen books in dactylic hexameter written by Silius Italicus (c."
             }
           ]
         }
@@ -320,51 +285,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Hannibal and Scipio",
-          "score": 0.12148579046971242,
+          "score": 0.12148563455060077,
           "words": 62,
           "score_breakdown": {
-            "dense": 0.050463436099553886,
-            "graph": 0.05564982332640006,
-            "fact": 0.5135730241135851
+            "dense": 0.05046333274945855,
+            "graph": 0.055649542690377585,
+            "fact": 0.5135729248752353
           }
         },
         {
           "title": "Pangasinan School of Arts and Trades",
-          "score": 0.11653507601100442,
+          "score": 0.11653500202247348,
           "words": 62,
           "score_breakdown": {
-            "dense": 0.04978559287871328,
-            "graph": 0.05396317848249966,
-            "fact": 0.48642697588641487
+            "dense": 0.04978562898408325,
+            "graph": 0.0539628160417099,
+            "fact": 0.48642707512476474
           }
         },
         {
           "title": "Scipio Africanus",
-          "score": 0.04347997652909352,
+          "score": 0.04348131185846824,
           "words": 162,
           "score_breakdown": {
-            "dense": 0.05016580753465039,
-            "graph": 0.05296260795011934,
+            "dense": 0.05016568518938105,
+            "graph": 0.05296728334769556,
             "fact": 0.0
           }
         },
         {
           "title": "Battle of Cissa",
-          "score": 0.04261002744530375,
+          "score": 0.042604342144874977,
           "words": 86,
           "score_breakdown": {
-            "dense": 0.05001055594533352,
-            "graph": 0.050347405584567705,
+            "dense": 0.050010754987817034,
+            "graph": 0.05032808967191869,
             "fact": 0.0
           }
         },
         {
           "title": "Punica (poem)",
-          "score": 0.04258371176978157,
+          "score": 0.04257578890890338,
           "words": 89,
           "score_breakdown": {
-            "dense": 0.050088559565404145,
-            "graph": 0.0501166800293643,
+            "dense": 0.05008862327844391,
+            "graph": 0.05009015368586409,
             "fact": 0.0
           }
         }
@@ -392,7 +357,7 @@
         "Hylestad",
         "Hughesville, Maryland",
         "Southern California Edison",
-        "WaterColor, Florida"
+        "Elk Ridge (Maryland)"
       ],
       "matched_support_titles": [
         "Hughesville, Maryland",
@@ -404,13 +369,12 @@
         "Charles County",
         "Charles County, Maryland"
       ],
-      "qa_context_words": 433,
-      "qa_context_chars": 2978,
+      "qa_context_words": 84,
+      "qa_context_chars": 591,
       "ranked_passages_count": 10,
       "ranked_facts_count": 3,
       "bridge_entities": [
-        "Hughesville Maryland",
-        "Charles County"
+        "Hughesville Maryland"
       ],
       "query_entities": [
         "Southern Maryland Electric Cooperative"
@@ -442,20 +406,12 @@
           "score": 0.7700772952380954,
           "source_title": "Southern Maryland Electric Cooperative",
           "hop_answer": "Hughesville, Maryland",
-          "hop_thought": "The evidence states that Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
-          "hop_raw_response": "The evidence states that Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
+          "hop_thought": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.",
+          "hop_raw_response": "The evidence directly states that the Southern Maryland Electric Cooperative (SMECO) is headquartered in Hughesville, Maryland.\nAnswer: Hughesville, Maryland",
           "evidence_passages": [
             {
               "title": "Southern Maryland Electric Cooperative",
               "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-            },
-            {
-              "title": "Southern Maryland Electric Cooperative",
-              "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-            },
-            {
-              "title": "Hughesville, Maryland",
-              "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
             }
           ]
         },
@@ -466,21 +422,13 @@
           "sentence": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland.",
           "score": 0.6573714285714287,
           "source_title": "Southern Maryland Electric Cooperative",
-          "hop_answer": "Charles County",
-          "hop_thought": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.",
-          "hop_raw_response": "The headquarters of Southern Maryland Electric Cooperative is in Hughesville, Maryland, and Hughesville is a census-designated place in Charles County, Maryland.\nAnswer: Charles County",
+          "hop_answer": "Unknown",
+          "hop_thought": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.",
+          "hop_raw_response": "Hughesville is mentioned as the headquarters location for SMECO, but the specific county where Hughesville is located is not provided in the given context.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Southern Maryland Electric Cooperative",
               "text": "The Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland."
-            },
-            {
-              "title": "Southern Maryland Electric Cooperative",
-              "text": "Southern Maryland Electric Cooperative\nThe Southern Maryland Electric Cooperative (SMECO) is an electric distribution cooperative which is headquartered in Hughesville, Maryland. SMECO serves approximately 161,000 customers in Calvert, Charles, Prince George's, and St. Mary's counties of southern Maryland. Under its rules as a nonprofit cooperative, SMECO passes on its costs to its customer-members without markup or profit."
-            },
-            {
-              "title": "Hughesville, Maryland",
-              "text": "Hughesville is a census-designated place (CDP) in Charles County, Maryland, United States."
             }
           ]
         }
@@ -489,51 +437,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Southern Maryland Electric Cooperative",
-          "score": 0.1002426485185555,
+          "score": 0.1001532042001935,
           "words": 57,
           "score_breakdown": {
-            "dense": 0.0516951976104398,
-            "graph": 0.06118924242702909,
-            "fact": 0.3563567806980325
+            "dense": 0.05169574915577908,
+            "graph": 0.06089008534893114,
+            "fact": 0.35635677706557106
           }
         },
         {
           "title": "Hylestad",
-          "score": 0.09246011966671527,
+          "score": 0.09242639771838643,
           "words": 54,
           "score_breakdown": {
-            "dense": 0.049762000438051804,
-            "graph": 0.053648050753619655,
-            "fact": 0.32664402799800585
+            "dense": 0.049762068010011894,
+            "graph": 0.0535355193692872,
+            "fact": 0.32664403001395825
           }
         },
         {
           "title": "Hughesville, Maryland",
-          "score": 0.09132896463047357,
+          "score": 0.09129999618789017,
           "words": 35,
           "score_breakdown": {
-            "dense": 0.05062027391410321,
-            "graph": 0.053126450940408625,
-            "fact": 0.31699919130396154
+            "dense": 0.05061986320518988,
+            "graph": 0.053030641623217085,
+            "fact": 0.31699919292047074
           }
         },
         {
           "title": "Southern California Edison",
-          "score": 0.04245854930692182,
+          "score": 0.04246747466891422,
           "words": 92,
           "score_breakdown": {
-            "dense": 0.050448649704107076,
-            "graph": 0.04903930656554309,
+            "dense": 0.05044856727037368,
+            "graph": 0.04906920890069565,
             "fact": 0.0
           }
         },
         {
-          "title": "WaterColor, Florida",
-          "score": 0.042220727197604474,
-          "words": 60,
+          "title": "Elk Ridge (Maryland)",
+          "score": 0.042221213841904706,
+          "words": 85,
           "score_breakdown": {
-            "dense": 0.04988430401399424,
-            "graph": 0.049281199966358796,
+            "dense": 0.05005456235930322,
+            "graph": 0.0489706818142931,
             "fact": 0.0
           }
         }
@@ -571,14 +519,13 @@
       "answer_match_candidates": [
         "Chynna Phillips"
       ],
-      "qa_context_words": 524,
-      "qa_context_chars": 3216,
+      "qa_context_words": 150,
+      "qa_context_chars": 918,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
       "bridge_entities": [
         "Michelle Phillips",
-        "February 1977",
-        "Chynna Phillips"
+        "February 1977"
       ],
       "query_entities": [
         "Victim of Romance"
@@ -610,20 +557,12 @@
           "score": 0.5406680000000001,
           "source_title": "Victim of Romance",
           "hop_answer": "Michelle Phillips",
-          "hop_thought": "The text states that \"Victim of Romance\" is Michelle Phillips' first and only solo album.",
-          "hop_raw_response": "The text states that \"Victim of Romance\" is Michelle Phillips' first and only solo album.\nAnswer: Michelle Phillips",
+          "hop_thought": "The performer of \"Victim of Romance\" is Michelle Phillips, as it is her first and only solo album.",
+          "hop_raw_response": "The performer of \"Victim of Romance\" is Michelle Phillips, as it is her first and only solo album.\nAnswer: Michelle Phillips",
           "evidence_passages": [
             {
               "title": "Victim of Romance",
               "text": "Victim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music)."
-            },
-            {
-              "title": "Victim of Romance",
-              "text": "Victim of Romance\nVictim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music). The record was unsuccessful and Phillips (previously with The Mamas & the Papas) then favored her acting career. The front cover photography was by Terry O'Neill."
-            },
-            {
-              "title": "Amulya",
-              "text": "As Kushi, she was paired opposite Suraj (played by Suraj Gowda), in the family drama-romance film, who she ends up marrying confronting certain familial issues and upon the wishes of their respective parents."
             }
           ]
         },
@@ -634,21 +573,13 @@
           "sentence": "Victim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music).",
           "score": 0.5019555555555556,
           "source_title": "Victim of Romance",
-          "hop_answer": "Chynna Phillips",
-          "hop_thought": "Michelle Phillips is the mother of Chynna Phillips, who is part of the vocal group Wilson Phillips.",
-          "hop_raw_response": "Michelle Phillips is the mother of Chynna Phillips, who is part of the vocal group Wilson Phillips.\nAnswer: Chynna Phillips",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context provided does not contain information about Michelle Phillips' children.",
+          "hop_raw_response": "The context provided does not contain information about Michelle Phillips' children.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Victim of Romance",
               "text": "Victim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music)."
-            },
-            {
-              "title": "Victim of Romance",
-              "text": "Victim of Romance\nVictim of Romance is singer and songwriter Michelle Phillips' first and only solo album, and was released in February 1977 (see 1977 in music). The record was unsuccessful and Phillips (previously with The Mamas & the Papas) then favored her acting career. The front cover photography was by Terry O'Neill."
-            },
-            {
-              "title": "Wilson Phillips",
-              "text": "Wilson Phillips is an American vocal group consisting of Carnie Wilson, Wendy Wilson, and Chynna Phillips, the daughters, respectively, of Brian Wilson of The Beach Boys and of John and Michelle Phillips of The Mamas & the Papas."
             }
           ]
         }
@@ -657,51 +588,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Victim of Romance",
-          "score": 0.08306058954243595,
+          "score": 0.08306032557296301,
           "words": 53,
           "score_breakdown": {
-            "dense": 0.05077445222353025,
-            "graph": 0.05275946115473127,
-            "fact": 0.26204534982049954
+            "dense": 0.050774434783555436,
+            "graph": 0.05275854716124152,
+            "fact": 0.2620454819575671
           }
         },
         {
           "title": "Mary's Boy Child",
-          "score": 0.08047208409385595,
+          "score": 0.08047226506304236,
           "words": 23,
           "score_breakdown": {
-            "dense": 0.04996182743839235,
-            "graph": 0.05138835042805706,
-            "fact": 0.2505104924954869
+            "dense": 0.04996186495148674,
+            "graph": 0.05138890603004045,
+            "fact": 0.25051045020475016
           }
         },
         {
           "title": "Medical Center of the Rockies",
-          "score": 0.07968711001946335,
+          "score": 0.07968729433912787,
           "words": 74,
           "score_breakdown": {
-            "dense": 0.0497911826850722,
-            "graph": 0.051565159376084,
-            "fact": 0.24554941153232293
+            "dense": 0.04979131534429815,
+            "graph": 0.051565564222579,
+            "fact": 0.2455493442199346
           }
         },
         {
           "title": "Wilson Phillips",
-          "score": 0.07939538929282375,
+          "score": 0.07939536037000335,
           "words": 40,
           "score_breakdown": {
-            "dense": 0.04996470112253506,
-            "graph": 0.05210197250891952,
-            "fact": 0.2418947461516907
+            "dense": 0.049964580247403925,
+            "graph": 0.0521021089708965,
+            "fact": 0.24189472361774822
           }
         },
         {
           "title": "Romance on Film, Romance on Broadway",
-          "score": 0.041603636189466046,
+          "score": 0.041603472504019856,
           "words": 37,
           "score_breakdown": {
-            "dense": 0.05022681433855865,
-            "graph": 0.04659629434419595,
+            "dense": 0.05022658932161181,
+            "graph": 0.046596161257111184,
             "fact": 0.0
           }
         }
@@ -741,15 +672,14 @@
         "McDonald County",
         "McDonald County, Missouri"
       ],
-      "qa_context_words": 638,
-      "qa_context_chars": 3982,
+      "qa_context_words": 120,
+      "qa_context_chars": 724,
       "ranked_passages_count": 10,
       "ranked_facts_count": 6,
       "bridge_entities": [
         "Southwest City Missouri",
         "Nashville Tennessee",
-        "May 4 1948",
-        "McDonald County"
+        "May 4 1948"
       ],
       "query_entities": [
         "Tim Dubois"
@@ -778,7 +708,7 @@
           "resolved_sub_question": "Where was Tim Dubois born?",
           "sentence_id": "sentence:tim_dubois_0_0_tim_dubois_born_may_4_1948_in_southwest_city_missouri_is_a_nashville_tennes",
           "sentence": "Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive.",
-          "score": 0.5562658360197885,
+          "score": 0.5562819729044778,
           "source_title": "Tim DuBois",
           "hop_answer": "Southwest City, Missouri",
           "hop_thought": "The evidence states that Tim DuBois was born in Southwest City, Missouri.",
@@ -787,14 +717,6 @@
             {
               "title": "Tim DuBois",
               "text": "Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive."
-            },
-            {
-              "title": "Tim DuBois",
-              "text": "Tim DuBois\nTim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive. He attended Oklahoma State University and received a B.A. and M.A. in Accounting and in 2016 he was awarded an honorary PHD in Accounting. He then entered into the music business and has taken part in multiple aspects of the industry including songwriting, record labels, management, and production. DuBois has been recognized for numerous honors and awards for his contributions to the music industry."
-            },
-            {
-              "title": "When I Call Your Name (Vince Gill song)",
-              "text": "It was written by Gill and Tim DuBois."
             }
           ]
         },
@@ -803,23 +725,15 @@
           "resolved_sub_question": "What county is the birthplace of Tim Dubois located in? Context: Southwest City, Missouri.",
           "sentence_id": "sentence:tim_dubois_0_0_tim_dubois_born_may_4_1948_in_southwest_city_missouri_is_a_nashville_tennes",
           "sentence": "Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive.",
-          "score": 0.5040243346654719,
+          "score": 0.504048469864065,
           "source_title": "Tim DuBois",
-          "hop_answer": "McDonald County",
-          "hop_thought": "The birthplace of Tim DuBois is Southwest City, Missouri, and Southwest City is located in McDonald County, Missouri.",
-          "hop_raw_response": "The birthplace of Tim DuBois is Southwest City, Missouri, and Southwest City is located in McDonald County, Missouri.\nAnswer: McDonald County",
+          "hop_answer": "Unknown",
+          "hop_thought": "To determine the county where Southwest City, Missouri is located, we need specific information about the location of Southwest City within Missouri. The given context does not provide this detail.",
+          "hop_raw_response": "To determine the county where Southwest City, Missouri is located, we need specific information about the location of Southwest City within Missouri. The given context does not provide this detail.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Tim DuBois",
               "text": "Tim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive."
-            },
-            {
-              "title": "Tim DuBois",
-              "text": "Tim DuBois\nTim DuBois (born May 4, 1948 in Southwest City, Missouri) is a Nashville, Tennessee-based music executive. He attended Oklahoma State University and received a B.A. and M.A. in Accounting and in 2016 he was awarded an honorary PHD in Accounting. He then entered into the music business and has taken part in multiple aspects of the industry including songwriting, record labels, management, and production. DuBois has been recognized for numerous honors and awards for his contributions to the music industry."
-            },
-            {
-              "title": "Southwest City, Missouri",
-              "text": "Southwest City is a city in McDonald County, Missouri, United States."
             }
           ]
         }
@@ -828,51 +742,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Tim DuBois",
-          "score": 0.09960160537197824,
+          "score": 0.09960236490928945,
           "words": 82,
           "score_breakdown": {
-            "dense": 0.051034330063212126,
-            "graph": 0.051061300758060084,
-            "fact": 0.3747622240652903
+            "dense": 0.051035460724260365,
+            "graph": 0.05106181812852006,
+            "fact": 0.3747621071492683
           }
         },
         {
           "title": "Southwest City, Missouri",
-          "score": 0.08955703086995076,
+          "score": 0.08955692699765253,
           "words": 51,
           "score_breakdown": {
-            "dense": 0.05001178235618424,
-            "graph": 0.04996718398918129,
-            "fact": 0.3137359691819669
+            "dense": 0.050011772820748514,
+            "graph": 0.04996683129475396,
+            "fact": 0.31373601705209764
           }
         },
         {
           "title": "Palazzo Corner Spinelli",
-          "score": 0.08907880839243584,
+          "score": 0.08907874468245355,
           "words": 35,
           "score_breakdown": {
-            "dense": 0.04998816651053698,
-            "graph": 0.04953348599576365,
-            "fact": 0.31150180675274275
+            "dense": 0.04998822915826994,
+            "graph": 0.04953312425203327,
+            "fact": 0.3115018757986341
           }
         },
         {
           "title": "When I Call Your Name (Vince Gill song)",
-          "score": 0.04134942856092101,
+          "score": 0.041349511378648424,
           "words": 103,
           "score_breakdown": {
-            "dense": 0.050089500015193855,
-            "graph": 0.046000678508547964,
+            "dense": 0.05008960816647906,
+            "graph": 0.04600075629028314,
             "fact": 0.0
           }
         },
         {
           "title": "Dubois (surname)",
-          "score": 0.04108530919508452,
+          "score": 0.041085376291505944,
           "words": 24,
           "score_breakdown": {
-            "dense": 0.050321622305317164,
-            "graph": 0.044694723090533586,
+            "dense": 0.05032172169675974,
+            "graph": 0.04469476452762695,
             "fact": 0.0
           }
         }
@@ -885,9 +799,9 @@
       "gold_answers": [
         "Asian Man Records"
       ],
-      "predicted_answer": "Asian Man Records",
-      "qa_exact_match": 1.0,
-      "qa_f1": 1.0,
+      "predicted_answer": "Unknown",
+      "qa_exact_match": 0.0,
+      "qa_f1": 0.0,
       "passage_recall_at_5": 1.0,
       "passage_hit_at_5": 1.0,
       "support_titles": [
@@ -905,18 +819,16 @@
         "Asian Man Records",
         "The Bruce Lee Band"
       ],
-      "context_contains_answer": 1.0,
+      "context_contains_answer": 0.0,
       "answer_match_flag": true,
       "answer_match_candidates": [
         "Asian Man Records"
       ],
-      "qa_context_words": 481,
-      "qa_context_chars": 2680,
+      "qa_context_words": 75,
+      "qa_context_chars": 405,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
-      "bridge_entities": [
-        "Mike Park Less Than Jake Rx Bandits"
-      ],
+      "bridge_entities": [],
       "query_entities": [
         "The Bruce Lee Band"
       ],
@@ -944,45 +856,29 @@
           "resolved_sub_question": "Who is part of The Bruce Lee Band?",
           "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
           "sentence": "The Bruce Lee Band (or B.",
-          "score": 0.48192712017567957,
+          "score": 0.4819462053922018,
           "source_title": "The Bruce Lee Band",
-          "hop_answer": "Mike Park, Less Than Jake, Rx Bandits",
-          "hop_thought": "The evidence states that Mike Park and his backing band, which has included members from Less Than Jake and the Rx Bandits, are part of The Bruce Lee Band.",
-          "hop_raw_response": "The evidence states that Mike Park and his backing band, which has included members from Less Than Jake and the Rx Bandits, are part of The Bruce Lee Band.\nAnswer: Mike Park, Less Than Jake, Rx Bandits",
+          "hop_answer": "Unknown",
+          "hop_thought": "The evidence provided does not contain any information about the members of The Bruce Lee Band.",
+          "hop_raw_response": "The evidence provided does not contain any information about the members of The Bruce Lee Band.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "The Bruce Lee Band",
               "text": "The Bruce Lee Band (or B."
-            },
-            {
-              "title": "The Bruce Lee Band",
-              "text": "The Bruce Lee Band\nThe Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits."
-            },
-            {
-              "title": "Birth of the Dragon",
-              "text": "Xia Yu as Wong Jack Man, the Tai chi and Northern Shaolin Master who Bruce Lee fights."
             }
           ]
         },
         {
           "sub_question": "What record label did this person start?",
-          "resolved_sub_question": "What record label did this person start? Context: Mike Park, Less Than Jake, Rx Bandits.",
-          "sentence_id": "sentence:the_bruce_lee_band_0_1_lee_band_is_the_name_given_to_the_releases_of_mike_park_and_his_backing_band_wh",
-          "sentence": "Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits.",
-          "score": 0.5920000000000001,
+          "resolved_sub_question": "What record label did this person start?",
+          "sentence_id": "sentence:the_bruce_lee_band_0_0_the_bruce_lee_band_or_b",
+          "sentence": "The Bruce Lee Band (or B.",
+          "score": 0.30240000000000006,
           "source_title": "The Bruce Lee Band",
           "hop_answer": "Unknown",
-          "hop_thought": "The context provided does not contain information about a record label started by Mike Park or any other member of The Bruce Lee Band.",
-          "hop_raw_response": "The context provided does not contain information about a record label started by Mike Park or any other member of The Bruce Lee Band.\nAnswer: Unknown",
+          "hop_thought": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.",
+          "hop_raw_response": "The question asks about a record label started by a person, but the evidence provided only mentions the name of the band, The Bruce Lee Band, and no information about any record label associated with it or its members.\nAnswer: Unknown",
           "evidence_passages": [
-            {
-              "title": "The Bruce Lee Band",
-              "text": "Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits."
-            },
-            {
-              "title": "The Bruce Lee Band",
-              "text": "The Bruce Lee Band\nThe Bruce Lee Band (or B. Lee Band) is the name given to the releases of Mike Park and his backing band which has so far included Less Than Jake and the Rx Bandits."
-            },
             {
               "title": "The Bruce Lee Band",
               "text": "The Bruce Lee Band (or B."
@@ -994,51 +890,51 @@
       "retrieved_passages_top5": [
         {
           "title": "All the Years",
-          "score": 0.08253134607179427,
+          "score": 0.08253100598027859,
           "words": 47,
           "score_breakdown": {
-            "dense": 0.049876797938779895,
-            "graph": 0.05361216302335164,
-            "fact": 0.26010305532306555
+            "dense": 0.04987687088368181,
+            "graph": 0.053610895358506536,
+            "fact": 0.2601030559113442
           }
         },
         {
           "title": "The Bruce Lee Band",
-          "score": 0.08184865994434032,
+          "score": 0.08184809022286185,
           "words": 38,
           "score_breakdown": {
-            "dense": 0.050717994027404706,
-            "graph": 0.0573667033071079,
-            "fact": 0.24495834824756904
+            "dense": 0.0507178265553537,
+            "graph": 0.057365111121759314,
+            "fact": 0.24495834853926357
           }
         },
         {
           "title": "Levitate (Bruce Hornsby album)",
-          "score": 0.08103543703977151,
+          "score": 0.08103512802103352,
           "words": 36,
           "score_breakdown": {
-            "dense": 0.0500578150654989,
-            "graph": 0.05213664097444025,
-            "fact": 0.25241764307610026
+            "dense": 0.05005792249893478,
+            "graph": 0.052135414027373206,
+            "fact": 0.2524176429227162
           }
         },
         {
           "title": "Asian Man Records",
-          "score": 0.08013086190723595,
+          "score": 0.08013026081682478,
           "words": 43,
           "score_breakdown": {
-            "dense": 0.050171406000287994,
-            "graph": 0.05386148534695928,
-            "fact": 0.2425209533532651
+            "dense": 0.0501710212286773,
+            "graph": 0.05386018749016956,
+            "fact": 0.242520952626676
           }
         },
         {
           "title": "Big Swing Face",
-          "score": 0.042533662005564035,
+          "score": 0.042533400049216345,
           "words": 37,
           "score_breakdown": {
-            "dense": 0.04997141503416385,
-            "graph": 0.05016461245591306,
+            "dense": 0.04997159700854079,
+            "graph": 0.05016340564839636,
             "fact": 0.0
           }
         }
@@ -1076,14 +972,13 @@
       "answer_match_candidates": [
         "Emilia Galotti"
       ],
-      "qa_context_words": 809,
-      "qa_context_chars": 5022,
+      "qa_context_words": 99,
+      "qa_context_chars": 635,
       "ranked_passages_count": 10,
       "ranked_facts_count": 5,
       "bridge_entities": [
         "Gotthold Ephraim Lessing",
-        "Enlightenment philosopher",
-        "Emilia Galotti"
+        "Enlightenment philosopher"
       ],
       "query_entities": [
         "Miss Sara Sampson"
@@ -1115,20 +1010,12 @@
           "score": 0.5861133333333333,
           "source_title": "Miss Sara Sampson",
           "hop_answer": "Gotthold Ephraim Lessing",
-          "hop_thought": "The text clearly states that Miss Sara Sampson is a play written by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
-          "hop_raw_response": "The text clearly states that Miss Sara Sampson is a play written by the Enlightenment philosopher, Gotthold Ephraim Lessing.\nAnswer: Gotthold Ephraim Lessing",
+          "hop_thought": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.",
+          "hop_raw_response": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.\nAnswer: Gotthold Ephraim Lessing",
           "evidence_passages": [
             {
               "title": "Miss Sara Sampson",
               "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
-            },
-            {
-              "title": "Miss Sara Sampson",
-              "text": "Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg."
-            },
-            {
-              "title": "Dean Sampson",
-              "text": "Dean Sampson (born 27 June 1967) is an English former professional rugby league footballer who played as a , and spent his entire professional career at the Castleford Tigers."
             }
           ]
         },
@@ -1139,21 +1026,13 @@
           "sentence": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
           "score": 0.4740509090909091,
           "source_title": "Miss Sara Sampson",
-          "hop_answer": "Emilia Galotti",
-          "hop_thought": "Gotthold Ephraim Lessing wrote several notable works, including \"Emilia Galotti,\" which is mentioned in the context.",
-          "hop_raw_response": "Gotthold Ephraim Lessing wrote several notable works, including \"Emilia Galotti,\" which is mentioned in the context.\nAnswer: Emilia Galotti",
+          "hop_answer": "Unknown",
+          "hop_thought": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.",
+          "hop_raw_response": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Miss Sara Sampson",
               "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
-            },
-            {
-              "title": "Miss Sara Sampson",
-              "text": "Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg."
-            },
-            {
-              "title": "Emilia Galotti",
-              "text": "Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German)."
             }
           ]
         }
@@ -1162,51 +1041,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Miss Sara Sampson",
-          "score": 0.1233627946649163,
+          "score": 0.12336266920027368,
           "words": 110,
           "score_breakdown": {
-            "dense": 0.05069171361099231,
-            "graph": 0.05703139159822569,
-            "fact": 0.5224862313293521
+            "dense": 0.05069153873081347,
+            "graph": 0.057031293924890675,
+            "fact": 0.5224862314723938
           }
         },
         {
           "title": "Emilia Galotti",
-          "score": 0.11489029440557141,
+          "score": 0.11489021142102565,
           "words": 62,
           "score_breakdown": {
-            "dense": 0.050003600658827016,
-            "graph": 0.052537495808731266,
-            "fact": 0.4775137686706478
+            "dense": 0.050003498431842805,
+            "graph": 0.05253740668123725,
+            "fact": 0.4775137685276062
           }
         },
         {
           "title": "Mary Ann Sampson",
-          "score": 0.040984944007691995,
+          "score": 0.04098492005233382,
           "words": 65,
           "score_breakdown": {
-            "dense": 0.050222375707054026,
-            "graph": 0.044542124562707605,
+            "dense": 0.05022237130347781,
+            "graph": 0.044542052784736746,
             "fact": 0.0
           }
         },
         {
           "title": "Pendennis",
-          "score": 0.040871287425580556,
+          "score": 0.040871308550071025,
           "words": 129,
           "score_breakdown": {
-            "dense": 0.050008083181257316,
-            "graph": 0.0445561389196301,
+            "dense": 0.05000816142076,
+            "graph": 0.044556065895510075,
             "fact": 0.0
           }
         },
         {
           "title": "Quran",
-          "score": 0.04086147778711864,
+          "score": 0.04086144221992166,
           "words": 181,
           "score_breakdown": {
-            "dense": 0.04998212763720893,
-            "graph": 0.04457102528884576,
+            "dense": 0.04998210613733315,
+            "graph": 0.04457094614796144,
             "fact": 0.0
           }
         }
@@ -1244,14 +1123,13 @@
       "answer_match_candidates": [
         "Stanley"
       ],
-      "qa_context_words": 461,
-      "qa_context_chars": 2978,
+      "qa_context_words": 105,
+      "qa_context_chars": 709,
       "ranked_passages_count": 10,
       "ranked_facts_count": 4,
       "bridge_entities": [
         "Mountrail County",
-        "North Dakota",
-        "Stanley"
+        "North Dakota"
       ],
       "query_entities": [
         "Van Hook Township"
@@ -1289,14 +1167,6 @@
             {
               "title": "Van Hook Township, Mountrail County, North Dakota",
               "text": "Van Hook Township is a township in Mountrail County in the U.S. state of North Dakota."
-            },
-            {
-              "title": "Van Hook Township, Mountrail County, North Dakota",
-              "text": "Van Hook Township, Mountrail County, North Dakota\nVan Hook Township is a township in Mountrail County in the U.S. state of North Dakota. At the time of the 2000 Census, its population was 42, and estimated to be 41 as of 2009."
-            },
-            {
-              "title": "Liberty Township, Van Wert County, Ohio",
-              "text": "Liberty Township is one of the twelve townships of Van Wert County, Ohio, United States."
             }
           ]
         },
@@ -1307,21 +1177,13 @@
           "sentence": "Van Hook Township is a township in Mountrail County in the U.S. state of North Dakota.",
           "score": 0.6216000000000002,
           "source_title": "Van Hook Township, Mountrail County, North Dakota",
-          "hop_answer": "Stanley",
-          "hop_thought": "The Mountrail County Courthouse is located in Stanley, North Dakota, indicating that Stanley is the seat of Mountrail County.",
-          "hop_raw_response": "The Mountrail County Courthouse is located in Stanley, North Dakota, indicating that Stanley is the seat of Mountrail County.\nAnswer: Stanley",
+          "hop_answer": "Unknown",
+          "hop_thought": "The question asks for the seat of Mountrail County, but the provided evidence from the Wikipedia title \"Van Hook Township, Mountrail County, North Dakota\" does not contain information about the county seat.",
+          "hop_raw_response": "The question asks for the seat of Mountrail County, but the provided evidence from the Wikipedia title \"Van Hook Township, Mountrail County, North Dakota\" does not contain information about the county seat.\nAnswer: Unknown",
           "evidence_passages": [
             {
               "title": "Van Hook Township, Mountrail County, North Dakota",
               "text": "Van Hook Township is a township in Mountrail County in the U.S. state of North Dakota."
-            },
-            {
-              "title": "Van Hook Township, Mountrail County, North Dakota",
-              "text": "Van Hook Township, Mountrail County, North Dakota\nVan Hook Township is a township in Mountrail County in the U.S. state of North Dakota. At the time of the 2000 Census, its population was 42, and estimated to be 41 as of 2009."
-            },
-            {
-              "title": "Mountrail County Courthouse",
-              "text": "The Mountrail County Courthouse in Stanley, North Dakota was built in 1914 and served Mountrail County as its courthouse continuously since then."
             }
           ]
         }
@@ -1330,51 +1192,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Van Hook Township, Mountrail County, North Dakota",
-          "score": 0.12210250331446137,
+          "score": 0.12210224290079856,
           "words": 42,
           "score_breakdown": {
-            "dense": 0.051093608583503626,
-            "graph": 0.059583109410533075,
-            "fact": 0.507507238469163
+            "dense": 0.0510936441770111,
+            "graph": 0.059582176102447745,
+            "fact": 0.5075072384847209
           }
         },
         {
           "title": "Mountrail County Courthouse",
-          "score": 0.1186200427857279,
+          "score": 0.11862021431731537,
           "words": 68,
           "score_breakdown": {
-            "dense": 0.049976100655069265,
-            "graph": 0.057530910652714186,
-            "fact": 0.49249276153083693
+            "dense": 0.04997597997055625,
+            "graph": 0.05753170368739191,
+            "fact": 0.4924927615152791
           }
         },
         {
           "title": "Liberty Township, Van Wert County, Ohio",
-          "score": 0.0418144276294409,
+          "score": 0.0418145133711046,
           "words": 41,
           "score_breakdown": {
-            "dense": 0.05065348201831804,
-            "graph": 0.04651670839788659,
+            "dense": 0.0506536406151273,
+            "graph": 0.04651670344261527,
             "fact": 0.0
           }
         },
         {
           "title": "Van Buren Township, Brown County, Indiana",
-          "score": 0.04177013371530632,
+          "score": 0.041770059454149994,
           "words": 44,
           "score_breakdown": {
-            "dense": 0.050580902892997506,
-            "graph": 0.04650212374719231,
+            "dense": 0.05058077257617244,
+            "graph": 0.04650211512418384,
             "fact": 0.0
           }
         },
         {
           "title": "Avoca, Oklahoma",
-          "score": 0.04151407865820118,
+          "score": 0.04151405775491276,
           "words": 29,
           "score_breakdown": {
-            "dense": 0.050128261113804286,
-            "graph": 0.0464784501520294,
+            "dense": 0.050128226852506064,
+            "graph": 0.04647844328678139,
             "fact": 0.0
           }
         }
@@ -1387,9 +1249,9 @@
       "gold_answers": [
         "Sir Francis Baring, 1st Baronet"
       ],
-      "predicted_answer": "Henry Baring",
+      "predicted_answer": "Henry Baring of Cromer Hall",
       "qa_exact_match": 0.0,
-      "qa_f1": 0.28571428571428575,
+      "qa_f1": 0.20000000000000004,
       "passage_recall_at_5": 1.0,
       "passage_hit_at_5": 1.0,
       "support_titles": [
@@ -1412,8 +1274,8 @@
       "answer_match_candidates": [
         "Sir Francis Baring, 1st Baronet"
       ],
-      "qa_context_words": 917,
-      "qa_context_chars": 5543,
+      "qa_context_words": 137,
+      "qa_context_chars": 830,
       "ranked_passages_count": 10,
       "ranked_facts_count": 7,
       "bridge_entities": [
@@ -1423,7 +1285,8 @@
         "Cromer Hall",
         "Edward Baring",
         "1st Baron Revelstoke",
-        "Tom Baring's elder full brother"
+        "Tom Baring's older full brother",
+        "Henry Baring of Cromer Hall"
       ],
       "query_entities": [
         "Edward Baring 1st Baron Revelstoke"
@@ -1453,73 +1316,49 @@
           "resolved_sub_question": "Who is Edward Baring, 1st Baron Revelstoke?",
           "sentence_id": "sentence:tom_baring_0_0_thomas_baring_known_as_tom_was_the_tenth_child_fifth_of_second_marriage_of",
           "sentence": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke.",
-          "score": 0.7020762308098476,
+          "score": 0.7021006839729944,
           "source_title": "Tom Baring",
-          "hop_answer": "Tom Baring's elder full brother",
-          "hop_thought": "Edward Baring, 1st Baron Revelstoke, is mentioned as the elder full brother of Thomas Baring, known as \"Tom\". No further details about him are provided in the text.",
-          "hop_raw_response": "Edward Baring, 1st Baron Revelstoke, is mentioned as the elder full brother of Thomas Baring, known as \"Tom\". No further details about him are provided in the text.\nAnswer: Tom Baring's elder full brother",
+          "hop_answer": "Tom Baring's older full brother",
+          "hop_thought": "The evidence states that Edward Baring, 1st Baron Revelstoke, is the older full brother of Tom Baring.",
+          "hop_raw_response": "The evidence states that Edward Baring, 1st Baron Revelstoke, is the older full brother of Tom Baring.\nAnswer: Tom Baring's older full brother",
           "evidence_passages": [
             {
               "title": "Tom Baring",
               "text": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke."
-            },
-            {
-              "title": "Tom Baring",
-              "text": "Tom Baring\nThomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke. Like his brother, Baring was involved in the family banking business, beginning his career in the Liverpool office of Barings Bank. He later moved to New York City to join Kidder Peabody. When, in 1890, Kidder Peabody split its dual Boston-New York firm, Baring became a partner in the separated New York firm. He and another Kidder-Peabody alumnus, George C. Magoun, formed Baring, Magoun. Both houses continued as North American agents for Barings."
-            },
-            {
-              "title": "Godfrey Baring",
-              "text": "A member of the influential Baring family, he was the son of Lieutenant-General Charles Baring, son of Henry Bingham Baring, son of Henry Baring, third son of Sir Francis Baring, 1st Baronet."
             }
           ]
         },
         {
           "sub_question": "Who is the father of Edward Baring, 1st Baron Revelstoke?",
-          "resolved_sub_question": "Who is the father of Edward Baring, 1st Baron Revelstoke? Context: Tom Baring's elder full brother.",
+          "resolved_sub_question": "Who is the father of Edward Baring, 1st Baron Revelstoke? Context: Tom Baring's older full brother.",
           "sentence_id": "sentence:tom_baring_0_0_thomas_baring_known_as_tom_was_the_tenth_child_fifth_of_second_marriage_of",
           "sentence": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke.",
-          "score": 0.601090817685318,
+          "score": 0.6035124107601166,
           "source_title": "Tom Baring",
-          "hop_answer": "Henry Baring",
-          "hop_thought": "The context states that Tom Baring is the younger full brother of Edward Baring, 1st Baron Revelstoke, and both are children of Henry Baring of Cromer Hall.",
-          "hop_raw_response": "The context states that Tom Baring is the younger full brother of Edward Baring, 1st Baron Revelstoke, and both are children of Henry Baring of Cromer Hall.\nAnswer: Henry Baring",
+          "hop_answer": "Henry Baring of Cromer Hall",
+          "hop_thought": "Edward Baring, 1st Baron Revelstoke, is the older full brother of Tom Baring. Since Tom Baring's father is Henry Baring of Cromer Hall, it follows that Henry Baring of Cromer Hall is also the father of Edward Baring, 1st Baron Revelstoke.",
+          "hop_raw_response": "Edward Baring, 1st Baron Revelstoke, is the older full brother of Tom Baring. Since Tom Baring's father is Henry Baring of Cromer Hall, it follows that Henry Baring of Cromer Hall is also the father of Edward Baring, 1st Baron Revelstoke.\nAnswer: Henry Baring of Cromer Hall",
           "evidence_passages": [
             {
               "title": "Tom Baring",
               "text": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke."
-            },
-            {
-              "title": "Tom Baring",
-              "text": "Tom Baring\nThomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke. Like his brother, Baring was involved in the family banking business, beginning his career in the Liverpool office of Barings Bank. He later moved to New York City to join Kidder Peabody. When, in 1890, Kidder Peabody split its dual Boston-New York firm, Baring became a partner in the separated New York firm. He and another Kidder-Peabody alumnus, George C. Magoun, formed Baring, Magoun. Both houses continued as North American agents for Barings."
-            },
-            {
-              "title": "Godfrey Baring",
-              "text": "A member of the influential Baring family, he was the son of Lieutenant-General Charles Baring, son of Henry Bingham Baring, son of Henry Baring, third son of Sir Francis Baring, 1st Baronet."
             }
           ]
         },
         {
           "sub_question": "Who is the father of this person?",
-          "resolved_sub_question": "Who is the father of this person? Context: Tom Baring's elder full brother; Henry Baring.",
+          "resolved_sub_question": "Who is the father of this person? Context: Tom Baring's older full brother; Henry Baring of Cromer Hall.",
           "sentence_id": "sentence:tom_baring_0_0_thomas_baring_known_as_tom_was_the_tenth_child_fifth_of_second_marriage_of",
           "sentence": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke.",
-          "score": 0.5234535641431809,
+          "score": 0.539616004045214,
           "source_title": "Tom Baring",
-          "hop_answer": "Henry Baring",
-          "hop_thought": "The context indicates that the person in question is Edward Baring, 1st Baron Revelstoke, who is Tom Baring's elder full brother. According to the information provided, their father is Henry Baring.",
-          "hop_raw_response": "The context indicates that the person in question is Edward Baring, 1st Baron Revelstoke, who is Tom Baring's elder full brother. According to the information provided, their father is Henry Baring.\nAnswer: Henry Baring",
+          "hop_answer": "Henry Baring of Cromer Hall",
+          "hop_thought": "The context indicates that Tom Baring's father is Henry Baring of Cromer Hall.",
+          "hop_raw_response": "The context indicates that Tom Baring's father is Henry Baring of Cromer Hall.\nAnswer: Henry Baring of Cromer Hall",
           "evidence_passages": [
             {
               "title": "Tom Baring",
               "text": "Thomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke."
-            },
-            {
-              "title": "Tom Baring",
-              "text": "Tom Baring\nThomas Baring, known as \"Tom\", was the tenth child (fifth of second marriage) of Henry Baring of Cromer Hall, and younger full brother of Edward Baring, 1st Baron Revelstoke. Like his brother, Baring was involved in the family banking business, beginning his career in the Liverpool office of Barings Bank. He later moved to New York City to join Kidder Peabody. When, in 1890, Kidder Peabody split its dual Boston-New York firm, Baring became a partner in the separated New York firm. He and another Kidder-Peabody alumnus, George C. Magoun, formed Baring, Magoun. Both houses continued as North American agents for Barings."
-            },
-            {
-              "title": "Godfrey Baring",
-              "text": "A member of the influential Baring family, he was the son of Lieutenant-General Charles Baring, son of Henry Bingham Baring, son of Henry Baring, third son of Sir Francis Baring, 1st Baronet."
             }
           ]
         }
@@ -1528,51 +1367,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Tom Baring",
-          "score": 0.08574969765686699,
+          "score": 0.08574970260737783,
           "words": 104,
           "score_breakdown": {
-            "dense": 0.050528991313561075,
-            "graph": 0.05417810810650236,
-            "fact": 0.27803546668305135
+            "dense": 0.0505288678264638,
+            "graph": 0.05417837583303168,
+            "fact": 0.2780354170194215
           }
         },
         {
           "title": "Father Brown, Detective",
-          "score": 0.08148642955724138,
+          "score": 0.08148652331835646,
           "words": 55,
           "score_breakdown": {
-            "dense": 0.04975995926563647,
-            "graph": 0.05397833958390235,
-            "fact": 0.2528330005731374
+            "dense": 0.049760008347711625,
+            "graph": 0.05397854432723247,
+            "fact": 0.25283303619296876
           }
         },
         {
           "title": "Godfrey Baring",
-          "score": 0.07883288808796121,
+          "score": 0.07883284117270631,
           "words": 126,
           "score_breakdown": {
-            "dense": 0.050166230991759264,
-            "graph": 0.05352183187093739,
-            "fact": 0.23456607654141604
+            "dense": 0.05016616270129078,
+            "graph": 0.05352179956229384,
+            "fact": 0.23456607878872146
           }
         },
         {
           "title": "England in the Middle Ages",
-          "score": 0.0777535921154562,
+          "score": 0.07775349649277384,
           "words": 165,
           "score_breakdown": {
-            "dense": 0.04993205472688916,
-            "graph": 0.05035381195102623,
-            "fact": 0.23456545620239522
+            "dense": 0.049931894604639586,
+            "graph": 0.05035378086796282,
+            "fact": 0.23456546799888817
           }
         },
         {
           "title": "Martha Creek Provincial Park",
-          "score": 0.042803923170593956,
+          "score": 0.04280398277827754,
           "words": 28,
           "score_breakdown": {
-            "dense": 0.0498027428919318,
-            "graph": 0.05137471526677155,
+            "dense": 0.04980266842025782,
+            "graph": 0.05137505049045244,
             "fact": 0.0
           }
         }
@@ -1610,8 +1449,8 @@
       "answer_match_candidates": [
         "Jackson 5"
       ],
-      "qa_context_words": 665,
-      "qa_context_chars": 3980,
+      "qa_context_words": 87,
+      "qa_context_chars": 509,
       "ranked_passages_count": 10,
       "ranked_facts_count": 8,
       "bridge_entities": [
@@ -1647,23 +1486,15 @@
           "resolved_sub_question": "Who performed the song Be the One?",
           "sentence_id": "sentence:be_the_one_album_0_0_be_the_one_is_the_second_studio_album_by_jackie_jackson_released_on_september_9",
           "sentence": "Be the One is the second studio album by Jackie Jackson, released on September 9, 1989.",
-          "score": 0.4408785667931693,
+          "score": 0.4408861854588645,
           "source_title": "Be the One (album)",
           "hop_answer": "Jackie Jackson",
-          "hop_thought": "The song \"Be the One\" is from the album \"Be the One,\" which is the second studio album by Jackie Jackson.",
-          "hop_raw_response": "The song \"Be the One\" is from the album \"Be the One,\" which is the second studio album by Jackie Jackson.\nAnswer: Jackie Jackson",
+          "hop_thought": "The song \"Be the One\" is from the album 'Be the One', which is the second studio album by Jackie Jackson.",
+          "hop_raw_response": "The song \"Be the One\" is from the album 'Be the One', which is the second studio album by Jackie Jackson.\nAnswer: Jackie Jackson",
           "evidence_passages": [
             {
               "title": "Be the One (album)",
               "text": "Be the One is the second studio album by Jackie Jackson, released on September 9, 1989."
-            },
-            {
-              "title": "Be the One (album)",
-              "text": "Be the One (album)\nBe the One is the second studio album by Jackie Jackson, released on September 9, 1989. The musicians included Paul Jackson, Jr., Jeff Lorber, Robert Brookins and Gerald Albright."
-            },
-            {
-              "title": "Le calife de Bagdad",
-              "text": "One member of the audience who was less impressed was the noted composer Luigi Cherubini who reproached Boieldieu, \"Aren't you ashamed of such a great success, and doing so little to deserve it?\" Boieldieu immediately applied to Cherubini for lessons in compositional techniques."
             }
           ]
         },
@@ -1672,23 +1503,15 @@
           "resolved_sub_question": "What group was this performer a member of? Context: Jackie Jackson.",
           "sentence_id": "sentence:jackie_jackson_album_0_0_jackie_jackson_is_the_self_titled_debut_album_from_jackie_jackson_the_eldest_me",
           "sentence": "Jackie Jackson is the self-titled debut album from Jackie Jackson, the eldest member of The Jackson 5, released on Motown Records.",
-          "score": 0.4251107659088771,
+          "score": 0.42509923877588907,
           "source_title": "Jackie Jackson (album)",
           "hop_answer": "The Jackson 5",
-          "hop_thought": "The context indicates that Jackie Jackson is the eldest member of The Jackson 5.",
-          "hop_raw_response": "The context indicates that Jackie Jackson is the eldest member of The Jackson 5.\nAnswer: The Jackson 5",
+          "hop_thought": "The context states that Jackie Jackson is the eldest member of The Jackson 5.",
+          "hop_raw_response": "The context states that Jackie Jackson is the eldest member of The Jackson 5.\nAnswer: The Jackson 5",
           "evidence_passages": [
             {
               "title": "Jackie Jackson (album)",
               "text": "Jackie Jackson is the self-titled debut album from Jackie Jackson, the eldest member of The Jackson 5, released on Motown Records."
-            },
-            {
-              "title": "Jackie Jackson (album)",
-              "text": "Jackie Jackson (album)\nJackie Jackson is the self-titled debut album from Jackie Jackson, the eldest member of The Jackson 5, released on Motown Records. It was arranged by Eddy Manson, Gene Page and The Corporation."
-            },
-            {
-              "title": "Be the One (album)",
-              "text": "Be the One is the second studio album by Jackie Jackson, released on September 9, 1989."
             }
           ]
         }
@@ -1697,51 +1520,51 @@
       "retrieved_passages_top5": [
         {
           "title": "Pittsburgh Youth Symphony Orchestra",
-          "score": 0.09619285927735165,
+          "score": 0.09620329530727653,
           "words": 90,
           "score_breakdown": {
-            "dense": 0.0497430115281166,
-            "graph": 0.05676149070274093,
-            "fact": 0.3453717048404349
+            "dense": 0.0497430073013873,
+            "graph": 0.05679628870459062,
+            "fact": 0.3453716978675755
           }
         },
         {
           "title": "Be the One (album)",
-          "score": 0.09510504790954674,
+          "score": 0.09510439216942985,
           "words": 33,
           "score_breakdown": {
-            "dense": 0.05085494677735665,
-            "graph": 0.056198016122416164,
-            "fact": 0.33516948230183824
+            "dense": 0.05085486695814704,
+            "graph": 0.056195962759553894,
+            "fact": 0.33516951009721874
           }
         },
         {
           "title": "Jackie Jackson (album)",
-          "score": 0.09219742668440299,
+          "score": 0.09219691633528344,
           "words": 35,
           "score_breakdown": {
-            "dense": 0.049970673971102754,
-            "graph": 0.05598244690545813,
-            "fact": 0.3194588128577269
+            "dense": 0.049970662074410754,
+            "graph": 0.0559807779635889,
+            "fact": 0.3194587920352057
           }
         },
         {
           "title": "Unexploded",
-          "score": 0.042251346281945615,
+          "score": 0.04225077962297222,
           "words": 55,
           "score_breakdown": {
-            "dense": 0.05016723240540746,
-            "graph": 0.04886456152990506,
+            "dense": 0.05016725882780941,
+            "graph": 0.04886262422559013,
             "fact": 0.0
           }
         },
         {
           "title": "Feist (singer)",
-          "score": 0.042235486995402256,
+          "score": 0.04223485750989018,
           "words": 40,
           "score_breakdown": {
-            "dense": 0.05014465980641437,
-            "graph": 0.048853080339581176,
+            "dense": 0.05014457259510107,
+            "graph": 0.048851141941948624,
             "fact": 0.0
           }
         }

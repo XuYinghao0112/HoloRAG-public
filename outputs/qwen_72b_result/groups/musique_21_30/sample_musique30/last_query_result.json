@@ -16,12 +16,12 @@
       "mention": "Kimbrough Memorial Stadium",
       "node_id": "entity:title_anchor_kimbrough_memorial_stadium",
       "resolved_text": "Kimbrough Memorial Stadium",
-      "score": 0.9010000000000001,
+      "score": 0.9122,
       "alias_score": 1.0,
       "relation_score": 1.0,
-      "context_score": 0.6000000000000001,
+      "context_score": 0.6799999999999999,
       "compatibility_score": 0.8875000000000001,
-      "score_margin": 0.3690000000000001,
+      "score_margin": 0.369,
       "confident": true
     }
   ],
@@ -33,62 +33,62 @@
   "seeds": [
     {
       "node_id": "entity:title_anchor_kimbrough_memorial_stadium",
-      "score": 1.228479266150929,
+      "score": 1.228449924107048,
       "layer": "entity"
     },
     {
       "node_id": "entity:canyon_texas",
-      "score": 0.4283629739765735,
+      "score": 0.42833363546226394,
       "layer": "entity"
     },
     {
       "node_id": "entity:saulkrasti",
-      "score": 0.3721574051388324,
+      "score": 0.37212253781967136,
       "layer": "entity"
     },
     {
       "node_id": "entity:saulkrasti_town",
-      "score": 0.3721574051388324,
+      "score": 0.37212253781967136,
       "layer": "entity"
     },
     {
       "node_id": "entity:title_anchor_saulkrasti_municipality",
-      "score": 0.3123418146658246,
+      "score": 0.3123127571349324,
       "layer": "entity"
     },
     {
       "node_id": "entity:vidzeme",
-      "score": 0.3123418146658246,
+      "score": 0.3123127571349324,
       "layer": "entity"
     },
     {
       "node_id": "sentence:canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_texas_united_state",
-      "score": 0.2601832786532988,
+      "score": 0.2601499049017009,
       "layer": "sentence"
     },
     {
       "node_id": "entity:canyon",
-      "score": 0.22934152886400228,
+      "score": 0.22931245193293232,
       "layer": "entity"
     },
     {
       "node_id": "entity:randall_county",
-      "score": 0.2174326217397665,
+      "score": 0.21740499708538671,
       "layer": "entity"
     },
     {
       "node_id": "entity:texas",
-      "score": 0.19357092667830525,
+      "score": 0.1935462095426939,
       "layer": "entity"
     },
     {
       "node_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
-      "score": 0.17243928231525185,
+      "score": 0.17242783716054072,
       "layer": "sentence"
     },
     {
       "node_id": "chunk:canyon_texas_0",
-      "score": 0.14799681152669192,
+      "score": 0.14798067955403352,
       "layer": "chunk"
     }
   ],
@@ -101,7 +101,7 @@
       "sentence_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
       "chunk_id": "chunk:kimbrough_memorial_stadium_0",
       "document_index": 4,
-      "score": 0.42614946168110557
+      "score": 0.42612012479334166
     },
     {
       "fact_id": "fact:saulkrasti_municipality_is_located_in_vidzeme_sentence_saulkrasti_municipality_0_0_saulkrasti_municipality_is_a_municipa",
@@ -111,7 +111,7 @@
       "sentence_id": "sentence:saulkrasti_municipality_0_0_saulkrasti_municipality_is_a_municipality_in_vidzeme_latvia",
       "chunk_id": "chunk:saulkrasti_municipality_0",
       "document_index": 12,
-      "score": 0.310131170949027
+      "score": 0.31010211484972616
     },
     {
       "fact_id": "fact:canyon_is_city_in_randall_county_sentence_canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_tex",
@@ -121,7 +121,7 @@
       "sentence_id": "sentence:canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_texas_united_state",
       "chunk_id": "chunk:canyon_texas_0",
       "document_index": 16,
-      "score": 0.22913258201037023
+      "score": 0.22910350838016236
     },
     {
       "fact_id": "fact:canyon_is_county_seat_of_randall_county_sentence_canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_cou",
@@ -131,7 +131,7 @@
       "sentence_id": "sentence:canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_texas_united_state",
       "chunk_id": "chunk:canyon_texas_0",
       "document_index": 16,
-      "score": 0.2251328130630855
+      "score": 0.22510373545828724
     },
     {
       "fact_id": "fact:randall_county_is_located_in_texas_sentence_canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_t",
@@ -141,12 +141,12 @@
       "sentence_id": "sentence:canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_texas_united_state",
       "chunk_id": "chunk:canyon_texas_0",
       "document_index": 16,
-      "score": 0.19136289110362267
+      "score": 0.19133817513954415
     }
   ],
   "bridge_entities": [
     "Canyon Texas",
-    "Randall County"
+    "Canyon"
   ],
   "reasoning_chain": [
     {
@@ -156,46 +156,30 @@
       "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
       "score": 0.6757824000000001,
       "source_title": "Kimbrough Memorial Stadium",
-      "hop_answer": "Canyon, Texas",
-      "hop_thought": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
-      "hop_raw_response": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.\nAnswer: Canyon, Texas",
+      "hop_answer": "Canyon",
+      "hop_thought": "The evidence states that Kimbrough Memorial Stadium is in Canyon, Texas.",
+      "hop_raw_response": "The evidence states that Kimbrough Memorial Stadium is in Canyon, Texas.\nAnswer: Canyon",
       "evidence_passages": [
         {
           "title": "Kimbrough Memorial Stadium",
           "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
-        },
-        {
-          "title": "Kimbrough Memorial Stadium",
-          "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
-        },
-        {
-          "title": "Kimbrough Memorial Stadium",
-          "text": "It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
         }
       ]
     },
     {
       "sub_question": "In which county is this city located?",
-      "resolved_sub_question": "In which county is this city located? Context: Canyon, Texas.",
+      "resolved_sub_question": "In which county is this city located? Context: Canyon.",
       "sentence_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
       "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
-      "score": 0.5728,
+      "score": 0.5488000000000001,
       "source_title": "Kimbrough Memorial Stadium",
-      "hop_answer": "Randall County",
-      "hop_thought": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.",
-      "hop_raw_response": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.\nAnswer: Randall County",
+      "hop_answer": "Unknown",
+      "hop_thought": "Canyon is a city in Texas, but the specific county is not mentioned in the given evidence.",
+      "hop_raw_response": "Canyon is a city in Texas, but the specific county is not mentioned in the given evidence.\nAnswer: Unknown",
       "evidence_passages": [
         {
           "title": "Kimbrough Memorial Stadium",
           "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
-        },
-        {
-          "title": "Kimbrough Memorial Stadium",
-          "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
-        },
-        {
-          "title": "Canyon, Texas",
-          "text": "Canyon is a city in, and the county seat of, Randall County, Texas, United States."
         }
       ]
     }
@@ -203,102 +187,102 @@
   "ranked_nodes": [
     {
       "node_id": "entity:title_anchor_kimbrough_memorial_stadium",
-      "score": 0.1030909519356675,
+      "score": 0.10309463066060554,
       "node_type": "entity"
     },
     {
       "node_id": "entity:title_anchor_saulkrasti_municipality",
-      "score": 0.07897019426633191,
+      "score": 0.07896900925127458,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:kimbrough_memorial_stadium_0_4_it_was_originally_called_buffalo_bowl_on_canyon_hill_but_was_renamed_kimbrough_m",
-      "score": 0.05738226252749409,
+      "score": 0.05738422732374999,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:saulkrasti",
-      "score": 0.04611846507492136,
+      "score": 0.04611655633288893,
       "node_type": "entity"
     },
     {
       "node_id": "entity:canyon_texas",
-      "score": 0.04562165733046558,
+      "score": 0.045622697274453394,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:saulkrasti_municipality_0_0_saulkrasti_municipality_is_a_municipality_in_vidzeme_latvia",
-      "score": 0.04520481905157136,
+      "score": 0.04520439076356687,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:saulkrasti_town",
-      "score": 0.04461211477395964,
+      "score": 0.044609450698205114,
       "node_type": "entity"
     },
     {
       "node_id": "entity:canyon",
-      "score": 0.043989345918512814,
+      "score": 0.04398722536330689,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
-      "score": 0.04154525867027831,
+      "score": 0.0415463114984033,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:frank_kimbrough",
-      "score": 0.039407658049641386,
+      "score": 0.0394090374493112,
       "node_type": "entity"
     },
     {
       "node_id": "entity:randall_county",
-      "score": 0.03352480635440092,
+      "score": 0.03352306723751293,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:canyon_texas_0_0_canyon_is_a_city_in_and_the_county_seat_of_randall_county_texas_united_state",
-      "score": 0.03306635464488742,
+      "score": 0.033064638393168005,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:vidzeme",
-      "score": 0.0315762038897333,
+      "score": 0.03157582117539112,
       "node_type": "entity"
     },
     {
       "node_id": "entity:buffalo_bowl",
-      "score": 0.02621468847564921,
+      "score": 0.026215612180464993,
       "node_type": "entity"
     },
     {
       "node_id": "entity:texas",
-      "score": 0.024625034576373467,
+      "score": 0.024623737699524646,
       "node_type": "entity"
     },
     {
       "node_id": "entity:latvia",
-      "score": 0.022114016483246252,
+      "score": 0.022113839941219505,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:canyon_texas_0_3_canyon_is_the_home_of_west_texas_a_m_university_and_panhandle_plains_historical",
-      "score": 0.02116992727915831,
+      "score": 0.02116899187069562,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:football_coach_and_athletic_director_at_west_texas_state_university",
-      "score": 0.015581819544649642,
+      "score": 0.015582362604949714,
       "node_type": "entity"
     },
     {
       "node_id": "sentence:saulkrasti_municipality_0_2_in_2010_saulkrasti_parish_was_created_from_the_countryside_territory_of_saulkras",
-      "score": 0.014656367093431424,
+      "score": 0.014656363801092547,
       "node_type": "sentence"
     },
     {
       "node_id": "entity:west_texas_a_m_university",
-      "score": 0.01393504716489769,
+      "score": 0.013934704930018962,
       "node_type": "entity"
     }
   ],
@@ -307,47 +291,47 @@
       "node_id": "chunk:kimbrough_memorial_stadium_0",
       "passage_index": 4,
       "title": "Kimbrough Memorial Stadium",
-      "score": 0.09921856432923254,
+      "score": 0.0992187678383222,
       "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.",
       "score_breakdown": {
-        "dense": 0.051336767748616195,
-        "graph": 0.052220590076969005,
-        "fact": 0.36878110029601946
+        "dense": 0.05133706805646527,
+        "graph": 0.05222074957848143,
+        "fact": 0.3687810368914791
       }
     },
     {
       "node_id": "chunk:saulkrasti_municipality_0",
       "passage_index": 12,
       "title": "Saulkrasti Municipality",
-      "score": 0.091982421182358,
+      "score": 0.09198231176760521,
       "text": "Saulkrasti Municipality\nSaulkrasti Municipality () is a municipality in Vidzeme, Latvia. The municipality was formed in 2009 by reorganization of Saulkrasti town with its countryside territory, with the administrative centre being Saulkrasti. In 2010 Saulkrasti parish was created from the countryside territory of Saulkrasti town.",
       "score_breakdown": {
-        "dense": 0.050035211534653214,
-        "graph": 0.05068463636724757,
-        "fact": 0.3283844261874964
+        "dense": 0.050035106074093234,
+        "graph": 0.05068444712205701,
+        "fact": 0.3283844619349123
       }
     },
     {
       "node_id": "chunk:canyon_texas_0",
       "passage_index": 16,
       "title": "Canyon, Texas",
-      "score": 0.08759060852744754,
+      "score": 0.08759066880884134,
       "text": "Canyon, Texas\nCanyon is a city in, and the county seat of, Randall County, Texas, United States. The population was 13,303 at the 2010 census. It is part of the Amarillo, Texas, metropolitan statistical area. Canyon is the home of West Texas A&M University and Panhandle–Plains Historical Museum, and the world-famous outdoor musical drama \"Texas\".",
       "score_breakdown": {
-        "dense": 0.050188931534915666,
-        "graph": 0.048538417185904334,
-        "fact": 0.30283447351648424
+        "dense": 0.05018918158818401,
+        "graph": 0.048538145864329495,
+        "fact": 0.3028345011736086
       }
     },
     {
       "node_id": "chunk:broken_bow_memorial_stadium_0",
       "passage_index": 6,
       "title": "Broken Bow Memorial Stadium",
-      "score": 0.041171001864465866,
+      "score": 0.04117095533209397,
       "text": "Broken Bow Memorial Stadium\nHistoric Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.",
       "score_breakdown": {
-        "dense": 0.050489654145147146,
-        "graph": 0.044672306948783116,
+        "dense": 0.05048960206874631,
+        "graph": 0.04467224731427833,
         "fact": 0.0
       }
     },
@@ -355,11 +339,11 @@
       "node_id": "chunk:kiri_territory_0",
       "passage_index": 11,
       "title": "Kiri Territory",
-      "score": 0.04092047616601648,
+      "score": 0.04092049722365451,
       "text": "Kiri Territory\nKiri Territory is an administrative region in the Mai-Ndombe District of Bandundu Province, Democratic Republic of the Congo. The headquarters is the town of Kiri.",
       "score_breakdown": {
-        "dense": 0.05003229892924531,
-        "graph": 0.04467570584977187,
+        "dense": 0.05003236933063667,
+        "graph": 0.04467564697268114,
         "fact": 0.0
       }
     },
@@ -367,11 +351,11 @@
       "node_id": "chunk:krasnovishersky_district_0",
       "passage_index": 8,
       "title": "Krasnovishersky District",
-      "score": 0.040894294338986614,
+      "score": 0.04089189280157677,
       "text": "Krasnovishersky District\nKrasnovishersky District () is an administrative district (raion) of Perm Krai, Russia; one of the thirty-three in the krai. Municipally, it is incorporated as Krasnovishersky Municipal District. It is located in the northeast of the krai, in the valley of the Vishera River, and borders with the Komi Republic in the north, Sverdlovsk Oblast in the east, Cherdynsky District in the west, Solikamsky District in the south, and with the territory of the town of krai significance of Alexandrovsk in the southeast. The area of the district is . Its administrative center is the town of Krasnovishersk. Population: The population of Krasnovishersk accounts for 71.4% of the district's total population.",
       "score_breakdown": {
-        "dense": 0.04998195658572287,
-        "graph": 0.044680727389463444,
+        "dense": 0.049981965271248624,
+        "graph": 0.04467270634130007,
         "fact": 0.0
       }
     },
@@ -379,11 +363,11 @@
       "node_id": "chunk:history_of_the_philadelphia_eagles_0",
       "passage_index": 17,
       "title": "History of the Philadelphia Eagles",
-      "score": 0.04088001571975994,
+      "score": 0.040879993849770584,
       "text": "History of the Philadelphia Eagles\nThe 1940s would prove a tumultuous and ultimately triumphant decade for the young club. In 1940, the team moved from Philadelphia Municipal Stadium to Shibe Park. Lud Wray's half - interest in the team was purchased by Art Rooney, who had just sold the Pittsburgh Steelers to Alexis Thompson. Soon thereafter, Bell / Rooney and Thompson swapped franchises, but not teams. Bell / Rooney's entire Eagles' corporate organization, including most of the players, moved to Pittsburgh (The Steelers' corporate name remained ``Philadelphia Football Club, Inc. ''until 1945) and Thompson's Steelers moved to Philadelphia, leaving only the team nicknames in their original cities. Since NFL franchises are territorial rights distinct from individual corporate entities, the NFL does not consider this a franchise move and considers the current Philadelphia Eagles as a single unbroken entity from 1933. (1)",
       "score_breakdown": {
-        "dense": 0.049950063102551595,
-        "graph": 0.04469160337785518,
+        "dense": 0.04995005733256887,
+        "graph": 0.04469154105619236,
         "fact": 0.0
       }
     },
@@ -391,11 +375,11 @@
       "node_id": "chunk:pettai_karaikal_0",
       "passage_index": 7,
       "title": "Pettai, Karaikal",
-      "score": 0.04087248790223922,
+      "score": 0.04087243290616526,
       "text": "Pettai, Karaikal\nPettai is a panchayat village and revenue village in Pondicherry Union Territory, India. Administratively, Pettai is under the Thirunallar Taluk (formerly Thirunallar Commune Panchayat) of Karaikal District, Pondicherry Union Territory. Pettai is situated on the banks of the Arasalar River, to the west of Karaikal town and south of Thirunallar.",
       "score_breakdown": {
-        "dense": 0.0499575236862846,
-        "graph": 0.04465283291594228,
+        "dense": 0.04995745785148732,
+        "graph": 0.04465277029282411,
         "fact": 0.0
       }
     },
@@ -403,11 +387,11 @@
       "node_id": "chunk:pak_tam_chung_0",
       "passage_index": 19,
       "title": "Pak Tam Chung",
-      "score": 0.04086691777284297,
+      "score": 0.040866894041504315,
       "text": "Pak Tam Chung\nPak Tam Chung () is an area in the southern part of the Sai Kung Peninsula in the New Territories of Hong Kong. It is administratively under the Sai Kung District.",
       "score_breakdown": {
-        "dense": 0.049945019743938106,
-        "graph": 0.04465718971225672,
+        "dense": 0.049945010008426466,
+        "graph": 0.044657128456232535,
         "fact": 0.0
       }
     },
@@ -415,11 +399,11 @@
       "node_id": "chunk:texas_indian_wars_0",
       "passage_index": 15,
       "title": "Texas–Indian wars",
-      "score": 0.04083534284805017,
+      "score": 0.04083373156416674,
       "text": "Texas–Indian wars\nAlthough several Indian tribes occupied territory in the area, the preeminent nation was the Comanche, known as the ``Lords of the Plains. ''Their territory, the Comancheria, was the most powerful entity and persistently hostile to the Spanish, the Mexicans, and finally, the Texans. This article covers the conflicts from 1820, just before Mexico gained independence from Spain, until 1875, when the last free band of Plains Indians, the Comanches led by Quahadi warrior Quanah Parker, surrendered and moved to the Fort Sill reservation in Oklahoma.",
       "score_breakdown": {
-        "dense": 0.049877230246369225,
-        "graph": 0.04467622070849031,
+        "dense": 0.04987727711808927,
+        "graph": 0.04467076383072546,
         "fact": 0.0
       }
     }
@@ -428,7 +412,7 @@
     "entity": [
       {
         "node_id": "entity:title_anchor_kimbrough_memorial_stadium",
-        "score": 0.1030909519356675,
+        "score": 0.10309463066060554,
         "text": "Kimbrough Memorial Stadium",
         "metadata": {
           "canonical_name": "Kimbrough Memorial Stadium",
@@ -445,7 +429,7 @@
       },
       {
         "node_id": "entity:title_anchor_saulkrasti_municipality",
-        "score": 0.07897019426633191,
+        "score": 0.07896900925127458,
         "text": "Saulkrasti Municipality",
         "metadata": {
           "canonical_name": "Saulkrasti Municipality",
@@ -462,7 +446,7 @@
       },
       {
         "node_id": "entity:saulkrasti",
-        "score": 0.04611846507492136,
+        "score": 0.04611655633288893,
         "text": "Saulkrasti",
         "metadata": {
           "canonical_name": "Saulkrasti",
@@ -477,7 +461,7 @@
       },
       {
         "node_id": "entity:canyon_texas",
-        "score": 0.04562165733046558,
+        "score": 0.045622697274453394,
         "text": "Canyon Texas",
         "metadata": {
           "canonical_name": "Canyon Texas",
@@ -494,7 +478,7 @@
       },
       {
         "node_id": "entity:saulkrasti_town",
-        "score": 0.04461211477395964,
+        "score": 0.044609450698205114,
         "text": "Saulkrasti town",
         "metadata": {
           "canonical_name": "Saulkrasti town",
@@ -511,7 +495,7 @@
       },
       {
         "node_id": "entity:canyon",
-        "score": 0.043989345918512814,
+        "score": 0.04398722536330689,
         "text": "Canyon",
         "metadata": {
           "canonical_name": "Canyon",
@@ -526,7 +510,7 @@
       },
       {
         "node_id": "entity:frank_kimbrough",
-        "score": 0.039407658049641386,
+        "score": 0.0394090374493112,
         "text": "Frank Kimbrough",
         "metadata": {
           "canonical_name": "Frank Kimbrough",
@@ -543,7 +527,7 @@
       },
       {
         "node_id": "entity:randall_county",
-        "score": 0.03352480635440092,
+        "score": 0.03352306723751293,
         "text": "Randall County",
         "metadata": {
           "canonical_name": "Randall County",
@@ -560,7 +544,7 @@
       },
       {
         "node_id": "entity:vidzeme",
-        "score": 0.0315762038897333,
+        "score": 0.03157582117539112,
         "text": "Vidzeme",
         "metadata": {
           "canonical_name": "Vidzeme",
@@ -575,7 +559,7 @@
       },
       {
         "node_id": "entity:buffalo_bowl",
-        "score": 0.02621468847564921,
+        "score": 0.026215612180464993,
         "text": "Buffalo Bowl",
         "metadata": {
           "canonical_name": "Buffalo Bowl",
@@ -594,7 +578,7 @@
     "sentence": [
       {
         "node_id": "sentence:kimbrough_memorial_stadium_0_4_it_was_originally_called_buffalo_bowl_on_canyon_hill_but_was_renamed_kimbrough_m",
-        "score": 0.05738226252749409,
+        "score": 0.05738422732374999,
         "text": "It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.",
         "metadata": {
           "title": "Kimbrough Memorial Stadium",
@@ -637,7 +621,7 @@
       },
       {
         "node_id": "sentence:saulkrasti_municipality_0_0_saulkrasti_municipality_is_a_municipality_in_vidzeme_latvia",
-        "score": 0.04520481905157136,
+        "score": 0.04520439076356687,
         "text": "Saulkrasti Municipality () is a municipality in Vidzeme, Latvia.",
         "metadata": {
           "title": "Saulkrasti Municipality",
@@ -672,7 +656,7 @@
     "chunk": [
       {
         "node_id": "chunk:kimbrough_memorial_stadium_0",
-        "score": 0.010676355371481185,
+        "score": 0.010676637482156318,
         "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.",
         "metadata": {
           "title": "Kimbrough Memorial Stadium",
@@ -696,53 +680,53 @@
         }
       }
     ],
-    "qa_context": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\n\nSaulkrasti Municipality\nSaulkrasti Municipality\nSaulkrasti Municipality () is a municipality in Vidzeme, Latvia. The municipality was formed in 2009 by reorganization of Saulkrasti town with its countryside territory, with the administrative centre being Saulkrasti. In 2010 Saulkrasti parish was created from the countryside territory of Saulkrasti town.\n\nCanyon, Texas\nCanyon, Texas\nCanyon is a city in, and the county seat of, Randall County, Texas, United States. The population was 13,303 at the 2010 census. It is part of the Amarillo, Texas, metropolitan statistical area. Canyon is the home of West Texas A&M University and Panhandle–Plains Historical Museum, and the world-famous outdoor musical drama \"Texas\".\n\nBroken Bow Memorial Stadium\nBroken Bow Memorial Stadium\nHistoric Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.\n\nKiri Territory\nKiri Territory\nKiri Territory is an administrative region in the Mai-Ndombe District of Bandundu Province, Democratic Republic of the Congo. The headquarters is the town of Kiri.\n\nKimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas.\n\nKimbrough Memorial Stadium\nIt was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\n\nCanyon, Texas\nCanyon is a city in, and the county seat of, Randall County, Texas, United States.\n\nKrasnovishersky District\nKrasnovishersky District\nKrasnovishersky District () is an administrative district (raion) of Perm Krai, Russia; one of the thirty-three in the krai. Municipally, it is incorporated as Krasnovishersky Municipal District. It is located in the northeast of the krai, in the valley of the Vishera River, and borders with the Komi Republic in the north, Sverdlovsk Oblast in the east, Cherdynsky District in the west, Solikamsky District in the south, and with the territory of the town of krai significance of Alexandrovsk in the southeast. The area of the district is . Its administrative center is the town of Krasnovishersk. Population: The population of Krasnovishersk accounts for 71.4% of the district's total population.\n\nHistory of the Philadelphia Eagles\nHistory of the Philadelphia Eagles\nThe 1940s would prove a tumultuous and ultimately triumphant decade for the young club. In 1940, the team moved from Philadelphia Municipal Stadium to Shibe Park. Lud Wray's half - interest in the team was purchased by Art Rooney, who had just sold the Pittsburgh Steelers to Alexis Thompson. Soon thereafter, Bell / Rooney and Thompson swapped franchises, but not teams. Bell / Rooney's entire Eagles' corporate organization, including most of the players, moved to Pittsburgh (The Steelers' corporate name remained ``Philadelphia Football Club, Inc. ''until 1945) and Thompson's Steelers moved to Philadelphia, leaving only the team nicknames in their original cities. Since NFL franchises are territorial rights distinct from individual corporate entities, the NFL does not consider this a franchise move and considers the current Philadelphia Eagles as a single unbroken entity from 1933. (1)\n\nFederalism\nFederalism\nUsually, a federation is formed at two levels: the central government and the regions (states, provinces, territories), and little to nothing is said about second or third level administrative political entities. Brazil is an exception, because the 1988 Constitution included the municipalities as autonomous political entities making the federation tripartite, encompassing the Union, the States, and the municipalities. Each state is divided into municipalities (municípios) with their own legislative council (câmara de vereadores) and a mayor (prefeito), which are partly autonomous from both Federal and State Government. Each municipality has a \"little constitution\", called \"organic law\" (lei orgânica). Mexico is an intermediate case, in that municipalities are granted full-autonomy by the federal constitution and their existence as autonomous entities (municipio libre, \"free municipality\") is established by the federal government and cannot be revoked by the states' constitutions. Moreover, the federal constitution determines which powers and competencies belong exclusively to the municipalities and not to the constituent states. However, municipalities do not have an elected legislative assembly.",
+    "qa_context": "Canyon, Texas\nCanyon, Texas Canyon is a city in, and the county seat of, Randall County, Texas, United States. It is part of the Amarillo, Texas, metropolitan statistical area.\n\nKimbrough Memorial Stadium\nIt is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\n\nBroken Bow Memorial Stadium\nBroken Bow Memorial Stadium Historic Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.",
     "retrieved_passages": [
       {
         "node_id": "chunk:kimbrough_memorial_stadium_0",
         "passage_index": 4,
         "title": "Kimbrough Memorial Stadium",
-        "score": 0.09921856432923254,
+        "score": 0.0992187678383222,
         "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.",
         "score_breakdown": {
-          "dense": 0.051336767748616195,
-          "graph": 0.052220590076969005,
-          "fact": 0.36878110029601946
+          "dense": 0.05133706805646527,
+          "graph": 0.05222074957848143,
+          "fact": 0.3687810368914791
         }
       },
       {
         "node_id": "chunk:saulkrasti_municipality_0",
         "passage_index": 12,
         "title": "Saulkrasti Municipality",
-        "score": 0.091982421182358,
+        "score": 0.09198231176760521,
         "text": "Saulkrasti Municipality\nSaulkrasti Municipality () is a municipality in Vidzeme, Latvia. The municipality was formed in 2009 by reorganization of Saulkrasti town with its countryside territory, with the administrative centre being Saulkrasti. In 2010 Saulkrasti parish was created from the countryside territory of Saulkrasti town.",
         "score_breakdown": {
-          "dense": 0.050035211534653214,
-          "graph": 0.05068463636724757,
-          "fact": 0.3283844261874964
+          "dense": 0.050035106074093234,
+          "graph": 0.05068444712205701,
+          "fact": 0.3283844619349123
         }
       },
       {
         "node_id": "chunk:canyon_texas_0",
         "passage_index": 16,
         "title": "Canyon, Texas",
-        "score": 0.08759060852744754,
+        "score": 0.08759066880884134,
         "text": "Canyon, Texas\nCanyon is a city in, and the county seat of, Randall County, Texas, United States. The population was 13,303 at the 2010 census. It is part of the Amarillo, Texas, metropolitan statistical area. Canyon is the home of West Texas A&M University and Panhandle–Plains Historical Museum, and the world-famous outdoor musical drama \"Texas\".",
         "score_breakdown": {
-          "dense": 0.050188931534915666,
-          "graph": 0.048538417185904334,
-          "fact": 0.30283447351648424
+          "dense": 0.05018918158818401,
+          "graph": 0.048538145864329495,
+          "fact": 0.3028345011736086
         }
       },
       {
         "node_id": "chunk:broken_bow_memorial_stadium_0",
         "passage_index": 6,
         "title": "Broken Bow Memorial Stadium",
-        "score": 0.041171001864465866,
+        "score": 0.04117095533209397,
         "text": "Broken Bow Memorial Stadium\nHistoric Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.",
         "score_breakdown": {
-          "dense": 0.050489654145147146,
-          "graph": 0.044672306948783116,
+          "dense": 0.05048960206874631,
+          "graph": 0.04467224731427833,
           "fact": 0.0
         }
       },
@@ -750,11 +734,11 @@
         "node_id": "chunk:kiri_territory_0",
         "passage_index": 11,
         "title": "Kiri Territory",
-        "score": 0.04092047616601648,
+        "score": 0.04092049722365451,
         "text": "Kiri Territory\nKiri Territory is an administrative region in the Mai-Ndombe District of Bandundu Province, Democratic Republic of the Congo. The headquarters is the town of Kiri.",
         "score_breakdown": {
-          "dense": 0.05003229892924531,
-          "graph": 0.04467570584977187,
+          "dense": 0.05003236933063667,
+          "graph": 0.04467564697268114,
           "fact": 0.0
         }
       },
@@ -762,11 +746,11 @@
         "node_id": "chunk:krasnovishersky_district_0",
         "passage_index": 8,
         "title": "Krasnovishersky District",
-        "score": 0.040894294338986614,
+        "score": 0.04089189280157677,
         "text": "Krasnovishersky District\nKrasnovishersky District () is an administrative district (raion) of Perm Krai, Russia; one of the thirty-three in the krai. Municipally, it is incorporated as Krasnovishersky Municipal District. It is located in the northeast of the krai, in the valley of the Vishera River, and borders with the Komi Republic in the north, Sverdlovsk Oblast in the east, Cherdynsky District in the west, Solikamsky District in the south, and with the territory of the town of krai significance of Alexandrovsk in the southeast. The area of the district is . Its administrative center is the town of Krasnovishersk. Population: The population of Krasnovishersk accounts for 71.4% of the district's total population.",
         "score_breakdown": {
-          "dense": 0.04998195658572287,
-          "graph": 0.044680727389463444,
+          "dense": 0.049981965271248624,
+          "graph": 0.04467270634130007,
           "fact": 0.0
         }
       },
@@ -774,11 +758,11 @@
         "node_id": "chunk:history_of_the_philadelphia_eagles_0",
         "passage_index": 17,
         "title": "History of the Philadelphia Eagles",
-        "score": 0.04088001571975994,
+        "score": 0.040879993849770584,
         "text": "History of the Philadelphia Eagles\nThe 1940s would prove a tumultuous and ultimately triumphant decade for the young club. In 1940, the team moved from Philadelphia Municipal Stadium to Shibe Park. Lud Wray's half - interest in the team was purchased by Art Rooney, who had just sold the Pittsburgh Steelers to Alexis Thompson. Soon thereafter, Bell / Rooney and Thompson swapped franchises, but not teams. Bell / Rooney's entire Eagles' corporate organization, including most of the players, moved to Pittsburgh (The Steelers' corporate name remained ``Philadelphia Football Club, Inc. ''until 1945) and Thompson's Steelers moved to Philadelphia, leaving only the team nicknames in their original cities. Since NFL franchises are territorial rights distinct from individual corporate entities, the NFL does not consider this a franchise move and considers the current Philadelphia Eagles as a single unbroken entity from 1933. (1)",
         "score_breakdown": {
-          "dense": 0.049950063102551595,
-          "graph": 0.04469160337785518,
+          "dense": 0.04995005733256887,
+          "graph": 0.04469154105619236,
           "fact": 0.0
         }
       },
@@ -786,11 +770,11 @@
         "node_id": "chunk:pettai_karaikal_0",
         "passage_index": 7,
         "title": "Pettai, Karaikal",
-        "score": 0.04087248790223922,
+        "score": 0.04087243290616526,
         "text": "Pettai, Karaikal\nPettai is a panchayat village and revenue village in Pondicherry Union Territory, India. Administratively, Pettai is under the Thirunallar Taluk (formerly Thirunallar Commune Panchayat) of Karaikal District, Pondicherry Union Territory. Pettai is situated on the banks of the Arasalar River, to the west of Karaikal town and south of Thirunallar.",
         "score_breakdown": {
-          "dense": 0.0499575236862846,
-          "graph": 0.04465283291594228,
+          "dense": 0.04995745785148732,
+          "graph": 0.04465277029282411,
           "fact": 0.0
         }
       },
@@ -798,11 +782,11 @@
         "node_id": "chunk:pak_tam_chung_0",
         "passage_index": 19,
         "title": "Pak Tam Chung",
-        "score": 0.04086691777284297,
+        "score": 0.040866894041504315,
         "text": "Pak Tam Chung\nPak Tam Chung () is an area in the southern part of the Sai Kung Peninsula in the New Territories of Hong Kong. It is administratively under the Sai Kung District.",
         "score_breakdown": {
-          "dense": 0.049945019743938106,
-          "graph": 0.04465718971225672,
+          "dense": 0.049945010008426466,
+          "graph": 0.044657128456232535,
           "fact": 0.0
         }
       },
@@ -810,11 +794,11 @@
         "node_id": "chunk:texas_indian_wars_0",
         "passage_index": 15,
         "title": "Texas–Indian wars",
-        "score": 0.04083534284805017,
+        "score": 0.04083373156416674,
         "text": "Texas–Indian wars\nAlthough several Indian tribes occupied territory in the area, the preeminent nation was the Comanche, known as the ``Lords of the Plains. ''Their territory, the Comancheria, was the most powerful entity and persistently hostile to the Spanish, the Mexicans, and finally, the Texans. This article covers the conflicts from 1820, just before Mexico gained independence from Spain, until 1875, when the last free band of Plains Indians, the Comanches led by Quahadi warrior Quanah Parker, surrendered and moved to the Fort Sill reservation in Oklahoma.",
         "score_breakdown": {
-          "dense": 0.049877230246369225,
-          "graph": 0.04467622070849031,
+          "dense": 0.04987727711808927,
+          "graph": 0.04467076383072546,
           "fact": 0.0
         }
       }
@@ -827,46 +811,30 @@
         "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
         "score": 0.6757824000000001,
         "source_title": "Kimbrough Memorial Stadium",
-        "hop_answer": "Canyon, Texas",
-        "hop_thought": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
-        "hop_raw_response": "The evidence states that Kimbrough Memorial Stadium is a stadium in Canyon, Texas.\nAnswer: Canyon, Texas",
+        "hop_answer": "Canyon",
+        "hop_thought": "The evidence states that Kimbrough Memorial Stadium is in Canyon, Texas.",
+        "hop_raw_response": "The evidence states that Kimbrough Memorial Stadium is in Canyon, Texas.\nAnswer: Canyon",
         "evidence_passages": [
           {
             "title": "Kimbrough Memorial Stadium",
             "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
-          },
-          {
-            "title": "Kimbrough Memorial Stadium",
-            "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
-          },
-          {
-            "title": "Kimbrough Memorial Stadium",
-            "text": "It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
           }
         ]
       },
       {
         "sub_question": "In which county is this city located?",
-        "resolved_sub_question": "In which county is this city located? Context: Canyon, Texas.",
+        "resolved_sub_question": "In which county is this city located? Context: Canyon.",
         "sentence_id": "sentence:kimbrough_memorial_stadium_0_0_kimbrough_memorial_stadium_is_a_stadium_in_canyon_texas",
         "sentence": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas.",
-        "score": 0.5728,
+        "score": 0.5488000000000001,
         "source_title": "Kimbrough Memorial Stadium",
-        "hop_answer": "Randall County",
-        "hop_thought": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.",
-        "hop_raw_response": "The city of Canyon, Texas, is located in Randall County, as stated in the evidence.\nAnswer: Randall County",
+        "hop_answer": "Unknown",
+        "hop_thought": "Canyon is a city in Texas, but the specific county is not mentioned in the given evidence.",
+        "hop_raw_response": "Canyon is a city in Texas, but the specific county is not mentioned in the given evidence.\nAnswer: Unknown",
         "evidence_passages": [
           {
             "title": "Kimbrough Memorial Stadium",
             "text": "Kimbrough Memorial Stadium is a stadium in Canyon, Texas."
-          },
-          {
-            "title": "Kimbrough Memorial Stadium",
-            "text": "Kimbrough Memorial Stadium\nKimbrough Memorial Stadium is a stadium in Canyon, Texas. It is owned by Canyon Independent School District, and is primarily primarily used for American football. It is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. The stadium holds 20,000 people and was built in 1959. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough."
-          },
-          {
-            "title": "Canyon, Texas",
-            "text": "Canyon is a city in, and the county seat of, Randall County, Texas, United States."
           }
         ]
       }
@@ -886,7 +854,7 @@
       },
       {
         "role": "user",
-        "content": "Intermediate reasoning hints:\n1. In which city is Kimbrough Memorial Stadium located? => Canyon, Texas (source: Kimbrough Memorial Stadium)\n2. In which county is this city located? => Randall County (source: Kimbrough Memorial Stadium)\n\nFact hints:\n- Randall County is located in Texas\n- Canyon is city in Randall County\n- Kimbrough Memorial Stadium is located in Canyon Texas\n- Canyon is county seat of Randall County\n\nWikipedia Title: Canyon, Texas\nCanyon is a city in, and the county seat of, Randall County, Texas, United States.\n\nWikipedia Title: Kimbrough Memorial Stadium\nIt is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. Kimbrough Memorial Stadium Kimbrough Memorial Stadium is a stadium in Canyon, Texas.\n\nWikipedia Title: Broken Bow Memorial Stadium\nBroken Bow Memorial Stadium Historic Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.\n\nWikipedia Title: History of the Philadelphia Eagles\nIn 1940, the team moved from Philadelphia Municipal Stadium to Shibe Park. Soon thereafter, Bell / Rooney and Thompson swapped franchises, but not teams.\n\nWikipedia Title: Federalism\nMoreover, the federal constitution determines which powers and competencies belong exclusively to the municipalities and not to the constituent states. However, municipalities do not have an elected legislative assembly.\n\nQuestion: In which county is Kimbrough Memorial Stadium located?\nDraft Answer: Randall County\nThought: "
+        "content": "Intermediate reasoning hints:\n1. In which city is Kimbrough Memorial Stadium located? => Canyon (source: Kimbrough Memorial Stadium)\n2. In which county is this city located? (source: Kimbrough Memorial Stadium)\n\nFact hints:\n- Canyon is city in Randall County\n- Canyon is county seat of Randall County\n- Kimbrough Memorial Stadium is located in Canyon Texas\n- Randall County is located in Texas\n\nWikipedia Title: Canyon, Texas\nCanyon, Texas Canyon is a city in, and the county seat of, Randall County, Texas, United States. It is part of the Amarillo, Texas, metropolitan statistical area.\n\nWikipedia Title: Kimbrough Memorial Stadium\nIt is the home stadium for Canyon High School and Randall High School of Canyon Independent School District, and is the former home of West Texas A&M University. It was originally called Buffalo Bowl on Canyon Hill but was renamed Kimbrough Memorial Stadium in 1971 in honor of the late West Texas State University football coach and athletic director Frank Kimbrough.\n\nWikipedia Title: Broken Bow Memorial Stadium\nBroken Bow Memorial Stadium Historic Broken Bow Memorial Stadium has served as the home of the Broken Bow Savages, since it was constructed in 1936 by the National Youth Administration, a part of the Works Progress Administration.\n\nQuestion: In which county is Kimbrough Memorial Stadium located?\nDraft Answer: Randall County\nThought: "
       }
     ]
   },

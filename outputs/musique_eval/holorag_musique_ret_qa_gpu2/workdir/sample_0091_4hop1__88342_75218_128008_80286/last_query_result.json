@@ -1,0 +1,1062 @@
+{
+  "query": "who has had the most hits in the league that includes the team that has played the most games of the type played just before the league MVP is awarded?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [],
+  "raw_query_entities": [],
+  "query_entity_resolutions": [],
+  "sub_questions": [
+    "What is the type of game played just before the league MVP is awarded?",
+    "Which team has played the most games of this type?",
+    "What league does this team belong to?",
+    "Who has had the most hits in this league?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:los_angeles_dodgers",
+      "score": 0.5136397393829149,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:major_leagues",
+      "score": 0.4448415899020836,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mike_trout",
+      "score": 0.29241878525322496,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles_angels_of_anaheim",
+      "score": 0.29241878525322496,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:teams_los_angeles_angels",
+      "score": 0.29241878525322496,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:modern_baltimore_orioles",
+      "score": 0.25641904827111417,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mike_trout",
+      "score": 0.24766121256508222,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles_angels",
+      "score": 0.24766121256508222,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:american_league_east_division",
+      "score": 0.24042229216858962,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:national_league_nl",
+      "score": 0.24042229216858962,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:american_league_al",
+      "score": 0.24042229216858962,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:national_league",
+      "score": 0.24042229216858962,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:mike_trout_played_for_los_angeles_angels_sentence_mike_trout_0_0_mike_trout_trout_in_2018_los_angeles_angels_no",
+      "text": "Mike Trout played for Los Angeles Angels",
+      "head_id": "entity:title_anchor_mike_trout",
+      "tail_id": "entity:los_angeles_angels",
+      "sentence_id": "sentence:mike_trout_0_0_mike_trout_trout_in_2018_los_angeles_angels_no",
+      "chunk_id": "chunk:mike_trout_0",
+      "document_index": 16,
+      "score": 0.24368232104435414
+    },
+    {
+      "fact_id": "fact:pete_rose_holds_record_for_most_career_hits_in_major_league_sentence_list_of_major_league_baseball_career_hits_leaders_0",
+      "text": "Pete Rose holds record for most career hits in Major League",
+      "head_id": "entity:pete_rose",
+      "tail_id": "entity:most_career_hits_in_major_league",
+      "sentence_id": "sentence:list_of_major_league_baseball_career_hits_leaders_0_0_pete_rose_holds_the_major_league_record_for_most_career_hits_with_",
+      "chunk_id": "chunk:list_of_major_league_baseball_career_hits_leaders_0",
+      "document_index": 11,
+      "score": 0.2353519242470617
+    },
+    {
+      "fact_id": "fact:baltimore_orioles_played_in_al_sentence_new_york_yankees_0_3_in_the_season_the_club_began_play_in_the_al_as_the_baltimor",
+      "text": "Baltimore Orioles played in AL",
+      "head_id": "entity:baltimore_orioles",
+      "tail_id": "entity:al",
+      "sentence_id": "sentence:new_york_yankees_0_3_in_the_season_the_club_began_play_in_the_al_as_the_baltimore_orioles_no_relati",
+      "chunk_id": "chunk:new_york_yankees_0",
+      "document_index": 3,
+      "score": 0.2136825402259285
+    },
+    {
+      "fact_id": "fact:american_league_related_to_most_valuable_player_sentence_miguel_cabrera_0_2_since_his_debut_in_2003_he_has_been_a_two_ti",
+      "text": "American League related_to Most Valuable Player",
+      "head_id": "entity:american_league",
+      "tail_id": "entity:most_valuable_player",
+      "sentence_id": "sentence:miguel_cabrera_0_2_since_his_debut_in_2003_he_has_been_a_two_time_american_league_al_most_valuabl",
+      "chunk_id": "chunk:miguel_cabrera_0",
+      "document_index": 4,
+      "score": 0.20035191014049136
+    },
+    {
+      "fact_id": "fact:11_nl_mvp_award_winners_have_played_for_dodgers_sentence_los_angeles_dodgers_0_1_11_nl_mvp_award_winners_have_played_for",
+      "text": "11 NL MVP award winners have played for Dodgers",
+      "head_id": "entity:11_nl_mvp_award_winners",
+      "tail_id": "entity:dodgers",
+      "sentence_id": "sentence:los_angeles_dodgers_0_1_11_nl_mvp_award_winners_have_played_for_the_dodgers_winning_a_total_of_13_mvp_a",
+      "chunk_id": "chunk:los_angeles_dodgers_0",
+      "document_index": 14,
+      "score": 0.1843507951080749
+    },
+    {
+      "fact_id": "fact:seattle_mariners_is_part_of_major_league_baseball_sentence_ichiro_suzuki_0_1_with_27_seasons_combined_in_top_level_profe",
+      "text": "Seattle Mariners is part of Major League Baseball",
+      "head_id": "entity:seattle_mariners",
+      "tail_id": "entity:major_league_baseball",
+      "sentence_id": "sentence:ichiro_suzuki_0_1_with_27_seasons_combined_in_top_level_professional_leagues_he_spent_the_bulk",
+      "chunk_id": "chunk:ichiro_suzuki_0",
+      "document_index": 1,
+      "score": 0.17034941477791163
+    }
+  ],
+  "bridge_entities": [
+    "Major League Baseball"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the type of game played just before the league MVP is awarded?",
+      "resolved_sub_question": "What is the type of game played just before the league MVP is awarded?",
+      "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+      "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+      "score": 0.4082755391427769,
+      "source_title": "Ichiro Suzuki",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not mention the type of game played just before the league MVP is awarded.",
+      "hop_raw_response": "The provided evidence does not mention the type of game played just before the league MVP is awarded.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which team has played the most games of this type?",
+      "resolved_sub_question": "Which team has played the most games of this type?",
+      "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+      "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+      "score": 0.39400220580944356,
+      "source_title": "Ichiro Suzuki",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not specify a particular type of game or a specific team that has played the most games of any type. The text focuses on Ichiro Suzuki's achievements and career statistics but does not provide information about the frequency or type of games played by any team.",
+      "hop_raw_response": "The provided evidence does not specify a particular type of game or a specific team that has played the most games of any type. The text focuses on Ichiro Suzuki's achievements and career statistics but does not provide information about the frequency or type of games played by any team.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+        }
+      ]
+    },
+    {
+      "sub_question": "What league does this team belong to?",
+      "resolved_sub_question": "What league does this team belong to?",
+      "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+      "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+      "score": 0.35666887247611023,
+      "source_title": "Ichiro Suzuki",
+      "hop_answer": "Major League Baseball",
+      "hop_thought": "The text mentions that Ichiro Suzuki played in Major League Baseball (MLB) in the United States, specifically with the Seattle Mariners, New York Yankees, and Miami Marlins. Since the question refers to the team that has played the most games of a certain type, and these are all MLB teams, it can be inferred that the league in question is MLB.",
+      "hop_raw_response": "The text mentions that Ichiro Suzuki played in Major League Baseball (MLB) in the United States, specifically with the Seattle Mariners, New York Yankees, and Miami Marlins. Since the question refers to the team that has played the most games of a certain type, and these are all MLB teams, it can be inferred that the league in question is MLB.\nAnswer: Major League Baseball",
+      "evidence_passages": [
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who has had the most hits in this league?",
+      "resolved_sub_question": "Who has had the most hits in this league? Context: Major League Baseball.",
+      "sentence_id": "sentence:ichiro_suzuki_1_2_he_also_has_recorded_the_most_hits_of_all_japanese_born_players_in_mlb_history",
+      "sentence": "He also has recorded the most hits of all Japanese born players in MLB history.",
+      "score": 0.4529536622529464,
+      "source_title": "Ichiro Suzuki",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context indicates that we are looking for the player with the most hits in Major League Baseball (MLB). The evidence from the Wikipedia article about Ichiro Suzuki states that he has the most hits by any player in top-tier professional leagues, including MLB. However, it does not explicitly state that he has the most hits in MLB alone, and there could be other players with more hits specifically in MLB.",
+      "hop_raw_response": "The context indicates that we are looking for the player with the most hits in Major League Baseball (MLB). The evidence from the Wikipedia article about Ichiro Suzuki states that he has the most hits by any player in top-tier professional leagues, including MLB. However, it does not explicitly state that he has the most hits in MLB alone, and there could be other players with more hits specifically in MLB.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Ichiro Suzuki",
+          "text": "He also has recorded the most hits of all Japanese born players in MLB history."
+        },
+        {
+          "title": "Ichiro Suzuki",
+          "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+        },
+        {
+          "title": "List of Major League Baseball career on-base percentage leaders",
+          "text": "OBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:los_angeles_dodgers",
+      "score": 0.033907719200494305,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:major_leagues",
+      "score": 0.027868641363005514,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles_angels_of_anaheim",
+      "score": 0.0252437001492537,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mike_trout",
+      "score": 0.024667801208398288,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles_angels",
+      "score": 0.024585202027622863,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:baltimore_orioles",
+      "score": 0.021794071240208428,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_league",
+      "score": 0.021456963182531926,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pete_rose",
+      "score": 0.02064629882848433,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_league_al",
+      "score": 0.020509718199896963,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mvp_award",
+      "score": 0.020464286590253823,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:teams_los_angeles_angels",
+      "score": 0.02026921671577331,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:dodgers",
+      "score": 0.019182178269798185,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:modern_baltimore_orioles",
+      "score": 0.01888331273933236,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mike_trout",
+      "score": 0.018536611396443373,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:new_york_yankees_0_3_in_the_season_the_club_began_play_in_the_al_as_the_baltimore_orioles_no_relati",
+      "score": 0.01845699649806657,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:most_career_hits_in_major_league",
+      "score": 0.01829431812852973,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:major_league_baseball_mlb",
+      "score": 0.017426621028344694,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:list_of_major_league_baseball_career_hits_leaders_0_0_pete_rose_holds_the_major_league_record_for_most_career_hits_with_",
+      "score": 0.01742185434737105,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:national_league",
+      "score": 0.017261317589546982,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:major_league_baseball",
+      "score": 0.01710022841346863,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:mike_trout_0",
+      "passage_index": 16,
+      "title": "Mike Trout",
+      "score": 0.06717081027903832,
+      "text": "Mike Trout\nMike Trout Trout in 2018 Los Angeles Angels -- No. 27 Center fielder Born: (1991 - 08 - 07) August 7, 1991 (age 27) Vineland, New Jersey Bats: Right Throws: Right MLB debut July 8, 2011, for the Los Angeles Angels of Anaheim MLB statistics (through September 22, 2018) Batting average. 307 Hits 1,187 Home runs 240 Runs batted in 648 Stolen bases 189 Teams Los Angeles Angels of Anaheim / Los Angeles Angels (2011 -- present) Career highlights and awards 7 × All - Star (2012 -- 2018) 2 × AL MVP (2014, 2016) AL Rookie of the Year (2012) 5 × Silver Slugger Award (2012 -- 2016) AL Hank Aaron Award (2014) AL RBI leader (2014) AL stolen base leader (2012) 30 -- 30 club (2012) Hit for the cycle on May 21, 2013",
+      "score_breakdown": {
+        "dense": 0.04984315555051501,
+        "graph": 0.046189128050193796,
+        "fact": 0.1726689087413128
+      }
+    },
+    {
+      "node_id": "chunk:list_of_major_league_baseball_career_hits_leaders_0",
+      "passage_index": 11,
+      "title": "List of Major League Baseball career hits leaders",
+      "score": 0.06716770438258401,
+      "text": "List of Major League Baseball career hits leaders\nPete Rose holds the Major League record for most career hits, with 4,256. Rose and Ty Cobb are the only players with 4,000 career hits. George Davis was the first switch hitter to collect 2,000 hits, doing so during the 1902 season. Ichiro Suzuki is the current active leader.",
+      "score_breakdown": {
+        "dense": 0.05022641421757262,
+        "graph": 0.046192347123729056,
+        "fact": 0.17123648283866907
+      }
+    },
+    {
+      "node_id": "chunk:new_york_yankees_0",
+      "passage_index": 3,
+      "title": "New York Yankees",
+      "score": 0.06677159846832814,
+      "text": "New York Yankees\nThe New York Yankees are an American professional baseball team based in the New York City borough of the Bronx. The Yankees compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. They are one of two major league clubs based in New York City; the other club is the National League (NL)'s New York Mets. In the season, the club began play in the AL as the Baltimore Orioles (no relation to the modern Baltimore Orioles). Frank Farrell and Bill Devery purchased the franchise that had ceased operations and moved it to New York City, renaming the club the New York Highlanders. The Highlanders were officially renamed the Yankees in .",
+      "score_breakdown": {
+        "dense": 0.04990315148420436,
+        "graph": 0.047299979841034685,
+        "fact": 0.16756580799803555
+      }
+    },
+    {
+      "node_id": "chunk:miguel_cabrera_0",
+      "passage_index": 4,
+      "title": "Miguel Cabrera",
+      "score": 0.06600006794927327,
+      "text": "Miguel Cabrera\nJosé Miguel Cabrera Torres (born April 18, 1983), commonly known as Miguel Cabrera and nicknamed \"Miggy\", is a Venezuelan professional baseball player. He is the first baseman for the Detroit Tigers of Major League Baseball (MLB). Since his debut in 2003 he has been a two-time American League (AL) Most Valuable Player (MVP) award winner, a four-time AL batting champion, and an 11-time MLB All-Star. He has played at first and third base for most of his major league career, but primarily played left and right field before 2006. He claimed the 17th MLB Triple Crown in 2012, the first to do so in 45 seasons.",
+      "score_breakdown": {
+        "dense": 0.049869100144329166,
+        "graph": 0.04590010642092204,
+        "fact": 0.16534687295743739
+      }
+    },
+    {
+      "node_id": "chunk:los_angeles_dodgers_0",
+      "passage_index": 14,
+      "title": "Los Angeles Dodgers",
+      "score": 0.06572961951352282,
+      "text": "Los Angeles Dodgers\nThe Dodgers as a franchise have won six World Series titles and 21 National League pennants. 11 NL MVP award winners have played for the Dodgers, winning a total of 13 MVP Awards, Eight Cy Young Award winners have pitched for the Dodgers, winning a total of twelve Cy Young Awards. The team has also produced 17 Rookie of the Year Award winners, including four consecutive from 1979 to 1982 and five consecutive from 1992 to 1996.",
+      "score_breakdown": {
+        "dense": 0.04997961007962354,
+        "graph": 0.04610834980451491,
+        "fact": 0.16272219352250272
+      }
+    },
+    {
+      "node_id": "chunk:ichiro_suzuki_0",
+      "passage_index": 1,
+      "title": "Ichiro Suzuki",
+      "score": 0.06546102148740049,
+      "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He",
+      "score_breakdown": {
+        "dense": 0.04996531833126554,
+        "graph": 0.04637045437966026,
+        "fact": 0.1604597339420425
+      }
+    },
+    {
+      "node_id": "chunk:major_league_baseball_all_star_game_most_valuable_player_award_0",
+      "passage_index": 15,
+      "title": "Major League Baseball All-Star Game Most Valuable Player Award",
+      "score": 0.041584771009692455,
+      "text": "Major League Baseball All-Star Game Most Valuable Player Award\nAs of 2018, NL players have won the award 27 times (including one award shared by two players), and American League (AL) players have won 30 times. Baltimore Orioles players have won the most awards for a single franchise (with six); players from the Cincinnati Reds, Los Angeles Dodgers and San Francisco Giants are tied for the most in the NL with five each. Five players have won the award twice: Willie Mays (1963, 1968), Steve Garvey (1974, 1978), Gary Carter (1981, 1984), Cal Ripken, Jr. (1991, 2001), and Mike Trout (2014, 2015). The award has been shared by multiple players once; Bill Madlock and Jon Matlack shared the award in 1975. Two players have won the award for a game in which their league lost: Brooks Robinson in 1966 and Carl Yastrzemski in 1970. One pair of awardees were father and son (Ken Griffey Sr. and Ken Griffey Jr.), and another were brothers (Roberto Alomar and Sandy Alomar, Jr.). Mike Trout of the Los Angeles Angels of Anaheim became the first player ever to win the MVP award in",
+      "score_breakdown": {
+        "dense": 0.050234183214682024,
+        "graph": 0.046519900805391125,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:major_league_baseball_all_star_game_most_valuable_player_award_1",
+      "passage_index": 15,
+      "title": "Major League Baseball All-Star Game Most Valuable Player Award",
+      "score": 0.04120814910600079,
+      "text": "Major League Baseball All-Star Game Most Valuable Player Award\nfather and son (Ken Griffey Sr. and Ken Griffey Jr.), and another were brothers (Roberto Alomar and Sandy Alomar, Jr.). Mike Trout of the Los Angeles Angels of Anaheim became the first player ever to win the MVP award in back - to - back years in the 86 - year history of the MLB All - Star Game when he accomplished the feat in both 2014 and 2015. Alex Bregman of the Houston Astros is the most recent MLB All - Star Game MVP, winning the award in 2018. Only six players have won the MVP award in the only All - Star Game in which they appeared; LaMarr Hoyt, Bo Jackson, J.D. Drew, Melky Cabrera, Eric Hosmer, and Alex Bregman.",
+      "score_breakdown": {
+        "dense": 0.05013047911958613,
+        "graph": 0.04545461863409472,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:hart_memorial_trophy_0",
+      "passage_index": 10,
+      "title": "Hart Memorial Trophy",
+      "score": 0.04118990254134248,
+      "text": "Hart Memorial Trophy\nWayne Gretzky won the award a record nine times during his career, eight consecutively. He has been named MVP more times than any other player in the history of the other three North American major professional leagues (Major League Baseball (MLB), National Basketball Association, and National Football League). Barry Bonds is second, having won the MVP award seven times in the MLB. Gretzky and his Edmonton Oilers teammate Mark Messier are the only players to win the Hart Trophy with more than one team.",
+      "score_breakdown": {
+        "dense": 0.050119952159268254,
+        "graph": 0.045413096179149785,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_major_league_baseball_career_on_base_percentage_leaders_0",
+      "passage_index": 9,
+      "title": "List of Major League Baseball career on-base percentage leaders",
+      "score": 0.0411427810607127,
+      "text": "List of Major League Baseball career on-base percentage leaders\nIn baseball statistics, on - base percentage (OBP) is a measure of how often a batter reaches base for any reason other than a fielding error, fielder's choice, dropped or uncaught third strike, fielder's obstruction, or catcher's interference. OBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies. A hitter with a. 400 on - base percentage is considered to be great and rare; only 55 players in MLB history with at least 3,000 career plate appearances (PA) have maintained such an OBP. Left fielder Ted Williams, who played 19 seasons for the Boston Red Sox, has the highest career on - base percentage,. 4817, in MLB history. Williams led the American League (AL) in on - base percentage in twelve seasons, the most such seasons for any player in the major leagues. Barry Bonds led the National League (NL) in ten seasons, a NL record. Williams also posted the then - highest single",
+      "score_breakdown": {
+        "dense": 0.05000097130330602,
+        "graph": 0.04547415614631462,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:los_angeles_dodgers",
+        "score": 0.033907719200494305,
+        "text": "Los Angeles Dodgers",
+        "metadata": {
+          "canonical_name": "Los Angeles Dodgers",
+          "aliases": [
+            "LAD",
+            "Los Angeles Dodgers"
+          ],
+          "surface_forms": [
+            "LAD",
+            "Los Angeles Dodgers"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:major_leagues",
+        "score": 0.027868641363005514,
+        "text": "Major Leagues",
+        "metadata": {
+          "canonical_name": "Major Leagues",
+          "aliases": [
+            "ML",
+            "Major Leagues"
+          ],
+          "surface_forms": [
+            "ML",
+            "Major Leagues"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:los_angeles_angels_of_anaheim",
+        "score": 0.0252437001492537,
+        "text": "Los Angeles Angels of Anaheim",
+        "metadata": {
+          "canonical_name": "Los Angeles Angels of Anaheim",
+          "aliases": [
+            "LAAOA",
+            "Los Angeles Angels of Anaheim"
+          ],
+          "surface_forms": [
+            "LAAOA",
+            "Los Angeles Angels of Anaheim"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:mike_trout",
+        "score": 0.024667801208398288,
+        "text": "Mike Trout",
+        "metadata": {
+          "canonical_name": "Mike Trout",
+          "aliases": [
+            "MT",
+            "Mike Trout"
+          ],
+          "surface_forms": [
+            "MT",
+            "Mike Trout"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:los_angeles_angels",
+        "score": 0.024585202027622863,
+        "text": "Los Angeles Angels",
+        "metadata": {
+          "canonical_name": "Los Angeles Angels",
+          "aliases": [
+            "LAA",
+            "Los Angeles Angels"
+          ],
+          "surface_forms": [
+            "LAA",
+            "Los Angeles Angels"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:new_york_yankees_0_3_in_the_season_the_club_began_play_in_the_al_as_the_baltimore_orioles_no_relati",
+        "score": 0.01845699649806657,
+        "text": "In the season, the club began play in the AL as the Baltimore Orioles (no relation to the modern Baltimore Orioles).",
+        "metadata": {
+          "title": "New York Yankees",
+          "chunk_id": "chunk:new_york_yankees_0",
+          "sentence_index": 3,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Baltimore Orioles",
+              "relation": "played in",
+              "tail": "AL"
+            },
+            {
+              "head": "Baltimore Orioles",
+              "relation": "has no relation to",
+              "tail": "modern Baltimore Orioles"
+            }
+          ],
+          "entities": [
+            "Baltimore Orioles",
+            "AL",
+            "modern Baltimore Orioles"
+          ],
+          "entity_ids": [
+            "entity:al",
+            "entity:baltimore_orioles",
+            "entity:modern_baltimore_orioles"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:list_of_major_league_baseball_career_hits_leaders_0_0_pete_rose_holds_the_major_league_record_for_most_career_hits_with_",
+        "score": 0.01742185434737105,
+        "text": "Pete Rose holds the Major League record for most career hits, with 4,256.",
+        "metadata": {
+          "title": "List of Major League Baseball career hits leaders",
+          "chunk_id": "chunk:list_of_major_league_baseball_career_hits_leaders_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Pete Rose",
+              "relation": "holds record for",
+              "tail": "most career hits in Major League"
+            }
+          ],
+          "entities": [
+            "Pete Rose",
+            "Major League"
+          ],
+          "entity_ids": [
+            "entity:major_league",
+            "entity:most_career_hits_in_major_league",
+            "entity:pete_rose"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:los_angeles_dodgers_0_1_11_nl_mvp_award_winners_have_played_for_the_dodgers_winning_a_total_of_13_mvp_a",
+        "score": 0.013658344096684608,
+        "text": "11 NL MVP award winners have played for the Dodgers, winning a total of 13 MVP Awards, Eight Cy Young Award winners have pitched for the Dodgers, winning a total of twelve Cy Young Awards.",
+        "metadata": {
+          "title": "Los Angeles Dodgers",
+          "chunk_id": "chunk:los_angeles_dodgers_0",
+          "sentence_index": 1,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "11 NL MVP award winners",
+              "relation": "have played for",
+              "tail": "Dodgers"
+            },
+            {
+              "head": "Dodgers",
+              "relation": "have won",
+              "tail": "13 MVP Awards"
+            },
+            {
+              "head": "8 Cy Young Award winners",
+              "relation": "have pitched for",
+              "tail": "Dodgers"
+            },
+            {
+              "head": "Dodgers",
+              "relation": "have won",
+              "tail": "12 Cy Young Awards"
+            }
+          ],
+          "entities": [
+            "NL MVP award winners",
+            "Dodgers",
+            "MVP Awards",
+            "Cy Young Award winners",
+            "Cy Young Awards"
+          ],
+          "entity_ids": [
+            "entity:11_nl_mvp_award_winners",
+            "entity:12_cy_young_awards",
+            "entity:13_mvp_awards",
+            "entity:8_cy_young_award_winners",
+            "entity:cy_young_award_winners",
+            "entity:cy_young_awards",
+            "entity:dodgers",
+            "entity:mvp_awards",
+            "entity:nl_mvp_award_winners"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mike_trout_0_0_mike_trout_trout_in_2018_los_angeles_angels_no",
+        "score": 0.012963250091513733,
+        "text": "Mike Trout Trout in 2018 Los Angeles Angels -- No.",
+        "metadata": {
+          "title": "Mike Trout",
+          "chunk_id": "chunk:mike_trout_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Mike Trout",
+              "relation": "played for",
+              "tail": "Los Angeles Angels"
+            }
+          ],
+          "entities": [
+            "Mike Trout",
+            "Los Angeles Angels"
+          ],
+          "entity_ids": [
+            "entity:los_angeles_angels",
+            "entity:title_anchor_mike_trout"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:list_of_major_league_baseball_career_hits_leaders_0",
+        "score": 0.005147455256018167,
+        "text": "List of Major League Baseball career hits leaders\nPete Rose holds the Major League record for most career hits, with 4,256. Rose and Ty Cobb are the only players with 4,000 career hits. George Davis was the first switch hitter to collect 2,000 hits, doing so during the 1902 season. Ichiro Suzuki is the current active leader.",
+        "metadata": {
+          "title": "List of Major League Baseball career hits leaders",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:george_davis",
+            "entity:ichiro_suzuki",
+            "entity:major_league",
+            "entity:most_career_hits_in_major_league",
+            "entity:pete_rose",
+            "entity:rose",
+            "entity:ty_cobb"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:new_york_yankees_0",
+        "score": 0.00473445175049685,
+        "text": "New York Yankees\nThe New York Yankees are an American professional baseball team based in the New York City borough of the Bronx. The Yankees compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. They are one of two major league clubs based in New York City; the other club is the National League (NL)'s New York Mets. In the season, the club began play in the AL as the Baltimore Orioles (no relation to the modern Baltimore Orioles). Frank Farrell and Bill Devery purchased the franchise that had ceased operations and moved it to New York City, renaming the club the New York Highlanders. The Highlanders were officially renamed the Yankees in .",
+        "metadata": {
+          "title": "New York Yankees",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:al",
+            "entity:american_league_east_division",
+            "entity:american_professional_baseball_team",
+            "entity:baltimore_orioles",
+            "entity:bill_devery",
+            "entity:bronx",
+            "entity:frank_farrell",
+            "entity:frank_farrell_and_bill_devery",
+            "entity:highlanders",
+            "entity:major_league_baseball",
+            "entity:modern_baltimore_orioles",
+            "entity:national_league_nl",
+            "entity:new_york_city",
+            "entity:new_york_highlanders",
+            "entity:new_york_mets",
+            "entity:title_anchor_new_york_yankees",
+            "entity:yankees"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:mike_trout_0",
+        "score": 0.004662478765935686,
+        "text": "Mike Trout\nMike Trout Trout in 2018 Los Angeles Angels -- No. 27 Center fielder Born: (1991 - 08 - 07) August 7, 1991 (age 27) Vineland, New Jersey Bats: Right Throws: Right MLB debut July 8, 2011, for the Los Angeles Angels of Anaheim MLB statistics (through September 22, 2018) Batting average. 307 Hits 1,187 Home runs 240 Runs batted in 648 Stolen bases 189 Teams Los Angeles Angels of Anaheim / Los Angeles Angels (2011 -- present) Career highlights and awards 7 × All - Star (2012 -- 2018) 2 × AL MVP (2014, 2016) AL Rookie of the Year (2012) 5 × Silver Slugger Award (2012 -- 2016) AL Hank Aaron Award (2014) AL RBI leader (2014) AL stolen base leader (2012) 30 -- 30 club (2012) Hit for the cycle on May 21, 2013",
+        "metadata": {
+          "title": "Mike Trout",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:all",
+            "entity:anaheim",
+            "entity:august",
+            "entity:batting",
+            "entity:born",
+            "entity:career",
+            "entity:center",
+            "entity:hank_aaron_award",
+            "entity:hit",
+            "entity:hits",
+            "entity:home",
+            "entity:july",
+            "entity:los_angeles_angels",
+            "entity:may",
+            "entity:new_jersey_bats",
+            "entity:right",
+            "entity:right_throws",
+            "entity:rookie",
+            "entity:runs",
+            "entity:september",
+            "entity:silver_slugger_award",
+            "entity:star",
+            "entity:stolen",
+            "entity:teams_los_angeles_angels",
+            "entity:title_anchor_mike_trout",
+            "entity:vineland",
+            "entity:year"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ichiro_suzuki_0",
+        "score": 0.0037804086618967933,
+        "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He",
+        "metadata": {
+          "title": "Ichiro Suzuki",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:after",
+            "entity:ichiro",
+            "entity:japan",
+            "entity:japanese_professional_baseball_outfielder",
+            "entity:major_league_baseball",
+            "entity:mariners",
+            "entity:marlins",
+            "entity:miami_marlins",
+            "entity:mlb",
+            "entity:mlb_s_single_season_record_for_hits_with_262",
+            "entity:new_york_yankees",
+            "entity:nippon_professional_baseball",
+            "entity:october_22_1973",
+            "entity:orix_blue_wave",
+            "entity:seattle_mariners",
+            "entity:title_anchor_ichiro_suzuki"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Mike Trout\nMike Trout\nMike Trout Trout in 2018 Los Angeles Angels -- No. 27 Center fielder Born: (1991 - 08 - 07) August 7, 1991 (age 27) Vineland, New Jersey Bats: Right Throws: Right MLB debut July 8, 2011, for the Los Angeles Angels of Anaheim MLB statistics (through September 22, 2018) Batting average. 307 Hits 1,187 Home runs 240 Runs batted in 648 Stolen bases 189 Teams Los Angeles Angels of Anaheim / Los Angeles Angels (2011 -- present) Career highlights and awards 7 × All - Star (2012 -- 2018) 2 × AL MVP (2014, 2016) AL Rookie of the Year (2012) 5 × Silver Slugger Award (2012 -- 2016) AL Hank Aaron Award (2014) AL RBI leader (2014) AL stolen base leader (2012) 30 -- 30 club (2012) Hit for the cycle on May 21, 2013\n\nList of Major League Baseball career hits leaders\nList of Major League Baseball career hits leaders\nPete Rose holds the Major League record for most career hits, with 4,256. Rose and Ty Cobb are the only players with 4,000 career hits. George Davis was the first switch hitter to collect 2,000 hits, doing so during the 1902 season. Ichiro Suzuki is the current active leader.\n\nNew York Yankees\nNew York Yankees\nThe New York Yankees are an American professional baseball team based in the New York City borough of the Bronx. The Yankees compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. They are one of two major league clubs based in New York City; the other club is the National League (NL)'s New York Mets. In the season, the club began play in the AL as the Baltimore Orioles (no relation to the modern Baltimore Orioles). Frank Farrell and Bill Devery purchased the franchise that had ceased operations and moved it to New York City, renaming the club the New York Highlanders. The Highlanders were officially renamed the Yankees in .\n\nMiguel Cabrera\nMiguel Cabrera\nJosé Miguel Cabrera Torres (born April 18, 1983), commonly known as Miguel Cabrera and nicknamed \"Miggy\", is a Venezuelan professional baseball player. He is the first baseman for the Detroit Tigers of Major League Baseball (MLB). Since his debut in 2003 he has been a two-time American League (AL) Most Valuable Player (MVP) award winner, a four-time AL batting champion, and an 11-time MLB All-Star. He has played at first and third base for most of his major league career, but primarily played left and right field before 2006. He claimed the 17th MLB Triple Crown in 2012, the first to do so in 45 seasons.\n\nLos Angeles Dodgers\nLos Angeles Dodgers\nThe Dodgers as a franchise have won six World Series titles and 21 National League pennants. 11 NL MVP award winners have played for the Dodgers, winning a total of 13 MVP Awards, Eight Cy Young Award winners have pitched for the Dodgers, winning a total of twelve Cy Young Awards. The team has also produced 17 Rookie of the Year Award winners, including four consecutive from 1979 to 1982 and five consecutive from 1992 to 1996.\n\nIchiro Suzuki\nBetween his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.\n\nIchiro Suzuki\nIchiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He\n\nIchiro Suzuki\nIchiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history.\n\nIchiro Suzuki\nHe also has recorded the most hits of all Japanese born players in MLB history.\n\nList of Major League Baseball career on-base percentage leaders\nOBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies.\n\nList of Major League Baseball career on-base percentage leaders\nList of Major League Baseball career on-base percentage leaders\nIn baseball statistics, on - base percentage (OBP) is a measure of how often a batter reaches base for any reason other than a fielding error, fielder's choice, dropped or uncaught third strike, fielder's obstruction, or catcher's interference. OBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies. A hitter with a. 400 on - base percentage is considered to be great and rare; only 55 players in MLB history with at least 3,000 career plate appearances (PA) have maintained such an OBP. Left fielder Ted Williams, who played 19 seasons for the Boston Red Sox, has the highest career on - base percentage,. 4817, in MLB history. Williams led the American League (AL) in on - base percentage in twelve seasons, the most such seasons for any player in the major leagues. Barry Bonds led the National League (NL) in ten seasons, a NL record. Williams also posted the then - highest single",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:mike_trout_0",
+        "passage_index": 16,
+        "title": "Mike Trout",
+        "score": 0.06717081027903832,
+        "text": "Mike Trout\nMike Trout Trout in 2018 Los Angeles Angels -- No. 27 Center fielder Born: (1991 - 08 - 07) August 7, 1991 (age 27) Vineland, New Jersey Bats: Right Throws: Right MLB debut July 8, 2011, for the Los Angeles Angels of Anaheim MLB statistics (through September 22, 2018) Batting average. 307 Hits 1,187 Home runs 240 Runs batted in 648 Stolen bases 189 Teams Los Angeles Angels of Anaheim / Los Angeles Angels (2011 -- present) Career highlights and awards 7 × All - Star (2012 -- 2018) 2 × AL MVP (2014, 2016) AL Rookie of the Year (2012) 5 × Silver Slugger Award (2012 -- 2016) AL Hank Aaron Award (2014) AL RBI leader (2014) AL stolen base leader (2012) 30 -- 30 club (2012) Hit for the cycle on May 21, 2013",
+        "score_breakdown": {
+          "dense": 0.04984315555051501,
+          "graph": 0.046189128050193796,
+          "fact": 0.1726689087413128
+        }
+      },
+      {
+        "node_id": "chunk:list_of_major_league_baseball_career_hits_leaders_0",
+        "passage_index": 11,
+        "title": "List of Major League Baseball career hits leaders",
+        "score": 0.06716770438258401,
+        "text": "List of Major League Baseball career hits leaders\nPete Rose holds the Major League record for most career hits, with 4,256. Rose and Ty Cobb are the only players with 4,000 career hits. George Davis was the first switch hitter to collect 2,000 hits, doing so during the 1902 season. Ichiro Suzuki is the current active leader.",
+        "score_breakdown": {
+          "dense": 0.05022641421757262,
+          "graph": 0.046192347123729056,
+          "fact": 0.17123648283866907
+        }
+      },
+      {
+        "node_id": "chunk:new_york_yankees_0",
+        "passage_index": 3,
+        "title": "New York Yankees",
+        "score": 0.06677159846832814,
+        "text": "New York Yankees\nThe New York Yankees are an American professional baseball team based in the New York City borough of the Bronx. The Yankees compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. They are one of two major league clubs based in New York City; the other club is the National League (NL)'s New York Mets. In the season, the club began play in the AL as the Baltimore Orioles (no relation to the modern Baltimore Orioles). Frank Farrell and Bill Devery purchased the franchise that had ceased operations and moved it to New York City, renaming the club the New York Highlanders. The Highlanders were officially renamed the Yankees in .",
+        "score_breakdown": {
+          "dense": 0.04990315148420436,
+          "graph": 0.047299979841034685,
+          "fact": 0.16756580799803555
+        }
+      },
+      {
+        "node_id": "chunk:miguel_cabrera_0",
+        "passage_index": 4,
+        "title": "Miguel Cabrera",
+        "score": 0.06600006794927327,
+        "text": "Miguel Cabrera\nJosé Miguel Cabrera Torres (born April 18, 1983), commonly known as Miguel Cabrera and nicknamed \"Miggy\", is a Venezuelan professional baseball player. He is the first baseman for the Detroit Tigers of Major League Baseball (MLB). Since his debut in 2003 he has been a two-time American League (AL) Most Valuable Player (MVP) award winner, a four-time AL batting champion, and an 11-time MLB All-Star. He has played at first and third base for most of his major league career, but primarily played left and right field before 2006. He claimed the 17th MLB Triple Crown in 2012, the first to do so in 45 seasons.",
+        "score_breakdown": {
+          "dense": 0.049869100144329166,
+          "graph": 0.04590010642092204,
+          "fact": 0.16534687295743739
+        }
+      },
+      {
+        "node_id": "chunk:los_angeles_dodgers_0",
+        "passage_index": 14,
+        "title": "Los Angeles Dodgers",
+        "score": 0.06572961951352282,
+        "text": "Los Angeles Dodgers\nThe Dodgers as a franchise have won six World Series titles and 21 National League pennants. 11 NL MVP award winners have played for the Dodgers, winning a total of 13 MVP Awards, Eight Cy Young Award winners have pitched for the Dodgers, winning a total of twelve Cy Young Awards. The team has also produced 17 Rookie of the Year Award winners, including four consecutive from 1979 to 1982 and five consecutive from 1992 to 1996.",
+        "score_breakdown": {
+          "dense": 0.04997961007962354,
+          "graph": 0.04610834980451491,
+          "fact": 0.16272219352250272
+        }
+      },
+      {
+        "node_id": "chunk:ichiro_suzuki_0",
+        "passage_index": 1,
+        "title": "Ichiro Suzuki",
+        "score": 0.06546102148740049,
+        "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He",
+        "score_breakdown": {
+          "dense": 0.04996531833126554,
+          "graph": 0.04637045437966026,
+          "fact": 0.1604597339420425
+        }
+      },
+      {
+        "node_id": "chunk:major_league_baseball_all_star_game_most_valuable_player_award_0",
+        "passage_index": 15,
+        "title": "Major League Baseball All-Star Game Most Valuable Player Award",
+        "score": 0.041584771009692455,
+        "text": "Major League Baseball All-Star Game Most Valuable Player Award\nAs of 2018, NL players have won the award 27 times (including one award shared by two players), and American League (AL) players have won 30 times. Baltimore Orioles players have won the most awards for a single franchise (with six); players from the Cincinnati Reds, Los Angeles Dodgers and San Francisco Giants are tied for the most in the NL with five each. Five players have won the award twice: Willie Mays (1963, 1968), Steve Garvey (1974, 1978), Gary Carter (1981, 1984), Cal Ripken, Jr. (1991, 2001), and Mike Trout (2014, 2015). The award has been shared by multiple players once; Bill Madlock and Jon Matlack shared the award in 1975. Two players have won the award for a game in which their league lost: Brooks Robinson in 1966 and Carl Yastrzemski in 1970. One pair of awardees were father and son (Ken Griffey Sr. and Ken Griffey Jr.), and another were brothers (Roberto Alomar and Sandy Alomar, Jr.). Mike Trout of the Los Angeles Angels of Anaheim became the first player ever to win the MVP award in",
+        "score_breakdown": {
+          "dense": 0.050234183214682024,
+          "graph": 0.046519900805391125,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:major_league_baseball_all_star_game_most_valuable_player_award_1",
+        "passage_index": 15,
+        "title": "Major League Baseball All-Star Game Most Valuable Player Award",
+        "score": 0.04120814910600079,
+        "text": "Major League Baseball All-Star Game Most Valuable Player Award\nfather and son (Ken Griffey Sr. and Ken Griffey Jr.), and another were brothers (Roberto Alomar and Sandy Alomar, Jr.). Mike Trout of the Los Angeles Angels of Anaheim became the first player ever to win the MVP award in back - to - back years in the 86 - year history of the MLB All - Star Game when he accomplished the feat in both 2014 and 2015. Alex Bregman of the Houston Astros is the most recent MLB All - Star Game MVP, winning the award in 2018. Only six players have won the MVP award in the only All - Star Game in which they appeared; LaMarr Hoyt, Bo Jackson, J.D. Drew, Melky Cabrera, Eric Hosmer, and Alex Bregman.",
+        "score_breakdown": {
+          "dense": 0.05013047911958613,
+          "graph": 0.04545461863409472,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:hart_memorial_trophy_0",
+        "passage_index": 10,
+        "title": "Hart Memorial Trophy",
+        "score": 0.04118990254134248,
+        "text": "Hart Memorial Trophy\nWayne Gretzky won the award a record nine times during his career, eight consecutively. He has been named MVP more times than any other player in the history of the other three North American major professional leagues (Major League Baseball (MLB), National Basketball Association, and National Football League). Barry Bonds is second, having won the MVP award seven times in the MLB. Gretzky and his Edmonton Oilers teammate Mark Messier are the only players to win the Hart Trophy with more than one team.",
+        "score_breakdown": {
+          "dense": 0.050119952159268254,
+          "graph": 0.045413096179149785,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_major_league_baseball_career_on_base_percentage_leaders_0",
+        "passage_index": 9,
+        "title": "List of Major League Baseball career on-base percentage leaders",
+        "score": 0.0411427810607127,
+        "text": "List of Major League Baseball career on-base percentage leaders\nIn baseball statistics, on - base percentage (OBP) is a measure of how often a batter reaches base for any reason other than a fielding error, fielder's choice, dropped or uncaught third strike, fielder's obstruction, or catcher's interference. OBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies. A hitter with a. 400 on - base percentage is considered to be great and rare; only 55 players in MLB history with at least 3,000 career plate appearances (PA) have maintained such an OBP. Left fielder Ted Williams, who played 19 seasons for the Boston Red Sox, has the highest career on - base percentage,. 4817, in MLB history. Williams led the American League (AL) in on - base percentage in twelve seasons, the most such seasons for any player in the major leagues. Barry Bonds led the National League (NL) in ten seasons, a NL record. Williams also posted the then - highest single",
+        "score_breakdown": {
+          "dense": 0.05000097130330602,
+          "graph": 0.04547415614631462,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the type of game played just before the league MVP is awarded?",
+        "resolved_sub_question": "What is the type of game played just before the league MVP is awarded?",
+        "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+        "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+        "score": 0.4082755391427769,
+        "source_title": "Ichiro Suzuki",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not mention the type of game played just before the league MVP is awarded.",
+        "hop_raw_response": "The provided evidence does not mention the type of game played just before the league MVP is awarded.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which team has played the most games of this type?",
+        "resolved_sub_question": "Which team has played the most games of this type?",
+        "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+        "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+        "score": 0.39400220580944356,
+        "source_title": "Ichiro Suzuki",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not specify a particular type of game or a specific team that has played the most games of any type. The text focuses on Ichiro Suzuki's achievements and career statistics but does not provide information about the frequency or type of games played by any team.",
+        "hop_raw_response": "The provided evidence does not specify a particular type of game or a specific team that has played the most games of any type. The text focuses on Ichiro Suzuki's achievements and career statistics but does not provide information about the frequency or type of games played by any team.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+          }
+        ]
+      },
+      {
+        "sub_question": "What league does this team belong to?",
+        "resolved_sub_question": "What league does this team belong to?",
+        "sentence_id": "sentence:ichiro_suzuki_0_6_between_his_major_league_career_in_both_japan_and_the_united_states_ichiro_has",
+        "sentence": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.",
+        "score": 0.35666887247611023,
+        "source_title": "Ichiro Suzuki",
+        "hop_answer": "Major League Baseball",
+        "hop_thought": "The text mentions that Ichiro Suzuki played in Major League Baseball (MLB) in the United States, specifically with the Seattle Mariners, New York Yankees, and Miami Marlins. Since the question refers to the team that has played the most games of a certain type, and these are all MLB teams, it can be inferred that the league in question is MLB.",
+        "hop_raw_response": "The text mentions that Ichiro Suzuki played in Major League Baseball (MLB) in the United States, specifically with the Seattle Mariners, New York Yankees, and Miami Marlins. Since the question refers to the team that has played the most games of a certain type, and these are all MLB teams, it can be inferred that the league in question is MLB.\nAnswer: Major League Baseball",
+        "evidence_passages": [
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues."
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nIchiro Suzuki / ˈiːtʃɪroʊ suːˈzuːki / (鈴木一朗, Suzuki Ichirō, born October 22, 1973), often referred to mononymously as Ichiro (イチロー, Ichirō), is a Japanese professional baseball outfielder. With 27 seasons combined in top - level professional leagues, he spent the bulk of his career with two teams: nine seasons with the Orix Blue Wave of Nippon Professional Baseball (NPB) in Japan, where he began his career, and 12 with the Seattle Mariners of Major League Baseball (MLB) in the United States. After playing for the Mariners, he played two and a half seasons in MLB with the New York Yankees before signing with the Miami Marlins. Ichiro played three seasons with the Marlins before returning to the Mariners in 2018. Ichiro established a number of batting records, including MLB's single - season record for hits with 262. He achieved 10 consecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He"
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who has had the most hits in this league?",
+        "resolved_sub_question": "Who has had the most hits in this league? Context: Major League Baseball.",
+        "sentence_id": "sentence:ichiro_suzuki_1_2_he_also_has_recorded_the_most_hits_of_all_japanese_born_players_in_mlb_history",
+        "sentence": "He also has recorded the most hits of all Japanese born players in MLB history.",
+        "score": 0.4529536622529464,
+        "source_title": "Ichiro Suzuki",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context indicates that we are looking for the player with the most hits in Major League Baseball (MLB). The evidence from the Wikipedia article about Ichiro Suzuki states that he has the most hits by any player in top-tier professional leagues, including MLB. However, it does not explicitly state that he has the most hits in MLB alone, and there could be other players with more hits specifically in MLB.",
+        "hop_raw_response": "The context indicates that we are looking for the player with the most hits in Major League Baseball (MLB). The evidence from the Wikipedia article about Ichiro Suzuki states that he has the most hits by any player in top-tier professional leagues, including MLB. However, it does not explicitly state that he has the most hits in MLB alone, and there could be other players with more hits specifically in MLB.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Ichiro Suzuki",
+            "text": "He also has recorded the most hits of all Japanese born players in MLB history."
+          },
+          {
+            "title": "Ichiro Suzuki",
+            "text": "Ichiro Suzuki\nconsecutive 200 - hit seasons, the longest streak by any player in history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues. He also has recorded the most hits of all Japanese born players in MLB history."
+          },
+          {
+            "title": "List of Major League Baseball career on-base percentage leaders",
+            "text": "OBP is calculated in Major League Baseball (MLB) by dividing the sum of hits, walks, and times hit by a pitch by the sum of at - bats, walks, times hit by pitch and sacrifice flies."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the type of game played just before the league MVP is awarded? (source: Ichiro Suzuki)\n2. Which team has played the most games of this type? (source: Ichiro Suzuki)\n3. What league does this team belong to? => Major League Baseball (source: Ichiro Suzuki)\n4. Who has had the most hits in this league? (source: Ichiro Suzuki)\n\nFact hints:\n- Pete Rose holds record for most career hits in Major League\n- Seattle Mariners is part of Major League Baseball\n\nWikipedia Title: List of Major League Baseball career hits leaders\nList of Major League Baseball career hits leaders Pete Rose holds the Major League record for most career hits, with 4,256. Ichiro Suzuki is the current active leader.\n\nWikipedia Title: Ichiro Suzuki\nHe also has recorded the most hits of all Japanese born players in MLB history. Between his major league career in both Japan and the United States, Ichiro has the most hits by any player in top - tier professional leagues.\n\nWikipedia Title: List of Major League Baseball career on-base percentage leaders\nLeft fielder Ted Williams, who played 19 seasons for the Boston Red Sox, has the highest career on - base percentage,. Williams led the American League (AL) in on - base percentage in twelve seasons, the most such seasons for any player in the major leagues.\n\nWikipedia Title: Miguel Cabrera\nHe is the first baseman for the Detroit Tigers of Major League Baseball (MLB). Since his debut in 2003 he has been a two-time American League (AL) Most Valuable Player (MVP) award winner, a four-time AL batting champion, and an 11-time MLB All-Star.\n\nWikipedia Title: New York Yankees\nThe Yankees compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. They are one of two major league clubs based in New York City; the other club is the National League (NL)'s New York Mets.\n\nQuestion: who has had the most hits in the league that includes the team that has played the most games of the type played just before the league MVP is awarded?\nDraft Answer: Pete Rose\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The team that has played the most games of the type played just before the league MVP is awarded is the Seattle Mariners, which belongs to Major League Baseball. Pete Rose holds the record for the most career hits in Major League Baseball.",
+  "predicted_answer": "Pete Rose",
+  "qa_raw_response": "{\n  \"thought\": \"The team that has played the most games of the type played just before the league MVP is awarded is the Seattle Mariners, which belongs to Major League Baseball. Pete Rose holds the record for the most career hits in Major League Baseball.\",\n  \"answer\": \"Pete Rose\",\n  \"support\": \"Pete Rose holds the Major League record for most career hits, with 4,256.\"\n}"
+}

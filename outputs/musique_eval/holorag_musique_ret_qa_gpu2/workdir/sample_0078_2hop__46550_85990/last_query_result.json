@@ -1,0 +1,1027 @@
+{
+  "query": "Who were the leaders of the opposition of the party that controlled the house of representatives in 2002?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [],
+  "raw_query_entities": [],
+  "query_entity_resolutions": [],
+  "sub_questions": [
+    "What party controlled the House of Representatives in 2002?",
+    "Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:minority_leader",
+      "score": 0.7092312911509397,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:current_minority_leader",
+      "score": 0.5929998378622489,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:democrats_house_leader_but_as_minority_leader",
+      "score": 0.54205345251627,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:democratic_party",
+      "score": 0.4310380854243412,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_majority_leader",
+      "score": 0.4194269030803272,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:democrats",
+      "score": 0.4015519503410409,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:members_from_democratic_party",
+      "score": 0.3966474174414897,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:majority_leader",
+      "score": 0.3934032301060586,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:democrats_house_leader",
+      "score": 0.3297149726275333,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:dick_gephardt",
+      "score": 0.2787373142030388,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:minority_whip",
+      "score": 0.26328486523471556,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:united_states_house",
+      "score": 0.26328486523471556,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:dick_gephardt_became_democrats_house_leader_but_as_minority_leader_sentence_party_leaders_of_the_united_states_house_of_",
+      "text": "Dick Gephardt became Democrats' House leader but as Minority Leader",
+      "head_id": "entity:dick_gephardt",
+      "tail_id": "entity:democrats_house_leader_but_as_minority_leader",
+      "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_2_halleck_who_became_republican_house_leader_and_minority_",
+      "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "document_index": 19,
+      "score": 0.2747624771896111
+    },
+    {
+      "fact_id": "fact:minority_leader_is_in_united_states_house_of_representatives_sentence_party_leaders_of_the_united_states_house_of_repres",
+      "text": "Minority Leader is in United States House of Representatives",
+      "head_id": "entity:minority_leader",
+      "tail_id": "entity:united_states_house_of_representatives",
+      "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+      "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "document_index": 13,
+      "score": 0.21940405436226296
+    },
+    {
+      "fact_id": "fact:opposition_is_made_up_of_members_from_democratic_party_sentence_leader_of_opposition_uganda_0_3_the_opposition_in_uganda",
+      "text": "Opposition is made up of members from Democratic Party",
+      "head_id": "entity:opposition",
+      "tail_id": "entity:members_from_democratic_party",
+      "sentence_id": "sentence:leader_of_opposition_uganda_0_3_the_opposition_in_uganda_is_made_up_of_members_from_forum_for_democratic_change",
+      "chunk_id": "chunk:leader_of_opposition_uganda_0",
+      "document_index": 16,
+      "score": 0.19193715266816952
+    },
+    {
+      "fact_id": "fact:democrats_related_to_house_sentence_party_leaders_of_the_united_states_house_of_representatives_0_0_starting_with_republ",
+      "text": "Democrats related_to House",
+      "head_id": "entity:democrats",
+      "tail_id": "entity:house",
+      "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_starting_with_republican_nicholas_longworth_in_1925_and_",
+      "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "document_index": 19,
+      "score": 0.16726125185211482
+    },
+    {
+      "fact_id": "fact:party_in_control_of_the_white_house_increased_number_of_seats_in_the_house_sentence_2002_united_states_house_of_represen",
+      "text": "party in control of the White House increased number of seats in the House",
+      "head_id": "entity:party_in_control_of_the_white_house",
+      "tail_id": "entity:number_of_seats_in_the_house",
+      "sentence_id": "sentence:2002_united_states_house_of_representatives_elections_0_3_together_with_gains_made_in_the_senate_it_was_one_of_the_few_m",
+      "chunk_id": "chunk:2002_united_states_house_of_representatives_elections_0",
+      "document_index": 17,
+      "score": 0.14154686335313474
+    },
+    {
+      "fact_id": "fact:nancy_pelosi_is_counterpart_to_majority_leader_sentence_party_leaders_of_the_united_states_house_of_representatives_0_0_",
+      "text": "Nancy Pelosi is counterpart to Majority Leader",
+      "head_id": "entity:nancy_pelosi",
+      "tail_id": "entity:majority_leader",
+      "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+      "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "document_index": 13,
+      "score": 0.13011836487134304
+    }
+  ],
+  "bridge_entities": [
+    "Republican Party"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What party controlled the House of Representatives in 2002?",
+      "resolved_sub_question": "What party controlled the House of Representatives in 2002?",
+      "sentence_id": "sentence:2002_united_states_house_of_representatives_elections_0_0_the_elections_for_the_united_states_house_of_representatives_o",
+      "sentence": "The Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W.",
+      "score": 0.48230473844084804,
+      "source_title": "2002 United States House of Representatives elections",
+      "hop_answer": "Republican Party",
+      "hop_thought": "The Republican Party gained a net eight seats in the 2002 United States House of Representatives elections, indicating they had control of the House.",
+      "hop_raw_response": "The Republican Party gained a net eight seats in the 2002 United States House of Representatives elections, indicating they had control of the House.\nAnswer: Republican Party",
+      "evidence_passages": [
+        {
+          "title": "2002 United States House of Representatives elections",
+          "text": "The Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W."
+        },
+        {
+          "title": "2002 United States House of Representatives elections",
+          "text": "2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998)."
+        },
+        {
+          "title": "Party leaders of the United States House of Representatives",
+          "text": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002?",
+      "resolved_sub_question": "Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002? Context: Republican Party.",
+      "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+      "sentence": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.",
+      "score": 0.33056185439549957,
+      "source_title": "Party leaders of the United States House of Representatives",
+      "hop_answer": "Unknown",
+      "hop_thought": "Since the Republican Party controlled the House of Representatives in 2002, the leader of the opposition party would be the Democratic Party's leader in the House, which is typically the Minority Leader. However, the specific name of the Minority Leader in 2002 is not mentioned in the provided evidence.",
+      "hop_raw_response": "Since the Republican Party controlled the House of Representatives in 2002, the leader of the opposition party would be the Democratic Party's leader in the House, which is typically the Minority Leader. However, the specific name of the Minority Leader in 2002 is not mentioned in the provided evidence.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Party leaders of the United States House of Representatives",
+          "text": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader."
+        },
+        {
+          "title": "Party leaders of the United States House of Representatives",
+          "text": "Party leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert."
+        },
+        {
+          "title": "Party leaders of the United States House of Representatives",
+          "text": "Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:minority_leader",
+      "score": 0.061137180376114,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:democrats_house_leader_but_as_minority_leader",
+      "score": 0.050689823065603004,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:current_minority_leader",
+      "score": 0.044751085506602256,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:majority_leader",
+      "score": 0.03931173015913916,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_majority_leader",
+      "score": 0.03298804252370094,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:democratic_party",
+      "score": 0.03201202129655046,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:democrats",
+      "score": 0.030560316808921364,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_2_halleck_who_became_republican_house_leader_and_minority_",
+      "score": 0.03040225108476128,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:members_from_democratic_party",
+      "score": 0.02793603349590241,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:democrats_house_leader",
+      "score": 0.026786273652907602,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+      "score": 0.02570135725791268,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:dick_gephardt",
+      "score": 0.024002950186948452,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:united_states_house",
+      "score": 0.022078531670774462,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:minority_whip",
+      "score": 0.021651379136468023,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:united_states_house_of_representatives",
+      "score": 0.021622527493252223,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:house_of_representatives",
+      "score": 0.02076606181908342,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:opposition",
+      "score": 0.02036125198554787,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:u_s_house_of_representatives",
+      "score": 0.01947665624079737,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nancy_pelosi",
+      "score": 0.018033400880033384,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "score": 0.017414720919129833,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+      "passage_index": 19,
+      "title": "Party leaders of the United States House of Representatives",
+      "score": 0.10393160126277876,
+      "text": "Party leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert.",
+      "score_breakdown": {
+        "dense": 0.05606206490761534,
+        "graph": 0.0648177803653371,
+        "fact": 0.3576808763599279
+      }
+    },
+    {
+      "node_id": "chunk:leader_of_opposition_uganda_0",
+      "passage_index": 16,
+      "title": "Leader of Opposition (Uganda)",
+      "score": 0.09684193464739822,
+      "text": "Leader of Opposition (Uganda)\nThe Leader of Opposition (LOP) in Uganda is the title bestowed upon the elected leader of the largest political party not within the ruling government. The Leader of Opposition appoints and heads an alternative Shadow Cabinet whose duty is to challenge and influence government legislation on the floor of Parliament The current Leader of Opposition and first Ugandan female to hold the position is Hon. Winnie Kiiza of the Forum for Democratic Change. The Opposition in Uganda is made up of members from Forum for Democratic Change, Democratic Party, Uganda People's Congress, Congress Party and JEEMA.",
+      "score_breakdown": {
+        "dense": 0.05556548949652758,
+        "graph": 0.05631162890273391,
+        "fact": 0.3292495116899192
+      }
+    },
+    {
+      "node_id": "chunk:2002_united_states_house_of_representatives_elections_0",
+      "passage_index": 17,
+      "title": "2002 United States House of Representatives elections",
+      "score": 0.0945834651257692,
+      "text": "2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).",
+      "score_breakdown": {
+        "dense": 0.056183708175225854,
+        "graph": 0.05573994612290689,
+        "fact": 0.31306961195015276
+      }
+    },
+    {
+      "node_id": "chunk:majority_leader_0",
+      "passage_index": 5,
+      "title": "Majority leader",
+      "score": 0.04740894702461705,
+      "text": "Majority leader\nIn the United States House of Representatives, the majority leader is elected by U.S. Congressmen in the political party holding the largest number of seats in the House. While the responsibilities vary depending upon the political climate, the Majority Leader of the United States House of Representatives typically sets the floor agenda and oversees the committee chairmen.",
+      "score_breakdown": {
+        "dense": 0.055588109943042634,
+        "graph": 0.05611828851981201,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:samuel_carey_bradshaw_0",
+      "passage_index": 15,
+      "title": "Samuel Carey Bradshaw",
+      "score": 0.047274656657277314,
+      "text": "Samuel Carey Bradshaw\nSamuel Carey Bradshaw (June 10, 1809 – June 9, 1872) was an Opposition Party member of the U.S. House of Representatives from Pennsylvania.",
+      "score_breakdown": {
+        "dense": 0.055518449688282484,
+        "graph": 0.05579836442907316,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:joe_aresimowicz_0",
+      "passage_index": 7,
+      "title": "Joe Aresimowicz",
+      "score": 0.047064314472870544,
+      "text": "Joe Aresimowicz\nJoe Aresimowicz (born November 5, 1970) is a Democratic member of the Connecticut House of Representatives and the current Speaker of the House. From 2013 to 2017, he served as Majority Leader.",
+      "score_breakdown": {
+        "dense": 0.05552027413961021,
+        "graph": 0.05509387898694976,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:united_states_house_of_representatives_0",
+      "passage_index": 10,
+      "title": "United States House of Representatives",
+      "score": 0.04704506702580599,
+      "text": "United States House of Representatives\nThe presiding officer is the Speaker of the House, who is elected by the members thereof and is therefore traditionally the leader of the controlling party. He or she and other floor leaders are chosen by the Democratic Caucus or the Republican Conference, depending on whichever party has more voting members. The House meets in the south wing of the United States Capitol.",
+      "score_breakdown": {
+        "dense": 0.055776904904452605,
+        "graph": 0.05455923109452352,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:speaker_of_the_united_states_house_of_representatives_0",
+      "passage_index": 14,
+      "title": "Speaker of the United States House of Representatives",
+      "score": 0.047020849963835085,
+      "text": "Speaker of the United States House of Representatives\nThe Speaker of the House is the presiding officer of the United States House of Representatives. The office was established in 1789 by Article I, Section 2 of the United States Constitution. The Speaker is the political and parliamentary leader of the House of Representatives, and is simultaneously the House's presiding officer, de facto leader of the body's majority party, and the institution's administrative head. Speakers also perform various other administrative and procedural functions. Given these several roles and responsibilities, the Speaker usually does not personally preside over debates. That duty is instead delegated to members of the House from the majority party. Neither does the Speaker regularly participate in floor debates nor vote.",
+      "score_breakdown": {
+        "dense": 0.055495971340789464,
+        "graph": 0.05499355242133627,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bob_irvin_0",
+      "passage_index": 2,
+      "title": "Bob Irvin",
+      "score": 0.04701808660036455,
+      "text": "Bob Irvin\nBob Irvin was an early leader of the modern Republican Party in Georgia in the United States. He served in the Georgia House of Representatives in the 1970s and again in the 1990s. He was the House Republican Leader. He ran unsuccessfully for the United States Senate in 2002, losing to Saxby Chambliss. He attracted attention in early 2005 by publicly calling for Ralph Reed to withdraw from the race for Lieutenant Governor of Georgia.",
+      "score_breakdown": {
+        "dense": 0.05566994503536508,
+        "graph": 0.054665389436379185,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:charles_e_jefferson_0",
+      "passage_index": 8,
+      "title": "Charles E. Jefferson",
+      "score": 0.04700900026883118,
+      "text": "Charles E. Jefferson\nCharles E. Jefferson is a former Democratic member of the Illinois House of Representatives, who represented the 67th District from April 2001 to July 2014. He served as Assistant Majority Leader. He resigned from the Illinois House of Representatives July 1, 2014. He was a member of the Winnebago County Board prior to serving as a State Representative.",
+      "score_breakdown": {
+        "dense": 0.05519772704435966,
+        "graph": 0.05550083464811122,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:minority_leader",
+        "score": 0.061137180376114,
+        "text": "Minority Leader",
+        "metadata": {
+          "canonical_name": "Minority Leader",
+          "aliases": [
+            "ML",
+            "Minority Leader"
+          ],
+          "surface_forms": [
+            "ML",
+            "Minority Leader"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:democrats_house_leader_but_as_minority_leader",
+        "score": 0.050689823065603004,
+        "text": "Democrats' House leader but as Minority Leader",
+        "metadata": {
+          "canonical_name": "Democrats' House leader but as Minority Leader",
+          "aliases": [
+            "DHLBAML",
+            "Democrats' House leader but as Minority Leader"
+          ],
+          "surface_forms": [
+            "DHLBAML",
+            "Democrats' House leader but as Minority Leader"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:current_minority_leader",
+        "score": 0.044751085506602256,
+        "text": "current Minority Leader",
+        "metadata": {
+          "canonical_name": "current Minority Leader",
+          "aliases": [
+            "CML",
+            "current Minority Leader"
+          ],
+          "surface_forms": [
+            "CML",
+            "current Minority Leader"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:majority_leader",
+        "score": 0.03931173015913916,
+        "text": "Majority Leader",
+        "metadata": {
+          "canonical_name": "Majority Leader",
+          "aliases": [
+            "ML",
+            "Majority Leader"
+          ],
+          "surface_forms": [
+            "ML",
+            "Majority Leader"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_2_halleck_who_became_republican_house_leader_and_minority_",
+        "score": 0.03040225108476128,
+        "text": "Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections.",
+        "metadata": {
+          "title": "Party leaders of the United States House of Representatives",
+          "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+          "sentence_index": 2,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Halleck",
+              "relation": "became",
+              "tail": "Republican House leader and Minority Leader from 1959 to 1965"
+            },
+            {
+              "head": "Dick Gephardt",
+              "relation": "became",
+              "tail": "Democrats' House leader but as Minority Leader"
+            }
+          ],
+          "entities": [
+            "Halleck",
+            "Republican House leader",
+            "Minority Leader",
+            "Hale Boggs",
+            "Dick Gephardt",
+            "Democrats' House leader"
+          ],
+          "entity_ids": [
+            "entity:democrats_house_leader",
+            "entity:democrats_house_leader_but_as_minority_leader",
+            "entity:dick_gephardt",
+            "entity:hale_boggs",
+            "entity:halleck",
+            "entity:minority_leader",
+            "entity:republican_house_leader",
+            "entity:republican_house_leader_and_minority_leader_from_1959_to_1965"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+        "score": 0.02570135725791268,
+        "text": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.",
+        "metadata": {
+          "title": "Party leaders of the United States House of Representatives",
+          "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Nancy Pelosi",
+              "relation": "is",
+              "tail": "current Minority Leader"
+            },
+            {
+              "head": "Nancy Pelosi",
+              "relation": "is counterpart to",
+              "tail": "Majority Leader"
+            },
+            {
+              "head": "Minority Leader",
+              "relation": "is in",
+              "tail": "United States House of Representatives"
+            }
+          ],
+          "entities": [
+            "Nancy Pelosi",
+            "United States House of Representatives",
+            "Majority Leader"
+          ],
+          "entity_ids": [
+            "entity:current_minority_leader",
+            "entity:majority_leader",
+            "entity:minority_leader",
+            "entity:nancy_pelosi",
+            "entity:united_states_house_of_representatives"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:leader_of_opposition_uganda_0_3_the_opposition_in_uganda_is_made_up_of_members_from_forum_for_democratic_change",
+        "score": 0.016213005005995578,
+        "text": "The Opposition in Uganda is made up of members from Forum for Democratic Change, Democratic Party, Uganda People's Congress, Congress Party and JEEMA.",
+        "metadata": {
+          "title": "Leader of Opposition (Uganda)",
+          "chunk_id": "chunk:leader_of_opposition_uganda_0",
+          "sentence_index": 3,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Opposition",
+              "relation": "is made up of",
+              "tail": "members from Forum for Democratic Change"
+            },
+            {
+              "head": "Opposition",
+              "relation": "is made up of",
+              "tail": "members from Democratic Party"
+            },
+            {
+              "head": "Opposition",
+              "relation": "is made up of",
+              "tail": "members from Uganda People's Congress"
+            },
+            {
+              "head": "Opposition",
+              "relation": "is made up of",
+              "tail": "members from Congress Party"
+            },
+            {
+              "head": "Opposition",
+              "relation": "is made up of",
+              "tail": "members from JEEMA"
+            }
+          ],
+          "entities": [
+            "Opposition",
+            "Forum for Democratic Change",
+            "Democratic Party",
+            "Uganda People's Congress",
+            "Congress Party",
+            "JEEMA"
+          ],
+          "entity_ids": [
+            "entity:congress_party",
+            "entity:democratic_party",
+            "entity:forum_for_democratic_change",
+            "entity:jeema",
+            "entity:members_from_congress_party",
+            "entity:members_from_democratic_party",
+            "entity:members_from_forum_for_democratic_change",
+            "entity:members_from_jeema",
+            "entity:members_from_uganda_people_s_congress",
+            "entity:opposition",
+            "entity:uganda_people_s_congress"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_starting_with_republican_nicholas_longworth_in_1925_and_",
+        "score": 0.013175307217484934,
+        "text": "Starting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent.",
+        "metadata": {
+          "title": "Party leaders of the United States House of Representatives",
+          "chunk_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Starting",
+              "relation": "related_to",
+              "tail": "Republican Nicholas Longworth"
+            },
+            {
+              "head": "Republican Nicholas Longworth",
+              "relation": "related_to",
+              "tail": "Democrats"
+            },
+            {
+              "head": "Democrats",
+              "relation": "related_to",
+              "tail": "House"
+            }
+          ],
+          "entities": [
+            "Nicholas Longworth",
+            "Republicans",
+            "Democrats",
+            "House",
+            "Speakership"
+          ],
+          "entity_ids": [
+            "entity:democrats",
+            "entity:house",
+            "entity:nicholas_longworth",
+            "entity:republican_nicholas_longworth",
+            "entity:republicans",
+            "entity:speakership",
+            "entity:starting"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:2002_united_states_house_of_representatives_elections_0_3_together_with_gains_made_in_the_senate_it_was_one_of_the_few_m",
+        "score": 0.01108024694584817,
+        "text": "Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).",
+        "metadata": {
+          "title": "2002 United States House of Representatives elections",
+          "chunk_id": "chunk:2002_united_states_house_of_representatives_elections_0",
+          "sentence_index": 3,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "party in control of the White House",
+              "relation": "increased",
+              "tail": "number of seats in the House"
+            }
+          ],
+          "entities": [
+            "White House",
+            "House"
+          ],
+          "entity_ids": [
+            "entity:house",
+            "entity:number_of_seats_in_the_house",
+            "entity:party_in_control_of_the_white_house",
+            "entity:white_house"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+        "score": 0.017414720919129833,
+        "text": "Party leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert.",
+        "metadata": {
+          "title": "Party leaders of the United States House of Representatives",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:charles",
+            "entity:congress",
+            "entity:convening_of_the_congress",
+            "entity:current_minority_leader",
+            "entity:democrats",
+            "entity:democrats_house_leader",
+            "entity:democrats_house_leader_but_as_minority_leader",
+            "entity:dennis_hastert",
+            "entity:despite",
+            "entity:dick_armey",
+            "entity:dick_gephardt",
+            "entity:hale_boggs",
+            "entity:halleck",
+            "entity:house",
+            "entity:house_rule_book",
+            "entity:john_boehner",
+            "entity:majority_leader",
+            "entity:many",
+            "entity:minority_leader",
+            "entity:minority_whip",
+            "entity:nancy_pelosi",
+            "entity:newt_gingrich",
+            "entity:nicholas_longworth",
+            "entity:others",
+            "entity:representative",
+            "entity:republican_house",
+            "entity:republican_house_leader",
+            "entity:republican_house_leader_and_minority_leader_from_1959_to_1965",
+            "entity:republican_nicholas_longworth",
+            "entity:republicans",
+            "entity:speaker",
+            "entity:speaker_of_the_house",
+            "entity:speakership",
+            "entity:starting",
+            "entity:tom_delay",
+            "entity:top_choice_for_speaker",
+            "entity:united_states_house_of_representatives",
+            "entity:white_house",
+            "entity:worth"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:2002_united_states_house_of_representatives_elections_0",
+        "score": 0.004224436843245761,
+        "text": "2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).",
+        "metadata": {
+          "title": "2002 United States House of Representatives elections",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:5_november_2002",
+            "entity:although",
+            "entity:bush",
+            "entity:elections",
+            "entity:george_w_bush",
+            "entity:house",
+            "entity:number_of_seats_in_the_house",
+            "entity:party_in_control_of_the_white_house",
+            "entity:republican_party",
+            "entity:united_states_house_of_representatives",
+            "entity:white_house"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:leader_of_opposition_uganda_0",
+        "score": 0.004009195686412408,
+        "text": "Leader of Opposition (Uganda)\nThe Leader of Opposition (LOP) in Uganda is the title bestowed upon the elected leader of the largest political party not within the ruling government. The Leader of Opposition appoints and heads an alternative Shadow Cabinet whose duty is to challenge and influence government legislation on the floor of Parliament The current Leader of Opposition and first Ugandan female to hold the position is Hon. Winnie Kiiza of the Forum for Democratic Change. The Opposition in Uganda is made up of members from Forum for Democratic Change, Democratic Party, Uganda People's Congress, Congress Party and JEEMA.",
+        "metadata": {
+          "title": "Leader of Opposition (Uganda)",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:congress_party",
+            "entity:current_leader_of_opposition",
+            "entity:democratic_party",
+            "entity:first_ugandan_female_to_hold_the_position",
+            "entity:forum_for_democratic_change",
+            "entity:hon",
+            "entity:jeema",
+            "entity:members_from_congress_party",
+            "entity:members_from_democratic_party",
+            "entity:members_from_forum_for_democratic_change",
+            "entity:members_from_jeema",
+            "entity:members_from_uganda_people_s_congress",
+            "entity:opposition",
+            "entity:parliament",
+            "entity:shadow_cabinet",
+            "entity:title_anchor_leader_of_opposition_uganda",
+            "entity:uganda_people_s_congress",
+            "entity:winnie_kiiza"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:majority_leader_0",
+        "score": 0.002179180311217888,
+        "text": "Majority leader\nIn the United States House of Representatives, the majority leader is elected by U.S. Congressmen in the political party holding the largest number of seats in the House. While the responsibilities vary depending upon the political climate, the Majority Leader of the United States House of Representatives typically sets the floor agenda and oversees the committee chairmen.",
+        "metadata": {
+          "title": "Majority leader",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:congressmen",
+            "entity:house",
+            "entity:majority_leader_of_the_united_states_house_of_representatives",
+            "entity:representatives",
+            "entity:title_anchor_majority_leader",
+            "entity:united_states_house",
+            "entity:united_states_house_of_representatives",
+            "entity:while"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Party leaders of the United States House of Representatives\nParty leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert.\n\nLeader of Opposition (Uganda)\nLeader of Opposition (Uganda)\nThe Leader of Opposition (LOP) in Uganda is the title bestowed upon the elected leader of the largest political party not within the ruling government. The Leader of Opposition appoints and heads an alternative Shadow Cabinet whose duty is to challenge and influence government legislation on the floor of Parliament The current Leader of Opposition and first Ugandan female to hold the position is Hon. Winnie Kiiza of the Forum for Democratic Change. The Opposition in Uganda is made up of members from Forum for Democratic Change, Democratic Party, Uganda People's Congress, Congress Party and JEEMA.\n\n2002 United States House of Representatives elections\n2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).\n\nMajority leader\nMajority leader\nIn the United States House of Representatives, the majority leader is elected by U.S. Congressmen in the political party holding the largest number of seats in the House. While the responsibilities vary depending upon the political climate, the Majority Leader of the United States House of Representatives typically sets the floor agenda and oversees the committee chairmen.\n\nSamuel Carey Bradshaw\nSamuel Carey Bradshaw\nSamuel Carey Bradshaw (June 10, 1809 – June 9, 1872) was an Opposition Party member of the U.S. House of Representatives from Pennsylvania.\n\n2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W.\n\nParty leaders of the United States House of Representatives\nThe current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.\n\nParty leaders of the United States House of Representatives\nHalleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections.\n\nBob Irvin\nBob Irvin\nBob Irvin was an early leader of the modern Republican Party in Georgia in the United States. He served in the Georgia House of Representatives in the 1970s and again in the 1990s. He was the House Republican Leader. He ran unsuccessfully for the United States Senate in 2002, losing to Saxby Chambliss. He attracted attention in early 2005 by publicly calling for Ralph Reed to withdraw from the race for Lieutenant Governor of Georgia.\n\nRepublican Party (United States)\nRepublican Party (United States)\nFounded in the Northern states in 1854 by anti-slavery activists, modernizers, ex Whigs and ex Free Soilers, the Republican Party quickly became the principal opposition to the dominant Democratic Party and the briefly popular Know Nothing Party. The main cause was opposition to the Kansas -- Nebraska Act, which repealed the Missouri Compromise by which slavery was kept out of Kansas. The Northern Republicans saw the expansion of slavery as a great evil. The first public meeting of the general ``anti-Nebraska ''movement where the name`` Republican'' was suggested for a new anti-slavery party was held on March 20, 1854, in a schoolhouse in Ripon, Wisconsin. The name was partly chosen to pay homage to Thomas Jefferson's Republican Party.\n\nSpeaker of the United States House of Representatives\nSpeaker of the United States House of Representatives\nThe Speaker of the House is the presiding officer of the United States House of Representatives. The office was established in 1789 by Article I, Section 2 of the United States Constitution. The Speaker is the political and parliamentary leader of the House of Representatives, and is simultaneously the House's presiding officer, de facto leader of the body's majority party, and the institution's administrative head. Speakers also perform various other administrative and procedural functions. Given these several roles and responsibilities, the Speaker usually does not personally preside over debates. That duty is instead delegated to members of the House from the majority party. Neither does the Speaker regularly participate in floor debates nor vote.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:party_leaders_of_the_united_states_house_of_representatives_0",
+        "passage_index": 19,
+        "title": "Party leaders of the United States House of Representatives",
+        "score": 0.10393160126277876,
+        "text": "Party leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert.",
+        "score_breakdown": {
+          "dense": 0.05606206490761534,
+          "graph": 0.0648177803653371,
+          "fact": 0.3576808763599279
+        }
+      },
+      {
+        "node_id": "chunk:leader_of_opposition_uganda_0",
+        "passage_index": 16,
+        "title": "Leader of Opposition (Uganda)",
+        "score": 0.09684193464739822,
+        "text": "Leader of Opposition (Uganda)\nThe Leader of Opposition (LOP) in Uganda is the title bestowed upon the elected leader of the largest political party not within the ruling government. The Leader of Opposition appoints and heads an alternative Shadow Cabinet whose duty is to challenge and influence government legislation on the floor of Parliament The current Leader of Opposition and first Ugandan female to hold the position is Hon. Winnie Kiiza of the Forum for Democratic Change. The Opposition in Uganda is made up of members from Forum for Democratic Change, Democratic Party, Uganda People's Congress, Congress Party and JEEMA.",
+        "score_breakdown": {
+          "dense": 0.05556548949652758,
+          "graph": 0.05631162890273391,
+          "fact": 0.3292495116899192
+        }
+      },
+      {
+        "node_id": "chunk:2002_united_states_house_of_representatives_elections_0",
+        "passage_index": 17,
+        "title": "2002 United States House of Representatives elections",
+        "score": 0.0945834651257692,
+        "text": "2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).",
+        "score_breakdown": {
+          "dense": 0.056183708175225854,
+          "graph": 0.05573994612290689,
+          "fact": 0.31306961195015276
+        }
+      },
+      {
+        "node_id": "chunk:majority_leader_0",
+        "passage_index": 5,
+        "title": "Majority leader",
+        "score": 0.04740894702461705,
+        "text": "Majority leader\nIn the United States House of Representatives, the majority leader is elected by U.S. Congressmen in the political party holding the largest number of seats in the House. While the responsibilities vary depending upon the political climate, the Majority Leader of the United States House of Representatives typically sets the floor agenda and oversees the committee chairmen.",
+        "score_breakdown": {
+          "dense": 0.055588109943042634,
+          "graph": 0.05611828851981201,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:samuel_carey_bradshaw_0",
+        "passage_index": 15,
+        "title": "Samuel Carey Bradshaw",
+        "score": 0.047274656657277314,
+        "text": "Samuel Carey Bradshaw\nSamuel Carey Bradshaw (June 10, 1809 – June 9, 1872) was an Opposition Party member of the U.S. House of Representatives from Pennsylvania.",
+        "score_breakdown": {
+          "dense": 0.055518449688282484,
+          "graph": 0.05579836442907316,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:joe_aresimowicz_0",
+        "passage_index": 7,
+        "title": "Joe Aresimowicz",
+        "score": 0.047064314472870544,
+        "text": "Joe Aresimowicz\nJoe Aresimowicz (born November 5, 1970) is a Democratic member of the Connecticut House of Representatives and the current Speaker of the House. From 2013 to 2017, he served as Majority Leader.",
+        "score_breakdown": {
+          "dense": 0.05552027413961021,
+          "graph": 0.05509387898694976,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:united_states_house_of_representatives_0",
+        "passage_index": 10,
+        "title": "United States House of Representatives",
+        "score": 0.04704506702580599,
+        "text": "United States House of Representatives\nThe presiding officer is the Speaker of the House, who is elected by the members thereof and is therefore traditionally the leader of the controlling party. He or she and other floor leaders are chosen by the Democratic Caucus or the Republican Conference, depending on whichever party has more voting members. The House meets in the south wing of the United States Capitol.",
+        "score_breakdown": {
+          "dense": 0.055776904904452605,
+          "graph": 0.05455923109452352,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:speaker_of_the_united_states_house_of_representatives_0",
+        "passage_index": 14,
+        "title": "Speaker of the United States House of Representatives",
+        "score": 0.047020849963835085,
+        "text": "Speaker of the United States House of Representatives\nThe Speaker of the House is the presiding officer of the United States House of Representatives. The office was established in 1789 by Article I, Section 2 of the United States Constitution. The Speaker is the political and parliamentary leader of the House of Representatives, and is simultaneously the House's presiding officer, de facto leader of the body's majority party, and the institution's administrative head. Speakers also perform various other administrative and procedural functions. Given these several roles and responsibilities, the Speaker usually does not personally preside over debates. That duty is instead delegated to members of the House from the majority party. Neither does the Speaker regularly participate in floor debates nor vote.",
+        "score_breakdown": {
+          "dense": 0.055495971340789464,
+          "graph": 0.05499355242133627,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bob_irvin_0",
+        "passage_index": 2,
+        "title": "Bob Irvin",
+        "score": 0.04701808660036455,
+        "text": "Bob Irvin\nBob Irvin was an early leader of the modern Republican Party in Georgia in the United States. He served in the Georgia House of Representatives in the 1970s and again in the 1990s. He was the House Republican Leader. He ran unsuccessfully for the United States Senate in 2002, losing to Saxby Chambliss. He attracted attention in early 2005 by publicly calling for Ralph Reed to withdraw from the race for Lieutenant Governor of Georgia.",
+        "score_breakdown": {
+          "dense": 0.05566994503536508,
+          "graph": 0.054665389436379185,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:charles_e_jefferson_0",
+        "passage_index": 8,
+        "title": "Charles E. Jefferson",
+        "score": 0.04700900026883118,
+        "text": "Charles E. Jefferson\nCharles E. Jefferson is a former Democratic member of the Illinois House of Representatives, who represented the 67th District from April 2001 to July 2014. He served as Assistant Majority Leader. He resigned from the Illinois House of Representatives July 1, 2014. He was a member of the Winnebago County Board prior to serving as a State Representative.",
+        "score_breakdown": {
+          "dense": 0.05519772704435966,
+          "graph": 0.05550083464811122,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What party controlled the House of Representatives in 2002?",
+        "resolved_sub_question": "What party controlled the House of Representatives in 2002?",
+        "sentence_id": "sentence:2002_united_states_house_of_representatives_elections_0_0_the_elections_for_the_united_states_house_of_representatives_o",
+        "sentence": "The Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W.",
+        "score": 0.48230473844084804,
+        "source_title": "2002 United States House of Representatives elections",
+        "hop_answer": "Republican Party",
+        "hop_thought": "The Republican Party gained a net eight seats in the 2002 United States House of Representatives elections, indicating they had control of the House.",
+        "hop_raw_response": "The Republican Party gained a net eight seats in the 2002 United States House of Representatives elections, indicating they had control of the House.\nAnswer: Republican Party",
+        "evidence_passages": [
+          {
+            "title": "2002 United States House of Representatives elections",
+            "text": "The Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W."
+          },
+          {
+            "title": "2002 United States House of Representatives elections",
+            "text": "2002 United States House of Representatives elections\nThe Elections for the United States House of Representatives on 5 November 2002 was in the middle of President George W. Bush's first term. Although it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998)."
+          },
+          {
+            "title": "Party leaders of the United States House of Representatives",
+            "text": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002?",
+        "resolved_sub_question": "Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002? Context: Republican Party.",
+        "sentence_id": "sentence:party_leaders_of_the_united_states_house_of_representatives_0_0_the_current_minority_leader_nancy_pelosi_of_the_united_s",
+        "sentence": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.",
+        "score": 0.33056185439549957,
+        "source_title": "Party leaders of the United States House of Representatives",
+        "hop_answer": "Unknown",
+        "hop_thought": "Since the Republican Party controlled the House of Representatives in 2002, the leader of the opposition party would be the Democratic Party's leader in the House, which is typically the Minority Leader. However, the specific name of the Minority Leader in 2002 is not mentioned in the provided evidence.",
+        "hop_raw_response": "Since the Republican Party controlled the House of Representatives in 2002, the leader of the opposition party would be the Democratic Party's leader in the House, which is typically the Minority Leader. However, the specific name of the Minority Leader in 2002 is not mentioned in the provided evidence.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Party leaders of the United States House of Representatives",
+            "text": "The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader."
+          },
+          {
+            "title": "Party leaders of the United States House of Representatives",
+            "text": "Party leaders of the United States House of Representatives\nStarting with Republican Nicholas Longworth in 1925, and continued through the Democrats' control of the House from 1931 to 1995, save for Republican majorities in 1947–49 and 1953–55, all majority leaders have directly ascended to the Speakership brought upon by the retirement of the incumbent. The only exceptions during this period were Charles A. Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections. Since 1995, the only Majority Leader to become Speaker is John Boehner, though indirectly as his party lost control in the 2006 midterms elections. He subsequently served as Republican House leader and Minority Leader from 2007 to 2011 and then was elected Speaker when the House reconvened in 2011. In 1998, with Speaker Newt Gingrich announcing his resignation, both Majority Leader Dick Armey and Majority Whip Tom DeLay did not contest the Speakership which eventually went to Chief Deputy Whip Dennis Hastert."
+          },
+          {
+            "title": "Party leaders of the United States House of Representatives",
+            "text": "Halleck who became Republican House leader and Minority Leader from 1959 to 1965, Hale Boggs who died in a plane crash, and Dick Gephardt who became the Democrats' House leader but as Minority Leader since his party lost control in the 1994 midterm elections."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What party controlled the House of Representatives in 2002? => Republican Party (source: 2002 United States House of Representatives elections)\n2. Who were the leaders of the opposition party to the party that controlled the House of Representatives in 2002? (source: Party leaders of the United States House of Representatives)\n\nFact hints:\n- Nancy Pelosi is counterpart to Majority Leader\n\nWikipedia Title: Party leaders of the United States House of Representatives\nThe current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.\n\nWikipedia Title: 2002 United States House of Representatives elections\nAlthough it was a midterm election, the Republican Party gained a net eight seats, solidifying their majority. Together with gains made in the Senate, it was one of the few mid-term elections that the party in control of the White House increased their number of seats in the House (the other such mid-term elections were in 1934 and 1998).\n\nWikipedia Title: Bob Irvin\nBob Irvin Bob Irvin was an early leader of the modern Republican Party in Georgia in the United States. He was the House Republican Leader.\n\nWikipedia Title: Republican Party (United States)\nThe main cause was opposition to the Kansas -- Nebraska Act, which repealed the Missouri Compromise by which slavery was kept out of Kansas. The Northern Republicans saw the expansion of slavery as a great evil.\n\nWikipedia Title: Majority leader\nCongressmen in the political party holding the largest number of seats in the House. Majority leader In the United States House of Representatives, the majority leader is elected by U.S.\n\nQuestion: Who were the leaders of the opposition of the party that controlled the house of representatives in 2002?\nDraft Answer: Nancy Pelosi\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The Republican Party controlled the House of Representatives in 2002. The opposition party's leader, which would be the Minority Leader, was Nancy Pelosi.",
+  "predicted_answer": "Nancy Pelosi",
+  "qa_raw_response": "{\n  \"thought\": \"The Republican Party controlled the House of Representatives in 2002. The opposition party's leader, which would be the Minority Leader, was Nancy Pelosi.\",\n  \"answer\": \"Nancy Pelosi\",\n  \"support\": \"The current Minority Leader Nancy Pelosi, of the United States House of Representatives serves as floor leader of the opposition party, and is the counterpart to the Majority Leader.\"\n}"
+}

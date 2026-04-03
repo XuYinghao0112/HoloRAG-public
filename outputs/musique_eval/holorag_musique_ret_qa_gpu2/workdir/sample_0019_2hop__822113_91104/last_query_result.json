@@ -1,0 +1,995 @@
+{
+  "query": "What is the experimental satellite which was the forerunner to the communication satellite of the operator of GSAT-7 called?",
+  "alpha": {
+    "entity": 0.6000000000000001,
+    "sentence": 0.30000000000000004,
+    "chunk": 0.10000000000000002
+  },
+  "query_entities": [
+    "GSAT-7"
+  ],
+  "raw_query_entities": [
+    "GSAT-7"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "GSAT-7",
+      "node_id": "entity:title_anchor_gsat_7",
+      "resolved_text": "GSAT-7",
+      "score": 0.6313090909090909,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4,
+      "compatibility_score": 0.185,
+      "score_margin": 0.24670909090909093,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is the operator of GSAT-7?",
+    "What is the communication satellite of this operator?",
+    "What is the experimental satellite that was the forerunner to this communication satellite?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:indian_space_research_organisation_isro",
+      "score": 0.4646486363913244,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nasa_and_isro",
+      "score": 0.4362734074377037,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:isro",
+      "score": 0.4202754740225739,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "score": 0.24897539153555706,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:world_s_first_experimental_direct_broadcast_satellite",
+      "score": 0.19868315682174303,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gsat_7",
+      "score": 0.19599587727186757,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:xichang_satellite_launch_centre",
+      "score": 0.19093044441743012,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:china",
+      "score": 0.19092215398342044,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_tdrs_6",
+      "score": 0.187865684157352,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nasa",
+      "score": 0.18431381898016908,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_ats_6",
+      "score": 0.1569463049061229,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+      "score": 0.15688770162109786,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:gsat_7_developed_by_isro_sentence_gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_develo",
+      "text": "GSAT-7 developed by ISRO",
+      "head_id": "entity:title_anchor_gsat_7",
+      "tail_id": "entity:isro",
+      "sentence_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+      "chunk_id": "chunk:gsat_7_0",
+      "document_index": 10,
+      "score": 0.23361234784262946
+    },
+    {
+      "fact_id": "fact:ats_6_is_called_world_s_first_experimental_direct_broadcast_satellite_sentence_ats_6_0_0_ats_6_applications_technology_s",
+      "text": "ATS-6 is called world's first experimental Direct Broadcast Satellite",
+      "head_id": "entity:title_anchor_ats_6",
+      "tail_id": "entity:world_s_first_experimental_direct_broadcast_satellite",
+      "sentence_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "chunk_id": "chunk:ats_6_0",
+      "document_index": 12,
+      "score": 0.1963217157144456
+    },
+    {
+      "fact_id": "fact:xichang_satellite_launch_centre_located_in_china_sentence_nigeria_0_1_it_was_launched_on_13_may_2007_aboard_a_chinese_lo",
+      "text": "Xichang Satellite Launch Centre located in China",
+      "head_id": "entity:xichang_satellite_launch_centre",
+      "tail_id": "entity:china",
+      "sentence_id": "sentence:nigeria_0_1_it_was_launched_on_13_may_2007_aboard_a_chinese_long_march_3b_carrier_rocket_f",
+      "chunk_id": "chunk:nigeria_0",
+      "document_index": 15,
+      "score": 0.1885776308475118
+    },
+    {
+      "fact_id": "fact:gsat_7_is_also_known_as_insat_4f_sentence_gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellit",
+      "text": "GSAT-7 is also known as INSAT-4F",
+      "head_id": "entity:title_anchor_gsat_7",
+      "tail_id": "entity:insat_4f",
+      "sentence_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+      "chunk_id": "chunk:gsat_7_0",
+      "document_index": 10,
+      "score": 0.15360587754531296
+    },
+    {
+      "fact_id": "fact:satellite_instructional_television_experiment_between_nasa_and_isro_sentence_ats_6_0_0_ats_6_applications_technology_sat",
+      "text": "Satellite Instructional Television Experiment between NASA and ISRO",
+      "head_id": "entity:satellite_instructional_television_experiment",
+      "tail_id": "entity:nasa_and_isro",
+      "sentence_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "chunk_id": "chunk:ats_6_0",
+      "document_index": 12,
+      "score": 0.1535948491501409
+    },
+    {
+      "fact_id": "fact:ats_6_was_built_by_fairchild_space_and_electronics_division_sentence_ats_6_0_0_ats_6_applications_technology_satellite_6",
+      "text": "ATS-6 was built by Fairchild Space and Electronics Division",
+      "head_id": "entity:title_anchor_ats_6",
+      "tail_id": "entity:fairchild_space_and_electronics_division",
+      "sentence_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "chunk_id": "chunk:ats_6_0",
+      "document_index": 12,
+      "score": 0.1369141307616972
+    },
+    {
+      "fact_id": "fact:ats_6_part_of_satellite_instructional_television_experiment_sentence_ats_6_0_0_ats_6_applications_technology_satellite_6",
+      "text": "ATS-6 part of Satellite Instructional Television Experiment",
+      "head_id": "entity:title_anchor_ats_6",
+      "tail_id": "entity:satellite_instructional_television_experiment",
+      "sentence_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "chunk_id": "chunk:ats_6_0",
+      "document_index": 12,
+      "score": 0.13055562177761976
+    }
+  ],
+  "bridge_entities": [
+    "ISRO",
+    "INSAT-4F",
+    "Indian Navy",
+    "GSAT-7"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the operator of GSAT-7?",
+      "resolved_sub_question": "Who is the operator of GSAT-7?",
+      "sentence_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+      "sentence": "GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.",
+      "score": 0.4389948171768189,
+      "source_title": "GSAT-7",
+      "hop_answer": "Indian Navy",
+      "hop_thought": "The passage states that the Indian Navy is the user of the multi-band communication spacecraft GSAT-7.",
+      "hop_raw_response": "The passage states that the Indian Navy is the user of the multi-band communication spacecraft GSAT-7.\nAnswer: Indian Navy",
+      "evidence_passages": [
+        {
+          "title": "GSAT-7",
+          "text": "GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO."
+        },
+        {
+          "title": "GSAT-7",
+          "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+        },
+        {
+          "title": "ATS-6",
+          "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the communication satellite of this operator?",
+      "resolved_sub_question": "What is the communication satellite of this operator? Context: Indian Navy.",
+      "sentence_id": "sentence:gsat_7_0_1_the_indian_navy_is_the_user_of_the_multi_band_communication_spacecraft_which_ha",
+      "sentence": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.",
+      "score": 0.5306161844300166,
+      "source_title": "GSAT-7",
+      "hop_answer": "GSAT-7",
+      "hop_thought": "The context specifies that the operator is the Indian Navy, and the communication satellite used by the Indian Navy is GSAT-7.",
+      "hop_raw_response": "The context specifies that the operator is the Indian Navy, and the communication satellite used by the Indian Navy is GSAT-7.\nAnswer: GSAT-7",
+      "evidence_passages": [
+        {
+          "title": "GSAT-7",
+          "text": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013."
+        },
+        {
+          "title": "GSAT-7",
+          "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+        },
+        {
+          "title": "ATS-6",
+          "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the experimental satellite that was the forerunner to this communication satellite?",
+      "resolved_sub_question": "What is the experimental satellite that was the forerunner to this communication satellite? Context: Indian Navy; GSAT-7.",
+      "sentence_id": "sentence:gsat_7_0_1_the_indian_navy_is_the_user_of_the_multi_band_communication_spacecraft_which_ha",
+      "sentence": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.",
+      "score": 0.4059620661678315,
+      "source_title": "GSAT-7",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context is about GSAT-7, a communication satellite used by the Indian Navy. The question asks for the experimental satellite that was the forerunner to GSAT-7. However, the provided evidence does not mention any specific experimental satellite that directly preceded GSAT-7. The information about ATS-6 is unrelated to GSAT-7 and pertains to a different context involving NASA and ISRO.",
+      "hop_raw_response": "The context is about GSAT-7, a communication satellite used by the Indian Navy. The question asks for the experimental satellite that was the forerunner to GSAT-7. However, the provided evidence does not mention any specific experimental satellite that directly preceded GSAT-7. The information about ATS-6 is unrelated to GSAT-7 and pertains to a different context involving NASA and ISRO.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "GSAT-7",
+          "text": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013."
+        },
+        {
+          "title": "GSAT-7",
+          "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+        },
+        {
+          "title": "ATS-6",
+          "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:isro",
+      "score": 0.08274851772611597,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nasa_and_isro",
+      "score": 0.08180650433827799,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+      "score": 0.07905601454434434,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:indian_space_research_organisation_isro",
+      "score": 0.07779186715674527,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+      "score": 0.05335349586006506,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_ats_6",
+      "score": 0.04864755771415524,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_gsat_7",
+      "score": 0.04845231305473434,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:satellite_instructional_television_experiment",
+      "score": 0.03743634536283237,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_tdrs_6",
+      "score": 0.03570966116526319,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:xichang_satellite_launch_centre",
+      "score": 0.03542718862861144,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:china",
+      "score": 0.03542637787987775,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nasa",
+      "score": 0.035238264227977795,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:world_s_first_experimental_direct_broadcast_satellite",
+      "score": 0.03275768697360769,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:insat_4f",
+      "score": 0.031601743349672806,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:nigeria_0_1_it_was_launched_on_13_may_2007_aboard_a_chinese_long_march_3b_carrier_rocket_f",
+      "score": 0.030972137549761032,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:fairchild_space_and_electronics_division",
+      "score": 0.0253805591128501,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:ats_6_0",
+      "score": 0.021108259884199822,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:tdrs_6_0_0_tdrs_6_known_before_launch_as_tdrs_f_is_an_american_communications_satellite_w",
+      "score": 0.014849175347597556,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:gsat_7_0",
+      "score": 0.014464354697882785,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:polar_satellite_launch_vehicle_0_0_the_polar_satellite_launch_vehicle_pslv_is_an_expendable_medium_lift_launch_ve",
+      "score": 0.01348079627417607,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:gsat_7_0",
+      "passage_index": 10,
+      "title": "GSAT-7",
+      "score": 0.10311840216070561,
+      "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships.",
+      "score_breakdown": {
+        "dense": 0.059721430545026453,
+        "graph": 0.06296832554219006,
+        "fact": 0.3425407846552269
+      }
+    },
+    {
+      "node_id": "chunk:ats_6_0",
+      "passage_index": 12,
+      "title": "ATS-6",
+      "score": 0.10234505162629329,
+      "text": "ATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO). It was launched May 30, 1974, and decommissioned July 1979. At the time of launch, it was the most powerful telecommunication satellite in orbit. ATS - 6 carried no fewer than 23 different experiments, and introduced several breakthroughs. It was the first 3 - axis stabilized spacecraft in geostationary orbit. It was also the first to use experimentally with some success electric propulsion in geostationary orbit. It also carried several particle physics experiments, including the first heavy ion detector in geostationary orbit.",
+      "score_breakdown": {
+        "dense": 0.059143569567198406,
+        "graph": 0.0677190663971375,
+        "fact": 0.33000245630128605
+      }
+    },
+    {
+      "node_id": "chunk:nigeria_0",
+      "passage_index": 15,
+      "title": "Nigeria",
+      "score": 0.09956816366867682,
+      "text": "Nigeria\nNigComSat-1, a Nigerian satellite built in 2004, was Nigeria's third satellite and Africa's first communication satellite. It was launched on 13 May 2007, aboard a Chinese Long March 3B carrier rocket, from the Xichang Satellite Launch Centre in China. The spacecraft was operated by NigComSat and the Nigerian Space Agency, NASRDA. On 11 November 2008, NigComSat-1 failed in orbit after running out of power because of an anomaly in its solar array. It was based on the Chinese DFH-4 satellite bus, and carries a variety of transponders: 4 C-band; 14 Ku-band; 8 Ka-band; and 2 L-band. It was designed to provide coverage to many parts of Africa, and the Ka-band transponders would also cover Italy.",
+      "score_breakdown": {
+        "dense": 0.05862738140038884,
+        "graph": 0.06068196680646636,
+        "fact": 0.327456759043487
+      }
+    },
+    {
+      "node_id": "chunk:polar_satellite_launch_vehicle_0",
+      "passage_index": 0,
+      "title": "Polar Satellite Launch Vehicle",
+      "score": 0.05037564267276598,
+      "text": "Polar Satellite Launch Vehicle\nThe Polar Satellite Launch Vehicle (PSLV) is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO).",
+      "score_breakdown": {
+        "dense": 0.05900620426887315,
+        "graph": 0.059740767749619145,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tdrs_6_0",
+      "passage_index": 1,
+      "title": "TDRS-6",
+      "score": 0.0501276513959669,
+      "text": "TDRS-6\nTDRS-6, known before launch as TDRS-F, is an American communications satellite which is operated by NASA as part of the Tracking and Data Relay Satellite System. It was constructed by TRW, and is based on a custom satellite bus which was used for all seven first generation TDRS satellites.",
+      "score_breakdown": {
+        "dense": 0.058812222120727856,
+        "graph": 0.05926976409855526,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:general_satellite_0",
+      "passage_index": 8,
+      "title": "General Satellite",
+      "score": 0.04981588428022662,
+      "text": "General Satellite\nGS Group CSMW is the only system developed in Russia, introduced in 2007 and tested on millions of viewers of the leading satellite TV operator, Tricolor TV (over 7 million subscribers).",
+      "score_breakdown": {
+        "dense": 0.059228962125384546,
+        "graph": 0.057466517037550395,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:usa_214_0",
+      "passage_index": 4,
+      "title": "USA-214",
+      "score": 0.049594679926682705,
+      "text": "USA-214\nUSA-214, known before launch as Advanced Extremely High Frequency 1 or AEHF SV-1, is a military communications satellite operated by the United States Air Force. It is the first of four spacecraft to be launched as part of the Advanced Extremely High Frequency program, which will replace the earlier Milstar system.",
+      "score_breakdown": {
+        "dense": 0.05882329836588709,
+        "graph": 0.05747288608481601,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:lockheed_martin_a2100_0",
+      "passage_index": 16,
+      "title": "Lockheed Martin A2100",
+      "score": 0.049575740901240686,
+      "text": "Lockheed Martin A2100\nThe A2100 is a communications satellite spacecraft model made by Lockheed Martin Space Systems in the 1990s-2010s for telecommunications in geosynchronous orbit, as well as GOES-R weather satellites and GPS Block IIIA satellites.",
+      "score_breakdown": {
+        "dense": 0.05879597041997672,
+        "graph": 0.05745985723417827,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:fedsat_0",
+      "passage_index": 11,
+      "title": "FedSat",
+      "score": 0.04956039836302067,
+      "text": "FedSat\nFedSat (Australia's 'Federation Satellite') is an Australian scientific research satellite launched from Tanegashima Space Center, Japan by a NASDA H-IIA launch vehicle in December 2002 (NASDA is now merged with JAXA). The satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. The ground station is at the Institute for Telecommunications Research, part of the University of South Australia, near Adelaide. Since 2005 it was operated by the Australian Department of Defence.",
+      "score_breakdown": {
+        "dense": 0.05875927039896085,
+        "graph": 0.057475998811973995,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:communications_satellite_0",
+      "passage_index": 18,
+      "title": "Communications satellite",
+      "score": 0.04955311952495222,
+      "text": "Communications satellite\nThe Molniya orbit is designed so that the satellite spends the great majority of its time over the far northern latitudes, during which its ground footprint moves only slightly. Its period is one half day, so that the satellite is available for operation over the targeted region for six to nine hours every second revolution. In this way a constellation of three Molniya satellites (plus in-orbit spares) can provide uninterrupted coverage.",
+      "score_breakdown": {
+        "dense": 0.058741279985091564,
+        "graph": 0.05748471844383952,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:isro",
+        "score": 0.08274851772611597,
+        "text": "ISRO",
+        "metadata": {
+          "canonical_name": "ISRO",
+          "aliases": [
+            "ISRO"
+          ],
+          "surface_forms": [
+            "ISRO"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:nasa_and_isro",
+        "score": 0.08180650433827799,
+        "text": "NASA and ISRO",
+        "metadata": {
+          "canonical_name": "NASA and ISRO",
+          "aliases": [
+            "NAI",
+            "NASA and ISRO"
+          ],
+          "surface_forms": [
+            "NAI",
+            "NASA and ISRO"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:indian_space_research_organisation_isro",
+        "score": 0.07779186715674527,
+        "text": "Indian Space Research Organisation ISRO",
+        "metadata": {
+          "canonical_name": "Indian Space Research Organisation ISRO",
+          "aliases": [
+            "ISROI",
+            "Indian Space Research Organisation",
+            "Indian Space Research Organisation ISRO"
+          ],
+          "surface_forms": [
+            "ISROI",
+            "Indian Space Research Organisation",
+            "Indian Space Research Organisation ISRO"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_ats_6",
+        "score": 0.04864755771415524,
+        "text": "ATS-6",
+        "metadata": {
+          "canonical_name": "ATS-6",
+          "aliases": [
+            "ATS-6"
+          ],
+          "surface_forms": [
+            "ATS-6"
+          ],
+          "title_anchor": "ATS-6"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_gsat_7",
+        "score": 0.04845231305473434,
+        "text": "GSAT-7",
+        "metadata": {
+          "canonical_name": "GSAT-7",
+          "aliases": [
+            "GSAT-7"
+          ],
+          "surface_forms": [
+            "GSAT-7"
+          ],
+          "title_anchor": "GSAT-7"
+        }
+      },
+      {
+        "node_id": "entity:satellite_instructional_television_experiment",
+        "score": 0.03743634536283237,
+        "text": "Satellite Instructional Television Experiment",
+        "metadata": {
+          "canonical_name": "Satellite Instructional Television Experiment",
+          "aliases": [
+            "SITE",
+            "Satellite Instructional Television Experiment"
+          ],
+          "surface_forms": [
+            "SITE",
+            "Satellite Instructional Television Experiment"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_tdrs_6",
+        "score": 0.03570966116526319,
+        "text": "TDRS-6",
+        "metadata": {
+          "canonical_name": "TDRS-6",
+          "aliases": [
+            "TDRS-6"
+          ],
+          "surface_forms": [
+            "TDRS-6"
+          ],
+          "title_anchor": "TDRS-6"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:ats_6_0_0_ats_6_applications_technology_satellite_6_was_a_nasa_experimental_satellit",
+        "score": 0.07905601454434434,
+        "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO).",
+        "metadata": {
+          "title": "ATS-6",
+          "chunk_id": "chunk:ats_6_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "ATS-6",
+              "relation": "was built by",
+              "tail": "Fairchild Space and Electronics Division"
+            },
+            {
+              "head": "ATS-6",
+              "relation": "is called",
+              "tail": "world's first experimental Direct Broadcast Satellite"
+            },
+            {
+              "head": "ATS-6",
+              "relation": "part of",
+              "tail": "Satellite Instructional Television Experiment"
+            },
+            {
+              "head": "Satellite Instructional Television Experiment",
+              "relation": "between",
+              "tail": "NASA and ISRO"
+            }
+          ],
+          "entities": [
+            "ATS-6",
+            "NASA",
+            "Fairchild Space and Electronics Division",
+            "world's first experimental Direct Broadcast Satellite",
+            "Satellite Instructional Television Experiment",
+            "ISRO"
+          ],
+          "entity_ids": [
+            "entity:fairchild_space_and_electronics_division",
+            "entity:isro",
+            "entity:nasa",
+            "entity:nasa_and_isro",
+            "entity:satellite_instructional_television_experiment",
+            "entity:title_anchor_ats_6",
+            "entity:world_s_first_experimental_direct_broadcast_satellite"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+        "score": 0.05335349586006506,
+        "text": "GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.",
+        "metadata": {
+          "title": "GSAT-7",
+          "chunk_id": "chunk:gsat_7_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "GSAT-7",
+              "relation": "is also known as",
+              "tail": "INSAT-4F"
+            },
+            {
+              "head": "GSAT-7",
+              "relation": "developed by",
+              "tail": "ISRO"
+            }
+          ],
+          "entities": [
+            "GSAT-7",
+            "INSAT-4F",
+            "ISRO"
+          ],
+          "entity_ids": [
+            "entity:insat_4f",
+            "entity:isro",
+            "entity:title_anchor_gsat_7"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:nigeria_0_1_it_was_launched_on_13_may_2007_aboard_a_chinese_long_march_3b_carrier_rocket_f",
+        "score": 0.030972137549761032,
+        "text": "It was launched on 13 May 2007, aboard a Chinese Long March 3B carrier rocket, from the Xichang Satellite Launch Centre in China.",
+        "metadata": {
+          "title": "Nigeria",
+          "chunk_id": "chunk:nigeria_0",
+          "sentence_index": 1,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Xichang Satellite Launch Centre",
+              "relation": "located in",
+              "tail": "China"
+            }
+          ],
+          "entities": [
+            "Chinese Long March 3B carrier rocket",
+            "Xichang Satellite Launch Centre",
+            "China"
+          ],
+          "entity_ids": [
+            "entity:china",
+            "entity:chinese_long_march_3b_carrier_rocket",
+            "entity:xichang_satellite_launch_centre"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:tdrs_6_0_0_tdrs_6_known_before_launch_as_tdrs_f_is_an_american_communications_satellite_w",
+        "score": 0.014849175347597556,
+        "text": "TDRS-6, known before launch as TDRS-F, is an American communications satellite which is operated by NASA as part of the Tracking and Data Relay Satellite System.",
+        "metadata": {
+          "title": "TDRS-6",
+          "chunk_id": "chunk:tdrs_6_0",
+          "sentence_index": 0,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "TDRS-6",
+              "relation": "known_before_launch_as",
+              "tail": "TDRS-F"
+            },
+            {
+              "head": "TDRS-6",
+              "relation": "is_type_of",
+              "tail": "American communications satellite"
+            },
+            {
+              "head": "TDRS-6",
+              "relation": "operated_by",
+              "tail": "NASA"
+            },
+            {
+              "head": "TDRS-6",
+              "relation": "part_of",
+              "tail": "Tracking and Data Relay Satellite System"
+            }
+          ],
+          "entities": [
+            "TDRS-6",
+            "TDRS-F",
+            "NASA",
+            "Tracking and Data Relay Satellite System"
+          ],
+          "entity_ids": [
+            "entity:american_communications_satellite",
+            "entity:nasa",
+            "entity:tdrs_f",
+            "entity:title_anchor_tdrs_6",
+            "entity:tracking_and_data_relay_satellite_system"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:ats_6_0",
+        "score": 0.021108259884199822,
+        "text": "ATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO). It was launched May 30, 1974, and decommissioned July 1979. At the time of launch, it was the most powerful telecommunication satellite in orbit. ATS - 6 carried no fewer than 23 different experiments, and introduced several breakthroughs. It was the first 3 - axis stabilized spacecraft in geostationary orbit. It was also the first to use experimentally with some success electric propulsion in geostationary orbit. It also carried several particle physics experiments, including the first heavy ion detector in geostationary orbit.",
+        "metadata": {
+          "title": "ATS-6",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:fairchild_space_and_electronics_division",
+            "entity:isro",
+            "entity:july",
+            "entity:may",
+            "entity:nasa",
+            "entity:nasa_and_isro",
+            "entity:satellite_instructional_television_experiment",
+            "entity:title_anchor_ats_6",
+            "entity:world_s_first_experimental_direct_broadcast_satellite"
+          ]
+        }
+      }
+    ],
+    "qa_context": "GSAT-7\nGSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships.\n\nATS-6\nATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO). It was launched May 30, 1974, and decommissioned July 1979. At the time of launch, it was the most powerful telecommunication satellite in orbit. ATS - 6 carried no fewer than 23 different experiments, and introduced several breakthroughs. It was the first 3 - axis stabilized spacecraft in geostationary orbit. It was also the first to use experimentally with some success electric propulsion in geostationary orbit. It also carried several particle physics experiments, including the first heavy ion detector in geostationary orbit.\n\nNigeria\nNigeria\nNigComSat-1, a Nigerian satellite built in 2004, was Nigeria's third satellite and Africa's first communication satellite. It was launched on 13 May 2007, aboard a Chinese Long March 3B carrier rocket, from the Xichang Satellite Launch Centre in China. The spacecraft was operated by NigComSat and the Nigerian Space Agency, NASRDA. On 11 November 2008, NigComSat-1 failed in orbit after running out of power because of an anomaly in its solar array. It was based on the Chinese DFH-4 satellite bus, and carries a variety of transponders: 4 C-band; 14 Ku-band; 8 Ka-band; and 2 L-band. It was designed to provide coverage to many parts of Africa, and the Ka-band transponders would also cover Italy.\n\nPolar Satellite Launch Vehicle\nPolar Satellite Launch Vehicle\nThe Polar Satellite Launch Vehicle (PSLV) is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO).\n\nTDRS-6\nTDRS-6\nTDRS-6, known before launch as TDRS-F, is an American communications satellite which is operated by NASA as part of the Tracking and Data Relay Satellite System. It was constructed by TRW, and is based on a custom satellite bus which was used for all seven first generation TDRS satellites.\n\nGSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.\n\nATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO).\n\nGSAT-7\nThe Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.\n\nNOAA-4\nNOAA-4\nNOAA-4, also known as ITOS-G was a weather satellite operated by the National Oceanic and Atmospheric Administration (NOAA). It was part of a series of satellites called ITOS, or improved TIROS. NOAA-4 was launched on a Delta rocket on November 15, 1974. The launch carried two other satellites: AMSAT-OSCAR 7 and Intasat. It remained operational for 1463 days until it was deactivated by NOAA on November 18, 1978.\n\nGeneral Satellite\nGeneral Satellite\nGS Group CSMW is the only system developed in Russia, introduced in 2007 and tested on millions of viewers of the leading satellite TV operator, Tricolor TV (over 7 million subscribers).\n\nFedSat\nFedSat\nFedSat (Australia's 'Federation Satellite') is an Australian scientific research satellite launched from Tanegashima Space Center, Japan by a NASDA H-IIA launch vehicle in December 2002 (NASDA is now merged with JAXA). The satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. The ground station is at the Institute for Telecommunications Research, part of the University of South Australia, near Adelaide. Since 2005 it was operated by the Australian Department of Defence.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:gsat_7_0",
+        "passage_index": 10,
+        "title": "GSAT-7",
+        "score": 0.10311840216070561,
+        "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships.",
+        "score_breakdown": {
+          "dense": 0.059721430545026453,
+          "graph": 0.06296832554219006,
+          "fact": 0.3425407846552269
+        }
+      },
+      {
+        "node_id": "chunk:ats_6_0",
+        "passage_index": 12,
+        "title": "ATS-6",
+        "score": 0.10234505162629329,
+        "text": "ATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO). It was launched May 30, 1974, and decommissioned July 1979. At the time of launch, it was the most powerful telecommunication satellite in orbit. ATS - 6 carried no fewer than 23 different experiments, and introduced several breakthroughs. It was the first 3 - axis stabilized spacecraft in geostationary orbit. It was also the first to use experimentally with some success electric propulsion in geostationary orbit. It also carried several particle physics experiments, including the first heavy ion detector in geostationary orbit.",
+        "score_breakdown": {
+          "dense": 0.059143569567198406,
+          "graph": 0.0677190663971375,
+          "fact": 0.33000245630128605
+        }
+      },
+      {
+        "node_id": "chunk:nigeria_0",
+        "passage_index": 15,
+        "title": "Nigeria",
+        "score": 0.09956816366867682,
+        "text": "Nigeria\nNigComSat-1, a Nigerian satellite built in 2004, was Nigeria's third satellite and Africa's first communication satellite. It was launched on 13 May 2007, aboard a Chinese Long March 3B carrier rocket, from the Xichang Satellite Launch Centre in China. The spacecraft was operated by NigComSat and the Nigerian Space Agency, NASRDA. On 11 November 2008, NigComSat-1 failed in orbit after running out of power because of an anomaly in its solar array. It was based on the Chinese DFH-4 satellite bus, and carries a variety of transponders: 4 C-band; 14 Ku-band; 8 Ka-band; and 2 L-band. It was designed to provide coverage to many parts of Africa, and the Ka-band transponders would also cover Italy.",
+        "score_breakdown": {
+          "dense": 0.05862738140038884,
+          "graph": 0.06068196680646636,
+          "fact": 0.327456759043487
+        }
+      },
+      {
+        "node_id": "chunk:polar_satellite_launch_vehicle_0",
+        "passage_index": 0,
+        "title": "Polar Satellite Launch Vehicle",
+        "score": 0.05037564267276598,
+        "text": "Polar Satellite Launch Vehicle\nThe Polar Satellite Launch Vehicle (PSLV) is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO).",
+        "score_breakdown": {
+          "dense": 0.05900620426887315,
+          "graph": 0.059740767749619145,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tdrs_6_0",
+        "passage_index": 1,
+        "title": "TDRS-6",
+        "score": 0.0501276513959669,
+        "text": "TDRS-6\nTDRS-6, known before launch as TDRS-F, is an American communications satellite which is operated by NASA as part of the Tracking and Data Relay Satellite System. It was constructed by TRW, and is based on a custom satellite bus which was used for all seven first generation TDRS satellites.",
+        "score_breakdown": {
+          "dense": 0.058812222120727856,
+          "graph": 0.05926976409855526,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:general_satellite_0",
+        "passage_index": 8,
+        "title": "General Satellite",
+        "score": 0.04981588428022662,
+        "text": "General Satellite\nGS Group CSMW is the only system developed in Russia, introduced in 2007 and tested on millions of viewers of the leading satellite TV operator, Tricolor TV (over 7 million subscribers).",
+        "score_breakdown": {
+          "dense": 0.059228962125384546,
+          "graph": 0.057466517037550395,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:usa_214_0",
+        "passage_index": 4,
+        "title": "USA-214",
+        "score": 0.049594679926682705,
+        "text": "USA-214\nUSA-214, known before launch as Advanced Extremely High Frequency 1 or AEHF SV-1, is a military communications satellite operated by the United States Air Force. It is the first of four spacecraft to be launched as part of the Advanced Extremely High Frequency program, which will replace the earlier Milstar system.",
+        "score_breakdown": {
+          "dense": 0.05882329836588709,
+          "graph": 0.05747288608481601,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:lockheed_martin_a2100_0",
+        "passage_index": 16,
+        "title": "Lockheed Martin A2100",
+        "score": 0.049575740901240686,
+        "text": "Lockheed Martin A2100\nThe A2100 is a communications satellite spacecraft model made by Lockheed Martin Space Systems in the 1990s-2010s for telecommunications in geosynchronous orbit, as well as GOES-R weather satellites and GPS Block IIIA satellites.",
+        "score_breakdown": {
+          "dense": 0.05879597041997672,
+          "graph": 0.05745985723417827,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:fedsat_0",
+        "passage_index": 11,
+        "title": "FedSat",
+        "score": 0.04956039836302067,
+        "text": "FedSat\nFedSat (Australia's 'Federation Satellite') is an Australian scientific research satellite launched from Tanegashima Space Center, Japan by a NASDA H-IIA launch vehicle in December 2002 (NASDA is now merged with JAXA). The satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. The ground station is at the Institute for Telecommunications Research, part of the University of South Australia, near Adelaide. Since 2005 it was operated by the Australian Department of Defence.",
+        "score_breakdown": {
+          "dense": 0.05875927039896085,
+          "graph": 0.057475998811973995,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:communications_satellite_0",
+        "passage_index": 18,
+        "title": "Communications satellite",
+        "score": 0.04955311952495222,
+        "text": "Communications satellite\nThe Molniya orbit is designed so that the satellite spends the great majority of its time over the far northern latitudes, during which its ground footprint moves only slightly. Its period is one half day, so that the satellite is available for operation over the targeted region for six to nine hours every second revolution. In this way a constellation of three Molniya satellites (plus in-orbit spares) can provide uninterrupted coverage.",
+        "score_breakdown": {
+          "dense": 0.058741279985091564,
+          "graph": 0.05748471844383952,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the operator of GSAT-7?",
+        "resolved_sub_question": "Who is the operator of GSAT-7?",
+        "sentence_id": "sentence:gsat_7_0_0_gsat_7_or_insat_4f_is_a_multi_band_military_communications_satellite_developed_b",
+        "sentence": "GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.",
+        "score": 0.4389948171768189,
+        "source_title": "GSAT-7",
+        "hop_answer": "Indian Navy",
+        "hop_thought": "The passage states that the Indian Navy is the user of the multi-band communication spacecraft GSAT-7.",
+        "hop_raw_response": "The passage states that the Indian Navy is the user of the multi-band communication spacecraft GSAT-7.\nAnswer: Indian Navy",
+        "evidence_passages": [
+          {
+            "title": "GSAT-7",
+            "text": "GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO."
+          },
+          {
+            "title": "GSAT-7",
+            "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+          },
+          {
+            "title": "ATS-6",
+            "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the communication satellite of this operator?",
+        "resolved_sub_question": "What is the communication satellite of this operator? Context: Indian Navy.",
+        "sentence_id": "sentence:gsat_7_0_1_the_indian_navy_is_the_user_of_the_multi_band_communication_spacecraft_which_ha",
+        "sentence": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.",
+        "score": 0.5306161844300166,
+        "source_title": "GSAT-7",
+        "hop_answer": "GSAT-7",
+        "hop_thought": "The context specifies that the operator is the Indian Navy, and the communication satellite used by the Indian Navy is GSAT-7.",
+        "hop_raw_response": "The context specifies that the operator is the Indian Navy, and the communication satellite used by the Indian Navy is GSAT-7.\nAnswer: GSAT-7",
+        "evidence_passages": [
+          {
+            "title": "GSAT-7",
+            "text": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013."
+          },
+          {
+            "title": "GSAT-7",
+            "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+          },
+          {
+            "title": "ATS-6",
+            "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the experimental satellite that was the forerunner to this communication satellite?",
+        "resolved_sub_question": "What is the experimental satellite that was the forerunner to this communication satellite? Context: Indian Navy; GSAT-7.",
+        "sentence_id": "sentence:gsat_7_0_1_the_indian_navy_is_the_user_of_the_multi_band_communication_spacecraft_which_ha",
+        "sentence": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.",
+        "score": 0.4059620661678315,
+        "source_title": "GSAT-7",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context is about GSAT-7, a communication satellite used by the Indian Navy. The question asks for the experimental satellite that was the forerunner to GSAT-7. However, the provided evidence does not mention any specific experimental satellite that directly preceded GSAT-7. The information about ATS-6 is unrelated to GSAT-7 and pertains to a different context involving NASA and ISRO.",
+        "hop_raw_response": "The context is about GSAT-7, a communication satellite used by the Indian Navy. The question asks for the experimental satellite that was the forerunner to GSAT-7. However, the provided evidence does not mention any specific experimental satellite that directly preceded GSAT-7. The information about ATS-6 is unrelated to GSAT-7 and pertains to a different context involving NASA and ISRO.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "GSAT-7",
+            "text": "The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013."
+          },
+          {
+            "title": "GSAT-7",
+            "text": "GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO. The Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. According to defense experts, the satellite will enable the navy to extend its blue water capabilities and stop relying on foreign satellites like Inmarsat, which provide communication services to its ships."
+          },
+          {
+            "title": "ATS-6",
+            "text": "ATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO)."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the operator of GSAT-7? => Indian Navy (source: GSAT-7)\n2. What is the communication satellite of this operator? => GSAT-7 (source: GSAT-7)\n3. What is the experimental satellite that was the forerunner to this communication satellite? (source: GSAT-7)\n\nFact hints:\n- GSAT-7 developed by ISRO\n- GSAT-7 is also known as INSAT-4F\n\nWikipedia Title: GSAT-7\nThe Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013. GSAT-7 GSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.\n\nWikipedia Title: GSAT-7\nThe Indian Navy is the user of the multi-band communication spacecraft, which has been operational since September 2013.\n\nWikipedia Title: GSAT-7\nGSAT-7 or INSAT-4F is a multi-band military communications satellite developed by ISRO.\n\nWikipedia Title: ATS-6\nATS - 6 (Applications Technology Satellite - 6) was a NASA experimental satellite, built by Fairchild Space and Electronics Division It has been called the world's first educational satellite as well as world's first experimental Direct Broadcast Satellite as part of the Satellite Instructional Television Experiment between NASA and Indian Space Research Organisation (ISRO).\n\nWikipedia Title: NOAA-4\nNOAA-4 NOAA-4, also known as ITOS-G was a weather satellite operated by the National Oceanic and Atmospheric Administration (NOAA). It was part of a series of satellites called ITOS, or improved TIROS.\n\nWikipedia Title: General Satellite\nGeneral Satellite GS Group CSMW is the only system developed in Russia, introduced in 2007 and tested on millions of viewers of the leading satellite TV operator, Tricolor TV (over 7 million subscribers).\n\nWikipedia Title: FedSat\nThe satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. Since 2005 it was operated by the Australian Department of Defence.\n\nWikipedia Title: Polar Satellite Launch Vehicle\nIt was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. Polar Satellite Launch Vehicle The Polar Satellite Launch Vehicle (PSLV) is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO).\n\nWikipedia Title: Nigeria\nNigeria NigComSat-1, a Nigerian satellite built in 2004, was Nigeria's third satellite and Africa's first communication satellite. It was launched on 13 May 2007, aboard a Chinese Long March 3B carrier rocket, from the Xichang Satellite Launch Centre in China.\n\nWikipedia Title: TDRS-6\nTDRS-6 TDRS-6, known before launch as TDRS-F, is an American communications satellite which is operated by NASA as part of the Tracking and Data Relay Satellite System. It was constructed by TRW, and is based on a custom satellite bus which was used for all seven first generation TDRS satellites.\n\nWikipedia Title: ATS-6\nAt the time of launch, it was the most powerful telecommunication satellite in orbit. It was the first 3 - axis stabilized spacecraft in geostationary orbit.\n\nQuestion: What is the experimental satellite which was the forerunner to the communication satellite of the operator of GSAT-7 called?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The operator of GSAT-7 is the Indian Navy, and GSAT-7 is a communication satellite developed by ISRO. To find the experimental satellite that was the forerunner to GSAT-7, we need to look for information about earlier ISRO satellites. However, the provided passages do not mention any specific experimental satellite that directly preceded GSAT-7. The closest relevant information is about ATS-6, which was an experimental satellite involving ISRO, but it is not explicitly stated as a forerunner to GSAT-7.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The operator of GSAT-7 is the Indian Navy, and GSAT-7 is a communication satellite developed by ISRO. To find the experimental satellite that was the forerunner to GSAT-7, we need to look for information about earlier ISRO satellites. However, the provided passages do not mention any specific experimental satellite that directly preceded GSAT-7. The closest relevant information is about ATS-6, which was an experimental satellite involving ISRO, but it is not explicitly stated as a forerunner to GSAT-7.\nAnswer: Unknown"
+}

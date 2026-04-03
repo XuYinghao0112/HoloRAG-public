@@ -1,0 +1,1060 @@
+{
+  "query": "Who was Suzanne Farrington's mother's spouse?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Suzanne Farrington"
+  ],
+  "raw_query_entities": [
+    "Suzanne Farrington"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Suzanne Farrington",
+      "node_id": "entity:title_anchor_suzanne_farrington",
+      "resolved_text": "Suzanne Farrington",
+      "score": 0.8198666666666667,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.775,
+      "score_margin": 0.20866666666666678,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who was Suzanne Farrington's mother?",
+    "Who was this person's spouse?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_suzanne_farrington",
+      "score": 1.0320433152949742,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:holman",
+      "score": 0.29196759920210846,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:suzanne",
+      "score": 0.2779434303703445,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:king_john_iii_of_sweden",
+      "score": 0.27545413098142535,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_fabulous_suzanne",
+      "score": 0.24297924275912355,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:steve_sekely",
+      "score": 0.24295507542407943,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:marshall_stedman",
+      "score": 0.2349058553374124,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:catherine",
+      "score": 0.22170183325431345,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:king_sigismund_i_the_old",
+      "score": 0.1988949469660675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sigismund_ii_augustus",
+      "score": 0.1988949469660675,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:myrtle_stedman",
+      "score": 0.1979571541524334,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "score": 0.18539521608145,
+      "layer": "sentence"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:suzanne_farrington_born_as_holman_sentence_suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_",
+      "text": "Suzanne Farrington born as Holman",
+      "head_id": "entity:title_anchor_suzanne_farrington",
+      "tail_id": "entity:holman",
+      "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "chunk_id": "chunk:suzanne_farrington_0",
+      "document_index": 15,
+      "score": 0.2897635240712933
+    },
+    {
+      "fact_id": "fact:catherine_became_spouse_of_king_john_iii_of_sweden_sentence_catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_",
+      "text": "Catherine became spouse of King John III of Sweden",
+      "head_id": "entity:catherine",
+      "tail_id": "entity:king_john_iii_of_sweden",
+      "sentence_id": "sentence:catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_john_iii_of_sweden_and_mother_of_the_future",
+      "chunk_id": "chunk:catherine_jagiellon_0",
+      "document_index": 4,
+      "score": 0.27325038459261347
+    },
+    {
+      "fact_id": "fact:fabulous_suzanne_directed_by_steve_sekely_sentence_the_fabulous_suzanne_0_0_the_fabulous_suzanne_is_a_1946_american_roma",
+      "text": "Fabulous Suzanne directed by Steve Sekely",
+      "head_id": "entity:title_anchor_the_fabulous_suzanne",
+      "tail_id": "entity:steve_sekely",
+      "sentence_id": "sentence:the_fabulous_suzanne_0_0_the_fabulous_suzanne_is_a_1946_american_romantic_comedy_film_directed_by_steve_s",
+      "chunk_id": "chunk:the_fabulous_suzanne_0",
+      "document_index": 2,
+      "score": 0.2407519602319553
+    },
+    {
+      "fact_id": "fact:adele_farrington_related_to_myrtle_stedman_sentence_the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farringto",
+      "text": "Adele Farrington related_to Myrtle Stedman",
+      "head_id": "entity:adele_farrington",
+      "tail_id": "entity:myrtle_stedman",
+      "sentence_id": "sentence:the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farrington_myrtle_stedman_marshall_stedm",
+      "chunk_id": "chunk:the_country_mouse_0",
+      "document_index": 0,
+      "score": 0.19575487944784367
+    },
+    {
+      "fact_id": "fact:thurston_hall_related_to_adele_farrington_sentence_the_price_mark_0_2_the_film_stars_dorothy_dalton_william_conklin_thur",
+      "text": "Thurston Hall related_to Adele Farrington",
+      "head_id": "entity:thurston_hall",
+      "tail_id": "entity:adele_farrington",
+      "sentence_id": "sentence:the_price_mark_0_2_the_film_stars_dorothy_dalton_william_conklin_thurston_hall_adele_farrington",
+      "chunk_id": "chunk:the_price_mark_0",
+      "document_index": 1,
+      "score": 0.17575461593379532
+    },
+    {
+      "fact_id": "fact:suzanne_farrington_occupation_british_actress_sentence_suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1",
+      "text": "Suzanne Farrington occupation British actress",
+      "head_id": "entity:title_anchor_suzanne_farrington",
+      "tail_id": "entity:british_actress",
+      "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "chunk_id": "chunk:suzanne_farrington_0",
+      "document_index": 15,
+      "score": 0.16976191936770013
+    },
+    {
+      "fact_id": "fact:catherine_mother_of_sigismund_iii_vasa_sentence_catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_john_iii_of_",
+      "text": "Catherine mother of Sigismund III Vasa",
+      "head_id": "entity:catherine",
+      "tail_id": "entity:sigismund_iii_vasa",
+      "sentence_id": "sentence:catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_john_iii_of_sweden_and_mother_of_the_future",
+      "chunk_id": "chunk:catherine_jagiellon_0",
+      "document_index": 4,
+      "score": 0.16574578913838958
+    },
+    {
+      "fact_id": "fact:hobart_bosworth_related_to_adele_farrington_sentence_the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farringt",
+      "text": "Hobart Bosworth related_to Adele Farrington",
+      "head_id": "entity:hobart_bosworth",
+      "tail_id": "entity:adele_farrington",
+      "sentence_id": "sentence:the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farrington_myrtle_stedman_marshall_stedm",
+      "chunk_id": "chunk:the_country_mouse_0",
+      "document_index": 0,
+      "score": 0.15575149453918863
+    }
+  ],
+  "bridge_entities": [
+    "Holman",
+    "British actress",
+    "12 October 1933",
+    "1 March 2015",
+    "Vivien Leigh"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was Suzanne Farrington's mother?",
+      "resolved_sub_question": "Who was Suzanne Farrington's mother?",
+      "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "sentence": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.",
+      "score": 0.5732392000000002,
+      "source_title": "Suzanne Farrington",
+      "hop_answer": "Vivien Leigh",
+      "hop_thought": "The passage states that Suzanne Farrington was the only child of Vivien Leigh.",
+      "hop_raw_response": "The passage states that Suzanne Farrington was the only child of Vivien Leigh.\nAnswer: Vivien Leigh",
+      "evidence_passages": [
+        {
+          "title": "Suzanne Farrington",
+          "text": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress."
+        },
+        {
+          "title": "Suzanne Farrington",
+          "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+        },
+        {
+          "title": "Suzanne Farrington",
+          "text": "Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was this person's spouse?",
+      "resolved_sub_question": "Who was this person's spouse? Context: Vivien Leigh.",
+      "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "sentence": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.",
+      "score": 0.42680000000000007,
+      "source_title": "Suzanne Farrington",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not mention any spouse of Suzanne Farrington, only her parents, Vivien Leigh and Herbert Leigh Holman.",
+      "hop_raw_response": "The context provided does not mention any spouse of Suzanne Farrington, only her parents, Vivien Leigh and Herbert Leigh Holman.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Suzanne Farrington",
+          "text": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress."
+        },
+        {
+          "title": "Suzanne Farrington",
+          "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+        },
+        {
+          "title": "Suzanne Farrington",
+          "text": "She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_suzanne_farrington",
+      "score": 0.11893240727856327,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+      "score": 0.0819444283484674,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_john_iii_of_sweden_and_mother_of_the_future",
+      "score": 0.04000518195794118,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:holman",
+      "score": 0.03695599158397979,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farrington_myrtle_stedman_marshall_stedm",
+      "score": 0.035329291504740526,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_fabulous_suzanne_0_0_the_fabulous_suzanne_is_a_1946_american_romantic_comedy_film_directed_by_steve_s",
+      "score": 0.03462868577385099,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_the_fabulous_suzanne",
+      "score": 0.031576435571887634,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:suzanne",
+      "score": 0.031195607186474586,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:catherine",
+      "score": 0.031158163225181813,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:king_john_iii_of_sweden",
+      "score": 0.028505868712435656,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:myrtle_stedman",
+      "score": 0.02735357768421306,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:british_actress",
+      "score": 0.026180854588917807,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:marshall_stedman",
+      "score": 0.0261750541249477,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:steve_sekely",
+      "score": 0.025921419965166705,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sigismund_iii_vasa",
+      "score": 0.025174357158930516,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:king_sigismund_i_the_old",
+      "score": 0.024229695958106097,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:adele_farrington",
+      "score": 0.023755926794015447,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:sigismund_ii_augustus",
+      "score": 0.020681668558308098,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_price_mark_0_2_the_film_stars_dorothy_dalton_william_conklin_thurston_hall_adele_farrington",
+      "score": 0.019182557608309683,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:thurston_hall",
+      "score": 0.019112104831435387,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:suzanne_farrington_0",
+      "passage_index": 15,
+      "title": "Suzanne Farrington",
+      "score": 0.07650260697051098,
+      "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.",
+      "score_breakdown": {
+        "dense": 0.0509263272450631,
+        "graph": 0.056121067886197314,
+        "fact": 0.2110453774657805
+      }
+    },
+    {
+      "node_id": "chunk:catherine_jagiellon_0",
+      "passage_index": 4,
+      "title": "Catherine Jagiellon",
+      "score": 0.0748333567963497,
+      "text": "Catherine Jagiellon\nCatherine Jagiellon was born in Kraków as the youngest daughter of King Sigismund I the Old of the Polish-Lithuanian Commonwealth and his wife Bona Sforza of Milan. Catherine became the spouse of King John III of Sweden and mother of the future Sigismund III Vasa, King of Poland. After the death of her father in 1548, she and her sisters Anna and Sophia moved to Masovia with their mother. After their mother's departure to Italy in 1558, they lived there alone. The sisters were not close to their brother Sigismund II Augustus of Poland. Catherine could reportedly speak Italian and Latin, and was described as more attractive than Anna, and most marriage suggestions were directed toward her.",
+      "score_breakdown": {
+        "dense": 0.049917886465645295,
+        "graph": 0.05413391131578004,
+        "fact": 0.20758897230340514
+      }
+    },
+    {
+      "node_id": "chunk:the_fabulous_suzanne_0",
+      "passage_index": 2,
+      "title": "The Fabulous Suzanne",
+      "score": 0.07328153793404076,
+      "text": "The Fabulous Suzanne\nThe Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger. A waitress inherits a fortune from one of her customers.",
+      "score_breakdown": {
+        "dense": 0.05029219429064734,
+        "graph": 0.0515938858372899,
+        "fact": 0.2009511021533183
+      }
+    },
+    {
+      "node_id": "chunk:the_country_mouse_0",
+      "passage_index": 0,
+      "title": "The Country Mouse",
+      "score": 0.07176937144158187,
+      "text": "The Country Mouse\nThe Country Mouse is a 1914 American comedy silent film written and directed by Hobart Bosworth. The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines. The film was released on November 23, 1914, by Paramount Pictures.",
+      "score_breakdown": {
+        "dense": 0.04976698291423846,
+        "graph": 0.05193711524355974,
+        "fact": 0.19210930843788526
+      }
+    },
+    {
+      "node_id": "chunk:the_price_mark_0",
+      "passage_index": 1,
+      "title": "The Price Mark",
+      "score": 0.07071520971467088,
+      "text": "The Price Mark\nThe Price Mark is a 1917 American drama silent film directed by Roy William Neill and written by John B. Ritchie. The film stars Dorothy Dalton, William Conklin, Thurston Hall, Adele Farrington, Edwin Wallock and Dorcas Matthews. The film was released on October 21, 1917, by Paramount Pictures.",
+      "score_breakdown": {
+        "dense": 0.04970767753094872,
+        "graph": 0.050434003755691535,
+        "fact": 0.1883052396396108
+      }
+    },
+    {
+      "node_id": "chunk:suzanne_hosched_0",
+      "passage_index": 6,
+      "title": "Suzanne Hoschedé",
+      "score": 0.042530113188357796,
+      "text": "Suzanne Hoschedé\nSuzanne Hoschedé (c. 1864–February 6, 1899) was the eldest daughter of Alice Hoschedé and Ernest Hoschedé, the stepdaughter and favorite model of French impressionist painter Claude Monet, and wife of American impressionist painter Theodore Earl Butler. Suzanne is known as \"The Woman with a Parasol\" in Monet's painting of 1886.",
+      "score_breakdown": {
+        "dense": 0.050362690651817296,
+        "graph": 0.04943544443286096,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:suzanne_s_career_0",
+      "passage_index": 3,
+      "title": "Suzanne's Career",
+      "score": 0.042313308292252674,
+      "text": "Suzanne's Career\nSuzanne's Career is a 1963 film by Éric Rohmer. The original French title is \"La Carrière de Suzanne\". It is the second movie in the series of the \"Six Moral Tales\". A flirty Guillaume seduces a woman named Suzanne, which becomes problematic to his friendship with the shy Bertrand, especially when Guillaume's and Suzanne's relationship becomes strained.",
+      "score_breakdown": {
+        "dense": 0.0500211415176834,
+        "graph": 0.049338934858422674,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:suzanne_storrs_0",
+      "passage_index": 11,
+      "title": "Suzanne Storrs",
+      "score": 0.04228303502972109,
+      "text": "Suzanne Storrs\nSuzanne Storrs (April 13, 1934 – January 25, 1995), born Suzanne Storrs Poulton, was a former Miss Utah and an American television actress who appeared in sixteen different television series between 1954 and 1961, usually as the beautiful leading lady.",
+      "score_breakdown": {
+        "dense": 0.05018210531487115,
+        "graph": 0.04894292368847319,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:suzy_solidor_0",
+      "passage_index": 12,
+      "title": "Suzy Solidor",
+      "score": 0.0422827802164665,
+      "text": "Suzy Solidor\nSuzy Solidor was born Suzanne Louise Marie Marion in 1900 in the Pie district of Saint-Servan-sur-Mer in Brittany, France. She was the daughter of Louise Marie Adeline Marion, a 28-year-old single mother. In 1907 she became Suzy Rocher when her mother married Eugène Prudent Rocher. She later changed her name to Suzy Solidor when she moved to Paris in the late 1920s, taking the name from a district of Saint-Servan in which she had lived.",
+      "score_breakdown": {
+        "dense": 0.050148071536948335,
+        "graph": 0.04900446957048307,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:suzanne_wurtz_0",
+      "passage_index": 13,
+      "title": "Suzanne Wurtz",
+      "score": 0.04226289713678292,
+      "text": "Suzanne Wurtz\nSuzanne Wurtz (26 December 1900 – 27 July 1982) was a French swimmer. She competed at the 1920 Summer Olympics in the 100 m and 300 m freestyle events, but failed to reach the finals.",
+      "score_breakdown": {
+        "dense": 0.05011716982319193,
+        "graph": 0.04899484578009119,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_suzanne_farrington",
+        "score": 0.11893240727856327,
+        "text": "Suzanne Farrington",
+        "metadata": {
+          "canonical_name": "Suzanne Farrington",
+          "aliases": [
+            "SF",
+            "Suzanne Farrington"
+          ],
+          "surface_forms": [
+            "SF",
+            "Suzanne Farrington"
+          ],
+          "title_anchor": "Suzanne Farrington"
+        }
+      },
+      {
+        "node_id": "entity:holman",
+        "score": 0.03695599158397979,
+        "text": "Holman",
+        "metadata": {
+          "canonical_name": "Holman",
+          "aliases": [
+            "Holman"
+          ],
+          "surface_forms": [
+            "Holman"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+        "score": 0.0819444283484674,
+        "text": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.",
+        "metadata": {
+          "title": "Suzanne Farrington",
+          "chunk_id": "chunk:suzanne_farrington_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Suzanne Farrington",
+              "relation": "born as",
+              "tail": "Holman"
+            },
+            {
+              "head": "Suzanne Farrington",
+              "relation": "date of birth",
+              "tail": "12 October 1933"
+            },
+            {
+              "head": "Suzanne Farrington",
+              "relation": "date of death",
+              "tail": "1 March 2015"
+            },
+            {
+              "head": "Suzanne Farrington",
+              "relation": "occupation",
+              "tail": "British actress"
+            }
+          ],
+          "entities": [
+            "Suzanne Farrington",
+            "Holman",
+            "British actress"
+          ],
+          "entity_ids": [
+            "entity:12_october_1933",
+            "entity:1_march_2015",
+            "entity:british_actress",
+            "entity:holman",
+            "entity:title_anchor_suzanne_farrington"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:catherine_jagiellon_0_1_catherine_became_the_spouse_of_king_john_iii_of_sweden_and_mother_of_the_future",
+        "score": 0.04000518195794118,
+        "text": "Catherine became the spouse of King John III of Sweden and mother of the future Sigismund III Vasa, King of Poland.",
+        "metadata": {
+          "title": "Catherine Jagiellon",
+          "chunk_id": "chunk:catherine_jagiellon_0",
+          "sentence_index": 1,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Catherine",
+              "relation": "became spouse of",
+              "tail": "King John III of Sweden"
+            },
+            {
+              "head": "Catherine",
+              "relation": "mother of",
+              "tail": "Sigismund III Vasa"
+            },
+            {
+              "head": "Sigismund III Vasa",
+              "relation": "became",
+              "tail": "King of Poland"
+            }
+          ],
+          "entities": [
+            "Catherine",
+            "King John III of Sweden",
+            "Sigismund III Vasa",
+            "King of Poland"
+          ],
+          "entity_ids": [
+            "entity:catherine",
+            "entity:king_john_iii_of_sweden",
+            "entity:king_of_poland",
+            "entity:sigismund_iii_vasa"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_country_mouse_0_1_the_film_stars_hobart_bosworth_adele_farrington_myrtle_stedman_marshall_stedm",
+        "score": 0.035329291504740526,
+        "text": "The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines.",
+        "metadata": {
+          "title": "The Country Mouse",
+          "chunk_id": "chunk:the_country_mouse_0",
+          "sentence_index": 1,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Hobart Bosworth",
+              "relation": "related_to",
+              "tail": "Adele Farrington"
+            },
+            {
+              "head": "Adele Farrington",
+              "relation": "related_to",
+              "tail": "Myrtle Stedman"
+            },
+            {
+              "head": "Myrtle Stedman",
+              "relation": "related_to",
+              "tail": "Marshall Stedman"
+            }
+          ],
+          "entities": [
+            "Hobart Bosworth",
+            "Adele Farrington",
+            "Myrtle Stedman",
+            "Marshall Stedman",
+            "Rhea Haines"
+          ],
+          "entity_ids": [
+            "entity:adele_farrington",
+            "entity:hobart_bosworth",
+            "entity:marshall_stedman",
+            "entity:myrtle_stedman",
+            "entity:rhea_haines"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_fabulous_suzanne_0_0_the_fabulous_suzanne_is_a_1946_american_romantic_comedy_film_directed_by_steve_s",
+        "score": 0.03462868577385099,
+        "text": "The Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger.",
+        "metadata": {
+          "title": "The Fabulous Suzanne",
+          "chunk_id": "chunk:the_fabulous_suzanne_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Fabulous Suzanne",
+              "relation": "is a",
+              "tail": "1946 American romantic comedy film"
+            },
+            {
+              "head": "Fabulous Suzanne",
+              "relation": "directed by",
+              "tail": "Steve Sekely"
+            },
+            {
+              "head": "Fabulous Suzanne",
+              "relation": "starring",
+              "tail": "Barbara Britton Rudy Vallee and Otto Kruger"
+            }
+          ],
+          "entities": [
+            "Fabulous Suzanne",
+            "Steve Sekely",
+            "Barbara Britton",
+            "Rudy Vallee",
+            "Otto Kruger"
+          ],
+          "entity_ids": [
+            "entity:1946_american_romantic_comedy_film",
+            "entity:barbara_britton",
+            "entity:barbara_britton_rudy_vallee_and_otto_kruger",
+            "entity:otto_kruger",
+            "entity:rudy_vallee",
+            "entity:steve_sekely",
+            "entity:title_anchor_the_fabulous_suzanne"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_price_mark_0_2_the_film_stars_dorothy_dalton_william_conklin_thurston_hall_adele_farrington",
+        "score": 0.019182557608309683,
+        "text": "The film stars Dorothy Dalton, William Conklin, Thurston Hall, Adele Farrington, Edwin Wallock and Dorcas Matthews.",
+        "metadata": {
+          "title": "The Price Mark",
+          "chunk_id": "chunk:the_price_mark_0",
+          "sentence_index": 2,
+          "document_index": 1,
+          "triples": [
+            {
+              "head": "Dorothy Dalton",
+              "relation": "related_to",
+              "tail": "William Conklin"
+            },
+            {
+              "head": "William Conklin",
+              "relation": "related_to",
+              "tail": "Thurston Hall"
+            },
+            {
+              "head": "Thurston Hall",
+              "relation": "related_to",
+              "tail": "Adele Farrington"
+            }
+          ],
+          "entities": [
+            "Dorothy Dalton",
+            "William Conklin",
+            "Thurston Hall",
+            "Adele Farrington",
+            "Edwin Wallock",
+            "Dorcas Matthews"
+          ],
+          "entity_ids": [
+            "entity:adele_farrington",
+            "entity:dorcas_matthews",
+            "entity:dorothy_dalton",
+            "entity:edwin_wallock",
+            "entity:thurston_hall",
+            "entity:william_conklin"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:catherine_jagiellon_0_0_catherine_jagiellon_was_born_in_krak_w_as_the_youngest_daughter_of_king_sigismun",
+        "score": 0.010865359460363228,
+        "text": "Catherine Jagiellon was born in Kraków as the youngest daughter of King Sigismund I the Old of the Polish-Lithuanian Commonwealth and his wife Bona Sforza of Milan.",
+        "metadata": {
+          "title": "Catherine Jagiellon",
+          "chunk_id": "chunk:catherine_jagiellon_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Catherine Jagiellon",
+              "relation": "born in",
+              "tail": "Krak w"
+            },
+            {
+              "head": "Catherine Jagiellon",
+              "relation": "daughter of",
+              "tail": "King Sigismund I the Old"
+            },
+            {
+              "head": "King Sigismund I the Old",
+              "relation": "ruler of",
+              "tail": "Polish-Lithuanian Commonwealth"
+            },
+            {
+              "head": "King Sigismund I the Old",
+              "relation": "husband of",
+              "tail": "Bona Sforza"
+            },
+            {
+              "head": "Bona Sforza",
+              "relation": "from",
+              "tail": "Milan"
+            }
+          ],
+          "entities": [
+            "Catherine Jagiellon",
+            "Krak w",
+            "King Sigismund I the Old",
+            "Polish-Lithuanian Commonwealth",
+            "Bona Sforza",
+            "Milan"
+          ],
+          "entity_ids": [
+            "entity:bona_sforza",
+            "entity:king_sigismund_i_the_old",
+            "entity:krak_w",
+            "entity:milan",
+            "entity:polish_lithuanian_commonwealth",
+            "entity:title_anchor_catherine_jagiellon"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:suzanne_farrington_0",
+        "score": 0.014299086917905726,
+        "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.",
+        "metadata": {
+          "title": "Suzanne Farrington",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:12_october_1933",
+            "entity:1_march_2015",
+            "entity:british_actress",
+            "entity:farrington",
+            "entity:herbert_leigh_holman",
+            "entity:holman",
+            "entity:title_anchor_suzanne_farrington",
+            "entity:upon",
+            "entity:vivien_leigh"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:catherine_jagiellon_0",
+        "score": 0.012321566131396816,
+        "text": "Catherine Jagiellon\nCatherine Jagiellon was born in Kraków as the youngest daughter of King Sigismund I the Old of the Polish-Lithuanian Commonwealth and his wife Bona Sforza of Milan. Catherine became the spouse of King John III of Sweden and mother of the future Sigismund III Vasa, King of Poland. After the death of her father in 1548, she and her sisters Anna and Sophia moved to Masovia with their mother. After their mother's departure to Italy in 1558, they lived there alone. The sisters were not close to their brother Sigismund II Augustus of Poland. Catherine could reportedly speak Italian and Latin, and was described as more attractive than Anna, and most marriage suggestions were directed toward her.",
+        "metadata": {
+          "title": "Catherine Jagiellon",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:after",
+            "entity:anna",
+            "entity:augustus",
+            "entity:bona_sforza",
+            "entity:catherine",
+            "entity:italian",
+            "entity:italy",
+            "entity:king_john_iii_of_sweden",
+            "entity:king_of_poland",
+            "entity:king_sigismund_i_the_old",
+            "entity:krak_w",
+            "entity:latin",
+            "entity:masovia",
+            "entity:milan",
+            "entity:more_attractive_than_anna",
+            "entity:poland",
+            "entity:polish_lithuanian_commonwealth",
+            "entity:sigismund",
+            "entity:sigismund_ii_augustus",
+            "entity:sigismund_iii_vasa",
+            "entity:sophia",
+            "entity:title_anchor_catherine_jagiellon"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_country_mouse_0",
+        "score": 0.010012358390327346,
+        "text": "The Country Mouse\nThe Country Mouse is a 1914 American comedy silent film written and directed by Hobart Bosworth. The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines. The film was released on November 23, 1914, by Paramount Pictures.",
+        "metadata": {
+          "title": "The Country Mouse",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:1914_american_comedy_silent_film",
+            "entity:adele_farrington",
+            "entity:hobart_bosworth",
+            "entity:marshall_stedman",
+            "entity:myrtle_stedman",
+            "entity:november",
+            "entity:paramount_pictures",
+            "entity:rhea_haines",
+            "entity:title_anchor_the_country_mouse"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_fabulous_suzanne_0",
+        "score": 0.008287367744850505,
+        "text": "The Fabulous Suzanne\nThe Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger. A waitress inherits a fortune from one of her customers.",
+        "metadata": {
+          "title": "The Fabulous Suzanne",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:1946_american_romantic_comedy_film",
+            "entity:barbara_britton",
+            "entity:barbara_britton_rudy_vallee_and_otto_kruger",
+            "entity:otto_kruger",
+            "entity:rudy_vallee",
+            "entity:steve_sekely",
+            "entity:title_anchor_the_fabulous_suzanne"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Suzanne Farrington\nSuzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.\n\nCatherine Jagiellon\nCatherine Jagiellon\nCatherine Jagiellon was born in Kraków as the youngest daughter of King Sigismund I the Old of the Polish-Lithuanian Commonwealth and his wife Bona Sforza of Milan. Catherine became the spouse of King John III of Sweden and mother of the future Sigismund III Vasa, King of Poland. After the death of her father in 1548, she and her sisters Anna and Sophia moved to Masovia with their mother. After their mother's departure to Italy in 1558, they lived there alone. The sisters were not close to their brother Sigismund II Augustus of Poland. Catherine could reportedly speak Italian and Latin, and was described as more attractive than Anna, and most marriage suggestions were directed toward her.\n\nThe Fabulous Suzanne\nThe Fabulous Suzanne\nThe Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger. A waitress inherits a fortune from one of her customers.\n\nThe Country Mouse\nThe Country Mouse\nThe Country Mouse is a 1914 American comedy silent film written and directed by Hobart Bosworth. The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines. The film was released on November 23, 1914, by Paramount Pictures.\n\nThe Price Mark\nThe Price Mark\nThe Price Mark is a 1917 American drama silent film directed by Roy William Neill and written by John B. Ritchie. The film stars Dorothy Dalton, William Conklin, Thurston Hall, Adele Farrington, Edwin Wallock and Dorcas Matthews. The film was released on October 21, 1917, by Paramount Pictures.\n\nSuzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.\n\nSuzanne Farrington\nUpon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.\n\nSuzanne Farrington\nShe was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman.\n\nDarlings of the Gods\nDarlings of the Gods\nDarlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.\n\nSuzanne Storrs\nSuzanne Storrs\nSuzanne Storrs (April 13, 1934 – January 25, 1995), born Suzanne Storrs Poulton, was a former Miss Utah and an American television actress who appeared in sixteen different television series between 1954 and 1961, usually as the beautiful leading lady.\n\nSuzanne Rogers\nSuzanne Rogers\nSuzanne Rogers (born Suzanne Cecelia Crumpler; July 9, 1943) is an American actress with film and television credits. Her stage name was inspired by Ginger Rogers, whom she cites as a personal inspiration for joining the entertainment industry. Rogers got her start as a dancer / performer at New York City's Radio City Music Hall, but she is perhaps best known for playing Maggie Horton, a role she originated and has played since 1973 on the NBC dramatic serial Days of Our Lives.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:suzanne_farrington_0",
+        "passage_index": 15,
+        "title": "Suzanne Farrington",
+        "score": 0.07650260697051098,
+        "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.",
+        "score_breakdown": {
+          "dense": 0.0509263272450631,
+          "graph": 0.056121067886197314,
+          "fact": 0.2110453774657805
+        }
+      },
+      {
+        "node_id": "chunk:catherine_jagiellon_0",
+        "passage_index": 4,
+        "title": "Catherine Jagiellon",
+        "score": 0.0748333567963497,
+        "text": "Catherine Jagiellon\nCatherine Jagiellon was born in Kraków as the youngest daughter of King Sigismund I the Old of the Polish-Lithuanian Commonwealth and his wife Bona Sforza of Milan. Catherine became the spouse of King John III of Sweden and mother of the future Sigismund III Vasa, King of Poland. After the death of her father in 1548, she and her sisters Anna and Sophia moved to Masovia with their mother. After their mother's departure to Italy in 1558, they lived there alone. The sisters were not close to their brother Sigismund II Augustus of Poland. Catherine could reportedly speak Italian and Latin, and was described as more attractive than Anna, and most marriage suggestions were directed toward her.",
+        "score_breakdown": {
+          "dense": 0.049917886465645295,
+          "graph": 0.05413391131578004,
+          "fact": 0.20758897230340514
+        }
+      },
+      {
+        "node_id": "chunk:the_fabulous_suzanne_0",
+        "passage_index": 2,
+        "title": "The Fabulous Suzanne",
+        "score": 0.07328153793404076,
+        "text": "The Fabulous Suzanne\nThe Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger. A waitress inherits a fortune from one of her customers.",
+        "score_breakdown": {
+          "dense": 0.05029219429064734,
+          "graph": 0.0515938858372899,
+          "fact": 0.2009511021533183
+        }
+      },
+      {
+        "node_id": "chunk:the_country_mouse_0",
+        "passage_index": 0,
+        "title": "The Country Mouse",
+        "score": 0.07176937144158187,
+        "text": "The Country Mouse\nThe Country Mouse is a 1914 American comedy silent film written and directed by Hobart Bosworth. The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines. The film was released on November 23, 1914, by Paramount Pictures.",
+        "score_breakdown": {
+          "dense": 0.04976698291423846,
+          "graph": 0.05193711524355974,
+          "fact": 0.19210930843788526
+        }
+      },
+      {
+        "node_id": "chunk:the_price_mark_0",
+        "passage_index": 1,
+        "title": "The Price Mark",
+        "score": 0.07071520971467088,
+        "text": "The Price Mark\nThe Price Mark is a 1917 American drama silent film directed by Roy William Neill and written by John B. Ritchie. The film stars Dorothy Dalton, William Conklin, Thurston Hall, Adele Farrington, Edwin Wallock and Dorcas Matthews. The film was released on October 21, 1917, by Paramount Pictures.",
+        "score_breakdown": {
+          "dense": 0.04970767753094872,
+          "graph": 0.050434003755691535,
+          "fact": 0.1883052396396108
+        }
+      },
+      {
+        "node_id": "chunk:suzanne_hosched_0",
+        "passage_index": 6,
+        "title": "Suzanne Hoschedé",
+        "score": 0.042530113188357796,
+        "text": "Suzanne Hoschedé\nSuzanne Hoschedé (c. 1864–February 6, 1899) was the eldest daughter of Alice Hoschedé and Ernest Hoschedé, the stepdaughter and favorite model of French impressionist painter Claude Monet, and wife of American impressionist painter Theodore Earl Butler. Suzanne is known as \"The Woman with a Parasol\" in Monet's painting of 1886.",
+        "score_breakdown": {
+          "dense": 0.050362690651817296,
+          "graph": 0.04943544443286096,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:suzanne_s_career_0",
+        "passage_index": 3,
+        "title": "Suzanne's Career",
+        "score": 0.042313308292252674,
+        "text": "Suzanne's Career\nSuzanne's Career is a 1963 film by Éric Rohmer. The original French title is \"La Carrière de Suzanne\". It is the second movie in the series of the \"Six Moral Tales\". A flirty Guillaume seduces a woman named Suzanne, which becomes problematic to his friendship with the shy Bertrand, especially when Guillaume's and Suzanne's relationship becomes strained.",
+        "score_breakdown": {
+          "dense": 0.0500211415176834,
+          "graph": 0.049338934858422674,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:suzanne_storrs_0",
+        "passage_index": 11,
+        "title": "Suzanne Storrs",
+        "score": 0.04228303502972109,
+        "text": "Suzanne Storrs\nSuzanne Storrs (April 13, 1934 – January 25, 1995), born Suzanne Storrs Poulton, was a former Miss Utah and an American television actress who appeared in sixteen different television series between 1954 and 1961, usually as the beautiful leading lady.",
+        "score_breakdown": {
+          "dense": 0.05018210531487115,
+          "graph": 0.04894292368847319,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:suzy_solidor_0",
+        "passage_index": 12,
+        "title": "Suzy Solidor",
+        "score": 0.0422827802164665,
+        "text": "Suzy Solidor\nSuzy Solidor was born Suzanne Louise Marie Marion in 1900 in the Pie district of Saint-Servan-sur-Mer in Brittany, France. She was the daughter of Louise Marie Adeline Marion, a 28-year-old single mother. In 1907 she became Suzy Rocher when her mother married Eugène Prudent Rocher. She later changed her name to Suzy Solidor when she moved to Paris in the late 1920s, taking the name from a district of Saint-Servan in which she had lived.",
+        "score_breakdown": {
+          "dense": 0.050148071536948335,
+          "graph": 0.04900446957048307,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:suzanne_wurtz_0",
+        "passage_index": 13,
+        "title": "Suzanne Wurtz",
+        "score": 0.04226289713678292,
+        "text": "Suzanne Wurtz\nSuzanne Wurtz (26 December 1900 – 27 July 1982) was a French swimmer. She competed at the 1920 Summer Olympics in the 100 m and 300 m freestyle events, but failed to reach the finals.",
+        "score_breakdown": {
+          "dense": 0.05011716982319193,
+          "graph": 0.04899484578009119,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was Suzanne Farrington's mother?",
+        "resolved_sub_question": "Who was Suzanne Farrington's mother?",
+        "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+        "sentence": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.",
+        "score": 0.5732392000000002,
+        "source_title": "Suzanne Farrington",
+        "hop_answer": "Vivien Leigh",
+        "hop_thought": "The passage states that Suzanne Farrington was the only child of Vivien Leigh.",
+        "hop_raw_response": "The passage states that Suzanne Farrington was the only child of Vivien Leigh.\nAnswer: Vivien Leigh",
+        "evidence_passages": [
+          {
+            "title": "Suzanne Farrington",
+            "text": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress."
+          },
+          {
+            "title": "Suzanne Farrington",
+            "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+          },
+          {
+            "title": "Suzanne Farrington",
+            "text": "Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was this person's spouse?",
+        "resolved_sub_question": "Who was this person's spouse? Context: Vivien Leigh.",
+        "sentence_id": "sentence:suzanne_farrington_0_0_suzanne_farrington_n_e_holman_12_october_1933_1_march_2015_was_a_british_ac",
+        "sentence": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress.",
+        "score": 0.42680000000000007,
+        "source_title": "Suzanne Farrington",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not mention any spouse of Suzanne Farrington, only her parents, Vivien Leigh and Herbert Leigh Holman.",
+        "hop_raw_response": "The context provided does not mention any spouse of Suzanne Farrington, only her parents, Vivien Leigh and Herbert Leigh Holman.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Suzanne Farrington",
+            "text": "Suzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress."
+          },
+          {
+            "title": "Suzanne Farrington",
+            "text": "Suzanne Farrington\nSuzanne Farrington (née Holman; 12 October 1933 – 1 March 2015) was a British actress. She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries."
+          },
+          {
+            "title": "Suzanne Farrington",
+            "text": "She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who was Suzanne Farrington's mother? => Vivien Leigh (source: Suzanne Farrington)\n2. Who was this person's spouse? (source: Suzanne Farrington)\n\nFact hints:\n- Suzanne Farrington born as Holman\n- Suzanne Farrington occupation British actress\n\nWikipedia Title: Suzanne Farrington\nShe was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Upon her mother's death, Farrington was bequeathed her mother's papers, including her letters, photographs, contracts and diaries.\n\nWikipedia Title: Darlings of the Gods\nDarlings of the Gods Darlings of the Gods is a 1989 Australian mini series about the 1948 trip to Australia by Laurence Olivier and Vivien Leigh and the Old Vic Company, where Olivier and Leigh met Peter Finch.\n\nWikipedia Title: Suzanne Storrs\nSuzanne Storrs Suzanne Storrs (April 13, 1934 – January 25, 1995), born Suzanne Storrs Poulton, was a former Miss Utah and an American television actress who appeared in sixteen different television series between 1954 and 1961, usually as the beautiful leading lady.\n\nWikipedia Title: Suzanne Rogers\nSuzanne Rogers Suzanne Rogers (born Suzanne Cecelia Crumpler; July 9, 1943) is an American actress with film and television credits. Her stage name was inspired by Ginger Rogers, whom she cites as a personal inspiration for joining the entertainment industry.\n\nWikipedia Title: The Country Mouse\nThe film was released on November 23, 1914, by Paramount Pictures. The film stars Hobart Bosworth, Adele Farrington, Myrtle Stedman, Marshall Stedman and Rhea Haines.\n\nQuestion: Who was Suzanne Farrington's mother's spouse?\nDraft Answer: Herbert Leigh Holman\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The passage states that Suzanne Farrington was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Therefore, Vivien Leigh's spouse was Herbert Leigh Holman.",
+  "predicted_answer": "Herbert Leigh Holman",
+  "qa_raw_response": "{\n  \"thought\": \"The passage states that Suzanne Farrington was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman. Therefore, Vivien Leigh's spouse was Herbert Leigh Holman.\",\n  \"answer\": \"Herbert Leigh Holman\",\n  \"support\": \"She was the only child of Vivien Leigh and her first husband, Herbert Leigh Holman.\"\n}"
+}

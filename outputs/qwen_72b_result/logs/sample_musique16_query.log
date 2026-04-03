@@ -1,0 +1,1048 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 17:07:46,925 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.75it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.69it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.10it/s]
+2026-04-03 17:07:57,357 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:07:58,286 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:07:59,930 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:01,986 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 17:08:03,941 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:15,288 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:18,066 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:21,322 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:25,738 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:30,944 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:08:35,713 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "Who is the child of Caroline LeRoy's spouse?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Caroline LeRoy Webster"
+  ],
+  "raw_query_entities": [
+    "Caroline LeRoy"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Caroline LeRoy",
+      "node_id": "entity:caroline_leroy_webster",
+      "resolved_text": "Caroline LeRoy Webster",
+      "score": 0.6903333333333334,
+      "alias_score": 0.6666666666666666,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.8875000000000001,
+      "score_margin": 0.06333333333333335,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is Caroline LeRoy Webster's spouse?",
+    "Who is the child of Caroline LeRoy Webster's spouse?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:caroline_leroy_webster",
+      "score": 1.063196070447769,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:daniel_fletcher_webster",
+      "score": 0.3423357861487019,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:magdalena_eleonora_busseck",
+      "score": 0.31361091285957793,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_elmer_the_great",
+      "score": 0.2986232493799987,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:new_york",
+      "score": 0.2862357117859369,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:daniel_webster",
+      "score": 0.2856282846853542,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:paul",
+      "score": 0.28361091911161823,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:mervyn_leroy",
+      "score": 0.28062341991180545,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_margareta_von_ascheberg",
+      "score": 0.2636118625130893,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:david",
+      "score": 0.26361038075896326,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_fbi_story",
+      "score": 0.26262245697791925,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:phoebe",
+      "score": 0.24151802387335253,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:margareta_von_ascheberg_was_child_of_magdalena_eleonora_busseck_sentence_margareta_von_ascheberg_0_0_margareta_von_asche",
+      "text": "Margareta von Ascheberg was child of Magdalena Eleonora Busseck",
+      "head_id": "entity:title_anchor_margareta_von_ascheberg",
+      "tail_id": "entity:magdalena_eleonora_busseck",
+      "sentence_id": "sentence:margareta_von_ascheberg_0_0_margareta_von_ascheberg_was_the_youngest_child_of_field_marshal_rutger_von_asche",
+      "chunk_id": "chunk:margareta_von_ascheberg_0",
+      "document_index": 5,
+      "score": 0.31151852066540664
+    },
+    {
+      "fact_id": "fact:elmer_the_great_directed_by_mervyn_leroy_sentence_elmer_the_great_0_0_elmer_the_great_is_a_1933_american_pre_code_comedy",
+      "text": "Elmer the Great directed by Mervyn LeRoy",
+      "head_id": "entity:title_anchor_elmer_the_great",
+      "tail_id": "entity:mervyn_leroy",
+      "sentence_id": "sentence:elmer_the_great_0_0_elmer_the_great_is_a_1933_american_pre_code_comedy_film_directed_by_mervyn_lero",
+      "chunk_id": "chunk:elmer_the_great_0",
+      "document_index": 17,
+      "score": 0.2965183595025007
+    },
+    {
+      "fact_id": "fact:caroline_leroy_webster_was_wife_of_daniel_webster_sentence_caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_i",
+      "text": "Caroline LeRoy Webster was wife of Daniel Webster",
+      "head_id": "entity:caroline_leroy_webster",
+      "tail_id": "entity:daniel_webster",
+      "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+      "chunk_id": "chunk:caroline_leroy_0",
+      "document_index": 10,
+      "score": 0.28353365544999654
+    },
+    {
+      "fact_id": "fact:paul_is_first_child_of_david_sentence_the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born_a_",
+      "text": "Paul is first child of David",
+      "head_id": "entity:paul",
+      "tail_id": "entity:david",
+      "sentence_id": "sentence:the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born_a_healthy_perfect_child_but_wh",
+      "chunk_id": "chunk:the_memory_keeper_s_daughter_0",
+      "document_index": 15,
+      "score": 0.2815191005786625
+    },
+    {
+      "fact_id": "fact:fbi_story_produced_and_directed_by_mervyn_leroy_sentence_the_fbi_story_0_0_the_fbi_story_is_a_1959_american_drama_film_s",
+      "text": "FBI Story produced and directed by Mervyn LeRoy",
+      "head_id": "entity:title_anchor_the_fbi_story",
+      "tail_id": "entity:mervyn_leroy",
+      "sentence_id": "sentence:the_fbi_story_0_0_the_fbi_story_is_a_1959_american_drama_film_starring_james_stewart_and_produced",
+      "chunk_id": "chunk:the_fbi_story_0",
+      "document_index": 2,
+      "score": 0.26051870056611426
+    },
+    {
+      "fact_id": "fact:phoebe_is_second_child_of_david_sentence_the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born",
+      "text": "Phoebe is second child of David",
+      "head_id": "entity:phoebe",
+      "tail_id": "entity:david",
+      "sentence_id": "sentence:the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born_a_healthy_perfect_child_but_wh",
+      "chunk_id": "chunk:the_memory_keeper_s_daughter_0",
+      "document_index": 15,
+      "score": 0.24151802387335253
+    },
+    {
+      "fact_id": "fact:caroline_leroy_webster_born_in_new_york_city_sentence_caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new",
+      "text": "Caroline LeRoy Webster born in New York City",
+      "head_id": "entity:caroline_leroy_webster",
+      "tail_id": "entity:new_york_city",
+      "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+      "chunk_id": "chunk:caroline_leroy_0",
+      "document_index": 10,
+      "score": 0.2385297598216141
+    },
+    {
+      "fact_id": "fact:margareta_von_ascheberg_was_child_of_field_marshal_rutger_von_ascheberg_sentence_margareta_von_ascheberg_0_0_margareta_v",
+      "text": "Margareta von Ascheberg was child of Field Marshal Rutger von Ascheberg",
+      "head_id": "entity:title_anchor_margareta_von_ascheberg",
+      "tail_id": "entity:field_marshal_rutger_von_ascheberg",
+      "sentence_id": "sentence:margareta_von_ascheberg_0_0_margareta_von_ascheberg_was_the_youngest_child_of_field_marshal_rutger_von_asche",
+      "chunk_id": "chunk:margareta_von_ascheberg_0",
+      "document_index": 5,
+      "score": 0.21152041997242943
+    }
+  ],
+  "bridge_entities": [
+    "New York City",
+    "Daniel Webster",
+    "September 28 1797",
+    "February 26 1882"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is Caroline LeRoy Webster's spouse?",
+      "resolved_sub_question": "Who is Caroline LeRoy Webster's spouse?",
+      "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+      "sentence": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
+      "score": 0.604516,
+      "source_title": "Caroline LeRoy",
+      "hop_answer": "Daniel Webster",
+      "hop_thought": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.",
+      "hop_raw_response": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.\nAnswer: Daniel Webster",
+      "evidence_passages": [
+        {
+          "title": "Caroline LeRoy",
+          "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the child of Caroline LeRoy Webster's spouse?",
+      "resolved_sub_question": "Who is the child of Caroline LeRoy Webster's spouse? Context: Daniel Webster.",
+      "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+      "sentence": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
+      "score": 0.5532444444444445,
+      "source_title": "Caroline LeRoy",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.",
+      "hop_raw_response": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Caroline LeRoy",
+          "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+      "score": 0.07773792808453972,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:caroline_leroy_webster",
+      "score": 0.06104694685970095,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:margareta_von_ascheberg_0_0_margareta_von_ascheberg_was_the_youngest_child_of_field_marshal_rutger_von_asche",
+      "score": 0.04841924906193315,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born_a_healthy_perfect_child_but_wh",
+      "score": 0.04352455928545176,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:elmer_the_great_0_0_elmer_the_great_is_a_1933_american_pre_code_comedy_film_directed_by_mervyn_lero",
+      "score": 0.032103025996375004,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_margareta_von_ascheberg",
+      "score": 0.029303059102126248,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:daniel_webster",
+      "score": 0.027929343489682075,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_fbi_story_0_0_the_fbi_story_is_a_1959_american_drama_film_starring_james_stewart_and_produced",
+      "score": 0.02776834785294212,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:david",
+      "score": 0.024245634021200422,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:new_york_city",
+      "score": 0.0235071939655045,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_elmer_the_great",
+      "score": 0.022537542600666108,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:fletcher_webster_0_0_daniel_fletcher_webster_commonly_known_as_fletcher_webster_july_25_1813_in_po",
+      "score": 0.021900724611166888,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:magdalena_eleonora_busseck",
+      "score": 0.020449234778345107,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_fbi_story",
+      "score": 0.018659022714963048,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:phoebe",
+      "score": 0.018204689275277863,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:mervyn_leroy",
+      "score": 0.017836280310243875,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:new_york",
+      "score": 0.01604369426056846,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:daniel_fletcher_webster",
+      "score": 0.014744221468830285,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:paul",
+      "score": 0.014438318417387254,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:field_marshal_rutger_von_ascheberg",
+      "score": 0.014075787796674162,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:caroline_leroy_0",
+      "passage_index": 10,
+      "title": "Caroline LeRoy",
+      "score": 0.07455276111650565,
+      "text": "Caroline LeRoy\nCaroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell.",
+      "score_breakdown": {
+        "dense": 0.05093544436433576,
+        "graph": 0.05546014255711896,
+        "fact": 0.19933482632656863
+      }
+    },
+    {
+      "node_id": "chunk:margareta_von_ascheberg_0",
+      "passage_index": 5,
+      "title": "Margareta von Ascheberg",
+      "score": 0.07428818324396345,
+      "text": "Margareta von Ascheberg\nMargareta von Ascheberg was the youngest child of Field Marshal Rutger von Ascheberg and Magdalena Eleonora Busseck. On 26 January 1691, she married colonel count Kjell Christopher Barnekow (d. 1700) in Malmö. As was the custom of the Swedish nobility as that time, she kept her name after marriage and style herself »Grevinnan Ascheberg» (Countess Ascheberg). The couple had four children. She accompanied her spouse on his military commissions: she gave birth to their youngest sons during the Bombardment of Brussels in 1695.",
+      "score_breakdown": {
+        "dense": 0.04995821311382416,
+        "graph": 0.053541233796378304,
+        "fact": 0.2049919726163112
+      }
+    },
+    {
+      "node_id": "chunk:the_memory_keeper_s_daughter_0",
+      "passage_index": 15,
+      "title": "The Memory Keeper's Daughter",
+      "score": 0.07315319353786615,
+      "text": "The Memory Keeper's Daughter\nIn early March of 1964, Dr. David Henry is forced to deliver his wife Norah's twins with the help of a nurse, Caroline Gill. Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome. David, recalling the possibility of a heart defect and early death (which his younger sister June had had; dying at the young age of twelve) and decides that the baby girl will be placed in an institution.",
+      "score_breakdown": {
+        "dense": 0.04985292712361592,
+        "graph": 0.052980115598076256,
+        "fact": 0.19893365960303008
+      }
+    },
+    {
+      "node_id": "chunk:elmer_the_great_0",
+      "passage_index": 17,
+      "title": "Elmer, the Great",
+      "score": 0.07301482593558645,
+      "text": "Elmer, the Great\nElmer, the Great is a 1933 American pre-Code comedy film directed by Mervyn LeRoy, starring Joe E. Brown and Patricia Ellis.",
+      "score_breakdown": {
+        "dense": 0.04971835379916958,
+        "graph": 0.05126243421920829,
+        "fact": 0.20194000720187125
+      }
+    },
+    {
+      "node_id": "chunk:the_fbi_story_0",
+      "passage_index": 2,
+      "title": "The FBI Story",
+      "score": 0.07184047827770665,
+      "text": "The FBI Story\nThe FBI Story is a 1959 American drama film starring James Stewart, and produced and directed by Mervyn LeRoy. The screenplay by Richard L. Breen and John Twist is based on a book by Don Whitehead.",
+      "score_breakdown": {
+        "dense": 0.04964310104570978,
+        "graph": 0.05105614188244485,
+        "fact": 0.19479953425221877
+      }
+    },
+    {
+      "node_id": "chunk:fletcher_webster_0",
+      "passage_index": 0,
+      "title": "Fletcher Webster",
+      "score": 0.04261504200078227,
+      "text": "Fletcher Webster\nDaniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster. He was educated at Harvard College. During his father's first term as Secretary of State, Fletcher served as Chief Clerk of the United States State Department which, at the time, was the second most powerful office in the State Department. As Chief Clerk, he delivered the news of President William Henry Harrison's death to the new President, John Tyler.",
+      "score_breakdown": {
+        "dense": 0.04990265068352227,
+        "graph": 0.050561947082816715,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:lee_evans_producer_0",
+      "passage_index": 11,
+      "title": "Lee Evans (producer)",
+      "score": 0.042489362459054394,
+      "text": "Lee Evans (producer)\nLee Evans, also known as LeRoi Evans and LeRoy Evans, is an American record producer, recording engineer, songwriter, musician, entrepreneur, businessman and the CEO and co-owner of JAMBOX Entertainment. He currently resides in midtown Manhattan, New York.",
+      "score_breakdown": {
+        "dense": 0.049977612577843375,
+        "graph": 0.05000558513746847,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:leroy_name_0",
+      "passage_index": 18,
+      "title": "Leroy (name)",
+      "score": 0.04238680798922479,
+      "text": "Leroy (name)\nLeroy (/ ləˈrɔɪ / lə - ROY), also Leeroy, LeeRoy, Lee Roy, LeRoy or Le Roy, is both a male given name in English - speaking countries and a family name of French origin. Leroy (lørwa) is one of the most common surnames in northern France. As a surname it is sometimes written Le Roy, as a translation of Breton Ar Roue. It is an archaic spelling of le roi, meaning ``the king ''and is the equivalent of the English surname King.",
+      "score_breakdown": {
+        "dense": 0.05042875876706589,
+        "graph": 0.04883663555779518,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:leroy_a_mendonca_0",
+      "passage_index": 12,
+      "title": "Leroy A. Mendonca",
+      "score": 0.04224636424194715,
+      "text": "Leroy A. Mendonca\nLeroy A. Mendonca was a soldier in the United States Army during the Korean War. He posthumously received the Medal of Honor for his actions on July 4, 1951.",
+      "score_breakdown": {
+        "dense": 0.05007497394627893,
+        "graph": 0.049017095238312464,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:leroy_township_ingham_county_michigan_0",
+      "passage_index": 9,
+      "title": "Leroy Township, Ingham County, Michigan",
+      "score": 0.04223875253242877,
+      "text": "Leroy Township, Ingham County, Michigan\nLeroy Township is a civil township of Ingham County in the U.S. state of Michigan. The population was 3,653 at the 2000 census.",
+      "score_breakdown": {
+        "dense": 0.050167970501638126,
+        "graph": 0.04882122918842602,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:caroline_leroy_webster",
+        "score": 0.06104694685970095,
+        "text": "Caroline LeRoy Webster",
+        "metadata": {
+          "canonical_name": "Caroline LeRoy Webster",
+          "aliases": [
+            "CLW",
+            "Caroline LeRoy Webster",
+            "Caroline Webster"
+          ],
+          "surface_forms": [
+            "CLW",
+            "Caroline LeRoy Webster",
+            "Caroline Webster"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_margareta_von_ascheberg",
+        "score": 0.029303059102126248,
+        "text": "Margareta von Ascheberg",
+        "metadata": {
+          "canonical_name": "Margareta von Ascheberg",
+          "aliases": [
+            "MVA",
+            "Margareta von Ascheberg"
+          ],
+          "surface_forms": [
+            "MVA",
+            "Margareta von Ascheberg"
+          ],
+          "title_anchor": "Margareta von Ascheberg"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+        "score": 0.07773792808453972,
+        "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
+        "metadata": {
+          "title": "Caroline LeRoy",
+          "chunk_id": "chunk:caroline_leroy_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Caroline LeRoy Webster",
+              "relation": "born on",
+              "tail": "September 28 1797"
+            },
+            {
+              "head": "Caroline LeRoy Webster",
+              "relation": "died on",
+              "tail": "February 26 1882"
+            },
+            {
+              "head": "Caroline LeRoy Webster",
+              "relation": "born in",
+              "tail": "New York City"
+            },
+            {
+              "head": "Caroline LeRoy Webster",
+              "relation": "was wife of",
+              "tail": "Daniel Webster"
+            },
+            {
+              "head": "Daniel Webster",
+              "relation": "was",
+              "tail": "19th Century statesman"
+            }
+          ],
+          "entities": [
+            "Caroline LeRoy Webster",
+            "Daniel Webster",
+            "New York City"
+          ],
+          "entity_ids": [
+            "entity:19th_century_statesman",
+            "entity:caroline_leroy_webster",
+            "entity:daniel_webster",
+            "entity:february_26_1882",
+            "entity:new_york_city",
+            "entity:september_28_1797"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:margareta_von_ascheberg_0_0_margareta_von_ascheberg_was_the_youngest_child_of_field_marshal_rutger_von_asche",
+        "score": 0.04841924906193315,
+        "text": "Margareta von Ascheberg was the youngest child of Field Marshal Rutger von Ascheberg and Magdalena Eleonora Busseck.",
+        "metadata": {
+          "title": "Margareta von Ascheberg",
+          "chunk_id": "chunk:margareta_von_ascheberg_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Margareta von Ascheberg",
+              "relation": "was child of",
+              "tail": "Field Marshal Rutger von Ascheberg"
+            },
+            {
+              "head": "Margareta von Ascheberg",
+              "relation": "was child of",
+              "tail": "Magdalena Eleonora Busseck"
+            }
+          ],
+          "entities": [
+            "Margareta von Ascheberg",
+            "Rutger von Ascheberg",
+            "Magdalena Eleonora Busseck"
+          ],
+          "entity_ids": [
+            "entity:field_marshal_rutger_von_ascheberg",
+            "entity:magdalena_eleonora_busseck",
+            "entity:rutger_von_ascheberg",
+            "entity:title_anchor_margareta_von_ascheberg"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_memory_keeper_s_daughter_0_2_their_first_child_a_boy_they_name_paul_is_born_a_healthy_perfect_child_but_wh",
+        "score": 0.04352455928545176,
+        "text": "Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome.",
+        "metadata": {
+          "title": "The Memory Keeper's Daughter",
+          "chunk_id": "chunk:the_memory_keeper_s_daughter_0",
+          "sentence_index": 2,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Paul",
+              "relation": "is first child of",
+              "tail": "David"
+            },
+            {
+              "head": "Phoebe",
+              "relation": "is second child of",
+              "tail": "David"
+            },
+            {
+              "head": "Phoebe",
+              "relation": "has condition",
+              "tail": "Down syndrome"
+            }
+          ],
+          "entities": [
+            "Paul",
+            "Phoebe",
+            "David",
+            "Down syndrome"
+          ],
+          "entity_ids": [
+            "entity:david",
+            "entity:down_syndrome",
+            "entity:paul",
+            "entity:phoebe"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:elmer_the_great_0_0_elmer_the_great_is_a_1933_american_pre_code_comedy_film_directed_by_mervyn_lero",
+        "score": 0.032103025996375004,
+        "text": "Elmer, the Great is a 1933 American pre-Code comedy film directed by Mervyn LeRoy, starring Joe E.",
+        "metadata": {
+          "title": "Elmer, the Great",
+          "chunk_id": "chunk:elmer_the_great_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Elmer the Great",
+              "relation": "is a",
+              "tail": "1933 American pre-Code comedy film"
+            },
+            {
+              "head": "Elmer the Great",
+              "relation": "directed by",
+              "tail": "Mervyn LeRoy"
+            },
+            {
+              "head": "Elmer the Great",
+              "relation": "starring",
+              "tail": "Joe E"
+            }
+          ],
+          "entities": [
+            "Elmer the Great",
+            "Mervyn LeRoy",
+            "Joe E"
+          ],
+          "entity_ids": [
+            "entity:1933_american_pre_code_comedy_film",
+            "entity:joe_e",
+            "entity:mervyn_leroy",
+            "entity:title_anchor_elmer_the_great"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_fbi_story_0_0_the_fbi_story_is_a_1959_american_drama_film_starring_james_stewart_and_produced",
+        "score": 0.02776834785294212,
+        "text": "The FBI Story is a 1959 American drama film starring James Stewart, and produced and directed by Mervyn LeRoy.",
+        "metadata": {
+          "title": "The FBI Story",
+          "chunk_id": "chunk:the_fbi_story_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "FBI Story",
+              "relation": "is a",
+              "tail": "1959 American drama film"
+            },
+            {
+              "head": "FBI Story",
+              "relation": "starring",
+              "tail": "James Stewart"
+            },
+            {
+              "head": "FBI Story",
+              "relation": "produced and directed by",
+              "tail": "Mervyn LeRoy"
+            }
+          ],
+          "entities": [
+            "FBI Story",
+            "American drama film",
+            "James Stewart",
+            "Mervyn LeRoy"
+          ],
+          "entity_ids": [
+            "entity:1959_american_drama_film",
+            "entity:american_drama_film",
+            "entity:james_stewart",
+            "entity:mervyn_leroy",
+            "entity:title_anchor_the_fbi_story"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:fletcher_webster_0_0_daniel_fletcher_webster_commonly_known_as_fletcher_webster_july_25_1813_in_po",
+        "score": 0.021900724611166888,
+        "text": "Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster.",
+        "metadata": {
+          "title": "Fletcher Webster",
+          "chunk_id": "chunk:fletcher_webster_0",
+          "sentence_index": 0,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Daniel Fletcher Webster",
+              "relation": "related_to",
+              "tail": "Fletcher Webster"
+            },
+            {
+              "head": "Fletcher Webster",
+              "relation": "related_to",
+              "tail": "July"
+            },
+            {
+              "head": "July",
+              "relation": "related_to",
+              "tail": "Portsmouth"
+            }
+          ],
+          "entities": [
+            "Daniel Fletcher Webster",
+            "Fletcher Webster",
+            "July",
+            "Portsmouth",
+            "New Hampshire",
+            "August",
+            "Daniel Webster",
+            "Grace Fletcher Webster"
+          ],
+          "entity_ids": [
+            "entity:august",
+            "entity:daniel_fletcher_webster",
+            "entity:daniel_webster",
+            "entity:grace_fletcher_webster",
+            "entity:july",
+            "entity:new_hampshire",
+            "entity:portsmouth",
+            "entity:title_anchor_fletcher_webster"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:margareta_von_ascheberg_0",
+        "score": 0.013126382680960797,
+        "text": "Margareta von Ascheberg\nMargareta von Ascheberg was the youngest child of Field Marshal Rutger von Ascheberg and Magdalena Eleonora Busseck. On 26 January 1691, she married colonel count Kjell Christopher Barnekow (d. 1700) in Malmö. As was the custom of the Swedish nobility as that time, she kept her name after marriage and style herself »Grevinnan Ascheberg» (Countess Ascheberg). The couple had four children. She accompanied her spouse on his military commissions: she gave birth to their youngest sons during the Bombardment of Brussels in 1695.",
+        "metadata": {
+          "title": "Margareta von Ascheberg",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:26_january_1691",
+            "entity:bombardment",
+            "entity:brussels",
+            "entity:countess_ascheberg",
+            "entity:field_marshal_rutger_von_ascheberg",
+            "entity:grevinnan_ascheberg",
+            "entity:kjell_christopher_barnekow",
+            "entity:magdalena_eleonora_busseck",
+            "entity:rutger_von_ascheberg",
+            "entity:swedish_nobility",
+            "entity:title_anchor_margareta_von_ascheberg"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:caroline_leroy_0",
+        "score": 0.011533258621894853,
+        "text": "Caroline LeRoy\nCaroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell.",
+        "metadata": {
+          "title": "Caroline LeRoy",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:19th_century_statesman",
+            "entity:caroline",
+            "entity:caroline_leroy_webster",
+            "entity:caroline_s_mother",
+            "entity:daniel_webster",
+            "entity:february_26_1882",
+            "entity:first_holland_consul_to_the_united_states",
+            "entity:hannah_cornell",
+            "entity:her_father",
+            "entity:herman_leroy",
+            "entity:holland",
+            "entity:last_royal_attorney_general_of_the_state_of_north_carolina",
+            "entity:leroy_bayard_mckiven_co",
+            "entity:new_york_city",
+            "entity:royal_attorney_general_of_the_state_of_north_carolina",
+            "entity:september_28_1797",
+            "entity:thomas_cornell"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_memory_keeper_s_daughter_0",
+        "score": 0.010278772079791103,
+        "text": "The Memory Keeper's Daughter\nIn early March of 1964, Dr. David Henry is forced to deliver his wife Norah's twins with the help of a nurse, Caroline Gill. Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome. David, recalling the possibility of a heart defect and early death (which his younger sister June had had; dying at the young age of twelve) and decides that the baby girl will be placed in an institution.",
+        "metadata": {
+          "title": "The Memory Keeper's Daughter",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:caroline_gill",
+            "entity:david",
+            "entity:david_henry",
+            "entity:down_syndrome",
+            "entity:dr",
+            "entity:june",
+            "entity:march",
+            "entity:norah",
+            "entity:norah_s_twins",
+            "entity:paul",
+            "entity:phoebe"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:elmer_the_great_0",
+        "score": 0.006339678767617794,
+        "text": "Elmer, the Great\nElmer, the Great is a 1933 American pre-Code comedy film directed by Mervyn LeRoy, starring Joe E. Brown and Patricia Ellis.",
+        "metadata": {
+          "title": "Elmer, the Great",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:1933_american_pre_code_comedy_film",
+            "entity:brown",
+            "entity:joe_e",
+            "entity:mervyn_leroy",
+            "entity:patricia_ellis",
+            "entity:title_anchor_elmer_the_great"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Caroline LeRoy\nCaroline LeRoy Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world.\n\nFletcher Webster\nFletcher Webster Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster. During his father's first term as Secretary of State, Fletcher served as Chief Clerk of the United States State Department which, at the time, was the second most powerful office in the State Department.\n\nThe Memory Keeper's Daughter\nDavid Henry is forced to deliver his wife Norah's twins with the help of a nurse, Caroline Gill. Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:caroline_leroy_0",
+        "passage_index": 10,
+        "title": "Caroline LeRoy",
+        "score": 0.07455276111650565,
+        "text": "Caroline LeRoy\nCaroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world. Her father was also the first Holland Consul to the United States. Caroline's mother was Hannah Cornell, daughter of the last Royal Attorney General of the State of North Carolina. Caroline was a descendant of Thomas Cornell.",
+        "score_breakdown": {
+          "dense": 0.05093544436433576,
+          "graph": 0.05546014255711896,
+          "fact": 0.19933482632656863
+        }
+      },
+      {
+        "node_id": "chunk:margareta_von_ascheberg_0",
+        "passage_index": 5,
+        "title": "Margareta von Ascheberg",
+        "score": 0.07428818324396345,
+        "text": "Margareta von Ascheberg\nMargareta von Ascheberg was the youngest child of Field Marshal Rutger von Ascheberg and Magdalena Eleonora Busseck. On 26 January 1691, she married colonel count Kjell Christopher Barnekow (d. 1700) in Malmö. As was the custom of the Swedish nobility as that time, she kept her name after marriage and style herself »Grevinnan Ascheberg» (Countess Ascheberg). The couple had four children. She accompanied her spouse on his military commissions: she gave birth to their youngest sons during the Bombardment of Brussels in 1695.",
+        "score_breakdown": {
+          "dense": 0.04995821311382416,
+          "graph": 0.053541233796378304,
+          "fact": 0.2049919726163112
+        }
+      },
+      {
+        "node_id": "chunk:the_memory_keeper_s_daughter_0",
+        "passage_index": 15,
+        "title": "The Memory Keeper's Daughter",
+        "score": 0.07315319353786615,
+        "text": "The Memory Keeper's Daughter\nIn early March of 1964, Dr. David Henry is forced to deliver his wife Norah's twins with the help of a nurse, Caroline Gill. Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome. David, recalling the possibility of a heart defect and early death (which his younger sister June had had; dying at the young age of twelve) and decides that the baby girl will be placed in an institution.",
+        "score_breakdown": {
+          "dense": 0.04985292712361592,
+          "graph": 0.052980115598076256,
+          "fact": 0.19893365960303008
+        }
+      },
+      {
+        "node_id": "chunk:elmer_the_great_0",
+        "passage_index": 17,
+        "title": "Elmer, the Great",
+        "score": 0.07301482593558645,
+        "text": "Elmer, the Great\nElmer, the Great is a 1933 American pre-Code comedy film directed by Mervyn LeRoy, starring Joe E. Brown and Patricia Ellis.",
+        "score_breakdown": {
+          "dense": 0.04971835379916958,
+          "graph": 0.05126243421920829,
+          "fact": 0.20194000720187125
+        }
+      },
+      {
+        "node_id": "chunk:the_fbi_story_0",
+        "passage_index": 2,
+        "title": "The FBI Story",
+        "score": 0.07184047827770665,
+        "text": "The FBI Story\nThe FBI Story is a 1959 American drama film starring James Stewart, and produced and directed by Mervyn LeRoy. The screenplay by Richard L. Breen and John Twist is based on a book by Don Whitehead.",
+        "score_breakdown": {
+          "dense": 0.04964310104570978,
+          "graph": 0.05105614188244485,
+          "fact": 0.19479953425221877
+        }
+      },
+      {
+        "node_id": "chunk:fletcher_webster_0",
+        "passage_index": 0,
+        "title": "Fletcher Webster",
+        "score": 0.04261504200078227,
+        "text": "Fletcher Webster\nDaniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster. He was educated at Harvard College. During his father's first term as Secretary of State, Fletcher served as Chief Clerk of the United States State Department which, at the time, was the second most powerful office in the State Department. As Chief Clerk, he delivered the news of President William Henry Harrison's death to the new President, John Tyler.",
+        "score_breakdown": {
+          "dense": 0.04990265068352227,
+          "graph": 0.050561947082816715,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:lee_evans_producer_0",
+        "passage_index": 11,
+        "title": "Lee Evans (producer)",
+        "score": 0.042489362459054394,
+        "text": "Lee Evans (producer)\nLee Evans, also known as LeRoi Evans and LeRoy Evans, is an American record producer, recording engineer, songwriter, musician, entrepreneur, businessman and the CEO and co-owner of JAMBOX Entertainment. He currently resides in midtown Manhattan, New York.",
+        "score_breakdown": {
+          "dense": 0.049977612577843375,
+          "graph": 0.05000558513746847,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:leroy_name_0",
+        "passage_index": 18,
+        "title": "Leroy (name)",
+        "score": 0.04238680798922479,
+        "text": "Leroy (name)\nLeroy (/ ləˈrɔɪ / lə - ROY), also Leeroy, LeeRoy, Lee Roy, LeRoy or Le Roy, is both a male given name in English - speaking countries and a family name of French origin. Leroy (lørwa) is one of the most common surnames in northern France. As a surname it is sometimes written Le Roy, as a translation of Breton Ar Roue. It is an archaic spelling of le roi, meaning ``the king ''and is the equivalent of the English surname King.",
+        "score_breakdown": {
+          "dense": 0.05042875876706589,
+          "graph": 0.04883663555779518,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:leroy_a_mendonca_0",
+        "passage_index": 12,
+        "title": "Leroy A. Mendonca",
+        "score": 0.04224636424194715,
+        "text": "Leroy A. Mendonca\nLeroy A. Mendonca was a soldier in the United States Army during the Korean War. He posthumously received the Medal of Honor for his actions on July 4, 1951.",
+        "score_breakdown": {
+          "dense": 0.05007497394627893,
+          "graph": 0.049017095238312464,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:leroy_township_ingham_county_michigan_0",
+        "passage_index": 9,
+        "title": "Leroy Township, Ingham County, Michigan",
+        "score": 0.04223875253242877,
+        "text": "Leroy Township, Ingham County, Michigan\nLeroy Township is a civil township of Ingham County in the U.S. state of Michigan. The population was 3,653 at the 2000 census.",
+        "score_breakdown": {
+          "dense": 0.050167970501638126,
+          "graph": 0.04882122918842602,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is Caroline LeRoy Webster's spouse?",
+        "resolved_sub_question": "Who is Caroline LeRoy Webster's spouse?",
+        "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+        "sentence": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
+        "score": 0.604516,
+        "source_title": "Caroline LeRoy",
+        "hop_answer": "Daniel Webster",
+        "hop_thought": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.",
+        "hop_raw_response": "The text states that Caroline LeRoy Webster was the second wife of Daniel Webster, indicating that Daniel Webster is her spouse.\nAnswer: Daniel Webster",
+        "evidence_passages": [
+          {
+            "title": "Caroline LeRoy",
+            "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the child of Caroline LeRoy Webster's spouse?",
+        "resolved_sub_question": "Who is the child of Caroline LeRoy Webster's spouse? Context: Daniel Webster.",
+        "sentence_id": "sentence:caroline_leroy_0_0_caroline_leroy_webster_september_28_1797_in_new_york_city_february_26_1882",
+        "sentence": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster.",
+        "score": 0.5532444444444445,
+        "source_title": "Caroline LeRoy",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.",
+        "hop_raw_response": "The evidence provided does not contain information about the children of Daniel Webster, only that Caroline LeRoy Webster was his second wife.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Caroline LeRoy",
+            "text": "Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is Caroline LeRoy Webster's spouse? => Daniel Webster (source: Caroline LeRoy)\n2. Who is the child of Caroline LeRoy Webster's spouse? (source: Caroline LeRoy)\n\nFact hints:\n- Caroline LeRoy Webster was wife of Daniel Webster\n- Caroline LeRoy Webster born in New York City\n\nWikipedia Title: Caroline LeRoy\nCaroline LeRoy Caroline LeRoy Webster (September 28, 1797 in New York City – February 26, 1882) was the second wife of 19th Century statesman Daniel Webster. Her father was Herman LeRoy, who was once head of the commercial house of Leroy, Bayard, McKiven & Co., a large trading company that operated in different parts of the world.\n\nWikipedia Title: Fletcher Webster\nFletcher Webster Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster. During his father's first term as Secretary of State, Fletcher served as Chief Clerk of the United States State Department which, at the time, was the second most powerful office in the State Department.\n\nWikipedia Title: The Memory Keeper's Daughter\nDavid Henry is forced to deliver his wife Norah's twins with the help of a nurse, Caroline Gill. Their first child, a boy they name Paul, is born a healthy perfect child, but when the second baby is born, Phoebe, David notices she has Down syndrome.\n\nQuestion: Who is the child of Caroline LeRoy's spouse?\nDraft Answer: Fletcher Webster\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The child of Caroline LeRoy's spouse, Daniel Webster, is Fletcher Webster.",
+  "predicted_answer": "Fletcher Webster",
+  "qa_raw_response": "{\n  \"thought\": \"The child of Caroline LeRoy's spouse, Daniel Webster, is Fletcher Webster.\",\n  \"answer\": \"Fletcher Webster\",\n  \"support\": \"Fletcher Webster Daniel Fletcher Webster, commonly known as Fletcher Webster (July 25, 1813 in Portsmouth, New Hampshire – August 30, 1862) was the son of renowned politician Daniel Webster and Grace Fletcher Webster.\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__697790_864352",
+    "question": "Who is the child of Caroline LeRoy's spouse?",
+    "answer": "Fletcher Webster",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Caroline LeRoy >> spouse",
+      "#1 >> child"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Fletcher Webster",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Fletcher Webster"
+    ]
+  }
+}

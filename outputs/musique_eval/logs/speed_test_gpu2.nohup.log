@@ -1,0 +1,20 @@
+nohup: ignoring input
+2026-03-26 12:46:49,587 INFO Starting MuSiQue evaluation run: speed_test_gpu2
+2026-03-26 12:46:49,587 INFO Output dir: outputs/musique_eval/speed_test_gpu2
+2026-03-26 12:46:49,726 INFO No explicit split field found in dataset; using all samples and recording split='dev'.
+2026-03-26 12:46:49,728 INFO Loaded existing sampled queries: outputs/musique_eval/speed_test_gpu2/sampled_queries.json (20 samples)
+Loading weights:   0%|          | 0/304 [00:00<?, ?it/s]Loading weights:  10%|▉         | 30/304 [00:00<00:01, 269.90it/s]Loading weights:  19%|█▉        | 57/304 [00:00<00:01, 239.82it/s]Loading weights:  27%|██▋       | 82/304 [00:00<00:00, 240.62it/s]Loading weights:  37%|███▋      | 111/304 [00:00<00:00, 234.93it/s]Loading weights:  45%|████▌     | 138/304 [00:00<00:00, 234.14it/s]Loading weights:  54%|█████▍    | 165/304 [00:00<00:00, 237.26it/s]Loading weights:  63%|██████▎   | 192/304 [00:00<00:00, 237.64it/s]Loading weights:  72%|███████▏  | 219/304 [00:00<00:00, 237.94it/s]Loading weights:  81%|████████  | 246/304 [00:01<00:00, 239.91it/s]Loading weights:  90%|████████▉ | 273/304 [00:01<00:00, 234.58it/s]Loading weights:  98%|█████████▊| 297/304 [00:01<00:00, 212.77it/s]Loading weights: 100%|██████████| 304/304 [00:01<00:00, 235.79it/s]
+2026-03-26 12:47:02,820 INFO Initialized HoloRAG once and will reuse model weights for all samples.
+2026-03-26 12:47:02,821 INFO [1/20] start sample 2hop__67660_81007
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/site-packages/transformers/modeling_attn_mask_utils.py:202: FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+/home/xyh/miniconda3/envs/holorag-dev/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-03-26 12:56:16,149 INFO [1/20] 2hop__67660_81007 | recall@5=0.5000 | retrieval=42.129s | qa=included_in_query_pipeline
+2026-03-26 12:56:16,150 INFO [2/20] start sample 2hop__92051_827343
+2026-03-26 13:05:42,442 INFO [2/20] 2hop__92051_827343 | recall@5=1.0000 | retrieval=42.785s | qa=included_in_query_pipeline
+2026-03-26 13:05:42,442 INFO [3/20] start sample 2hop__144150_82341
+2026-03-26 13:12:23,578 INFO [3/20] 2hop__144150_82341 | recall@5=1.0000 | retrieval=29.469s | qa=included_in_query_pipeline
+2026-03-26 13:12:23,578 INFO [4/20] start sample 2hop__83938_5666
+2026-03-26 13:20:42,100 INFO [4/20] 2hop__83938_5666 | recall@5=1.0000 | retrieval=46.361s | qa=included_in_query_pipeline
+2026-03-26 13:20:42,100 INFO [5/20] start sample 2hop__167577_31122

@@ -1,0 +1,964 @@
+{
+  "query": "Who did the performer from Night Rocker play on Young and Restless?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Young and the Restless"
+  ],
+  "raw_query_entities": [
+    "Night Rocker",
+    "Young and Restless"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Night Rocker",
+      "node_id": "entity:title_anchor_night_rocker",
+      "resolved_text": "Night Rocker",
+      "score": 0.6622181818181819,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.185,
+      "score_margin": 0.26187792207792215,
+      "confident": false
+    },
+    {
+      "mention": "Young and Restless",
+      "node_id": "entity:young_and_the_restless",
+      "resolved_text": "Young and the Restless",
+      "score": 0.844909090909091,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.5636363636363637,
+      "compatibility_score": 0.775,
+      "score_margin": 0.19214545454545462,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the performer from Night Rocker?",
+    "What character did this performer play on Young and the Restless?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:young_and_the_restless",
+      "score": 0.9909771865270779,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:time_rocker",
+      "score": 0.31383430649597527,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:hasselhoff",
+      "score": 0.29282766970519897,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_and_things_that_go_bump_in_the_night",
+      "score": 0.2734277139492087,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:terrence_mcnally",
+      "score": 0.2734114272749482,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_night_rocker",
+      "score": 0.26343423543328104,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:david_hasselhoff",
+      "score": 0.2459179713775757,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:blair_redford",
+      "score": 0.22841257255718944,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:july_2005_until_january_2006",
+      "score": 0.22841257255718944,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:1975_to_may_1982",
+      "score": 0.22841193445154712,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:john_mccook",
+      "score": 0.21341373293407861,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_young_and_the_restless",
+      "score": 0.19096946302000975,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:things_that_go_bump_in_the_night_is_a_play_by_terrence_mcnally_sentence_and_things_that_go_bump_in_the_night_0_0_and_thi",
+      "text": "Things That Go Bump in the Night is a play by Terrence McNally",
+      "head_id": "entity:title_anchor_and_things_that_go_bump_in_the_night",
+      "tail_id": "entity:terrence_mcnally",
+      "sentence_id": "sentence:and_things_that_go_bump_in_the_night_0_0_and_things_that_go_bump_in_the_night_is_a_play_by_terrence_mcnally",
+      "chunk_id": "chunk:and_things_that_go_bump_in_the_night_0",
+      "document_index": 11,
+      "score": 0.27151636625486997
+    },
+    {
+      "fact_id": "fact:night_rocker_is_debut_studio_album_of_david_hasselhoff_sentence_night_rocker_0_0_night_rocker_is_the_debut_studio_album_",
+      "text": "Night Rocker is debut studio album of David Hasselhoff",
+      "head_id": "entity:title_anchor_night_rocker",
+      "tail_id": "entity:david_hasselhoff",
+      "sentence_id": "sentence:night_rocker_0_0_night_rocker_is_the_debut_studio_album_by_the_american_actor_david_hasselhoff",
+      "chunk_id": "chunk:night_rocker_0",
+      "document_index": 9,
+      "score": 0.2615285887466461
+    },
+    {
+      "fact_id": "fact:blair_redford_played_the_role_from_july_2005_until_january_2006_sentence_scotty_grainger_0_1_he_was_played_by_actor_blai",
+      "text": "Blair Redford played the role from July 2005 until January 2006",
+      "head_id": "entity:blair_redford",
+      "tail_id": "entity:july_2005_until_january_2006",
+      "sentence_id": "sentence:scotty_grainger_0_1_he_was_played_by_actor_blair_redford_from_july_2005_until_january_2006",
+      "chunk_id": "chunk:scotty_grainger_0",
+      "document_index": 16,
+      "score": 0.2265181655252627
+    },
+    {
+      "fact_id": "fact:david_hasselhoff_played_role_from_1975_to_may_1982_sentence_snapper_foster_0_1_an_original_character_since_the_show_s_in",
+      "text": "David Hasselhoff played role from 1975 to May 1982",
+      "head_id": "entity:david_hasselhoff",
+      "tail_id": "entity:1975_to_may_1982",
+      "sentence_id": "sentence:snapper_foster_0_1_an_original_character_since_the_show_s_inception_the_role_was_played_by_william",
+      "chunk_id": "chunk:snapper_foster_0",
+      "document_index": 12,
+      "score": 0.22651752742868558
+    },
+    {
+      "fact_id": "fact:eric_forrester_played_by_john_mccook_sentence_eric_forrester_0_0_eric_forrester_is_a_fictional_character_from_the_americ",
+      "text": "Eric Forrester played by John McCook",
+      "head_id": "entity:title_anchor_eric_forrester",
+      "tail_id": "entity:john_mccook",
+      "sentence_id": "sentence:eric_forrester_0_0_eric_forrester_is_a_fictional_character_from_the_american_cbs_daytime_soap_opera",
+      "chunk_id": "chunk:eric_forrester_0",
+      "document_index": 3,
+      "score": 0.21151953738071913
+    },
+    {
+      "fact_id": "fact:eric_forrester_is_character_in_bold_and_the_beautiful_sentence_eric_forrester_0_0_eric_forrester_is_a_fictional_characte",
+      "text": "Eric Forrester is character in Bold and the Beautiful",
+      "head_id": "entity:title_anchor_eric_forrester",
+      "tail_id": "entity:bold_and_the_beautiful",
+      "sentence_id": "sentence:eric_forrester_0_0_eric_forrester_is_a_fictional_character_from_the_american_cbs_daytime_soap_opera",
+      "chunk_id": "chunk:eric_forrester_0",
+      "document_index": 3,
+      "score": 0.15751700472092012
+    }
+  ],
+  "bridge_entities": [
+    "Hilary Curtis"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the performer from Night Rocker?",
+      "resolved_sub_question": "Who is the performer from Night Rocker?",
+      "sentence_id": "sentence:mishael_morgan_0_0_marie_charms_mishael_morgan_born_july_15_1986_known_professionally_as_misha",
+      "sentence": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.",
+      "score": 0.5478485333333334,
+      "source_title": "Mishael Morgan",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided evidence does not mention \"Night Rocker\" or any performer associated with it. There is no information to determine who the performer from Night Rocker is based on the given text.",
+      "hop_raw_response": "The provided evidence does not mention \"Night Rocker\" or any performer associated with it. There is no information to determine who the performer from Night Rocker is based on the given text.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Mishael Morgan",
+          "text": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+        },
+        {
+          "title": "Mishael Morgan",
+          "text": "Mishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+        },
+        {
+          "title": "Scotty Grainger",
+          "text": "Scott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless."
+        }
+      ]
+    },
+    {
+      "sub_question": "What character did this performer play on Young and the Restless?",
+      "resolved_sub_question": "What character did this performer play on Young and the Restless?",
+      "sentence_id": "sentence:mishael_morgan_0_0_marie_charms_mishael_morgan_born_july_15_1986_known_professionally_as_misha",
+      "sentence": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.",
+      "score": 0.48480000000000006,
+      "source_title": "Mishael Morgan",
+      "hop_answer": "Hilary Curtis",
+      "hop_thought": "The performer Mishael Morgan played the character Hilary Curtis on the CBS Daytime soap opera, The Young and the Restless.",
+      "hop_raw_response": "The performer Mishael Morgan played the character Hilary Curtis on the CBS Daytime soap opera, The Young and the Restless.\nAnswer: Hilary Curtis",
+      "evidence_passages": [
+        {
+          "title": "Mishael Morgan",
+          "text": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+        },
+        {
+          "title": "Mishael Morgan",
+          "text": "Mishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+        },
+        {
+          "title": "Scotty Grainger",
+          "text": "Scott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:young_and_the_restless",
+      "score": 0.10313327612333371,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:david_hasselhoff",
+      "score": 0.04275205630387173,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:eric_forrester_0_0_eric_forrester_is_a_fictional_character_from_the_american_cbs_daytime_soap_opera",
+      "score": 0.03789005054411918,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:and_things_that_go_bump_in_the_night_0_0_and_things_that_go_bump_in_the_night_is_a_play_by_terrence_mcnally",
+      "score": 0.03736641655525013,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_and_things_that_go_bump_in_the_night",
+      "score": 0.03721098254661766,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:terrence_mcnally",
+      "score": 0.03720970606997519,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:time_rocker",
+      "score": 0.03493875713651698,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_night_rocker",
+      "score": 0.03257473117512598,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:blair_redford",
+      "score": 0.03248303169488273,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:hasselhoff",
+      "score": 0.03198386321414269,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:scotty_grainger_0_1_he_was_played_by_actor_blair_redford_from_july_2005_until_january_2006",
+      "score": 0.029331277088730033,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:july_2005_until_january_2006",
+      "score": 0.028839141499636484,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:night_rocker_0_0_night_rocker_is_the_debut_studio_album_by_the_american_actor_david_hasselhoff",
+      "score": 0.02834893262755179,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_eric_forrester",
+      "score": 0.02782842386874234,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:john_mccook",
+      "score": 0.02565065091548481,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bold_and_the_beautiful",
+      "score": 0.0246958893291698,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:1975_to_may_1982",
+      "score": 0.024688640856130074,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:snapper_foster_0_1_an_original_character_since_the_show_s_inception_the_role_was_played_by_william",
+      "score": 0.024062851090918193,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_the_young_and_the_restless",
+      "score": 0.023515522110767243,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:days_of_our_lives",
+      "score": 0.020978149606830702,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:and_things_that_go_bump_in_the_night_0",
+      "passage_index": 11,
+      "title": "And Things That Go Bump in the Night",
+      "score": 0.07620808731975233,
+      "text": "And Things That Go Bump in the Night\nAnd Things That Go Bump in the Night is a play by Terrence McNally. It premiered on February 4, 1964 at the Guthrie Theater in Minneapolis and ran on Broadway in 1965 for 16 performances. McNally was awarded a Rockefeller Foundation grant to write this play.",
+      "score_breakdown": {
+        "dense": 0.05236942924274211,
+        "graph": 0.05479217723129801,
+        "fact": 0.20644832044569839
+      }
+    },
+    {
+      "node_id": "chunk:night_rocker_0",
+      "passage_index": 9,
+      "title": "Night Rocker",
+      "score": 0.07613249413438453,
+      "text": "Night Rocker\nNight Rocker is the debut studio album by the American actor David Hasselhoff. It was released in January 1985 on Silver Blue Records, produced by record producer Joel Diamond.",
+      "score_breakdown": {
+        "dense": 0.053276664535380054,
+        "graph": 0.05390278368849736,
+        "fact": 0.2043966235558419
+      }
+    },
+    {
+      "node_id": "chunk:snapper_foster_0",
+      "passage_index": 12,
+      "title": "Snapper Foster",
+      "score": 0.0751552829304444,
+      "text": "Snapper Foster\nSnapper Foster is a fictional character on the CBS daytime soap opera The Young and the Restless. An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982. Espy briefly reprised the character from February 28, 2003 to March 5, 2003, and Hasselhoff briefly reprised the role from June 15 -- 21, 2010.",
+      "score_breakdown": {
+        "dense": 0.052771320498791144,
+        "graph": 0.05508803702925308,
+        "fact": 0.19736430364888902
+      }
+    },
+    {
+      "node_id": "chunk:scotty_grainger_0",
+      "passage_index": 16,
+      "title": "Scotty Grainger",
+      "score": 0.07494518788834607,
+      "text": "Scotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless. He was played by actor Blair Redford from July 2005 until January 2006. In January 2017, Soap Opera Digest announced that Daniel Hall had been recast in the role.",
+      "score_breakdown": {
+        "dense": 0.052679010700112584,
+        "graph": 0.05455689188440593,
+        "fact": 0.19736442958641578
+      }
+    },
+    {
+      "node_id": "chunk:eric_forrester_0",
+      "passage_index": 3,
+      "title": "Eric Forrester",
+      "score": 0.07444875980500529,
+      "text": "Eric Forrester\nEric Forrester is a fictional character from the American CBS Daytime soap opera \"The Bold and the Beautiful\", played by John McCook. He made his debut screen appearance on March 23, 1987, the show's first episode. The character appeared briefly on \"The Young and the Restless\" in 1993, 1995, 1996, 2005, 2008, 2013, and 2017. McCook had also played Lance Prentiss from 1976 to 1980.",
+      "score_breakdown": {
+        "dense": 0.05241750451016431,
+        "graph": 0.05485061303313891,
+        "fact": 0.19442632276315494
+      }
+    },
+    {
+      "node_id": "chunk:perfect_night_live_in_london_0",
+      "passage_index": 0,
+      "title": "Perfect Night: Live in London",
+      "score": 0.044717895522532136,
+      "text": "Perfect Night: Live in London\nPerfect Night: Live in London is an acoustic live album by Lou Reed recorded during the Meltdown '97 festival. It includes a version of the Velvet Underground's \"I'll Be Your Mirror\", originally sung by Nico. The album includes two songs, \"Talking Book\" and \"Into The Divine\" from the 1996 play \"Time Rocker\" Lou's collaboration with Robert Wilson (direction and design), and Darryl Pinckney (text). The cover photograph was taken by Timothy Greenfield-Sanders. In Australia, the 2-CD tour edition of Reed's album \"Ecstasy\" included \"Perfect Night\" as the second disc.",
+      "score_breakdown": {
+        "dense": 0.05255072973232592,
+        "graph": 0.05271664723250961,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:beau_kazer_0",
+      "passage_index": 17,
+      "title": "Beau Kazer",
+      "score": 0.04459291017341106,
+      "text": "Beau Kazer\nBeau Kazer (May 22, 1951 -- December 30, 2014) was a Canadian actor who worked primarily on television. He was best known for his recurring role as Brock Reynolds on the American soap opera The Young and the Restless.",
+      "score_breakdown": {
+        "dense": 0.05280666447415097,
+        "graph": 0.05183081570876008,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:robert_adamson_actor_0",
+      "passage_index": 14,
+      "title": "Robert Adamson (actor)",
+      "score": 0.044589876967200064,
+      "text": "Robert Adamson (actor)\nRobert Gillespie Adamson IV (born July 11, 1985) is an American actor. He has portrayed the roles of Phil Sanders on the television series Hollywood Heights and Charles Antoni on Lincoln Heights. He currently stars as Noah Newman on The Young and the Restless.",
+      "score_breakdown": {
+        "dense": 0.052809789329153166,
+        "graph": 0.05181497612055273,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_young_and_the_restless_0",
+      "passage_index": 10,
+      "title": "The Young and the Restless",
+      "score": 0.04457834472216775,
+      "text": "The Young and the Restless\nThe Young and the Restless (often abbreviated as Y&R) is an American television soap opera created by William J. Bell and Lee Phillip Bell for CBS. The show is set in a fictionalized version of Genoa City, Wisconsin. First broadcast on March 26, 1973, \"The Young and the Restless\" was originally broadcast as half-hour episodes, five times a week. The show expanded to one-hour episodes on February 4, 1980. In 2006, the series began airing encore episodes weeknights on SOAPnet until 2013, when it moved to TVGN (now Pop). As of July 1, 2013, Pop still airs the encore episodes on weeknights. The series is also syndicated internationally.",
+      "score_breakdown": {
+        "dense": 0.05261076712782953,
+        "graph": 0.05214140933953837,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:lauren_koslow_0",
+      "passage_index": 7,
+      "title": "Lauren Koslow",
+      "score": 0.04455055680217572,
+      "text": "Lauren Koslow\nLauren Alice Koslow (born March 9, 1953) is an American actress, best known for her long - running portrayal of Kate Roberts on the NBC dramatic serial Days of Our Lives, which she has played continuously since 1996. She previously appeared in the soaps The Bold and the Beautiful and The Young and the Restless.",
+      "score_breakdown": {
+        "dense": 0.052386970945452055,
+        "graph": 0.05245907594059028,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:young_and_the_restless",
+        "score": 0.10313327612333371,
+        "text": "Young and the Restless",
+        "metadata": {
+          "canonical_name": "Young and the Restless",
+          "aliases": [
+            "YATR",
+            "Young and the Restless"
+          ],
+          "surface_forms": [
+            "YATR",
+            "Young and the Restless"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:david_hasselhoff",
+        "score": 0.04275205630387173,
+        "text": "David Hasselhoff",
+        "metadata": {
+          "canonical_name": "David Hasselhoff",
+          "aliases": [
+            "DH",
+            "David Hasselhoff"
+          ],
+          "surface_forms": [
+            "DH",
+            "David Hasselhoff"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_and_things_that_go_bump_in_the_night",
+        "score": 0.03721098254661766,
+        "text": "And Things That Go Bump in the Night",
+        "metadata": {
+          "canonical_name": "And Things That Go Bump in the Night",
+          "aliases": [
+            "TTGBITN",
+            "Things That Go Bump in the Night"
+          ],
+          "surface_forms": [
+            "TTGBITN",
+            "Things That Go Bump in the Night"
+          ],
+          "title_anchor": "And Things That Go Bump in the Night"
+        }
+      },
+      {
+        "node_id": "entity:terrence_mcnally",
+        "score": 0.03720970606997519,
+        "text": "Terrence McNally",
+        "metadata": {
+          "canonical_name": "Terrence McNally",
+          "aliases": [
+            "TM",
+            "Terrence McNally"
+          ],
+          "surface_forms": [
+            "TM",
+            "Terrence McNally"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:eric_forrester_0_0_eric_forrester_is_a_fictional_character_from_the_american_cbs_daytime_soap_opera",
+        "score": 0.03789005054411918,
+        "text": "Eric Forrester is a fictional character from the American CBS Daytime soap opera \"The Bold and the Beautiful\", played by John McCook.",
+        "metadata": {
+          "title": "Eric Forrester",
+          "chunk_id": "chunk:eric_forrester_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Eric Forrester",
+              "relation": "is character in",
+              "tail": "Bold and the Beautiful"
+            },
+            {
+              "head": "Eric Forrester",
+              "relation": "played by",
+              "tail": "John McCook"
+            },
+            {
+              "head": "Bold and the Beautiful",
+              "relation": "is broadcast on",
+              "tail": "CBS"
+            }
+          ],
+          "entities": [
+            "Eric Forrester",
+            "Bold and the Beautiful",
+            "John McCook",
+            "CBS"
+          ],
+          "entity_ids": [
+            "entity:bold_and_the_beautiful",
+            "entity:cbs",
+            "entity:john_mccook",
+            "entity:title_anchor_eric_forrester"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:and_things_that_go_bump_in_the_night_0_0_and_things_that_go_bump_in_the_night_is_a_play_by_terrence_mcnally",
+        "score": 0.03736641655525013,
+        "text": "And Things That Go Bump in the Night is a play by Terrence McNally.",
+        "metadata": {
+          "title": "And Things That Go Bump in the Night",
+          "chunk_id": "chunk:and_things_that_go_bump_in_the_night_0",
+          "sentence_index": 0,
+          "document_index": 11,
+          "triples": [
+            {
+              "head": "Things That Go Bump in the Night",
+              "relation": "is a play by",
+              "tail": "Terrence McNally"
+            }
+          ],
+          "entities": [
+            "Things That Go Bump in the Night",
+            "Terrence McNally"
+          ],
+          "entity_ids": [
+            "entity:terrence_mcnally",
+            "entity:title_anchor_and_things_that_go_bump_in_the_night"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:scotty_grainger_0_1_he_was_played_by_actor_blair_redford_from_july_2005_until_january_2006",
+        "score": 0.029331277088730033,
+        "text": "He was played by actor Blair Redford from July 2005 until January 2006.",
+        "metadata": {
+          "title": "Scotty Grainger",
+          "chunk_id": "chunk:scotty_grainger_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Blair Redford",
+              "relation": "played the role from",
+              "tail": "July 2005 until January 2006"
+            }
+          ],
+          "entities": [
+            "Blair Redford"
+          ],
+          "entity_ids": [
+            "entity:blair_redford",
+            "entity:july_2005_until_january_2006"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:night_rocker_0_0_night_rocker_is_the_debut_studio_album_by_the_american_actor_david_hasselhoff",
+        "score": 0.02834893262755179,
+        "text": "Night Rocker is the debut studio album by the American actor David Hasselhoff.",
+        "metadata": {
+          "title": "Night Rocker",
+          "chunk_id": "chunk:night_rocker_0",
+          "sentence_index": 0,
+          "document_index": 9,
+          "triples": [
+            {
+              "head": "Night Rocker",
+              "relation": "is debut studio album of",
+              "tail": "David Hasselhoff"
+            },
+            {
+              "head": "David Hasselhoff",
+              "relation": "is",
+              "tail": "American actor"
+            }
+          ],
+          "entities": [
+            "Night Rocker",
+            "David Hasselhoff",
+            "American actor"
+          ],
+          "entity_ids": [
+            "entity:american_actor",
+            "entity:david_hasselhoff",
+            "entity:title_anchor_night_rocker"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:snapper_foster_0_1_an_original_character_since_the_show_s_inception_the_role_was_played_by_william",
+        "score": 0.024062851090918193,
+        "text": "An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982.",
+        "metadata": {
+          "title": "Snapper Foster",
+          "chunk_id": "chunk:snapper_foster_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "William Gray Espy",
+              "relation": "played role from",
+              "tail": "March 26 1973 to July 1975"
+            },
+            {
+              "head": "David Hasselhoff",
+              "relation": "played role from",
+              "tail": "1975 to May 1982"
+            }
+          ],
+          "entities": [
+            "William Gray Espy",
+            "David Hasselhoff"
+          ],
+          "entity_ids": [
+            "entity:1975_to_may_1982",
+            "entity:david_hasselhoff",
+            "entity:march_26_1973_to_july_1975",
+            "entity:william_gray_espy"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:eric_forrester_0",
+        "score": 0.0109236913812038,
+        "text": "Eric Forrester\nEric Forrester is a fictional character from the American CBS Daytime soap opera \"The Bold and the Beautiful\", played by John McCook. He made his debut screen appearance on March 23, 1987, the show's first episode. The character appeared briefly on \"The Young and the Restless\" in 1993, 1995, 1996, 2005, 2008, 2013, and 2017. McCook had also played Lance Prentiss from 1976 to 1980.",
+        "metadata": {
+          "title": "Eric Forrester",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:bold_and_the_beautiful",
+            "entity:cbs",
+            "entity:john_mccook",
+            "entity:lance_prentiss",
+            "entity:march",
+            "entity:mccook",
+            "entity:restless",
+            "entity:title_anchor_eric_forrester",
+            "entity:young",
+            "entity:young_and_the_restless"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:and_things_that_go_bump_in_the_night_0",
+        "score": 0.010270061471984563,
+        "text": "And Things That Go Bump in the Night\nAnd Things That Go Bump in the Night is a play by Terrence McNally. It premiered on February 4, 1964 at the Guthrie Theater in Minneapolis and ran on Broadway in 1965 for 16 performances. McNally was awarded a Rockefeller Foundation grant to write this play.",
+        "metadata": {
+          "title": "And Things That Go Bump in the Night",
+          "chunk_index": 0,
+          "document_index": 11,
+          "entity_ids": [
+            "entity:broadway",
+            "entity:guthrie_theater",
+            "entity:mcnally",
+            "entity:minneapolis",
+            "entity:rockefeller_foundation",
+            "entity:rockefeller_foundation_grant",
+            "entity:terrence_mcnally",
+            "entity:title_anchor_and_things_that_go_bump_in_the_night"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:scotty_grainger_0",
+        "score": 0.009110261512678634,
+        "text": "Scotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless. He was played by actor Blair Redford from July 2005 until January 2006. In January 2017, Soap Opera Digest announced that Daniel Hall had been recast in the role.",
+        "metadata": {
+          "title": "Scotty Grainger",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:blair_redford",
+            "entity:cbs",
+            "entity:daniel_hall",
+            "entity:july_2005_until_january_2006",
+            "entity:recasting_of_daniel_hall",
+            "entity:scott_scotty_grainger_jr",
+            "entity:soap_opera_digest",
+            "entity:young_and_the_restless"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:snapper_foster_0",
+        "score": 0.008498719981712966,
+        "text": "Snapper Foster\nSnapper Foster is a fictional character on the CBS daytime soap opera The Young and the Restless. An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982. Espy briefly reprised the character from February 28, 2003 to March 5, 2003, and Hasselhoff briefly reprised the role from June 15 -- 21, 2010.",
+        "metadata": {
+          "title": "Snapper Foster",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:1975_to_may_1982",
+            "entity:cbs",
+            "entity:cbs_daytime_soap_opera",
+            "entity:david_hasselhoff",
+            "entity:espy",
+            "entity:february_28_2003_to_march_5_2003",
+            "entity:hasselhoff",
+            "entity:june_15_21_2010",
+            "entity:march_26_1973_to_july_1975",
+            "entity:title_anchor_snapper_foster",
+            "entity:william_gray_espy",
+            "entity:young_and_the_restless"
+          ]
+        }
+      }
+    ],
+    "qa_context": "And Things That Go Bump in the Night\nAnd Things That Go Bump in the Night\nAnd Things That Go Bump in the Night is a play by Terrence McNally. It premiered on February 4, 1964 at the Guthrie Theater in Minneapolis and ran on Broadway in 1965 for 16 performances. McNally was awarded a Rockefeller Foundation grant to write this play.\n\nNight Rocker\nNight Rocker\nNight Rocker is the debut studio album by the American actor David Hasselhoff. It was released in January 1985 on Silver Blue Records, produced by record producer Joel Diamond.\n\nSnapper Foster\nSnapper Foster\nSnapper Foster is a fictional character on the CBS daytime soap opera The Young and the Restless. An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982. Espy briefly reprised the character from February 28, 2003 to March 5, 2003, and Hasselhoff briefly reprised the role from June 15 -- 21, 2010.\n\nScotty Grainger\nScotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless. He was played by actor Blair Redford from July 2005 until January 2006. In January 2017, Soap Opera Digest announced that Daniel Hall had been recast in the role.\n\nEric Forrester\nEric Forrester\nEric Forrester is a fictional character from the American CBS Daytime soap opera \"The Bold and the Beautiful\", played by John McCook. He made his debut screen appearance on March 23, 1987, the show's first episode. The character appeared briefly on \"The Young and the Restless\" in 1993, 1995, 1996, 2005, 2008, 2013, and 2017. McCook had also played Lance Prentiss from 1976 to 1980.\n\nMishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.\n\nMishael Morgan\nMishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.\n\nScotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless.\n\nPerfect Night: Live in London\nPerfect Night: Live in London\nPerfect Night: Live in London is an acoustic live album by Lou Reed recorded during the Meltdown '97 festival. It includes a version of the Velvet Underground's \"I'll Be Your Mirror\", originally sung by Nico. The album includes two songs, \"Talking Book\" and \"Into The Divine\" from the 1996 play \"Time Rocker\" Lou's collaboration with Robert Wilson (direction and design), and Darryl Pinckney (text). The cover photograph was taken by Timothy Greenfield-Sanders. In Australia, the 2-CD tour edition of Reed's album \"Ecstasy\" included \"Perfect Night\" as the second disc.\n\nBeau Kazer\nBeau Kazer\nBeau Kazer (May 22, 1951 -- December 30, 2014) was a Canadian actor who worked primarily on television. He was best known for his recurring role as Brock Reynolds on the American soap opera The Young and the Restless.\n\nMarla Adams\nMarla Adams\nMarla Adams (born August 28, 1938; Ocean City, New Jersey) is an American television actress, best known for her roles as Belle Clemens on The Secret Storm, from 1968 to 1974, and as Dina Abbott Mergeron on The Young and the Restless. As Belle Clemens, she was the show's reigning villainess for the last years of its run, stopping at almost nothing to destroy the life of the show's leading heroine, Amy Ames. Like Vicky and Dorian later on One Life to Live, the two rivals were at one time related through marriage. As Dina Abbott on The Young and the Restless from 1983 to 1986, in 1991 and again in 1996, she caused major disruptions in the lives of her three children and ex-husband John Abbott and his wife Jill. She reprised her role as Dina for three episodes on The Young and the Restless in 2008 when Katharine Chancellor was presumed dead. In May 2017, Adams returned to The Young and the Restless. The following March, Adams' performance garnered her an Emmy Nomination for Best Supporting Actress.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:and_things_that_go_bump_in_the_night_0",
+        "passage_index": 11,
+        "title": "And Things That Go Bump in the Night",
+        "score": 0.07620808731975233,
+        "text": "And Things That Go Bump in the Night\nAnd Things That Go Bump in the Night is a play by Terrence McNally. It premiered on February 4, 1964 at the Guthrie Theater in Minneapolis and ran on Broadway in 1965 for 16 performances. McNally was awarded a Rockefeller Foundation grant to write this play.",
+        "score_breakdown": {
+          "dense": 0.05236942924274211,
+          "graph": 0.05479217723129801,
+          "fact": 0.20644832044569839
+        }
+      },
+      {
+        "node_id": "chunk:night_rocker_0",
+        "passage_index": 9,
+        "title": "Night Rocker",
+        "score": 0.07613249413438453,
+        "text": "Night Rocker\nNight Rocker is the debut studio album by the American actor David Hasselhoff. It was released in January 1985 on Silver Blue Records, produced by record producer Joel Diamond.",
+        "score_breakdown": {
+          "dense": 0.053276664535380054,
+          "graph": 0.05390278368849736,
+          "fact": 0.2043966235558419
+        }
+      },
+      {
+        "node_id": "chunk:snapper_foster_0",
+        "passage_index": 12,
+        "title": "Snapper Foster",
+        "score": 0.0751552829304444,
+        "text": "Snapper Foster\nSnapper Foster is a fictional character on the CBS daytime soap opera The Young and the Restless. An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982. Espy briefly reprised the character from February 28, 2003 to March 5, 2003, and Hasselhoff briefly reprised the role from June 15 -- 21, 2010.",
+        "score_breakdown": {
+          "dense": 0.052771320498791144,
+          "graph": 0.05508803702925308,
+          "fact": 0.19736430364888902
+        }
+      },
+      {
+        "node_id": "chunk:scotty_grainger_0",
+        "passage_index": 16,
+        "title": "Scotty Grainger",
+        "score": 0.07494518788834607,
+        "text": "Scotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless. He was played by actor Blair Redford from July 2005 until January 2006. In January 2017, Soap Opera Digest announced that Daniel Hall had been recast in the role.",
+        "score_breakdown": {
+          "dense": 0.052679010700112584,
+          "graph": 0.05455689188440593,
+          "fact": 0.19736442958641578
+        }
+      },
+      {
+        "node_id": "chunk:eric_forrester_0",
+        "passage_index": 3,
+        "title": "Eric Forrester",
+        "score": 0.07444875980500529,
+        "text": "Eric Forrester\nEric Forrester is a fictional character from the American CBS Daytime soap opera \"The Bold and the Beautiful\", played by John McCook. He made his debut screen appearance on March 23, 1987, the show's first episode. The character appeared briefly on \"The Young and the Restless\" in 1993, 1995, 1996, 2005, 2008, 2013, and 2017. McCook had also played Lance Prentiss from 1976 to 1980.",
+        "score_breakdown": {
+          "dense": 0.05241750451016431,
+          "graph": 0.05485061303313891,
+          "fact": 0.19442632276315494
+        }
+      },
+      {
+        "node_id": "chunk:perfect_night_live_in_london_0",
+        "passage_index": 0,
+        "title": "Perfect Night: Live in London",
+        "score": 0.044717895522532136,
+        "text": "Perfect Night: Live in London\nPerfect Night: Live in London is an acoustic live album by Lou Reed recorded during the Meltdown '97 festival. It includes a version of the Velvet Underground's \"I'll Be Your Mirror\", originally sung by Nico. The album includes two songs, \"Talking Book\" and \"Into The Divine\" from the 1996 play \"Time Rocker\" Lou's collaboration with Robert Wilson (direction and design), and Darryl Pinckney (text). The cover photograph was taken by Timothy Greenfield-Sanders. In Australia, the 2-CD tour edition of Reed's album \"Ecstasy\" included \"Perfect Night\" as the second disc.",
+        "score_breakdown": {
+          "dense": 0.05255072973232592,
+          "graph": 0.05271664723250961,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:beau_kazer_0",
+        "passage_index": 17,
+        "title": "Beau Kazer",
+        "score": 0.04459291017341106,
+        "text": "Beau Kazer\nBeau Kazer (May 22, 1951 -- December 30, 2014) was a Canadian actor who worked primarily on television. He was best known for his recurring role as Brock Reynolds on the American soap opera The Young and the Restless.",
+        "score_breakdown": {
+          "dense": 0.05280666447415097,
+          "graph": 0.05183081570876008,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:robert_adamson_actor_0",
+        "passage_index": 14,
+        "title": "Robert Adamson (actor)",
+        "score": 0.044589876967200064,
+        "text": "Robert Adamson (actor)\nRobert Gillespie Adamson IV (born July 11, 1985) is an American actor. He has portrayed the roles of Phil Sanders on the television series Hollywood Heights and Charles Antoni on Lincoln Heights. He currently stars as Noah Newman on The Young and the Restless.",
+        "score_breakdown": {
+          "dense": 0.052809789329153166,
+          "graph": 0.05181497612055273,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_young_and_the_restless_0",
+        "passage_index": 10,
+        "title": "The Young and the Restless",
+        "score": 0.04457834472216775,
+        "text": "The Young and the Restless\nThe Young and the Restless (often abbreviated as Y&R) is an American television soap opera created by William J. Bell and Lee Phillip Bell for CBS. The show is set in a fictionalized version of Genoa City, Wisconsin. First broadcast on March 26, 1973, \"The Young and the Restless\" was originally broadcast as half-hour episodes, five times a week. The show expanded to one-hour episodes on February 4, 1980. In 2006, the series began airing encore episodes weeknights on SOAPnet until 2013, when it moved to TVGN (now Pop). As of July 1, 2013, Pop still airs the encore episodes on weeknights. The series is also syndicated internationally.",
+        "score_breakdown": {
+          "dense": 0.05261076712782953,
+          "graph": 0.05214140933953837,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:lauren_koslow_0",
+        "passage_index": 7,
+        "title": "Lauren Koslow",
+        "score": 0.04455055680217572,
+        "text": "Lauren Koslow\nLauren Alice Koslow (born March 9, 1953) is an American actress, best known for her long - running portrayal of Kate Roberts on the NBC dramatic serial Days of Our Lives, which she has played continuously since 1996. She previously appeared in the soaps The Bold and the Beautiful and The Young and the Restless.",
+        "score_breakdown": {
+          "dense": 0.052386970945452055,
+          "graph": 0.05245907594059028,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the performer from Night Rocker?",
+        "resolved_sub_question": "Who is the performer from Night Rocker?",
+        "sentence_id": "sentence:mishael_morgan_0_0_marie_charms_mishael_morgan_born_july_15_1986_known_professionally_as_misha",
+        "sentence": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.",
+        "score": 0.5478485333333334,
+        "source_title": "Mishael Morgan",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided evidence does not mention \"Night Rocker\" or any performer associated with it. There is no information to determine who the performer from Night Rocker is based on the given text.",
+        "hop_raw_response": "The provided evidence does not mention \"Night Rocker\" or any performer associated with it. There is no information to determine who the performer from Night Rocker is based on the given text.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Mishael Morgan",
+            "text": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+          },
+          {
+            "title": "Mishael Morgan",
+            "text": "Mishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+          },
+          {
+            "title": "Scotty Grainger",
+            "text": "Scott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless."
+          }
+        ]
+      },
+      {
+        "sub_question": "What character did this performer play on Young and the Restless?",
+        "resolved_sub_question": "What character did this performer play on Young and the Restless?",
+        "sentence_id": "sentence:mishael_morgan_0_0_marie_charms_mishael_morgan_born_july_15_1986_known_professionally_as_misha",
+        "sentence": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.",
+        "score": 0.48480000000000006,
+        "source_title": "Mishael Morgan",
+        "hop_answer": "Hilary Curtis",
+        "hop_thought": "The performer Mishael Morgan played the character Hilary Curtis on the CBS Daytime soap opera, The Young and the Restless.",
+        "hop_raw_response": "The performer Mishael Morgan played the character Hilary Curtis on the CBS Daytime soap opera, The Young and the Restless.\nAnswer: Hilary Curtis",
+        "evidence_passages": [
+          {
+            "title": "Mishael Morgan",
+            "text": "Marie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+          },
+          {
+            "title": "Mishael Morgan",
+            "text": "Mishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless."
+          },
+          {
+            "title": "Scotty Grainger",
+            "text": "Scott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the performer from Night Rocker? (source: Mishael Morgan)\n2. What character did this performer play on Young and the Restless? => Hilary Curtis (source: Mishael Morgan)\n\nWikipedia Title: Mishael Morgan\nMarie - Charms Mishael Morgan (born July 15, 1986) known professionally as Mishael Morgan, is a Trinidadian - Canadian actress known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.\n\nWikipedia Title: Scotty Grainger\nScott ``Scotty ''Grainger, Jr. is a fictional character from the CBS soap opera The Young and the Restless.\n\nWikipedia Title: Perfect Night: Live in London\nThe album includes two songs, \"Talking Book\" and \"Into The Divine\" from the 1996 play \"Time Rocker\" Lou's collaboration with Robert Wilson (direction and design), and Darryl Pinckney (text). The cover photograph was taken by Timothy Greenfield-Sanders.\n\nWikipedia Title: Snapper Foster\nSnapper Foster Snapper Foster is a fictional character on the CBS daytime soap opera The Young and the Restless. An original character since the show's inception, the role was played by William Gray Espy from March 26, 1973 to July 1975, and David Hasselhoff from 1975 to May 1982.\n\nWikipedia Title: Beau Kazer\nHe was best known for his recurring role as Brock Reynolds on the American soap opera The Young and the Restless. Beau Kazer Beau Kazer (May 22, 1951 -- December 30, 2014) was a Canadian actor who worked primarily on television.\n\nQuestion: Who did the performer from Night Rocker play on Young and Restless?\nDraft Answer: Unknown\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The performer from Night Rocker is Mishael Morgan, and she played the character Hilary Curtis on Young and the Restless.",
+  "predicted_answer": "Hilary Curtis",
+  "qa_raw_response": "{\n  \"thought\": \"The performer from Night Rocker is Mishael Morgan, and she played the character Hilary Curtis on Young and the Restless.\",\n  \"answer\": \"Hilary Curtis\",\n  \"support\": \"known for the role of Hilary Curtis on CBS Daytime soap opera, The Young and the Restless.\"\n}"
+}

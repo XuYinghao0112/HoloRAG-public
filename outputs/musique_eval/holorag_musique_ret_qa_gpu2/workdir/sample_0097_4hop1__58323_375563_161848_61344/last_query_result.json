@@ -1,0 +1,1124 @@
+{
+  "query": "What continent is the country located near the country of citizenship of The Book Thief's author part of?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.3,
+    "chunk": 0.5
+  },
+  "query_entities": [
+    "The Book Thief (film)"
+  ],
+  "raw_query_entities": [
+    "Book Thief"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Book Thief",
+      "node_id": "entity:title_anchor_the_book_thief_film",
+      "resolved_text": "The Book Thief (film)",
+      "score": 0.8719272727272727,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 1.0,
+      "score_margin": 0.1433939393939394,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the author of The Book Thief?",
+    "What is the country of citizenship of the author of The Book Thief?",
+    "Which country is located near the country of citizenship of the author of The Book Thief?",
+    "What continent is this country part of?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_the_book_thief_film",
+      "score": 0.8020498417097367,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:australian_continent",
+      "score": 0.6768260608710553,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:continent_of_australia",
+      "score": 0.4296185981318507,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.3992167422330764,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_australia_continent",
+      "score": 0.3904129315620176,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tosches",
+      "score": 0.28320098610051236,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rose_bowl",
+      "score": 0.2723204667023165,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:oceania",
+      "score": 0.24720746273920463,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_where_dead_voices_gather",
+      "score": 0.23799093762651313,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nick_tosches",
+      "score": 0.23799093762651313,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:pasadena_california",
+      "score": 0.21482130620761933,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:2005_novel_the_book_thief",
+      "score": 0.2085491921848057,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:rose_bowl_located_in_pasadena_california_sentence_1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_",
+      "text": "Rose Bowl located in Pasadena California",
+      "head_id": "entity:rose_bowl",
+      "tail_id": "entity:pasadena_california",
+      "sentence_id": "sentence:1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_3_2_in_a_penalty_shootout_at_th",
+      "chunk_id": "chunk:1994_fifa_world_cup_0",
+      "document_index": 5,
+      "score": 0.2703297616534575
+    },
+    {
+      "fact_id": "fact:dead_voices_gather_is_a_book_by_nick_tosches_sentence_where_dead_voices_gather_0_0_where_dead_voices_gather_is_a_book_by",
+      "text": "Dead Voices Gather is a book by Nick Tosches",
+      "head_id": "entity:title_anchor_where_dead_voices_gather",
+      "tail_id": "entity:nick_tosches",
+      "sentence_id": "sentence:where_dead_voices_gather_0_0_where_dead_voices_gather_is_a_book_by_nick_tosches",
+      "chunk_id": "chunk:where_dead_voices_gather_0",
+      "document_index": 7,
+      "score": 0.236000821750427
+    },
+    {
+      "fact_id": "fact:2005_novel_the_book_thief_authored_by_markus_zusak_sentence_the_book_thief_film_0_1_the_film_is_based_on_the_2005_novel_",
+      "text": "2005 novel The Book Thief authored_by Markus Zusak",
+      "head_id": "entity:2005_novel_the_book_thief",
+      "tail_id": "entity:markus_zusak",
+      "sentence_id": "sentence:the_book_thief_film_0_1_the_film_is_based_on_the_2005_novel_the_book_thief_by_markus_zusak_and_adapted_b",
+      "chunk_id": "chunk:the_book_thief_film_0",
+      "document_index": 14,
+      "score": 0.20652301668734635
+    },
+    {
+      "fact_id": "fact:australia_is_part_of_australasia_sentence_australia_continent_0_1_new_zealand_and_australia_are_both_part_of_the_oceania",
+      "text": "Australia is part of Australasia",
+      "head_id": "entity:title_anchor_australia_continent",
+      "tail_id": "entity:australasia",
+      "sentence_id": "sentence:australia_continent_0_1_new_zealand_and_australia_are_both_part_of_the_oceanian_sub_region_known_as_aust",
+      "chunk_id": "chunk:australia_continent_0",
+      "document_index": 13,
+      "score": 0.2060062189493372
+    },
+    {
+      "fact_id": "fact:pasadena_california_near_los_angeles_sentence_1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_3_2_",
+      "text": "Pasadena California near Los Angeles",
+      "head_id": "entity:pasadena_california",
+      "tail_id": "entity:los_angeles",
+      "sentence_id": "sentence:1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_3_2_in_a_penalty_shootout_at_th",
+      "chunk_id": "chunk:1994_fifa_world_cup_0",
+      "document_index": 5,
+      "score": 0.15533144066406307
+    },
+    {
+      "fact_id": "fact:australia_related_to_germany_sentence_1952_winter_olympics_0_2_australia_germany_and_japan_returned_after_a_16_year_abse",
+      "text": "Australia related_to Germany",
+      "head_id": "entity:australia",
+      "tail_id": "entity:germany",
+      "sentence_id": "sentence:1952_winter_olympics_0_2_australia_germany_and_japan_returned_after_a_16_year_absence",
+      "chunk_id": "chunk:1952_winter_olympics_0",
+      "document_index": 4,
+      "score": 0.15200927949387177
+    }
+  ],
+  "bridge_entities": [
+    "Markus Zusak",
+    "Michael Petroni"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the author of The Book Thief?",
+      "resolved_sub_question": "Who is the author of The Book Thief?",
+      "sentence_id": "sentence:the_book_thief_film_0_1_the_film_is_based_on_the_2005_novel_the_book_thief_by_markus_zusak_and_adapted_b",
+      "sentence": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni.",
+      "score": 0.6056217142857143,
+      "source_title": "The Book Thief (film)",
+      "hop_answer": "Markus Zusak",
+      "hop_thought": "The Book Thief is based on the novel by Markus Zusak.",
+      "hop_raw_response": "The Book Thief is based on the novel by Markus Zusak.\nAnswer: Markus Zusak",
+      "evidence_passages": [
+        {
+          "title": "The Book Thief (film)",
+          "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the country of citizenship of the author of The Book Thief?",
+      "resolved_sub_question": "What is the country of citizenship of the author of The Book Thief? Context: Markus Zusak.",
+      "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+      "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+      "score": 0.619456,
+      "source_title": "The Book Thief (film)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not contain information about Markus Zusak's citizenship.",
+      "hop_raw_response": "The provided context does not contain information about Markus Zusak's citizenship.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which country is located near the country of citizenship of the author of The Book Thief?",
+      "resolved_sub_question": "Which country is located near the country of citizenship of the author of The Book Thief? Context: Markus Zusak.",
+      "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+      "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+      "score": 0.5650712000000001,
+      "source_title": "The Book Thief (film)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not specify the country of citizenship for Markus Zusak, so we cannot determine a neighboring country from this information alone.",
+      "hop_raw_response": "The provided context does not specify the country of citizenship for Markus Zusak, so we cannot determine a neighboring country from this information alone.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+        }
+      ]
+    },
+    {
+      "sub_question": "What continent is this country part of?",
+      "resolved_sub_question": "What continent is this country part of? Context: Markus Zusak.",
+      "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+      "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+      "score": 0.4912000000000001,
+      "source_title": "The Book Thief (film)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not specify the country of citizenship for Markus Zusak, nor does it provide information about the continent that his country of citizenship is part of. Therefore, we cannot determine the continent from the given information.",
+      "hop_raw_response": "The context provided does not specify the country of citizenship for Markus Zusak, nor does it provide information about the continent that his country of citizenship is part of. Therefore, we cannot determine the continent from the given information.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+        },
+        {
+          "title": "The Book Thief (film)",
+          "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_the_book_thief_film",
+      "score": 0.06674714983413087,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:australian_continent",
+      "score": 0.06590983876967056,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_australia_continent",
+      "score": 0.05067051877451648,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:continent_of_australia",
+      "score": 0.04965492862450484,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:australia",
+      "score": 0.049247946858940864,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_3_2_in_a_penalty_shootout_at_th",
+      "score": 0.039263388247768566,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:australasia",
+      "score": 0.028004567363431064,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tosches",
+      "score": 0.027902804643523724,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nick_tosches",
+      "score": 0.027367453047808035,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:pasadena_california",
+      "score": 0.027143280040532212,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:australia_continent_0_1_new_zealand_and_australia_are_both_part_of_the_oceanian_sub_region_known_as_aust",
+      "score": 0.02583587112839912,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:rose_bowl",
+      "score": 0.025778312756167793,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_where_dead_voices_gather",
+      "score": 0.02511094443974482,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:oceania",
+      "score": 0.024732248025038376,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:germany",
+      "score": 0.024431663463917716,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:where_dead_voices_gather_0_0_where_dead_voices_gather_is_a_book_by_nick_tosches",
+      "score": 0.024100707175017153,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:markus_zusak",
+      "score": 0.02357297788534385,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_book_thief_film_0_0_the_book_thief_is_a_2013_world_war_ii_war_drama_film_directed_by_brian_percival",
+      "score": 0.020547289260480512,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_book_thief_film_0_1_the_film_is_based_on_the_2005_novel_the_book_thief_by_markus_zusak_and_adapted_b",
+      "score": 0.02052337023330191,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:2005_novel_the_book_thief",
+      "score": 0.019185733200116885,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:1994_fifa_world_cup_0",
+      "passage_index": 5,
+      "title": "1994 FIFA World Cup",
+      "score": 0.07746978058280116,
+      "text": "1994 FIFA World Cup\nBrazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time. It was the first World Cup final to be decided on penalties. The victory made Brazil the first nation to win four World Cup titles. Greece, Nigeria and Saudi Arabia made their first appearances at the tournament, as did Russia, following the breakup of the Soviet Union. A united Germany team took part in the tournament, as the country was reunified in 1990, a few months after West Germany's victory in the 1990 World Cup.",
+      "score_breakdown": {
+        "dense": 0.05248772116099632,
+        "graph": 0.0563092196915703,
+        "fact": 0.21139178691188057
+      }
+    },
+    {
+      "node_id": "chunk:where_dead_voices_gather_0",
+      "passage_index": 7,
+      "title": "Where Dead Voices Gather",
+      "score": 0.07607410049783563,
+      "text": "Where Dead Voices Gather\nWhere Dead Voices Gather is a book by Nick Tosches. It is, in part, a biography of Emmett Miller, one of the last minstrel singers. Just as importantly, it depicts Tosches' search for information about Miller, about whom he initially wrote in his book \"Country: The Twisted Roots of Rock and Roll\". It is also a study of minstrelsy and its connection to American folk music, country music, the blues and ultimately, rock and roll. In that way, it is a companion volume to his other books of music journalism, \"Country\" and \"Unsung Heroes of Rock N' Roll\".",
+      "score_breakdown": {
+        "dense": 0.0526855554490153,
+        "graph": 0.05486111107323378,
+        "fact": 0.2042580778593805
+      }
+    },
+    {
+      "node_id": "chunk:australia_continent_0",
+      "passage_index": 13,
+      "title": "Australia (continent)",
+      "score": 0.07602374115556972,
+      "text": "Australia (continent)\nNew Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia. The term Oceania is often used to denote the region encompassing the Australian continent and various islands in the Pacific Ocean that are not included in the seven - continent model.",
+      "score_breakdown": {
+        "dense": 0.05286763106136776,
+        "graph": 0.05737727564303,
+        "fact": 0.198222409192723
+      }
+    },
+    {
+      "node_id": "chunk:the_book_thief_film_0",
+      "passage_index": 14,
+      "title": "The Book Thief (film)",
+      "score": 0.07558499462923429,
+      "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams.",
+      "score_breakdown": {
+        "dense": 0.053260772170914364,
+        "graph": 0.05514279483714402,
+        "fact": 0.19832487656058792
+      }
+    },
+    {
+      "node_id": "chunk:1952_winter_olympics_0",
+      "passage_index": 4,
+      "title": "1952 Winter Olympics",
+      "score": 0.07310264124065295,
+      "text": "1952 Winter Olympics\nThirty nations sent competitors, which was the highest number of participants at a Winter Games. New Zealand and Portugal took part in the Winter Olympic Games for the first time. Australia, Germany, and Japan returned after a 16-year absence. South Korea, Liechtenstein, and Turkey competed in 1948 but did not participate in the 1952 Games.",
+      "score_breakdown": {
+        "dense": 0.05261942562055124,
+        "graph": 0.05330509909345192,
+        "fact": 0.18780284947542797
+      }
+    },
+    {
+      "node_id": "chunk:the_messenger_zusak_novel_0",
+      "passage_index": 16,
+      "title": "The Messenger (Zusak novel)",
+      "score": 0.044766782828630045,
+      "text": "The Messenger (Zusak novel)\nThe Messenger is a 2002 Novel by Markus Zusak, and winner of the 2003 Children's Book Council of Australia Book of the Year Award.",
+      "score_breakdown": {
+        "dense": 0.05300588817114194,
+        "graph": 0.05204514778167324,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_island_countries_0",
+      "passage_index": 9,
+      "title": "List of island countries",
+      "score": 0.04464575004231426,
+      "text": "List of island countries\nThis is a list of island countries. An island is a land mass (smaller than a continent) that is surrounded by water. Many island countries are spread over an archipelago, as is the case with the Federated States of Micronesia and the Indonesia (which consists of thousands of islands). Others consist of a single island, such as Nauru, or part of an island, such as Haiti. Although Australia is designated as a continent, it is often referred to as an island, as it has no land borders. Some declared island countries are not universally recognized as politically independent, such as Northern Cyprus. Some states, such as Taiwan, officially claim to hold continental territories but are de facto limited to control over islands.",
+      "score_breakdown": {
+        "dense": 0.05270990167326494,
+        "graph": 0.05218434707339516,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:demon_thief_0",
+      "passage_index": 8,
+      "title": "Demon Thief",
+      "score": 0.04447620660616456,
+      "text": "Demon Thief\nDemon Thief is a book in Darren Shan's \"Demonata\" series. Though it is the second book in the series, it is a prequel to \"Lord Loss\", the first book in the series. The protagonist is also different from that of the first book. The narrator here is a new character called Kernel Fleck, as opposed to Grubbs Grady, the protagonist of the first book. Demon Thief takes place about thirty years before \"Lord Loss\" so most of the characters from the first book did not appear, though a few did. It was also actually the sixth book of the Demonata to be written, although it was the second released.",
+      "score_breakdown": {
+        "dense": 0.05271895184251845,
+        "graph": 0.05160261030926471,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:the_continent_makers_0",
+      "passage_index": 0,
+      "title": "The Continent Makers",
+      "score": 0.044451970287197065,
+      "text": "The Continent Makers\nThe Continent Makers is a science fiction novella by American writers L. Sprague de Camp, part of his \"Viagens Interplanetarias\" series. It was first published in the magazine \"Thrilling Wonder Stories\" in the issue for April, 1951. It first appeared in book form in the collection \"The Continent Makers and Other Tales of the Viagens\", published in hardcover by Twayne Publishers in 1953, and in paperback by Signet Books in 1971. It has also been translated into Portuguese, Dutch, and Italian.",
+      "score_breakdown": {
+        "dense": 0.052695851503768036,
+        "graph": 0.05156417320041548,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:eurovision_song_contest_2018_0",
+      "passage_index": 11,
+      "title": "Eurovision Song Contest 2018",
+      "score": 0.044432177849115295,
+      "text": "Eurovision Song Contest 2018\nForty - three countries participated in the contest, equalling the record of the 2008 and 2011 editions. Russia returned after their absence from the previous edition, and for the first time since 2011, no country withdrew from the contest.",
+      "score_breakdown": {
+        "dense": 0.052659915861927295,
+        "graph": 0.05156408041685095,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_the_book_thief_film",
+        "score": 0.06674714983413087,
+        "text": "The Book Thief (film)",
+        "metadata": {
+          "canonical_name": "The Book Thief (film)",
+          "aliases": [
+            "BT",
+            "Book Thief"
+          ],
+          "surface_forms": [
+            "BT",
+            "Book Thief"
+          ],
+          "title_anchor": "The Book Thief (film)"
+        }
+      },
+      {
+        "node_id": "entity:australian_continent",
+        "score": 0.06590983876967056,
+        "text": "Australian continent",
+        "metadata": {
+          "canonical_name": "Australian continent",
+          "aliases": [
+            "AC",
+            "Australian continent"
+          ],
+          "surface_forms": [
+            "AC",
+            "Australian continent"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:1994_fifa_world_cup_0_0_brazil_won_the_tournament_after_beating_italy_3_2_in_a_penalty_shootout_at_th",
+        "score": 0.039263388247768566,
+        "text": "Brazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time.",
+        "metadata": {
+          "title": "1994 FIFA World Cup",
+          "chunk_id": "chunk:1994_fifa_world_cup_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Brazil",
+              "relation": "beat",
+              "tail": "Italy"
+            },
+            {
+              "head": "Italy",
+              "relation": "lost to",
+              "tail": "Brazil"
+            },
+            {
+              "head": "Rose Bowl",
+              "relation": "located in",
+              "tail": "Pasadena California"
+            },
+            {
+              "head": "Pasadena California",
+              "relation": "near",
+              "tail": "Los Angeles"
+            }
+          ],
+          "entities": [
+            "Brazil",
+            "Italy",
+            "Rose Bowl",
+            "Pasadena California",
+            "Los Angeles"
+          ],
+          "entity_ids": [
+            "entity:brazil",
+            "entity:italy",
+            "entity:los_angeles",
+            "entity:pasadena_california",
+            "entity:rose_bowl"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:australia_continent_0_1_new_zealand_and_australia_are_both_part_of_the_oceanian_sub_region_known_as_aust",
+        "score": 0.02583587112839912,
+        "text": "New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia.",
+        "metadata": {
+          "title": "Australia (continent)",
+          "chunk_id": "chunk:australia_continent_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "New Zealand",
+              "relation": "is part of",
+              "tail": "Australasia"
+            },
+            {
+              "head": "Australia",
+              "relation": "is part of",
+              "tail": "Australasia"
+            },
+            {
+              "head": "New Guinea",
+              "relation": "is in",
+              "tail": "Melanesia"
+            }
+          ],
+          "entities": [
+            "New Zealand",
+            "Australia",
+            "Oceanian",
+            "Australasia",
+            "New Guinea",
+            "Melanesia"
+          ],
+          "entity_ids": [
+            "entity:australasia",
+            "entity:melanesia",
+            "entity:new_guinea",
+            "entity:new_zealand",
+            "entity:oceanian",
+            "entity:title_anchor_australia_continent"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:where_dead_voices_gather_0_0_where_dead_voices_gather_is_a_book_by_nick_tosches",
+        "score": 0.024100707175017153,
+        "text": "Where Dead Voices Gather is a book by Nick Tosches.",
+        "metadata": {
+          "title": "Where Dead Voices Gather",
+          "chunk_id": "chunk:where_dead_voices_gather_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Dead Voices Gather",
+              "relation": "is a book by",
+              "tail": "Nick Tosches"
+            }
+          ],
+          "entities": [
+            "Dead Voices Gather",
+            "Nick Tosches"
+          ],
+          "entity_ids": [
+            "entity:nick_tosches",
+            "entity:title_anchor_where_dead_voices_gather"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_book_thief_film_0_0_the_book_thief_is_a_2013_world_war_ii_war_drama_film_directed_by_brian_percival",
+        "score": 0.020547289260480512,
+        "text": "The Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse.",
+        "metadata": {
+          "title": "The Book Thief (film)",
+          "chunk_id": "chunk:the_book_thief_film_0",
+          "sentence_index": 0,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Book Thief",
+              "relation": "is a",
+              "tail": "2013 World War II war drama film"
+            },
+            {
+              "head": "Book Thief",
+              "relation": "directed by",
+              "tail": "Brian Percival"
+            },
+            {
+              "head": "Book Thief",
+              "relation": "starring",
+              "tail": "Geoffrey Rush Emily Watson and Sophie N lisse"
+            }
+          ],
+          "entities": [
+            "Book Thief",
+            "World War II",
+            "Brian Percival",
+            "Geoffrey Rush",
+            "Emily Watson",
+            "Sophie N lisse"
+          ],
+          "entity_ids": [
+            "entity:2013_world_war_ii_war_drama_film",
+            "entity:brian_percival",
+            "entity:emily_watson",
+            "entity:geoffrey_rush",
+            "entity:geoffrey_rush_emily_watson_and_sophie_n_lisse",
+            "entity:sophie_n_lisse",
+            "entity:title_anchor_the_book_thief_film",
+            "entity:world_war_ii"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:1994_fifa_world_cup_0",
+        "score": 0.011493809688444464,
+        "text": "1994 FIFA World Cup\nBrazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time. It was the first World Cup final to be decided on penalties. The victory made Brazil the first nation to win four World Cup titles. Greece, Nigeria and Saudi Arabia made their first appearances at the tournament, as did Russia, following the breakup of the Soviet Union. A united Germany team took part in the tournament, as the country was reunified in 1990, a few months after West Germany's victory in the 1990 World Cup.",
+        "metadata": {
+          "title": "1994 FIFA World Cup",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:1990_world_cup",
+            "entity:brazil",
+            "entity:breakup_of_the_soviet_union",
+            "entity:first_nation_to_win_four_world_cup_titles",
+            "entity:germany",
+            "entity:greece",
+            "entity:italy",
+            "entity:los_angeles",
+            "entity:nigeria",
+            "entity:pasadena_california",
+            "entity:rose_bowl",
+            "entity:russia",
+            "entity:saudi_arabia",
+            "entity:soviet_union",
+            "entity:west_germany",
+            "entity:world_cup",
+            "entity:world_cup_final"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_book_thief_film_0",
+        "score": 0.009307659613271558,
+        "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams.",
+        "metadata": {
+          "title": "The Book Thief (film)",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:2005_novel_the_book_thief",
+            "entity:2013_world_war_ii_war_drama_film",
+            "entity:adoptive_german_family",
+            "entity:babelsberg",
+            "entity:ballhaus_edited",
+            "entity:based",
+            "entity:book_thief_theatrical",
+            "entity:box",
+            "entity:brian_percival",
+            "entity:brian_percival_produced",
+            "entity:century_fox_release",
+            "entity:country_united_states_germany",
+            "entity:directed",
+            "entity:emily_watson",
+            "entity:entertainment_distributed",
+            "entity:fox",
+            "entity:geoffrey_rush",
+            "entity:geoffrey_rush_emily_watson_and_sophie_n_lisse",
+            "entity:german_family",
+            "entity:jewish",
+            "entity:jewish_refugee",
+            "entity:john_williams",
+            "entity:john_williams_cinematography_florian",
+            "entity:john_wilson_production",
+            "entity:karen_rosenfelt_ken_blancato",
+            "entity:language_english_german_budget",
+            "entity:markus_zusak",
+            "entity:markus_zusak_starring_geoffrey",
+            "entity:michael_petroni",
+            "entity:michael_petroni_trudy_white",
+            "entity:mill_valley_film_festival",
+            "entity:narrated",
+            "entity:nazi_era",
+            "entity:november",
+            "entity:october",
+            "entity:oscar_winning_composer",
+            "entity:pictures_sunswept_entertainment_studio",
+            "entity:roger_allam_music",
+            "entity:running",
+            "entity:rush_emily_watson_sophie",
+            "entity:screenplay",
+            "entity:sophie_n_lisse",
+            "entity:taught",
+            "entity:title_anchor_the_book_thief_film",
+            "entity:world_war_ii"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:where_dead_voices_gather_0",
+        "score": 0.009081276592523675,
+        "text": "Where Dead Voices Gather\nWhere Dead Voices Gather is a book by Nick Tosches. It is, in part, a biography of Emmett Miller, one of the last minstrel singers. Just as importantly, it depicts Tosches' search for information about Miller, about whom he initially wrote in his book \"Country: The Twisted Roots of Rock and Roll\". It is also a study of minstrelsy and its connection to American folk music, country music, the blues and ultimately, rock and roll. In that way, it is a companion volume to his other books of music journalism, \"Country\" and \"Unsung Heroes of Rock N' Roll\".",
+        "metadata": {
+          "title": "Where Dead Voices Gather",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:american_folk_music",
+            "entity:country_the_twisted_roots_of_rock_and_roll",
+            "entity:emmett_miller",
+            "entity:miller",
+            "entity:nick_tosches",
+            "entity:rock",
+            "entity:roll",
+            "entity:title_anchor_where_dead_voices_gather",
+            "entity:tosches",
+            "entity:unsung_heroes",
+            "entity:unsung_heroes_of_rock_n_roll"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:australia_continent_0",
+        "score": 0.008466509910158786,
+        "text": "Australia (continent)\nNew Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia. The term Oceania is often used to denote the region encompassing the Australian continent and various islands in the Pacific Ocean that are not included in the seven - continent model.",
+        "metadata": {
+          "title": "Australia (continent)",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:australasia",
+            "entity:australian_continent",
+            "entity:continent_of_australia",
+            "entity:melanesia",
+            "entity:new_guinea",
+            "entity:new_zealand",
+            "entity:oceania",
+            "entity:oceanian",
+            "entity:pacific_ocean",
+            "entity:region_encompassing_the_australian_continent_and_various_islands_in_the_pacific_ocean",
+            "entity:submerged_continent_of_zealandia",
+            "entity:title_anchor_australia_continent",
+            "entity:zealandia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:1952_winter_olympics_0",
+        "score": 0.005321595014749101,
+        "text": "1952 Winter Olympics\nThirty nations sent competitors, which was the highest number of participants at a Winter Games. New Zealand and Portugal took part in the Winter Olympic Games for the first time. Australia, Germany, and Japan returned after a 16-year absence. South Korea, Liechtenstein, and Turkey competed in 1948 but did not participate in the 1952 Games.",
+        "metadata": {
+          "title": "1952 Winter Olympics",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:1948_games",
+            "entity:1952_games",
+            "entity:australia",
+            "entity:germany",
+            "entity:highest_number_of_participants_at_a_winter_games",
+            "entity:japan",
+            "entity:liechtenstein",
+            "entity:new_zealand",
+            "entity:portugal",
+            "entity:south_korea",
+            "entity:thirty_nations",
+            "entity:turkey",
+            "entity:winter_games",
+            "entity:winter_olympic_games"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:list_of_island_countries_0",
+        "score": 0.0023330072049053594,
+        "text": "List of island countries\nThis is a list of island countries. An island is a land mass (smaller than a continent) that is surrounded by water. Many island countries are spread over an archipelago, as is the case with the Federated States of Micronesia and the Indonesia (which consists of thousands of islands). Others consist of a single island, such as Nauru, or part of an island, such as Haiti. Although Australia is designated as a continent, it is often referred to as an island, as it has no land borders. Some declared island countries are not universally recognized as politically independent, such as Northern Cyprus. Some states, such as Taiwan, officially claim to hold continental territories but are de facto limited to control over islands.",
+        "metadata": {
+          "title": "List of island countries",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:australia",
+            "entity:federated_states",
+            "entity:federated_states_of_micronesia",
+            "entity:haiti",
+            "entity:indonesia",
+            "entity:many",
+            "entity:micronesia",
+            "entity:nauru",
+            "entity:northern_cyprus",
+            "entity:others",
+            "entity:some",
+            "entity:taiwan"
+          ]
+        }
+      }
+    ],
+    "qa_context": "1994 FIFA World Cup\n1994 FIFA World Cup\nBrazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time. It was the first World Cup final to be decided on penalties. The victory made Brazil the first nation to win four World Cup titles. Greece, Nigeria and Saudi Arabia made their first appearances at the tournament, as did Russia, following the breakup of the Soviet Union. A united Germany team took part in the tournament, as the country was reunified in 1990, a few months after West Germany's victory in the 1990 World Cup.\n\nWhere Dead Voices Gather\nWhere Dead Voices Gather\nWhere Dead Voices Gather is a book by Nick Tosches. It is, in part, a biography of Emmett Miller, one of the last minstrel singers. Just as importantly, it depicts Tosches' search for information about Miller, about whom he initially wrote in his book \"Country: The Twisted Roots of Rock and Roll\". It is also a study of minstrelsy and its connection to American folk music, country music, the blues and ultimately, rock and roll. In that way, it is a companion volume to his other books of music journalism, \"Country\" and \"Unsung Heroes of Rock N' Roll\".\n\nAustralia (continent)\nAustralia (continent)\nNew Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia. The term Oceania is often used to denote the region encompassing the Australian continent and various islands in the Pacific Ocean that are not included in the seven - continent model.\n\nThe Book Thief (film)\nThe Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams.\n\n1952 Winter Olympics\n1952 Winter Olympics\nThirty nations sent competitors, which was the highest number of participants at a Winter Games. New Zealand and Portugal took part in the Winter Olympic Games for the first time. Australia, Germany, and Japan returned after a 16-year absence. South Korea, Liechtenstein, and Turkey competed in 1948 but did not participate in the 1952 Games.\n\nThe Book Thief (film)\nThe film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni.\n\nThe Book Thief (film)\nThe Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million\n\nThe Messenger (Zusak novel)\nThe Messenger (Zusak novel)\nThe Messenger is a 2002 Novel by Markus Zusak, and winner of the 2003 Children's Book Council of Australia Book of the Year Award.\n\nDemon Thief\nDemon Thief\nDemon Thief is a book in Darren Shan's \"Demonata\" series. Though it is the second book in the series, it is a prequel to \"Lord Loss\", the first book in the series. The protagonist is also different from that of the first book. The narrator here is a new character called Kernel Fleck, as opposed to Grubbs Grady, the protagonist of the first book. Demon Thief takes place about thirty years before \"Lord Loss\" so most of the characters from the first book did not appear, though a few did. It was also actually the sixth book of the Demonata to be written, although it was the second released.\n\nHarry Potter and the Goblet of Fire\nHarry Potter and the Goblet of Fire\nThe book was published in the United Kingdom by Bloomsbury and in the United States by Scholastic; in both countries the release date was 8 July 2000, the first time a book in the series was published in both countries at the same time. The novel won a Hugo Award, the only Harry Potter novel to do so, in 2001. The book was made into a film, which was released worldwide on 18 November 2005, and a video game by Electronic Arts.\n\nThe Continent Makers\nThe Continent Makers\nThe Continent Makers is a science fiction novella by American writers L. Sprague de Camp, part of his \"Viagens Interplanetarias\" series. It was first published in the magazine \"Thrilling Wonder Stories\" in the issue for April, 1951. It first appeared in book form in the collection \"The Continent Makers and Other Tales of the Viagens\", published in hardcover by Twayne Publishers in 1953, and in paperback by Signet Books in 1971. It has also been translated into Portuguese, Dutch, and Italian.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:1994_fifa_world_cup_0",
+        "passage_index": 5,
+        "title": "1994 FIFA World Cup",
+        "score": 0.07746978058280116,
+        "text": "1994 FIFA World Cup\nBrazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time. It was the first World Cup final to be decided on penalties. The victory made Brazil the first nation to win four World Cup titles. Greece, Nigeria and Saudi Arabia made their first appearances at the tournament, as did Russia, following the breakup of the Soviet Union. A united Germany team took part in the tournament, as the country was reunified in 1990, a few months after West Germany's victory in the 1990 World Cup.",
+        "score_breakdown": {
+          "dense": 0.05248772116099632,
+          "graph": 0.0563092196915703,
+          "fact": 0.21139178691188057
+        }
+      },
+      {
+        "node_id": "chunk:where_dead_voices_gather_0",
+        "passage_index": 7,
+        "title": "Where Dead Voices Gather",
+        "score": 0.07607410049783563,
+        "text": "Where Dead Voices Gather\nWhere Dead Voices Gather is a book by Nick Tosches. It is, in part, a biography of Emmett Miller, one of the last minstrel singers. Just as importantly, it depicts Tosches' search for information about Miller, about whom he initially wrote in his book \"Country: The Twisted Roots of Rock and Roll\". It is also a study of minstrelsy and its connection to American folk music, country music, the blues and ultimately, rock and roll. In that way, it is a companion volume to his other books of music journalism, \"Country\" and \"Unsung Heroes of Rock N' Roll\".",
+        "score_breakdown": {
+          "dense": 0.0526855554490153,
+          "graph": 0.05486111107323378,
+          "fact": 0.2042580778593805
+        }
+      },
+      {
+        "node_id": "chunk:australia_continent_0",
+        "passage_index": 13,
+        "title": "Australia (continent)",
+        "score": 0.07602374115556972,
+        "text": "Australia (continent)\nNew Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia. The term Oceania is often used to denote the region encompassing the Australian continent and various islands in the Pacific Ocean that are not included in the seven - continent model.",
+        "score_breakdown": {
+          "dense": 0.05286763106136776,
+          "graph": 0.05737727564303,
+          "fact": 0.198222409192723
+        }
+      },
+      {
+        "node_id": "chunk:the_book_thief_film_0",
+        "passage_index": 14,
+        "title": "The Book Thief (film)",
+        "score": 0.07558499462923429,
+        "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams.",
+        "score_breakdown": {
+          "dense": 0.053260772170914364,
+          "graph": 0.05514279483714402,
+          "fact": 0.19832487656058792
+        }
+      },
+      {
+        "node_id": "chunk:1952_winter_olympics_0",
+        "passage_index": 4,
+        "title": "1952 Winter Olympics",
+        "score": 0.07310264124065295,
+        "text": "1952 Winter Olympics\nThirty nations sent competitors, which was the highest number of participants at a Winter Games. New Zealand and Portugal took part in the Winter Olympic Games for the first time. Australia, Germany, and Japan returned after a 16-year absence. South Korea, Liechtenstein, and Turkey competed in 1948 but did not participate in the 1952 Games.",
+        "score_breakdown": {
+          "dense": 0.05261942562055124,
+          "graph": 0.05330509909345192,
+          "fact": 0.18780284947542797
+        }
+      },
+      {
+        "node_id": "chunk:the_messenger_zusak_novel_0",
+        "passage_index": 16,
+        "title": "The Messenger (Zusak novel)",
+        "score": 0.044766782828630045,
+        "text": "The Messenger (Zusak novel)\nThe Messenger is a 2002 Novel by Markus Zusak, and winner of the 2003 Children's Book Council of Australia Book of the Year Award.",
+        "score_breakdown": {
+          "dense": 0.05300588817114194,
+          "graph": 0.05204514778167324,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_island_countries_0",
+        "passage_index": 9,
+        "title": "List of island countries",
+        "score": 0.04464575004231426,
+        "text": "List of island countries\nThis is a list of island countries. An island is a land mass (smaller than a continent) that is surrounded by water. Many island countries are spread over an archipelago, as is the case with the Federated States of Micronesia and the Indonesia (which consists of thousands of islands). Others consist of a single island, such as Nauru, or part of an island, such as Haiti. Although Australia is designated as a continent, it is often referred to as an island, as it has no land borders. Some declared island countries are not universally recognized as politically independent, such as Northern Cyprus. Some states, such as Taiwan, officially claim to hold continental territories but are de facto limited to control over islands.",
+        "score_breakdown": {
+          "dense": 0.05270990167326494,
+          "graph": 0.05218434707339516,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:demon_thief_0",
+        "passage_index": 8,
+        "title": "Demon Thief",
+        "score": 0.04447620660616456,
+        "text": "Demon Thief\nDemon Thief is a book in Darren Shan's \"Demonata\" series. Though it is the second book in the series, it is a prequel to \"Lord Loss\", the first book in the series. The protagonist is also different from that of the first book. The narrator here is a new character called Kernel Fleck, as opposed to Grubbs Grady, the protagonist of the first book. Demon Thief takes place about thirty years before \"Lord Loss\" so most of the characters from the first book did not appear, though a few did. It was also actually the sixth book of the Demonata to be written, although it was the second released.",
+        "score_breakdown": {
+          "dense": 0.05271895184251845,
+          "graph": 0.05160261030926471,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:the_continent_makers_0",
+        "passage_index": 0,
+        "title": "The Continent Makers",
+        "score": 0.044451970287197065,
+        "text": "The Continent Makers\nThe Continent Makers is a science fiction novella by American writers L. Sprague de Camp, part of his \"Viagens Interplanetarias\" series. It was first published in the magazine \"Thrilling Wonder Stories\" in the issue for April, 1951. It first appeared in book form in the collection \"The Continent Makers and Other Tales of the Viagens\", published in hardcover by Twayne Publishers in 1953, and in paperback by Signet Books in 1971. It has also been translated into Portuguese, Dutch, and Italian.",
+        "score_breakdown": {
+          "dense": 0.052695851503768036,
+          "graph": 0.05156417320041548,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:eurovision_song_contest_2018_0",
+        "passage_index": 11,
+        "title": "Eurovision Song Contest 2018",
+        "score": 0.044432177849115295,
+        "text": "Eurovision Song Contest 2018\nForty - three countries participated in the contest, equalling the record of the 2008 and 2011 editions. Russia returned after their absence from the previous edition, and for the first time since 2011, no country withdrew from the contest.",
+        "score_breakdown": {
+          "dense": 0.052659915861927295,
+          "graph": 0.05156408041685095,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the author of The Book Thief?",
+        "resolved_sub_question": "Who is the author of The Book Thief?",
+        "sentence_id": "sentence:the_book_thief_film_0_1_the_film_is_based_on_the_2005_novel_the_book_thief_by_markus_zusak_and_adapted_b",
+        "sentence": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni.",
+        "score": 0.6056217142857143,
+        "source_title": "The Book Thief (film)",
+        "hop_answer": "Markus Zusak",
+        "hop_thought": "The Book Thief is based on the novel by Markus Zusak.",
+        "hop_raw_response": "The Book Thief is based on the novel by Markus Zusak.\nAnswer: Markus Zusak",
+        "evidence_passages": [
+          {
+            "title": "The Book Thief (film)",
+            "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the country of citizenship of the author of The Book Thief?",
+        "resolved_sub_question": "What is the country of citizenship of the author of The Book Thief? Context: Markus Zusak.",
+        "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+        "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+        "score": 0.619456,
+        "source_title": "The Book Thief (film)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not contain information about Markus Zusak's citizenship.",
+        "hop_raw_response": "The provided context does not contain information about Markus Zusak's citizenship.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which country is located near the country of citizenship of the author of The Book Thief?",
+        "resolved_sub_question": "Which country is located near the country of citizenship of the author of The Book Thief? Context: Markus Zusak.",
+        "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+        "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+        "score": 0.5650712000000001,
+        "source_title": "The Book Thief (film)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not specify the country of citizenship for Markus Zusak, so we cannot determine a neighboring country from this information alone.",
+        "hop_raw_response": "The provided context does not specify the country of citizenship for Markus Zusak, so we cannot determine a neighboring country from this information alone.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+          }
+        ]
+      },
+      {
+        "sub_question": "What continent is this country part of?",
+        "resolved_sub_question": "What continent is this country part of? Context: Markus Zusak.",
+        "sentence_id": "sentence:the_book_thief_film_0_0_the_book_thief_theatrical_release_poster_directed_by_brian_percival_produced_by",
+        "sentence": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million",
+        "score": 0.4912000000000001,
+        "source_title": "The Book Thief (film)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not specify the country of citizenship for Markus Zusak, nor does it provide information about the continent that his country of citizenship is part of. Therefore, we cannot determine the continent from the given information.",
+        "hop_raw_response": "The context provided does not specify the country of citizenship for Markus Zusak, nor does it provide information about the continent that his country of citizenship is part of. Therefore, we cannot determine the continent from the given information.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million"
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The Book Thief (film)\nThe Book Thief is a 2013 World War II war drama film directed by Brian Percival and starring Geoffrey Rush, Emily Watson, and Sophie Nélisse. The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film is about a young girl living with her adoptive German family during the Nazi era. Taught to read by her kind - hearted foster father, the girl begins ``borrowing ''books and sharing them with the Jewish refugee being sheltered by her foster parents in their home. The film features a musical score by Oscar - winning composer John Williams."
+          },
+          {
+            "title": "The Book Thief (film)",
+            "text": "The film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the author of The Book Thief? => Markus Zusak (source: The Book Thief (film))\n2. What is the country of citizenship of the author of The Book Thief? (source: The Book Thief (film))\n3. Which country is located near the country of citizenship of the author of The Book Thief? (source: The Book Thief (film))\n4. What continent is this country part of? (source: The Book Thief (film))\n\nFact hints:\n- 2005 novel The Book Thief authored_by Markus Zusak\n\nWikipedia Title: The Book Thief (film)\nThe film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni.\n\nWikipedia Title: The Book Thief (film)\nThe Book Thief Theatrical release poster Directed by Brian Percival Produced by Karen Rosenfelt Ken Blancato Screenplay by Michael Petroni Trudy White (novel) Based on The Book Thief by Markus Zusak Starring Geoffrey Rush Emily Watson Sophie Nélisse Narrated by Roger Allam Music by John Williams Cinematography Florian Ballhaus Edited by John Wilson Production company Fox 2000 Pictures Sunswept Entertainment Studio Babelsberg TSG Entertainment Distributed by 20th Century Fox Release date October 3, 2013 (2013 - 10 - 03) (Mill Valley Film Festival) November 27, 2013 (2013 - 11 - 27) (United States) Running time 130 minutes Country United States Germany Language English German Budget $19 million Box office $76.6 million\n\nWikipedia Title: The Book Thief (film)\nThe film is based on the 2005 novel The Book Thief by Markus Zusak and adapted by Michael Petroni. The film features a musical score by Oscar - winning composer John Williams.\n\nWikipedia Title: The Messenger (Zusak novel)\nThe Messenger (Zusak novel) The Messenger is a 2002 Novel by Markus Zusak, and winner of the 2003 Children's Book Council of Australia Book of the Year Award.\n\nWikipedia Title: Demon Thief\nThe protagonist is also different from that of the first book. Though it is the second book in the series, it is a prequel to \"Lord Loss\", the first book in the series.\n\nWikipedia Title: Harry Potter and the Goblet of Fire\nThe book was made into a film, which was released worldwide on 18 November 2005, and a video game by Electronic Arts. The novel won a Hugo Award, the only Harry Potter novel to do so, in 2001.\n\nWikipedia Title: 1994 FIFA World Cup\nA united Germany team took part in the tournament, as the country was reunified in 1990, a few months after West Germany's victory in the 1990 World Cup. 1994 FIFA World Cup Brazil won the tournament after beating Italy 3 -- 2 in a penalty shootout at the Rose Bowl in Pasadena, California near Los Angeles, after the game had ended 0 -- 0 after extra time.\n\nWikipedia Title: Where Dead Voices Gather\nJust as importantly, it depicts Tosches' search for information about Miller, about whom he initially wrote in his book \"Country: The Twisted Roots of Rock and Roll\". It is, in part, a biography of Emmett Miller, one of the last minstrel singers.\n\nWikipedia Title: The Continent Makers\nSprague de Camp, part of his \"Viagens Interplanetarias\" series. It first appeared in book form in the collection \"The Continent Makers and Other Tales of the Viagens\", published in hardcover by Twayne Publishers in 1953, and in paperback by Signet Books in 1971.\n\nWikipedia Title: Australia (continent)\nAustralia (continent) New Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand and Australia are both part of the Oceanian sub-region known as Australasia, with New Guinea being in Melanesia.\n\nWikipedia Title: 1952 Winter Olympics\nNew Zealand and Portugal took part in the Winter Olympic Games for the first time. Australia, Germany, and Japan returned after a 16-year absence.\n\nQuestion: What continent is the country located near the country of citizenship of The Book Thief's author part of?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The author of The Book Thief is Markus Zusak. However, the provided passages do not specify Markus Zusak's country of citizenship. Without this information, we cannot determine the country near his country of citizenship or the continent it belongs to.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The author of The Book Thief is Markus Zusak. However, the provided passages do not specify Markus Zusak's country of citizenship. Without this information, we cannot determine the country near his country of citizenship or the continent it belongs to.\nAnswer: Unknown"
+}

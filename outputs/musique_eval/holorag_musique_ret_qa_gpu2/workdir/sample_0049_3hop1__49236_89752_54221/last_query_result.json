@@ -1,0 +1,1094 @@
+{
+  "query": "What time do alcohol sales begin in the largest state of the region where the fictional Gilead is located in The Handmaid's Tale?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Gilead",
+    "The Handmaid's Tale"
+  ],
+  "raw_query_entities": [
+    "Gilead",
+    "Handmaid's Tale"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Gilead",
+      "node_id": "entity:gilead",
+      "resolved_text": "Gilead",
+      "score": 0.762,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4,
+      "compatibility_score": 0.775,
+      "score_margin": 0.17600000000000005,
+      "confident": true
+    },
+    {
+      "mention": "Handmaid's Tale",
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "resolved_text": "The Handmaid's Tale",
+      "score": 0.7882,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.7075,
+      "score_margin": 0.27759999999999996,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "In which region is the fictional Gilead located in The Handmaid's Tale?",
+    "What is the largest state in this region?",
+    "What time do alcohol sales begin in this state?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "score": 1.009661889149298,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gilead",
+      "score": 0.80212220873234,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+      "score": 0.25115024627308113,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:handmaid_s_tale",
+      "score": 0.2511477549306761,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:rise_of_gilead",
+      "score": 0.25113389364374106,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:littlefield_company_white",
+      "score": 0.2249948782608125,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:republic_of_gilead",
+      "score": 0.20962711866908973,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:borders_of_former_united_states_of_america",
+      "score": 0.20961076015959199,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "score": 0.19460265420747974,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:maine",
+      "score": 0.19459843122537784,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:littlefield_company",
+      "score": 0.1895885453573439,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:april_26_2017",
+      "score": 0.1895885453573439,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:handmaid_s_tale_is_set_in_republic_of_gilead_sentence_the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic",
+      "text": "Handmaid's Tale is set in Republic of Gilead",
+      "head_id": "entity:title_anchor_the_handmaid_s_tale",
+      "tail_id": "entity:republic_of_gilead",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "chunk_id": "chunk:the_handmaid_s_tale_0",
+      "document_index": 3,
+      "score": 0.2075204092755932
+    },
+    {
+      "fact_id": "fact:republic_of_gilead_formed_within_borders_of_former_united_states_of_america_sentence_the_handmaid_s_tale_0_0_the_handmai",
+      "text": "Republic of Gilead formed within borders of former United States of America",
+      "head_id": "entity:republic_of_gilead",
+      "tail_id": "entity:borders_of_former_united_states_of_america",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "chunk_id": "chunk:the_handmaid_s_tale_0",
+      "document_index": 3,
+      "score": 0.20751762832971524
+    },
+    {
+      "fact_id": "fact:maine_constitutes_nearly_one_half_of_the_total_area_of_new_england_sentence_new_england_0_1_maine_alone_constitutes_near",
+      "text": "Maine constitutes nearly one-half of the total area of New England",
+      "head_id": "entity:maine",
+      "tail_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "sentence_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "chunk_id": "chunk:new_england_0",
+      "document_index": 16,
+      "score": 0.19250553869545262
+    },
+    {
+      "fact_id": "fact:littlefield_company_original_release_date_april_26_2017_sentence_the_handmaid_s_tale_tv_series_0_2_the_littlefield_compa",
+      "text": "Littlefield Company original_release_date April 26 2017",
+      "head_id": "entity:littlefield_company",
+      "tail_id": "entity:april_26_2017",
+      "sentence_id": "sentence:the_handmaid_s_tale_tv_series_0_2_the_littlefield_company_white_oak_pictures_mgm_television_release_original_netwo",
+      "chunk_id": "chunk:the_handmaid_s_tale_tv_series_0",
+      "document_index": 5,
+      "score": 0.18749573188401042
+    },
+    {
+      "fact_id": "fact:treasury_related_to_alcohol_sentence_upper_mississippi_river_valley_ava_0_1_certified_by_the_united_states_department_of",
+      "text": "Treasury related_to Alcohol",
+      "head_id": "entity:treasury",
+      "tail_id": "entity:alcohol",
+      "sentence_id": "sentence:upper_mississippi_river_valley_ava_0_1_certified_by_the_united_states_department_of_the_treasury_s_alcohol_and_tobacco",
+      "chunk_id": "chunk:upper_mississippi_river_valley_ava_0",
+      "document_index": 17,
+      "score": 0.16964720101829467
+    },
+    {
+      "fact_id": "fact:totalitarian_christian_theonomy_overthrew_united_states_government_sentence_the_handmaid_s_tale_0_2_set_in_a_near_future",
+      "text": "totalitarian Christian theonomy overthrew United States government",
+      "head_id": "entity:totalitarian_christian_theonomy",
+      "tail_id": "entity:united_states_government",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_2_set_in_a_near_future_new_england_in_a_totalitarian_christian_theonomy_that_h",
+      "chunk_id": "chunk:the_handmaid_s_tale_0",
+      "document_index": 14,
+      "score": 0.13250324236080419
+    }
+  ],
+  "bridge_entities": [
+    "Republic of Gilead",
+    "United States of America",
+    "New England",
+    "Maine"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "In which region is the fictional Gilead located in The Handmaid's Tale?",
+      "resolved_sub_question": "In which region is the fictional Gilead located in The Handmaid's Tale?",
+      "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "sentence": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+      "score": 0.5566677993507385,
+      "source_title": "The Handmaid's Tale",
+      "hop_answer": "New England",
+      "hop_thought": "The fictional Gilead is set within the borders of what was formerly the United States, specifically in a near-future New England.",
+      "hop_raw_response": "The fictional Gilead is set within the borders of what was formerly the United States, specifically in a near-future New England.\nAnswer: New England",
+      "evidence_passages": [
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+        },
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.)."
+        },
+        {
+          "title": "The Handmaid's Tale",
+          "text": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the largest state in this region?",
+      "resolved_sub_question": "What is the largest state in this region? Context: New England.",
+      "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+      "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+      "score": 0.5613071200392284,
+      "source_title": "New England",
+      "hop_answer": "Maine",
+      "hop_thought": "The context indicates that Maine constitutes nearly one-half of the total area of New England, implying it is the largest state in the region.",
+      "hop_raw_response": "The context indicates that Maine constitutes nearly one-half of the total area of New England, implying it is the largest state in the region.\nAnswer: Maine",
+      "evidence_passages": [
+        {
+          "title": "New England",
+          "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+        },
+        {
+          "title": "New England",
+          "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+        },
+        {
+          "title": "New England",
+          "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+        }
+      ]
+    },
+    {
+      "sub_question": "What time do alcohol sales begin in this state?",
+      "resolved_sub_question": "What time do alcohol sales begin in this state? Context: New England; Maine.",
+      "sentence_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "sentence": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.",
+      "score": 0.41147272106222677,
+      "source_title": "New England",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about the time alcohol sales begin in Maine or any other state in New England.",
+      "hop_raw_response": "The context provided does not contain information about the time alcohol sales begin in Maine or any other state in New England.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "New England",
+          "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+        },
+        {
+          "title": "New England",
+          "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+        },
+        {
+          "title": "New England",
+          "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale",
+      "score": 0.10612200382759093,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:gilead",
+      "score": 0.0735251266911105,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:republic_of_gilead",
+      "score": 0.04344969833533151,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+      "score": 0.04071644832321528,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:handmaid_s_tale",
+      "score": 0.030760763864668368,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+      "score": 0.03028053622845896,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:rise_of_gilead",
+      "score": 0.029387571699420016,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:littlefield_company",
+      "score": 0.02868685541365358,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:maine",
+      "score": 0.027418687349698614,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:borders_of_former_united_states_of_america",
+      "score": 0.02492339471247179,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:united_states_department",
+      "score": 0.02326383822317747,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:treasury",
+      "score": 0.02275441275614548,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:littlefield_company_white",
+      "score": 0.02254608710913721,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+      "score": 0.022207970979290902,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:nearly_one_half_of_the_total_area_of_new_england",
+      "score": 0.02126667759275047,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:the_handmaid_s_tale_0",
+      "score": 0.02101948068668134,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:upper_mississippi_river_valley_ava_0_1_certified_by_the_united_states_department_of_the_treasury_s_alcohol_and_tobacco",
+      "score": 0.020688805227130114,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_handmaid_s_tale_tv_series_0_2_the_littlefield_company_white_oak_pictures_mgm_television_release_original_netwo",
+      "score": 0.020443845992791324,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:alcohol",
+      "score": 0.019443005008555208,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:april_26_2017",
+      "score": 0.019147350589612307,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:the_handmaid_s_tale_0",
+      "passage_index": 15,
+      "title": "The Handmaid's Tale",
+      "score": 0.11188123212778285,
+      "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+      "score_breakdown": {
+        "dense": 0.08423995257447689,
+        "graph": 0.09120974550309575,
+        "fact": 0.2545755637392789
+      }
+    },
+    {
+      "node_id": "chunk:the_handmaid_s_tale_tv_series_0",
+      "passage_index": 19,
+      "title": "The Handmaid's Tale (TV series)",
+      "score": 0.11082043273624301,
+      "text": "The Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.",
+      "score_breakdown": {
+        "dense": 0.08365883488199294,
+        "graph": 0.0912626758142733,
+        "fact": 0.24952847204576603
+      }
+    },
+    {
+      "node_id": "chunk:new_england_0",
+      "passage_index": 16,
+      "title": "New England",
+      "score": 0.10901515566158186,
+      "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+      "score_breakdown": {
+        "dense": 0.08397263113194735,
+        "graph": 0.08404317942653097,
+        "fact": 0.25078169807367684
+      }
+    },
+    {
+      "node_id": "chunk:upper_mississippi_river_valley_ava_0",
+      "passage_index": 17,
+      "title": "Upper Mississippi River Valley AVA",
+      "score": 0.10786503841111078,
+      "text": "Upper Mississippi River Valley AVA\nThe Upper Mississippi River Valley AVA is an American Viticultural Area covering 29,914 square miles (77,477 square kilometers, or 19,144,960 acres) located along the Upper Mississippi River and its tributaries in northwest Illinois, northeast Iowa, southeast Minnesota and southwest Wisconsin. Certified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States. The AVA encompasses an area 50 times larger than the Bordeaux wine regions of France.",
+      "score_breakdown": {
+        "dense": 0.0834244331431042,
+        "graph": 0.08404820087070575,
+        "fact": 0.2451142661412782
+      }
+    },
+    {
+      "node_id": "chunk:alcohol_laws_of_maine_0",
+      "passage_index": 13,
+      "title": "Alcohol laws of Maine",
+      "score": 0.07118053529404486,
+      "text": "Alcohol laws of Maine\nAlcohol may be sold between the hours of 5am and 1am each day of the week. On New Year's Day, alcohol may be sold until 2 a.m.",
+      "score_breakdown": {
+        "dense": 0.08507353736555409,
+        "graph": 0.08130029914330034,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:legal_drinking_age_0",
+      "passage_index": 18,
+      "title": "Legal drinking age",
+      "score": 0.07015826646517183,
+      "text": "Legal drinking age\nThe minimum age to purchase and consume varies, but the most common age is 18 years. However, in North America the age limits varies between 18 and 21 years of age. Throughout the United States the minimum legal age to purchase any alcoholic beverage from a shop, supermarket, liquor store, bar, club or any other licensed premises is 21 years of age. In Canada each province can decide which minimum age limit is to be set to buy or consume alcohol. Most provinces have a minimum age of 19 years, while Alberta, Manitoba and Quebec have set a minimum age of 18 years. In South America all countries have set a minimum purchase age of 18 years, except for Guyana where minors aged 16 or 17 may consume a glass of beer, wine or cider in a restaurant provided they buy a meal, and Paraguay the only country with a minimum legal purchase and drinking age of 20 years.",
+      "score_breakdown": {
+        "dense": 0.0834476476981809,
+        "graph": 0.08087353410390774,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:samira_wiley_0",
+      "passage_index": 12,
+      "title": "Samira Wiley",
+      "score": 0.07008858062605636,
+      "text": "Samira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale. She was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series for the latter role.",
+      "score_breakdown": {
+        "dense": 0.08264151017408589,
+        "graph": 0.08211916676769702,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:claridon_marion_county_ohio_0",
+      "passage_index": 0,
+      "title": "Claridon, Marion County, Ohio",
+      "score": 0.0700693311218953,
+      "text": "Claridon, Marion County, Ohio\nClaridon is an unincorporated community in Marion County, Ohio, United States. Claridon is located on Ohio State Route 95, east of Marion, between Marion and Mt. Gilead. The community is served by River Valley Local School District.",
+      "score_breakdown": {
+        "dense": 0.08265864145923074,
+        "graph": 0.08202359439772797,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:prote_poker_0",
+      "passage_index": 4,
+      "title": "Prote Poker",
+      "score": 0.0698981199023228,
+      "text": "Prote Poker\nProte Poker (born 1952) is a former Utshmau (chief) of the Mushuau Innu First Nation in the Canadian province of Newfoundland and Labrador, who served between 2007 and 2010. He was selected by the Mushuau Innu in May 2007, replacing the incumbent Utshmau Simon Pokue. He championed an alcohol ban in the community, which was approved in 2008. He was defeated by Simeon Tshakapesh when he ran for re-election in March 2010. He and others later launched a lawsuit alleging that the election was tainted, including the use of alcohol to buy votes. Tshakapesh denied the allegations.",
+      "score_breakdown": {
+        "dense": 0.08301095325086331,
+        "graph": 0.08080698538115988,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:challenge_21_0",
+      "passage_index": 6,
+      "title": "Challenge 21",
+      "score": 0.06973061356009919,
+      "text": "Challenge 21\nChallenge 21 and Challenge 25 are part of a scheme in the United Kingdom, introduced by the British Beer and Pub Association (BBPA), with the intention of preventing young people gaining access to age restricted products including cigarettes and alcoholic beverages. Under the scheme, customers attempting to buy age - restricted products are asked to prove their age if in the retailer's opinion they look under 21 or 25, even though the minimum age to buy alcohol and cigarettes in the UK is 18.",
+      "score_breakdown": {
+        "dense": 0.08273035077440727,
+        "graph": 0.08076306878058394,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_the_handmaid_s_tale",
+        "score": 0.10612200382759093,
+        "text": "The Handmaid's Tale",
+        "metadata": {
+          "canonical_name": "The Handmaid's Tale",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": "The Handmaid's Tale"
+        }
+      },
+      {
+        "node_id": "entity:gilead",
+        "score": 0.0735251266911105,
+        "text": "Gilead",
+        "metadata": {
+          "canonical_name": "Gilead",
+          "aliases": [
+            "Gilead"
+          ],
+          "surface_forms": [
+            "Gilead"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:republic_of_gilead",
+        "score": 0.04344969833533151,
+        "text": "Republic of Gilead",
+        "metadata": {
+          "canonical_name": "Republic of Gilead",
+          "aliases": [
+            "ROG",
+            "Republic of Gilead"
+          ],
+          "surface_forms": [
+            "ROG",
+            "Republic of Gilead"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:handmaid_s_tale",
+        "score": 0.030760763864668368,
+        "text": "Handmaid's Tale",
+        "metadata": {
+          "canonical_name": "Handmaid's Tale",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_handmaid_s_tale_tv_series",
+        "score": 0.03028053622845896,
+        "text": "The Handmaid's Tale (TV series)",
+        "metadata": {
+          "canonical_name": "The Handmaid's Tale (TV series)",
+          "aliases": [
+            "HT",
+            "Handmaid's Tale",
+            "Handmaid's Tale series"
+          ],
+          "surface_forms": [
+            "HT",
+            "Handmaid's Tale"
+          ],
+          "title_anchor": "The Handmaid's Tale (TV series)"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+        "score": 0.04071644832321528,
+        "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+        "metadata": {
+          "title": "The Handmaid's Tale",
+          "chunk_id": "chunk:the_handmaid_s_tale_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Handmaid's Tale",
+              "relation": "is set in",
+              "tail": "Republic of Gilead"
+            },
+            {
+              "head": "Republic of Gilead",
+              "relation": "formed within",
+              "tail": "borders of former United States of America"
+            }
+          ],
+          "entities": [
+            "Handmaid's Tale",
+            "Republic of Gilead",
+            "United States of America"
+          ],
+          "entity_ids": [
+            "entity:borders_of_former_united_states_of_america",
+            "entity:republic_of_gilead",
+            "entity:title_anchor_the_handmaid_s_tale",
+            "entity:united_states_of_america"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+        "score": 0.022207970979290902,
+        "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.",
+        "metadata": {
+          "title": "New England",
+          "chunk_id": "chunk:new_england_0",
+          "sentence_index": 1,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Maine",
+              "relation": "constitutes",
+              "tail": "nearly one-half of the total area of New England"
+            },
+            {
+              "head": "Maine",
+              "relation": "is",
+              "tail": "slightly smaller than Indiana"
+            }
+          ],
+          "entities": [
+            "Maine",
+            "New England",
+            "Indiana"
+          ],
+          "entity_ids": [
+            "entity:indiana",
+            "entity:maine",
+            "entity:nearly_one_half_of_the_total_area_of_new_england",
+            "entity:slightly_smaller_than_indiana",
+            "entity:title_anchor_new_england"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:upper_mississippi_river_valley_ava_0_1_certified_by_the_united_states_department_of_the_treasury_s_alcohol_and_tobacco",
+        "score": 0.020688805227130114,
+        "text": "Certified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States.",
+        "metadata": {
+          "title": "Upper Mississippi River Valley AVA",
+          "chunk_id": "chunk:upper_mississippi_river_valley_ava_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Certified",
+              "relation": "related_to",
+              "tail": "United States Department"
+            },
+            {
+              "head": "United States Department",
+              "relation": "related_to",
+              "tail": "Treasury"
+            },
+            {
+              "head": "Treasury",
+              "relation": "related_to",
+              "tail": "Alcohol"
+            }
+          ],
+          "entities": [
+            "United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau"
+          ],
+          "entity_ids": [
+            "entity:alcohol",
+            "entity:certified",
+            "entity:treasury",
+            "entity:united_states_department",
+            "entity:united_states_department_of_the_treasury_s_alcohol_and_tobacco_tax_and_trade_bureau"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:the_handmaid_s_tale_tv_series_0_2_the_littlefield_company_white_oak_pictures_mgm_television_release_original_netwo",
+        "score": 0.020443845992791324,
+        "text": "The Littlefield Company White Oak Pictures MGM Television Release Original network Hulu Original release April 26, 2017 (2017 - 04 - 26) -- present (present) External links Website",
+        "metadata": {
+          "title": "The Handmaid's Tale (TV series)",
+          "chunk_id": "chunk:the_handmaid_s_tale_tv_series_0",
+          "sentence_index": 2,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Littlefield Company",
+              "relation": "produced_by",
+              "tail": "White Oak Pictures"
+            },
+            {
+              "head": "White Oak Pictures",
+              "relation": "distributed_by",
+              "tail": "MGM Television"
+            },
+            {
+              "head": "Littlefield Company",
+              "relation": "original_network",
+              "tail": "Hulu"
+            },
+            {
+              "head": "Littlefield Company",
+              "relation": "original_release_date",
+              "tail": "April 26 2017"
+            }
+          ],
+          "entities": [
+            "Littlefield Company",
+            "White Oak Pictures",
+            "MGM Television",
+            "Hulu"
+          ],
+          "entity_ids": [
+            "entity:april_26_2017",
+            "entity:hulu",
+            "entity:littlefield_company",
+            "entity:mgm_television",
+            "entity:white_oak_pictures"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:the_handmaid_s_tale_0",
+        "score": 0.02101948068668134,
+        "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+        "metadata": {
+          "title": "The Handmaid's Tale",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:borders_of_former_united_states_of_america",
+            "entity:canadian",
+            "entity:canadian_author",
+            "entity:canterbury_tales",
+            "entity:fred",
+            "entity:geoffrey_chaucer",
+            "entity:margaret_atwood",
+            "entity:merchant_s_tale",
+            "entity:new_england",
+            "entity:offred",
+            "entity:parson_s_tale",
+            "entity:republic_of_gilead",
+            "entity:title_anchor_the_handmaid_s_tale",
+            "entity:totalitarian_christian_theonomy",
+            "entity:united_states_government",
+            "entity:united_states_of_america"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_handmaid_s_tale_tv_series_0",
+        "score": 0.013474096423653666,
+        "text": "The Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.",
+        "metadata": {
+          "title": "The Handmaid's Tale (TV series)",
+          "chunk_index": 0,
+          "document_index": 19,
+          "entity_ids": [
+            "entity:adam_taylor_country",
+            "entity:april",
+            "entity:april_26_2017",
+            "entity:brewer_ann_dowd",
+            "entity:bruce_miller",
+            "entity:bruce_miller_based",
+            "entity:bruce_miller_warren_littlefield",
+            "entity:canadian_writer",
+            "entity:created",
+            "entity:daniel_wilson_productions",
+            "entity:elisabeth_moss",
+            "entity:english_no",
+            "entity:external",
+            "entity:fagbenle_max_minghella_samira",
+            "entity:fran_sears_ilene_chaiken",
+            "entity:gilead",
+            "entity:gileadan_commander_fred_waterford",
+            "entity:handmaid",
+            "entity:handmaids",
+            "entity:hulu",
+            "entity:hulu_original",
+            "entity:inc",
+            "entity:joseph_fiennes",
+            "entity:june_osborne",
+            "entity:littlefield_company",
+            "entity:littlefield_company_white",
+            "entity:location",
+            "entity:margaret_atwood",
+            "entity:margaret_atwood_elisabeth_moss",
+            "entity:margaret_atwood_starring_elisabeth",
+            "entity:mgm_television",
+            "entity:moss_joseph_fiennes_yvonne",
+            "entity:no",
+            "entity:oak_pictures",
+            "entity:offred",
+            "entity:ontario_cambridge",
+            "entity:ontario_hamilton",
+            "entity:ontario_running",
+            "entity:ontario_vaughan",
+            "entity:original",
+            "entity:producer",
+            "entity:production",
+            "entity:production_executive",
+            "entity:reed_morano_daniel_wilson",
+            "entity:rise_of_gilead",
+            "entity:second_american_civil_war",
+            "entity:serena_joy",
+            "entity:strahovski_alexis_bledel_madeline",
+            "entity:tale",
+            "entity:tale_genre_drama_dystopian",
+            "entity:television_hulu_originals_release",
+            "entity:title_anchor_the_handmaid_s_tale_tv_series",
+            "entity:toronto",
+            "entity:united_states_original",
+            "entity:waterfords",
+            "entity:website",
+            "entity:white_oak_pictures",
+            "entity:wiley_amanda_brugel_composer",
+            "entity:wiley_composer",
+            "entity:yvonne_strahovski"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:new_england_0",
+        "score": 0.00749712179843791,
+        "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+        "metadata": {
+          "title": "New England",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:england",
+            "entity:indiana",
+            "entity:maine",
+            "entity:nearly_one_half_of_the_total_area_of_new_england",
+            "entity:rhode_island",
+            "entity:slightly_smaller_than_indiana",
+            "entity:state_of_washington",
+            "entity:title_anchor_new_england",
+            "entity:washington"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:upper_mississippi_river_valley_ava_0",
+        "score": 0.006518024895038911,
+        "text": "Upper Mississippi River Valley AVA\nThe Upper Mississippi River Valley AVA is an American Viticultural Area covering 29,914 square miles (77,477 square kilometers, or 19,144,960 acres) located along the Upper Mississippi River and its tributaries in northwest Illinois, northeast Iowa, southeast Minnesota and southwest Wisconsin. Certified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States. The AVA encompasses an area 50 times larger than the Bordeaux wine regions of France.",
+        "metadata": {
+          "title": "Upper Mississippi River Valley AVA",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:50_times_larger_than_bordeaux_wine_regions",
+            "entity:alcohol",
+            "entity:american_viticultural_area",
+            "entity:ava",
+            "entity:bordeaux_wine_regions",
+            "entity:certified",
+            "entity:france",
+            "entity:illinois",
+            "entity:iowa",
+            "entity:minnesota",
+            "entity:treasury",
+            "entity:united_states_department",
+            "entity:united_states_department_of_the_treasury_s_alcohol_and_tobacco_tax_and_trade_bureau",
+            "entity:upper_mississippi_river",
+            "entity:valley",
+            "entity:wisconsin"
+          ]
+        }
+      }
+    ],
+    "qa_context": "The Handmaid's Tale\nThe Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).\n\nThe Handmaid's Tale (TV series)\nThe Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.\n\nNew England\nNew England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.\n\nUpper Mississippi River Valley AVA\nUpper Mississippi River Valley AVA\nThe Upper Mississippi River Valley AVA is an American Viticultural Area covering 29,914 square miles (77,477 square kilometers, or 19,144,960 acres) located along the Upper Mississippi River and its tributaries in northwest Illinois, northeast Iowa, southeast Minnesota and southwest Wisconsin. Certified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States. The AVA encompasses an area 50 times larger than the Bordeaux wine regions of France.\n\nAlcohol laws of Maine\nAlcohol laws of Maine\nAlcohol may be sold between the hours of 5am and 1am each day of the week. On New Year's Day, alcohol may be sold until 2 a.m.\n\nThe Handmaid's Tale\nThe Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.\n\nThe Handmaid's Tale\nThe Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood.\n\nNew England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.\n\nNew England\nMaine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.\n\nSamira Wiley\nSamira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale. She was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series for the latter role.\n\nClaridon, Marion County, Ohio\nClaridon, Marion County, Ohio\nClaridon is an unincorporated community in Marion County, Ohio, United States. Claridon is located on Ohio State Route 95, east of Marion, between Marion and Mt. Gilead. The community is served by River Valley Local School District.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:the_handmaid_s_tale_0",
+        "passage_index": 15,
+        "title": "The Handmaid's Tale",
+        "score": 0.11188123212778285,
+        "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.).",
+        "score_breakdown": {
+          "dense": 0.08423995257447689,
+          "graph": 0.09120974550309575,
+          "fact": 0.2545755637392789
+        }
+      },
+      {
+        "node_id": "chunk:the_handmaid_s_tale_tv_series_0",
+        "passage_index": 19,
+        "title": "The Handmaid's Tale (TV series)",
+        "score": 0.11082043273624301,
+        "text": "The Handmaid's Tale (TV series)\nThe Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.",
+        "score_breakdown": {
+          "dense": 0.08365883488199294,
+          "graph": 0.0912626758142733,
+          "fact": 0.24952847204576603
+        }
+      },
+      {
+        "node_id": "chunk:new_england_0",
+        "passage_index": 16,
+        "title": "New England",
+        "score": 0.10901515566158186,
+        "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.",
+        "score_breakdown": {
+          "dense": 0.08397263113194735,
+          "graph": 0.08404317942653097,
+          "fact": 0.25078169807367684
+        }
+      },
+      {
+        "node_id": "chunk:upper_mississippi_river_valley_ava_0",
+        "passage_index": 17,
+        "title": "Upper Mississippi River Valley AVA",
+        "score": 0.10786503841111078,
+        "text": "Upper Mississippi River Valley AVA\nThe Upper Mississippi River Valley AVA is an American Viticultural Area covering 29,914 square miles (77,477 square kilometers, or 19,144,960 acres) located along the Upper Mississippi River and its tributaries in northwest Illinois, northeast Iowa, southeast Minnesota and southwest Wisconsin. Certified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States. The AVA encompasses an area 50 times larger than the Bordeaux wine regions of France.",
+        "score_breakdown": {
+          "dense": 0.0834244331431042,
+          "graph": 0.08404820087070575,
+          "fact": 0.2451142661412782
+        }
+      },
+      {
+        "node_id": "chunk:alcohol_laws_of_maine_0",
+        "passage_index": 13,
+        "title": "Alcohol laws of Maine",
+        "score": 0.07118053529404486,
+        "text": "Alcohol laws of Maine\nAlcohol may be sold between the hours of 5am and 1am each day of the week. On New Year's Day, alcohol may be sold until 2 a.m.",
+        "score_breakdown": {
+          "dense": 0.08507353736555409,
+          "graph": 0.08130029914330034,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:legal_drinking_age_0",
+        "passage_index": 18,
+        "title": "Legal drinking age",
+        "score": 0.07015826646517183,
+        "text": "Legal drinking age\nThe minimum age to purchase and consume varies, but the most common age is 18 years. However, in North America the age limits varies between 18 and 21 years of age. Throughout the United States the minimum legal age to purchase any alcoholic beverage from a shop, supermarket, liquor store, bar, club or any other licensed premises is 21 years of age. In Canada each province can decide which minimum age limit is to be set to buy or consume alcohol. Most provinces have a minimum age of 19 years, while Alberta, Manitoba and Quebec have set a minimum age of 18 years. In South America all countries have set a minimum purchase age of 18 years, except for Guyana where minors aged 16 or 17 may consume a glass of beer, wine or cider in a restaurant provided they buy a meal, and Paraguay the only country with a minimum legal purchase and drinking age of 20 years.",
+        "score_breakdown": {
+          "dense": 0.0834476476981809,
+          "graph": 0.08087353410390774,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:samira_wiley_0",
+        "passage_index": 12,
+        "title": "Samira Wiley",
+        "score": 0.07008858062605636,
+        "text": "Samira Wiley\nSamira Wiley (born April 15, 1987) is an American actress and model. She is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale. She was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series for the latter role.",
+        "score_breakdown": {
+          "dense": 0.08264151017408589,
+          "graph": 0.08211916676769702,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:claridon_marion_county_ohio_0",
+        "passage_index": 0,
+        "title": "Claridon, Marion County, Ohio",
+        "score": 0.0700693311218953,
+        "text": "Claridon, Marion County, Ohio\nClaridon is an unincorporated community in Marion County, Ohio, United States. Claridon is located on Ohio State Route 95, east of Marion, between Marion and Mt. Gilead. The community is served by River Valley Local School District.",
+        "score_breakdown": {
+          "dense": 0.08265864145923074,
+          "graph": 0.08202359439772797,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:prote_poker_0",
+        "passage_index": 4,
+        "title": "Prote Poker",
+        "score": 0.0698981199023228,
+        "text": "Prote Poker\nProte Poker (born 1952) is a former Utshmau (chief) of the Mushuau Innu First Nation in the Canadian province of Newfoundland and Labrador, who served between 2007 and 2010. He was selected by the Mushuau Innu in May 2007, replacing the incumbent Utshmau Simon Pokue. He championed an alcohol ban in the community, which was approved in 2008. He was defeated by Simeon Tshakapesh when he ran for re-election in March 2010. He and others later launched a lawsuit alleging that the election was tainted, including the use of alcohol to buy votes. Tshakapesh denied the allegations.",
+        "score_breakdown": {
+          "dense": 0.08301095325086331,
+          "graph": 0.08080698538115988,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:challenge_21_0",
+        "passage_index": 6,
+        "title": "Challenge 21",
+        "score": 0.06973061356009919,
+        "text": "Challenge 21\nChallenge 21 and Challenge 25 are part of a scheme in the United Kingdom, introduced by the British Beer and Pub Association (BBPA), with the intention of preventing young people gaining access to age restricted products including cigarettes and alcoholic beverages. Under the scheme, customers attempting to buy age - restricted products are asked to prove their age if in the retailer's opinion they look under 21 or 25, even though the minimum age to buy alcohol and cigarettes in the UK is 18.",
+        "score_breakdown": {
+          "dense": 0.08273035077440727,
+          "graph": 0.08076306878058394,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "In which region is the fictional Gilead located in The Handmaid's Tale?",
+        "resolved_sub_question": "In which region is the fictional Gilead located in The Handmaid's Tale?",
+        "sentence_id": "sentence:the_handmaid_s_tale_0_0_the_handmaid_s_tale_is_set_in_the_republic_of_gilead_a_theonomic_military_dicta",
+        "sentence": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.",
+        "score": 0.5566677993507385,
+        "source_title": "The Handmaid's Tale",
+        "hop_answer": "New England",
+        "hop_thought": "The fictional Gilead is set within the borders of what was formerly the United States, specifically in a near-future New England.",
+        "hop_raw_response": "The fictional Gilead is set within the borders of what was formerly the United States, specifically in a near-future New England.\nAnswer: New England",
+        "evidence_passages": [
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America."
+          },
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale\nThe Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood. Set in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The novel's title echoes the component parts of Geoffrey Chaucer's The Canterbury Tales, which is a series of connected stories (``The Merchant's Tale '',`` The Parson's Tale'', etc.)."
+          },
+          {
+            "title": "The Handmaid's Tale",
+            "text": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the largest state in this region?",
+        "resolved_sub_question": "What is the largest state in this region? Context: New England.",
+        "sentence_id": "sentence:new_england_0_0_the_states_of_new_england_have_a_combined_area_of_71_991_8_square_miles_186_458",
+        "sentence": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.",
+        "score": 0.5613071200392284,
+        "source_title": "New England",
+        "hop_answer": "Maine",
+        "hop_thought": "The context indicates that Maine constitutes nearly one-half of the total area of New England, implying it is the largest state in the region.",
+        "hop_raw_response": "The context indicates that Maine constitutes nearly one-half of the total area of New England, implying it is the largest state in the region.\nAnswer: Maine",
+        "evidence_passages": [
+          {
+            "title": "New England",
+            "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+          },
+          {
+            "title": "New England",
+            "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+          },
+          {
+            "title": "New England",
+            "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+          }
+        ]
+      },
+      {
+        "sub_question": "What time do alcohol sales begin in this state?",
+        "resolved_sub_question": "What time do alcohol sales begin in this state? Context: New England; Maine.",
+        "sentence_id": "sentence:new_england_0_1_maine_alone_constitutes_nearly_one_half_of_the_total_area_of_new_england_yet",
+        "sentence": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.",
+        "score": 0.41147272106222677,
+        "source_title": "New England",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about the time alcohol sales begin in Maine or any other state in New England.",
+        "hop_raw_response": "The context provided does not contain information about the time alcohol sales begin in Maine or any other state in New England.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "New England",
+            "text": "Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana."
+          },
+          {
+            "title": "New England",
+            "text": "New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England. Maine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island."
+          },
+          {
+            "title": "New England",
+            "text": "The states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. In which region is the fictional Gilead located in The Handmaid's Tale? => New England (source: The Handmaid's Tale)\n2. What is the largest state in this region? => Maine (source: New England)\n3. What time do alcohol sales begin in this state? (source: New England)\n\nFact hints:\n- Maine constitutes nearly one-half of the total area of New England\n- Handmaid's Tale is set in Republic of Gilead\n\nWikipedia Title: New England\nMaine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana.\n\nWikipedia Title: New England\nMaine alone constitutes nearly one - half of the total area of New England, yet is only the 39th - largest state, slightly smaller than Indiana. The remaining states are among the smallest in the U.S., including the smallest state -- Rhode Island.\n\nWikipedia Title: The Handmaid's Tale\nSet in a near - future New England, in a totalitarian, Christian theonomy that has overthrown the United States government, the novel explores themes of women in subjugation and the various means by which they gain individualism and independence. The Handmaid's Tale The Handmaid's Tale is a 1985 dystopian novel by Canadian author Margaret Atwood.\n\nWikipedia Title: The Handmaid's Tale\nThe Handmaid's Tale is set in the Republic of Gilead, a theonomic military dictatorship formed within the borders of what was formerly the United States of America.\n\nWikipedia Title: New England\nThe states of New England have a combined area of 71,991.8 square miles (186,458 km), making the region slightly larger than the state of Washington and larger than England.\n\nWikipedia Title: The Handmaid's Tale\nThe Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood.\n\nWikipedia Title: The Handmaid's Tale (TV series)\nThe Handmaid's Tale (TV series) The Handmaid's Tale is an American television series created by Bruce Miller based on the 1985 novel of the same name by Canadian writer Margaret Atwood. It was ordered by streaming service Hulu with a straight - to - series order of 10 episodes, with the production beginning in late 2016.\n\nWikipedia Title: Samira Wiley\nShe is best known for playing Poussey Washington in the Netflix series Orange Is the New Black and for playing Moira in the Hulu series The Handmaid's Tale. She was nominated for the Primetime Emmy Award for Outstanding Supporting Actress in a Drama Series for the latter role.\n\nWikipedia Title: Alcohol laws of Maine\nAlcohol laws of Maine Alcohol may be sold between the hours of 5am and 1am each day of the week. On New Year's Day, alcohol may be sold until 2 a.m.\n\nWikipedia Title: Claridon, Marion County, Ohio\nThe community is served by River Valley Local School District. Claridon is located on Ohio State Route 95, east of Marion, between Marion and Mt.\n\nWikipedia Title: Upper Mississippi River Valley AVA\nCertified by the United States Department of the Treasury's Alcohol and Tobacco Tax and Trade Bureau on July 22, 2009, it is the largest AVA in the United States. The AVA encompasses an area 50 times larger than the Bordeaux wine regions of France.\n\nQuestion: What time do alcohol sales begin in the largest state of the region where the fictional Gilead is located in The Handmaid's Tale?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The fictional Gilead in The Handmaid's Tale is located in New England. The largest state in New England is Maine. According to the alcohol laws of Maine, alcohol sales begin at 5 am.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The fictional Gilead in The Handmaid's Tale is located in New England. The largest state in New England is Maine. According to the alcohol laws of Maine, alcohol sales begin at 5 am.\nAnswer: 5 am"
+}

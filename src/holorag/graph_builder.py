@@ -1,5 +1,6 @@
 import logging
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Tuple
 
 import networkx as nx
@@ -62,6 +63,7 @@ class HierarchicalGraphBuilder:
 
                 previous_sentence_id = None
                 sentences = self.sentence_segmenter.split(chunk_value)
+                sentence_extractions = self._extract_sentences_parallel(sentences)
                 for sentence_index, sentence in enumerate(sentences):
                     sentence_id = stable_node_id("sentence", title, str(chunk_index), str(sentence_index), sentence[:80])
                     graph.add_node(
@@ -83,7 +85,7 @@ class HierarchicalGraphBuilder:
                         self._merge_edge(graph, sentence_id, previous_sentence_id, 0.95, "sentence_sequence")
                     previous_sentence_id = sentence_id
 
-                    extraction = self.triple_extractor.extract(sentence)
+                    extraction = sentence_extractions[sentence_index]
                     graph.nodes[sentence_id]["metadata"]["triples"] = extraction["triples"]
                     graph.nodes[sentence_id]["metadata"]["entities"] = extraction["entities"]
                     for triple in extraction["triples"]:
@@ -155,6 +157,15 @@ class HierarchicalGraphBuilder:
             "facts": fact_payloads,
             "documents": documents,
         }
+
+    def _extract_sentences_parallel(self, sentences: List[str]) -> List[Dict[str, List]]:
+        if not sentences:
+            return []
+        if len(sentences) == 1:
+            return [self.triple_extractor.extract(sentences[0])]
+        max_workers = min(8, len(sentences))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            return list(executor.map(self.triple_extractor.extract, sentences))
 
     def _add_entity_node(self, graph: nx.DiGraph, entity_name: str, title: str = "") -> str:
         normalized_entity_name = clean_entity_text(entity_name)

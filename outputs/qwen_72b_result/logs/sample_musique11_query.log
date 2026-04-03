@@ -1,0 +1,978 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 16:43:29,895 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.65it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.59it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.55it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.32it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.98it/s]
+2026-04-03 16:43:44,088 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:43:44,914 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:43:46,456 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 16:43:48,115 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:00,244 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:02,995 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:07,471 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:10,775 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:14,005 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:44:16,849 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "Who is the spouse of the Green performer?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Green performer"
+  ],
+  "raw_query_entities": [
+    "Green performer"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Green performer",
+      "node_id": "entity:green_party",
+      "resolved_text": "Green Party",
+      "score": 0.79,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.775,
+      "score_margin": 0.0,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who is the Green performer?",
+    "Who is the spouse of this person?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:nice_france",
+      "score": 0.26046693197991033,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:very_green",
+      "score": 0.24617944548742657,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+      "score": 0.23563149183379123,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_mok_kwai_lan",
+      "score": 0.23548420024966543,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:wong_fei_hung",
+      "score": 0.23548420024966543,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:green",
+      "score": 0.2055232113815127,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_green_steve_hillage_album",
+      "score": 0.20551365216034093,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:martin",
+      "score": 0.2054905332452043,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:steve_hillage",
+      "score": 0.205482794983145,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_miquette_giraudy",
+      "score": 0.19713955264560257,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:miquette_giraudy_0",
+      "score": 0.14128089561465804,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:work_in_gong",
+      "score": 0.12326733172715769,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:miquette_giraudy_born_in_nice_france_sentence_miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_",
+      "text": "Miquette Giraudy born in Nice France",
+      "head_id": "entity:title_anchor_miquette_giraudy",
+      "tail_id": "entity:nice_france",
+      "sentence_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+      "chunk_id": "chunk:miquette_giraudy_0",
+      "document_index": 5,
+      "score": 0.2582631355729227
+    },
+    {
+      "fact_id": "fact:mok_kwai_lan_spouse_of_wong_fei_hung_sentence_mok_kwai_lan_0_0_mok_kwai_lan_october_15_1892_november_3_1982_was_the_four",
+      "text": "Mok Kwai-lan spouse_of Wong Fei-hung",
+      "head_id": "entity:title_anchor_mok_kwai_lan",
+      "tail_id": "entity:wong_fei_hung",
+      "sentence_id": "sentence:mok_kwai_lan_0_0_mok_kwai_lan_october_15_1892_november_3_1982_was_the_fourth_spouse_of_li",
+      "chunk_id": "chunk:mok_kwai_lan_0",
+      "document_index": 19,
+      "score": 0.23328090846272906
+    },
+    {
+      "fact_id": "fact:martin_related_to_green_sentence_star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_a",
+      "text": "Martin related_to Green",
+      "head_id": "entity:martin",
+      "tail_id": "entity:green",
+      "sentence_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
+      "chunk_id": "chunk:star_trek_discovery_0",
+      "document_index": 16,
+      "score": 0.20328783072757722
+    },
+    {
+      "fact_id": "fact:green_is_the_fourth_studio_album_by_steve_hillage_sentence_green_steve_hillage_album_0_0_green_is_the_fourth_studio_albu",
+      "text": "Green is the fourth studio album by Steve Hillage",
+      "head_id": "entity:title_anchor_green_steve_hillage_album",
+      "tail_id": "entity:steve_hillage",
+      "sentence_id": "sentence:green_steve_hillage_album_0_0_green_is_the_fourth_studio_album_by_british_progressive_rock_musician_steve_hill",
+      "chunk_id": "chunk:green_steve_hillage_album_0",
+      "document_index": 10,
+      "score": 0.20328338368738127
+    },
+    {
+      "fact_id": "fact:miquette_giraudy_partner_of_steve_hillage_sentence_miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_franc",
+      "text": "Miquette Giraudy partner of Steve Hillage",
+      "head_id": "entity:title_anchor_miquette_giraudy",
+      "tail_id": "entity:steve_hillage",
+      "sentence_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+      "chunk_id": "chunk:miquette_giraudy_0",
+      "document_index": 5,
+      "score": 0.20327680141576432
+    },
+    {
+      "fact_id": "fact:miquette_giraudy_best_known_for_work_in_gong_sentence_miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_fr",
+      "text": "Miquette Giraudy best known for work in Gong",
+      "head_id": "entity:title_anchor_miquette_giraudy",
+      "tail_id": "entity:work_in_gong",
+      "sentence_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+      "chunk_id": "chunk:miquette_giraudy_0",
+      "document_index": 5,
+      "score": 0.12326733172715769
+    }
+  ],
+  "bridge_entities": [],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the Green performer?",
+      "resolved_sub_question": "Who is the Green performer?",
+      "sentence_id": "sentence:list_of_show_business_families_0_0_actress_director_singer_phylicia_rash_d_is_the_older_sister_of_performer_deb",
+      "sentence": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon.",
+      "score": 0.4574179455165863,
+      "source_title": "List of show business families",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.",
+      "hop_raw_response": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "List of show business families",
+          "text": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the spouse of this person?",
+      "resolved_sub_question": "Who is the spouse of this person?",
+      "sentence_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
+      "sentence": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.",
+      "score": 0.30787025146245955,
+      "source_title": "Star Trek: Discovery",
+      "hop_answer": "Unknown",
+      "hop_thought": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.",
+      "hop_raw_response": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Star Trek: Discovery",
+          "text": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+      "score": 0.09025743218996737,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:mok_kwai_lan_0_0_mok_kwai_lan_october_15_1892_november_3_1982_was_the_fourth_spouse_of_li",
+      "score": 0.07451363889986824,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_miquette_giraudy",
+      "score": 0.04988310392613172,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_mok_kwai_lan",
+      "score": 0.041423604949868166,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
+      "score": 0.034503421101197945,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:wong_fei_hung",
+      "score": 0.033133624416208755,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:steve_hillage",
+      "score": 0.03289775562952048,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:green_steve_hillage_album_0_0_green_is_the_fourth_studio_album_by_british_progressive_rock_musician_steve_hill",
+      "score": 0.03211303343266279,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_green_steve_hillage_album",
+      "score": 0.027385727971088257,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:nice_france",
+      "score": 0.025650947701046426,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:green_steve_hillage_album_0_1_written_in_spring_1977_at_the_same_time_as_his_previous_album_the_funk_inflecte",
+      "score": 0.02522990441895176,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:green",
+      "score": 0.023603609993404807,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:miquette_giraudy_0_1_she_and_hillage_currently_form_the_core_of_the_ambient_band_system_7",
+      "score": 0.021840353565021328,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:martin",
+      "score": 0.02119234422539603,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:green_steve_hillage_album_0_2_however_this_plan_was_dropped_and_after_a_us_tour_in_late_1977_green_was_rec",
+      "score": 0.019865092729553585,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:miquette_giraudy_0",
+      "score": 0.019208952829203665,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:work_in_gong",
+      "score": 0.014921658245528295,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:very_green",
+      "score": 0.014680155659597677,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:9_february_1953",
+      "score": 0.013866841046636153,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:star_trek_discovery_0",
+      "score": 0.01289220006007672,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:miquette_giraudy_0",
+      "passage_index": 5,
+      "title": "Miquette Giraudy",
+      "score": 0.09104837993826417,
+      "text": "Miquette Giraudy\nMiquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage. She and Hillage currently form the core of the ambient band System 7. In addition to her performances in music, she has also worked as an actress, film editor and writer. In each role, she has used different stage names.",
+      "score_breakdown": {
+        "dense": 0.058824103653905585,
+        "graph": 0.06639600359344504,
+        "fact": 0.25850881233721723
+      }
+    },
+    {
+      "node_id": "chunk:mok_kwai_lan_0",
+      "passage_index": 19,
+      "title": "Mok Kwai-lan",
+      "score": 0.08908006121817492,
+      "text": "Mok Kwai-lan\nMok Kwai-lan (; October 15, 1892 – November 3, 1982) was the fourth spouse of Lingnan martial arts grandmaster Wong Fei-hung.",
+      "score_breakdown": {
+        "dense": 0.05906752970202863,
+        "graph": 0.06257772223839299,
+        "fact": 0.2521306880702752
+      }
+    },
+    {
+      "node_id": "chunk:green_steve_hillage_album_0",
+      "passage_index": 10,
+      "title": "Green (Steve Hillage album)",
+      "score": 0.0879097473845514,
+      "text": "Green (Steve Hillage album)\nGreen is the fourth studio album by British progressive rock musician Steve Hillage. Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\"). However, this plan was dropped and after a US tour in late 1977, \"Green\" was recorded alone, primarily in Dorking, Surrey, and in London.",
+      "score_breakdown": {
+        "dense": 0.05931509641258258,
+        "graph": 0.06194829498636958,
+        "fact": 0.24467970574480077
+      }
+    },
+    {
+      "node_id": "chunk:star_trek_discovery_0",
+      "passage_index": 16,
+      "title": "Star Trek: Discovery",
+      "score": 0.08717875037828857,
+      "text": "Star Trek: Discovery\nStar Trek: Discovery premiered on September 19, 2017, at ArcLight Hollywood, before debuting on CBS and CBS All Access on September 24. The rest of the 15 - episode first season was streamed weekly on All Access. The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance. A second season was ordered in October 2017.",
+      "score_breakdown": {
+        "dense": 0.058370732933364144,
+        "graph": 0.061242427292607565,
+        "fact": 0.24468079384770675
+      }
+    },
+    {
+      "node_id": "chunk:green_0",
+      "passage_index": 6,
+      "title": "Green",
+      "score": 0.05016984362344391,
+      "text": "Green\nAnimals typically use the color green as camouflage, blending in with the chlorophyll green of the surrounding environment. Green animals include, especially, amphibians, reptiles, and some fish, birds and insects. Most fish, reptiles, amphibians, and birds appear green because of a reflection of blue light coming through an over-layer of yellow pigment. Perception of color can also be affected by the surrounding environment. For example, broadleaf forests typically have a yellow-green light about them as the trees filter the light. Turacoverdin is one chemical which can cause a green hue in birds, especially. Invertebrates such as insects or mollusks often display green colors because of porphyrin pigments, sometimes caused by diet. This can causes their feces to look green as well. Other chemicals which generally contribute to greenness among organisms are flavins (lychochromes) and hemanovadin. Humans have imitated this by wearing green clothing as a camouflage in military and other fields. Substances that may impart a greenish hue to one's skin include biliverdin, the green pigment in bile, and ceruloplasmin, a protein that carries copper ions in chelation.",
+      "score_breakdown": {
+        "dense": 0.058985558996346894,
+        "graph": 0.05909262058484372,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:green_party_of_the_united_states_0",
+      "passage_index": 13,
+      "title": "Green Party of the United States",
+      "score": 0.049797346058078604,
+      "text": "Green Party of the United States\nGreen Party of the United States Chairperson Green National Committee Founded April 2001; 17 years ago (2001 - 04) Split from Greens / Green Party USA Preceded by Citizens Party Association of State Green Parties Headquarters 6411 Orchard Avenue, Suite 101, Takoma Park, Maryland 20912 Newspaper Green Pages Youth wing Young Greens Women's wing National Women's Caucus LGBT wing Lavender Greens Latinx wing Latinx Caucus Black wing Black Caucus Ideology Anti-capitalism Eco-socialism Green politics Political position Left - wing International affiliation Global Greens Continental affiliation Federation of the Green Parties of the Americas Colors Green Seats in the Senate 0 / 100 Seats in the House 0 / 435 Governorships 0 / 50 State Upper House Seats 0 / 1,972 State Lower House Seats 2 / 5,411 Territorial Governorships 0 / 6 Territorial Upper Chamber Seats 0 / 97 Territorial Lower Chamber Seats 0 / 91 Other elected offices 156 (2018) Website gp.org Politics of United States Political parties Elections",
+      "score_breakdown": {
+        "dense": 0.05910060918588888,
+        "graph": 0.0576400366861324,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:grant_s_first_stand_0",
+      "passage_index": 0,
+      "title": "Grant's First Stand",
+      "score": 0.04969482813966415,
+      "text": "Grant's First Stand\nGrant's First Stand is the debut album by American jazz guitarist Grant Green featuring performances by Green recorded and released on the Blue Note label in 1961. Earlier recordings made by Green for Blue Note were released as \"First Session\" in 2001.",
+      "score_breakdown": {
+        "dense": 0.058628019922376026,
+        "graph": 0.05816472394119111,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:little_green_song_0",
+      "passage_index": 11,
+      "title": "Little Green (song)",
+      "score": 0.049685567584661486,
+      "text": "Little Green (song)\n\"Little Green\" is a song composed and performed by Joni Mitchell. It is the third track on her 1971 album \"Blue\".",
+      "score_breakdown": {
+        "dense": 0.05909070608245764,
+        "graph": 0.057285597464365956,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_show_business_families_0",
+      "passage_index": 1,
+      "title": "List of show business families",
+      "score": 0.049620996501476236,
+      "text": "List of show business families\nActress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon. Phylicia Rashād is the former spouse of both Victor Willis, former lead singer of the group Village People, and former NFL football player turned sportscaster, Ahmad Rashād. Phylicia and Ahmad Rashād are the parents of actress Condola Rashād.",
+      "score_breakdown": {
+        "dense": 0.05898175752707284,
+        "graph": 0.05727009953862056,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:green_lake_chisago_city_minnesota_0",
+      "passage_index": 3,
+      "title": "Green Lake (Chisago City, Minnesota)",
+      "score": 0.04958720494131051,
+      "text": "Green Lake (Chisago City, Minnesota)\nGreen Lake is a lake in Chisago City, Minnesota, United States. This lake is sometimes also referred to as \"Big Green Lake\" because it is connected to Little Green Lake by a channel. Green Lake was named from the fact its waters are green from the high algae content.",
+      "score_breakdown": {
+        "dense": 0.058925764507876476,
+        "graph": 0.05726011487326152,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_miquette_giraudy",
+        "score": 0.04988310392613172,
+        "text": "Miquette Giraudy",
+        "metadata": {
+          "canonical_name": "Miquette Giraudy",
+          "aliases": [
+            "MG",
+            "Miquette Giraudy"
+          ],
+          "surface_forms": [
+            "MG",
+            "Miquette Giraudy"
+          ],
+          "title_anchor": "Miquette Giraudy"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_mok_kwai_lan",
+        "score": 0.041423604949868166,
+        "text": "Mok Kwai-lan",
+        "metadata": {
+          "canonical_name": "Mok Kwai-lan",
+          "aliases": [
+            "MK",
+            "Mok Kwai-lan"
+          ],
+          "surface_forms": [
+            "MK",
+            "Mok Kwai-lan"
+          ],
+          "title_anchor": "Mok Kwai-lan"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:miquette_giraudy_0_0_miquette_giraudy_born_9_february_1953_nice_france_is_a_keyboard_player_and_v",
+        "score": 0.09025743218996737,
+        "text": "Miquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage.",
+        "metadata": {
+          "title": "Miquette Giraudy",
+          "chunk_id": "chunk:miquette_giraudy_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Miquette Giraudy",
+              "relation": "born on",
+              "tail": "9 February 1953"
+            },
+            {
+              "head": "Miquette Giraudy",
+              "relation": "born in",
+              "tail": "Nice France"
+            },
+            {
+              "head": "Miquette Giraudy",
+              "relation": "best known for",
+              "tail": "work in Gong"
+            },
+            {
+              "head": "Miquette Giraudy",
+              "relation": "partner of",
+              "tail": "Steve Hillage"
+            }
+          ],
+          "entities": [
+            "Miquette Giraudy",
+            "9 February 1953",
+            "Nice France",
+            "Gong",
+            "Steve Hillage"
+          ],
+          "entity_ids": [
+            "entity:9_february_1953",
+            "entity:gong",
+            "entity:nice_france",
+            "entity:steve_hillage",
+            "entity:title_anchor_miquette_giraudy",
+            "entity:work_in_gong"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:mok_kwai_lan_0_0_mok_kwai_lan_october_15_1892_november_3_1982_was_the_fourth_spouse_of_li",
+        "score": 0.07451363889986824,
+        "text": "Mok Kwai-lan (; October 15, 1892 – November 3, 1982) was the fourth spouse of Lingnan martial arts grandmaster Wong Fei-hung.",
+        "metadata": {
+          "title": "Mok Kwai-lan",
+          "chunk_id": "chunk:mok_kwai_lan_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Mok Kwai-lan",
+              "relation": "birth_date",
+              "tail": "October 15 1892"
+            },
+            {
+              "head": "Mok Kwai-lan",
+              "relation": "death_date",
+              "tail": "November 3 1982"
+            },
+            {
+              "head": "Mok Kwai-lan",
+              "relation": "spouse_of",
+              "tail": "Wong Fei-hung"
+            },
+            {
+              "head": "Wong Fei-hung",
+              "relation": "occupation",
+              "tail": "Lingnan martial arts grandmaster"
+            }
+          ],
+          "entities": [
+            "Mok Kwai-lan",
+            "Wong Fei-hung",
+            "Lingnan"
+          ],
+          "entity_ids": [
+            "entity:lingnan",
+            "entity:lingnan_martial_arts_grandmaster",
+            "entity:november_3_1982",
+            "entity:october_15_1892",
+            "entity:title_anchor_mok_kwai_lan",
+            "entity:wong_fei_hung"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
+        "score": 0.034503421101197945,
+        "text": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.",
+        "metadata": {
+          "title": "Star Trek: Discovery",
+          "chunk_id": "chunk:star_trek_discovery_0",
+          "sentence_index": 2,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "All Access",
+              "relation": "related_to",
+              "tail": "Martin"
+            },
+            {
+              "head": "Martin",
+              "relation": "related_to",
+              "tail": "Green"
+            }
+          ],
+          "entities": [
+            "All Access",
+            "Martin Green"
+          ],
+          "entity_ids": [
+            "entity:all_access",
+            "entity:green",
+            "entity:martin",
+            "entity:martin_green"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:green_steve_hillage_album_0_0_green_is_the_fourth_studio_album_by_british_progressive_rock_musician_steve_hill",
+        "score": 0.03211303343266279,
+        "text": "Green is the fourth studio album by British progressive rock musician Steve Hillage.",
+        "metadata": {
+          "title": "Green (Steve Hillage album)",
+          "chunk_id": "chunk:green_steve_hillage_album_0",
+          "sentence_index": 0,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Green",
+              "relation": "is the fourth studio album by",
+              "tail": "Steve Hillage"
+            },
+            {
+              "head": "Steve Hillage",
+              "relation": "is a",
+              "tail": "British progressive rock musician"
+            }
+          ],
+          "entities": [
+            "Green",
+            "Steve Hillage",
+            "British progressive rock musician"
+          ],
+          "entity_ids": [
+            "entity:british_progressive_rock_musician",
+            "entity:steve_hillage",
+            "entity:title_anchor_green_steve_hillage_album"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:green_steve_hillage_album_0_1_written_in_spring_1977_at_the_same_time_as_his_previous_album_the_funk_inflecte",
+        "score": 0.02522990441895176,
+        "text": "Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\").",
+        "metadata": {
+          "title": "Green (Steve Hillage album)",
+          "chunk_id": "chunk:green_steve_hillage_album_0",
+          "sentence_index": 1,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Green",
+              "relation": "originally going to be released as",
+              "tail": "Green Album"
+            },
+            {
+              "head": "Green Album",
+              "relation": "intended as companion to",
+              "tail": "Red Album"
+            },
+            {
+              "head": "Red Album",
+              "relation": "originally intended name for",
+              "tail": "Motivation Radio"
+            }
+          ],
+          "entities": [
+            "Green",
+            "Green Album",
+            "Red Album",
+            "Motivation Radio"
+          ],
+          "entity_ids": [
+            "entity:green_album",
+            "entity:motivation_radio",
+            "entity:red_album",
+            "entity:title_anchor_green_steve_hillage_album"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:miquette_giraudy_0_1_she_and_hillage_currently_form_the_core_of_the_ambient_band_system_7",
+        "score": 0.021840353565021328,
+        "text": "She and Hillage currently form the core of the ambient band System 7.",
+        "metadata": {
+          "title": "Miquette Giraudy",
+          "chunk_id": "chunk:miquette_giraudy_0",
+          "sentence_index": 1,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Hillage",
+              "relation": "form core of",
+              "tail": "System 7"
+            }
+          ],
+          "entities": [
+            "Hillage",
+            "System 7"
+          ],
+          "entity_ids": [
+            "entity:hillage",
+            "entity:system_7"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:green_steve_hillage_album_0_2_however_this_plan_was_dropped_and_after_a_us_tour_in_late_1977_green_was_rec",
+        "score": 0.019865092729553585,
+        "text": "However, this plan was dropped and after a US tour in late 1977, \"Green\" was recorded alone, primarily in Dorking, Surrey, and in London.",
+        "metadata": {
+          "title": "Green (Steve Hillage album)",
+          "chunk_id": "chunk:green_steve_hillage_album_0",
+          "sentence_index": 2,
+          "document_index": 10,
+          "triples": [
+            {
+              "head": "Green",
+              "relation": "was recorded primarily in",
+              "tail": "Dorking Surrey"
+            },
+            {
+              "head": "Green",
+              "relation": "was recorded primarily in",
+              "tail": "London"
+            }
+          ],
+          "entities": [
+            "Green",
+            "Dorking Surrey",
+            "London"
+          ],
+          "entity_ids": [
+            "entity:dorking_surrey",
+            "entity:london",
+            "entity:title_anchor_green_steve_hillage_album"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:miquette_giraudy_0",
+        "score": 0.019208952829203665,
+        "text": "Miquette Giraudy\nMiquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage. She and Hillage currently form the core of the ambient band System 7. In addition to her performances in music, she has also worked as an actress, film editor and writer. In each role, she has used different stage names.",
+        "metadata": {
+          "title": "Miquette Giraudy",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:9_february_1953",
+            "entity:gong",
+            "entity:hillage",
+            "entity:nice_france",
+            "entity:steve_hillage",
+            "entity:system_7",
+            "entity:title_anchor_miquette_giraudy",
+            "entity:work_in_gong"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:star_trek_discovery_0",
+        "score": 0.01289220006007672,
+        "text": "Star Trek: Discovery\nStar Trek: Discovery premiered on September 19, 2017, at ArcLight Hollywood, before debuting on CBS and CBS All Access on September 24. The rest of the 15 - episode first season was streamed weekly on All Access. The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance. A second season was ordered in October 2017.",
+        "metadata": {
+          "title": "Star Trek: Discovery",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:all_access",
+            "entity:arclight_hollywood",
+            "entity:cbs",
+            "entity:cbs_all_access",
+            "entity:cbs_and_all_access",
+            "entity:cbs_and_cbs_all_access",
+            "entity:green",
+            "entity:martin",
+            "entity:martin_green",
+            "entity:october",
+            "entity:september_19_2017",
+            "entity:september_24",
+            "entity:title_anchor_star_trek_discovery"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Star Trek: Discovery\nThe series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.\n\nList of show business families\nList of show business families Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon. Phylicia Rashād is the former spouse of both Victor Willis, former lead singer of the group Village People, and former NFL football player turned sportscaster, Ahmad Rashād.\n\nGreen (Steve Hillage album)\nGreen (Steve Hillage album) Green is the fourth studio album by British progressive rock musician Steve Hillage. Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\").",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:miquette_giraudy_0",
+        "passage_index": 5,
+        "title": "Miquette Giraudy",
+        "score": 0.09104837993826417,
+        "text": "Miquette Giraudy\nMiquette Giraudy (born 9 February 1953, Nice, France) is a keyboard player and vocalist, best known for her work in Gong and with her partner Steve Hillage. She and Hillage currently form the core of the ambient band System 7. In addition to her performances in music, she has also worked as an actress, film editor and writer. In each role, she has used different stage names.",
+        "score_breakdown": {
+          "dense": 0.058824103653905585,
+          "graph": 0.06639600359344504,
+          "fact": 0.25850881233721723
+        }
+      },
+      {
+        "node_id": "chunk:mok_kwai_lan_0",
+        "passage_index": 19,
+        "title": "Mok Kwai-lan",
+        "score": 0.08908006121817492,
+        "text": "Mok Kwai-lan\nMok Kwai-lan (; October 15, 1892 – November 3, 1982) was the fourth spouse of Lingnan martial arts grandmaster Wong Fei-hung.",
+        "score_breakdown": {
+          "dense": 0.05906752970202863,
+          "graph": 0.06257772223839299,
+          "fact": 0.2521306880702752
+        }
+      },
+      {
+        "node_id": "chunk:green_steve_hillage_album_0",
+        "passage_index": 10,
+        "title": "Green (Steve Hillage album)",
+        "score": 0.0879097473845514,
+        "text": "Green (Steve Hillage album)\nGreen is the fourth studio album by British progressive rock musician Steve Hillage. Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\"). However, this plan was dropped and after a US tour in late 1977, \"Green\" was recorded alone, primarily in Dorking, Surrey, and in London.",
+        "score_breakdown": {
+          "dense": 0.05931509641258258,
+          "graph": 0.06194829498636958,
+          "fact": 0.24467970574480077
+        }
+      },
+      {
+        "node_id": "chunk:star_trek_discovery_0",
+        "passage_index": 16,
+        "title": "Star Trek: Discovery",
+        "score": 0.08717875037828857,
+        "text": "Star Trek: Discovery\nStar Trek: Discovery premiered on September 19, 2017, at ArcLight Hollywood, before debuting on CBS and CBS All Access on September 24. The rest of the 15 - episode first season was streamed weekly on All Access. The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance. A second season was ordered in October 2017.",
+        "score_breakdown": {
+          "dense": 0.058370732933364144,
+          "graph": 0.061242427292607565,
+          "fact": 0.24468079384770675
+        }
+      },
+      {
+        "node_id": "chunk:green_0",
+        "passage_index": 6,
+        "title": "Green",
+        "score": 0.05016984362344391,
+        "text": "Green\nAnimals typically use the color green as camouflage, blending in with the chlorophyll green of the surrounding environment. Green animals include, especially, amphibians, reptiles, and some fish, birds and insects. Most fish, reptiles, amphibians, and birds appear green because of a reflection of blue light coming through an over-layer of yellow pigment. Perception of color can also be affected by the surrounding environment. For example, broadleaf forests typically have a yellow-green light about them as the trees filter the light. Turacoverdin is one chemical which can cause a green hue in birds, especially. Invertebrates such as insects or mollusks often display green colors because of porphyrin pigments, sometimes caused by diet. This can causes their feces to look green as well. Other chemicals which generally contribute to greenness among organisms are flavins (lychochromes) and hemanovadin. Humans have imitated this by wearing green clothing as a camouflage in military and other fields. Substances that may impart a greenish hue to one's skin include biliverdin, the green pigment in bile, and ceruloplasmin, a protein that carries copper ions in chelation.",
+        "score_breakdown": {
+          "dense": 0.058985558996346894,
+          "graph": 0.05909262058484372,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:green_party_of_the_united_states_0",
+        "passage_index": 13,
+        "title": "Green Party of the United States",
+        "score": 0.049797346058078604,
+        "text": "Green Party of the United States\nGreen Party of the United States Chairperson Green National Committee Founded April 2001; 17 years ago (2001 - 04) Split from Greens / Green Party USA Preceded by Citizens Party Association of State Green Parties Headquarters 6411 Orchard Avenue, Suite 101, Takoma Park, Maryland 20912 Newspaper Green Pages Youth wing Young Greens Women's wing National Women's Caucus LGBT wing Lavender Greens Latinx wing Latinx Caucus Black wing Black Caucus Ideology Anti-capitalism Eco-socialism Green politics Political position Left - wing International affiliation Global Greens Continental affiliation Federation of the Green Parties of the Americas Colors Green Seats in the Senate 0 / 100 Seats in the House 0 / 435 Governorships 0 / 50 State Upper House Seats 0 / 1,972 State Lower House Seats 2 / 5,411 Territorial Governorships 0 / 6 Territorial Upper Chamber Seats 0 / 97 Territorial Lower Chamber Seats 0 / 91 Other elected offices 156 (2018) Website gp.org Politics of United States Political parties Elections",
+        "score_breakdown": {
+          "dense": 0.05910060918588888,
+          "graph": 0.0576400366861324,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:grant_s_first_stand_0",
+        "passage_index": 0,
+        "title": "Grant's First Stand",
+        "score": 0.04969482813966415,
+        "text": "Grant's First Stand\nGrant's First Stand is the debut album by American jazz guitarist Grant Green featuring performances by Green recorded and released on the Blue Note label in 1961. Earlier recordings made by Green for Blue Note were released as \"First Session\" in 2001.",
+        "score_breakdown": {
+          "dense": 0.058628019922376026,
+          "graph": 0.05816472394119111,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:little_green_song_0",
+        "passage_index": 11,
+        "title": "Little Green (song)",
+        "score": 0.049685567584661486,
+        "text": "Little Green (song)\n\"Little Green\" is a song composed and performed by Joni Mitchell. It is the third track on her 1971 album \"Blue\".",
+        "score_breakdown": {
+          "dense": 0.05909070608245764,
+          "graph": 0.057285597464365956,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_show_business_families_0",
+        "passage_index": 1,
+        "title": "List of show business families",
+        "score": 0.049620996501476236,
+        "text": "List of show business families\nActress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon. Phylicia Rashād is the former spouse of both Victor Willis, former lead singer of the group Village People, and former NFL football player turned sportscaster, Ahmad Rashād. Phylicia and Ahmad Rashād are the parents of actress Condola Rashād.",
+        "score_breakdown": {
+          "dense": 0.05898175752707284,
+          "graph": 0.05727009953862056,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:green_lake_chisago_city_minnesota_0",
+        "passage_index": 3,
+        "title": "Green Lake (Chisago City, Minnesota)",
+        "score": 0.04958720494131051,
+        "text": "Green Lake (Chisago City, Minnesota)\nGreen Lake is a lake in Chisago City, Minnesota, United States. This lake is sometimes also referred to as \"Big Green Lake\" because it is connected to Little Green Lake by a channel. Green Lake was named from the fact its waters are green from the high algae content.",
+        "score_breakdown": {
+          "dense": 0.058925764507876476,
+          "graph": 0.05726011487326152,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the Green performer?",
+        "resolved_sub_question": "Who is the Green performer?",
+        "sentence_id": "sentence:list_of_show_business_families_0_0_actress_director_singer_phylicia_rash_d_is_the_older_sister_of_performer_deb",
+        "sentence": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon.",
+        "score": 0.4574179455165863,
+        "source_title": "List of show business families",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.",
+        "hop_raw_response": "The evidence provided does not mention any performer named Green or any performer associated with the name Green. It only mentions Phylicia Rashād, Debbie Allen, and Norm Nixon.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "List of show business families",
+            "text": "Actress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the spouse of this person?",
+        "resolved_sub_question": "Who is the spouse of this person?",
+        "sentence_id": "sentence:star_trek_discovery_0_2_the_series_release_led_to_record_subscriptions_for_all_access_and_positive_rev",
+        "sentence": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.",
+        "score": 0.30787025146245955,
+        "source_title": "Star Trek: Discovery",
+        "hop_answer": "Unknown",
+        "hop_thought": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.",
+        "hop_raw_response": "The passage mentions Michelle Yeoh as a co-star but does not provide information about the spouse of the Green performer, who is inferred to be Sonequa Martin-Green. There is no direct mention of her spouse in the given text.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Star Trek: Discovery",
+            "text": "The series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the Green performer? (source: List of show business families)\n2. Who is the spouse of this person? (source: Star Trek: Discovery)\n\nFact hints:\n- Martin related_to Green\n\nWikipedia Title: Star Trek: Discovery\nThe series' release led to record subscriptions for All Access, and positive reviews from critics who highlighted Martin - Green's performance.\n\nWikipedia Title: List of show business families\nActress / director / singer Phylicia Rashād is the older sister of performer Debbie Allen, who is married to former NBA basketball player, Norm Nixon.\n\nWikipedia Title: Green (Steve Hillage album)\nGreen (Steve Hillage album) Green is the fourth studio album by British progressive rock musician Steve Hillage. Written in spring 1977 at the same time as his previous album, the funk-inflected \"Motivation Radio\" (1977), \"Green\" was originally going to be released as \"The Green Album\" as a companion to \"The Red Album\" (the originally intended name for \"Motivation Radio\").\n\nWikipedia Title: Mok Kwai-lan\nMok Kwai-lan Mok Kwai-lan (; October 15, 1892 – November 3, 1982) was the fourth spouse of Lingnan martial arts grandmaster Wong Fei-hung.\n\nWikipedia Title: Miquette Giraudy\nShe and Hillage currently form the core of the ambient band System 7. In each role, she has used different stage names.\n\nQuestion: Who is the spouse of the Green performer?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The performer associated with \"Green\" is likely referring to the actress and singer, Sonequa Martin-Green, based on the hint that Martin is related to Green and the mention of her performance being highlighted in \"Star Trek: Discovery.\" However, the provided passages do not contain information about Sonequa Martin-Green's spouse. Therefore, the answer is unknown based on the given information.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The performer associated with \"Green\" is likely referring to the actress and singer, Sonequa Martin-Green, based on the hint that Martin is related to Green and the mention of her performance being highlighted in \"Star Trek: Discovery.\" However, the provided passages do not contain information about Sonequa Martin-Green's spouse. Therefore, the answer is unknown based on the given information.\nAnswer: Unknown",
+  "sample_metadata": {
+    "sample_id": "2hop__460946_294723",
+    "question": "Who is the spouse of the Green performer?",
+    "answer": "Miquette Giraudy",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Green >> performer",
+      "#1 >> spouse"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Miquette Giraudy",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Miquette Giraudy"
+    ]
+  }
+}

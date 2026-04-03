@@ -1,0 +1,1057 @@
+{
+  "query": "Who was the child of the 28th U.S. president?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "28th U S president"
+  ],
+  "raw_query_entities": [
+    "28th U S president"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "28th U S president",
+      "node_id": "entity:28th_president",
+      "resolved_text": "28th President",
+      "score": 0.6712,
+      "alias_score": 0.5,
+      "relation_score": 1.0,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.775,
+      "score_margin": 0.09662857142857151,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who was the 28th U.S. president?",
+    "What was the name of the child of the 28th U.S. president?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:28th_president_of_the_united_states",
+      "score": 0.6246518896856204,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:thomas_woodrow_wilson",
+      "score": 0.5780960830866237,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:28th_president",
+      "score": 0.577363625611583,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:28th_u_s_president",
+      "score": 0.5681689604487442,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_woodrow_wilson",
+      "score": 0.5343736098461729,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:woodrow_wilson",
+      "score": 0.5258298800354114,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:grover_cleveland",
+      "score": 0.31251510144032346,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_esther_cleveland",
+      "score": 0.3025147629305811,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:frances_folsom_cleveland",
+      "score": 0.29251401677117667,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:ellen_axson",
+      "score": 0.26438007280726367,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:esther_cleveland_0_0_esther_cleveland_september_9_1893_june_25_1980_was_the_second_child_of_gro",
+      "score": 0.2423737035637071,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:ellen_louise_axson",
+      "score": 0.2203167273393864,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:esther_cleveland_was_the_second_child_of_grover_cleveland_sentence_esther_cleveland_0_0_esther_cleveland_september_9_189",
+      "text": "Esther Cleveland was the second child of Grover Cleveland",
+      "head_id": "entity:title_anchor_esther_cleveland",
+      "tail_id": "entity:grover_cleveland",
+      "sentence_id": "sentence:esther_cleveland_0_0_esther_cleveland_september_9_1893_june_25_1980_was_the_second_child_of_gro",
+      "chunk_id": "chunk:esther_cleveland_0",
+      "document_index": 15,
+      "score": 0.3103178144538827
+    },
+    {
+      "fact_id": "fact:esther_cleveland_was_the_second_child_of_frances_folsom_cleveland_sentence_esther_cleveland_0_0_esther_cleveland_septemb",
+      "text": "Esther Cleveland was the second child of Frances Folsom Cleveland",
+      "head_id": "entity:title_anchor_esther_cleveland",
+      "tail_id": "entity:frances_folsom_cleveland",
+      "sentence_id": "sentence:esther_cleveland_0_0_esther_cleveland_september_9_1893_june_25_1980_was_the_second_child_of_gro",
+      "chunk_id": "chunk:esther_cleveland_0",
+      "document_index": 15,
+      "score": 0.29031713743439796
+    },
+    {
+      "fact_id": "fact:woodrow_wilson_was_28th_u_s_president_sentence_state_of_the_union_0_3_after_1913_woodrow_wilson_the_28th_u_s",
+      "text": "Woodrow Wilson was 28th U S President",
+      "head_id": "entity:woodrow_wilson",
+      "tail_id": "entity:28th_u_s_president",
+      "sentence_id": "sentence:state_of_the_union_0_3_after_1913_woodrow_wilson_the_28th_u_s",
+      "chunk_id": "chunk:state_of_the_union_0",
+      "document_index": 10,
+      "score": 0.2823191556761895
+    },
+    {
+      "fact_id": "fact:jessie_woodrow_wilson_sayre_daughter_of_woodrow_wilson_sentence_jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sa",
+      "text": "Jessie Woodrow Wilson Sayre daughter of Woodrow Wilson",
+      "head_id": "entity:title_anchor_jessie_woodrow_wilson_sayre",
+      "tail_id": "entity:woodrow_wilson",
+      "sentence_id": "sentence:jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_august_28_1887_january_15_1933_was_a_daughter",
+      "chunk_id": "chunk:jessie_woodrow_wilson_sayre_0",
+      "document_index": 12,
+      "score": 0.24031806073244677
+    },
+    {
+      "fact_id": "fact:woodrow_wilson_was_the_28th_president_sentence_woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28th_president_o",
+      "text": "Woodrow Wilson was the 28th President",
+      "head_id": "entity:title_anchor_woodrow_wilson",
+      "tail_id": "entity:28th_president",
+      "sentence_id": "sentence:woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28th_president_of_the_united_states_in_off",
+      "chunk_id": "chunk:woodrow_wilson_0",
+      "document_index": 7,
+      "score": 0.23631941731378922
+    },
+    {
+      "fact_id": "fact:jessie_woodrow_wilson_sayre_daughter_of_ellen_louise_axson_sentence_jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilso",
+      "text": "Jessie Woodrow Wilson Sayre daughter of Ellen Louise Axson",
+      "head_id": "entity:title_anchor_jessie_woodrow_wilson_sayre",
+      "tail_id": "entity:ellen_louise_axson",
+      "sentence_id": "sentence:jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_august_28_1887_january_15_1933_was_a_daughter",
+      "chunk_id": "chunk:jessie_woodrow_wilson_sayre_0",
+      "document_index": 12,
+      "score": 0.2203167273393864
+    },
+    {
+      "fact_id": "fact:woodrow_wilson_had_vice_president_thomas_r_marshall_sentence_woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28",
+      "text": "Woodrow Wilson had vice president Thomas R Marshall",
+      "head_id": "entity:title_anchor_woodrow_wilson",
+      "tail_id": "entity:thomas_r_marshall",
+      "sentence_id": "sentence:woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28th_president_of_the_united_states_in_off",
+      "chunk_id": "chunk:woodrow_wilson_0",
+      "document_index": 7,
+      "score": 0.20087150471672083
+    },
+    {
+      "fact_id": "fact:jessie_woodrow_wilson_sayre_born_on_august_28_1887_sentence_jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_",
+      "text": "Jessie Woodrow Wilson Sayre born on August 28 1887",
+      "head_id": "entity:title_anchor_jessie_woodrow_wilson_sayre",
+      "tail_id": "entity:august_28_1887",
+      "sentence_id": "sentence:jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_august_28_1887_january_15_1933_was_a_daughter",
+      "chunk_id": "chunk:jessie_woodrow_wilson_sayre_0",
+      "document_index": 12,
+      "score": 0.08
+    }
+  ],
+  "bridge_entities": [
+    "Woodrow Wilson"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who was the 28th U.S. president?",
+      "resolved_sub_question": "Who was the 28th U.S. president?",
+      "sentence_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+      "sentence": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.",
+      "score": 0.66880965251691,
+      "source_title": "Woodrow Wilson",
+      "hop_answer": "Woodrow Wilson",
+      "hop_thought": "The text clearly states that Woodrow Wilson served as the 28th President of the United States.",
+      "hop_raw_response": "The text clearly states that Woodrow Wilson served as the 28th President of the United States.\nAnswer: Woodrow Wilson",
+      "evidence_passages": [
+        {
+          "title": "Woodrow Wilson",
+          "text": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921."
+        },
+        {
+          "title": "Woodrow Wilson",
+          "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League."
+        },
+        {
+          "title": "Woodrow Wilson",
+          "text": "Woodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R."
+        }
+      ]
+    },
+    {
+      "sub_question": "What was the name of the child of the 28th U.S. president?",
+      "resolved_sub_question": "What was the name of the child of the 28th U.S. president? Context: Woodrow Wilson.",
+      "sentence_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+      "sentence": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.",
+      "score": 0.5151620085716248,
+      "source_title": "Woodrow Wilson",
+      "hop_answer": "Unknown",
+      "hop_thought": "The provided context does not mention any specific names of Woodrow Wilson's children.",
+      "hop_raw_response": "The provided context does not mention any specific names of Woodrow Wilson's children.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Woodrow Wilson",
+          "text": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921."
+        },
+        {
+          "title": "Woodrow Wilson",
+          "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League."
+        },
+        {
+          "title": "Woodrow Wilson",
+          "text": "Woodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:28th_president_of_the_united_states",
+      "score": 0.07045245422123123,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_woodrow_wilson",
+      "score": 0.0691399433634364,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:28th_u_s_president",
+      "score": 0.06619796574428387,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:28th_president",
+      "score": 0.06609668371095334,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:thomas_woodrow_wilson",
+      "score": 0.06450379964030686,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:woodrow_wilson",
+      "score": 0.061696224595896194,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:esther_cleveland_0_0_esther_cleveland_september_9_1893_june_25_1980_was_the_second_child_of_gro",
+      "score": 0.05504972707943191,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_august_28_1887_january_15_1933_was_a_daughter",
+      "score": 0.04267529308537714,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_esther_cleveland",
+      "score": 0.04239756809129519,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28th_president_of_the_united_states_in_off",
+      "score": 0.04028591971584679,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_jessie_woodrow_wilson_sayre",
+      "score": 0.032629767908014945,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:grover_cleveland",
+      "score": 0.031574191385589215,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:frances_folsom_cleveland",
+      "score": 0.027949367879245422,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+      "score": 0.026427794818740285,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:ellen_louise_axson",
+      "score": 0.02581282770221581,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:ellen_axson",
+      "score": 0.025281070473234548,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:state_of_the_union_0_3_after_1913_woodrow_wilson_the_28th_u_s",
+      "score": 0.023571679701729267,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:thomas_r_marshall",
+      "score": 0.022413098889805683,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:woodrow_wilson_0",
+      "score": 0.01245339822891087,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:esther_cleveland_0",
+      "score": 0.012110147944523602,
+      "node_type": "chunk"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:esther_cleveland_0",
+      "passage_index": 15,
+      "title": "Esther Cleveland",
+      "score": 0.08527940246306298,
+      "text": "Esther Cleveland\nEsther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.",
+      "score_breakdown": {
+        "dense": 0.05337892208107319,
+        "graph": 0.05597273961950971,
+        "fact": 0.26086115621746536
+      }
+    },
+    {
+      "node_id": "chunk:woodrow_wilson_0",
+      "passage_index": 8,
+      "title": "Woodrow Wilson",
+      "score": 0.08369142889623271,
+      "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League.",
+      "score_breakdown": {
+        "dense": 0.05306140099310548,
+        "graph": 0.06056481444908177,
+        "fact": 0.24225476010200112
+      }
+    },
+    {
+      "node_id": "chunk:state_of_the_union_0",
+      "passage_index": 10,
+      "title": "State of the Union",
+      "score": 0.08344524485319485,
+      "text": "State of the Union\nThe address fulfills rules in Article II, Section 3 of the U.S. Constitution, requiring the President to periodically ``give to the Congress Information of the State of the Union, and recommend to their Consideration such measures as he shall judge necessary and expedient. ''During most of the country's first century, the President primarily only submitted a written report to Congress. After 1913, Woodrow Wilson, the 28th U.S. President, began the regular practice of delivering the address to Congress in person as a way to rally support for his agenda. With the advent of radio and television, the address is now broadcast live across the country on many networks.",
+      "score_breakdown": {
+        "dense": 0.05274346550207498,
+        "graph": 0.054625115822517195,
+        "fact": 0.2536586938686564
+      }
+    },
+    {
+      "node_id": "chunk:jessie_woodrow_wilson_sayre_0",
+      "passage_index": 12,
+      "title": "Jessie Woodrow Wilson Sayre",
+      "score": 0.08240976246080647,
+      "text": "Jessie Woodrow Wilson Sayre\nJessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson. She was a political activist, and \"She worked vigorously for women's suffrage, social issues, and to promote her father's call for a League of Nations, and emerged as a force in the Massachusetts Democratic Party.\"",
+      "score_breakdown": {
+        "dense": 0.053245268012855895,
+        "graph": 0.05547018860651388,
+        "fact": 0.24322538981187716
+      }
+    },
+    {
+      "node_id": "chunk:david_gardiner_tyler_0",
+      "passage_index": 5,
+      "title": "David Gardiner Tyler",
+      "score": 0.044590276969495954,
+      "text": "David Gardiner Tyler\nDavid Gardiner Tyler (July 12, 1846 – September 5, 1927), was a U.S. Democratic Party politician and the ninth child and fourth son of John Tyler, the tenth President of the United States.",
+      "score_breakdown": {
+        "dense": 0.052952956161024266,
+        "graph": 0.05155383693644203,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:term_of_office_0",
+      "passage_index": 6,
+      "title": "Term of office",
+      "score": 0.04443206354186535,
+      "text": "Term of office\nIn the United States, the president of the United States is elected indirectly through the United States Electoral College to a four - year term, with a term limit of two terms (totaling eight years) or a maximum of ten years if the president acted as president for two years or less in a term where another was elected as president, imposed by the Twenty - second Amendment to the United States Constitution, ratified in 1951.",
+      "score_breakdown": {
+        "dense": 0.05264054261768026,
+        "graph": 0.05159921700713738,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sim_n_gaviria_mu_oz_0",
+      "passage_index": 14,
+      "title": "Simón Gaviria Muñoz",
+      "score": 0.04441495252484165,
+      "text": "Simón Gaviria Muñoz\nSimón Gaviria Muñoz (born 24 November 1980) is a Colombian economist and politician currently serving as Member of the Chamber of Representatives of Colombia since 2006. The son of the 28th President of Colombia, César Gaviria Trujillo, he is also the current National Director of the Colombian Liberal Party since 11 December 2011.",
+      "score_breakdown": {
+        "dense": 0.05262276019800233,
+        "graph": 0.051574781386467906,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:john_ellis_martineau_0",
+      "passage_index": 11,
+      "title": "John Ellis Martineau",
+      "score": 0.044392797974912704,
+      "text": "John Ellis Martineau\nJohn Ellis Martineau (December 2, 1873 – March 6, 1937) was the 28th Governor of Arkansas and was a United States District Judge of the United States District Court for the Eastern District of Arkansas. His term as Governor was marked by the Great Mississippi Flood of 1927, with Martineau serving as President of the Tri-State Flood Commission.",
+      "score_breakdown": {
+        "dense": 0.052573594182760565,
+        "graph": 0.051591070581314624,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:john_e_brooks_0",
+      "passage_index": 4,
+      "title": "John E. Brooks",
+      "score": 0.04437579003605975,
+      "text": "John E. Brooks\nJohn E. Brooks, S.J., (July 13, 1923 – July 2, 2012) was an American Jesuit priest who joined the Society of Jesus in 1950. He served from 1970 to 1994 as the 28th president of the College of the Holy Cross, in Worcester, Massachusetts.",
+      "score_breakdown": {
+        "dense": 0.05255846197485579,
+        "graph": 0.05156211983296355,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:raup_miller_0",
+      "passage_index": 16,
+      "title": "Raup Miller",
+      "score": 0.04437425689174261,
+      "text": "Raup Miller\nRaup Miller served as California State Assemblyman for the 28th District and during World War II he served in the United States Coast Guard.",
+      "score_breakdown": {
+        "dense": 0.052569948480180526,
+        "graph": 0.05153595075881106,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:28th_president_of_the_united_states",
+        "score": 0.07045245422123123,
+        "text": "28th President of the United States",
+        "metadata": {
+          "canonical_name": "28th President of the United States",
+          "aliases": [
+            "28th President of the United States",
+            "2POTUS"
+          ],
+          "surface_forms": [
+            "28th President of the United States",
+            "2POTUS"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_woodrow_wilson",
+        "score": 0.0691399433634364,
+        "text": "Woodrow Wilson",
+        "metadata": {
+          "canonical_name": "Woodrow Wilson",
+          "aliases": [
+            "WW",
+            "Woodrow Wilson",
+            "World War"
+          ],
+          "surface_forms": [
+            "WW",
+            "Woodrow Wilson",
+            "World War"
+          ],
+          "title_anchor": "Woodrow Wilson"
+        }
+      },
+      {
+        "node_id": "entity:28th_u_s_president",
+        "score": 0.06619796574428387,
+        "text": "28th U S President",
+        "metadata": {
+          "canonical_name": "28th U S President",
+          "aliases": [
+            "28th U S President",
+            "2USP"
+          ],
+          "surface_forms": [
+            "28th U S President",
+            "2USP"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:28th_president",
+        "score": 0.06609668371095334,
+        "text": "28th President",
+        "metadata": {
+          "canonical_name": "28th President",
+          "aliases": [
+            "28th President",
+            "2P"
+          ],
+          "surface_forms": [
+            "28th President",
+            "2P"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:thomas_woodrow_wilson",
+        "score": 0.06450379964030686,
+        "text": "Thomas Woodrow Wilson",
+        "metadata": {
+          "canonical_name": "Thomas Woodrow Wilson",
+          "aliases": [
+            "TWW",
+            "Thomas Woodrow Wilson"
+          ],
+          "surface_forms": [
+            "TWW",
+            "Thomas Woodrow Wilson"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:esther_cleveland_0_0_esther_cleveland_september_9_1893_june_25_1980_was_the_second_child_of_gro",
+        "score": 0.05504972707943191,
+        "text": "Esther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.",
+        "metadata": {
+          "title": "Esther Cleveland",
+          "chunk_id": "chunk:esther_cleveland_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Esther Cleveland",
+              "relation": "born on",
+              "tail": "September 9 1893"
+            },
+            {
+              "head": "Esther Cleveland",
+              "relation": "died on",
+              "tail": "June 25 1980"
+            },
+            {
+              "head": "Esther Cleveland",
+              "relation": "was the second child of",
+              "tail": "Grover Cleveland"
+            },
+            {
+              "head": "Grover Cleveland",
+              "relation": "was the 22nd and 24th",
+              "tail": "President of the United States"
+            },
+            {
+              "head": "Esther Cleveland",
+              "relation": "was the second child of",
+              "tail": "Frances Folsom Cleveland"
+            }
+          ],
+          "entities": [
+            "Esther Cleveland",
+            "Grover Cleveland",
+            "Frances Folsom Cleveland",
+            "President of the United States"
+          ],
+          "entity_ids": [
+            "entity:frances_folsom_cleveland",
+            "entity:grover_cleveland",
+            "entity:june_25_1980",
+            "entity:president_of_the_united_states",
+            "entity:september_9_1893",
+            "entity:title_anchor_esther_cleveland"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:jessie_woodrow_wilson_sayre_0_0_jessie_woodrow_wilson_sayre_august_28_1887_january_15_1933_was_a_daughter",
+        "score": 0.04267529308537714,
+        "text": "Jessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson.",
+        "metadata": {
+          "title": "Jessie Woodrow Wilson Sayre",
+          "chunk_id": "chunk:jessie_woodrow_wilson_sayre_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Jessie Woodrow Wilson Sayre",
+              "relation": "born on",
+              "tail": "August 28 1887"
+            },
+            {
+              "head": "Jessie Woodrow Wilson Sayre",
+              "relation": "died on",
+              "tail": "January 15 1933"
+            },
+            {
+              "head": "Jessie Woodrow Wilson Sayre",
+              "relation": "daughter of",
+              "tail": "Woodrow Wilson"
+            },
+            {
+              "head": "Jessie Woodrow Wilson Sayre",
+              "relation": "daughter of",
+              "tail": "Ellen Louise Axson"
+            }
+          ],
+          "entities": [
+            "Jessie Woodrow Wilson Sayre",
+            "Woodrow Wilson",
+            "Ellen Louise Axson"
+          ],
+          "entity_ids": [
+            "entity:august_28_1887",
+            "entity:ellen_louise_axson",
+            "entity:january_15_1933",
+            "entity:title_anchor_jessie_woodrow_wilson_sayre",
+            "entity:woodrow_wilson"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:woodrow_wilson_0_0_woodrow_wilson_woodrow_wilson_in_1919_28th_president_of_the_united_states_in_off",
+        "score": 0.04028591971584679,
+        "text": "Woodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R.",
+        "metadata": {
+          "title": "Woodrow Wilson",
+          "chunk_id": "chunk:woodrow_wilson_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Woodrow Wilson",
+              "relation": "was the",
+              "tail": "28th President"
+            },
+            {
+              "head": "Woodrow Wilson",
+              "relation": "was in office from",
+              "tail": "March 4 1913 to March 4 1921"
+            },
+            {
+              "head": "Woodrow Wilson",
+              "relation": "had vice president",
+              "tail": "Thomas R Marshall"
+            }
+          ],
+          "entities": [
+            "Woodrow Wilson",
+            "Thomas R Marshall"
+          ],
+          "entity_ids": [
+            "entity:28th_president",
+            "entity:march_4_1913_to_march_4_1921",
+            "entity:thomas_r_marshall",
+            "entity:title_anchor_woodrow_wilson"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+        "score": 0.026427794818740285,
+        "text": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.",
+        "metadata": {
+          "title": "Woodrow Wilson",
+          "chunk_id": "chunk:woodrow_wilson_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Thomas Woodrow Wilson",
+              "relation": "born on",
+              "tail": "December 28 1856"
+            },
+            {
+              "head": "Thomas Woodrow Wilson",
+              "relation": "died on",
+              "tail": "February 3 1924"
+            },
+            {
+              "head": "Thomas Woodrow Wilson",
+              "relation": "was",
+              "tail": "American statesman and academic"
+            },
+            {
+              "head": "Thomas Woodrow Wilson",
+              "relation": "served as",
+              "tail": "28th President of the United States"
+            }
+          ],
+          "entities": [
+            "Thomas Woodrow Wilson",
+            "28th President of the United States"
+          ],
+          "entity_ids": [
+            "entity:28th_president_of_the_united_states",
+            "entity:american_statesman_and_academic",
+            "entity:december_28_1856",
+            "entity:february_3_1924",
+            "entity:thomas_woodrow_wilson"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:woodrow_wilson_0",
+        "score": 0.01245339822891087,
+        "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League.",
+        "metadata": {
+          "title": "Woodrow Wilson",
+          "chunk_index": 0,
+          "document_index": 8,
+          "entity_ids": [
+            "entity:1919_paris_peace_conference",
+            "entity:28th_president",
+            "entity:28th_president_of_the_united_states",
+            "entity:american_statesman_and_academic",
+            "entity:as",
+            "entity:awards_nobel_peace_prize",
+            "entity:cause_of_death",
+            "entity:children_margaret",
+            "entity:december",
+            "entity:december_28_1856",
+            "entity:democratic",
+            "entity:democratic_party",
+            "entity:edith_bolling",
+            "entity:education_davidson_college_princeton",
+            "entity:eleanor_parents_joseph_ruggles",
+            "entity:ellen_axson",
+            "entity:february_3_1924",
+            "entity:francis_patton_succeeded",
+            "entity:governor_of_new_jersey",
+            "entity:harding",
+            "entity:james_fielder",
+            "entity:january",
+            "entity:jessie",
+            "entity:john_aikman_stewart",
+            "entity:john_franklin_fort_succeeded",
+            "entity:league",
+            "entity:league_of_nations",
+            "entity:march",
+            "entity:march_4_1913_to_march_4_1921",
+            "entity:marshall",
+            "entity:nations",
+            "entity:new_deal",
+            "entity:new_jersey",
+            "entity:paris_peace_conference",
+            "entity:personal",
+            "entity:political_party",
+            "entity:preceded",
+            "entity:president_of_princeton_university",
+            "entity:princeton_university",
+            "entity:profession_academic_historian_political",
+            "entity:resting_place",
+            "entity:senate",
+            "entity:signature",
+            "entity:spouse_s",
+            "entity:staunton",
+            "entity:stroke",
+            "entity:thomas_r_marshall",
+            "entity:thomas_woodrow_wilson",
+            "entity:title_anchor_woodrow_wilson",
+            "entity:university_johns_hopkins_university",
+            "entity:virginia",
+            "entity:warren_g",
+            "entity:washington_d_c_u_s",
+            "entity:washington_national_cathedral",
+            "entity:william_howard_taft",
+            "entity:wilson",
+            "entity:wilson_jessie_janet_woodrow",
+            "entity:wilsonianism",
+            "entity:world_war_i"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:esther_cleveland_0",
+        "score": 0.012110147944523602,
+        "text": "Esther Cleveland\nEsther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.",
+        "metadata": {
+          "title": "Esther Cleveland",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:frances_folsom_cleveland",
+            "entity:grover_cleveland",
+            "entity:june_25_1980",
+            "entity:president_of_the_united_states",
+            "entity:september_9_1893",
+            "entity:title_anchor_esther_cleveland"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:jessie_woodrow_wilson_sayre_0",
+        "score": 0.01129367970733832,
+        "text": "Jessie Woodrow Wilson Sayre\nJessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson. She was a political activist, and \"She worked vigorously for women's suffrage, social issues, and to promote her father's call for a League of Nations, and emerged as a force in the Massachusetts Democratic Party.\"",
+        "metadata": {
+          "title": "Jessie Woodrow Wilson Sayre",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:august_28_1887",
+            "entity:ellen_louise_axson",
+            "entity:january_15_1933",
+            "entity:league",
+            "entity:league_of_nations",
+            "entity:massachusetts_democratic_party",
+            "entity:nations",
+            "entity:title_anchor_jessie_woodrow_wilson_sayre",
+            "entity:woodrow_wilson"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:state_of_the_union_0",
+        "score": 0.008511673978158888,
+        "text": "State of the Union\nThe address fulfills rules in Article II, Section 3 of the U.S. Constitution, requiring the President to periodically ``give to the Congress Information of the State of the Union, and recommend to their Consideration such measures as he shall judge necessary and expedient. ''During most of the country's first century, the President primarily only submitted a written report to Congress. After 1913, Woodrow Wilson, the 28th U.S. President, began the regular practice of delivering the address to Congress in person as a way to rally support for his agenda. With the advent of radio and television, the address is now broadcast live across the country on many networks.",
+        "metadata": {
+          "title": "State of the Union",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:28th_u_s_president",
+            "entity:article",
+            "entity:congress",
+            "entity:congress_information",
+            "entity:consideration",
+            "entity:constitution",
+            "entity:during",
+            "entity:section",
+            "entity:woodrow_wilson"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Esther Cleveland\nEsther Cleveland\nEsther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.\n\nWoodrow Wilson\nWoodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League.\n\nState of the Union\nState of the Union\nThe address fulfills rules in Article II, Section 3 of the U.S. Constitution, requiring the President to periodically ``give to the Congress Information of the State of the Union, and recommend to their Consideration such measures as he shall judge necessary and expedient. ''During most of the country's first century, the President primarily only submitted a written report to Congress. After 1913, Woodrow Wilson, the 28th U.S. President, began the regular practice of delivering the address to Congress in person as a way to rally support for his agenda. With the advent of radio and television, the address is now broadcast live across the country on many networks.\n\nJessie Woodrow Wilson Sayre\nJessie Woodrow Wilson Sayre\nJessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson. She was a political activist, and \"She worked vigorously for women's suffrage, social issues, and to promote her father's call for a League of Nations, and emerged as a force in the Massachusetts Democratic Party.\"\n\nDavid Gardiner Tyler\nDavid Gardiner Tyler\nDavid Gardiner Tyler (July 12, 1846 – September 5, 1927), was a U.S. Democratic Party politician and the ninth child and fourth son of John Tyler, the tenth President of the United States.\n\nWoodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.\n\nWoodrow Wilson\nWoodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R.\n\nJohn E. Brooks\nJohn E. Brooks\nJohn E. Brooks, S.J., (July 13, 1923 – July 2, 2012) was an American Jesuit priest who joined the Society of Jesus in 1950. He served from 1970 to 1994 as the 28th president of the College of the Holy Cross, in Worcester, Massachusetts.\n\nJohn Ellis Martineau\nJohn Ellis Martineau\nJohn Ellis Martineau (December 2, 1873 – March 6, 1937) was the 28th Governor of Arkansas and was a United States District Judge of the United States District Court for the Eastern District of Arkansas. His term as Governor was marked by the Great Mississippi Flood of 1927, with Martineau serving as President of the Tri-State Flood Commission.\n\nEurípides Rubio\nEurípides Rubio\nCaptain Eurípides Rubio (March 1, 1938 – November 8, 1966) was a United States Army officer and one of nine Puerto Ricans who were posthumously awarded the United States' highest military decoration for valor, the Medal of Honor, for actions on November 8, 1966, during the Vietnam War. Rubio was a member of the United States Army, Headquarters & Headquarters Company, 1st Battalion, 28th Infantry Regiment (Black Lions), 1st Infantry Division, Republic of Vietnam.\n\nTerm of office\nTerm of office\nIn the United States, the president of the United States is elected indirectly through the United States Electoral College to a four - year term, with a term limit of two terms (totaling eight years) or a maximum of ten years if the president acted as president for two years or less in a term where another was elected as president, imposed by the Twenty - second Amendment to the United States Constitution, ratified in 1951.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:esther_cleveland_0",
+        "passage_index": 15,
+        "title": "Esther Cleveland",
+        "score": 0.08527940246306298,
+        "text": "Esther Cleveland\nEsther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.",
+        "score_breakdown": {
+          "dense": 0.05337892208107319,
+          "graph": 0.05597273961950971,
+          "fact": 0.26086115621746536
+        }
+      },
+      {
+        "node_id": "chunk:woodrow_wilson_0",
+        "passage_index": 8,
+        "title": "Woodrow Wilson",
+        "score": 0.08369142889623271,
+        "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League.",
+        "score_breakdown": {
+          "dense": 0.05306140099310548,
+          "graph": 0.06056481444908177,
+          "fact": 0.24225476010200112
+        }
+      },
+      {
+        "node_id": "chunk:state_of_the_union_0",
+        "passage_index": 10,
+        "title": "State of the Union",
+        "score": 0.08344524485319485,
+        "text": "State of the Union\nThe address fulfills rules in Article II, Section 3 of the U.S. Constitution, requiring the President to periodically ``give to the Congress Information of the State of the Union, and recommend to their Consideration such measures as he shall judge necessary and expedient. ''During most of the country's first century, the President primarily only submitted a written report to Congress. After 1913, Woodrow Wilson, the 28th U.S. President, began the regular practice of delivering the address to Congress in person as a way to rally support for his agenda. With the advent of radio and television, the address is now broadcast live across the country on many networks.",
+        "score_breakdown": {
+          "dense": 0.05274346550207498,
+          "graph": 0.054625115822517195,
+          "fact": 0.2536586938686564
+        }
+      },
+      {
+        "node_id": "chunk:jessie_woodrow_wilson_sayre_0",
+        "passage_index": 12,
+        "title": "Jessie Woodrow Wilson Sayre",
+        "score": 0.08240976246080647,
+        "text": "Jessie Woodrow Wilson Sayre\nJessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson. She was a political activist, and \"She worked vigorously for women's suffrage, social issues, and to promote her father's call for a League of Nations, and emerged as a force in the Massachusetts Democratic Party.\"",
+        "score_breakdown": {
+          "dense": 0.053245268012855895,
+          "graph": 0.05547018860651388,
+          "fact": 0.24322538981187716
+        }
+      },
+      {
+        "node_id": "chunk:david_gardiner_tyler_0",
+        "passage_index": 5,
+        "title": "David Gardiner Tyler",
+        "score": 0.044590276969495954,
+        "text": "David Gardiner Tyler\nDavid Gardiner Tyler (July 12, 1846 – September 5, 1927), was a U.S. Democratic Party politician and the ninth child and fourth son of John Tyler, the tenth President of the United States.",
+        "score_breakdown": {
+          "dense": 0.052952956161024266,
+          "graph": 0.05155383693644203,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:term_of_office_0",
+        "passage_index": 6,
+        "title": "Term of office",
+        "score": 0.04443206354186535,
+        "text": "Term of office\nIn the United States, the president of the United States is elected indirectly through the United States Electoral College to a four - year term, with a term limit of two terms (totaling eight years) or a maximum of ten years if the president acted as president for two years or less in a term where another was elected as president, imposed by the Twenty - second Amendment to the United States Constitution, ratified in 1951.",
+        "score_breakdown": {
+          "dense": 0.05264054261768026,
+          "graph": 0.05159921700713738,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sim_n_gaviria_mu_oz_0",
+        "passage_index": 14,
+        "title": "Simón Gaviria Muñoz",
+        "score": 0.04441495252484165,
+        "text": "Simón Gaviria Muñoz\nSimón Gaviria Muñoz (born 24 November 1980) is a Colombian economist and politician currently serving as Member of the Chamber of Representatives of Colombia since 2006. The son of the 28th President of Colombia, César Gaviria Trujillo, he is also the current National Director of the Colombian Liberal Party since 11 December 2011.",
+        "score_breakdown": {
+          "dense": 0.05262276019800233,
+          "graph": 0.051574781386467906,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:john_ellis_martineau_0",
+        "passage_index": 11,
+        "title": "John Ellis Martineau",
+        "score": 0.044392797974912704,
+        "text": "John Ellis Martineau\nJohn Ellis Martineau (December 2, 1873 – March 6, 1937) was the 28th Governor of Arkansas and was a United States District Judge of the United States District Court for the Eastern District of Arkansas. His term as Governor was marked by the Great Mississippi Flood of 1927, with Martineau serving as President of the Tri-State Flood Commission.",
+        "score_breakdown": {
+          "dense": 0.052573594182760565,
+          "graph": 0.051591070581314624,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:john_e_brooks_0",
+        "passage_index": 4,
+        "title": "John E. Brooks",
+        "score": 0.04437579003605975,
+        "text": "John E. Brooks\nJohn E. Brooks, S.J., (July 13, 1923 – July 2, 2012) was an American Jesuit priest who joined the Society of Jesus in 1950. He served from 1970 to 1994 as the 28th president of the College of the Holy Cross, in Worcester, Massachusetts.",
+        "score_breakdown": {
+          "dense": 0.05255846197485579,
+          "graph": 0.05156211983296355,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:raup_miller_0",
+        "passage_index": 16,
+        "title": "Raup Miller",
+        "score": 0.04437425689174261,
+        "text": "Raup Miller\nRaup Miller served as California State Assemblyman for the 28th District and during World War II he served in the United States Coast Guard.",
+        "score_breakdown": {
+          "dense": 0.052569948480180526,
+          "graph": 0.05153595075881106,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who was the 28th U.S. president?",
+        "resolved_sub_question": "Who was the 28th U.S. president?",
+        "sentence_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+        "sentence": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.",
+        "score": 0.66880965251691,
+        "source_title": "Woodrow Wilson",
+        "hop_answer": "Woodrow Wilson",
+        "hop_thought": "The text clearly states that Woodrow Wilson served as the 28th President of the United States.",
+        "hop_raw_response": "The text clearly states that Woodrow Wilson served as the 28th President of the United States.\nAnswer: Woodrow Wilson",
+        "evidence_passages": [
+          {
+            "title": "Woodrow Wilson",
+            "text": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921."
+          },
+          {
+            "title": "Woodrow Wilson",
+            "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League."
+          },
+          {
+            "title": "Woodrow Wilson",
+            "text": "Woodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R."
+          }
+        ]
+      },
+      {
+        "sub_question": "What was the name of the child of the 28th U.S. president?",
+        "resolved_sub_question": "What was the name of the child of the 28th U.S. president? Context: Woodrow Wilson.",
+        "sentence_id": "sentence:woodrow_wilson_0_0_thomas_woodrow_wilson_december_28_1856_february_3_1924_was_an_american_st",
+        "sentence": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.",
+        "score": 0.5151620085716248,
+        "source_title": "Woodrow Wilson",
+        "hop_answer": "Unknown",
+        "hop_thought": "The provided context does not mention any specific names of Woodrow Wilson's children.",
+        "hop_raw_response": "The provided context does not mention any specific names of Woodrow Wilson's children.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Woodrow Wilson",
+            "text": "Thomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921."
+          },
+          {
+            "title": "Woodrow Wilson",
+            "text": "Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921. A member of the Democratic Party, Wilson served as the President of Princeton University from 1902 to 1910, and as Governor of New Jersey from 1911 to 1913, before winning the 1912 presidential election. As president, he oversaw the passage of progressive legislative policies unparalleled until the New Deal in 1933. He also led the United States during World War I, establishing an activist foreign policy known as ``Wilsonianism. ''He was one of the three key leaders at the 1919 Paris Peace Conference, where he championed a new League of Nations, but he was unable to win Senate approval for U.S. participation in the League."
+          },
+          {
+            "title": "Woodrow Wilson",
+            "text": "Woodrow Wilson Woodrow Wilson in 1919 28th President of the United States In office March 4, 1913 -- March 4, 1921 Vice President Thomas R."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who was the 28th U.S. president? => Woodrow Wilson (source: Woodrow Wilson)\n2. What was the name of the child of the 28th U.S. president? (source: Woodrow Wilson)\n\nFact hints:\n- Jessie Woodrow Wilson Sayre daughter of Woodrow Wilson\n- Jessie Woodrow Wilson Sayre daughter of Ellen Louise Axson\n- Jessie Woodrow Wilson Sayre born on August 28 1887\n- Woodrow Wilson was 28th U S President\n- Woodrow Wilson was the 28th President\n\nWikipedia Title: Jessie Woodrow Wilson Sayre\nShe was a political activist, and \"She worked vigorously for women's suffrage, social issues, and to promote her father's call for a League of Nations, and emerged as a force in the Massachusetts Democratic Party.\" Jessie Woodrow Wilson Sayre Jessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson.\n\nWikipedia Title: Woodrow Wilson\nThomas Woodrow Wilson (December 28, 1856 -- February 3, 1924) was an American statesman and academic who served as the 28th President of the United States from 1913 to 1921.\n\nWikipedia Title: State of the Union\nAfter 1913, Woodrow Wilson, the 28th U.S. Constitution, requiring the President to periodically ``give to the Congress Information of the State of the Union, and recommend to their Consideration such measures as he shall judge necessary and expedient.\n\nWikipedia Title: John E. Brooks\nHe served from 1970 to 1994 as the 28th president of the College of the Holy Cross, in Worcester, Massachusetts. Brooks, S.J., (July 13, 1923 – July 2, 2012) was an American Jesuit priest who joined the Society of Jesus in 1950.\n\nWikipedia Title: Esther Cleveland\nEsther Cleveland Esther Cleveland (September 9, 1893 – June 25, 1980) was the second child of Grover Cleveland, 22nd and 24th President of the United States, and his wife Frances Folsom Cleveland.\n\nQuestion: Who was the child of the 28th U.S. president?\nDraft Answer: Jessie Woodrow Wilson Sayre\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The 28th U.S. president was Woodrow Wilson, and Jessie Woodrow Wilson Sayre is mentioned as his daughter.",
+  "predicted_answer": "Jessie Woodrow Wilson Sayre",
+  "qa_raw_response": "{\n  \"thought\": \"The 28th U.S. president was Woodrow Wilson, and Jessie Woodrow Wilson Sayre is mentioned as his daughter.\",\n  \"answer\": \"Jessie Woodrow Wilson Sayre\",\n  \"support\": \"Jessie Woodrow Wilson Sayre (August 28, 1887 – January 15, 1933) was a daughter of US President Woodrow Wilson and Ellen Louise Axson.\"\n}"
+}

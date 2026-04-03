@@ -35,8 +35,8 @@ class HoloRAGConfig:
     sentence_top_k: int = 16
     chunk_top_k: int = 10
     passage_output_top_k: int = 10
-    qa_passage_top_k: int = 5
-    hop_answer_passage_top_k: int = 3
+    qa_passage_top_k: int = 3
+    hop_answer_passage_top_k: int = 1
     entity_resolution_score_threshold: float = 0.68
     entity_resolution_margin_threshold: float = 0.10
     seed_budget: int = 12

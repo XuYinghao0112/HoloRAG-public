@@ -1,0 +1,961 @@
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-04-03 18:55:47,979 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.73it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.64it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.03it/s]
+2026-04-03 18:55:58,845 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:55:59,780 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:01,578 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:03,510 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+2026-04-03 18:56:04,895 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:14,619 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:17,342 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:19,362 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:24,962 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:27,201 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 18:56:32,706 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+{
+  "query": "What is another notable work made by the author of Miss Sara Sampson?",
+  "alpha": {
+    "entity": 0.3,
+    "sentence": 0.4,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Miss Sara Sampson"
+  ],
+  "raw_query_entities": [
+    "Miss Sara Sampson"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Miss Sara Sampson",
+      "node_id": "entity:title_anchor_miss_sara_sampson",
+      "resolved_text": "Miss Sara Sampson",
+      "score": 0.8031666666666666,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.7333333333333334,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.2025999999999999,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who is the author of Miss Sara Sampson?",
+    "What are other notable works by this author?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_miss_sara_sampson",
+      "score": 1.050241999079998,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:gotthold_ephraim_lessing",
+      "score": 0.20347787027663192,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "score": 0.19828690555469708,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+      "score": 0.15665498512031178,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_emilia_galotti",
+      "score": 0.13180312739827407,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:brunswick",
+      "score": 0.12346765074356125,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:miss_sara_sampson_0",
+      "score": 0.12180136665887083,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:8_march_1772",
+      "score": 0.1084686966912048,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:emilia_galotti_0",
+      "score": 0.09635352243031678,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "chunk:mary_ann_sampson_0",
+      "score": 0.017944344616384222,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "chunk:pendennis_0",
+      "score": 0.01752299354438172,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "chunk:glenda_goss_0",
+      "score": 0.017491369988076648,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:miss_sara_sampson_has_original_spelling_mi_sara_sampson_sentence_miss_sara_sampson_0_0_miss_sara_sampson_original_spelli",
+      "text": "Miss Sara Sampson has_original_spelling Mi Sara Sampson",
+      "head_id": "entity:title_anchor_miss_sara_sampson",
+      "tail_id": "entity:title_anchor_miss_sara_sampson",
+      "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "chunk_id": "chunk:miss_sara_sampson_0",
+      "document_index": 15,
+      "score": 0.25099711223660226
+    },
+    {
+      "fact_id": "fact:miss_sara_sampson_is_play_by_gotthold_ephraim_lessing_sentence_miss_sara_sampson_0_0_miss_sara_sampson_original_spelling",
+      "text": "Miss Sara Sampson is_play_by Gotthold Ephraim Lessing",
+      "head_id": "entity:title_anchor_miss_sara_sampson",
+      "tail_id": "entity:gotthold_ephraim_lessing",
+      "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "chunk_id": "chunk:miss_sara_sampson_0",
+      "document_index": 15,
+      "score": 0.241001582813476
+    },
+    {
+      "fact_id": "fact:emilia_galotti_is_a_play_by_gotthold_ephraim_lessing_sentence_emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_b",
+      "text": "Emilia Galotti is a play by Gotthold Ephraim Lessing",
+      "head_id": "entity:title_anchor_emilia_galotti",
+      "tail_id": "entity:gotthold_ephraim_lessing",
+      "sentence_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+      "chunk_id": "chunk:emilia_galotti_0",
+      "document_index": 17,
+      "score": 0.16099147411170683
+    },
+    {
+      "fact_id": "fact:emilia_galotti_premiered_in_brunswick_sentence_emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephr",
+      "text": "Emilia Galotti premiered in Brunswick",
+      "head_id": "entity:title_anchor_emilia_galotti",
+      "tail_id": "entity:brunswick",
+      "sentence_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+      "chunk_id": "chunk:emilia_galotti_0",
+      "document_index": 17,
+      "score": 0.12098916856583482
+    },
+    {
+      "fact_id": "fact:emilia_galotti_premiered_on_8_march_1772_sentence_emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_e",
+      "text": "Emilia Galotti premiered on 8 March 1772",
+      "head_id": "entity:title_anchor_emilia_galotti",
+      "tail_id": "entity:8_march_1772",
+      "sentence_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+      "chunk_id": "chunk:emilia_galotti_0",
+      "document_index": 17,
+      "score": 0.10599054815684034
+    }
+  ],
+  "bridge_entities": [
+    "Gotthold Ephraim Lessing",
+    "Enlightenment philosopher"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who is the author of Miss Sara Sampson?",
+      "resolved_sub_question": "Who is the author of Miss Sara Sampson?",
+      "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "sentence": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
+      "score": 0.5861133333333333,
+      "source_title": "Miss Sara Sampson",
+      "hop_answer": "Gotthold Ephraim Lessing",
+      "hop_thought": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.",
+      "hop_raw_response": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.\nAnswer: Gotthold Ephraim Lessing",
+      "evidence_passages": [
+        {
+          "title": "Miss Sara Sampson",
+          "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
+        }
+      ]
+    },
+    {
+      "sub_question": "What are other notable works by this author?",
+      "resolved_sub_question": "What are other notable works by this author? Context: Gotthold Ephraim Lessing.",
+      "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "sentence": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
+      "score": 0.4740509090909091,
+      "source_title": "Miss Sara Sampson",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.",
+      "hop_raw_response": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Miss Sara Sampson",
+          "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+      "score": 0.14787151436755877,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_miss_sara_sampson",
+      "score": 0.1337386835327471,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+      "score": 0.0964348588892576,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:gotthold_ephraim_lessing",
+      "score": 0.08778795126475322,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_emilia_galotti",
+      "score": 0.06186061028643084,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:enlightenment_philosopher",
+      "score": 0.03265977146437764,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:brunswick",
+      "score": 0.028955437039491362,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:miss_sara_sampson_0",
+      "score": 0.027356977413742725,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:miss_sara_sampson_0_1_written_in_1755_while_the_author_was_living_in_potsdam_it_is_seen_by_many_schol",
+      "score": 0.02628729066059226,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:8_march_1772",
+      "score": 0.021649330941123122,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:emilia_galotti_0",
+      "score": 0.017295718954934952,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:emilia_galotti_0_1_the_work_is_a_classic_example_of_german_b_rgerliches_trauerspiel_bourgeois_tr",
+      "score": 0.01604495013361256,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:miss_sara_sampson_0_2_in_the_same_year_it_was_represented_at_frankfurt_on_the_oder_and_was_very_well_r",
+      "score": 0.015338633355731216,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:emilia_galotti_0_2_other_works_in_this_category_include_schiller_s_kabale_und_liebe_and_hebbel_s",
+      "score": 0.013858739571490421,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:miss_sara_sampson_0_4_the_play_was_lessing_s_first_real_success_as_a_playwright_and_it_was_in_part_due",
+      "score": 0.012870239126050087,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:potsdam",
+      "score": 0.010568642081757715,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:miss_sara_sampson_0_3_it_was_afterwards_translated_and_acted_in_france_where_it_also_met_with_success",
+      "score": 0.009817922152379071,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:emilia_galotti_0_3_the_story_is_based_upon_the_roman_myth_of_verginia",
+      "score": 0.008244011219990027,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:written",
+      "score": 0.007211436270172409,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:braunschweig",
+      "score": 0.006680990594229988,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:miss_sara_sampson_0",
+      "passage_index": 15,
+      "title": "Miss Sara Sampson",
+      "score": 0.12336266920027368,
+      "text": "Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg.",
+      "score_breakdown": {
+        "dense": 0.05069153873081347,
+        "graph": 0.057031293924890675,
+        "fact": 0.5224862314723938
+      }
+    },
+    {
+      "node_id": "chunk:emilia_galotti_0",
+      "passage_index": 17,
+      "title": "Emilia Galotti",
+      "score": 0.11489021142102565,
+      "text": "Emilia Galotti\nEmilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy). Other works in this category include Schiller's \"Kabale und Liebe\" and Hebbel's \"Maria Magdalene\". The story is based upon the Roman myth of Verginia.",
+      "score_breakdown": {
+        "dense": 0.050003498431842805,
+        "graph": 0.05253740668123725,
+        "fact": 0.4775137685276062
+      }
+    },
+    {
+      "node_id": "chunk:mary_ann_sampson_0",
+      "passage_index": 18,
+      "title": "Mary Ann Sampson",
+      "score": 0.04098492005233382,
+      "text": "Mary Ann Sampson\nMary Ann Sampson is an American artist living and working in Ragland, Alabama. Sampson is a book artist, specializing in miniatures and broadsides most of which are \"uniques\" or \"one-of-a-kinds.\" She explores the book as a means of expressing visual ideas that stem from recollections of personal events and experiences that have been derived from living in her rural environment of Alabama.",
+      "score_breakdown": {
+        "dense": 0.05022237130347781,
+        "graph": 0.044542052784736746,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:pendennis_0",
+      "passage_index": 2,
+      "title": "Pendennis",
+      "score": 0.040871308550071025,
+      "text": "Pendennis\nThe History of Pendennis: His Fortunes and Misfortunes, His Friends and His Greatest Enemy (1848–50) is a novel by the English author William Makepeace Thackeray. It is set in 19th-century England, particularly in London. The main hero is a young English gentleman Arthur Pendennis, who is born in the country and sets out for London to seek his place in life and society. The novel took two years for Thackeray to write and, in line with other Thackeray's works, most notably \"Vanity Fair\", it offers an insightful and satiric picture of human character and aristocratic society. The characters include the snobbish social hanger-on Major Pendennis and the tipsy Captain Costigan. Miss Amory and Sir Francis Clavering are somewhat reminiscent of Becky Sharp and Sir Pitt from \"Vanity Fair\".",
+      "score_breakdown": {
+        "dense": 0.05000816142076,
+        "graph": 0.044556065895510075,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:quran_0",
+      "passage_index": 1,
+      "title": "Quran",
+      "score": 0.04086144221992166,
+      "text": "Quran\nOne of the notable authors of esoteric interpretation prior to the 12th century is Sulami (d. 1021) without whose work the majority of very early Sufi commentaries would not have been preserved. Sulami's major commentary is a book named haqaiq al-tafsir (\"Truths of Exegesis\") which is a compilation of commentaries of earlier Sufis. From the 11th century onwards several other works appear, including commentaries by Qushayri (d. 1074), Daylami (d. 1193), Shirazi (d. 1209) and Suhrawardi (d. 1234). These works include material from Sulami's books plus the author's contributions. Many works are written in Persian such as the works of Maybudi (d. 1135) kash al-asrar (\"the unveiling of the secrets\"). Rumi (d. 1273) wrote a vast amount of mystical poetry in his book Mathnawi. Rumi makes heavy use of the Quran in his poetry, a feature that is sometimes omitted in translations of Rumi's work. A large number of Quranic passages can be found in Mathnawi, which some consider a kind of Sufi interpretation of the Quran. Rumi's book is not exceptional for containing citations from and elaboration on the",
+      "score_breakdown": {
+        "dense": 0.04998210613733315,
+        "graph": 0.04457094614796144,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:sara_sidner_0",
+      "passage_index": 12,
+      "title": "Sara Sidner",
+      "score": 0.04085257362456567,
+      "text": "Sara Sidner\nSara Sidner (born May 31, 1972) is an American journalist. She is a correspondent for CNN and CNN International based in Jerusalem starting August 2012, formerly in New Delhi. She currently works in CNN's Los Angeles bureau.",
+      "score_breakdown": {
+        "dense": 0.049992965856599514,
+        "graph": 0.04452147467811979,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:glenda_goss_0",
+      "passage_index": 16,
+      "title": "Glenda Goss",
+      "score": 0.04085049973046849,
+      "text": "Glenda Goss\nGlenda Goss is an American author and music historian whose special interests are music and culture, early modernism, critical editing, and European-American points of cultural contact. Her most notable work has revolved around the life and works of the Finnish composer, Jean Sibelius.",
+      "score_breakdown": {
+        "dense": 0.04998898693265811,
+        "graph": 0.04452185639168842,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:miss_mousie_s_blind_date_0",
+      "passage_index": 14,
+      "title": "Miss Mousie's Blind Date",
+      "score": 0.04084361952309349,
+      "text": "Miss Mousie's Blind Date\nMiss Mousie's Blind Date is a book by Canadian children's book author Tim Beiser, illustrated by Canadian painter Rachel Berman. It was published by Tundra Books in October 2012.",
+      "score_breakdown": {
+        "dense": 0.04998668794204079,
+        "graph": 0.04450313718323685,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jason_sampson_0",
+      "passage_index": 4,
+      "title": "Jason Sampson",
+      "score": 0.040843238322827824,
+      "text": "Jason Sampson\nJason Sampson (born February 21, 1982) is an American professional mixed martial artist currently competing in the flyweight division of Legacy FC. A professional competitor since 2009, Sampson has previously competed for Bellator and Shark Fights.",
+      "score_breakdown": {
+        "dense": 0.049971742324321465,
+        "graph": 0.04452926681483673,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:little_miss_marker_1980_film_0",
+      "passage_index": 11,
+      "title": "Little Miss Marker (1980 film)",
+      "score": 0.040842636040452004,
+      "text": "Little Miss Marker (1980 film)\nLittle Miss Marker is a 1980 American comedy-drama film written and directed by Walter Bernstein, based on a short story by Damon Runyon. It stars Walter Matthau, Tony Curtis, Julie Andrews, Bob Newhart and new arrival Sara Stimson. It is a remake of the 1934 film of the same name starring Shirley Temple and Adolphe Menjou.",
+      "score_breakdown": {
+        "dense": 0.049981041255002405,
+        "graph": 0.0445102111673356,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_miss_sara_sampson",
+        "score": 0.1337386835327471,
+        "text": "Miss Sara Sampson",
+        "metadata": {
+          "canonical_name": "Miss Sara Sampson",
+          "aliases": [
+            "MSS",
+            "Miss Sara Sampson",
+            "Mi Sara Sampson"
+          ],
+          "surface_forms": [
+            "MSS",
+            "Miss Sara Sampson",
+            "Mi Sara Sampson"
+          ],
+          "title_anchor": "Miss Sara Sampson"
+        }
+      },
+      {
+        "node_id": "entity:gotthold_ephraim_lessing",
+        "score": 0.08778795126475322,
+        "text": "Gotthold Ephraim Lessing",
+        "metadata": {
+          "canonical_name": "Gotthold Ephraim Lessing",
+          "aliases": [
+            "GEL",
+            "Gotthold Ephraim Lessing"
+          ],
+          "surface_forms": [
+            "GEL",
+            "Gotthold Ephraim Lessing"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_emilia_galotti",
+        "score": 0.06186061028643084,
+        "text": "Emilia Galotti",
+        "metadata": {
+          "canonical_name": "Emilia Galotti",
+          "aliases": [
+            "EG",
+            "Emilia Galotti"
+          ],
+          "surface_forms": [
+            "EG",
+            "Emilia Galotti"
+          ],
+          "title_anchor": "Emilia Galotti"
+        }
+      },
+      {
+        "node_id": "entity:enlightenment_philosopher",
+        "score": 0.03265977146437764,
+        "text": "Enlightenment philosopher",
+        "metadata": {
+          "canonical_name": "Enlightenment philosopher",
+          "aliases": [
+            "EP",
+            "Enlightenment philosopher"
+          ],
+          "surface_forms": [
+            "EP",
+            "Enlightenment philosopher"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+        "score": 0.14787151436755877,
+        "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
+        "metadata": {
+          "title": "Miss Sara Sampson",
+          "chunk_id": "chunk:miss_sara_sampson_0",
+          "sentence_index": 0,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Miss Sara Sampson",
+              "relation": "is_play_by",
+              "tail": "Gotthold Ephraim Lessing"
+            },
+            {
+              "head": "Miss Sara Sampson",
+              "relation": "has_original_spelling",
+              "tail": "Mi Sara Sampson"
+            },
+            {
+              "head": "Gotthold Ephraim Lessing",
+              "relation": "is",
+              "tail": "Enlightenment philosopher"
+            }
+          ],
+          "entities": [
+            "Miss Sara Sampson",
+            "Gotthold Ephraim Lessing",
+            "Enlightenment philosopher"
+          ],
+          "entity_ids": [
+            "entity:enlightenment_philosopher",
+            "entity:gotthold_ephraim_lessing",
+            "entity:title_anchor_miss_sara_sampson"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:emilia_galotti_0_0_emilia_galotti_is_a_play_in_five_acts_by_gotthold_ephraim_lessing_1729_1781_w",
+        "score": 0.0964348588892576,
+        "text": "Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German).",
+        "metadata": {
+          "title": "Emilia Galotti",
+          "chunk_id": "chunk:emilia_galotti_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Emilia Galotti",
+              "relation": "is a play by",
+              "tail": "Gotthold Ephraim Lessing"
+            },
+            {
+              "head": "Emilia Galotti",
+              "relation": "premiered on",
+              "tail": "8 March 1772"
+            },
+            {
+              "head": "Emilia Galotti",
+              "relation": "premiered in",
+              "tail": "Brunswick"
+            }
+          ],
+          "entities": [
+            "Emilia Galotti",
+            "Gotthold Ephraim Lessing",
+            "Brunswick",
+            "Braunschweig"
+          ],
+          "entity_ids": [
+            "entity:8_march_1772",
+            "entity:braunschweig",
+            "entity:brunswick",
+            "entity:gotthold_ephraim_lessing",
+            "entity:title_anchor_emilia_galotti"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:miss_sara_sampson_0_1_written_in_1755_while_the_author_was_living_in_potsdam_it_is_seen_by_many_schol",
+        "score": 0.02628729066059226,
+        "text": "Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies.",
+        "metadata": {
+          "title": "Miss Sara Sampson",
+          "chunk_id": "chunk:miss_sara_sampson_0",
+          "sentence_index": 1,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Written",
+              "relation": "related_to",
+              "tail": "Potsdam"
+            }
+          ],
+          "entities": [
+            "Potsdam"
+          ],
+          "entity_ids": [
+            "entity:potsdam",
+            "entity:written"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:emilia_galotti_0_1_the_work_is_a_classic_example_of_german_b_rgerliches_trauerspiel_bourgeois_tr",
+        "score": 0.01604495013361256,
+        "text": "The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy).",
+        "metadata": {
+          "title": "Emilia Galotti",
+          "chunk_id": "chunk:emilia_galotti_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "German",
+              "relation": "related_to",
+              "tail": "Trauerspiel"
+            }
+          ],
+          "entities": [
+            "German b rgerliches Trauerspiel"
+          ],
+          "entity_ids": [
+            "entity:german",
+            "entity:german_b_rgerliches_trauerspiel",
+            "entity:trauerspiel"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:miss_sara_sampson_0_2_in_the_same_year_it_was_represented_at_frankfurt_on_the_oder_and_was_very_well_r",
+        "score": 0.015338633355731216,
+        "text": "In the same year it was represented at Frankfurt-on-the-Oder and was very well received.",
+        "metadata": {
+          "title": "Miss Sara Sampson",
+          "chunk_id": "chunk:miss_sara_sampson_0",
+          "sentence_index": 2,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Frankfurt",
+              "relation": "related_to",
+              "tail": "Oder"
+            }
+          ],
+          "entities": [
+            "Frankfurt-on-the-Oder"
+          ],
+          "entity_ids": [
+            "entity:frankfurt",
+            "entity:frankfurt_on_the_oder",
+            "entity:oder"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:miss_sara_sampson_0",
+        "score": 0.027356977413742725,
+        "text": "Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg.",
+        "metadata": {
+          "title": "Miss Sara Sampson",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:enlightenment_philosopher",
+            "entity:france",
+            "entity:frankfurt",
+            "entity:frankfurt_on_the_oder",
+            "entity:german_national_theatre",
+            "entity:german_national_theatre_in_hamburg",
+            "entity:gotthold_ephraim_lessing",
+            "entity:hamburg",
+            "entity:lessing",
+            "entity:oder",
+            "entity:potsdam",
+            "entity:title_anchor_miss_sara_sampson",
+            "entity:written"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:emilia_galotti_0",
+        "score": 0.017295718954934952,
+        "text": "Emilia Galotti\nEmilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy). Other works in this category include Schiller's \"Kabale und Liebe\" and Hebbel's \"Maria Magdalene\". The story is based upon the Roman myth of Verginia.",
+        "metadata": {
+          "title": "Emilia Galotti",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:8_march_1772",
+            "entity:braunschweig",
+            "entity:brunswick",
+            "entity:german",
+            "entity:german_b_rgerliches_trauerspiel",
+            "entity:gotthold_ephraim_lessing",
+            "entity:hebbel",
+            "entity:kabale_und_liebe",
+            "entity:maria_magdalene",
+            "entity:roman",
+            "entity:schiller",
+            "entity:title_anchor_emilia_galotti",
+            "entity:trauerspiel",
+            "entity:verginia"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:quran_0",
+        "score": 0.001785393214673481,
+        "text": "Quran\nOne of the notable authors of esoteric interpretation prior to the 12th century is Sulami (d. 1021) without whose work the majority of very early Sufi commentaries would not have been preserved. Sulami's major commentary is a book named haqaiq al-tafsir (\"Truths of Exegesis\") which is a compilation of commentaries of earlier Sufis. From the 11th century onwards several other works appear, including commentaries by Qushayri (d. 1074), Daylami (d. 1193), Shirazi (d. 1209) and Suhrawardi (d. 1234). These works include material from Sulami's books plus the author's contributions. Many works are written in Persian such as the works of Maybudi (d. 1135) kash al-asrar (\"the unveiling of the secrets\"). Rumi (d. 1273) wrote a vast amount of mystical poetry in his book Mathnawi. Rumi makes heavy use of the Quran in his poetry, a feature that is sometimes omitted in translations of Rumi's work. A large number of Quranic passages can be found in Mathnawi, which some consider a kind of Sufi interpretation of the Quran. Rumi's book is not exceptional for containing citations from and elaboration on the",
+        "metadata": {
+          "title": "Quran",
+          "chunk_index": 0,
+          "document_index": 1,
+          "entity_ids": [
+            "entity:daylami",
+            "entity:earlier_sufis",
+            "entity:exegesis",
+            "entity:from",
+            "entity:many_works",
+            "entity:mathnawi",
+            "entity:maybudi",
+            "entity:one",
+            "entity:persian",
+            "entity:quranic_passages",
+            "entity:qushayri",
+            "entity:rumi",
+            "entity:rumi_s_book",
+            "entity:rumi_s_poetry",
+            "entity:shirazi",
+            "entity:sufi",
+            "entity:sufi_interpretation_of_the_quran",
+            "entity:sufis",
+            "entity:suhrawardi",
+            "entity:sulami",
+            "entity:title_anchor_quran",
+            "entity:truths",
+            "entity:truths_of_exegesis"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:james_redfield_0",
+        "score": 0.0017517368879766907,
+        "text": "James Redfield\nJames Redfield is an American author, lecturer, screenwriter and film producer. He is notable for his novel \"The Celestine Prophecy\".",
+        "metadata": {
+          "title": "James Redfield",
+          "chunk_index": 0,
+          "document_index": 10,
+          "entity_ids": [
+            "entity:american_author",
+            "entity:celestine_prophecy",
+            "entity:title_anchor_james_redfield"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Emilia Galotti\nEmilia Galotti Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy).\n\nMiss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.\n\nLittle Miss Marker (1980 film)\nIt stars Walter Matthau, Tony Curtis, Julie Andrews, Bob Newhart and new arrival Sara Stimson. It is a remake of the 1934 film of the same name starring Shirley Temple and Adolphe Menjou.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:miss_sara_sampson_0",
+        "passage_index": 15,
+        "title": "Miss Sara Sampson",
+        "score": 0.12336266920027368,
+        "text": "Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing. Written in 1755 while the author was living in Potsdam, it is seen by many scholars to be one of the first bourgeois tragedies. In the same year it was represented at Frankfurt-on-the-Oder and was very well received. It was afterwards translated and acted in France, where it also met with success. The play was Lessing's first real success as a playwright and it was in part due to the success of this play that he was asked to be the dramaturg at the German National Theatre in Hamburg.",
+        "score_breakdown": {
+          "dense": 0.05069153873081347,
+          "graph": 0.057031293924890675,
+          "fact": 0.5224862314723938
+        }
+      },
+      {
+        "node_id": "chunk:emilia_galotti_0",
+        "passage_index": 17,
+        "title": "Emilia Galotti",
+        "score": 0.11489021142102565,
+        "text": "Emilia Galotti\nEmilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy). Other works in this category include Schiller's \"Kabale und Liebe\" and Hebbel's \"Maria Magdalene\". The story is based upon the Roman myth of Verginia.",
+        "score_breakdown": {
+          "dense": 0.050003498431842805,
+          "graph": 0.05253740668123725,
+          "fact": 0.4775137685276062
+        }
+      },
+      {
+        "node_id": "chunk:mary_ann_sampson_0",
+        "passage_index": 18,
+        "title": "Mary Ann Sampson",
+        "score": 0.04098492005233382,
+        "text": "Mary Ann Sampson\nMary Ann Sampson is an American artist living and working in Ragland, Alabama. Sampson is a book artist, specializing in miniatures and broadsides most of which are \"uniques\" or \"one-of-a-kinds.\" She explores the book as a means of expressing visual ideas that stem from recollections of personal events and experiences that have been derived from living in her rural environment of Alabama.",
+        "score_breakdown": {
+          "dense": 0.05022237130347781,
+          "graph": 0.044542052784736746,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:pendennis_0",
+        "passage_index": 2,
+        "title": "Pendennis",
+        "score": 0.040871308550071025,
+        "text": "Pendennis\nThe History of Pendennis: His Fortunes and Misfortunes, His Friends and His Greatest Enemy (1848–50) is a novel by the English author William Makepeace Thackeray. It is set in 19th-century England, particularly in London. The main hero is a young English gentleman Arthur Pendennis, who is born in the country and sets out for London to seek his place in life and society. The novel took two years for Thackeray to write and, in line with other Thackeray's works, most notably \"Vanity Fair\", it offers an insightful and satiric picture of human character and aristocratic society. The characters include the snobbish social hanger-on Major Pendennis and the tipsy Captain Costigan. Miss Amory and Sir Francis Clavering are somewhat reminiscent of Becky Sharp and Sir Pitt from \"Vanity Fair\".",
+        "score_breakdown": {
+          "dense": 0.05000816142076,
+          "graph": 0.044556065895510075,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:quran_0",
+        "passage_index": 1,
+        "title": "Quran",
+        "score": 0.04086144221992166,
+        "text": "Quran\nOne of the notable authors of esoteric interpretation prior to the 12th century is Sulami (d. 1021) without whose work the majority of very early Sufi commentaries would not have been preserved. Sulami's major commentary is a book named haqaiq al-tafsir (\"Truths of Exegesis\") which is a compilation of commentaries of earlier Sufis. From the 11th century onwards several other works appear, including commentaries by Qushayri (d. 1074), Daylami (d. 1193), Shirazi (d. 1209) and Suhrawardi (d. 1234). These works include material from Sulami's books plus the author's contributions. Many works are written in Persian such as the works of Maybudi (d. 1135) kash al-asrar (\"the unveiling of the secrets\"). Rumi (d. 1273) wrote a vast amount of mystical poetry in his book Mathnawi. Rumi makes heavy use of the Quran in his poetry, a feature that is sometimes omitted in translations of Rumi's work. A large number of Quranic passages can be found in Mathnawi, which some consider a kind of Sufi interpretation of the Quran. Rumi's book is not exceptional for containing citations from and elaboration on the",
+        "score_breakdown": {
+          "dense": 0.04998210613733315,
+          "graph": 0.04457094614796144,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:sara_sidner_0",
+        "passage_index": 12,
+        "title": "Sara Sidner",
+        "score": 0.04085257362456567,
+        "text": "Sara Sidner\nSara Sidner (born May 31, 1972) is an American journalist. She is a correspondent for CNN and CNN International based in Jerusalem starting August 2012, formerly in New Delhi. She currently works in CNN's Los Angeles bureau.",
+        "score_breakdown": {
+          "dense": 0.049992965856599514,
+          "graph": 0.04452147467811979,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:glenda_goss_0",
+        "passage_index": 16,
+        "title": "Glenda Goss",
+        "score": 0.04085049973046849,
+        "text": "Glenda Goss\nGlenda Goss is an American author and music historian whose special interests are music and culture, early modernism, critical editing, and European-American points of cultural contact. Her most notable work has revolved around the life and works of the Finnish composer, Jean Sibelius.",
+        "score_breakdown": {
+          "dense": 0.04998898693265811,
+          "graph": 0.04452185639168842,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:miss_mousie_s_blind_date_0",
+        "passage_index": 14,
+        "title": "Miss Mousie's Blind Date",
+        "score": 0.04084361952309349,
+        "text": "Miss Mousie's Blind Date\nMiss Mousie's Blind Date is a book by Canadian children's book author Tim Beiser, illustrated by Canadian painter Rachel Berman. It was published by Tundra Books in October 2012.",
+        "score_breakdown": {
+          "dense": 0.04998668794204079,
+          "graph": 0.04450313718323685,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jason_sampson_0",
+        "passage_index": 4,
+        "title": "Jason Sampson",
+        "score": 0.040843238322827824,
+        "text": "Jason Sampson\nJason Sampson (born February 21, 1982) is an American professional mixed martial artist currently competing in the flyweight division of Legacy FC. A professional competitor since 2009, Sampson has previously competed for Bellator and Shark Fights.",
+        "score_breakdown": {
+          "dense": 0.049971742324321465,
+          "graph": 0.04452926681483673,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:little_miss_marker_1980_film_0",
+        "passage_index": 11,
+        "title": "Little Miss Marker (1980 film)",
+        "score": 0.040842636040452004,
+        "text": "Little Miss Marker (1980 film)\nLittle Miss Marker is a 1980 American comedy-drama film written and directed by Walter Bernstein, based on a short story by Damon Runyon. It stars Walter Matthau, Tony Curtis, Julie Andrews, Bob Newhart and new arrival Sara Stimson. It is a remake of the 1934 film of the same name starring Shirley Temple and Adolphe Menjou.",
+        "score_breakdown": {
+          "dense": 0.049981041255002405,
+          "graph": 0.0445102111673356,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who is the author of Miss Sara Sampson?",
+        "resolved_sub_question": "Who is the author of Miss Sara Sampson?",
+        "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+        "sentence": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
+        "score": 0.5861133333333333,
+        "source_title": "Miss Sara Sampson",
+        "hop_answer": "Gotthold Ephraim Lessing",
+        "hop_thought": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.",
+        "hop_raw_response": "The evidence states that Miss Sara Sampson is a play by Gotthold Ephraim Lessing.\nAnswer: Gotthold Ephraim Lessing",
+        "evidence_passages": [
+          {
+            "title": "Miss Sara Sampson",
+            "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
+          }
+        ]
+      },
+      {
+        "sub_question": "What are other notable works by this author?",
+        "resolved_sub_question": "What are other notable works by this author? Context: Gotthold Ephraim Lessing.",
+        "sentence_id": "sentence:miss_sara_sampson_0_0_miss_sara_sampson_original_spelling_mi_sara_sampson_is_a_play_by_the_enligh",
+        "sentence": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.",
+        "score": 0.4740509090909091,
+        "source_title": "Miss Sara Sampson",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.",
+        "hop_raw_response": "The context mentions that the author of Miss Sara Sampson is Gotthold Ephraim Lessing, but it does not provide information about his other notable works.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Miss Sara Sampson",
+            "text": "Miss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who is the author of Miss Sara Sampson? => Gotthold Ephraim Lessing (source: Miss Sara Sampson)\n2. What are other notable works by this author? (source: Miss Sara Sampson)\n\nFact hints:\n- Emilia Galotti is a play by Gotthold Ephraim Lessing\n- Miss Sara Sampson is_play_by Gotthold Ephraim Lessing\n- Emilia Galotti premiered in Brunswick\n- Emilia Galotti premiered on 8 March 1772\n- Miss Sara Sampson has_original_spelling Mi Sara Sampson\n\nWikipedia Title: Emilia Galotti\nEmilia Galotti Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\"Braunschweig\" in German). The work is a classic example of German \"bürgerliches Trauerspiel\" (bourgeois tragedy).\n\nWikipedia Title: Miss Sara Sampson\nMiss Sara Sampson (original spelling \"Miß Sara Sampson\") is a play by the Enlightenment philosopher, Gotthold Ephraim Lessing.\n\nWikipedia Title: Little Miss Marker (1980 film)\nIt stars Walter Matthau, Tony Curtis, Julie Andrews, Bob Newhart and new arrival Sara Stimson. It is a remake of the 1934 film of the same name starring Shirley Temple and Adolphe Menjou.\n\nQuestion: What is another notable work made by the author of Miss Sara Sampson?\nDraft Answer: Emilia Galotti\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The author of Miss Sara Sampson is Gotthold Ephraim Lessing. Another notable work by him is Emilia Galotti.",
+  "predicted_answer": "Emilia Galotti",
+  "qa_raw_response": "{\n  \"thought\": \"The author of Miss Sara Sampson is Gotthold Ephraim Lessing. Another notable work by him is Emilia Galotti.\",\n  \"answer\": \"Emilia Galotti\",\n  \"support\": \"Emilia Galotti is a play in five acts by Gotthold Ephraim Lessing (1729–1781), which premiered on 8 March 1772 in Brunswick (\\\"Braunschweig\\\" in German).\"\n}",
+  "sample_metadata": {
+    "sample_id": "2hop__647996_551681",
+    "question": "What is another notable work made by the author of Miss Sara Sampson?",
+    "answer": "Emilia Galotti",
+    "answer_aliases": [],
+    "question_decomposition": [
+      "Miss Sara Sampson >> author",
+      "#1 >> notable work"
+    ]
+  },
+  "answer_match": {
+    "gold_answer": "Emilia Galotti",
+    "gold_aliases": [],
+    "matched": true,
+    "matched_candidates": [
+      "Emilia Galotti"
+    ]
+  }
+}

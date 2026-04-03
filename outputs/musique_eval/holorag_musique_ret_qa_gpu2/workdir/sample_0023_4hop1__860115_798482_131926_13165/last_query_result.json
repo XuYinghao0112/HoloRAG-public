@@ -1,0 +1,1086 @@
+{
+  "query": "What treaty ceded territory to the US extending west to the river by the city sharing a border with Elizabeth Berg's birthplace?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Elliott Bay"
+  ],
+  "raw_query_entities": [
+    "Elizabeth Berg"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Elizabeth Berg",
+      "node_id": "entity:title_anchor_elliott_bay",
+      "resolved_text": "Elliott Bay",
+      "score": 0.766888888888889,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.37777777777777777,
+      "compatibility_score": 0.775,
+      "score_margin": 0.26288888888888895,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "What is the name of the city that shares a border with Elliott Bay?",
+    "What river extends west from this city?",
+    "What treaty ceded territory to the US that extends to this river?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_elliott_bay",
+      "score": 0.8019174522752477,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saint_paul_minnesota_usa",
+      "score": 0.7778763214514175,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:minneapolis",
+      "score": 0.5660940020175913,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saint_paul",
+      "score": 0.5505628278846116,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_minneapolis",
+      "score": 0.5283412227227735,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:britain",
+      "score": 0.288580397614595,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:berg",
+      "score": 0.2753886089583528,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saint_pierre",
+      "score": 0.26457903794617593,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lands_between_the_appalachian_mountains_and_the_mississippi_river",
+      "score": 0.24239161209137436,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:british",
+      "score": 0.24238325719687093,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+      "score": 0.23919639951732619,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:minnesota",
+      "score": 0.23791298876461797,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:berg_born_in_saint_paul_minnesota_usa_sentence_elizabeth_berg_author_0_0_berg_was_born_in_saint_paul_minnesota_usa_and_l",
+      "text": "Berg born in Saint Paul Minnesota USA",
+      "head_id": "entity:berg",
+      "tail_id": "entity:saint_paul_minnesota_usa",
+      "sentence_id": "sentence:elizabeth_berg_author_0_0_berg_was_born_in_saint_paul_minnesota_usa_and_lived_in_boston_prior_to_her_re",
+      "chunk_id": "chunk:elizabeth_berg_author_0",
+      "document_index": 2,
+      "score": 0.2734841777108111
+    },
+    {
+      "fact_id": "fact:british_ceded_lands_between_the_appalachian_mountains_and_the_mississippi_river_sentence_military_history_of_the_united_",
+      "text": "British ceded lands between the Appalachian Mountains and the Mississippi River",
+      "head_id": "entity:british",
+      "tail_id": "entity:lands_between_the_appalachian_mountains_and_the_mississippi_river",
+      "sentence_id": "sentence:military_history_of_the_united_states_0_0_in_the_treaty_of_paris_after_the_revolution_the_british_had_ceded_the_lands_be",
+      "chunk_id": "chunk:military_history_of_the_united_states_0",
+      "document_index": 15,
+      "score": 0.24048366467882917
+    },
+    {
+      "fact_id": "fact:wilkes_land_is_located_in_eastern_antarctica_sentence_wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_in_eastern",
+      "text": "Wilkes Land is located in eastern Antarctica",
+      "head_id": "entity:title_anchor_wilkes_land",
+      "tail_id": "entity:eastern_antarctica",
+      "sentence_id": "sentence:wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_in_eastern_antarctica_formally_claimed",
+      "chunk_id": "chunk:wilkes_land_0",
+      "document_index": 18,
+      "score": 0.23547892157295705
+    },
+    {
+      "fact_id": "fact:minneapolis_lies_on_both_banks_of_the_mississippi_river_sentence_minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_m",
+      "text": "Minneapolis lies on both banks of the Mississippi River",
+      "head_id": "entity:title_anchor_minneapolis",
+      "tail_id": "entity:both_banks_of_the_mississippi_river",
+      "sentence_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+      "chunk_id": "chunk:minneapolis_0",
+      "document_index": 16,
+      "score": 0.2271503997909216
+    },
+    {
+      "fact_id": "fact:minneapolis_adjoins_saint_paul_sentence_minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_nor",
+      "text": "Minneapolis adjoins Saint Paul",
+      "head_id": "entity:title_anchor_minneapolis",
+      "tail_id": "entity:saint_paul",
+      "sentence_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+      "chunk_id": "chunk:minneapolis_0",
+      "document_index": 16,
+      "score": 0.2204825316218133
+    },
+    {
+      "fact_id": "fact:minneapolis_is_located_just_north_of_the_confluence_of_the_mississippi_river_and_the_minnesota_river_sentence_minneapoli",
+      "text": "Minneapolis is located just north of the confluence of the Mississippi River and the Minnesota River",
+      "head_id": "entity:title_anchor_minneapolis",
+      "tail_id": "entity:just_north_of_the_confluence_of_the_mississippi_river_and_the_minnesota_river",
+      "sentence_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+      "chunk_id": "chunk:minneapolis_0",
+      "document_index": 16,
+      "score": 0.14714954049881002
+    },
+    {
+      "fact_id": "fact:wilkes_land_is_part_of_australian_antarctic_territory_sentence_wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_i",
+      "text": "Wilkes Land is part of Australian Antarctic Territory",
+      "head_id": "entity:title_anchor_wilkes_land",
+      "tail_id": "entity:australian_antarctic_territory",
+      "sentence_id": "sentence:wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_in_eastern_antarctica_formally_claimed",
+      "chunk_id": "chunk:wilkes_land_0",
+      "document_index": 18,
+      "score": 0.13381245748589096
+    },
+    {
+      "fact_id": "fact:mexican_american_border_established_at_one_league_south_of_the_southernmost_point_of_san_diego_bay_sentence_san_diego_0_",
+      "text": "Mexican-American border established at one league south of the southernmost point of San Diego Bay",
+      "head_id": "entity:mexican_american_border",
+      "tail_id": "entity:one_league_south_of_the_southernmost_point_of_san_diego_bay",
+      "sentence_id": "sentence:san_diego_0_2_the_mexican_negotiators_of_that_treaty_tried_to_retain_san_diego_as_part_of_mexi",
+      "chunk_id": "chunk:san_diego_0",
+      "document_index": 7,
+      "score": 0.12648236859503192
+    }
+  ],
+  "bridge_entities": [
+    "Seattle"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What is the name of the city that shares a border with Elliott Bay?",
+      "resolved_sub_question": "What is the name of the city that shares a border with Elliott Bay?",
+      "sentence_id": "sentence:elliott_bay_0_0_elliott_bay_is_a_part_of_the_central_basin_region_of_puget_sound_in_the_u_s_sta",
+      "sentence": "Elliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south.",
+      "score": 0.46469819135851176,
+      "source_title": "Elliott Bay",
+      "hop_answer": "Seattle",
+      "hop_thought": "The text mentions that Seattle was founded on Elliott Bay and has grown to encompass it completely.",
+      "hop_raw_response": "The text mentions that Seattle was founded on Elliott Bay and has grown to encompass it completely.\nAnswer: Seattle",
+      "evidence_passages": [
+        {
+          "title": "Elliott Bay",
+          "text": "Elliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south."
+        },
+        {
+          "title": "Elliott Bay",
+          "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States."
+        },
+        {
+          "title": "San Diego",
+          "text": "The Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States."
+        }
+      ]
+    },
+    {
+      "sub_question": "What river extends west from this city?",
+      "resolved_sub_question": "What river extends west from this city? Context: Seattle.",
+      "sentence_id": "sentence:minneapolis_0_3_the_city_and_surrounding_region_is_the_primary_business_center_between_chicago_a",
+      "sentence": "The city and surrounding region is the primary business center between Chicago and Seattle.",
+      "score": 0.4555386980410172,
+      "source_title": "Minneapolis",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context is about Seattle, and the question asks about a river extending west from the city. However, the provided evidence does not mention any river extending west from Seattle. The evidence mentions Elliott Bay, but no river is specified.",
+      "hop_raw_response": "The context is about Seattle, and the question asks about a river extending west from the city. However, the provided evidence does not mention any river extending west from Seattle. The evidence mentions Elliott Bay, but no river is specified.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Minneapolis",
+          "text": "The city and surrounding region is the primary business center between Chicago and Seattle."
+        },
+        {
+          "title": "Minneapolis",
+          "text": "Minneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city."
+        },
+        {
+          "title": "Elliott Bay",
+          "text": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely."
+        }
+      ]
+    },
+    {
+      "sub_question": "What treaty ceded territory to the US that extends to this river?",
+      "resolved_sub_question": "What treaty ceded territory to the US that extends to this river? Context: Seattle.",
+      "sentence_id": "sentence:elliott_bay_0_1_seattle_was_founded_on_this_body_of_water_in_the_1850s_and_has_since_grown_to_en",
+      "sentence": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely.",
+      "score": 0.44490198882766974,
+      "source_title": "Elliott Bay",
+      "hop_answer": "Unknown",
+      "hop_thought": "The context provided does not contain information about any treaty ceding territory to the US that extends to a river related to Seattle. The evidence focuses on Elliott Bay and the city's economic ties but does not mention treaties or territorial cessions.",
+      "hop_raw_response": "The context provided does not contain information about any treaty ceding territory to the US that extends to a river related to Seattle. The evidence focuses on Elliott Bay and the city's economic ties but does not mention treaties or territorial cessions.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Elliott Bay",
+          "text": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely."
+        },
+        {
+          "title": "Elliott Bay",
+          "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States."
+        },
+        {
+          "title": "Minneapolis",
+          "text": "The city and surrounding region is the primary business center between Chicago and Seattle."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_minneapolis",
+      "score": 0.06940825427215783,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saint_paul_minnesota_usa",
+      "score": 0.06154760313689263,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_elliott_bay",
+      "score": 0.054659167367491594,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saint_paul",
+      "score": 0.051868444696591534,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:minneapolis",
+      "score": 0.050740243307695714,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+      "score": 0.039841887195925116,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:berg",
+      "score": 0.03011776156490366,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:elizabeth_berg_author_0_0_berg_was_born_in_saint_paul_minnesota_usa_and_lived_in_boston_prior_to_her_re",
+      "score": 0.02903029296862309,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_in_eastern_antarctica_formally_claimed",
+      "score": 0.027238759783188446,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:british",
+      "score": 0.02600697296253944,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:twin_cities",
+      "score": 0.025506900018237383,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:city_of_minneapolis",
+      "score": 0.02209901134917713,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:minneapolis_and_saint_paul_minnesota_and_the_surrounding_area",
+      "score": 0.02187786765643992,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:elliott_bay_0_0_elliott_bay_is_a_part_of_the_central_basin_region_of_puget_sound_in_the_u_s_sta",
+      "score": 0.021201071500613303,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_wilkes_land",
+      "score": 0.021017150356502694,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saint_pierre",
+      "score": 0.0201363664507646,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:britain",
+      "score": 0.019715046083340036,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:minnesota",
+      "score": 0.01889239883239654,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:both_banks_of_the_mississippi_river",
+      "score": 0.018585947231637173,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:eastern_antarctica",
+      "score": 0.01805524030228816,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:elizabeth_berg_author_0",
+      "passage_index": 2,
+      "title": "Elizabeth Berg (author)",
+      "score": 0.07499925000398913,
+      "text": "Elizabeth Berg (author)\nBerg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago. She studied English at the University of Minnesota, but later ended up with a nursing degree. Her writing career started when she won an essay contest in \"Parents\" magazine. Since her debut novel in 1993, her novels have sold in large numbers and have received several awards and nominations, even though some critics have tagged them as sentimental. She won the New England Book Awards in 1997.",
+      "score_breakdown": {
+        "dense": 0.05039060991950212,
+        "graph": 0.052313019129823744,
+        "fact": 0.21060339206210563
+      }
+    },
+    {
+      "node_id": "chunk:minneapolis_0",
+      "passage_index": 16,
+      "title": "Minneapolis",
+      "score": 0.07383299803590954,
+      "text": "Minneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city.",
+      "score_breakdown": {
+        "dense": 0.05010879674040153,
+        "graph": 0.05370988931852166,
+        "fact": 0.2010679535542146
+      }
+    },
+    {
+      "node_id": "chunk:military_history_of_the_united_states_0",
+      "passage_index": 15,
+      "title": "Military history of the United States",
+      "score": 0.07326014703491297,
+      "text": "Military history of the United States\nIn the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there. Because many of the tribes had fought as allies of the British, the United States compelled tribal leaders to sign away lands in postwar treaties, and began dividing these lands for settlement. This provoked a war in the Northwest Territory in which the U.S. forces performed poorly; the Battle of the Wabash in 1791 was the most severe defeat ever suffered by the United States at the hands of American Indians. President Washington dispatched a newly trained army to the region, which decisively defeated the Indian confederacy at the Battle of Fallen Timbers in 1794.",
+      "score_breakdown": {
+        "dense": 0.05016530801918007,
+        "graph": 0.0503473597171684,
+        "fact": 0.20376679806142275
+      }
+    },
+    {
+      "node_id": "chunk:wilkes_land_0",
+      "passage_index": 18,
+      "title": "Wilkes Land",
+      "score": 0.0731964719604143,
+      "text": "Wilkes Land\nWilkes Land is a large district of land in eastern Antarctica, formally claimed by Australia as part of the Australian Antarctic Territory, though the validity of this claim has been placed for the period of the operation of the Antarctic Treaty, to which Australia is a signatory. It fronts on the southern Indian Ocean between Queen Mary Coast and Adelie Land, extending from Cape Hordern in 100°31' E to Pourquoi Pas Point, in 136°11' E. The region extends as a sector about 2600 km towards the South Pole, with an estimated land area of 2,600,000 km², mostly glaciated. It is further subdivided in the following coastal areas which can also be thought of as sectors extending to the South Pole:",
+      "score_breakdown": {
+        "dense": 0.04979332627800619,
+        "graph": 0.0513257023993305,
+        "fact": 0.20274954525141164
+      }
+    },
+    {
+      "node_id": "chunk:san_diego_0",
+      "passage_index": 7,
+      "title": "San Diego",
+      "score": 0.06986827038950752,
+      "text": "San Diego\nStockton and Kearny went on to recover Los Angeles and force the capitulation of Alta California with the \"Treaty of Cahuenga\" on January 13, 1847. As a result of the Mexican–American War of 1846–48, the territory of Alta California, including San Diego, was ceded to the United States by Mexico, under the terms of the Treaty of Guadalupe Hidalgo in 1848. The Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States.",
+      "score_breakdown": {
+        "dense": 0.050194617710609624,
+        "graph": 0.049964613293484735,
+        "fact": 0.18181231107084533
+      }
+    },
+    {
+      "node_id": "chunk:elliott_bay_0",
+      "passage_index": 19,
+      "title": "Elliott Bay",
+      "score": 0.04320662747033774,
+      "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States.",
+      "score_breakdown": {
+        "dense": 0.05070484600450438,
+        "graph": 0.051063207226201085,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:newgate_education_center_0",
+      "passage_index": 4,
+      "title": "Newgate Education Center",
+      "score": 0.042742239929094435,
+      "text": "Newgate Education Center\nNewgate School is a post-secondary non-profit vocational-technical school for residents of Minneapolis and Saint Paul, Minnesota and the surrounding area. Newgate provides tuition-free automotive vocational training and technical career placement opportunities for low income adults. It offers professional automotive technical certification in three areas: Auto-body Repair, Auto mechanics and Detailing. Graduates are qualified to work as career apprentices in the auto services industry. Newgate’s practical, hands-on approach to teaching technical skills is highly successful with students who struggle in traditional educational settings or for whom English is a second language. In 1981, Newgate pioneered the concept of using the sales of car donations as the single funding source for the school, thereby eliminating the dependence on tax-based government funding for support. Newgate began its Wheels for Women Program in 1996. Donated cars are repaired by the students and provided at no cost to single moms referred by social service agencies like the Jeremiah Program or Lutheran Social Services. Newgate provides approximately 50 cars per year through the Wheels program. In 2004, with bonds financed by the City of Minneapolis, the",
+      "score_breakdown": {
+        "dense": 0.049776404490256575,
+        "graph": 0.05121739153151106,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:french_and_indian_war_0",
+      "passage_index": 13,
+      "title": "French and Indian War",
+      "score": 0.04252510433864222,
+      "text": "French and Indian War\nThe outcome was one of the most significant developments in a century of Anglo - French conflict. France ceded to Great Britain its territory east of the Mississippi. It ceded French Louisiana west of the Mississippi River (including New Orleans) to its ally Spain in compensation for Spain's loss to Britain of Florida. (Spain had ceded Florida to Britain in exchange for the return of Havana, Cuba.) France's colonial presence north of the Caribbean was reduced to the islands of Saint Pierre and Miquelon, confirming Great Britain's position as the dominant colonial power in eastern North America.",
+      "score_breakdown": {
+        "dense": 0.049992550586227175,
+        "graph": 0.05009733838739091,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:american_indian_wars_0",
+      "passage_index": 0,
+      "title": "American Indian Wars",
+      "score": 0.04239958907125404,
+      "text": "American Indian Wars\nWhen the British made peace with the Americans in the Treaty of Paris (1783), they ceded a vast amount of Native American territory (without the consent of the indigenous peoples) to the United States. The United States treated the Native Americans who had fought with the British as enemy allies, a conquered people who had lost their land. The federal government of the United States was eager to expand, and the national government did so by purchasing Native American land in treaties and through warfare.",
+      "score_breakdown": {
+        "dense": 0.050151021494756504,
+        "graph": 0.0493884241637932,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:newgate_education_center_1",
+      "passage_index": 4,
+      "title": "Newgate Education Center",
+      "score": 0.042346261726964714,
+      "text": "Newgate Education Center\nno cost to single moms referred by social service agencies like the Jeremiah Program or Lutheran Social Services. Newgate provides approximately 50 cars per year through the Wheels program. In 2004, with bonds financed by the City of Minneapolis, the school constructed a new modern training facility and expanded its Auto Mechanics Training program.",
+      "score_breakdown": {
+        "dense": 0.0497575278754447,
+        "graph": 0.04993207131823377,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_minneapolis",
+        "score": 0.06940825427215783,
+        "text": "Minneapolis",
+        "metadata": {
+          "canonical_name": "Minneapolis",
+          "aliases": [
+            "Minneapolis"
+          ],
+          "surface_forms": [
+            "Minneapolis"
+          ],
+          "title_anchor": "Minneapolis"
+        }
+      },
+      {
+        "node_id": "entity:saint_paul_minnesota_usa",
+        "score": 0.06154760313689263,
+        "text": "Saint Paul Minnesota USA",
+        "metadata": {
+          "canonical_name": "Saint Paul Minnesota USA",
+          "aliases": [
+            "SPMU",
+            "Saint Paul Minnesota",
+            "Saint Paul Minnesota USA"
+          ],
+          "surface_forms": [
+            "SPMU",
+            "Saint Paul Minnesota",
+            "Saint Paul Minnesota USA"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_elliott_bay",
+        "score": 0.054659167367491594,
+        "text": "Elliott Bay",
+        "metadata": {
+          "canonical_name": "Elliott Bay",
+          "aliases": [
+            "EB",
+            "Elliott Bay"
+          ],
+          "surface_forms": [
+            "EB",
+            "Elliott Bay"
+          ],
+          "title_anchor": "Elliott Bay"
+        }
+      },
+      {
+        "node_id": "entity:saint_paul",
+        "score": 0.051868444696591534,
+        "text": "Saint Paul",
+        "metadata": {
+          "canonical_name": "Saint Paul",
+          "aliases": [
+            "SP",
+            "Saint Paul"
+          ],
+          "surface_forms": [
+            "SP",
+            "Saint Paul"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:minneapolis",
+        "score": 0.050740243307695714,
+        "text": "Minneapolis",
+        "metadata": {
+          "canonical_name": "Minneapolis",
+          "aliases": [
+            "Minneapolis"
+          ],
+          "surface_forms": [
+            "Minneapolis"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:minneapolis_0_0_minneapolis_lies_on_both_banks_of_the_mississippi_river_just_north_of_the_river",
+        "score": 0.039841887195925116,
+        "text": "Minneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital.",
+        "metadata": {
+          "title": "Minneapolis",
+          "chunk_id": "chunk:minneapolis_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Minneapolis",
+              "relation": "lies on",
+              "tail": "both banks of the Mississippi River"
+            },
+            {
+              "head": "Minneapolis",
+              "relation": "is located",
+              "tail": "just north of the confluence of the Mississippi River and the Minnesota River"
+            },
+            {
+              "head": "Minneapolis",
+              "relation": "adjoins",
+              "tail": "Saint Paul"
+            }
+          ],
+          "entities": [
+            "Minneapolis",
+            "Mississippi River",
+            "Minnesota River",
+            "Saint Paul"
+          ],
+          "entity_ids": [
+            "entity:both_banks_of_the_mississippi_river",
+            "entity:just_north_of_the_confluence_of_the_mississippi_river_and_the_minnesota_river",
+            "entity:minnesota_river",
+            "entity:mississippi_river",
+            "entity:saint_paul",
+            "entity:title_anchor_minneapolis"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:elizabeth_berg_author_0_0_berg_was_born_in_saint_paul_minnesota_usa_and_lived_in_boston_prior_to_her_re",
+        "score": 0.02903029296862309,
+        "text": "Berg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago.",
+        "metadata": {
+          "title": "Elizabeth Berg (author)",
+          "chunk_id": "chunk:elizabeth_berg_author_0",
+          "sentence_index": 0,
+          "document_index": 2,
+          "triples": [
+            {
+              "head": "Berg",
+              "relation": "born in",
+              "tail": "Saint Paul Minnesota USA"
+            },
+            {
+              "head": "Berg",
+              "relation": "lived in",
+              "tail": "Boston"
+            },
+            {
+              "head": "Berg",
+              "relation": "resided in",
+              "tail": "Chicago"
+            }
+          ],
+          "entities": [
+            "Berg",
+            "Saint Paul Minnesota USA",
+            "Boston",
+            "Chicago"
+          ],
+          "entity_ids": [
+            "entity:berg",
+            "entity:boston",
+            "entity:chicago",
+            "entity:saint_paul_minnesota_usa"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:wilkes_land_0_0_wilkes_land_is_a_large_district_of_land_in_eastern_antarctica_formally_claimed",
+        "score": 0.027238759783188446,
+        "text": "Wilkes Land is a large district of land in eastern Antarctica, formally claimed by Australia as part of the Australian Antarctic Territory, though the validity of this claim has been placed for the period of the operation of the Antarctic Treaty, to which Australia is a signatory.",
+        "metadata": {
+          "title": "Wilkes Land",
+          "chunk_id": "chunk:wilkes_land_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Wilkes Land",
+              "relation": "is located in",
+              "tail": "eastern Antarctica"
+            },
+            {
+              "head": "Wilkes Land",
+              "relation": "is claimed by",
+              "tail": "Australia"
+            },
+            {
+              "head": "Wilkes Land",
+              "relation": "is part of",
+              "tail": "Australian Antarctic Territory"
+            },
+            {
+              "head": "Australian claim",
+              "relation": "validity placed",
+              "tail": "during Antarctic Treaty operation"
+            },
+            {
+              "head": "Australia",
+              "relation": "is signatory to",
+              "tail": "Antarctic Treaty"
+            }
+          ],
+          "entities": [
+            "Wilkes Land",
+            "eastern Antarctica",
+            "Australia",
+            "Australian Antarctic Territory",
+            "Antarctic Treaty"
+          ],
+          "entity_ids": [
+            "entity:antarctic_treaty",
+            "entity:australia",
+            "entity:australian_antarctic_territory",
+            "entity:australian_claim",
+            "entity:during_antarctic_treaty_operation",
+            "entity:eastern_antarctica",
+            "entity:title_anchor_wilkes_land"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:elliott_bay_0_0_elliott_bay_is_a_part_of_the_central_basin_region_of_puget_sound_in_the_u_s_sta",
+        "score": 0.021201071500613303,
+        "text": "Elliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south.",
+        "metadata": {
+          "title": "Elliott Bay",
+          "chunk_id": "chunk:elliott_bay_0",
+          "sentence_index": 0,
+          "document_index": 19,
+          "triples": [
+            {
+              "head": "Elliott Bay",
+              "relation": "is part of",
+              "tail": "Central Basin region of Puget Sound"
+            },
+            {
+              "head": "Central Basin region of Puget Sound",
+              "relation": "located in",
+              "tail": "U S state of Washington"
+            },
+            {
+              "head": "Elliott Bay",
+              "relation": "extends between",
+              "tail": "West Point and Alki Point"
+            }
+          ],
+          "entities": [
+            "Elliott Bay",
+            "Central Basin region of Puget Sound",
+            "U S state of Washington",
+            "West Point",
+            "Alki Point"
+          ],
+          "entity_ids": [
+            "entity:alki_point",
+            "entity:central_basin_region_of_puget_sound",
+            "entity:title_anchor_elliott_bay",
+            "entity:u_s_state_of_washington",
+            "entity:west_point",
+            "entity:west_point_and_alki_point"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:minneapolis_0",
+        "score": 0.011832850934082189,
+        "text": "Minneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city.",
+        "metadata": {
+          "title": "Minneapolis",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:6_fortune_500_companies",
+            "entity:as",
+            "entity:both_banks_of_the_mississippi_river",
+            "entity:byway",
+            "entity:chain",
+            "entity:chicago",
+            "entity:fifth_largest_hub_of_major_corporate_headquarters_in_the_united_states",
+            "entity:fortune_500_companies",
+            "entity:grand_rounds_national_scenic",
+            "entity:just_north_of_the_confluence_of_the_mississippi_river_and_the_minnesota_river",
+            "entity:lakes",
+            "entity:minnesota_river",
+            "entity:mississippi_river",
+            "entity:saint_paul",
+            "entity:seattle",
+            "entity:title_anchor_minneapolis",
+            "entity:twin_cities"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:wilkes_land_0",
+        "score": 0.006830559231708486,
+        "text": "Wilkes Land\nWilkes Land is a large district of land in eastern Antarctica, formally claimed by Australia as part of the Australian Antarctic Territory, though the validity of this claim has been placed for the period of the operation of the Antarctic Treaty, to which Australia is a signatory. It fronts on the southern Indian Ocean between Queen Mary Coast and Adelie Land, extending from Cape Hordern in 100°31' E to Pourquoi Pas Point, in 136°11' E. The region extends as a sector about 2600 km towards the South Pole, with an estimated land area of 2,600,000 km², mostly glaciated. It is further subdivided in the following coastal areas which can also be thought of as sectors extending to the South Pole:",
+        "metadata": {
+          "title": "Wilkes Land",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:100_31_e",
+            "entity:136_11_e",
+            "entity:adelie_land",
+            "entity:antarctic_treaty",
+            "entity:australia",
+            "entity:australian_antarctic_territory",
+            "entity:australian_claim",
+            "entity:cape_hordern",
+            "entity:during_antarctic_treaty_operation",
+            "entity:eastern_antarctica",
+            "entity:indian_ocean",
+            "entity:pourquoi_pas_point",
+            "entity:queen_mary_coast",
+            "entity:south_pole",
+            "entity:title_anchor_wilkes_land"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:elizabeth_berg_author_0",
+        "score": 0.0063197686185243705,
+        "text": "Elizabeth Berg (author)\nBerg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago. She studied English at the University of Minnesota, but later ended up with a nursing degree. Her writing career started when she won an essay contest in \"Parents\" magazine. Since her debut novel in 1993, her novels have sold in large numbers and have received several awards and nominations, even though some critics have tagged them as sentimental. She won the New England Book Awards in 1997.",
+        "metadata": {
+          "title": "Elizabeth Berg (author)",
+          "chunk_index": 0,
+          "document_index": 2,
+          "entity_ids": [
+            "entity:berg",
+            "entity:boston",
+            "entity:chicago",
+            "entity:english",
+            "entity:minnesota",
+            "entity:new_england_book_awards",
+            "entity:parents_magazine",
+            "entity:saint_paul_minnesota_usa",
+            "entity:since",
+            "entity:university",
+            "entity:university_of_minnesota"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:military_history_of_the_united_states_0",
+        "score": 0.0048577069159677294,
+        "text": "Military history of the United States\nIn the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there. Because many of the tribes had fought as allies of the British, the United States compelled tribal leaders to sign away lands in postwar treaties, and began dividing these lands for settlement. This provoked a war in the Northwest Territory in which the U.S. forces performed poorly; the Battle of the Wabash in 1791 was the most severe defeat ever suffered by the United States at the hands of American Indians. President Washington dispatched a newly trained army to the region, which decisively defeated the Indian confederacy at the Battle of Fallen Timbers in 1794.",
+        "metadata": {
+          "title": "Military history of the United States",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:american_indians",
+            "entity:appalachian_mountains",
+            "entity:battle",
+            "entity:battle_of_fallen_timbers",
+            "entity:battle_of_the_wabash",
+            "entity:because",
+            "entity:british",
+            "entity:cherokee",
+            "entity:choctaw",
+            "entity:fallen_timbers",
+            "entity:indian",
+            "entity:indian_confederacy",
+            "entity:lands_between_the_appalachian_mountains_and_the_mississippi_river",
+            "entity:mississippi_river",
+            "entity:northwest_territory",
+            "entity:president_washington",
+            "entity:revolution",
+            "entity:shawnee",
+            "entity:shawnee_cherokee_choctaw_and_other_smaller_tribes",
+            "entity:treaty_of_paris",
+            "entity:u_s_forces",
+            "entity:wabash"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Elizabeth Berg (author)\nElizabeth Berg (author)\nBerg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago. She studied English at the University of Minnesota, but later ended up with a nursing degree. Her writing career started when she won an essay contest in \"Parents\" magazine. Since her debut novel in 1993, her novels have sold in large numbers and have received several awards and nominations, even though some critics have tagged them as sentimental. She won the New England Book Awards in 1997.\n\nMinneapolis\nMinneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city.\n\nMilitary history of the United States\nMilitary history of the United States\nIn the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there. Because many of the tribes had fought as allies of the British, the United States compelled tribal leaders to sign away lands in postwar treaties, and began dividing these lands for settlement. This provoked a war in the Northwest Territory in which the U.S. forces performed poorly; the Battle of the Wabash in 1791 was the most severe defeat ever suffered by the United States at the hands of American Indians. President Washington dispatched a newly trained army to the region, which decisively defeated the Indian confederacy at the Battle of Fallen Timbers in 1794.\n\nWilkes Land\nWilkes Land\nWilkes Land is a large district of land in eastern Antarctica, formally claimed by Australia as part of the Australian Antarctic Territory, though the validity of this claim has been placed for the period of the operation of the Antarctic Treaty, to which Australia is a signatory. It fronts on the southern Indian Ocean between Queen Mary Coast and Adelie Land, extending from Cape Hordern in 100°31' E to Pourquoi Pas Point, in 136°11' E. The region extends as a sector about 2600 km towards the South Pole, with an estimated land area of 2,600,000 km², mostly glaciated. It is further subdivided in the following coastal areas which can also be thought of as sectors extending to the South Pole:\n\nSan Diego\nSan Diego\nStockton and Kearny went on to recover Los Angeles and force the capitulation of Alta California with the \"Treaty of Cahuenga\" on January 13, 1847. As a result of the Mexican–American War of 1846–48, the territory of Alta California, including San Diego, was ceded to the United States by Mexico, under the terms of the Treaty of Guadalupe Hidalgo in 1848. The Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States.\n\nElliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south.\n\nElliott Bay\nElliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States.\n\nSan Diego\nThe Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States.\n\nMinneapolis\nThe city and surrounding region is the primary business center between Chicago and Seattle.\n\nElliott Bay\nSeattle was founded on this body of water in the 1850s and has since grown to encompass it completely.\n\nNewgate Education Center\nNewgate Education Center\nNewgate School is a post-secondary non-profit vocational-technical school for residents of Minneapolis and Saint Paul, Minnesota and the surrounding area. Newgate provides tuition-free automotive vocational training and technical career placement opportunities for low income adults. It offers professional automotive technical certification in three areas: Auto-body Repair, Auto mechanics and Detailing. Graduates are qualified to work as career apprentices in the auto services industry. Newgate’s practical, hands-on approach to teaching technical skills is highly successful with students who struggle in traditional educational settings or for whom English is a second language. In 1981, Newgate pioneered the concept of using the sales of car donations as the single funding source for the school, thereby eliminating the dependence on tax-based government funding for support. Newgate began its Wheels for Women Program in 1996. Donated cars are repaired by the students and provided at no cost to single moms referred by social service agencies like the Jeremiah Program or Lutheran Social Services. Newgate provides approximately 50 cars per year through the Wheels program. In 2004, with bonds financed by the City of Minneapolis, the",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:elizabeth_berg_author_0",
+        "passage_index": 2,
+        "title": "Elizabeth Berg (author)",
+        "score": 0.07499925000398913,
+        "text": "Elizabeth Berg (author)\nBerg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago. She studied English at the University of Minnesota, but later ended up with a nursing degree. Her writing career started when she won an essay contest in \"Parents\" magazine. Since her debut novel in 1993, her novels have sold in large numbers and have received several awards and nominations, even though some critics have tagged them as sentimental. She won the New England Book Awards in 1997.",
+        "score_breakdown": {
+          "dense": 0.05039060991950212,
+          "graph": 0.052313019129823744,
+          "fact": 0.21060339206210563
+        }
+      },
+      {
+        "node_id": "chunk:minneapolis_0",
+        "passage_index": 16,
+        "title": "Minneapolis",
+        "score": 0.07383299803590954,
+        "text": "Minneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city.",
+        "score_breakdown": {
+          "dense": 0.05010879674040153,
+          "graph": 0.05370988931852166,
+          "fact": 0.2010679535542146
+        }
+      },
+      {
+        "node_id": "chunk:military_history_of_the_united_states_0",
+        "passage_index": 15,
+        "title": "Military history of the United States",
+        "score": 0.07326014703491297,
+        "text": "Military history of the United States\nIn the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there. Because many of the tribes had fought as allies of the British, the United States compelled tribal leaders to sign away lands in postwar treaties, and began dividing these lands for settlement. This provoked a war in the Northwest Territory in which the U.S. forces performed poorly; the Battle of the Wabash in 1791 was the most severe defeat ever suffered by the United States at the hands of American Indians. President Washington dispatched a newly trained army to the region, which decisively defeated the Indian confederacy at the Battle of Fallen Timbers in 1794.",
+        "score_breakdown": {
+          "dense": 0.05016530801918007,
+          "graph": 0.0503473597171684,
+          "fact": 0.20376679806142275
+        }
+      },
+      {
+        "node_id": "chunk:wilkes_land_0",
+        "passage_index": 18,
+        "title": "Wilkes Land",
+        "score": 0.0731964719604143,
+        "text": "Wilkes Land\nWilkes Land is a large district of land in eastern Antarctica, formally claimed by Australia as part of the Australian Antarctic Territory, though the validity of this claim has been placed for the period of the operation of the Antarctic Treaty, to which Australia is a signatory. It fronts on the southern Indian Ocean between Queen Mary Coast and Adelie Land, extending from Cape Hordern in 100°31' E to Pourquoi Pas Point, in 136°11' E. The region extends as a sector about 2600 km towards the South Pole, with an estimated land area of 2,600,000 km², mostly glaciated. It is further subdivided in the following coastal areas which can also be thought of as sectors extending to the South Pole:",
+        "score_breakdown": {
+          "dense": 0.04979332627800619,
+          "graph": 0.0513257023993305,
+          "fact": 0.20274954525141164
+        }
+      },
+      {
+        "node_id": "chunk:san_diego_0",
+        "passage_index": 7,
+        "title": "San Diego",
+        "score": 0.06986827038950752,
+        "text": "San Diego\nStockton and Kearny went on to recover Los Angeles and force the capitulation of Alta California with the \"Treaty of Cahuenga\" on January 13, 1847. As a result of the Mexican–American War of 1846–48, the territory of Alta California, including San Diego, was ceded to the United States by Mexico, under the terms of the Treaty of Guadalupe Hidalgo in 1848. The Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States.",
+        "score_breakdown": {
+          "dense": 0.050194617710609624,
+          "graph": 0.049964613293484735,
+          "fact": 0.18181231107084533
+        }
+      },
+      {
+        "node_id": "chunk:elliott_bay_0",
+        "passage_index": 19,
+        "title": "Elliott Bay",
+        "score": 0.04320662747033774,
+        "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States.",
+        "score_breakdown": {
+          "dense": 0.05070484600450438,
+          "graph": 0.051063207226201085,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:newgate_education_center_0",
+        "passage_index": 4,
+        "title": "Newgate Education Center",
+        "score": 0.042742239929094435,
+        "text": "Newgate Education Center\nNewgate School is a post-secondary non-profit vocational-technical school for residents of Minneapolis and Saint Paul, Minnesota and the surrounding area. Newgate provides tuition-free automotive vocational training and technical career placement opportunities for low income adults. It offers professional automotive technical certification in three areas: Auto-body Repair, Auto mechanics and Detailing. Graduates are qualified to work as career apprentices in the auto services industry. Newgate’s practical, hands-on approach to teaching technical skills is highly successful with students who struggle in traditional educational settings or for whom English is a second language. In 1981, Newgate pioneered the concept of using the sales of car donations as the single funding source for the school, thereby eliminating the dependence on tax-based government funding for support. Newgate began its Wheels for Women Program in 1996. Donated cars are repaired by the students and provided at no cost to single moms referred by social service agencies like the Jeremiah Program or Lutheran Social Services. Newgate provides approximately 50 cars per year through the Wheels program. In 2004, with bonds financed by the City of Minneapolis, the",
+        "score_breakdown": {
+          "dense": 0.049776404490256575,
+          "graph": 0.05121739153151106,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:french_and_indian_war_0",
+        "passage_index": 13,
+        "title": "French and Indian War",
+        "score": 0.04252510433864222,
+        "text": "French and Indian War\nThe outcome was one of the most significant developments in a century of Anglo - French conflict. France ceded to Great Britain its territory east of the Mississippi. It ceded French Louisiana west of the Mississippi River (including New Orleans) to its ally Spain in compensation for Spain's loss to Britain of Florida. (Spain had ceded Florida to Britain in exchange for the return of Havana, Cuba.) France's colonial presence north of the Caribbean was reduced to the islands of Saint Pierre and Miquelon, confirming Great Britain's position as the dominant colonial power in eastern North America.",
+        "score_breakdown": {
+          "dense": 0.049992550586227175,
+          "graph": 0.05009733838739091,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:american_indian_wars_0",
+        "passage_index": 0,
+        "title": "American Indian Wars",
+        "score": 0.04239958907125404,
+        "text": "American Indian Wars\nWhen the British made peace with the Americans in the Treaty of Paris (1783), they ceded a vast amount of Native American territory (without the consent of the indigenous peoples) to the United States. The United States treated the Native Americans who had fought with the British as enemy allies, a conquered people who had lost their land. The federal government of the United States was eager to expand, and the national government did so by purchasing Native American land in treaties and through warfare.",
+        "score_breakdown": {
+          "dense": 0.050151021494756504,
+          "graph": 0.0493884241637932,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:newgate_education_center_1",
+        "passage_index": 4,
+        "title": "Newgate Education Center",
+        "score": 0.042346261726964714,
+        "text": "Newgate Education Center\nno cost to single moms referred by social service agencies like the Jeremiah Program or Lutheran Social Services. Newgate provides approximately 50 cars per year through the Wheels program. In 2004, with bonds financed by the City of Minneapolis, the school constructed a new modern training facility and expanded its Auto Mechanics Training program.",
+        "score_breakdown": {
+          "dense": 0.0497575278754447,
+          "graph": 0.04993207131823377,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What is the name of the city that shares a border with Elliott Bay?",
+        "resolved_sub_question": "What is the name of the city that shares a border with Elliott Bay?",
+        "sentence_id": "sentence:elliott_bay_0_0_elliott_bay_is_a_part_of_the_central_basin_region_of_puget_sound_in_the_u_s_sta",
+        "sentence": "Elliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south.",
+        "score": 0.46469819135851176,
+        "source_title": "Elliott Bay",
+        "hop_answer": "Seattle",
+        "hop_thought": "The text mentions that Seattle was founded on Elliott Bay and has grown to encompass it completely.",
+        "hop_raw_response": "The text mentions that Seattle was founded on Elliott Bay and has grown to encompass it completely.\nAnswer: Seattle",
+        "evidence_passages": [
+          {
+            "title": "Elliott Bay",
+            "text": "Elliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south."
+          },
+          {
+            "title": "Elliott Bay",
+            "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States."
+          },
+          {
+            "title": "San Diego",
+            "text": "The Mexican negotiators of that treaty tried to retain San Diego as part of Mexico, but the Americans insisted that San Diego was \"for every commercial purpose of nearly equal importance to us with that of San Francisco,\" and the Mexican-American border was eventually established to be one league south of the southernmost point of San Diego Bay, so as to include the entire bay within the United States."
+          }
+        ]
+      },
+      {
+        "sub_question": "What river extends west from this city?",
+        "resolved_sub_question": "What river extends west from this city? Context: Seattle.",
+        "sentence_id": "sentence:minneapolis_0_3_the_city_and_surrounding_region_is_the_primary_business_center_between_chicago_a",
+        "sentence": "The city and surrounding region is the primary business center between Chicago and Seattle.",
+        "score": 0.4555386980410172,
+        "source_title": "Minneapolis",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context is about Seattle, and the question asks about a river extending west from the city. However, the provided evidence does not mention any river extending west from Seattle. The evidence mentions Elliott Bay, but no river is specified.",
+        "hop_raw_response": "The context is about Seattle, and the question asks about a river extending west from the city. However, the provided evidence does not mention any river extending west from Seattle. The evidence mentions Elliott Bay, but no river is specified.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Minneapolis",
+            "text": "The city and surrounding region is the primary business center between Chicago and Seattle."
+          },
+          {
+            "title": "Minneapolis",
+            "text": "Minneapolis\nMinneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city is abundantly rich in water, with 13 lakes, wetlands, the Mississippi River, creeks and waterfalls; many connected by parkways in the Chain of Lakes and the Grand Rounds National Scenic Byway. It was once the world's flour milling capital and a hub for timber. The city and surrounding region is the primary business center between Chicago and Seattle. As of 2018, Minneapolis was home to 6 Fortune 500 companies, and the Twin Cities were the fifth-largest hub of major corporate headquarters in the United States. As an integral link to the global economy, Minneapolis is categorized as a global city."
+          },
+          {
+            "title": "Elliott Bay",
+            "text": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely."
+          }
+        ]
+      },
+      {
+        "sub_question": "What treaty ceded territory to the US that extends to this river?",
+        "resolved_sub_question": "What treaty ceded territory to the US that extends to this river? Context: Seattle.",
+        "sentence_id": "sentence:elliott_bay_0_1_seattle_was_founded_on_this_body_of_water_in_the_1850s_and_has_since_grown_to_en",
+        "sentence": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely.",
+        "score": 0.44490198882766974,
+        "source_title": "Elliott Bay",
+        "hop_answer": "Unknown",
+        "hop_thought": "The context provided does not contain information about any treaty ceding territory to the US that extends to a river related to Seattle. The evidence focuses on Elliott Bay and the city's economic ties but does not mention treaties or territorial cessions.",
+        "hop_raw_response": "The context provided does not contain information about any treaty ceding territory to the US that extends to a river related to Seattle. The evidence focuses on Elliott Bay and the city's economic ties but does not mention treaties or territorial cessions.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Elliott Bay",
+            "text": "Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely."
+          },
+          {
+            "title": "Elliott Bay",
+            "text": "Elliott Bay\nElliott Bay is a part of the Central Basin region of Puget Sound in the U.S. state of Washington that extends southeastward between West Point in the north and Alki Point in the south. Seattle was founded on this body of water in the 1850s and has since grown to encompass it completely. The waterway it provides to the Pacific Ocean has served as a key element of the city's economy, enabling the Port of Seattle to become one of the busiest ports in the United States."
+          },
+          {
+            "title": "Minneapolis",
+            "text": "The city and surrounding region is the primary business center between Chicago and Seattle."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What is the name of the city that shares a border with Elliott Bay? => Seattle (source: Elliott Bay)\n2. What river extends west from this city? (source: Minneapolis)\n3. What treaty ceded territory to the US that extends to this river? (source: Elliott Bay)\n\nFact hints:\n- Minneapolis lies on both banks of the Mississippi River\n- Minneapolis adjoins Saint Paul\n- Minneapolis is located just north of the confluence of the Mississippi River and the Minnesota River\n\nWikipedia Title: Minneapolis\nMinneapolis Minneapolis lies on both banks of the Mississippi River, just north of the river's confluence with the Minnesota River, and adjoins Saint Paul, the state's capital. The city and surrounding region is the primary business center between Chicago and Seattle.\n\nWikipedia Title: Elliott Bay\nSeattle was founded on this body of water in the 1850s and has since grown to encompass it completely.\n\nWikipedia Title: Military history of the United States\nMilitary history of the United States In the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there. This provoked a war in the Northwest Territory in which the U.S. forces performed poorly; the Battle of the Wabash in 1791 was the most severe defeat ever suffered by the United States at the hands of American Indians.\n\nWikipedia Title: Newgate Education Center\nNewgate Education Center Newgate School is a post-secondary non-profit vocational-technical school for residents of Minneapolis and Saint Paul, Minnesota and the surrounding area. In 2004, with bonds financed by the City of Minneapolis, the\n\nWikipedia Title: Elizabeth Berg (author)\nShe won the New England Book Awards in 1997. Elizabeth Berg (author) Berg was born in Saint Paul, Minnesota, USA, and lived in Boston prior to her residence in Chicago.\n\nQuestion: What treaty ceded territory to the US extending west to the river by the city sharing a border with Elizabeth Berg's birthplace?\nDraft Answer: Treaty of Paris\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The city sharing a border with Elliott Bay is Seattle. The river extending west from Seattle is not mentioned, but the question seems to refer to the Mississippi River, which is west of Minneapolis, not Seattle. However, the Treaty of Paris ceded land to the US up to the Mississippi River.",
+  "predicted_answer": "Treaty of Paris",
+  "qa_raw_response": "{\n  \"thought\": \"The city sharing a border with Elliott Bay is Seattle. The river extending west from Seattle is not mentioned, but the question seems to refer to the Mississippi River, which is west of Minneapolis, not Seattle. However, the Treaty of Paris ceded land to the US up to the Mississippi River.\",\n  \"answer\": \"Treaty of Paris\",\n  \"support\": \"In the Treaty of Paris after the Revolution, the British had ceded the lands between the Appalachian Mountains and the Mississippi River to the United States, without consulting the Shawnee, Cherokee, Choctaw and other smaller tribes who lived there.\"\n}"
+}

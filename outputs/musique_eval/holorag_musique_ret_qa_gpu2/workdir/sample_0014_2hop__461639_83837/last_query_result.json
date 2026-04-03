@@ -1,0 +1,978 @@
+{
+  "query": "Who sing \"Home Alone Tonight\" with the performer of \"country Man\"?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Home Alone Tonight",
+    "Country Man"
+  ],
+  "raw_query_entities": [
+    "Home Alone Tonight",
+    "country Man"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Home Alone Tonight",
+      "node_id": "entity:title_anchor_home_alone_tonight",
+      "resolved_text": "Home Alone Tonight",
+      "score": 0.9174,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.9358333333333333,
+      "score_margin": 0.25326666666666664,
+      "confident": true
+    },
+    {
+      "mention": "country Man",
+      "node_id": "entity:title_anchor_country_man",
+      "resolved_text": "Country Man",
+      "score": 0.8430000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.9358333333333333,
+      "score_margin": 0.17633333333333334,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who performs the song 'Country Man'?",
+    "Who sings 'Home Alone Tonight' with the performer of 'Country Man'?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:title_anchor_home_alone_tonight",
+      "score": 1.037284822319647,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_country_man",
+      "score": 1.0232619627415946,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:karen_fairchild",
+      "score": 0.32120788617784607,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "score": 0.28375545324281437,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_you_re_my_home",
+      "score": 0.22520237186122663,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:billy_joel",
+      "score": 0.22519406771397776,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:luke_bryan",
+      "score": 0.22120249044778156,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kill_the_lights",
+      "score": 0.17121178735804465,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:home_alone_tonight_0",
+      "score": 0.16144868214931393,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "sentence:you_re_my_home_0_0_you_re_my_home_is_a_single_by_billy_joel",
+      "score": 0.09098844065863335,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "sentence:country_man_0_0_country_man_is_a_song_co_written_and_recorded_by_american_country_music_artist",
+      "score": 0.09020319011724207,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "chunk:country_man_0",
+      "score": 0.06365158265284948,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:home_alone_tonight_is_a_duet_with_karen_fairchild_sentence_home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_",
+      "text": "Home Alone Tonight is a duet with Karen Fairchild",
+      "head_id": "entity:title_anchor_home_alone_tonight",
+      "tail_id": "entity:karen_fairchild",
+      "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "chunk_id": "chunk:home_alone_tonight_0",
+      "document_index": 13,
+      "score": 0.31887240009399476
+    },
+    {
+      "fact_id": "fact:you_re_my_home_is_a_single_by_billy_joel_sentence_you_re_my_home_0_0_you_re_my_home_is_a_single_by_billy_joel",
+      "text": "You're My Home is a single by Billy Joel",
+      "head_id": "entity:title_anchor_you_re_my_home",
+      "tail_id": "entity:billy_joel",
+      "sentence_id": "sentence:you_re_my_home_0_0_you_re_my_home_is_a_single_by_billy_joel",
+      "chunk_id": "chunk:you_re_my_home_0",
+      "document_index": 17,
+      "score": 0.22286067091438902
+    },
+    {
+      "fact_id": "fact:country_man_is_a_song_co_written_and_recorded_by_luke_bryan_sentence_country_man_0_0_country_man_is_a_song_co_written_an",
+      "text": "Country Man is a song co-written and recorded by Luke Bryan",
+      "head_id": "entity:title_anchor_country_man",
+      "tail_id": "entity:luke_bryan",
+      "sentence_id": "sentence:country_man_0_0_country_man_is_a_song_co_written_and_recorded_by_american_country_music_artist",
+      "chunk_id": "chunk:country_man_0",
+      "document_index": 16,
+      "score": 0.22086735892997014
+    },
+    {
+      "fact_id": "fact:home_alone_tonight_is_a_song_recorded_by_luke_bryan_sentence_home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorde",
+      "text": "Home Alone Tonight is a song recorded by Luke Bryan",
+      "head_id": "entity:title_anchor_home_alone_tonight",
+      "tail_id": "entity:luke_bryan",
+      "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "chunk_id": "chunk:home_alone_tonight_0",
+      "document_index": 13,
+      "score": 0.2168709109002585
+    },
+    {
+      "fact_id": "fact:home_alone_tonight_is_on_album_kill_the_lights_sentence_home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_",
+      "text": "Home Alone Tonight is on album Kill the Lights",
+      "head_id": "entity:title_anchor_home_alone_tonight",
+      "tail_id": "entity:kill_the_lights",
+      "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "chunk_id": "chunk:home_alone_tonight_0",
+      "document_index": 13,
+      "score": 0.16887161618519636
+    }
+  ],
+  "bridge_entities": [
+    "Luke Bryan",
+    "Karen Fairchild",
+    "Kill the Lights",
+    "Little Big Town",
+    "American country music artist"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who performs the song 'Country Man'?",
+      "resolved_sub_question": "Who performs the song 'Country Man'?",
+      "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "sentence": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).",
+      "score": 0.7291056,
+      "source_title": "Home Alone Tonight",
+      "hop_answer": "Luke Bryan",
+      "hop_thought": "The song \"Country Man\" is performed by Luke Bryan, as stated in the evidence.",
+      "hop_raw_response": "The song \"Country Man\" is performed by Luke Bryan, as stated in the evidence.\nAnswer: Luke Bryan",
+      "evidence_passages": [
+        {
+          "title": "Home Alone Tonight",
+          "text": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015)."
+        },
+        {
+          "title": "Home Alone Tonight",
+          "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single."
+        },
+        {
+          "title": "Country Man",
+          "text": "\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who sings 'Home Alone Tonight' with the performer of 'Country Man'?",
+      "resolved_sub_question": "Who sings 'Home Alone Tonight' with the performer of 'Country Man'? Context: Luke Bryan.",
+      "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "sentence": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).",
+      "score": 0.670486153846154,
+      "source_title": "Home Alone Tonight",
+      "hop_answer": "Karen Fairchild",
+      "hop_thought": "Luke Bryan performed 'Home Alone Tonight' as a duet with Karen Fairchild, who is a member of the country music group Little Big Town.",
+      "hop_raw_response": "Luke Bryan performed 'Home Alone Tonight' as a duet with Karen Fairchild, who is a member of the country music group Little Big Town.\nAnswer: Karen Fairchild",
+      "evidence_passages": [
+        {
+          "title": "Home Alone Tonight",
+          "text": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015)."
+        },
+        {
+          "title": "Home Alone Tonight",
+          "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single."
+        },
+        {
+          "title": "Country Man",
+          "text": "\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:title_anchor_home_alone_tonight",
+      "score": 0.1575832716184435,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_country_man",
+      "score": 0.1340819730733997,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+      "score": 0.12462706650197859,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:luke_bryan",
+      "score": 0.08117816860421168,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:country_man_0_0_country_man_is_a_song_co_written_and_recorded_by_american_country_music_artist",
+      "score": 0.07101021759616168,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:karen_fairchild",
+      "score": 0.06555501900727269,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kill_the_lights",
+      "score": 0.04106979041191927,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:billy_joel",
+      "score": 0.0384288845219662,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_you_re_my_home",
+      "score": 0.03527843340443519,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:you_re_my_home_0_0_you_re_my_home_is_a_single_by_billy_joel",
+      "score": 0.02940319602030453,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:home_alone_tonight_0",
+      "score": 0.0239332177334809,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:little_big_town",
+      "score": 0.016065421064894655,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:american_country_music_artist",
+      "score": 0.012950194666299117,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:country_man_0",
+      "score": 0.012208531680593094,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:you_re_my_home_0_1_it_was_originally_on_billy_joel_s_1973_album_piano_man_and_also_appears_on_song",
+      "score": 0.01104679704109859,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:you_re_my_home_0",
+      "score": 0.01010261339372132,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:home_alone_tonight_0_1_upon_the_release_of_the_album_the_song_entered_the_billboard_hot_country_songs",
+      "score": 0.00804189456657871,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:home_alone_tonight_0_2_it_was_serviced_to_american_country_radio_on_november_23_2015_as_the_album_s_th",
+      "score": 0.005830713897199974,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:country_man_0_1_it_originally_appeared_on_his_2006_self_titled_ep_and_was_released_in_march_200",
+      "score": 0.0056937485496539085,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:piano_man",
+      "score": 0.005493068925254545,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:home_alone_tonight_0",
+      "passage_index": 13,
+      "title": "Home Alone Tonight",
+      "score": 0.09950512712525608,
+      "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single.",
+      "score_breakdown": {
+        "dense": 0.05094158038895603,
+        "graph": 0.060677130311520236,
+        "fact": 0.3552274587858279
+      }
+    },
+    {
+      "node_id": "chunk:country_man_0",
+      "passage_index": 16,
+      "title": "Country Man",
+      "score": 0.09267024585661843,
+      "text": "Country Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan. It originally appeared on his 2006 self-titled EP, and was released in March 2008 as the third single from his debut album \"I'll Stay Me\". The song, like Bryan's previous two singles (\"All My Friends Say\" and \"We Rode in Trucks\"), charted in the top 40 on the \"Billboard\" Hot Country Songs chart. It was written by Bryan, Patrick Jason Matthews and Galen Griffin.",
+      "score_breakdown": {
+        "dense": 0.05054386093656131,
+        "graph": 0.055204593219165515,
+        "fact": 0.32206496250506705
+      }
+    },
+    {
+      "node_id": "chunk:you_re_my_home_0",
+      "passage_index": 17,
+      "title": "You're My Home",
+      "score": 0.09145850337676467,
+      "text": "You're My Home\n``You're My Home ''is a single by Billy Joel. It was originally on Billy Joel's 1973 album Piano Man, and also appears on Songs in the Attic (1981), The Ultimate Collection (2000), The Essential Billy Joel (2001) and 12 Gardens Live (2006). The song appears as a B - side on`` Piano Man'' and ``All My Life ''singles. The song was also covered by Helen Reddy on her album Love Song for Jeffrey, which was released as the flipside of her`` Keep On Singing'' single. It was also recorded by Sami Jo Cole on her album Sami Jo produced by Jimmy Bowen.",
+      "score_breakdown": {
+        "dense": 0.050003819757562906,
+        "graph": 0.05183421901246437,
+        "fact": 0.3227075787091051
+      }
+    },
+    {
+      "node_id": "chunk:rockin_you_tonight_0",
+      "passage_index": 9,
+      "title": "Rockin' You Tonight",
+      "score": 0.04238470312552649,
+      "text": "Rockin' You Tonight\nRockin' You Tonight is the second album released by American country music artist Blaine Larsen. Released in 2006 on BNA Records (in association with Giantslayer Records), the album produced two singles for Larsen on the Hot Country Songs charts: \"I Don't Know What She Said\" and \"Spoken Like a Man\", which respectively reached number 24 and number 42. Also included is a cover of Mac Davis's \"Baby, Don't Get Hooked on Me\", as well as \"I'm in Love with a Married Woman\", which was previously recorded and released as a single by Mark Chesnutt from his 2002 self-titled album. \"Let Alone You\" was later recorded by Easton Corbin on his eponymous debut album in 2010.",
+      "score_breakdown": {
+        "dense": 0.05027560091082599,
+        "graph": 0.04911040874857399,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:wherever_you_are_tonight_0",
+      "passage_index": 19,
+      "title": "Wherever You Are Tonight",
+      "score": 0.04232082762509405,
+      "text": "Wherever You Are Tonight\nWherever You Are Tonight is the fourth and final studio album release by American country music singer Keith Whitley. It was the second posthumous album of his career. The album consists of ten songwriter demos which Whitley had recorded. His vocal was the only track kept from those original demos. All new music arrangements were written to renew and dynamically support Whitley's vocals. The album was released via BNA Records, the label to which Whitley's widow, Lorrie Morgan, was signed at the time. ``Wherever You Are Tonight ''peaked at # 75 on the U.S. Billboard Hot Country Singles & Tracks (now Hot Country Songs) charts in 1995.",
+      "score_breakdown": {
+        "dense": 0.05022111740422768,
+        "graph": 0.04899737684256276,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:don_t_let_me_be_lonely_tonight_0",
+      "passage_index": 1,
+      "title": "Don't Let Me Be Lonely Tonight",
+      "score": 0.042302320869548785,
+      "text": "Don't Let Me Be Lonely Tonight\n\"Don't Let Me Be Lonely Tonight\" is a song written and performed by American singer-songwriter James Taylor, from his 1972 album \"One Man Dog\". It was released as the lead single from the album, and peaked at No. 14 on the U.S. \"Billboard\" Hot 100 on January 13, 1973. It also reached No. 3 Easy Listening. In Canada, the song reached No. 18 on the Pop Singles chart and No. 7 AC.",
+      "score_breakdown": {
+        "dense": 0.050207011759737796,
+        "graph": 0.04896154800564331,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:my_heart_lorrie_morgan_album_0",
+      "passage_index": 3,
+      "title": "My Heart (Lorrie Morgan album)",
+      "score": 0.04222841341425263,
+      "text": "My Heart (Lorrie Morgan album)\nMy Heart is the eighth studio album released by country music artist Lorrie Morgan. It features two chart singles: \"Here I Go Again\" (#72) and \"Maybe Not Tonight\", a duet with Sammy Kershaw (#17). The latter song was also included on Kershaw's 1999 album \"Maybe Not Tonight\". The track \"The Only Thing That Looks Good on Me Is You\" is a cover of a Bryan Adams song.",
+      "score_breakdown": {
+        "dense": 0.05008202454101464,
+        "graph": 0.048944333055648596,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:i_wish_tonight_would_never_end_0",
+      "passage_index": 14,
+      "title": "I Wish Tonight Would Never End",
+      "score": 0.04221564691232669,
+      "text": "I Wish Tonight Would Never End\nI Wish Tonight Would Never End is an album by American country music artist George Jones. It was released in 1963 on the United Artists record label.",
+      "score_breakdown": {
+        "dense": 0.049989136814167584,
+        "graph": 0.049072072215115045,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:tonight_we_ride_0",
+      "passage_index": 4,
+      "title": "Tonight We Ride",
+      "score": 0.042207789804406204,
+      "text": "Tonight We Ride\nTonight We Ride is the twelfth album by American singer-songwriter Michael Martin Murphey and his first for Warner Bros. Records. Released in 1986, the album was produced by Jim Ed Norman and contains guest performances by Pam Tillis, Reggie Young, Mark O'Connor, Charlie McCoy, and J.D. Souther. The album's title track was also its first single. The album peaked at number 46 on the \"Billboard\" Top Country Albums chart.",
+      "score_breakdown": {
+        "dense": 0.05004237902902468,
+        "graph": 0.0489482711281421,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:troubadour_song_0",
+      "passage_index": 11,
+      "title": "Troubadour (song)",
+      "score": 0.04216950051259597,
+      "text": "Troubadour (song)\n\"Troubadour\" is a song written by Leslie Satcher and Monty Holmes, and recorded by American country singer George Strait. It was released in June 2008 as the second single and title track from his album \"Troubadour\". The song was the 86th chart single of his career. It has become his 79th Top Ten single on the \"Billboard\" Hot Country Songs chart. \"Troubadour\" was nominated for Best Male Country Vocal Performance at the 2009 Grammy Awards. Vince Gill sings background vocals on the single.",
+      "score_breakdown": {
+        "dense": 0.04995497737951799,
+        "graph": 0.04898087651287024,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_home_alone_tonight",
+        "score": 0.1575832716184435,
+        "text": "Home Alone Tonight",
+        "metadata": {
+          "canonical_name": "Home Alone Tonight",
+          "aliases": [
+            "HAT",
+            "Home Alone Tonight"
+          ],
+          "surface_forms": [
+            "HAT",
+            "Home Alone Tonight"
+          ],
+          "title_anchor": "Home Alone Tonight"
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_country_man",
+        "score": 0.1340819730733997,
+        "text": "Country Man",
+        "metadata": {
+          "canonical_name": "Country Man",
+          "aliases": [
+            "CM",
+            "Country Man"
+          ],
+          "surface_forms": [
+            "CM",
+            "Country Man"
+          ],
+          "title_anchor": "Country Man"
+        }
+      },
+      {
+        "node_id": "entity:luke_bryan",
+        "score": 0.08117816860421168,
+        "text": "Luke Bryan",
+        "metadata": {
+          "canonical_name": "Luke Bryan",
+          "aliases": [
+            "LB",
+            "Luke Bryan"
+          ],
+          "surface_forms": [
+            "LB",
+            "Luke Bryan"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:karen_fairchild",
+        "score": 0.06555501900727269,
+        "text": "Karen Fairchild",
+        "metadata": {
+          "canonical_name": "Karen Fairchild",
+          "aliases": [
+            "KF",
+            "Karen Fairchild"
+          ],
+          "surface_forms": [
+            "KF",
+            "Karen Fairchild"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:kill_the_lights",
+        "score": 0.04106979041191927,
+        "text": "Kill the Lights",
+        "metadata": {
+          "canonical_name": "Kill the Lights",
+          "aliases": [
+            "KTL",
+            "Kill the Lights"
+          ],
+          "surface_forms": [
+            "KTL",
+            "Kill the Lights"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+        "score": 0.12462706650197859,
+        "text": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).",
+        "metadata": {
+          "title": "Home Alone Tonight",
+          "chunk_id": "chunk:home_alone_tonight_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Home Alone Tonight",
+              "relation": "is a song recorded by",
+              "tail": "Luke Bryan"
+            },
+            {
+              "head": "Home Alone Tonight",
+              "relation": "is a duet with",
+              "tail": "Karen Fairchild"
+            },
+            {
+              "head": "Karen Fairchild",
+              "relation": "is a member of",
+              "tail": "Little Big Town"
+            },
+            {
+              "head": "Home Alone Tonight",
+              "relation": "is on album",
+              "tail": "Kill the Lights"
+            }
+          ],
+          "entities": [
+            "Home Alone Tonight",
+            "Luke Bryan",
+            "Karen Fairchild",
+            "Little Big Town",
+            "Kill the Lights"
+          ],
+          "entity_ids": [
+            "entity:karen_fairchild",
+            "entity:kill_the_lights",
+            "entity:little_big_town",
+            "entity:luke_bryan",
+            "entity:title_anchor_home_alone_tonight"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:country_man_0_0_country_man_is_a_song_co_written_and_recorded_by_american_country_music_artist",
+        "score": 0.07101021759616168,
+        "text": "\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan.",
+        "metadata": {
+          "title": "Country Man",
+          "chunk_id": "chunk:country_man_0",
+          "sentence_index": 0,
+          "document_index": 16,
+          "triples": [
+            {
+              "head": "Country Man",
+              "relation": "is a song co-written and recorded by",
+              "tail": "Luke Bryan"
+            },
+            {
+              "head": "Luke Bryan",
+              "relation": "is an",
+              "tail": "American country music artist"
+            }
+          ],
+          "entities": [
+            "Country Man",
+            "Luke Bryan",
+            "American country music artist"
+          ],
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:luke_bryan",
+            "entity:title_anchor_country_man"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:you_re_my_home_0_0_you_re_my_home_is_a_single_by_billy_joel",
+        "score": 0.02940319602030453,
+        "text": "``You're My Home ''is a single by Billy Joel.",
+        "metadata": {
+          "title": "You're My Home",
+          "chunk_id": "chunk:you_re_my_home_0",
+          "sentence_index": 0,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "You're My Home",
+              "relation": "is a single by",
+              "tail": "Billy Joel"
+            }
+          ],
+          "entities": [
+            "You're My Home",
+            "Billy Joel"
+          ],
+          "entity_ids": [
+            "entity:billy_joel",
+            "entity:title_anchor_you_re_my_home"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:you_re_my_home_0_1_it_was_originally_on_billy_joel_s_1973_album_piano_man_and_also_appears_on_song",
+        "score": 0.01104679704109859,
+        "text": "It was originally on Billy Joel's 1973 album Piano Man, and also appears on Songs in the Attic (1981), The Ultimate Collection (2000), The Essential Billy Joel (2001) and 12 Gardens Live (2006).",
+        "metadata": {
+          "title": "You're My Home",
+          "chunk_id": "chunk:you_re_my_home_0",
+          "sentence_index": 1,
+          "document_index": 17,
+          "triples": [
+            {
+              "head": "Billy Joel",
+              "relation": "related_to",
+              "tail": "Piano Man"
+            },
+            {
+              "head": "Piano Man",
+              "relation": "related_to",
+              "tail": "Songs"
+            },
+            {
+              "head": "Songs",
+              "relation": "related_to",
+              "tail": "Attic"
+            }
+          ],
+          "entities": [
+            "Billy Joel",
+            "Piano Man",
+            "Songs",
+            "Attic",
+            "Ultimate Collection",
+            "Essential Billy Joel",
+            "Gardens Live"
+          ],
+          "entity_ids": [
+            "entity:attic",
+            "entity:billy_joel",
+            "entity:essential_billy_joel",
+            "entity:gardens_live",
+            "entity:piano_man",
+            "entity:songs",
+            "entity:ultimate_collection"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:home_alone_tonight_0",
+        "score": 0.0239332177334809,
+        "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single.",
+        "metadata": {
+          "title": "Home Alone Tonight",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:american_country_radio",
+            "entity:billboard_hot_country_songs",
+            "entity:billboard_hot_country_songs_chart",
+            "entity:karen_fairchild",
+            "entity:kill_the_lights",
+            "entity:little_big_town",
+            "entity:luke_bryan",
+            "entity:november_23_2015",
+            "entity:title_anchor_home_alone_tonight",
+            "entity:upon"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:country_man_0",
+        "score": 0.012208531680593094,
+        "text": "Country Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan. It originally appeared on his 2006 self-titled EP, and was released in March 2008 as the third single from his debut album \"I'll Stay Me\". The song, like Bryan's previous two singles (\"All My Friends Say\" and \"We Rode in Trucks\"), charted in the top 40 on the \"Billboard\" Hot Country Songs chart. It was written by Bryan, Patrick Jason Matthews and Galen Griffin.",
+        "metadata": {
+          "title": "Country Man",
+          "chunk_index": 0,
+          "document_index": 16,
+          "entity_ids": [
+            "entity:2006_self_titled_ep",
+            "entity:all_my_friends_say",
+            "entity:all_my_friends_say_and_we_rode_in_trucks",
+            "entity:american_country_music_artist",
+            "entity:billboard_hot_country_songs_chart",
+            "entity:bryan",
+            "entity:bryan_s_previous_two_singles",
+            "entity:galen_griffin",
+            "entity:i_ll_stay_me",
+            "entity:luke_bryan",
+            "entity:march",
+            "entity:march_2008",
+            "entity:patrick_jason_matthews",
+            "entity:stay_me",
+            "entity:title_anchor_country_man",
+            "entity:we_rode_in_trucks"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:you_re_my_home_0",
+        "score": 0.01010261339372132,
+        "text": "You're My Home\n``You're My Home ''is a single by Billy Joel. It was originally on Billy Joel's 1973 album Piano Man, and also appears on Songs in the Attic (1981), The Ultimate Collection (2000), The Essential Billy Joel (2001) and 12 Gardens Live (2006). The song appears as a B - side on`` Piano Man'' and ``All My Life ''singles. The song was also covered by Helen Reddy on her album Love Song for Jeffrey, which was released as the flipside of her`` Keep On Singing'' single. It was also recorded by Sami Jo Cole on her album Sami Jo produced by Jimmy Bowen.",
+        "metadata": {
+          "title": "You're My Home",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:all_my_life",
+            "entity:attic",
+            "entity:billy_joel",
+            "entity:essential_billy_joel",
+            "entity:gardens_live",
+            "entity:helen_reddy",
+            "entity:jimmy_bowen",
+            "entity:keep_on_singing",
+            "entity:love_song_for_jeffrey",
+            "entity:piano_man",
+            "entity:sami_jo",
+            "entity:sami_jo_cole",
+            "entity:songs",
+            "entity:title_anchor_you_re_my_home",
+            "entity:ultimate_collection"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:i_wish_tonight_would_never_end_0",
+        "score": 0.002204480260296565,
+        "text": "I Wish Tonight Would Never End\nI Wish Tonight Would Never End is an album by American country music artist George Jones. It was released in 1963 on the United Artists record label.",
+        "metadata": {
+          "title": "I Wish Tonight Would Never End",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:american_country_music_artist",
+            "entity:george_jones",
+            "entity:title_anchor_i_wish_tonight_would_never_end",
+            "entity:united_artists"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Home Alone Tonight\nHome Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single.\n\nCountry Man\nCountry Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan. It originally appeared on his 2006 self-titled EP, and was released in March 2008 as the third single from his debut album \"I'll Stay Me\". The song, like Bryan's previous two singles (\"All My Friends Say\" and \"We Rode in Trucks\"), charted in the top 40 on the \"Billboard\" Hot Country Songs chart. It was written by Bryan, Patrick Jason Matthews and Galen Griffin.\n\nYou're My Home\nYou're My Home\n``You're My Home ''is a single by Billy Joel. It was originally on Billy Joel's 1973 album Piano Man, and also appears on Songs in the Attic (1981), The Ultimate Collection (2000), The Essential Billy Joel (2001) and 12 Gardens Live (2006). The song appears as a B - side on`` Piano Man'' and ``All My Life ''singles. The song was also covered by Helen Reddy on her album Love Song for Jeffrey, which was released as the flipside of her`` Keep On Singing'' single. It was also recorded by Sami Jo Cole on her album Sami Jo produced by Jimmy Bowen.\n\nRockin' You Tonight\nRockin' You Tonight\nRockin' You Tonight is the second album released by American country music artist Blaine Larsen. Released in 2006 on BNA Records (in association with Giantslayer Records), the album produced two singles for Larsen on the Hot Country Songs charts: \"I Don't Know What She Said\" and \"Spoken Like a Man\", which respectively reached number 24 and number 42. Also included is a cover of Mac Davis's \"Baby, Don't Get Hooked on Me\", as well as \"I'm in Love with a Married Woman\", which was previously recorded and released as a single by Mark Chesnutt from his 2002 self-titled album. \"Let Alone You\" was later recorded by Easton Corbin on his eponymous debut album in 2010.\n\nWherever You Are Tonight\nWherever You Are Tonight\nWherever You Are Tonight is the fourth and final studio album release by American country music singer Keith Whitley. It was the second posthumous album of his career. The album consists of ten songwriter demos which Whitley had recorded. His vocal was the only track kept from those original demos. All new music arrangements were written to renew and dynamically support Whitley's vocals. The album was released via BNA Records, the label to which Whitley's widow, Lorrie Morgan, was signed at the time. ``Wherever You Are Tonight ''peaked at # 75 on the U.S. Billboard Hot Country Singles & Tracks (now Hot Country Songs) charts in 1995.\n\nHome Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).\n\nCountry Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan.\n\nMy Heart (Lorrie Morgan album)\nMy Heart (Lorrie Morgan album)\nMy Heart is the eighth studio album released by country music artist Lorrie Morgan. It features two chart singles: \"Here I Go Again\" (#72) and \"Maybe Not Tonight\", a duet with Sammy Kershaw (#17). The latter song was also included on Kershaw's 1999 album \"Maybe Not Tonight\". The track \"The Only Thing That Looks Good on Me Is You\" is a cover of a Bryan Adams song.\n\nForrest Gump\nForrest Gump\nIn 1951 in Greenbow, Alabama, young Forrest is fitted with leg braces to correct a curved spine, and is not able to walk. He lives alone with his mother, who runs a boarding house out of their home that attracts many tenants, including a young Elvis Presley, who plays the guitar for Forrest and incorporates his jerky dance movements into his famous performances. On the first day in school, Forrest meets a girl called Jenny Curran, and the two become good friends.\n\n50 First Dates\n50 First Dates\nDespite Sue's warning, Henry invites Lucy to have breakfast with him. Eventually she does, but it ends poorly when Henry unintentionally hurts Lucy's feelings. He follows her home to apologize where Marlin and Doug instruct Henry to leave Lucy alone. Henry begins concocting ways to run into Lucy on the following days, such as pretending to have car trouble, creating a fake road block, or by having Ula beat him up. Eventually, Marlin and Doug figure this out due to Lucy singing The Beach Boys' ``Would n't It Be Nice ''on the days when she meets Henry.\n\nDon't Let Me Be Lonely Tonight\nDon't Let Me Be Lonely Tonight\n\"Don't Let Me Be Lonely Tonight\" is a song written and performed by American singer-songwriter James Taylor, from his 1972 album \"One Man Dog\". It was released as the lead single from the album, and peaked at No. 14 on the U.S. \"Billboard\" Hot 100 on January 13, 1973. It also reached No. 3 Easy Listening. In Canada, the song reached No. 18 on the Pop Singles chart and No. 7 AC.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:home_alone_tonight_0",
+        "passage_index": 13,
+        "title": "Home Alone Tonight",
+        "score": 0.09950512712525608,
+        "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single.",
+        "score_breakdown": {
+          "dense": 0.05094158038895603,
+          "graph": 0.060677130311520236,
+          "fact": 0.3552274587858279
+        }
+      },
+      {
+        "node_id": "chunk:country_man_0",
+        "passage_index": 16,
+        "title": "Country Man",
+        "score": 0.09267024585661843,
+        "text": "Country Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan. It originally appeared on his 2006 self-titled EP, and was released in March 2008 as the third single from his debut album \"I'll Stay Me\". The song, like Bryan's previous two singles (\"All My Friends Say\" and \"We Rode in Trucks\"), charted in the top 40 on the \"Billboard\" Hot Country Songs chart. It was written by Bryan, Patrick Jason Matthews and Galen Griffin.",
+        "score_breakdown": {
+          "dense": 0.05054386093656131,
+          "graph": 0.055204593219165515,
+          "fact": 0.32206496250506705
+        }
+      },
+      {
+        "node_id": "chunk:you_re_my_home_0",
+        "passage_index": 17,
+        "title": "You're My Home",
+        "score": 0.09145850337676467,
+        "text": "You're My Home\n``You're My Home ''is a single by Billy Joel. It was originally on Billy Joel's 1973 album Piano Man, and also appears on Songs in the Attic (1981), The Ultimate Collection (2000), The Essential Billy Joel (2001) and 12 Gardens Live (2006). The song appears as a B - side on`` Piano Man'' and ``All My Life ''singles. The song was also covered by Helen Reddy on her album Love Song for Jeffrey, which was released as the flipside of her`` Keep On Singing'' single. It was also recorded by Sami Jo Cole on her album Sami Jo produced by Jimmy Bowen.",
+        "score_breakdown": {
+          "dense": 0.050003819757562906,
+          "graph": 0.05183421901246437,
+          "fact": 0.3227075787091051
+        }
+      },
+      {
+        "node_id": "chunk:rockin_you_tonight_0",
+        "passage_index": 9,
+        "title": "Rockin' You Tonight",
+        "score": 0.04238470312552649,
+        "text": "Rockin' You Tonight\nRockin' You Tonight is the second album released by American country music artist Blaine Larsen. Released in 2006 on BNA Records (in association with Giantslayer Records), the album produced two singles for Larsen on the Hot Country Songs charts: \"I Don't Know What She Said\" and \"Spoken Like a Man\", which respectively reached number 24 and number 42. Also included is a cover of Mac Davis's \"Baby, Don't Get Hooked on Me\", as well as \"I'm in Love with a Married Woman\", which was previously recorded and released as a single by Mark Chesnutt from his 2002 self-titled album. \"Let Alone You\" was later recorded by Easton Corbin on his eponymous debut album in 2010.",
+        "score_breakdown": {
+          "dense": 0.05027560091082599,
+          "graph": 0.04911040874857399,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:wherever_you_are_tonight_0",
+        "passage_index": 19,
+        "title": "Wherever You Are Tonight",
+        "score": 0.04232082762509405,
+        "text": "Wherever You Are Tonight\nWherever You Are Tonight is the fourth and final studio album release by American country music singer Keith Whitley. It was the second posthumous album of his career. The album consists of ten songwriter demos which Whitley had recorded. His vocal was the only track kept from those original demos. All new music arrangements were written to renew and dynamically support Whitley's vocals. The album was released via BNA Records, the label to which Whitley's widow, Lorrie Morgan, was signed at the time. ``Wherever You Are Tonight ''peaked at # 75 on the U.S. Billboard Hot Country Singles & Tracks (now Hot Country Songs) charts in 1995.",
+        "score_breakdown": {
+          "dense": 0.05022111740422768,
+          "graph": 0.04899737684256276,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:don_t_let_me_be_lonely_tonight_0",
+        "passage_index": 1,
+        "title": "Don't Let Me Be Lonely Tonight",
+        "score": 0.042302320869548785,
+        "text": "Don't Let Me Be Lonely Tonight\n\"Don't Let Me Be Lonely Tonight\" is a song written and performed by American singer-songwriter James Taylor, from his 1972 album \"One Man Dog\". It was released as the lead single from the album, and peaked at No. 14 on the U.S. \"Billboard\" Hot 100 on January 13, 1973. It also reached No. 3 Easy Listening. In Canada, the song reached No. 18 on the Pop Singles chart and No. 7 AC.",
+        "score_breakdown": {
+          "dense": 0.050207011759737796,
+          "graph": 0.04896154800564331,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:my_heart_lorrie_morgan_album_0",
+        "passage_index": 3,
+        "title": "My Heart (Lorrie Morgan album)",
+        "score": 0.04222841341425263,
+        "text": "My Heart (Lorrie Morgan album)\nMy Heart is the eighth studio album released by country music artist Lorrie Morgan. It features two chart singles: \"Here I Go Again\" (#72) and \"Maybe Not Tonight\", a duet with Sammy Kershaw (#17). The latter song was also included on Kershaw's 1999 album \"Maybe Not Tonight\". The track \"The Only Thing That Looks Good on Me Is You\" is a cover of a Bryan Adams song.",
+        "score_breakdown": {
+          "dense": 0.05008202454101464,
+          "graph": 0.048944333055648596,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:i_wish_tonight_would_never_end_0",
+        "passage_index": 14,
+        "title": "I Wish Tonight Would Never End",
+        "score": 0.04221564691232669,
+        "text": "I Wish Tonight Would Never End\nI Wish Tonight Would Never End is an album by American country music artist George Jones. It was released in 1963 on the United Artists record label.",
+        "score_breakdown": {
+          "dense": 0.049989136814167584,
+          "graph": 0.049072072215115045,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:tonight_we_ride_0",
+        "passage_index": 4,
+        "title": "Tonight We Ride",
+        "score": 0.042207789804406204,
+        "text": "Tonight We Ride\nTonight We Ride is the twelfth album by American singer-songwriter Michael Martin Murphey and his first for Warner Bros. Records. Released in 1986, the album was produced by Jim Ed Norman and contains guest performances by Pam Tillis, Reggie Young, Mark O'Connor, Charlie McCoy, and J.D. Souther. The album's title track was also its first single. The album peaked at number 46 on the \"Billboard\" Top Country Albums chart.",
+        "score_breakdown": {
+          "dense": 0.05004237902902468,
+          "graph": 0.0489482711281421,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:troubadour_song_0",
+        "passage_index": 11,
+        "title": "Troubadour (song)",
+        "score": 0.04216950051259597,
+        "text": "Troubadour (song)\n\"Troubadour\" is a song written by Leslie Satcher and Monty Holmes, and recorded by American country singer George Strait. It was released in June 2008 as the second single and title track from his album \"Troubadour\". The song was the 86th chart single of his career. It has become his 79th Top Ten single on the \"Billboard\" Hot Country Songs chart. \"Troubadour\" was nominated for Best Male Country Vocal Performance at the 2009 Grammy Awards. Vince Gill sings background vocals on the single.",
+        "score_breakdown": {
+          "dense": 0.04995497737951799,
+          "graph": 0.04898087651287024,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who performs the song 'Country Man'?",
+        "resolved_sub_question": "Who performs the song 'Country Man'?",
+        "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+        "sentence": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).",
+        "score": 0.7291056,
+        "source_title": "Home Alone Tonight",
+        "hop_answer": "Luke Bryan",
+        "hop_thought": "The song \"Country Man\" is performed by Luke Bryan, as stated in the evidence.",
+        "hop_raw_response": "The song \"Country Man\" is performed by Luke Bryan, as stated in the evidence.\nAnswer: Luke Bryan",
+        "evidence_passages": [
+          {
+            "title": "Home Alone Tonight",
+            "text": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015)."
+          },
+          {
+            "title": "Home Alone Tonight",
+            "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single."
+          },
+          {
+            "title": "Country Man",
+            "text": "\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who sings 'Home Alone Tonight' with the performer of 'Country Man'?",
+        "resolved_sub_question": "Who sings 'Home Alone Tonight' with the performer of 'Country Man'? Context: Luke Bryan.",
+        "sentence_id": "sentence:home_alone_tonight_0_0_home_alone_tonight_is_a_song_recorded_by_american_country_music_artist_luke",
+        "sentence": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).",
+        "score": 0.670486153846154,
+        "source_title": "Home Alone Tonight",
+        "hop_answer": "Karen Fairchild",
+        "hop_thought": "Luke Bryan performed 'Home Alone Tonight' as a duet with Karen Fairchild, who is a member of the country music group Little Big Town.",
+        "hop_raw_response": "Luke Bryan performed 'Home Alone Tonight' as a duet with Karen Fairchild, who is a member of the country music group Little Big Town.\nAnswer: Karen Fairchild",
+        "evidence_passages": [
+          {
+            "title": "Home Alone Tonight",
+            "text": "``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015)."
+          },
+          {
+            "title": "Home Alone Tonight",
+            "text": "Home Alone Tonight\n``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads. It was serviced to American country radio on November 23, 2015 as the album's third official single."
+          },
+          {
+            "title": "Country Man",
+            "text": "\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who performs the song 'Country Man'? => Luke Bryan (source: Home Alone Tonight)\n2. Who sings 'Home Alone Tonight' with the performer of 'Country Man'? => Karen Fairchild (source: Home Alone Tonight)\n\nFact hints:\n- Home Alone Tonight is a duet with Karen Fairchild\n- Home Alone Tonight is a song recorded by Luke Bryan\n- Home Alone Tonight is on album Kill the Lights\n- Country Man is a song co-written and recorded by Luke Bryan\n\nWikipedia Title: Home Alone Tonight\nHome Alone Tonight ``Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015). Upon the release of the album, the song entered the Billboard Hot Country Songs chart at number 33 on the strength of digital downloads.\n\nWikipedia Title: Country Man\n\"Country Man\" is a song co-written and recorded by American country music artist Luke Bryan.\n\nWikipedia Title: Rockin' You Tonight\nReleased in 2006 on BNA Records (in association with Giantslayer Records), the album produced two singles for Larsen on the Hot Country Songs charts: \"I Don't Know What She Said\" and \"Spoken Like a Man\", which respectively reached number 24 and number 42. \"Let Alone You\" was later recorded by Easton Corbin on his eponymous debut album in 2010.\n\nWikipedia Title: Forrest Gump\nHe lives alone with his mother, who runs a boarding house out of their home that attracts many tenants, including a young Elvis Presley, who plays the guitar for Forrest and incorporates his jerky dance movements into his famous performances. Forrest Gump In 1951 in Greenbow, Alabama, young Forrest is fitted with leg braces to correct a curved spine, and is not able to walk.\n\nWikipedia Title: My Heart (Lorrie Morgan album)\nThe latter song was also included on Kershaw's 1999 album \"Maybe Not Tonight\". It features two chart singles: \"Here I Go Again\" (#72) and \"Maybe Not Tonight\", a duet with Sammy Kershaw (#17).\n\nQuestion: Who sing \"Home Alone Tonight\" with the performer of \"country Man\"?\nDraft Answer: Karen Fairchild\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The song 'Home Alone Tonight' is performed by Luke Bryan and Karen Fairchild, and Luke Bryan also performs 'Country Man'. Therefore, the person who sings 'Home Alone Tonight' with the performer of 'Country Man' is Karen Fairchild.",
+  "predicted_answer": "Karen Fairchild",
+  "qa_raw_response": "{\n  \"thought\": \"The song 'Home Alone Tonight' is performed by Luke Bryan and Karen Fairchild, and Luke Bryan also performs 'Country Man'. Therefore, the person who sings 'Home Alone Tonight' with the performer of 'Country Man' is Karen Fairchild.\",\n  \"answer\": \"Karen Fairchild\",\n  \"support\": \"Home Alone Tonight ''is a song recorded by American country music artist Luke Bryan as a duet with Karen Fairchild of American country music group Little Big Town for his fifth studio album, Kill the Lights (2015).\"\n}"
+}

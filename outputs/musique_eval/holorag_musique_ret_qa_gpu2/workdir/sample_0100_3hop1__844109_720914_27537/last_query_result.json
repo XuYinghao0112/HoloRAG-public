@@ -1,0 +1,1025 @@
+{
+  "query": "Why did Roncalli leave the city where the creator of The Entombment died?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Roncalli",
+    "The Entombment (Titian, 1559)"
+  ],
+  "raw_query_entities": [
+    "Roncalli",
+    "Entombment"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Roncalli",
+      "node_id": "entity:roncalli",
+      "resolved_text": "Roncalli",
+      "score": 0.7989000000000002,
+      "alias_score": 1.0,
+      "relation_score": 1.0,
+      "context_score": 0.4,
+      "compatibility_score": 0.67875,
+      "score_margin": 0.3114666666666669,
+      "confident": true
+    },
+    {
+      "mention": "Entombment",
+      "node_id": "entity:title_anchor_the_entombment_titian_1559",
+      "resolved_text": "The Entombment (Titian, 1559)",
+      "score": 0.7120000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 0.39,
+      "score_margin": 0.7120000000000001,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Where did the creator of The Entombment die?",
+    "Why did Roncalli leave this city?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:roncalli",
+      "score": 1.0234245795413657,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_entombment_titian_1559",
+      "score": 1.0059380313683648,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_paul_louis_halley",
+      "score": 0.2853728328382504,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:oxford_england",
+      "score": 0.2853728328382504,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_roncalli_high_school_indiana",
+      "score": 0.26764753047978934,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+      "score": 0.24663761201472773,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:tizian",
+      "score": 0.2466196984020689,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:t_bingen",
+      "score": 0.2383704512784094,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:church_of_i_gesuiti",
+      "score": 0.2283726198087622,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:venice",
+      "score": 0.22504805840364714,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_h_lderlinturm",
+      "score": 0.21836972567164029,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:titian",
+      "score": 0.20588895155662967,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:paul_louis_halley_died_in_oxford_england_sentence_paul_louis_halley_0_0_the_inquest_into_the_death_of_paul_louis_halley_",
+      "text": "Paul-Louis Halley died in Oxford England",
+      "head_id": "entity:title_anchor_paul_louis_halley",
+      "tail_id": "entity:oxford_england",
+      "sentence_id": "sentence:paul_louis_halley_0_0_the_inquest_into_the_death_of_paul_louis_halley_took_place_in_oxford_england_i",
+      "chunk_id": "chunk:paul_louis_halley_0",
+      "document_index": 14,
+      "score": 0.28315991349039843
+    },
+    {
+      "fact_id": "fact:h_lderlinturm_is_located_in_t_bingen_sentence_h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_",
+      "text": "H lderlinturm is located in T bingen",
+      "head_id": "entity:title_anchor_h_lderlinturm",
+      "tail_id": "entity:t_bingen",
+      "sentence_id": "sentence:h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_located_in_t_bingen",
+      "chunk_id": "chunk:h_lderlinturm_0",
+      "document_index": 18,
+      "score": 0.23615845418991824
+    },
+    {
+      "fact_id": "fact:roncalli_left_venice_sentence_pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_p",
+      "text": "Roncalli left Venice",
+      "head_id": "entity:roncalli",
+      "tail_id": "entity:venice",
+      "sentence_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+      "chunk_id": "chunk:pope_john_xxiii_0",
+      "document_index": 15,
+      "score": 0.23117602680855415
+    },
+    {
+      "fact_id": "fact:church_of_i_gesuiti_located_in_venice_sentence_the_martyrdom_of_saint_lawrence_titian_0_0_the_martyrdom_of_saint_lawrenc",
+      "text": "church of I Gesuiti located in Venice",
+      "head_id": "entity:church_of_i_gesuiti",
+      "tail_id": "entity:venice",
+      "sentence_id": "sentence:the_martyrdom_of_saint_lawrence_titian_0_0_the_martyrdom_of_saint_lawrence_is_a_1558_painting_by_titian_now_in_the_churc",
+      "chunk_id": "chunk:the_martyrdom_of_saint_lawrence_titian_0",
+      "document_index": 11,
+      "score": 0.22616081331665938
+    },
+    {
+      "fact_id": "fact:roncalli_was_in_venice_sentence_pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watc",
+      "text": "Roncalli was in Venice",
+      "head_id": "entity:roncalli",
+      "tail_id": "entity:venice",
+      "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "chunk_id": "chunk:pope_john_xxiii_0",
+      "document_index": 15,
+      "score": 0.21117162949799997
+    },
+    {
+      "fact_id": "fact:entombment_painted_by_titian_sentence_the_entombment_titian_1559_0_0_the_entombment_is_a_1559_painting_by_titian_commiss",
+      "text": "Entombment painted by Titian",
+      "head_id": "entity:title_anchor_the_entombment_titian_1559",
+      "tail_id": "entity:titian",
+      "sentence_id": "sentence:the_entombment_titian_1559_0_0_the_entombment_is_a_1559_painting_by_titian_commissioned_by_philip_ii_of_spain",
+      "chunk_id": "chunk:the_entombment_titian_1559_0",
+      "document_index": 7,
+      "score": 0.20367047816860256
+    },
+    {
+      "fact_id": "fact:h_lderlinturm_is_in_country_germany_sentence_h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_l",
+      "text": "H lderlinturm is in country Germany",
+      "head_id": "entity:title_anchor_h_lderlinturm",
+      "tail_id": "entity:germany",
+      "sentence_id": "sentence:h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_located_in_t_bingen",
+      "chunk_id": "chunk:h_lderlinturm_0",
+      "document_index": 18,
+      "score": 0.19615700297638006
+    },
+    {
+      "fact_id": "fact:russian_movie_the_major_2013_written_and_directed_by_yuri_bykov_sentence_seven_seconds_tv_series_0_2_the_series_produced",
+      "text": "Russian movie The Major 2013 written and directed by Yuri Bykov",
+      "head_id": "entity:russian_movie_the_major_2013",
+      "tail_id": "entity:yuri_bykov",
+      "sentence_id": "sentence:seven_seconds_tv_series_0_2_the_series_produced_by_fox_21_television_studios_is_based_on_the_russian_movie",
+      "chunk_id": "chunk:seven_seconds_tv_series_0",
+      "document_index": 2,
+      "score": 0.18615730086154322
+    }
+  ],
+  "bridge_entities": [
+    "Venice",
+    "Pius XII",
+    "Vatican",
+    "11 October",
+    "conclave in Rome",
+    "return train ticket to Venice",
+    "attend the conclave in Rome"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where did the creator of The Entombment die?",
+      "resolved_sub_question": "Where did the creator of The Entombment die?",
+      "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+      "score": 0.5307933333333335,
+      "source_title": "Pope John XXIII",
+      "hop_answer": "Unknown",
+      "hop_thought": "The question asks about the location where the creator of The Entombment died, but the provided evidence only discusses Pope John XXIII and events related to his election as pope. There is no information about the creator of The Entombment or their place of death.",
+      "hop_raw_response": "The question asks about the location where the creator of The Entombment died, but the provided evidence only discusses Pope John XXIII and events related to his election as pope. There is no information about the creator of The Entombment or their place of death.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Pope John XXIII",
+          "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        }
+      ]
+    },
+    {
+      "sub_question": "Why did Roncalli leave this city?",
+      "resolved_sub_question": "Why did Roncalli leave this city?",
+      "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+      "score": 0.4766133333333334,
+      "source_title": "Pope John XXIII",
+      "hop_answer": "to attend the conclave in Rome",
+      "hop_thought": "Roncalli left Venice to attend the conclave in Rome where a new pope would be elected following the death of Pope Pius XII.",
+      "hop_raw_response": "Roncalli left Venice to attend the conclave in Rome where a new pope would be elected following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome",
+      "evidence_passages": [
+        {
+          "title": "Pope John XXIII",
+          "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        },
+        {
+          "title": "Pope John XXIII",
+          "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:roncalli",
+      "score": 0.09639107948215912,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_the_entombment_titian_1559",
+      "score": 0.09218003097197083,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:the_entombment_titian_1559_0_0_the_entombment_is_a_1559_painting_by_titian_commissioned_by_philip_ii_of_spain",
+      "score": 0.04560091134057497,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:titian",
+      "score": 0.03964972640989685,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_located_in_t_bingen",
+      "score": 0.038019174961789054,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+      "score": 0.03331133616297273,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:oxford_england",
+      "score": 0.03280683181343789,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_h_lderlinturm",
+      "score": 0.032691100342708695,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:paul_louis_halley_0_0_the_inquest_into_the_death_of_paul_louis_halley_took_place_in_oxford_england_i",
+      "score": 0.0324471747870104,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+      "score": 0.030835784125544725,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:the_martyrdom_of_saint_lawrence_titian_0_0_the_martyrdom_of_saint_lawrence_is_a_1558_painting_by_titian_now_in_the_churc",
+      "score": 0.029857765768225027,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:venice",
+      "score": 0.02984716155977328,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_paul_louis_halley",
+      "score": 0.02856866403374916,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:church_of_i_gesuiti",
+      "score": 0.025962604639835126,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_roncalli_high_school_indiana",
+      "score": 0.025811912365912043,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:tizian",
+      "score": 0.02536568942604104,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:t_bingen",
+      "score": 0.02342269460498555,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:yuri_bykov",
+      "score": 0.022353379619182986,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+      "score": 0.02046947467484801,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:russian_movie_the_major_2013",
+      "score": 0.020127018026646494,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:paul_louis_halley_0",
+      "passage_index": 14,
+      "title": "Paul-Louis Halley",
+      "score": 0.06937132781752137,
+      "text": "Paul-Louis Halley\nThe inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005. A jury returned a verdict of accidental death.",
+      "score_breakdown": {
+        "dense": 0.04994859913674905,
+        "graph": 0.051624239229427604,
+        "fact": 0.17608217682320743
+      }
+    },
+    {
+      "node_id": "chunk:pope_john_xxiii_0",
+      "passage_index": 15,
+      "title": "Pope John XXIII",
+      "score": 0.06863072408766886,
+      "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]",
+      "score_breakdown": {
+        "dense": 0.050615340530734104,
+        "graph": 0.052392995860691675,
+        "fact": 0.1671625869170507
+      }
+    },
+    {
+      "node_id": "chunk:the_entombment_titian_1559_0",
+      "passage_index": 7,
+      "title": "The Entombment (Titian, 1559)",
+      "score": 0.06848386709565515,
+      "text": "The Entombment (Titian, 1559)\nThe Entombment is a 1559 painting by Titian, commissioned by Philip II of Spain. In this painting, Tizian uses the mature style characterized by the use of broad brushwork and brilliant colours. The figure holding Christ body is Nicodemus, the Jewish elder that secretly visited Jesus at night to learn about his teachings. The figure of Nicodemus bears the traits of the artist himself. This could have been inspired by Michelangelo's idea in his unfinished Pietà from 1550, depicting himself as Nicodemus, supporting the body of Christ displayed in the Cathedral in Florence. The stone sarcophagus where Christ body is placed is decorated with depictions of Cain and Abel and the Sacrifice of Isaac - themes that according to the Christian faith predicted the sacrifice of Jesus.",
+      "score_breakdown": {
+        "dense": 0.050723958224674,
+        "graph": 0.05397196041429213,
+        "fact": 0.1626273463186454
+      }
+    },
+    {
+      "node_id": "chunk:h_lderlinturm_0",
+      "passage_index": 18,
+      "title": "Hölderlinturm",
+      "score": 0.06832188970307851,
+      "text": "Hölderlinturm\nThe Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin. He lived there from May 3, 1807 until his death in 1843. The building is located on the Neckar riverfront and is one of the most popularly known sites in Tübingen.",
+      "score_breakdown": {
+        "dense": 0.049936759451522726,
+        "graph": 0.052190136338354585,
+        "fact": 0.16799754068823086
+      }
+    },
+    {
+      "node_id": "chunk:the_martyrdom_of_saint_lawrence_titian_0",
+      "passage_index": 11,
+      "title": "The Martyrdom of Saint Lawrence (Titian)",
+      "score": 0.0680021122982036,
+      "text": "The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.",
+      "score_breakdown": {
+        "dense": 0.05015111630492798,
+        "graph": 0.05156682962843682,
+        "fact": 0.16632632961308116
+      }
+    },
+    {
+      "node_id": "chunk:seven_seconds_tv_series_0",
+      "passage_index": 2,
+      "title": "Seven Seconds (TV series)",
+      "score": 0.06656951318045294,
+      "text": "Seven Seconds (TV series)\nSeven Seconds is an American crime drama web television series that follows the people involved in investigating the death of a young black boy and the boy's family as they reel after the loss. Veena Sud is the series' creator and executive producer / showrunner, and Gavin O'Connor is the director and executive producer. The series, produced by Fox 21 Television Studios, is based on the Russian movie The Major (2013), written and directed by Yuri Bykov. The first season, consisting of 10 episodes, was released on Netflix on February 23, 2018.",
+      "score_breakdown": {
+        "dense": 0.049800234329754674,
+        "graph": 0.05069593784373396,
+        "fact": 0.15980401963978455
+      }
+    },
+    {
+      "node_id": "chunk:roncalli_high_school_indiana_0",
+      "passage_index": 13,
+      "title": "Roncalli High School (Indiana)",
+      "score": 0.04282974199265218,
+      "text": "Roncalli High School (Indiana)\nRoncalli High School is a Catholic high school located in Indianapolis, Indiana. It is located on the south side of Indianapolis and run by the Roman Catholic Archdiocese of Indianapolis. Roncalli is named for Pope John XXIII, Angelo Giuseppe Roncalli.",
+      "score_breakdown": {
+        "dense": 0.050262108670621856,
+        "graph": 0.05061860741270053,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:giza_pyramid_complex_0",
+      "passage_index": 4,
+      "title": "Giza pyramid complex",
+      "score": 0.042216666036589696,
+      "text": "Giza pyramid complex\nThe pyramids of Giza and others are thought to have been constructed to house the remains of the deceased Pharaohs who ruled over Ancient Egypt. A portion of the Pharaoh's spirit called his ka was believed to remain with his corpse. Proper care of the remains was necessary in order for the ``former Pharaoh to perform his new duties as king of the dead. ''. It's theorized the pyramid not only served as a tomb for the Pharaoh, but also as a storage pit for various items he would need in the afterlife.`` The people of Ancient Egypt believed that death on Earth was the start of a journey to the next world. The embalmed body of the King was entombed underneath or within the pyramid to protect it and allow his transformation and ascension to the afterlife.''",
+      "score_breakdown": {
+        "dense": 0.050024130606608125,
+        "graph": 0.04901131400985075,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:james_iii_of_cyprus_0",
+      "passage_index": 1,
+      "title": "James III of Cyprus",
+      "score": 0.04219740173772363,
+      "text": "James III of Cyprus\nJames III of Cyprus (or Jacques III de Lusignan) (6 July 1473 – 26 August 1474) was the only child by the marriage of James II of Cyprus and Catherine Cornaro. He died in mysterious circumstances as an infant, leaving his mother as the last Queen of Cyprus. His death paved the way for Venice to gain control of Cyprus.",
+      "score_breakdown": {
+        "dense": 0.04990552794189921,
+        "graph": 0.049164537898930195,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:bob_ross_0",
+      "passage_index": 10,
+      "title": "Bob Ross",
+      "score": 0.04218664083915964,
+      "text": "Bob Ross\nRobert Norman Ross (October 29, 1942 -- July 4, 1995) was an American painter, art instructor, and television host. He was the creator and host of The Joy of Painting, an instructional television program that aired from 1983 to 1994 on PBS in the United States, and also aired in Canada, Latin America, and Europe. Ross went from being a public television personality in the 1980s and 1990s to being an Internet celebrity in the 21st century, becoming popular with fans on YouTube and many other websites after his death.",
+      "score_breakdown": {
+        "dense": 0.049987648715164576,
+        "graph": 0.04897811348606376,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:roncalli",
+        "score": 0.09639107948215912,
+        "text": "Roncalli",
+        "metadata": {
+          "canonical_name": "Roncalli",
+          "aliases": [
+            "Roncalli"
+          ],
+          "surface_forms": [
+            "Roncalli"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_entombment_titian_1559",
+        "score": 0.09218003097197083,
+        "text": "The Entombment (Titian, 1559)",
+        "metadata": {
+          "canonical_name": "The Entombment (Titian, 1559)",
+          "aliases": [
+            "Entombment",
+            "Entombment Titian 1559",
+            "Titian 1559"
+          ],
+          "surface_forms": [
+            "Entombment"
+          ],
+          "title_anchor": "The Entombment (Titian, 1559)"
+        }
+      },
+      {
+        "node_id": "entity:titian",
+        "score": 0.03964972640989685,
+        "text": "Titian",
+        "metadata": {
+          "canonical_name": "Titian",
+          "aliases": [
+            "Titian"
+          ],
+          "surface_forms": [
+            "Titian"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_the_martyrdom_of_saint_lawrence_titian",
+        "score": 0.03331133616297273,
+        "text": "The Martyrdom of Saint Lawrence (Titian)",
+        "metadata": {
+          "canonical_name": "The Martyrdom of Saint Lawrence (Titian)",
+          "aliases": [
+            "MOSL",
+            "Martyrdom of Saint Lawrence",
+            "Martyrdom of Saint Lawrence Titian",
+            "Titian"
+          ],
+          "surface_forms": [
+            "MOSL",
+            "Martyrdom of Saint Lawrence",
+            "Titian"
+          ],
+          "title_anchor": "The Martyrdom of Saint Lawrence (Titian)"
+        }
+      },
+      {
+        "node_id": "entity:oxford_england",
+        "score": 0.03280683181343789,
+        "text": "Oxford England",
+        "metadata": {
+          "canonical_name": "Oxford England",
+          "aliases": [
+            "OE",
+            "Oxford England"
+          ],
+          "surface_forms": [
+            "OE",
+            "Oxford England"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:the_entombment_titian_1559_0_0_the_entombment_is_a_1559_painting_by_titian_commissioned_by_philip_ii_of_spain",
+        "score": 0.04560091134057497,
+        "text": "The Entombment is a 1559 painting by Titian, commissioned by Philip II of Spain.",
+        "metadata": {
+          "title": "The Entombment (Titian, 1559)",
+          "chunk_id": "chunk:the_entombment_titian_1559_0",
+          "sentence_index": 0,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Entombment",
+              "relation": "painted by",
+              "tail": "Titian"
+            },
+            {
+              "head": "Entombment",
+              "relation": "commissioned by",
+              "tail": "Philip II of Spain"
+            }
+          ],
+          "entities": [
+            "Entombment",
+            "Titian",
+            "Philip II of Spain"
+          ],
+          "entity_ids": [
+            "entity:philip_ii_of_spain",
+            "entity:titian",
+            "entity:title_anchor_the_entombment_titian_1559"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:h_lderlinturm_0_0_the_h_lderlinturm_english_h_lderlin_tower_is_a_building_located_in_t_bingen",
+        "score": 0.038019174961789054,
+        "text": "The Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin.",
+        "metadata": {
+          "title": "Hölderlinturm",
+          "chunk_id": "chunk:h_lderlinturm_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "H lderlinturm",
+              "relation": "is located in",
+              "tail": "T bingen"
+            },
+            {
+              "head": "H lderlinturm",
+              "relation": "is in country",
+              "tail": "Germany"
+            },
+            {
+              "head": "H lderlinturm",
+              "relation": "served as",
+              "tail": "residence of Friedrich H lderlin"
+            },
+            {
+              "head": "H lderlinturm",
+              "relation": "served as",
+              "tail": "place of death of Friedrich H lderlin"
+            }
+          ],
+          "entities": [
+            "H lderlinturm",
+            "T bingen",
+            "Germany",
+            "Friedrich H lderlin"
+          ],
+          "entity_ids": [
+            "entity:friedrich_h_lderlin",
+            "entity:germany",
+            "entity:place_of_death_of_friedrich_h_lderlin",
+            "entity:residence_of_friedrich_h_lderlin",
+            "entity:t_bingen",
+            "entity:title_anchor_h_lderlinturm"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:paul_louis_halley_0_0_the_inquest_into_the_death_of_paul_louis_halley_took_place_in_oxford_england_i",
+        "score": 0.0324471747870104,
+        "text": "The inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005.",
+        "metadata": {
+          "title": "Paul-Louis Halley",
+          "chunk_id": "chunk:paul_louis_halley_0",
+          "sentence_index": 0,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Paul-Louis Halley",
+              "relation": "died in",
+              "tail": "Oxford England"
+            },
+            {
+              "head": "inquest into the death of Paul-Louis Halley",
+              "relation": "took place in",
+              "tail": "Oxford England"
+            },
+            {
+              "head": "inquest into the death of Paul-Louis Halley",
+              "relation": "occurred on",
+              "tail": "late October 2005"
+            }
+          ],
+          "entities": [
+            "Paul-Louis Halley",
+            "Oxford England",
+            "late October 2005"
+          ],
+          "entity_ids": [
+            "entity:inquest_into_the_death_of_paul_louis_halley",
+            "entity:late_october_2005",
+            "entity:oxford_england",
+            "entity:title_anchor_paul_louis_halley"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:pope_john_xxiii_0_2_roncalli_left_venice_for_the_conclave_in_rome_well_aware_that_he_was_papabile_b",
+        "score": 0.030835784125544725,
+        "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]",
+        "metadata": {
+          "title": "Pope John XXIII",
+          "chunk_id": "chunk:pope_john_xxiii_0",
+          "sentence_index": 2,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Roncalli",
+              "relation": "left",
+              "tail": "Venice"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "went to",
+              "tail": "conclave in Rome"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "elected to succeed",
+              "tail": "Pius XII"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "arrived at",
+              "tail": "Vatican"
+            },
+            {
+              "head": "Roncalli",
+              "relation": "had",
+              "tail": "return train ticket to Venice"
+            }
+          ],
+          "entities": [
+            "Roncalli",
+            "Venice",
+            "Rome",
+            "Pius XII",
+            "Vatican"
+          ],
+          "entity_ids": [
+            "entity:conclave_in_rome",
+            "entity:pius_xii",
+            "entity:return_train_ticket_to_venice",
+            "entity:rome",
+            "entity:roncalli",
+            "entity:vatican",
+            "entity:venice"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:pope_john_xxiii_0",
+        "score": 0.01081331732298211,
+        "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]",
+        "metadata": {
+          "title": "Pope John XXIII",
+          "chunk_index": 0,
+          "document_index": 15,
+          "entity_ids": [
+            "entity:11_october",
+            "entity:9_october_1958",
+            "entity:conclave_in_rome",
+            "entity:pius_xii",
+            "entity:pope_pius_xii",
+            "entity:return_train_ticket_to_venice",
+            "entity:rome",
+            "entity:roncalli",
+            "entity:vatican",
+            "entity:venice"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:h_lderlinturm_0",
+        "score": 0.010463673053452,
+        "text": "Hölderlinturm\nThe Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin. He lived there from May 3, 1807 until his death in 1843. The building is located on the Neckar riverfront and is one of the most popularly known sites in Tübingen.",
+        "metadata": {
+          "title": "Hölderlinturm",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:friedrich_h_lderlin",
+            "entity:germany",
+            "entity:may",
+            "entity:neckar_riverfront",
+            "entity:place_of_death_of_friedrich_h_lderlin",
+            "entity:residence_of_friedrich_h_lderlin",
+            "entity:t_bingen",
+            "entity:title_anchor_h_lderlinturm"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:the_entombment_titian_1559_0",
+        "score": 0.008271095524135068,
+        "text": "The Entombment (Titian, 1559)\nThe Entombment is a 1559 painting by Titian, commissioned by Philip II of Spain. In this painting, Tizian uses the mature style characterized by the use of broad brushwork and brilliant colours. The figure holding Christ body is Nicodemus, the Jewish elder that secretly visited Jesus at night to learn about his teachings. The figure of Nicodemus bears the traits of the artist himself. This could have been inspired by Michelangelo's idea in his unfinished Pietà from 1550, depicting himself as Nicodemus, supporting the body of Christ displayed in the Cathedral in Florence. The stone sarcophagus where Christ body is placed is decorated with depictions of Cain and Abel and the Sacrifice of Isaac - themes that according to the Christian faith predicted the sacrifice of Jesus.",
+        "metadata": {
+          "title": "The Entombment (Titian, 1559)",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:body_of_christ",
+            "entity:cain_and_abel",
+            "entity:cathedral_in_florence",
+            "entity:christ",
+            "entity:christ_s_body",
+            "entity:jesus",
+            "entity:jesus_teachings",
+            "entity:jewish_elder",
+            "entity:michelangelo",
+            "entity:michelangelo_as_nicodemus",
+            "entity:nicodemus",
+            "entity:philip_ii_of_spain",
+            "entity:sacrifice_of_isaac",
+            "entity:sacrifice_of_jesus",
+            "entity:titian",
+            "entity:title_anchor_the_entombment_titian_1559",
+            "entity:tizian",
+            "entity:unfinished_piet"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:paul_louis_halley_0",
+        "score": 0.007953408562949463,
+        "text": "Paul-Louis Halley\nThe inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005. A jury returned a verdict of accidental death.",
+        "metadata": {
+          "title": "Paul-Louis Halley",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:inquest_into_the_death_of_paul_louis_halley",
+            "entity:late_october_2005",
+            "entity:oxford_england",
+            "entity:title_anchor_paul_louis_halley"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Paul-Louis Halley\nPaul-Louis Halley\nThe inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005. A jury returned a verdict of accidental death.\n\nPope John XXIII\nPope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]\n\nThe Entombment (Titian, 1559)\nThe Entombment (Titian, 1559)\nThe Entombment is a 1559 painting by Titian, commissioned by Philip II of Spain. In this painting, Tizian uses the mature style characterized by the use of broad brushwork and brilliant colours. The figure holding Christ body is Nicodemus, the Jewish elder that secretly visited Jesus at night to learn about his teachings. The figure of Nicodemus bears the traits of the artist himself. This could have been inspired by Michelangelo's idea in his unfinished Pietà from 1550, depicting himself as Nicodemus, supporting the body of Christ displayed in the Cathedral in Florence. The stone sarcophagus where Christ body is placed is decorated with depictions of Cain and Abel and the Sacrifice of Isaac - themes that according to the Christian faith predicted the sacrifice of Jesus.\n\nHölderlinturm\nHölderlinturm\nThe Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin. He lived there from May 3, 1807 until his death in 1843. The building is located on the Neckar riverfront and is one of the most popularly known sites in Tübingen.\n\nThe Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.\n\nPope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.\n\nPope John XXIII\nRoncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]\n\nRoncalli High School (Indiana)\nRoncalli High School (Indiana)\nRoncalli High School is a Catholic high school located in Indianapolis, Indiana. It is located on the south side of Indianapolis and run by the Roman Catholic Archdiocese of Indianapolis. Roncalli is named for Pope John XXIII, Angelo Giuseppe Roncalli.\n\nSeven Seconds (TV series)\nSeven Seconds (TV series)\nSeven Seconds is an American crime drama web television series that follows the people involved in investigating the death of a young black boy and the boy's family as they reel after the loss. Veena Sud is the series' creator and executive producer / showrunner, and Gavin O'Connor is the director and executive producer. The series, produced by Fox 21 Television Studios, is based on the Russian movie The Major (2013), written and directed by Yuri Bykov. The first season, consisting of 10 episodes, was released on Netflix on February 23, 2018.\n\nJames III of Cyprus\nJames III of Cyprus\nJames III of Cyprus (or Jacques III de Lusignan) (6 July 1473 – 26 August 1474) was the only child by the marriage of James II of Cyprus and Catherine Cornaro. He died in mysterious circumstances as an infant, leaving his mother as the last Queen of Cyprus. His death paved the way for Venice to gain control of Cyprus.\n\nBob Ross\nBob Ross\nRobert Norman Ross (October 29, 1942 -- July 4, 1995) was an American painter, art instructor, and television host. He was the creator and host of The Joy of Painting, an instructional television program that aired from 1983 to 1994 on PBS in the United States, and also aired in Canada, Latin America, and Europe. Ross went from being a public television personality in the 1980s and 1990s to being an Internet celebrity in the 21st century, becoming popular with fans on YouTube and many other websites after his death.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:paul_louis_halley_0",
+        "passage_index": 14,
+        "title": "Paul-Louis Halley",
+        "score": 0.06937132781752137,
+        "text": "Paul-Louis Halley\nThe inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005. A jury returned a verdict of accidental death.",
+        "score_breakdown": {
+          "dense": 0.04994859913674905,
+          "graph": 0.051624239229427604,
+          "fact": 0.17608217682320743
+        }
+      },
+      {
+        "node_id": "chunk:pope_john_xxiii_0",
+        "passage_index": 15,
+        "title": "Pope John XXIII",
+        "score": 0.06863072408766886,
+        "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]",
+        "score_breakdown": {
+          "dense": 0.050615340530734104,
+          "graph": 0.052392995860691675,
+          "fact": 0.1671625869170507
+        }
+      },
+      {
+        "node_id": "chunk:the_entombment_titian_1559_0",
+        "passage_index": 7,
+        "title": "The Entombment (Titian, 1559)",
+        "score": 0.06848386709565515,
+        "text": "The Entombment (Titian, 1559)\nThe Entombment is a 1559 painting by Titian, commissioned by Philip II of Spain. In this painting, Tizian uses the mature style characterized by the use of broad brushwork and brilliant colours. The figure holding Christ body is Nicodemus, the Jewish elder that secretly visited Jesus at night to learn about his teachings. The figure of Nicodemus bears the traits of the artist himself. This could have been inspired by Michelangelo's idea in his unfinished Pietà from 1550, depicting himself as Nicodemus, supporting the body of Christ displayed in the Cathedral in Florence. The stone sarcophagus where Christ body is placed is decorated with depictions of Cain and Abel and the Sacrifice of Isaac - themes that according to the Christian faith predicted the sacrifice of Jesus.",
+        "score_breakdown": {
+          "dense": 0.050723958224674,
+          "graph": 0.05397196041429213,
+          "fact": 0.1626273463186454
+        }
+      },
+      {
+        "node_id": "chunk:h_lderlinturm_0",
+        "passage_index": 18,
+        "title": "Hölderlinturm",
+        "score": 0.06832188970307851,
+        "text": "Hölderlinturm\nThe Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin. He lived there from May 3, 1807 until his death in 1843. The building is located on the Neckar riverfront and is one of the most popularly known sites in Tübingen.",
+        "score_breakdown": {
+          "dense": 0.049936759451522726,
+          "graph": 0.052190136338354585,
+          "fact": 0.16799754068823086
+        }
+      },
+      {
+        "node_id": "chunk:the_martyrdom_of_saint_lawrence_titian_0",
+        "passage_index": 11,
+        "title": "The Martyrdom of Saint Lawrence (Titian)",
+        "score": 0.0680021122982036,
+        "text": "The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.",
+        "score_breakdown": {
+          "dense": 0.05015111630492798,
+          "graph": 0.05156682962843682,
+          "fact": 0.16632632961308116
+        }
+      },
+      {
+        "node_id": "chunk:seven_seconds_tv_series_0",
+        "passage_index": 2,
+        "title": "Seven Seconds (TV series)",
+        "score": 0.06656951318045294,
+        "text": "Seven Seconds (TV series)\nSeven Seconds is an American crime drama web television series that follows the people involved in investigating the death of a young black boy and the boy's family as they reel after the loss. Veena Sud is the series' creator and executive producer / showrunner, and Gavin O'Connor is the director and executive producer. The series, produced by Fox 21 Television Studios, is based on the Russian movie The Major (2013), written and directed by Yuri Bykov. The first season, consisting of 10 episodes, was released on Netflix on February 23, 2018.",
+        "score_breakdown": {
+          "dense": 0.049800234329754674,
+          "graph": 0.05069593784373396,
+          "fact": 0.15980401963978455
+        }
+      },
+      {
+        "node_id": "chunk:roncalli_high_school_indiana_0",
+        "passage_index": 13,
+        "title": "Roncalli High School (Indiana)",
+        "score": 0.04282974199265218,
+        "text": "Roncalli High School (Indiana)\nRoncalli High School is a Catholic high school located in Indianapolis, Indiana. It is located on the south side of Indianapolis and run by the Roman Catholic Archdiocese of Indianapolis. Roncalli is named for Pope John XXIII, Angelo Giuseppe Roncalli.",
+        "score_breakdown": {
+          "dense": 0.050262108670621856,
+          "graph": 0.05061860741270053,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:giza_pyramid_complex_0",
+        "passage_index": 4,
+        "title": "Giza pyramid complex",
+        "score": 0.042216666036589696,
+        "text": "Giza pyramid complex\nThe pyramids of Giza and others are thought to have been constructed to house the remains of the deceased Pharaohs who ruled over Ancient Egypt. A portion of the Pharaoh's spirit called his ka was believed to remain with his corpse. Proper care of the remains was necessary in order for the ``former Pharaoh to perform his new duties as king of the dead. ''. It's theorized the pyramid not only served as a tomb for the Pharaoh, but also as a storage pit for various items he would need in the afterlife.`` The people of Ancient Egypt believed that death on Earth was the start of a journey to the next world. The embalmed body of the King was entombed underneath or within the pyramid to protect it and allow his transformation and ascension to the afterlife.''",
+        "score_breakdown": {
+          "dense": 0.050024130606608125,
+          "graph": 0.04901131400985075,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:james_iii_of_cyprus_0",
+        "passage_index": 1,
+        "title": "James III of Cyprus",
+        "score": 0.04219740173772363,
+        "text": "James III of Cyprus\nJames III of Cyprus (or Jacques III de Lusignan) (6 July 1473 – 26 August 1474) was the only child by the marriage of James II of Cyprus and Catherine Cornaro. He died in mysterious circumstances as an infant, leaving his mother as the last Queen of Cyprus. His death paved the way for Venice to gain control of Cyprus.",
+        "score_breakdown": {
+          "dense": 0.04990552794189921,
+          "graph": 0.049164537898930195,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:bob_ross_0",
+        "passage_index": 10,
+        "title": "Bob Ross",
+        "score": 0.04218664083915964,
+        "text": "Bob Ross\nRobert Norman Ross (October 29, 1942 -- July 4, 1995) was an American painter, art instructor, and television host. He was the creator and host of The Joy of Painting, an instructional television program that aired from 1983 to 1994 on PBS in the United States, and also aired in Canada, Latin America, and Europe. Ross went from being a public television personality in the 1980s and 1990s to being an Internet celebrity in the 21st century, becoming popular with fans on YouTube and many other websites after his death.",
+        "score_breakdown": {
+          "dense": 0.049987648715164576,
+          "graph": 0.04897811348606376,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where did the creator of The Entombment die?",
+        "resolved_sub_question": "Where did the creator of The Entombment die?",
+        "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+        "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+        "score": 0.5307933333333335,
+        "source_title": "Pope John XXIII",
+        "hop_answer": "Unknown",
+        "hop_thought": "The question asks about the location where the creator of The Entombment died, but the provided evidence only discusses Pope John XXIII and events related to his election as pope. There is no information about the creator of The Entombment or their place of death.",
+        "hop_raw_response": "The question asks about the location where the creator of The Entombment died, but the provided evidence only discusses Pope John XXIII and events related to his election as pope. There is no information about the creator of The Entombment or their place of death.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Pope John XXIII",
+            "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          }
+        ]
+      },
+      {
+        "sub_question": "Why did Roncalli leave this city?",
+        "resolved_sub_question": "Why did Roncalli leave this city?",
+        "sentence_id": "sentence:pope_john_xxiii_0_0_following_the_death_of_pope_pius_xii_on_9_october_1958_roncalli_watched_the_liv",
+        "sentence": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.",
+        "score": 0.4766133333333334,
+        "source_title": "Pope John XXIII",
+        "hop_answer": "to attend the conclave in Rome",
+        "hop_thought": "Roncalli left Venice to attend the conclave in Rome where a new pope would be elected following the death of Pope Pius XII.",
+        "hop_raw_response": "Roncalli left Venice to attend the conclave in Rome where a new pope would be elected following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome",
+        "evidence_passages": [
+          {
+            "title": "Pope John XXIII",
+            "text": "Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October."
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse. Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          },
+          {
+            "title": "Pope John XXIII",
+            "text": "Roncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]"
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. Your response must start after 'Thought: ' with concise reasoning grounded in the passages. Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. When the evidence is sufficient, synthesize the needed relation or attribute instead of repeating partial context. Do not switch to a competing, contrastive, or merely nearby entity unless the passages explicitly connect it to the question target. Conclude with 'Answer: ' followed by one short, definitive answer span. Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where did the creator of The Entombment die? (source: Pope John XXIII)\n2. Why did Roncalli leave this city? => to attend the conclave in Rome (source: Pope John XXIII)\n\nFact hints:\n- Roncalli was in Venice\n\nWikipedia Title: Pope John XXIII\nFollowing the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October.\n\nWikipedia Title: Roncalli High School (Indiana)\nRoncalli is named for Pope John XXIII, Angelo Giuseppe Roncalli. It is located on the south side of Indianapolis and run by the Roman Catholic Archdiocese of Indianapolis.\n\nWikipedia Title: Pope John XXIII\nPope John XXIII Following the death of Pope Pius XII on 9 October 1958, Roncalli watched the live funeral on his last full day in Venice on 11 October. His journal was specifically concerned with the funeral and the abused state of the late pontiff's corpse.\n\nWikipedia Title: Pope John XXIII\nRoncalli left Venice for the conclave in Rome well aware that he was papabile,[b] and after eleven ballots, was elected to succeed the late Pius XII, so it came as no surprise to him, though he had arrived at the Vatican with a return train ticket to Venice.[citation needed]\n\nWikipedia Title: James III of Cyprus\nHis death paved the way for Venice to gain control of Cyprus. He died in mysterious circumstances as an infant, leaving his mother as the last Queen of Cyprus.\n\nWikipedia Title: Seven Seconds (TV series)\nThe first season, consisting of 10 episodes, was released on Netflix on February 23, 2018. Veena Sud is the series' creator and executive producer / showrunner, and Gavin O'Connor is the director and executive producer.\n\nWikipedia Title: Bob Ross\nHe was the creator and host of The Joy of Painting, an instructional television program that aired from 1983 to 1994 on PBS in the United States, and also aired in Canada, Latin America, and Europe. Ross went from being a public television personality in the 1980s and 1990s to being an Internet celebrity in the 21st century, becoming popular with fans on YouTube and many other websites after his death.\n\nWikipedia Title: The Martyrdom of Saint Lawrence (Titian)\nThe Martyrdom of Saint Lawrence (Titian) The Martyrdom of Saint Lawrence is a 1558 painting by Titian, now in the church of I Gesuiti in Venice. It so impressed Philip II of Spain that he commissioned a second version in 1567 for the basilica at El Escorial.\n\nWikipedia Title: The Entombment (Titian, 1559)\nThe stone sarcophagus where Christ body is placed is decorated with depictions of Cain and Abel and the Sacrifice of Isaac - themes that according to the Christian faith predicted the sacrifice of Jesus. The figure of Nicodemus bears the traits of the artist himself.\n\nWikipedia Title: Paul-Louis Halley\nA jury returned a verdict of accidental death. Paul-Louis Halley The inquest into the death of Paul-Louis Halley took place in Oxford, England, in late October 2005.\n\nWikipedia Title: Hölderlinturm\nHölderlinturm The Hölderlinturm (English: Hölderlin Tower) is a building located in Tübingen, Germany that served as the place of residence and death in the final years of poet Friedrich Hölderlin. The building is located on the Neckar riverfront and is one of the most popularly known sites in Tübingen.\n\nQuestion: Why did Roncalli leave the city where the creator of The Entombment died?\nThought:"
+      }
+    ]
+  },
+  "qa_thought": "The creator of The Entombment, Titian, died in Venice. Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.",
+  "predicted_answer": "Unknown",
+  "qa_raw_response": "The creator of The Entombment, Titian, died in Venice. Roncalli left Venice to attend the conclave in Rome following the death of Pope Pius XII.\nAnswer: to attend the conclave in Rome"
+}

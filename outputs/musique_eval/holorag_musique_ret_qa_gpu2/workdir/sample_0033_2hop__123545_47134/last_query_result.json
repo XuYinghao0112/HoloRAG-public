@@ -1,0 +1,878 @@
+{
+  "query": "Who is the mascot of the university related to Randy Conrads?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.6,
+    "chunk": 0.2
+  },
+  "query_entities": [
+    "Randy Conrads"
+  ],
+  "raw_query_entities": [
+    "Randy Conrads"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Randy Conrads",
+      "node_id": "entity:title_anchor_randy_conrads",
+      "resolved_text": "Randy Conrads",
+      "score": 0.822242857142857,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6799999999999999,
+      "compatibility_score": 0.79125,
+      "score_margin": 0.06654285714285701,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "What university is related to Randy Conrads?",
+    "What is the mascot of this university?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:university_of_oregon",
+      "score": 0.3191038464727536,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:oklahoma_state_university_stillwater",
+      "score": 0.3191038464727536,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:oregon_state_university",
+      "score": 0.26827533553419614,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:saint_louis_university",
+      "score": 0.26126962353510114,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_billiken",
+      "score": 0.2612555311406131,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_randy_conrads",
+      "score": 0.25533588868623186,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_benny_beaver",
+      "score": 0.21875476392667526,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:capital_one_mascot_of_the_year_write_in_campaign",
+      "score": 0.18469390640976596,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+      "score": 0.174812897974089,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:2011_capital_one_mascot_of_the_year_write_in_campaign",
+      "score": 0.1562751346547287,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:billiken_0_0_today_the_billiken_is_the_official_mascot_of_saint_louis_university_and_st",
+      "score": 0.10524100047101291,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "chunk:benny_beaver_0",
+      "score": 0.10461235282767771,
+      "layer": "chunk"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:benny_beaver_is_official_mascot_of_oregon_state_university_sentence_benny_beaver_0_0_benny_beaver_is_the_official_mascot",
+      "text": "Benny Beaver is official mascot of Oregon State University",
+      "head_id": "entity:title_anchor_benny_beaver",
+      "tail_id": "entity:oregon_state_university",
+      "sentence_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+      "chunk_id": "chunk:benny_beaver_0",
+      "document_index": 13,
+      "score": 0.27891577426336933
+    },
+    {
+      "fact_id": "fact:billiken_is_official_mascot_of_saint_louis_university_sentence_billiken_0_0_today_the_billiken_is_the_official_mascot_of",
+      "text": "Billiken is official mascot of Saint Louis University",
+      "head_id": "entity:title_anchor_billiken",
+      "tail_id": "entity:saint_louis_university",
+      "sentence_id": "sentence:billiken_0_0_today_the_billiken_is_the_official_mascot_of_saint_louis_university_and_st",
+      "chunk_id": "chunk:billiken_0",
+      "document_index": 8,
+      "score": 0.2589149454619129
+    },
+    {
+      "fact_id": "fact:randy_conrads_attended_oregon_state_university_sentence_randy_conrads_0_0_randy_conrads_attended_oregon_state_university",
+      "text": "Randy Conrads attended Oregon State University",
+      "head_id": "entity:title_anchor_randy_conrads",
+      "tail_id": "entity:oregon_state_university",
+      "sentence_id": "sentence:randy_conrads_0_0_randy_conrads_attended_oregon_state_university_graduating_in_1972_with_a_bachel",
+      "chunk_id": "chunk:randy_conrads_0",
+      "document_index": 3,
+      "score": 0.2529239698578866
+    },
+    {
+      "fact_id": "fact:benny_beaver_winner_of_2011_capital_one_mascot_of_the_year_write_in_campaign_sentence_benny_beaver_0_0_benny_beaver_is_t",
+      "text": "Benny Beaver winner of 2011 Capital One Mascot of the Year write-in campaign",
+      "head_id": "entity:title_anchor_benny_beaver",
+      "tail_id": "entity:2011_capital_one_mascot_of_the_year_write_in_campaign",
+      "sentence_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+      "chunk_id": "chunk:benny_beaver_0",
+      "document_index": 13,
+      "score": 0.15391158867480498
+    }
+  ],
+  "bridge_entities": [
+    "Oregon State University",
+    "Benny Beaver"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "What university is related to Randy Conrads?",
+      "resolved_sub_question": "What university is related to Randy Conrads?",
+      "sentence_id": "sentence:randy_conrads_0_0_randy_conrads_attended_oregon_state_university_graduating_in_1972_with_a_bachel",
+      "sentence": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering.",
+      "score": 0.5761098843181609,
+      "source_title": "Randy Conrads",
+      "hop_answer": "Oregon State University",
+      "hop_thought": "The passage mentions that Randy Conrads attended Oregon State University and graduated from there in 1972.",
+      "hop_raw_response": "The passage mentions that Randy Conrads attended Oregon State University and graduated from there in 1972.\nAnswer: Oregon State University",
+      "evidence_passages": [
+        {
+          "title": "Randy Conrads",
+          "text": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering."
+        },
+        {
+          "title": "Randy Conrads",
+          "text": "Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company."
+        },
+        {
+          "title": "Benny Beaver",
+          "text": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign."
+        }
+      ]
+    },
+    {
+      "sub_question": "What is the mascot of this university?",
+      "resolved_sub_question": "What is the mascot of this university? Context: Oregon State University.",
+      "sentence_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+      "sentence": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign.",
+      "score": 0.5558248676376343,
+      "source_title": "Benny Beaver",
+      "hop_answer": "Benny Beaver",
+      "hop_thought": "The mascot of Oregon State University is mentioned in the evidence from the Wikipedia title \"Benny Beaver\".",
+      "hop_raw_response": "The mascot of Oregon State University is mentioned in the evidence from the Wikipedia title \"Benny Beaver\".\nAnswer: Benny Beaver",
+      "evidence_passages": [
+        {
+          "title": "Benny Beaver",
+          "text": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign."
+        },
+        {
+          "title": "Benny Beaver",
+          "text": "Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s."
+        },
+        {
+          "title": "Randy Conrads",
+          "text": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+      "score": 0.08821598500119195,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:oregon_state_university",
+      "score": 0.07782537849300608,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_benny_beaver",
+      "score": 0.058471634981093,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:university_of_oregon",
+      "score": 0.05607238243466621,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_billiken",
+      "score": 0.055135525459364135,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:oklahoma_state_university_stillwater",
+      "score": 0.05492783683570616,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_randy_conrads",
+      "score": 0.05127627149719118,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:saint_louis_university",
+      "score": 0.050371727925621584,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:billiken_0_0_today_the_billiken_is_the_official_mascot_of_saint_louis_university_and_st",
+      "score": 0.045036811189435685,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:2011_capital_one_mascot_of_the_year_write_in_campaign",
+      "score": 0.043657158577600094,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:capital_one_mascot_of_the_year_write_in_campaign",
+      "score": 0.04009298087242706,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:randy_conrads_0_0_randy_conrads_attended_oregon_state_university_graduating_in_1972_with_a_bachel",
+      "score": 0.03938517121920633,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:benny_beaver_0",
+      "score": 0.02454689604676903,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:don_frye_0_2_a_year_later_he_transferred_to_oklahoma_state_university_stillwater_where_he_e",
+      "score": 0.01862639757577512,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "chunk:randy_conrads_0",
+      "score": 0.016574732840439678,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:billiken_0",
+      "score": 0.016041748573994118,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:leo_harris_0_3_he_was_also_known_for_his_handshake_deal_with_walt_disney_that_permitted_the_uni",
+      "score": 0.015954733912230755,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:benny_beaver_0_1_the_exact_date_of_when_the_name_was_first_used_as_the_university_s_mascot_is_not",
+      "score": 0.013650276977086427,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:randy_conrads_0_5_conrads_went_on_to_co_found_redweek_com",
+      "score": 0.012933555807525853,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:billiken_0_3_the_billiken_is_also_the_official_mascot_of_the_royal_order_of_jesters_an_invit",
+      "score": 0.012024171438525777,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:benny_beaver_0",
+      "passage_index": 13,
+      "title": "Benny Beaver",
+      "score": 0.09543414620949886,
+      "text": "Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s.",
+      "score_breakdown": {
+        "dense": 0.05029229349464765,
+        "graph": 0.05668025456925044,
+        "fact": 0.33846205611111685
+      }
+    },
+    {
+      "node_id": "chunk:billiken_0",
+      "passage_index": 8,
+      "title": "Billiken",
+      "score": 0.09344076402268545,
+      "text": "Billiken\nToday, the Billiken is the official mascot of Saint Louis University and St. Louis University High School, both Jesuit institutions located in St. Louis. The Billiken is also the official mascot of the Royal Order of Jesters, an invitation only Shriner group, affiliated with Freemasonry. The Billiken also became the namesake of Billiken Shokai, the Japanese toy & model manufacturing company (established 1976).",
+      "score_breakdown": {
+        "dense": 0.050105031156768697,
+        "graph": 0.05373009792069832,
+        "fact": 0.3317597834016877
+      }
+    },
+    {
+      "node_id": "chunk:randy_conrads_0",
+      "passage_index": 3,
+      "title": "Randy Conrads",
+      "score": 0.09338621525210236,
+      "text": "Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company.",
+      "score_breakdown": {
+        "dense": 0.05084211975872967,
+        "graph": 0.05318775103907247,
+        "fact": 0.3297781604871954
+      }
+    },
+    {
+      "node_id": "chunk:don_frye_0",
+      "passage_index": 15,
+      "title": "Don Frye",
+      "score": 0.04275298191344805,
+      "text": "Don Frye\nBorn of Irish, Scottish and Pennsylvania Dutch descent, Don Frye began wrestling at Buena High School in Sierra Vista, Arizona then in college for Arizona State University in 1984, where he was trained by fellow future Ultimate Fighting Championship legend, then assistant wrestling coach, Dan Severn. In 1987, he won the freestyle and Greco-Roman events during an Olympic qualifier. A year later, he transferred to Oklahoma State University–Stillwater, where he encountered another future UFC star amongst his teammates: Randy Couture.",
+      "score_breakdown": {
+        "dense": 0.050065899556938895,
+        "graph": 0.05072245719043886,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:leo_harris_0",
+      "passage_index": 12,
+      "title": "Leo Harris",
+      "score": 0.04265818972176593,
+      "text": "Leo Harris\nLeo A. Harris (August 6, 1904 – April 22, 1990) was an American athlete, coach, and athletic director. He played college football at Stanford University, coached football and basketball at Fresno State College, and was the first athletic director for the University of Oregon, bringing success to a financially troubled system. He was also known for his handshake deal with Walt Disney that permitted the University of Oregon to use the likeness of Donald Duck as the basis for its mascot, the Oregon Duck.",
+      "score_breakdown": {
+        "dense": 0.05002900084098368,
+        "graph": 0.05047413086408301,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:biff_the_michigan_wolverine_0",
+      "passage_index": 16,
+      "title": "Biff, the Michigan Wolverine",
+      "score": 0.04232151760347501,
+      "text": "Biff, the Michigan Wolverine\nBLUE, the Wolverine was a live wolverine who served as a team mascot at University of Michigan Wolverines football games and was later kept in a small zoo at the University of Michigan in the 1920s and 1930s. In the mid-1920s, before the acquisition of a live wolverine, the University of Michigan used a mounted and stuffed wolverine, also named ``Biff '', as the team mascot.",
+      "score_breakdown": {
+        "dense": 0.05019045311619255,
+        "graph": 0.049055894631897,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:robert_khayat_0",
+      "passage_index": 1,
+      "title": "Robert Khayat",
+      "score": 0.04228414951149252,
+      "text": "Robert Khayat\nRobert Conrad \"Bob\" Khayat (born April 18, 1938) was the 15th Chancellor of the University of Mississippi. He was appointed in 1995. Khayat, a former student of the University of Mississippi, is the only Chancellor of the university to be a member of the Student Hall of Fame there. He has B.A. and J.D. degrees from the University of Mississippi and a LL.M. degree from Yale University.",
+      "score_breakdown": {
+        "dense": 0.05013002174286924,
+        "graph": 0.04904212517638147,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:missouri_western_state_university_0",
+      "passage_index": 7,
+      "title": "Missouri Western State University",
+      "score": 0.04226584640524312,
+      "text": "Missouri Western State University\nMissouri Western State University was founded in 1915 as a two-year institution called St. Joseph Junior College and held courses in the original location of Central High School at 13th and Patee. In 1933 when Central High School moved to its current location the junior college relocated to the Robidoux Polytechnic High School building at 10th Street between Edmond and Charles. In 1917 it adopted the Griffon as its mascot.",
+      "score_breakdown": {
+        "dense": 0.050113092170835094,
+        "graph": 0.049012152370946055,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:conrad_mountains_0",
+      "passage_index": 11,
+      "title": "Conrad Mountains",
+      "score": 0.04222944830289376,
+      "text": "Conrad Mountains\nThe Conrad Mountains ( ) are a narrow chain of mountains, long, located between the Gagarin Mountains and Mount Dallmann in Queen Maud Land, Antarctica. The Conrad Mountains are a subrange of the Orvin Mountains. With its summit at , the massive Sandeggtind Peak forms the highest point in the Conrad Mountains.",
+      "score_breakdown": {
+        "dense": 0.050043244351826006,
+        "graph": 0.04901887969796486,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:clemson_south_carolina_rivalry_0",
+      "passage_index": 17,
+      "title": "Clemson–South Carolina rivalry",
+      "score": 0.042200475897427175,
+      "text": "Clemson–South Carolina rivalry\nCollege comparison Clemson University University of South Carolina Location Clemson Columbia Students 23,406 34,618 School colors Clemson Orange and Regalia Garnet and Black Nickname Tigers Gamecocks Mascot The Tiger and The Tiger Cub Cocky National Championships 5 10",
+      "score_breakdown": {
+        "dense": 0.05000528931118995,
+        "graph": 0.04899188925424235,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:oregon_state_university",
+        "score": 0.07782537849300608,
+        "text": "Oregon State University",
+        "metadata": {
+          "canonical_name": "Oregon State University",
+          "aliases": [
+            "OSU",
+            "Oregon State University"
+          ],
+          "surface_forms": [
+            "OSU",
+            "Oregon State University"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_benny_beaver",
+        "score": 0.058471634981093,
+        "text": "Benny Beaver",
+        "metadata": {
+          "canonical_name": "Benny Beaver",
+          "aliases": [
+            "BB",
+            "Benny Beaver"
+          ],
+          "surface_forms": [
+            "BB",
+            "Benny Beaver"
+          ],
+          "title_anchor": "Benny Beaver"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+        "score": 0.08821598500119195,
+        "text": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign.",
+        "metadata": {
+          "title": "Benny Beaver",
+          "chunk_id": "chunk:benny_beaver_0",
+          "sentence_index": 0,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Benny Beaver",
+              "relation": "is official mascot of",
+              "tail": "Oregon State University"
+            },
+            {
+              "head": "Benny Beaver",
+              "relation": "winner of",
+              "tail": "2011 Capital One Mascot of the Year write-in campaign"
+            }
+          ],
+          "entities": [
+            "Benny Beaver",
+            "Oregon State University",
+            "Capital One Mascot of the Year write-in campaign"
+          ],
+          "entity_ids": [
+            "entity:2011_capital_one_mascot_of_the_year_write_in_campaign",
+            "entity:capital_one_mascot_of_the_year_write_in_campaign",
+            "entity:oregon_state_university",
+            "entity:title_anchor_benny_beaver"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:billiken_0_0_today_the_billiken_is_the_official_mascot_of_saint_louis_university_and_st",
+        "score": 0.045036811189435685,
+        "text": "Today, the Billiken is the official mascot of Saint Louis University and St.",
+        "metadata": {
+          "title": "Billiken",
+          "chunk_id": "chunk:billiken_0",
+          "sentence_index": 0,
+          "document_index": 8,
+          "triples": [
+            {
+              "head": "Billiken",
+              "relation": "is official mascot of",
+              "tail": "Saint Louis University"
+            }
+          ],
+          "entities": [
+            "Billiken",
+            "Saint Louis University"
+          ],
+          "entity_ids": [
+            "entity:saint_louis_university",
+            "entity:title_anchor_billiken"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:randy_conrads_0_0_randy_conrads_attended_oregon_state_university_graduating_in_1972_with_a_bachel",
+        "score": 0.03938517121920633,
+        "text": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering.",
+        "metadata": {
+          "title": "Randy Conrads",
+          "chunk_id": "chunk:randy_conrads_0",
+          "sentence_index": 0,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Randy Conrads",
+              "relation": "attended",
+              "tail": "Oregon State University"
+            }
+          ],
+          "entities": [
+            "Randy Conrads",
+            "Oregon State University"
+          ],
+          "entity_ids": [
+            "entity:oregon_state_university",
+            "entity:title_anchor_randy_conrads"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:don_frye_0_2_a_year_later_he_transferred_to_oklahoma_state_university_stillwater_where_he_e",
+        "score": 0.01862639757577512,
+        "text": "A year later, he transferred to Oklahoma State University–Stillwater, where he encountered another future UFC star amongst his teammates: Randy Couture.",
+        "metadata": {
+          "title": "Don Frye",
+          "chunk_id": "chunk:don_frye_0",
+          "sentence_index": 2,
+          "document_index": 15,
+          "triples": [
+            {
+              "head": "Randy Couture",
+              "relation": "is a",
+              "tail": "future UFC star"
+            }
+          ],
+          "entities": [
+            "Oklahoma State University Stillwater",
+            "Randy Couture",
+            "UFC"
+          ],
+          "entity_ids": [
+            "entity:future_ufc_star",
+            "entity:oklahoma_state_university_stillwater",
+            "entity:randy_couture",
+            "entity:ufc"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:leo_harris_0_3_he_was_also_known_for_his_handshake_deal_with_walt_disney_that_permitted_the_uni",
+        "score": 0.015954733912230755,
+        "text": "He was also known for his handshake deal with Walt Disney that permitted the University of Oregon to use the likeness of Donald Duck as the basis for its mascot, the Oregon Duck.",
+        "metadata": {
+          "title": "Leo Harris",
+          "chunk_id": "chunk:leo_harris_0",
+          "sentence_index": 3,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "University of Oregon",
+              "relation": "used as mascot",
+              "tail": "Oregon Duck"
+            }
+          ],
+          "entities": [
+            "Walt Disney",
+            "University of Oregon",
+            "Donald Duck",
+            "Oregon Duck"
+          ],
+          "entity_ids": [
+            "entity:donald_duck",
+            "entity:oregon_duck",
+            "entity:university_of_oregon",
+            "entity:walt_disney"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:benny_beaver_0_1_the_exact_date_of_when_the_name_was_first_used_as_the_university_s_mascot_is_not",
+        "score": 0.013650276977086427,
+        "text": "The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s.",
+        "metadata": {
+          "title": "Benny Beaver",
+          "chunk_id": "chunk:benny_beaver_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [],
+          "entities": []
+        }
+      },
+      {
+        "node_id": "sentence:randy_conrads_0_5_conrads_went_on_to_co_found_redweek_com",
+        "score": 0.012933555807525853,
+        "text": "Conrads went on to co-found RedWeek.com.",
+        "metadata": {
+          "title": "Randy Conrads",
+          "chunk_id": "chunk:randy_conrads_0",
+          "sentence_index": 5,
+          "document_index": 3,
+          "triples": [
+            {
+              "head": "Conrads",
+              "relation": "co-founded",
+              "tail": "RedWeek com"
+            }
+          ],
+          "entities": [
+            "Conrads",
+            "RedWeek com"
+          ],
+          "entity_ids": [
+            "entity:conrads",
+            "entity:title_anchor_randy_conrads"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:benny_beaver_0",
+        "score": 0.02454689604676903,
+        "text": "Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s.",
+        "metadata": {
+          "title": "Benny Beaver",
+          "chunk_index": 0,
+          "document_index": 13,
+          "entity_ids": [
+            "entity:2011_capital_one_mascot_of_the_year_write_in_campaign",
+            "entity:capital_one_mascot_of_the_year_write_in_campaign",
+            "entity:oregon_state_university",
+            "entity:title_anchor_benny_beaver"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:randy_conrads_0",
+        "score": 0.016574732840439678,
+        "text": "Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company.",
+        "metadata": {
+          "title": "Randy Conrads",
+          "chunk_index": 0,
+          "document_index": 3,
+          "entity_ids": [
+            "entity:after",
+            "entity:before",
+            "entity:boeing",
+            "entity:classmates_com",
+            "entity:classmates_online",
+            "entity:classmates_online_inc",
+            "entity:conrads",
+            "entity:ebusiness_report_s_2001_entrepreneur_of_the_year",
+            "entity:inc",
+            "entity:oregon_state_university",
+            "entity:title_anchor_randy_conrads"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Benny Beaver\nBenny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s.\n\nBilliken\nBilliken\nToday, the Billiken is the official mascot of Saint Louis University and St. Louis University High School, both Jesuit institutions located in St. Louis. The Billiken is also the official mascot of the Royal Order of Jesters, an invitation only Shriner group, affiliated with Freemasonry. The Billiken also became the namesake of Billiken Shokai, the Japanese toy & model manufacturing company (established 1976).\n\nRandy Conrads\nRandy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company.\n\nDon Frye\nDon Frye\nBorn of Irish, Scottish and Pennsylvania Dutch descent, Don Frye began wrestling at Buena High School in Sierra Vista, Arizona then in college for Arizona State University in 1984, where he was trained by fellow future Ultimate Fighting Championship legend, then assistant wrestling coach, Dan Severn. In 1987, he won the freestyle and Greco-Roman events during an Olympic qualifier. A year later, he transferred to Oklahoma State University–Stillwater, where he encountered another future UFC star amongst his teammates: Randy Couture.\n\nLeo Harris\nLeo Harris\nLeo A. Harris (August 6, 1904 – April 22, 1990) was an American athlete, coach, and athletic director. He played college football at Stanford University, coached football and basketball at Fresno State College, and was the first athletic director for the University of Oregon, bringing success to a financially troubled system. He was also known for his handshake deal with Walt Disney that permitted the University of Oregon to use the likeness of Donald Duck as the basis for its mascot, the Oregon Duck.\n\nRandy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering.\n\nBenny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign.\n\nMissouri Western State University\nMissouri Western State University\nMissouri Western State University was founded in 1915 as a two-year institution called St. Joseph Junior College and held courses in the original location of Central High School at 13th and Patee. In 1933 when Central High School moved to its current location the junior college relocated to the Robidoux Polytechnic High School building at 10th Street between Edmond and Charles. In 1917 it adopted the Griffon as its mascot.\n\nPennsylvania State University\nPennsylvania State University\nThe Pennsylvania State University (commonly referred to as Penn State or PSU) is a state - related, land - grant, doctoral university with campuses and facilities throughout Pennsylvania. Founded in 1855, the university has a stated threefold mission of teaching, research, and public service. Its instructional mission includes undergraduate, graduate, professional and continuing education offered through resident instruction and online delivery. Its University Park campus, the flagship campus, lies within the Borough of State College and College Township. It has two law schools: Penn State Law, on the school's University Park campus, and Dickinson Law, located in Carlisle, 90 miles south of State College. The College of Medicine is located in Hershey. Penn State has another 19 commonwealth campuses and 5 special mission campuses located across the state. Penn State has been labeled one of the ``Public Ivies, ''a publicly funded university considered as providing a quality of education comparable to those of the Ivy League.\n\nClassical music\nClassical music\nSome \"popular\" genre musicians have had significant classical training, such as Billy Joel, Elton John, the Van Halen brothers, Randy Rhoads and Ritchie Blackmore. Moreover, formal training is not unique to the classical genre. Many rock and pop musicians have completed degrees in commercial music programs such as those offered by the Berklee College of Music and many jazz musicians have completed degrees in music from universities with jazz programs, such as the Manhattan School of Music and McGill University.\n\nJason Hu\nJason Hu\nHu attended, then known as Big Tiger. He had relatively low friends, but that didn't matter. All that Jason Hu cared about was success. After graduating from Taichung Municipal First High School, then known as Chu-jen (居仁, Hanyu Pinyin: Juren) High School, Jason Hu attended National Chengchi University where he studied in the Diplomatic Studies Department, graduating in 1970. He attended the University of South Carolina from 1971–73 and pursued a master's degree in international studies but had to withdraw due to his father's ailing health. He later studied in the United Kingdom, first to the University of Southampton, where he studied International Relations, then to Balliol College, University of Oxford, where he received his PhD in International Relations in 1984.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:benny_beaver_0",
+        "passage_index": 13,
+        "title": "Benny Beaver",
+        "score": 0.09543414620949886,
+        "text": "Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s.",
+        "score_breakdown": {
+          "dense": 0.05029229349464765,
+          "graph": 0.05668025456925044,
+          "fact": 0.33846205611111685
+        }
+      },
+      {
+        "node_id": "chunk:billiken_0",
+        "passage_index": 8,
+        "title": "Billiken",
+        "score": 0.09344076402268545,
+        "text": "Billiken\nToday, the Billiken is the official mascot of Saint Louis University and St. Louis University High School, both Jesuit institutions located in St. Louis. The Billiken is also the official mascot of the Royal Order of Jesters, an invitation only Shriner group, affiliated with Freemasonry. The Billiken also became the namesake of Billiken Shokai, the Japanese toy & model manufacturing company (established 1976).",
+        "score_breakdown": {
+          "dense": 0.050105031156768697,
+          "graph": 0.05373009792069832,
+          "fact": 0.3317597834016877
+        }
+      },
+      {
+        "node_id": "chunk:randy_conrads_0",
+        "passage_index": 3,
+        "title": "Randy Conrads",
+        "score": 0.09338621525210236,
+        "text": "Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company.",
+        "score_breakdown": {
+          "dense": 0.05084211975872967,
+          "graph": 0.05318775103907247,
+          "fact": 0.3297781604871954
+        }
+      },
+      {
+        "node_id": "chunk:don_frye_0",
+        "passage_index": 15,
+        "title": "Don Frye",
+        "score": 0.04275298191344805,
+        "text": "Don Frye\nBorn of Irish, Scottish and Pennsylvania Dutch descent, Don Frye began wrestling at Buena High School in Sierra Vista, Arizona then in college for Arizona State University in 1984, where he was trained by fellow future Ultimate Fighting Championship legend, then assistant wrestling coach, Dan Severn. In 1987, he won the freestyle and Greco-Roman events during an Olympic qualifier. A year later, he transferred to Oklahoma State University–Stillwater, where he encountered another future UFC star amongst his teammates: Randy Couture.",
+        "score_breakdown": {
+          "dense": 0.050065899556938895,
+          "graph": 0.05072245719043886,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:leo_harris_0",
+        "passage_index": 12,
+        "title": "Leo Harris",
+        "score": 0.04265818972176593,
+        "text": "Leo Harris\nLeo A. Harris (August 6, 1904 – April 22, 1990) was an American athlete, coach, and athletic director. He played college football at Stanford University, coached football and basketball at Fresno State College, and was the first athletic director for the University of Oregon, bringing success to a financially troubled system. He was also known for his handshake deal with Walt Disney that permitted the University of Oregon to use the likeness of Donald Duck as the basis for its mascot, the Oregon Duck.",
+        "score_breakdown": {
+          "dense": 0.05002900084098368,
+          "graph": 0.05047413086408301,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:biff_the_michigan_wolverine_0",
+        "passage_index": 16,
+        "title": "Biff, the Michigan Wolverine",
+        "score": 0.04232151760347501,
+        "text": "Biff, the Michigan Wolverine\nBLUE, the Wolverine was a live wolverine who served as a team mascot at University of Michigan Wolverines football games and was later kept in a small zoo at the University of Michigan in the 1920s and 1930s. In the mid-1920s, before the acquisition of a live wolverine, the University of Michigan used a mounted and stuffed wolverine, also named ``Biff '', as the team mascot.",
+        "score_breakdown": {
+          "dense": 0.05019045311619255,
+          "graph": 0.049055894631897,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:robert_khayat_0",
+        "passage_index": 1,
+        "title": "Robert Khayat",
+        "score": 0.04228414951149252,
+        "text": "Robert Khayat\nRobert Conrad \"Bob\" Khayat (born April 18, 1938) was the 15th Chancellor of the University of Mississippi. He was appointed in 1995. Khayat, a former student of the University of Mississippi, is the only Chancellor of the university to be a member of the Student Hall of Fame there. He has B.A. and J.D. degrees from the University of Mississippi and a LL.M. degree from Yale University.",
+        "score_breakdown": {
+          "dense": 0.05013002174286924,
+          "graph": 0.04904212517638147,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:missouri_western_state_university_0",
+        "passage_index": 7,
+        "title": "Missouri Western State University",
+        "score": 0.04226584640524312,
+        "text": "Missouri Western State University\nMissouri Western State University was founded in 1915 as a two-year institution called St. Joseph Junior College and held courses in the original location of Central High School at 13th and Patee. In 1933 when Central High School moved to its current location the junior college relocated to the Robidoux Polytechnic High School building at 10th Street between Edmond and Charles. In 1917 it adopted the Griffon as its mascot.",
+        "score_breakdown": {
+          "dense": 0.050113092170835094,
+          "graph": 0.049012152370946055,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:conrad_mountains_0",
+        "passage_index": 11,
+        "title": "Conrad Mountains",
+        "score": 0.04222944830289376,
+        "text": "Conrad Mountains\nThe Conrad Mountains ( ) are a narrow chain of mountains, long, located between the Gagarin Mountains and Mount Dallmann in Queen Maud Land, Antarctica. The Conrad Mountains are a subrange of the Orvin Mountains. With its summit at , the massive Sandeggtind Peak forms the highest point in the Conrad Mountains.",
+        "score_breakdown": {
+          "dense": 0.050043244351826006,
+          "graph": 0.04901887969796486,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:clemson_south_carolina_rivalry_0",
+        "passage_index": 17,
+        "title": "Clemson–South Carolina rivalry",
+        "score": 0.042200475897427175,
+        "text": "Clemson–South Carolina rivalry\nCollege comparison Clemson University University of South Carolina Location Clemson Columbia Students 23,406 34,618 School colors Clemson Orange and Regalia Garnet and Black Nickname Tigers Gamecocks Mascot The Tiger and The Tiger Cub Cocky National Championships 5 10",
+        "score_breakdown": {
+          "dense": 0.05000528931118995,
+          "graph": 0.04899188925424235,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "What university is related to Randy Conrads?",
+        "resolved_sub_question": "What university is related to Randy Conrads?",
+        "sentence_id": "sentence:randy_conrads_0_0_randy_conrads_attended_oregon_state_university_graduating_in_1972_with_a_bachel",
+        "sentence": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering.",
+        "score": 0.5761098843181609,
+        "source_title": "Randy Conrads",
+        "hop_answer": "Oregon State University",
+        "hop_thought": "The passage mentions that Randy Conrads attended Oregon State University and graduated from there in 1972.",
+        "hop_raw_response": "The passage mentions that Randy Conrads attended Oregon State University and graduated from there in 1972.\nAnswer: Oregon State University",
+        "evidence_passages": [
+          {
+            "title": "Randy Conrads",
+            "text": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering."
+          },
+          {
+            "title": "Randy Conrads",
+            "text": "Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering. Before founding Classmates Online, Inc. Conrads worked for Boeing for twenty one years. Classmates.com became a very popular website and Conrads received many honors including eBusiness Report's 2001 Entrepreneur of the Year. After he left Classmates Online, Inc. Conrads went on to co-found RedWeek.com. He continues to work for this company."
+          },
+          {
+            "title": "Benny Beaver",
+            "text": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign."
+          }
+        ]
+      },
+      {
+        "sub_question": "What is the mascot of this university?",
+        "resolved_sub_question": "What is the mascot of this university? Context: Oregon State University.",
+        "sentence_id": "sentence:benny_beaver_0_0_benny_beaver_is_the_official_mascot_of_oregon_state_university_and_winner_of_the",
+        "sentence": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign.",
+        "score": 0.5558248676376343,
+        "source_title": "Benny Beaver",
+        "hop_answer": "Benny Beaver",
+        "hop_thought": "The mascot of Oregon State University is mentioned in the evidence from the Wikipedia title \"Benny Beaver\".",
+        "hop_raw_response": "The mascot of Oregon State University is mentioned in the evidence from the Wikipedia title \"Benny Beaver\".\nAnswer: Benny Beaver",
+        "evidence_passages": [
+          {
+            "title": "Benny Beaver",
+            "text": "Benny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign."
+          },
+          {
+            "title": "Benny Beaver",
+            "text": "Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign. The exact date of when the name was first used as the university's mascot is not known, but photographs in the school's yearbook document its use as early as the 1940s."
+          },
+          {
+            "title": "Randy Conrads",
+            "text": "Randy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. What university is related to Randy Conrads? => Oregon State University (source: Randy Conrads)\n2. What is the mascot of this university? => Benny Beaver (source: Benny Beaver)\n\nFact hints:\n- Benny Beaver is official mascot of Oregon State University\n- Benny Beaver winner of 2011 Capital One Mascot of the Year write-in campaign\n- Randy Conrads attended Oregon State University\n\nWikipedia Title: Benny Beaver\nBenny Beaver is the official mascot of Oregon State University and winner of the 2011 Capital One Mascot of the Year write - in campaign.\n\nWikipedia Title: Randy Conrads\nRandy Conrads attended Oregon State University, graduating in 1972 with a bachelor's degree in industrial engineering.\n\nWikipedia Title: Missouri Western State University\nIn 1917 it adopted the Griffon as its mascot. Joseph Junior College and held courses in the original location of Central High School at 13th and Patee.\n\nWikipedia Title: Leo Harris\nHe was also known for his handshake deal with Walt Disney that permitted the University of Oregon to use the likeness of Donald Duck as the basis for its mascot, the Oregon Duck. He played college football at Stanford University, coached football and basketball at Fresno State College, and was the first athletic director for the University of Oregon, bringing success to a financially troubled system.\n\nWikipedia Title: Billiken\nBilliken Today, the Billiken is the official mascot of Saint Louis University and St. The Billiken is also the official mascot of the Royal Order of Jesters, an invitation only Shriner group, affiliated with Freemasonry.\n\nQuestion: Who is the mascot of the university related to Randy Conrads?\nDraft Answer: Benny Beaver\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The university related to Randy Conrads is Oregon State University, and the mascot of Oregon State University is Benny Beaver.",
+  "predicted_answer": "Benny Beaver",
+  "qa_raw_response": "{\n  \"thought\": \"The university related to Randy Conrads is Oregon State University, and the mascot of Oregon State University is Benny Beaver.\",\n  \"answer\": \"Benny Beaver\",\n  \"support\": \"Benny Beaver is the official mascot of Oregon State University\"\n}"
+}

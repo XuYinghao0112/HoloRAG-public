@@ -1,0 +1,1104 @@
+{
+  "query": "Among the top five largest urban areas in the state where Getting Away with Murder's performer was formed, where does Veoh's headquarters city rank?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Getting Away with Murder",
+    "Veoh"
+  ],
+  "raw_query_entities": [
+    "Getting Away with Murder",
+    "Veoh"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Getting Away with Murder",
+      "node_id": "entity:title_anchor_getting_away_with_murder_song",
+      "resolved_text": "Getting Away with Murder (song)",
+      "score": 0.6687174603174603,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6444444444444445,
+      "compatibility_score": 0.185,
+      "score_margin": 0.15033968253968244,
+      "confident": false
+    },
+    {
+      "mention": "Veoh",
+      "node_id": "entity:title_anchor_veoh",
+      "resolved_text": "Veoh",
+      "score": 0.48432380952380955,
+      "alias_score": 1.0,
+      "relation_score": 0.0,
+      "context_score": 0.36000000000000004,
+      "compatibility_score": 0.185,
+      "score_margin": 0.48432380952380955,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Where was the performer of 'Getting Away with Murder' formed?",
+    "What are the top five largest urban areas in this state?",
+    "In which city is Veoh's headquarters located?",
+    "Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:san_diego_metropolitan_area",
+      "score": 1.2170376793795437,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_oklahoma_city",
+      "score": 0.670795069611241,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:central_oklahoma",
+      "score": 0.6707919663087668,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_san_diego",
+      "score": 0.6337266971307464,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:san_diego",
+      "score": 0.6337266971307464,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kathmandu_metropolitan_city",
+      "score": 0.31205083573049375,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:kathmandu_valley",
+      "score": 0.31205083573049375,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:papa_roach",
+      "score": 0.28925452102158905,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_veoh",
+      "score": 0.286975802346138,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:san_diego_california",
+      "score": 0.28695567085950796,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles",
+      "score": 0.2796558322525648,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:metropolitan_areas_in_california",
+      "score": 0.2796558322525648,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:oklahoma_city_located_in_central_oklahoma_sentence_oklahoma_city_0_0_oklahoma_city_is_the_principal_city_of_the_eight_co",
+      "text": "Oklahoma City located in Central Oklahoma",
+      "head_id": "entity:title_anchor_oklahoma_city",
+      "tail_id": "entity:central_oklahoma",
+      "sentence_id": "sentence:oklahoma_city_0_0_oklahoma_city_is_the_principal_city_of_the_eight_county_oklahoma_city_metropolit",
+      "chunk_id": "chunk:oklahoma_city_0",
+      "document_index": 4,
+      "score": 0.30404333076666534
+    },
+    {
+      "fact_id": "fact:veoh_based_in_san_diego_california_sentence_veoh_0_0_veoh_is_an_internet_television_company_based_in_san_diego_californi",
+      "text": "Veoh based in San Diego California",
+      "head_id": "entity:title_anchor_veoh",
+      "tail_id": "entity:san_diego_california",
+      "sentence_id": "sentence:veoh_0_0_veoh_is_an_internet_television_company_based_in_san_diego_california",
+      "chunk_id": "chunk:veoh_0",
+      "document_index": 14,
+      "score": 0.28505933833862324
+    },
+    {
+      "fact_id": "fact:kathmandu_is_located_in_northwestern_part_of_the_kathmandu_valley_sentence_kathmandu_0_0_kathmandu_is_located_in_the_nor",
+      "text": "Kathmandu is located in northwestern part of the Kathmandu Valley",
+      "head_id": "entity:title_anchor_kathmandu",
+      "tail_id": "entity:northwestern_part_of_the_kathmandu_valley",
+      "sentence_id": "sentence:kathmandu_0_0_kathmandu_is_located_in_the_northwestern_part_of_the_kathmandu_valley_to_the_nor",
+      "chunk_id": "chunk:kathmandu_0",
+      "document_index": 0,
+      "score": 0.2600423631087448
+    },
+    {
+      "fact_id": "fact:san_francisco_metropolitan_area_has_larger_urban_area_than_san_diego_urban_area_sentence_san_diego_0_1_the_urban_area_of",
+      "text": "San Francisco metropolitan area has larger urban area than San Diego urban area",
+      "head_id": "entity:san_francisco_metropolitan_area",
+      "tail_id": "entity:san_diego_urban_area",
+      "sentence_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+      "chunk_id": "chunk:san_diego_0",
+      "document_index": 7,
+      "score": 0.2530459583301937
+    },
+    {
+      "fact_id": "fact:papa_roach_from_vacaville_california_sentence_papa_roach_0_0_papa_roach_is_an_american_rock_band_from_vacaville_californ",
+      "text": "Papa Roach from Vacaville California",
+      "head_id": "entity:title_anchor_papa_roach",
+      "tail_id": "entity:vacaville_california",
+      "sentence_id": "sentence:papa_roach_0_0_papa_roach_is_an_american_rock_band_from_vacaville_california_formed_in_1993",
+      "chunk_id": "chunk:papa_roach_0",
+      "document_index": 2,
+      "score": 0.24104543418465757
+    },
+    {
+      "fact_id": "fact:los_angeles_metropolitan_area_has_larger_urban_area_than_san_diego_urban_area_sentence_san_diego_0_1_the_urban_area_of_s",
+      "text": "Los Angeles metropolitan area has larger urban area than San Diego urban area",
+      "head_id": "entity:los_angeles_metropolitan_area",
+      "tail_id": "entity:san_diego_urban_area",
+      "sentence_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+      "chunk_id": "chunk:san_diego_0",
+      "document_index": 7,
+      "score": 0.23304652687713734
+    },
+    {
+      "fact_id": "fact:getting_away_with_murder_is_first_single_from_papa_roach_s_third_album_sentence_getting_away_with_murder_song_0_0_gettin",
+      "text": "Getting Away with Murder is first single from Papa Roach's third album",
+      "head_id": "entity:title_anchor_getting_away_with_murder_song",
+      "tail_id": "entity:papa_roach_s_third_album",
+      "sentence_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+      "chunk_id": "chunk:getting_away_with_murder_song_0",
+      "document_index": 12,
+      "score": 0.19438292205630062
+    },
+    {
+      "fact_id": "fact:papa_roach_s_third_album_is_titled_getting_away_with_murder_sentence_getting_away_with_murder_song_0_0_getting_away_with",
+      "text": "Papa Roach's third album is titled Getting Away with Murder",
+      "head_id": "entity:papa_roach_s_third_album",
+      "tail_id": "entity:title_anchor_getting_away_with_murder_song",
+      "sentence_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+      "chunk_id": "chunk:getting_away_with_murder_song_0",
+      "document_index": 12,
+      "score": 0.1652254837478555
+    }
+  ],
+  "bridge_entities": [
+    "San Diego California",
+    "Internet television company",
+    "San Diego"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Where was the performer of 'Getting Away with Murder' formed?",
+      "resolved_sub_question": "Where was the performer of 'Getting Away with Murder' formed?",
+      "sentence_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+      "sentence": "\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\".",
+      "score": 0.4100559676482307,
+      "source_title": "Getting Away with Murder (song)",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence provided does not contain information about where Papa Roach, the performers of 'Getting Away with Murder', were formed.",
+      "hop_raw_response": "The evidence provided does not contain information about where Papa Roach, the performers of 'Getting Away with Murder', were formed.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Getting Away with Murder (song)",
+          "text": "\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\"."
+        },
+        {
+          "title": "Getting Away with Murder (song)",
+          "text": "Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the"
+        },
+        {
+          "title": "Getting Away with Murder (song)",
+          "text": "A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the words \"getting away\" instead of \"..with murder\"."
+        }
+      ]
+    },
+    {
+      "sub_question": "What are the top five largest urban areas in this state?",
+      "resolved_sub_question": "What are the top five largest urban areas in this state?",
+      "sentence_id": "sentence:tennessee_0_3_in_this_valley_are_numerous_towns_and_two_of_the_region_s_three_urban_areas_kno",
+      "sentence": "In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state.",
+      "score": 0.4767879755620956,
+      "source_title": "Tennessee",
+      "hop_answer": "Unknown",
+      "hop_thought": "The evidence mentions the top four largest urban areas in Tennessee but does not provide information about the fifth largest urban area. Therefore, we can only confidently list the top four based on the given information.",
+      "hop_raw_response": "The evidence mentions the top four largest urban areas in Tennessee but does not provide information about the fifth largest urban area. Therefore, we can only confidently list the top four based on the given information.\nAnswer: Unknown",
+      "evidence_passages": [
+        {
+          "title": "Tennessee",
+          "text": "In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state."
+        },
+        {
+          "title": "Tennessee",
+          "text": "Tennessee\nStretching west from the Blue Ridge for approximately 55 miles (89 km) is the Ridge and Valley region, in which numerous tributaries join to form the Tennessee River in the Tennessee Valley. This area of Tennessee is covered by fertile valleys separated by wooded ridges, such as Bays Mountain and Clinch Mountain. The western section of the Tennessee Valley, where the depressions become broader and the ridges become lower, is called the Great Valley. In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state. The third urban area, the Tri-Cities, comprising Bristol, Johnson City, and Kingsport and their environs, is located to the northeast of Knoxville."
+        },
+        {
+          "title": "Oklahoma City",
+          "text": "Oklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area."
+        }
+      ]
+    },
+    {
+      "sub_question": "In which city is Veoh's headquarters located?",
+      "resolved_sub_question": "In which city is Veoh's headquarters located?",
+      "sentence_id": "sentence:veoh_0_0_veoh_is_an_internet_television_company_based_in_san_diego_california",
+      "sentence": "Veoh is an Internet television company based in San Diego, California.",
+      "score": 0.4393773409160614,
+      "source_title": "Veoh",
+      "hop_answer": "San Diego",
+      "hop_thought": "The passage states that Veoh is an Internet television company based in San Diego, California.",
+      "hop_raw_response": "The passage states that Veoh is an Internet television company based in San Diego, California.\nAnswer: San Diego",
+      "evidence_passages": [
+        {
+          "title": "Veoh",
+          "text": "Veoh is an Internet television company based in San Diego, California."
+        },
+        {
+          "title": "Veoh",
+          "text": "Veoh\nVeoh is an Internet television company based in San Diego, California. It allows users to find and watch major studio content, independent productions and user-generated material. The company is a subsidiary of Israeli start-up Qlipso."
+        },
+        {
+          "title": "San Diego",
+          "text": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area."
+        }
+      ]
+    },
+    {
+      "sub_question": "Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located?",
+      "resolved_sub_question": "Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located? Context: San Diego.",
+      "sentence_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+      "sentence": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area.",
+      "score": 0.4147074059378306,
+      "source_title": "San Diego",
+      "hop_answer": "third",
+      "hop_thought": "The urban area of San Diego is the third-largest in the state of California, as mentioned in the provided context. Therefore, among the top five largest urban areas in the state, San Diego ranks third.",
+      "hop_raw_response": "The urban area of San Diego is the third-largest in the state of California, as mentioned in the provided context. Therefore, among the top five largest urban areas in the state, San Diego ranks third.\nAnswer: third",
+      "evidence_passages": [
+        {
+          "title": "San Diego",
+          "text": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area."
+        },
+        {
+          "title": "San Diego",
+          "text": "San Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census."
+        },
+        {
+          "title": "Veoh",
+          "text": "Veoh is an Internet television company based in San Diego, California."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:san_diego_metropolitan_area",
+      "score": 0.07526163689071631,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_oklahoma_city",
+      "score": 0.050752931442447885,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:san_diego",
+      "score": 0.049082963338393376,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:central_oklahoma",
+      "score": 0.048121576656551826,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_san_diego",
+      "score": 0.04581663426711784,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:oklahoma_city_0_0_oklahoma_city_is_the_principal_city_of_the_eight_county_oklahoma_city_metropolit",
+      "score": 0.03576956884580563,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:san_diego_urban_area",
+      "score": 0.03428347837350327,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:san_diego_california",
+      "score": 0.029440769258618188,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+      "score": 0.02934578707876651,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:los_angeles_metropolitan_area",
+      "score": 0.02623523108205124,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:metropolitan_areas_in_california",
+      "score": 0.02501820997151394,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_kathmandu",
+      "score": 0.024882767032163786,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_papa_roach",
+      "score": 0.023060547138117247,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:los_angeles",
+      "score": 0.022255151176583964,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_veoh",
+      "score": 0.021649704448795173,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:san_francisco_metropolitan_area",
+      "score": 0.021640910996016526,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+      "score": 0.019477280308406255,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:san_diego_0_2_they_along_with_the_riverside_san_bernardino_form_those_metropolitan_areas_in",
+      "score": 0.018561574743398798,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:veoh_0_0_veoh_is_an_internet_television_company_based_in_san_diego_california",
+      "score": 0.018456597590914205,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:papa_roach",
+      "score": 0.018307901091323846,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:oklahoma_city_0",
+      "passage_index": 4,
+      "title": "Oklahoma City",
+      "score": 0.06936458578313902,
+      "text": "Oklahoma City\nOklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area. Based on population rank, the metropolitan area was the 42nd largest in the nation as of 2012.",
+      "score_breakdown": {
+        "dense": 0.04992224804903,
+        "graph": 0.05233223138704574,
+        "fact": 0.17471786626705865
+      }
+    },
+    {
+      "node_id": "chunk:veoh_0",
+      "passage_index": 14,
+      "title": "Veoh",
+      "score": 0.06894606924539315,
+      "text": "Veoh\nVeoh is an Internet television company based in San Diego, California. It allows users to find and watch major studio content, independent productions and user-generated material. The company is a subsidiary of Israeli start-up Qlipso.",
+      "score_breakdown": {
+        "dense": 0.05087557746031842,
+        "graph": 0.05083218441269777,
+        "fact": 0.1714323087893913
+      }
+    },
+    {
+      "node_id": "chunk:san_diego_0",
+      "passage_index": 7,
+      "title": "San Diego",
+      "score": 0.06889455443719396,
+      "text": "San Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.",
+      "score_breakdown": {
+        "dense": 0.049993542975687734,
+        "graph": 0.05497813703628206,
+        "fact": 0.1660310979312072
+      }
+    },
+    {
+      "node_id": "chunk:kathmandu_0",
+      "passage_index": 6,
+      "title": "Kathmandu",
+      "score": 0.06793218168034951,
+      "text": "Kathmandu\nKathmandu(/ˌkɑːtmɑːnˈduː/; Nepali pronunciation: [kɑʈʰmɑɳɖu]) is the capital and largest municipality of Nepal. It also hosts the headquarters of the South Asian Association for Regional Cooperation (SAARC). It is the only city of Nepal with the administrative status of Mahanagar (Metropolitan City), as compared to Upa-Mahanagar (Sub-Metropolitan City) or Nagar (City). Kathmandu is the core of Nepal's largest urban agglomeration located in the Kathmandu Valley consisting of Lalitpur, Kirtipur, Madhyapur Thimi, Bhaktapur and a number of smaller communities. Kathmandu is also known informally as \"KTM\" or the \"tri-city\". According to the 2011 census, Kathmandu Metropolitan City has a population of 975,453 and measures 49.45 km2 (19.09 sq mi).",
+      "score_breakdown": {
+        "dense": 0.04991215036898557,
+        "graph": 0.05133660070329309,
+        "fact": 0.16719679177613014
+      }
+    },
+    {
+      "node_id": "chunk:papa_roach_0",
+      "passage_index": 2,
+      "title": "Papa Roach",
+      "score": 0.06724023676570365,
+      "text": "Papa Roach\nPapa Roach is an American rock band from Vacaville, California, formed in 1993. The original lineup consisted of lead vocalist Jacoby Shaddix, guitarist Jerry Horton, drummer Dave Buckner, bassist Will James, and trombonist Ben Luther.",
+      "score_breakdown": {
+        "dense": 0.04995184192957705,
+        "graph": 0.05053047301402861,
+        "fact": 0.16405054533485125
+      }
+    },
+    {
+      "node_id": "chunk:getting_away_with_murder_song_0",
+      "passage_index": 12,
+      "title": "Getting Away with Murder (song)",
+      "score": 0.0665365603905576,
+      "text": "Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the",
+      "score_breakdown": {
+        "dense": 0.05051532899509941,
+        "graph": 0.0508914031934957,
+        "fact": 0.15657138990136138
+      }
+    },
+    {
+      "node_id": "chunk:southern_california_0",
+      "passage_index": 19,
+      "title": "Southern California",
+      "score": 0.042856181726493456,
+      "text": "Southern California\nSouthern California consists of a heavily developed urban environment, home to some of the largest urban areas in the state, along with vast areas that have been left undeveloped. It is the third most populated megalopolis in the United States, after the Great Lakes Megalopolis and the Northeastern megalopolis. Much of southern California is famous for its large, spread-out, suburban communities and use of automobiles and highways. The dominant areas are Los Angeles, Orange County, San Diego, and Riverside-San Bernardino, each of which is the center of its respective metropolitan area, composed of numerous smaller cities and communities. The urban area is also host to an international metropolitan region in the form of San Diego–Tijuana, created by the urban area spilling over into Baja California.",
+      "score_breakdown": {
+        "dense": 0.050090299825602445,
+        "graph": 0.051021722741373704,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:getting_away_with_murder_song_1",
+      "passage_index": 12,
+      "title": "Getting Away with Murder (song)",
+      "score": 0.04235808251645311,
+      "text": "Getting Away with Murder (song)\nA \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the words \"getting away\" instead of \"..with murder\".",
+      "score_breakdown": {
+        "dense": 0.05025921211136735,
+        "graph": 0.04905171951733687,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:karla_souza_0",
+      "passage_index": 9,
+      "title": "Karla Souza",
+      "score": 0.04225157140190666,
+      "text": "Karla Souza\nKarla Olivares Souza (born December 11, 1985) is a Mexican actress. She is best known for her role as Laurel Castillo on the ABC legal drama series, How to Get Away with Murder.",
+      "score_breakdown": {
+        "dense": 0.049945592680547525,
+        "graph": 0.04927165142535173,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:conrad_ricamora_0",
+      "passage_index": 13,
+      "title": "Conrad Ricamora",
+      "score": 0.04222459747811316,
+      "text": "Conrad Ricamora\nConrad Wayne Ricamora (born February 17, 1979) is an American actor and singer, best known for his portrayal of Oliver Hampton on ABC's legal drama series How to Get Away with Murder.",
+      "score_breakdown": {
+        "dense": 0.049894127257821864,
+        "graph": 0.04927609162103711,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:san_diego_metropolitan_area",
+        "score": 0.07526163689071631,
+        "text": "San Diego metropolitan area",
+        "metadata": {
+          "canonical_name": "San Diego metropolitan area",
+          "aliases": [
+            "SDMA",
+            "San Diego metropolitan area"
+          ],
+          "surface_forms": [
+            "SDMA",
+            "San Diego metropolitan area"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_oklahoma_city",
+        "score": 0.050752931442447885,
+        "text": "Oklahoma City",
+        "metadata": {
+          "canonical_name": "Oklahoma City",
+          "aliases": [
+            "OC",
+            "Oklahoma City"
+          ],
+          "surface_forms": [
+            "OC",
+            "Oklahoma City"
+          ],
+          "title_anchor": "Oklahoma City"
+        }
+      },
+      {
+        "node_id": "entity:san_diego",
+        "score": 0.049082963338393376,
+        "text": "San Diego",
+        "metadata": {
+          "canonical_name": "San Diego",
+          "aliases": [
+            "SD",
+            "San Diego"
+          ],
+          "surface_forms": [
+            "SD",
+            "San Diego"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:central_oklahoma",
+        "score": 0.048121576656551826,
+        "text": "Central Oklahoma",
+        "metadata": {
+          "canonical_name": "Central Oklahoma",
+          "aliases": [
+            "CO",
+            "Central Oklahoma"
+          ],
+          "surface_forms": [
+            "CO",
+            "Central Oklahoma"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_san_diego",
+        "score": 0.04581663426711784,
+        "text": "San Diego",
+        "metadata": {
+          "canonical_name": "San Diego",
+          "aliases": [
+            "SD",
+            "San Diego"
+          ],
+          "surface_forms": [
+            "SD",
+            "San Diego"
+          ],
+          "title_anchor": "San Diego"
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:oklahoma_city_0_0_oklahoma_city_is_the_principal_city_of_the_eight_county_oklahoma_city_metropolit",
+        "score": 0.03576956884580563,
+        "text": "Oklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area.",
+        "metadata": {
+          "title": "Oklahoma City",
+          "chunk_id": "chunk:oklahoma_city_0",
+          "sentence_index": 0,
+          "document_index": 4,
+          "triples": [
+            {
+              "head": "Oklahoma City",
+              "relation": "is principal city of",
+              "tail": "Oklahoma City Metropolitan Statistical Area"
+            },
+            {
+              "head": "Oklahoma City",
+              "relation": "located in",
+              "tail": "Central Oklahoma"
+            }
+          ],
+          "entities": [
+            "Oklahoma City",
+            "Oklahoma City Metropolitan Statistical Area",
+            "Central Oklahoma"
+          ],
+          "entity_ids": [
+            "entity:central_oklahoma",
+            "entity:oklahoma_city_metropolitan_statistical_area",
+            "entity:title_anchor_oklahoma_city"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+        "score": 0.02934578707876651,
+        "text": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area.",
+        "metadata": {
+          "title": "San Diego",
+          "chunk_id": "chunk:san_diego_0",
+          "sentence_index": 1,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Los Angeles metropolitan area",
+              "relation": "has larger urban area than",
+              "tail": "San Diego urban area"
+            },
+            {
+              "head": "San Francisco metropolitan area",
+              "relation": "has larger urban area than",
+              "tail": "San Diego urban area"
+            }
+          ],
+          "entities": [
+            "San Diego",
+            "Los Angeles metropolitan area",
+            "San Francisco metropolitan area"
+          ],
+          "entity_ids": [
+            "entity:los_angeles_metropolitan_area",
+            "entity:san_diego_urban_area",
+            "entity:san_francisco_metropolitan_area",
+            "entity:title_anchor_san_diego"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+        "score": 0.019477280308406255,
+        "text": "\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\".",
+        "metadata": {
+          "title": "Getting Away with Murder (song)",
+          "chunk_id": "chunk:getting_away_with_murder_song_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "Getting Away with Murder",
+              "relation": "is first single from",
+              "tail": "Papa Roach's third album"
+            },
+            {
+              "head": "Papa Roach's third album",
+              "relation": "is titled",
+              "tail": "Getting Away with Murder"
+            }
+          ],
+          "entities": [
+            "Getting Away with Murder",
+            "Papa Roach",
+            "Papa Roach's third album"
+          ],
+          "entity_ids": [
+            "entity:papa_roach",
+            "entity:papa_roach_s_third_album",
+            "entity:title_anchor_getting_away_with_murder_song"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:san_diego_0_2_they_along_with_the_riverside_san_bernardino_form_those_metropolitan_areas_in",
+        "score": 0.018561574743398798,
+        "text": "They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.",
+        "metadata": {
+          "title": "San Diego",
+          "chunk_id": "chunk:san_diego_0",
+          "sentence_index": 2,
+          "document_index": 7,
+          "triples": [
+            {
+              "head": "Riverside San Bernardino",
+              "relation": "form",
+              "tail": "metropolitan areas in California"
+            },
+            {
+              "head": "metropolitan areas in California",
+              "relation": "larger than",
+              "tail": "San Diego metropolitan area"
+            }
+          ],
+          "entities": [
+            "Riverside San Bernardino",
+            "California",
+            "San Diego metropolitan area"
+          ],
+          "entity_ids": [
+            "entity:california",
+            "entity:metropolitan_areas_in_california",
+            "entity:riverside_san_bernardino",
+            "entity:san_diego_metropolitan_area"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:san_diego_0",
+        "score": 0.009073868850042804,
+        "text": "San Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.",
+        "metadata": {
+          "title": "San Diego",
+          "chunk_index": 0,
+          "document_index": 7,
+          "entity_ids": [
+            "entity:california",
+            "entity:los_angeles_metropolitan_area",
+            "entity:metropolitan_areas_in_california",
+            "entity:riverside_san_bernardino",
+            "entity:san_diego_metropolitan_area",
+            "entity:san_diego_urban_area",
+            "entity:san_francisco_metropolitan_area",
+            "entity:title_anchor_san_diego"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:getting_away_with_murder_song_0",
+        "score": 0.006666003443380988,
+        "text": "Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the",
+        "metadata": {
+          "title": "Getting Away with Murder (song)",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:atv_unleashed",
+            "entity:getting_away",
+            "entity:gran_turismo",
+            "entity:gran_turismo_4",
+            "entity:jacoby_shaddix",
+            "entity:motion_theory",
+            "entity:mtv2",
+            "entity:mx",
+            "entity:mx_vs",
+            "entity:papa_roach",
+            "entity:papa_roach_s_third_album",
+            "entity:stock_exchange_hall",
+            "entity:title_anchor_getting_away_with_murder_song",
+            "entity:vrenna",
+            "entity:vrenna_walsh_remix",
+            "entity:walsh_remix",
+            "entity:wwe_tough_enough"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:oklahoma_city_0",
+        "score": 0.006434449389916148,
+        "text": "Oklahoma City\nOklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area. Based on population rank, the metropolitan area was the 42nd largest in the nation as of 2012.",
+        "metadata": {
+          "title": "Oklahoma City",
+          "chunk_index": 0,
+          "document_index": 4,
+          "entity_ids": [
+            "entity:based",
+            "entity:central_oklahoma",
+            "entity:oklahoma_city_metropolitan_statistical_area",
+            "entity:title_anchor_oklahoma_city"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:kathmandu_0",
+        "score": 0.005503139188651219,
+        "text": "Kathmandu\nKathmandu(/ˌkɑːtmɑːnˈduː/; Nepali pronunciation: [kɑʈʰmɑɳɖu]) is the capital and largest municipality of Nepal. It also hosts the headquarters of the South Asian Association for Regional Cooperation (SAARC). It is the only city of Nepal with the administrative status of Mahanagar (Metropolitan City), as compared to Upa-Mahanagar (Sub-Metropolitan City) or Nagar (City). Kathmandu is the core of Nepal's largest urban agglomeration located in the Kathmandu Valley consisting of Lalitpur, Kirtipur, Madhyapur Thimi, Bhaktapur and a number of smaller communities. Kathmandu is also known informally as \"KTM\" or the \"tri-city\". According to the 2011 census, Kathmandu Metropolitan City has a population of 975,453 and measures 49.45 km2 (19.09 sq mi).",
+        "metadata": {
+          "title": "Kathmandu",
+          "chunk_index": 0,
+          "document_index": 6,
+          "entity_ids": [
+            "entity:according",
+            "entity:bagmati",
+            "entity:bagmati_river",
+            "entity:bhaktapur",
+            "entity:however",
+            "entity:kathmandu_metropolitan_city",
+            "entity:kathmandu_valley",
+            "entity:kirtipur",
+            "entity:kirtipur_municipality",
+            "entity:ktm",
+            "entity:lalitpur",
+            "entity:lalitpur_kirtipur_madhyapur_thimi_bhaktapur_and_smaller_communities",
+            "entity:lalitpur_sub",
+            "entity:madhyapur_thimi",
+            "entity:madyapur_thimi_municipality",
+            "entity:mahanagar",
+            "entity:metropolitan_city",
+            "entity:nagar",
+            "entity:nagar_city",
+            "entity:nepal",
+            "entity:nepal_s_largest_urban_agglomeration",
+            "entity:northwestern_part_of_the_kathmandu_valley",
+            "entity:patan",
+            "entity:regional_cooperation",
+            "entity:south_asian_association",
+            "entity:south_asian_association_for_regional_cooperation_saarc",
+            "entity:title_anchor_kathmandu",
+            "entity:upa_mahanagar",
+            "entity:upa_mahanagar_sub_metropolitan_city",
+            "entity:village_development_committees"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Oklahoma City\nOklahoma City\nOklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area. Based on population rank, the metropolitan area was the 42nd largest in the nation as of 2012.\n\nVeoh\nVeoh\nVeoh is an Internet television company based in San Diego, California. It allows users to find and watch major studio content, independent productions and user-generated material. The company is a subsidiary of Israeli start-up Qlipso.\n\nSan Diego\nSan Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.\n\nKathmandu\nKathmandu\nKathmandu(/ˌkɑːtmɑːnˈduː/; Nepali pronunciation: [kɑʈʰmɑɳɖu]) is the capital and largest municipality of Nepal. It also hosts the headquarters of the South Asian Association for Regional Cooperation (SAARC). It is the only city of Nepal with the administrative status of Mahanagar (Metropolitan City), as compared to Upa-Mahanagar (Sub-Metropolitan City) or Nagar (City). Kathmandu is the core of Nepal's largest urban agglomeration located in the Kathmandu Valley consisting of Lalitpur, Kirtipur, Madhyapur Thimi, Bhaktapur and a number of smaller communities. Kathmandu is also known informally as \"KTM\" or the \"tri-city\". According to the 2011 census, Kathmandu Metropolitan City has a population of 975,453 and measures 49.45 km2 (19.09 sq mi).\n\nPapa Roach\nPapa Roach\nPapa Roach is an American rock band from Vacaville, California, formed in 1993. The original lineup consisted of lead vocalist Jacoby Shaddix, guitarist Jerry Horton, drummer Dave Buckner, bassist Will James, and trombonist Ben Luther.\n\nGetting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\".\n\nGetting Away with Murder (song)\nGetting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the\n\nGetting Away with Murder (song)\nA \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the words \"getting away\" instead of \"..with murder\".\n\nTennessee\nIn this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state.\n\nTennessee\nTennessee\nStretching west from the Blue Ridge for approximately 55 miles (89 km) is the Ridge and Valley region, in which numerous tributaries join to form the Tennessee River in the Tennessee Valley. This area of Tennessee is covered by fertile valleys separated by wooded ridges, such as Bays Mountain and Clinch Mountain. The western section of the Tennessee Valley, where the depressions become broader and the ridges become lower, is called the Great Valley. In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state. The third urban area, the Tri-Cities, comprising Bristol, Johnson City, and Kingsport and their environs, is located to the northeast of Knoxville.\n\nOklahoma City\nOklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:oklahoma_city_0",
+        "passage_index": 4,
+        "title": "Oklahoma City",
+        "score": 0.06936458578313902,
+        "text": "Oklahoma City\nOklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area. Based on population rank, the metropolitan area was the 42nd largest in the nation as of 2012.",
+        "score_breakdown": {
+          "dense": 0.04992224804903,
+          "graph": 0.05233223138704574,
+          "fact": 0.17471786626705865
+        }
+      },
+      {
+        "node_id": "chunk:veoh_0",
+        "passage_index": 14,
+        "title": "Veoh",
+        "score": 0.06894606924539315,
+        "text": "Veoh\nVeoh is an Internet television company based in San Diego, California. It allows users to find and watch major studio content, independent productions and user-generated material. The company is a subsidiary of Israeli start-up Qlipso.",
+        "score_breakdown": {
+          "dense": 0.05087557746031842,
+          "graph": 0.05083218441269777,
+          "fact": 0.1714323087893913
+        }
+      },
+      {
+        "node_id": "chunk:san_diego_0",
+        "passage_index": 7,
+        "title": "San Diego",
+        "score": 0.06889455443719396,
+        "text": "San Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.",
+        "score_breakdown": {
+          "dense": 0.049993542975687734,
+          "graph": 0.05497813703628206,
+          "fact": 0.1660310979312072
+        }
+      },
+      {
+        "node_id": "chunk:kathmandu_0",
+        "passage_index": 6,
+        "title": "Kathmandu",
+        "score": 0.06793218168034951,
+        "text": "Kathmandu\nKathmandu(/ˌkɑːtmɑːnˈduː/; Nepali pronunciation: [kɑʈʰmɑɳɖu]) is the capital and largest municipality of Nepal. It also hosts the headquarters of the South Asian Association for Regional Cooperation (SAARC). It is the only city of Nepal with the administrative status of Mahanagar (Metropolitan City), as compared to Upa-Mahanagar (Sub-Metropolitan City) or Nagar (City). Kathmandu is the core of Nepal's largest urban agglomeration located in the Kathmandu Valley consisting of Lalitpur, Kirtipur, Madhyapur Thimi, Bhaktapur and a number of smaller communities. Kathmandu is also known informally as \"KTM\" or the \"tri-city\". According to the 2011 census, Kathmandu Metropolitan City has a population of 975,453 and measures 49.45 km2 (19.09 sq mi).",
+        "score_breakdown": {
+          "dense": 0.04991215036898557,
+          "graph": 0.05133660070329309,
+          "fact": 0.16719679177613014
+        }
+      },
+      {
+        "node_id": "chunk:papa_roach_0",
+        "passage_index": 2,
+        "title": "Papa Roach",
+        "score": 0.06724023676570365,
+        "text": "Papa Roach\nPapa Roach is an American rock band from Vacaville, California, formed in 1993. The original lineup consisted of lead vocalist Jacoby Shaddix, guitarist Jerry Horton, drummer Dave Buckner, bassist Will James, and trombonist Ben Luther.",
+        "score_breakdown": {
+          "dense": 0.04995184192957705,
+          "graph": 0.05053047301402861,
+          "fact": 0.16405054533485125
+        }
+      },
+      {
+        "node_id": "chunk:getting_away_with_murder_song_0",
+        "passage_index": 12,
+        "title": "Getting Away with Murder (song)",
+        "score": 0.0665365603905576,
+        "text": "Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the",
+        "score_breakdown": {
+          "dense": 0.05051532899509941,
+          "graph": 0.0508914031934957,
+          "fact": 0.15657138990136138
+        }
+      },
+      {
+        "node_id": "chunk:southern_california_0",
+        "passage_index": 19,
+        "title": "Southern California",
+        "score": 0.042856181726493456,
+        "text": "Southern California\nSouthern California consists of a heavily developed urban environment, home to some of the largest urban areas in the state, along with vast areas that have been left undeveloped. It is the third most populated megalopolis in the United States, after the Great Lakes Megalopolis and the Northeastern megalopolis. Much of southern California is famous for its large, spread-out, suburban communities and use of automobiles and highways. The dominant areas are Los Angeles, Orange County, San Diego, and Riverside-San Bernardino, each of which is the center of its respective metropolitan area, composed of numerous smaller cities and communities. The urban area is also host to an international metropolitan region in the form of San Diego–Tijuana, created by the urban area spilling over into Baja California.",
+        "score_breakdown": {
+          "dense": 0.050090299825602445,
+          "graph": 0.051021722741373704,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:getting_away_with_murder_song_1",
+        "passage_index": 12,
+        "title": "Getting Away with Murder (song)",
+        "score": 0.04235808251645311,
+        "text": "Getting Away with Murder (song)\nA \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the words \"getting away\" instead of \"..with murder\".",
+        "score_breakdown": {
+          "dense": 0.05025921211136735,
+          "graph": 0.04905171951733687,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:karla_souza_0",
+        "passage_index": 9,
+        "title": "Karla Souza",
+        "score": 0.04225157140190666,
+        "text": "Karla Souza\nKarla Olivares Souza (born December 11, 1985) is a Mexican actress. She is best known for her role as Laurel Castillo on the ABC legal drama series, How to Get Away with Murder.",
+        "score_breakdown": {
+          "dense": 0.049945592680547525,
+          "graph": 0.04927165142535173,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:conrad_ricamora_0",
+        "passage_index": 13,
+        "title": "Conrad Ricamora",
+        "score": 0.04222459747811316,
+        "text": "Conrad Ricamora\nConrad Wayne Ricamora (born February 17, 1979) is an American actor and singer, best known for his portrayal of Oliver Hampton on ABC's legal drama series How to Get Away with Murder.",
+        "score_breakdown": {
+          "dense": 0.049894127257821864,
+          "graph": 0.04927609162103711,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Where was the performer of 'Getting Away with Murder' formed?",
+        "resolved_sub_question": "Where was the performer of 'Getting Away with Murder' formed?",
+        "sentence_id": "sentence:getting_away_with_murder_song_0_0_getting_away_with_murder_is_the_first_single_from_the_band_papa_roach_s_third",
+        "sentence": "\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\".",
+        "score": 0.4100559676482307,
+        "source_title": "Getting Away with Murder (song)",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence provided does not contain information about where Papa Roach, the performers of 'Getting Away with Murder', were formed.",
+        "hop_raw_response": "The evidence provided does not contain information about where Papa Roach, the performers of 'Getting Away with Murder', were formed.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Getting Away with Murder (song)",
+            "text": "\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\"."
+          },
+          {
+            "title": "Getting Away with Murder (song)",
+            "text": "Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\". The song shows the band's new sound, the sound of the song is hard rock instead of their previous nu metal sound. The song also features no rapping at all, something that was used in Papa Roach's previous singles. The video is performance-based, showing the band playing in a Stock Exchange Hall with references filled with fans (including sexual imagery which led the band's lead singer Jacoby Shaddix to describe the video as \"stocks and bondage\" in an MTV2 interview). It was directed by Motion Theory. The song is also the former theme song for \"WWE Tough Enough\". It was featured in the 2004 video game \"\" It was also featured in the video game \"MX vs. ATV Unleashed\" in 2005. A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the"
+          },
+          {
+            "title": "Getting Away with Murder (song)",
+            "text": "A \"clean\" remix of the song called \"Getting Away With... (Gran Turismo 4 Vrenna/Walsh Remix)\" was featured in \"Gran Turismo 4\"; it was a bit faster, had the heavily distorted guitars toned down, and had a backing whisper of the words \"getting away\" instead of \"..with murder\"."
+          }
+        ]
+      },
+      {
+        "sub_question": "What are the top five largest urban areas in this state?",
+        "resolved_sub_question": "What are the top five largest urban areas in this state?",
+        "sentence_id": "sentence:tennessee_0_3_in_this_valley_are_numerous_towns_and_two_of_the_region_s_three_urban_areas_kno",
+        "sentence": "In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state.",
+        "score": 0.4767879755620956,
+        "source_title": "Tennessee",
+        "hop_answer": "Unknown",
+        "hop_thought": "The evidence mentions the top four largest urban areas in Tennessee but does not provide information about the fifth largest urban area. Therefore, we can only confidently list the top four based on the given information.",
+        "hop_raw_response": "The evidence mentions the top four largest urban areas in Tennessee but does not provide information about the fifth largest urban area. Therefore, we can only confidently list the top four based on the given information.\nAnswer: Unknown",
+        "evidence_passages": [
+          {
+            "title": "Tennessee",
+            "text": "In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state."
+          },
+          {
+            "title": "Tennessee",
+            "text": "Tennessee\nStretching west from the Blue Ridge for approximately 55 miles (89 km) is the Ridge and Valley region, in which numerous tributaries join to form the Tennessee River in the Tennessee Valley. This area of Tennessee is covered by fertile valleys separated by wooded ridges, such as Bays Mountain and Clinch Mountain. The western section of the Tennessee Valley, where the depressions become broader and the ridges become lower, is called the Great Valley. In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state. The third urban area, the Tri-Cities, comprising Bristol, Johnson City, and Kingsport and their environs, is located to the northeast of Knoxville."
+          },
+          {
+            "title": "Oklahoma City",
+            "text": "Oklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area."
+          }
+        ]
+      },
+      {
+        "sub_question": "In which city is Veoh's headquarters located?",
+        "resolved_sub_question": "In which city is Veoh's headquarters located?",
+        "sentence_id": "sentence:veoh_0_0_veoh_is_an_internet_television_company_based_in_san_diego_california",
+        "sentence": "Veoh is an Internet television company based in San Diego, California.",
+        "score": 0.4393773409160614,
+        "source_title": "Veoh",
+        "hop_answer": "San Diego",
+        "hop_thought": "The passage states that Veoh is an Internet television company based in San Diego, California.",
+        "hop_raw_response": "The passage states that Veoh is an Internet television company based in San Diego, California.\nAnswer: San Diego",
+        "evidence_passages": [
+          {
+            "title": "Veoh",
+            "text": "Veoh is an Internet television company based in San Diego, California."
+          },
+          {
+            "title": "Veoh",
+            "text": "Veoh\nVeoh is an Internet television company based in San Diego, California. It allows users to find and watch major studio content, independent productions and user-generated material. The company is a subsidiary of Israeli start-up Qlipso."
+          },
+          {
+            "title": "San Diego",
+            "text": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area."
+          }
+        ]
+      },
+      {
+        "sub_question": "Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located?",
+        "resolved_sub_question": "Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located? Context: San Diego.",
+        "sentence_id": "sentence:san_diego_0_1_the_urban_area_of_san_diego_extends_beyond_the_administrative_city_limits_and_ha",
+        "sentence": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area.",
+        "score": 0.4147074059378306,
+        "source_title": "San Diego",
+        "hop_answer": "third",
+        "hop_thought": "The urban area of San Diego is the third-largest in the state of California, as mentioned in the provided context. Therefore, among the top five largest urban areas in the state, San Diego ranks third.",
+        "hop_raw_response": "The urban area of San Diego is the third-largest in the state of California, as mentioned in the provided context. Therefore, among the top five largest urban areas in the state, San Diego ranks third.\nAnswer: third",
+        "evidence_passages": [
+          {
+            "title": "San Diego",
+            "text": "The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area."
+          },
+          {
+            "title": "San Diego",
+            "text": "San Diego\nThe city had a population of 1,307,402 according to the 2010 census, distributed over a land area of 372.1 square miles (963.7 km2). The urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census."
+          },
+          {
+            "title": "Veoh",
+            "text": "Veoh is an Internet television company based in San Diego, California."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Where was the performer of 'Getting Away with Murder' formed? (source: Getting Away with Murder (song))\n2. What are the top five largest urban areas in this state? (source: Tennessee)\n3. In which city is Veoh's headquarters located? => San Diego (source: Veoh)\n4. Among these top five largest urban areas, what is the rank of the city where Veoh's headquarters is located? => third (source: San Diego)\n\nFact hints:\n- Getting Away with Murder is first single from Papa Roach's third album\n- Papa Roach's third album is titled Getting Away with Murder\n- Veoh based in San Diego California\n- San Francisco metropolitan area has larger urban area than San Diego urban area\n- Los Angeles metropolitan area has larger urban area than San Diego urban area\n\nWikipedia Title: San Diego\nThe urban area of San Diego extends beyond the administrative city limits and had a total population of 2,956,746, making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area. They, along with the Riverside–San Bernardino, form those metropolitan areas in California larger than the San Diego metropolitan area, with a total population of 3,095,313 at the 2010 census.\n\nWikipedia Title: Getting Away with Murder (song)\n\"Getting Away with Murder\" is the first single from the band Papa Roach's third album, \"Getting Away with Murder\".\n\nWikipedia Title: Veoh\nVeoh Veoh is an Internet television company based in San Diego, California. The company is a subsidiary of Israeli start-up Qlipso.\n\nWikipedia Title: Tennessee\nThe third urban area, the Tri-Cities, comprising Bristol, Johnson City, and Kingsport and their environs, is located to the northeast of Knoxville. In this valley are numerous towns and two of the region's three urban areas, Knoxville, the 3rd largest city in the state, and Chattanooga, the 4th largest city in the state.\n\nWikipedia Title: Oklahoma City\nBased on population rank, the metropolitan area was the 42nd largest in the nation as of 2012. Oklahoma City Oklahoma City is the principal city of the eight-county Oklahoma City Metropolitan Statistical Area in Central Oklahoma and is the state's largest urbanized area.\n\nQuestion: Among the top five largest urban areas in the state where Getting Away with Murder's performer was formed, where does Veoh's headquarters city rank?\nDraft Answer: third\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "To answer this, I need to determine where Papa Roach was formed, identify the top five largest urban areas in that state, and then find out the rank of San Diego among those areas. The song 'Getting Away with Murder' is by Papa Roach, and Veoh is based in San Diego, California. The San Diego urban area is the third-largest in California.",
+  "predicted_answer": "third",
+  "qa_raw_response": "{\n  \"thought\": \"To answer this, I need to determine where Papa Roach was formed, identify the top five largest urban areas in that state, and then find out the rank of San Diego among those areas. The song 'Getting Away with Murder' is by Papa Roach, and Veoh is based in San Diego, California. The San Diego urban area is the third-largest in California.\",\n  \"answer\": \"third\",\n  \"support\": \"making it the third-largest urban area in the state, after that of the Los Angeles metropolitan area and San Francisco metropolitan area.\"\n}"
+}

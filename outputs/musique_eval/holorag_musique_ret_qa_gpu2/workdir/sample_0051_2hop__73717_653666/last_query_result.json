@@ -1,0 +1,936 @@
+{
+  "query": "Who was the mother of the person who found the sacred writings that became the Book of Mormon?",
+  "alpha": {
+    "entity": 0.4,
+    "sentence": 0.3,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Book of Mormon"
+  ],
+  "raw_query_entities": [
+    "Book of Mormon"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Book of Mormon",
+      "node_id": "entity:book_of_mormon",
+      "resolved_text": "Book of Mormon",
+      "score": 0.8440000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.6000000000000001,
+      "compatibility_score": 1.0,
+      "score_margin": 0.15822222222222226,
+      "confident": true
+    }
+  ],
+  "sub_questions": [
+    "Who found the sacred writings that became the Book of Mormon?",
+    "Who was the mother of this person?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "entity:book_of_mormon",
+      "score": 0.9639313187546187,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:john_steinbeck",
+      "score": 0.5570199845389074,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:steinbeck",
+      "score": 0.5513536924420537,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:joseph_smith_jr",
+      "score": 0.31416012860821513,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_history_of_joseph_smith_by_his_mother",
+      "score": 0.26389764860863674,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:joseph_smith",
+      "score": 0.26389147329797646,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:lucy_mack_smith",
+      "score": 0.2638910597696455,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_to_a_god_unknown",
+      "score": 0.25304399481683304,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+      "score": 0.21129137563133757,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:book_of_alma",
+      "score": 0.19626482166113002,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:smith",
+      "score": 0.18055514839827191,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:sacred_text_of_the_latter_day_saint_faith",
+      "score": 0.14723966457179566,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:steinbeck_found_writing_difficult_god_unknown_sentence_to_a_god_unknown_0_2_steinbeck_found_to_a_god_unknown_extremely_d",
+      "text": "Steinbeck found writing difficult God Unknown",
+      "head_id": "entity:steinbeck",
+      "tail_id": "entity:title_anchor_to_a_god_unknown",
+      "sentence_id": "sentence:to_a_god_unknown_0_2_steinbeck_found_to_a_god_unknown_extremely_difficult_to_write_taking_him_roug",
+      "chunk_id": "chunk:to_a_god_unknown_0",
+      "document_index": 18,
+      "score": 0.26511951101060693
+    },
+    {
+      "fact_id": "fact:joseph_smith_is_subject_of_history_of_joseph_smith_by_his_mother_sentence_history_of_joseph_smith_by_his_mother_0_0_hist",
+      "text": "Joseph Smith is subject of History of Joseph Smith by His Mother",
+      "head_id": "entity:joseph_smith",
+      "tail_id": "entity:title_anchor_history_of_joseph_smith_by_his_mother",
+      "sentence_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+      "chunk_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+      "document_index": 14,
+      "score": 0.2618005206875677
+    },
+    {
+      "fact_id": "fact:lucy_mack_smith_is_mother_of_joseph_smith_sentence_history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_",
+      "text": "Lucy Mack Smith is mother of Joseph Smith",
+      "head_id": "entity:lucy_mack_smith",
+      "tail_id": "entity:joseph_smith",
+      "sentence_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+      "chunk_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+      "document_index": 14,
+      "score": 0.26179969365945754
+    },
+    {
+      "fact_id": "fact:god_unknown_written_by_john_steinbeck_sentence_to_a_god_unknown_0_0_to_a_god_unknown_is_a_novel_by_john_steinbeck_first_",
+      "text": "God Unknown written by John Steinbeck",
+      "head_id": "entity:title_anchor_to_a_god_unknown",
+      "tail_id": "entity:john_steinbeck",
+      "sentence_id": "sentence:to_a_god_unknown_0_0_to_a_god_unknown_is_a_novel_by_john_steinbeck_first_published_in_1933",
+      "chunk_id": "chunk:to_a_god_unknown_0",
+      "document_index": 18,
+      "score": 0.23678563159988156
+    },
+    {
+      "fact_id": "fact:smith_published_book_of_mormon_sentence_joseph_smith_0_1_when_he_was_twenty_four_smith_published_the_book_of_mormon",
+      "text": "Smith published Book of Mormon",
+      "head_id": "entity:smith",
+      "tail_id": "entity:book_of_mormon",
+      "sentence_id": "sentence:joseph_smith_0_1_when_he_was_twenty_four_smith_published_the_book_of_mormon",
+      "chunk_id": "chunk:joseph_smith_0",
+      "document_index": 0,
+      "score": 0.17846516201377505
+    },
+    {
+      "fact_id": "fact:book_of_mormon_is_a_sacred_text_of_the_latter_day_saint_faith_sentence_golden_plates_0_0_according_to_latter_day_saint_b",
+      "text": "Book of Mormon is a sacred text of the Latter Day Saint faith",
+      "head_id": "entity:book_of_mormon",
+      "tail_id": "entity:sacred_text_of_the_latter_day_saint_faith",
+      "sentence_id": "sentence:golden_plates_0_0_according_to_latter_day_saint_belief_the_golden_plates_also_called_the_gold_pl",
+      "chunk_id": "chunk:golden_plates_0",
+      "document_index": 17,
+      "score": 0.14512799870249396
+    }
+  ],
+  "bridge_entities": [
+    "Smith",
+    "Joseph Smith",
+    "Lucy Mack Smith"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who found the sacred writings that became the Book of Mormon?",
+      "resolved_sub_question": "Who found the sacred writings that became the Book of Mormon?",
+      "sentence_id": "sentence:golden_plates_0_0_according_to_latter_day_saint_belief_the_golden_plates_also_called_the_gold_pl",
+      "sentence": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith.",
+      "score": 0.5480595555555556,
+      "source_title": "Golden plates",
+      "hop_answer": "Joseph Smith",
+      "hop_thought": "The evidence states that Joseph Smith translated the Book of Mormon from the golden plates, which implies he found the sacred writings.",
+      "hop_raw_response": "The evidence states that Joseph Smith translated the Book of Mormon from the golden plates, which implies he found the sacred writings.\nAnswer: Joseph Smith",
+      "evidence_passages": [
+        {
+          "title": "Golden plates",
+          "text": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith."
+        },
+        {
+          "title": "Golden plates",
+          "text": "Golden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings."
+        },
+        {
+          "title": "Joseph Smith",
+          "text": "When he was twenty - four, Smith published the Book of Mormon."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who was the mother of this person?",
+      "resolved_sub_question": "Who was the mother of this person? Context: Joseph Smith.",
+      "sentence_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+      "sentence": "History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith.",
+      "score": 0.47898473689927,
+      "source_title": "History of Joseph Smith by His Mother",
+      "hop_answer": "Lucy Mack Smith",
+      "hop_thought": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.",
+      "hop_raw_response": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.\nAnswer: Lucy Mack Smith",
+      "evidence_passages": [
+        {
+          "title": "History of Joseph Smith by His Mother",
+          "text": "History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith."
+        },
+        {
+          "title": "History of Joseph Smith by His Mother",
+          "text": "History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853."
+        },
+        {
+          "title": "Golden plates",
+          "text": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "entity:book_of_mormon",
+      "score": 0.11705589313592804,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:john_steinbeck",
+      "score": 0.07317239360900424,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:steinbeck",
+      "score": 0.07174512019114637,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_to_a_god_unknown",
+      "score": 0.05532760020442097,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:joseph_smith",
+      "score": 0.05497355620563254,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+      "score": 0.0516375459716054,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:to_a_god_unknown_0_2_steinbeck_found_to_a_god_unknown_extremely_difficult_to_write_taking_him_roug",
+      "score": 0.04183901289032551,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:joseph_smith_jr",
+      "score": 0.038783215572324774,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:to_a_god_unknown_0_0_to_a_god_unknown_is_a_novel_by_john_steinbeck_first_published_in_1933",
+      "score": 0.03411451318389259,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:lucy_mack_smith",
+      "score": 0.032975387067443344,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_history_of_joseph_smith_by_his_mother",
+      "score": 0.030622535002973204,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:book_of_alma",
+      "score": 0.025244285760196272,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:smith",
+      "score": 0.025239953515473035,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:joseph_smith_0_1_when_he_was_twenty_four_smith_published_the_book_of_mormon",
+      "score": 0.023760002978612443,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:golden_plates_0_0_according_to_latter_day_saint_belief_the_golden_plates_also_called_the_gold_pl",
+      "score": 0.02105775733297677,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:sacred_text_of_the_latter_day_saint_faith",
+      "score": 0.020159023440140755,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:to_a_god_unknown_0",
+      "score": 0.01694374204452171,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+      "score": 0.014944845247577734,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:joseph_smith_0_0_joseph_smith_jr_december_23_1805_june_27_1844_was_an_american_religious",
+      "score": 0.014942194199545919,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:to_a_god_unknown_0_1_the_book_was_steinbeck_s_third_novel_after_cup_of_gold_and_the_pastures_of_h",
+      "score": 0.013484914573852657,
+      "node_type": "sentence"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:to_a_god_unknown_0",
+      "passage_index": 18,
+      "title": "To a God Unknown",
+      "score": 0.08351968041216615,
+      "text": "To a God Unknown\nTo a God Unknown is a novel by John Steinbeck, first published in 1933. The book was Steinbeck's third novel (after \"Cup of Gold\" and \"The Pastures of Heaven\"). Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.",
+      "score_breakdown": {
+        "dense": 0.04983237431530551,
+        "graph": 0.055481700197257594,
+        "fact": 0.26311576319713886
+      }
+    },
+    {
+      "node_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+      "passage_index": 14,
+      "title": "History of Joseph Smith by His Mother",
+      "score": 0.0833142881632135,
+      "text": "History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853.",
+      "score_breakdown": {
+        "dense": 0.050798622687200874,
+        "graph": 0.05346151955500351,
+        "fact": 0.26224393212501307
+      }
+    },
+    {
+      "node_id": "chunk:joseph_smith_0",
+      "passage_index": 0,
+      "title": "Joseph Smith",
+      "score": 0.07967963038148959,
+      "text": "Joseph Smith\nJoseph Smith Jr. (December 23, 1805 -- June 27, 1844) was an American religious leader and founder of Mormonism and the Latter Day Saint movement. When he was twenty - four, Smith published the Book of Mormon. By the time of his death fourteen years later, he had attracted tens of thousands of followers and founded a religious culture that continues to the present.",
+      "score_breakdown": {
+        "dense": 0.0505727805492167,
+        "graph": 0.05224421541988399,
+        "fact": 0.24127557635636812
+      }
+    },
+    {
+      "node_id": "chunk:golden_plates_0",
+      "passage_index": 17,
+      "title": "Golden plates",
+      "score": 0.07815177768411202,
+      "text": "Golden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings.",
+      "score_breakdown": {
+        "dense": 0.05063397497320323,
+        "graph": 0.05099460733542745,
+        "fact": 0.23336472832148
+      }
+    },
+    {
+      "node_id": "chunk:alma_the_younger_0",
+      "passage_index": 13,
+      "title": "Alma the Younger",
+      "score": 0.04287704402910182,
+      "text": "Alma the Younger\nAccording to the Book of Mormon, Alma, the son of Alma (/ ˈælmə /) was a Nephite prophet often referred to as ``Alma the Younger ''to distinguish him from his father, who is often referred to as`` Alma the Elder''. These appellations, ``the Younger ''and`` the Elder'', are not used in the Book of Mormon; they are distinctions made by scholars, useful because both individuals were prominent during the same time period and filled a similar cultural and religious role. Alma is the namesake of the Book of Alma.",
+      "score_breakdown": {
+        "dense": 0.05023297706334734,
+        "graph": 0.05082968881420261,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:passage_to_zarahemla_0",
+      "passage_index": 4,
+      "title": "Passage to Zarahemla",
+      "score": 0.04251526493387688,
+      "text": "Passage to Zarahemla\nPassage to Zarahemla is an adventure film directed and written by Chris Heimerdinger. It tells the story of a young pair of siblings seeking to find a new life following the abrupt death of their mother. Their exploits lead them to a relative's home in Utah and eventually a thrilling confrontation with their past and the merger of time. It is based partly on \"Book of Mormon\" people, including the Zarahemla of the title. It is only the second commercial theatrical release of a film with the Book of Mormon as a principal theme, the first being \"\" (2003).",
+      "score_breakdown": {
+        "dense": 0.05006909552841704,
+        "graph": 0.049924207977491704,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:textual_criticism_0",
+      "passage_index": 11,
+      "title": "Textual criticism",
+      "score": 0.042424825917158425,
+      "text": "Textual criticism\nIn 1988, with that preliminary phase of the project completed, Professor Skousen took over as editor and head of the FARMS Critical Text of the Book of Mormon Project and proceeded to gather still scattered fragments of the Original Manuscript of the Book of Mormon and to have advanced photographic techniques applied to obtain fine readings from otherwise unreadable pages and fragments. He also closely examined the Printer’s Manuscript (owned by the Community of Christ—RLDS Church in Independence, Missouri) for differences in types of ink or pencil, in order to determine when and by whom they were made. He also collated the various editions of the Book of Mormon down to the present to see what sorts of changes have been made through time.",
+      "score_breakdown": {
+        "dense": 0.050140631372424305,
+        "graph": 0.049491595541083525,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:mother_lode_0",
+      "passage_index": 2,
+      "title": "Mother lode",
+      "score": 0.042271882277762185,
+      "text": "Mother lode\nIn the United States, Mother Lode is most famously the name given to a long alignment of hard - rock gold deposits stretching northwest - southeast in the Sierra Nevada of California. It was discovered in the early 1850s, during the California gold rush. The California Mother Lode is a zone from 1.5 to 6 kilometres (0.93 to 3.73 mi) wide and 190 kilometres (120 mi) long, between Georgetown on the north and Mormon Bar on the south.",
+      "score_breakdown": {
+        "dense": 0.05009978685193925,
+        "graph": 0.04905666503065199,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:salt_lake_city_0",
+      "passage_index": 1,
+      "title": "Salt Lake City",
+      "score": 0.04215677256831382,
+      "text": "Salt Lake City\nThe Mormon pioneers organized a new state called Deseret and petitioned for its recognition in 1849. The United States Congress rebuffed the settlers in 1850 and established the Utah Territory, vastly reducing its size, and designated Fillmore as its capital city. Great Salt Lake City replaced Fillmore as the territorial capital in 1858, and the name was later abbreviated to Salt Lake City. The city's population continued to swell with an influx of Mormon converts and Gold Rush gold seekers, making it one of the most populous cities in the American Old West.",
+      "score_breakdown": {
+        "dense": 0.049877399110889724,
+        "graph": 0.049080676857748244,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:jan_van_de_velde_the_elder_0",
+      "passage_index": 12,
+      "title": "Jan van de Velde the Elder",
+      "score": 0.042138343450038834,
+      "text": "Jan van de Velde the Elder\nJan van de Velde the Elder (1568, Antwerp – 1623, Haarlem), was a Dutch calligrapher, writing teacher, and engraver. He was the father of the engraver Jan van de Velde.",
+      "score_breakdown": {
+        "dense": 0.049819853461048925,
+        "graph": 0.049124746821539736,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:book_of_mormon",
+        "score": 0.11705589313592804,
+        "text": "Book of Mormon",
+        "metadata": {
+          "canonical_name": "Book of Mormon",
+          "aliases": [
+            "BOM",
+            "Book of Mormon"
+          ],
+          "surface_forms": [
+            "BOM",
+            "Book of Mormon"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:john_steinbeck",
+        "score": 0.07317239360900424,
+        "text": "John Steinbeck",
+        "metadata": {
+          "canonical_name": "John Steinbeck",
+          "aliases": [
+            "JS",
+            "John Steinbeck"
+          ],
+          "surface_forms": [
+            "JS",
+            "John Steinbeck"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:steinbeck",
+        "score": 0.07174512019114637,
+        "text": "Steinbeck",
+        "metadata": {
+          "canonical_name": "Steinbeck",
+          "aliases": [
+            "Steinbeck"
+          ],
+          "surface_forms": [
+            "Steinbeck"
+          ],
+          "title_anchor": ""
+        }
+      },
+      {
+        "node_id": "entity:title_anchor_to_a_god_unknown",
+        "score": 0.05532760020442097,
+        "text": "To a God Unknown",
+        "metadata": {
+          "canonical_name": "To a God Unknown",
+          "aliases": [
+            "GU",
+            "God Unknown"
+          ],
+          "surface_forms": [
+            "GU",
+            "God Unknown"
+          ],
+          "title_anchor": "To a God Unknown"
+        }
+      },
+      {
+        "node_id": "entity:joseph_smith",
+        "score": 0.05497355620563254,
+        "text": "Joseph Smith",
+        "metadata": {
+          "canonical_name": "Joseph Smith",
+          "aliases": [
+            "JS",
+            "Joseph Smith"
+          ],
+          "surface_forms": [
+            "JS",
+            "Joseph Smith"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+        "score": 0.0516375459716054,
+        "text": "History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith.",
+        "metadata": {
+          "title": "History of Joseph Smith by His Mother",
+          "chunk_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+          "sentence_index": 0,
+          "document_index": 14,
+          "triples": [
+            {
+              "head": "Joseph Smith",
+              "relation": "is subject of",
+              "tail": "History of Joseph Smith by His Mother"
+            },
+            {
+              "head": "Joseph Smith",
+              "relation": "is founder of",
+              "tail": "Latter Day Saint movement"
+            },
+            {
+              "head": "Lucy Mack Smith",
+              "relation": "is mother of",
+              "tail": "Joseph Smith"
+            }
+          ],
+          "entities": [
+            "Joseph Smith",
+            "Latter Day Saint movement",
+            "Lucy Mack Smith"
+          ],
+          "entity_ids": [
+            "entity:joseph_smith",
+            "entity:latter_day_saint_movement",
+            "entity:lucy_mack_smith",
+            "entity:title_anchor_history_of_joseph_smith_by_his_mother"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:to_a_god_unknown_0_2_steinbeck_found_to_a_god_unknown_extremely_difficult_to_write_taking_him_roug",
+        "score": 0.04183901289032551,
+        "text": "Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.",
+        "metadata": {
+          "title": "To a God Unknown",
+          "chunk_id": "chunk:to_a_god_unknown_0",
+          "sentence_index": 2,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Steinbeck",
+              "relation": "found writing difficult",
+              "tail": "God Unknown"
+            },
+            {
+              "head": "God Unknown",
+              "relation": "was more time-consuming than",
+              "tail": "East of Eden"
+            },
+            {
+              "head": "God Unknown",
+              "relation": "was more time-consuming than",
+              "tail": "Grapes of Wrath"
+            }
+          ],
+          "entities": [
+            "Steinbeck",
+            "God Unknown",
+            "East of Eden",
+            "Grapes of Wrath"
+          ],
+          "entity_ids": [
+            "entity:east_of_eden",
+            "entity:grapes_of_wrath",
+            "entity:steinbeck",
+            "entity:title_anchor_to_a_god_unknown"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:to_a_god_unknown_0_0_to_a_god_unknown_is_a_novel_by_john_steinbeck_first_published_in_1933",
+        "score": 0.03411451318389259,
+        "text": "To a God Unknown is a novel by John Steinbeck, first published in 1933.",
+        "metadata": {
+          "title": "To a God Unknown",
+          "chunk_id": "chunk:to_a_god_unknown_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "God Unknown",
+              "relation": "written by",
+              "tail": "John Steinbeck"
+            }
+          ],
+          "entities": [
+            "God Unknown",
+            "John Steinbeck"
+          ],
+          "entity_ids": [
+            "entity:john_steinbeck",
+            "entity:title_anchor_to_a_god_unknown"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:joseph_smith_0_1_when_he_was_twenty_four_smith_published_the_book_of_mormon",
+        "score": 0.023760002978612443,
+        "text": "When he was twenty - four, Smith published the Book of Mormon.",
+        "metadata": {
+          "title": "Joseph Smith",
+          "chunk_id": "chunk:joseph_smith_0",
+          "sentence_index": 1,
+          "document_index": 0,
+          "triples": [
+            {
+              "head": "Smith",
+              "relation": "published",
+              "tail": "Book of Mormon"
+            }
+          ],
+          "entities": [
+            "Smith",
+            "Book of Mormon"
+          ],
+          "entity_ids": [
+            "entity:book_of_mormon",
+            "entity:smith"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:to_a_god_unknown_0",
+        "score": 0.01694374204452171,
+        "text": "To a God Unknown\nTo a God Unknown is a novel by John Steinbeck, first published in 1933. The book was Steinbeck's third novel (after \"Cup of Gold\" and \"The Pastures of Heaven\"). Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.",
+        "metadata": {
+          "title": "To a God Unknown",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:cup_of_gold",
+            "entity:cup_of_gold_and_the_pastures_of_heaven",
+            "entity:east_of_eden",
+            "entity:grapes_of_wrath",
+            "entity:john_steinbeck",
+            "entity:pastures_of_heaven",
+            "entity:steinbeck",
+            "entity:steinbeck_s_third_novel",
+            "entity:title_anchor_to_a_god_unknown"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+        "score": 0.014944845247577734,
+        "text": "History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853.",
+        "metadata": {
+          "title": "History of Joseph Smith by His Mother",
+          "chunk_index": 0,
+          "document_index": 14,
+          "entity_ids": [
+            "entity:biographical_sketches",
+            "entity:his_progenitors",
+            "entity:joseph_smith",
+            "entity:latter_day_saint_movement",
+            "entity:liverpool",
+            "entity:lucy_mack_smith",
+            "entity:orson_pratt",
+            "entity:prophet",
+            "entity:title_anchor_history_of_joseph_smith_by_his_mother"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:joseph_smith_0",
+        "score": 0.008008047061257661,
+        "text": "Joseph Smith\nJoseph Smith Jr. (December 23, 1805 -- June 27, 1844) was an American religious leader and founder of Mormonism and the Latter Day Saint movement. When he was twenty - four, Smith published the Book of Mormon. By the time of his death fourteen years later, he had attracted tens of thousands of followers and founded a religious culture that continues to the present.",
+        "metadata": {
+          "title": "Joseph Smith",
+          "chunk_index": 0,
+          "document_index": 0,
+          "entity_ids": [
+            "entity:american_religious_leader",
+            "entity:book_of_mormon",
+            "entity:by",
+            "entity:december_23_1805",
+            "entity:joseph_smith_jr",
+            "entity:june_27_1844",
+            "entity:latter_day_saint_movement",
+            "entity:mormonism",
+            "entity:smith"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:golden_plates_0",
+        "score": 0.006993739455705741,
+        "text": "Golden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings.",
+        "metadata": {
+          "title": "Golden plates",
+          "chunk_index": 0,
+          "document_index": 17,
+          "entity_ids": [
+            "entity:book_of_mormon",
+            "entity:d_shaped_rings",
+            "entity:joseph_smith",
+            "entity:latter_day_saint",
+            "entity:sacred_text_of_the_latter_day_saint_faith"
+          ]
+        }
+      }
+    ],
+    "qa_context": "To a God Unknown\nTo a God Unknown\nTo a God Unknown is a novel by John Steinbeck, first published in 1933. The book was Steinbeck's third novel (after \"Cup of Gold\" and \"The Pastures of Heaven\"). Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.\n\nHistory of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853.\n\nJoseph Smith\nJoseph Smith\nJoseph Smith Jr. (December 23, 1805 -- June 27, 1844) was an American religious leader and founder of Mormonism and the Latter Day Saint movement. When he was twenty - four, Smith published the Book of Mormon. By the time of his death fourteen years later, he had attracted tens of thousands of followers and founded a religious culture that continues to the present.\n\nGolden plates\nGolden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings.\n\nAlma the Younger\nAlma the Younger\nAccording to the Book of Mormon, Alma, the son of Alma (/ ˈælmə /) was a Nephite prophet often referred to as ``Alma the Younger ''to distinguish him from his father, who is often referred to as`` Alma the Elder''. These appellations, ``the Younger ''and`` the Elder'', are not used in the Book of Mormon; they are distinctions made by scholars, useful because both individuals were prominent during the same time period and filled a similar cultural and religious role. Alma is the namesake of the Book of Alma.\n\nGolden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith.\n\nJoseph Smith\nWhen he was twenty - four, Smith published the Book of Mormon.\n\nHistory of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith.\n\nPassage to Zarahemla\nPassage to Zarahemla\nPassage to Zarahemla is an adventure film directed and written by Chris Heimerdinger. It tells the story of a young pair of siblings seeking to find a new life following the abrupt death of their mother. Their exploits lead them to a relative's home in Utah and eventually a thrilling confrontation with their past and the merger of time. It is based partly on \"Book of Mormon\" people, including the Zarahemla of the title. It is only the second commercial theatrical release of a film with the Book of Mormon as a principal theme, the first being \"\" (2003).\n\nTextual criticism\nTextual criticism\nIn 1988, with that preliminary phase of the project completed, Professor Skousen took over as editor and head of the FARMS Critical Text of the Book of Mormon Project and proceeded to gather still scattered fragments of the Original Manuscript of the Book of Mormon and to have advanced photographic techniques applied to obtain fine readings from otherwise unreadable pages and fragments. He also closely examined the Printer’s Manuscript (owned by the Community of Christ—RLDS Church in Independence, Missouri) for differences in types of ink or pencil, in order to determine when and by whom they were made. He also collated the various editions of the Book of Mormon down to the present to see what sorts of changes have been made through time.\n\nMother lode\nMother lode\nIn the United States, Mother Lode is most famously the name given to a long alignment of hard - rock gold deposits stretching northwest - southeast in the Sierra Nevada of California. It was discovered in the early 1850s, during the California gold rush. The California Mother Lode is a zone from 1.5 to 6 kilometres (0.93 to 3.73 mi) wide and 190 kilometres (120 mi) long, between Georgetown on the north and Mormon Bar on the south.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:to_a_god_unknown_0",
+        "passage_index": 18,
+        "title": "To a God Unknown",
+        "score": 0.08351968041216615,
+        "text": "To a God Unknown\nTo a God Unknown is a novel by John Steinbeck, first published in 1933. The book was Steinbeck's third novel (after \"Cup of Gold\" and \"The Pastures of Heaven\"). Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.",
+        "score_breakdown": {
+          "dense": 0.04983237431530551,
+          "graph": 0.055481700197257594,
+          "fact": 0.26311576319713886
+        }
+      },
+      {
+        "node_id": "chunk:history_of_joseph_smith_by_his_mother_0",
+        "passage_index": 14,
+        "title": "History of Joseph Smith by His Mother",
+        "score": 0.0833142881632135,
+        "text": "History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853.",
+        "score_breakdown": {
+          "dense": 0.050798622687200874,
+          "graph": 0.05346151955500351,
+          "fact": 0.26224393212501307
+        }
+      },
+      {
+        "node_id": "chunk:joseph_smith_0",
+        "passage_index": 0,
+        "title": "Joseph Smith",
+        "score": 0.07967963038148959,
+        "text": "Joseph Smith\nJoseph Smith Jr. (December 23, 1805 -- June 27, 1844) was an American religious leader and founder of Mormonism and the Latter Day Saint movement. When he was twenty - four, Smith published the Book of Mormon. By the time of his death fourteen years later, he had attracted tens of thousands of followers and founded a religious culture that continues to the present.",
+        "score_breakdown": {
+          "dense": 0.0505727805492167,
+          "graph": 0.05224421541988399,
+          "fact": 0.24127557635636812
+        }
+      },
+      {
+        "node_id": "chunk:golden_plates_0",
+        "passage_index": 17,
+        "title": "Golden plates",
+        "score": 0.07815177768411202,
+        "text": "Golden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings.",
+        "score_breakdown": {
+          "dense": 0.05063397497320323,
+          "graph": 0.05099460733542745,
+          "fact": 0.23336472832148
+        }
+      },
+      {
+        "node_id": "chunk:alma_the_younger_0",
+        "passage_index": 13,
+        "title": "Alma the Younger",
+        "score": 0.04287704402910182,
+        "text": "Alma the Younger\nAccording to the Book of Mormon, Alma, the son of Alma (/ ˈælmə /) was a Nephite prophet often referred to as ``Alma the Younger ''to distinguish him from his father, who is often referred to as`` Alma the Elder''. These appellations, ``the Younger ''and`` the Elder'', are not used in the Book of Mormon; they are distinctions made by scholars, useful because both individuals were prominent during the same time period and filled a similar cultural and religious role. Alma is the namesake of the Book of Alma.",
+        "score_breakdown": {
+          "dense": 0.05023297706334734,
+          "graph": 0.05082968881420261,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:passage_to_zarahemla_0",
+        "passage_index": 4,
+        "title": "Passage to Zarahemla",
+        "score": 0.04251526493387688,
+        "text": "Passage to Zarahemla\nPassage to Zarahemla is an adventure film directed and written by Chris Heimerdinger. It tells the story of a young pair of siblings seeking to find a new life following the abrupt death of their mother. Their exploits lead them to a relative's home in Utah and eventually a thrilling confrontation with their past and the merger of time. It is based partly on \"Book of Mormon\" people, including the Zarahemla of the title. It is only the second commercial theatrical release of a film with the Book of Mormon as a principal theme, the first being \"\" (2003).",
+        "score_breakdown": {
+          "dense": 0.05006909552841704,
+          "graph": 0.049924207977491704,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:textual_criticism_0",
+        "passage_index": 11,
+        "title": "Textual criticism",
+        "score": 0.042424825917158425,
+        "text": "Textual criticism\nIn 1988, with that preliminary phase of the project completed, Professor Skousen took over as editor and head of the FARMS Critical Text of the Book of Mormon Project and proceeded to gather still scattered fragments of the Original Manuscript of the Book of Mormon and to have advanced photographic techniques applied to obtain fine readings from otherwise unreadable pages and fragments. He also closely examined the Printer’s Manuscript (owned by the Community of Christ—RLDS Church in Independence, Missouri) for differences in types of ink or pencil, in order to determine when and by whom they were made. He also collated the various editions of the Book of Mormon down to the present to see what sorts of changes have been made through time.",
+        "score_breakdown": {
+          "dense": 0.050140631372424305,
+          "graph": 0.049491595541083525,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:mother_lode_0",
+        "passage_index": 2,
+        "title": "Mother lode",
+        "score": 0.042271882277762185,
+        "text": "Mother lode\nIn the United States, Mother Lode is most famously the name given to a long alignment of hard - rock gold deposits stretching northwest - southeast in the Sierra Nevada of California. It was discovered in the early 1850s, during the California gold rush. The California Mother Lode is a zone from 1.5 to 6 kilometres (0.93 to 3.73 mi) wide and 190 kilometres (120 mi) long, between Georgetown on the north and Mormon Bar on the south.",
+        "score_breakdown": {
+          "dense": 0.05009978685193925,
+          "graph": 0.04905666503065199,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:salt_lake_city_0",
+        "passage_index": 1,
+        "title": "Salt Lake City",
+        "score": 0.04215677256831382,
+        "text": "Salt Lake City\nThe Mormon pioneers organized a new state called Deseret and petitioned for its recognition in 1849. The United States Congress rebuffed the settlers in 1850 and established the Utah Territory, vastly reducing its size, and designated Fillmore as its capital city. Great Salt Lake City replaced Fillmore as the territorial capital in 1858, and the name was later abbreviated to Salt Lake City. The city's population continued to swell with an influx of Mormon converts and Gold Rush gold seekers, making it one of the most populous cities in the American Old West.",
+        "score_breakdown": {
+          "dense": 0.049877399110889724,
+          "graph": 0.049080676857748244,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:jan_van_de_velde_the_elder_0",
+        "passage_index": 12,
+        "title": "Jan van de Velde the Elder",
+        "score": 0.042138343450038834,
+        "text": "Jan van de Velde the Elder\nJan van de Velde the Elder (1568, Antwerp – 1623, Haarlem), was a Dutch calligrapher, writing teacher, and engraver. He was the father of the engraver Jan van de Velde.",
+        "score_breakdown": {
+          "dense": 0.049819853461048925,
+          "graph": 0.049124746821539736,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who found the sacred writings that became the Book of Mormon?",
+        "resolved_sub_question": "Who found the sacred writings that became the Book of Mormon?",
+        "sentence_id": "sentence:golden_plates_0_0_according_to_latter_day_saint_belief_the_golden_plates_also_called_the_gold_pl",
+        "sentence": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith.",
+        "score": 0.5480595555555556,
+        "source_title": "Golden plates",
+        "hop_answer": "Joseph Smith",
+        "hop_thought": "The evidence states that Joseph Smith translated the Book of Mormon from the golden plates, which implies he found the sacred writings.",
+        "hop_raw_response": "The evidence states that Joseph Smith translated the Book of Mormon from the golden plates, which implies he found the sacred writings.\nAnswer: Joseph Smith",
+        "evidence_passages": [
+          {
+            "title": "Golden plates",
+            "text": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith."
+          },
+          {
+            "title": "Golden plates",
+            "text": "Golden plates\nAccording to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings."
+          },
+          {
+            "title": "Joseph Smith",
+            "text": "When he was twenty - four, Smith published the Book of Mormon."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who was the mother of this person?",
+        "resolved_sub_question": "Who was the mother of this person? Context: Joseph Smith.",
+        "sentence_id": "sentence:history_of_joseph_smith_by_his_mother_0_0_history_of_joseph_smith_by_his_mother_is_a_biography_of_joseph_smith_founder_o",
+        "sentence": "History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith.",
+        "score": 0.47898473689927,
+        "source_title": "History of Joseph Smith by His Mother",
+        "hop_answer": "Lucy Mack Smith",
+        "hop_thought": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.",
+        "hop_raw_response": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.\nAnswer: Lucy Mack Smith",
+        "evidence_passages": [
+          {
+            "title": "History of Joseph Smith by His Mother",
+            "text": "History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith."
+          },
+          {
+            "title": "History of Joseph Smith by His Mother",
+            "text": "History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853."
+          },
+          {
+            "title": "Golden plates",
+            "text": "According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who found the sacred writings that became the Book of Mormon? => Joseph Smith (source: Golden plates)\n2. Who was the mother of this person? => Lucy Mack Smith (source: History of Joseph Smith by His Mother)\n\nFact hints:\n- Lucy Mack Smith is mother of Joseph Smith\n- Joseph Smith is subject of History of Joseph Smith by His Mother\n\nWikipedia Title: History of Joseph Smith by His Mother\nHistory of Joseph Smith by His Mother History of Joseph Smith by His Mother is a biography of Joseph Smith, founder of the Latter Day Saint movement, according to his mother, Lucy Mack Smith. It was originally titled Biographical Sketches of Joseph Smith, the Prophet, and His Progenitors for Many Generations and was published by Orson Pratt in Liverpool in 1853.\n\nWikipedia Title: Joseph Smith\nBy the time of his death fourteen years later, he had attracted tens of thousands of followers and founded a religious culture that continues to the present. When he was twenty - four, Smith published the Book of Mormon.\n\nWikipedia Title: Golden plates\nGolden plates According to Latter Day Saint belief, the golden plates (also called the gold plates or in some 19th - century literature, the golden bible) are the source from which Joseph Smith said he translated the Book of Mormon, a sacred text of the faith. Some witnesses described the plates as weighing from 30 to 60 pounds (14 to 27 kg), being golden in color, and being composed of thin metallic pages engraved on both sides and bound with three D - shaped rings.\n\nWikipedia Title: Alma the Younger\nAlma the Younger According to the Book of Mormon, Alma, the son of Alma (/ ˈælmə /) was a Nephite prophet often referred to as ``Alma the Younger ''to distinguish him from his father, who is often referred to as`` Alma the Elder''. Alma is the namesake of the Book of Alma.\n\nWikipedia Title: To a God Unknown\nThe book was Steinbeck's third novel (after \"Cup of Gold\" and \"The Pastures of Heaven\"). Steinbeck found \"To a God Unknown\" extremely difficult to write; taking him roughly five years to complete, the novel proved more time-consuming than either \"East of Eden\" or \"The Grapes of Wrath\", Steinbeck's longest novels.\n\nQuestion: Who was the mother of the person who found the sacred writings that became the Book of Mormon?\nDraft Answer: Lucy Mack Smith\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.",
+  "predicted_answer": "Lucy Mack Smith",
+  "qa_raw_response": "The context indicates that we are looking for the mother of Joseph Smith, and the provided evidence states that Lucy Mack Smith is Joseph Smith's mother.\nAnswer: Lucy Mack Smith"
+}

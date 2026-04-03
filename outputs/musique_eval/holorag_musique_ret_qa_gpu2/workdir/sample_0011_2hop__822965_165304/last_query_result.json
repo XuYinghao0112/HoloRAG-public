@@ -1,0 +1,1071 @@
+{
+  "query": "Who is the child of the actor who is a cast member of Love in Pawn?",
+  "alpha": {
+    "entity": 0.2,
+    "sentence": 0.5,
+    "chunk": 0.3
+  },
+  "query_entities": [
+    "Love in Pawn"
+  ],
+  "raw_query_entities": [
+    "Love in Pawn"
+  ],
+  "query_entity_resolutions": [
+    {
+      "mention": "Love in Pawn",
+      "node_id": "entity:title_anchor_love_in_pawn",
+      "resolved_text": "Love in Pawn",
+      "score": 0.6404000000000001,
+      "alias_score": 1.0,
+      "relation_score": 0.7,
+      "context_score": 0.4285714285714286,
+      "compatibility_score": 0.185,
+      "score_margin": 0.12740000000000007,
+      "confident": false
+    }
+  ],
+  "sub_questions": [
+    "Who are the cast members of Love in Pawn?",
+    "Which of these cast members is an actor?",
+    "Who is the child of this actor?"
+  ],
+  "sub_question_source": "model_or_heuristic",
+  "seeds": [
+    {
+      "node_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "score": 0.32167887844844406,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:charles_saunders",
+      "score": 0.27233522615759787,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:emma_kate_croghan",
+      "score": 0.21803885474440154,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_love_in_pawn",
+      "score": 0.20239297318044053,
+      "layer": "entity"
+    },
+    {
+      "node_id": "chunk:love_in_pawn_0",
+      "score": 0.1816474342925165,
+      "layer": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_strange_planet",
+      "score": 0.17053944343023653,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:bernard_braden",
+      "score": 0.16126748720466094,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:barbara_kelly",
+      "score": 0.1573348353089256,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:1953_british_comedy_film",
+      "score": 0.14233334788574872,
+      "layer": "entity"
+    },
+    {
+      "node_id": "sentence:strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_by_emma_kate_croghan_and_sta",
+      "score": 0.13612585423431703,
+      "layer": "sentence"
+    },
+    {
+      "node_id": "entity:kim_braden",
+      "score": 0.13083637589369235,
+      "layer": "entity"
+    },
+    {
+      "node_id": "entity:claudia_karvan",
+      "score": 0.12083191101041317,
+      "layer": "entity"
+    }
+  ],
+  "ranked_facts": [
+    {
+      "fact_id": "fact:love_in_pawn_directed_by_charles_saunders_sentence_love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_",
+      "text": "Love in Pawn directed by Charles Saunders",
+      "head_id": "entity:title_anchor_love_in_pawn",
+      "tail_id": "entity:charles_saunders",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "chunk_id": "chunk:love_in_pawn_0",
+      "document_index": 5,
+      "score": 0.27012596228386654
+    },
+    {
+      "fact_id": "fact:love_in_pawn_starring_bernard_braden_sentence_love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_ch",
+      "text": "Love in Pawn starring Bernard Braden",
+      "head_id": "entity:title_anchor_love_in_pawn",
+      "tail_id": "entity:bernard_braden",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "chunk_id": "chunk:love_in_pawn_0",
+      "document_index": 5,
+      "score": 0.23512960579339937
+    },
+    {
+      "fact_id": "fact:strange_planet_directed_by_emma_kate_croghan_sentence_strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_dire",
+      "text": "Strange Planet directed by Emma-Kate Croghan",
+      "head_id": "entity:title_anchor_strange_planet",
+      "tail_id": "entity:emma_kate_croghan",
+      "sentence_id": "sentence:strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_by_emma_kate_croghan_and_sta",
+      "chunk_id": "chunk:strange_planet_0",
+      "document_index": 18,
+      "score": 0.2158307336387432
+    },
+    {
+      "fact_id": "fact:love_in_pawn_starring_barbara_kelly_sentence_love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_cha",
+      "text": "Love in Pawn starring Barbara Kelly",
+      "head_id": "entity:title_anchor_love_in_pawn",
+      "tail_id": "entity:barbara_kelly",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "chunk_id": "chunk:love_in_pawn_0",
+      "document_index": 5,
+      "score": 0.15512791983906588
+    },
+    {
+      "fact_id": "fact:love_in_pawn_is_a_1953_british_comedy_film_sentence_love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed",
+      "text": "Love in Pawn is a 1953 British comedy film",
+      "head_id": "entity:title_anchor_love_in_pawn",
+      "tail_id": "entity:1953_british_comedy_film",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "chunk_id": "chunk:love_in_pawn_0",
+      "document_index": 5,
+      "score": 0.1401267191537196
+    },
+    {
+      "fact_id": "fact:bernard_braden_daughter_is_kim_braden_sentence_b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife",
+      "text": "Bernard Braden daughter is Kim Braden",
+      "head_id": "entity:bernard_braden",
+      "tail_id": "entity:kim_braden",
+      "sentence_id": "sentence:b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife_barbara_kelly_and",
+      "chunk_id": "chunk:b_and_b_0",
+      "document_index": 12,
+      "score": 0.13083637589369235
+    },
+    {
+      "fact_id": "fact:strange_planet_starring_claudia_karvan_sentence_strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_b",
+      "text": "Strange Planet starring Claudia Karvan",
+      "head_id": "entity:title_anchor_strange_planet",
+      "tail_id": "entity:claudia_karvan",
+      "sentence_id": "sentence:strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_by_emma_kate_croghan_and_sta",
+      "chunk_id": "chunk:strange_planet_0",
+      "document_index": 18,
+      "score": 0.12083191101041317
+    },
+    {
+      "fact_id": "fact:b_and_b_starring_bernard_braden_sentence_b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife_barba",
+      "text": "B-And-B starring Bernard Braden",
+      "head_id": "entity:title_anchor_b_and_b",
+      "tail_id": "entity:bernard_braden",
+      "sentence_id": "sentence:b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife_barbara_kelly_and",
+      "chunk_id": "chunk:b_and_b_0",
+      "document_index": 12,
+      "score": 0.11121091950963849
+    }
+  ],
+  "bridge_entities": [
+    "Charles Saunders",
+    "Bernard Braden",
+    "Barbara Kelly",
+    "1953 British comedy film",
+    "British",
+    "Bernard Braden Barbara Kelly",
+    "Kim Braden"
+  ],
+  "reasoning_chain": [
+    {
+      "sub_question": "Who are the cast members of Love in Pawn?",
+      "resolved_sub_question": "Who are the cast members of Love in Pawn?",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+      "score": 0.4139390133751461,
+      "source_title": "Love in Pawn",
+      "hop_answer": "Bernard Braden, Barbara Kelly",
+      "hop_thought": "The evidence from the Wikipedia entry for \"Love in Pawn\" mentions Bernard Braden and Barbara Kelly as the starring cast members.",
+      "hop_raw_response": "The evidence from the Wikipedia entry for \"Love in Pawn\" mentions Bernard Braden and Barbara Kelly as the starring cast members.\nAnswer: Bernard Braden, Barbara Kelly",
+      "evidence_passages": [
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "List of The Young and the Restless cast members",
+          "text": "Melody Thomas Scott and Eric Braeden, who portray Nikki and Victor Newman, are the second and third longest - running cast members, having joined in February 1979 and February 1980, respectively."
+        }
+      ]
+    },
+    {
+      "sub_question": "Which of these cast members is an actor?",
+      "resolved_sub_question": "Which of these cast members is an actor? Context: Bernard Braden, Barbara Kelly.",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+      "score": 0.48471854672152187,
+      "source_title": "Love in Pawn",
+      "hop_answer": "Bernard Braden",
+      "hop_thought": "Both Bernard Braden and Barbara Kelly are mentioned as stars in the films and series described, indicating they are actors.",
+      "hop_raw_response": "Both Bernard Braden and Barbara Kelly are mentioned as stars in the films and series described, indicating they are actors.\nAnswer: Bernard Braden",
+      "evidence_passages": [
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "B-And-B",
+          "text": "B-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden."
+        }
+      ]
+    },
+    {
+      "sub_question": "Who is the child of this actor?",
+      "resolved_sub_question": "Who is the child of this actor? Context: Bernard Braden, Barbara Kelly; Bernard Braden.",
+      "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+      "score": 0.47256254672152187,
+      "source_title": "Love in Pawn",
+      "hop_answer": "Kim Braden",
+      "hop_thought": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.",
+      "hop_raw_response": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.\nAnswer: Kim Braden",
+      "evidence_passages": [
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "Love in Pawn",
+          "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+        },
+        {
+          "title": "B-And-B",
+          "text": "B-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden."
+        }
+      ]
+    }
+  ],
+  "ranked_nodes": [
+    {
+      "node_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+      "score": 0.14666120933189042,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:title_anchor_love_in_pawn",
+      "score": 0.08027679066400423,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_by_emma_kate_croghan_and_sta",
+      "score": 0.07685095433399772,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "sentence:b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife_barbara_kelly_and",
+      "score": 0.06818365933035439,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:charles_saunders",
+      "score": 0.060798784524032,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:title_anchor_strange_planet",
+      "score": 0.054520652808127235,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:bernard_braden",
+      "score": 0.053183527345902384,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:barbara_kelly",
+      "score": 0.04832207574209029,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:emma_kate_croghan",
+      "score": 0.04718772612429391,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:love_in_pawn_0",
+      "score": 0.037552507202225235,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "entity:title_anchor_b_and_b",
+      "score": 0.037101255416700014,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:1953_british_comedy_film",
+      "score": 0.03392569294112174,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:kim_braden",
+      "score": 0.0324130533776439,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "entity:claudia_karvan",
+      "score": 0.030594642811229724,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "chunk:strange_planet_0",
+      "score": 0.01913598523983946,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "chunk:b_and_b_0",
+      "score": 0.014863008084023657,
+      "node_type": "chunk"
+    },
+    {
+      "node_id": "sentence:strange_planet_0_1_it_was_croghan_s_follow_up_to_love_and_other_catastrophes_and_used_many_of_the",
+      "score": 0.010203964640582335,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:1999_australian_comedy",
+      "score": 0.006969574293488423,
+      "node_type": "entity"
+    },
+    {
+      "node_id": "sentence:b_and_b_0_1_it_was_written_by_michael_pertwee_and_aired_for_a_pilot_and_one_series_in_1968",
+      "score": 0.006743173491179136,
+      "node_type": "sentence"
+    },
+    {
+      "node_id": "entity:british",
+      "score": 0.0048554145236038284,
+      "node_type": "entity"
+    }
+  ],
+  "ranked_passages": [
+    {
+      "node_id": "chunk:love_in_pawn_0",
+      "passage_index": 5,
+      "title": "Love in Pawn",
+      "score": 0.09914584659040562,
+      "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+      "score_breakdown": {
+        "dense": 0.05075345778577038,
+        "graph": 0.0599524576522113,
+        "fact": 0.3549713834171234
+      }
+    },
+    {
+      "node_id": "chunk:strange_planet_0",
+      "passage_index": 18,
+      "title": "Strange Planet",
+      "score": 0.09434885645796674,
+      "text": "Strange Planet\nStrange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan. It was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew.",
+      "score_breakdown": {
+        "dense": 0.04985172855254177,
+        "graph": 0.05499534677927798,
+        "fact": 0.33621201146856916
+      }
+    },
+    {
+      "node_id": "chunk:b_and_b_0",
+      "passage_index": 12,
+      "title": "B-And-B",
+      "score": 0.0900056175969109,
+      "text": "B-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden. It was written by Michael Pertwee, and aired for a pilot and one series in 1968.",
+      "score_breakdown": {
+        "dense": 0.049967551687697176,
+        "graph": 0.054003244671771145,
+        "fact": 0.3088166051143075
+      }
+    },
+    {
+      "node_id": "chunk:richard_keith_actor_0",
+      "passage_index": 3,
+      "title": "Richard Keith (actor)",
+      "score": 0.04228430255090579,
+      "text": "Richard Keith (actor)\nKeith Thibodeaux (born December 1, 1950) is a former American child actor of television and film and a musician, best known for playing Little Ricky on the television sitcoms I Love Lucy and The Lucy - Desi Comedy Hour. His last name, which was Cajun French, was changed by producer Desi Arnaz to ``Keith ''because`` Thibodeaux'' was too difficult to pronounce. He is the last living regular appearing cast member from I Love Lucy.",
+      "score_breakdown": {
+        "dense": 0.05020739980489738,
+        "graph": 0.04890077552737411,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:colleen_ballinger_0",
+      "passage_index": 6,
+      "title": "Colleen Ballinger",
+      "score": 0.042224231539239335,
+      "text": "Colleen Ballinger\nBallinger then purchased a new home in Encino, California. Ballinger met actor Erik Stocklin in 2016 when she cast him to play Miranda's love interest in Haters Back Off. The couple began dating by early 2018 and confirmed the relationship publicly in June 2018. Later the same month, Ballinger announced that she and Stocklin are engaged and expecting their first child.",
+      "score_breakdown": {
+        "dense": 0.050110245403160884,
+        "graph": 0.04887865522500283,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:frances_bean_cobain_0",
+      "passage_index": 2,
+      "title": "Frances Bean Cobain",
+      "score": 0.04222420831111243,
+      "text": "Frances Bean Cobain\nFrances Bean Cobain (born August 18, 1992) is an American visual artist and model. She is the only child of Nirvana frontman Kurt Cobain and Hole frontwoman Courtney Love.",
+      "score_breakdown": {
+        "dense": 0.05011817987285703,
+        "graph": 0.04886403127013688,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:i_love_hong_kong_2012_0",
+      "passage_index": 17,
+      "title": "I Love Hong Kong 2012",
+      "score": 0.04218717252206135,
+      "text": "I Love Hong Kong 2012\nI Love Hong Kong 2012 is a Hong Kong comedy film produced by Eric Tsang and directed by Chung Shu Kai and Chin Kwok Wai. Film stars an ensemble cast of Tsang, Teresa Mo, Bosco Wong, Denise Ho, Stanley Fung, Siu Yam-yam, William So, Mak Cheung-ching, 6 Wing, Vivian Zhang and guest stars a star-studded cast of Hong Kong stars. This film is a sequel of the 2011 film \"I Love Hong Kong\" with a different storyline but similar theme.",
+      "score_breakdown": {
+        "dense": 0.050026610082623324,
+        "graph": 0.04890845658872839,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_ghost_whisperer_characters_0",
+      "passage_index": 10,
+      "title": "List of Ghost Whisperer characters",
+      "score": 0.04218701960357794,
+      "text": "List of Ghost Whisperer characters\nJim Clancy, played by David Conrad is Melinda's (Jennifer Love Hewitt) husband. He is the only cast member other than Hewitt to appear in every episode.",
+      "score_breakdown": {
+        "dense": 0.05004725839746402,
+        "graph": 0.048870091616575746,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:christopher_masterson_0",
+      "passage_index": 7,
+      "title": "Christopher Masterson",
+      "score": 0.04218445409277504,
+      "text": "Christopher Masterson\nChristopher Kennedy Masterson (born January 22, 1980) is an American actor and disc jockey known best for his role as Francis on Malcolm in the Middle. He is the younger brother of That '70s Show cast member Danny Masterson, older brother of The Walking Dead cast member Alanna Masterson, and older brother of Last Man Standing cast member Jordan Masterson.",
+      "score_breakdown": {
+        "dense": 0.05003962870521016,
+        "graph": 0.04887552768303151,
+        "fact": 0.0
+      }
+    },
+    {
+      "node_id": "chunk:list_of_keeping_up_with_the_kardashians_episodes_0",
+      "passage_index": 19,
+      "title": "List of Keeping Up with the Kardashians episodes",
+      "score": 0.04217091947847156,
+      "text": "List of Keeping Up with the Kardashians episodes\nIt additionally places emphasis on their brother Rob Kardashian, their mother Kris Jenner, their step - parent Bruce Jenner (now known as Caitlyn Jenner), their half - sisters Kendall and Kylie Jenner, and Kourtney's now ex-boyfriend, Scott Disick. Khloé's ex-husband Lamar Odom developed a major position as part of the supporting cast in the fourth season, though he was not a regular cast member in following seasons, and rarely appeared in season eight while attempting to fix his marriage with Khloé. Along in season seven Kanye West became a recurring cast members after dating Kim then marrying her in season nine. In seasons eight and nine, Caitlyn's children Brody and Brandon, and Brandon's wife, Leah became recurring cast members.",
+      "score_breakdown": {
+        "dense": 0.05000707949121398,
+        "graph": 0.0488900858610129,
+        "fact": 0.0
+      }
+    }
+  ],
+  "evidence": {
+    "entity": [
+      {
+        "node_id": "entity:title_anchor_love_in_pawn",
+        "score": 0.08027679066400423,
+        "text": "Love in Pawn",
+        "metadata": {
+          "canonical_name": "Love in Pawn",
+          "aliases": [
+            "LIP",
+            "Love in Pawn"
+          ],
+          "surface_forms": [
+            "LIP",
+            "Love in Pawn"
+          ],
+          "title_anchor": "Love in Pawn"
+        }
+      },
+      {
+        "node_id": "entity:charles_saunders",
+        "score": 0.060798784524032,
+        "text": "Charles Saunders",
+        "metadata": {
+          "canonical_name": "Charles Saunders",
+          "aliases": [
+            "CS",
+            "Charles Saunders"
+          ],
+          "surface_forms": [
+            "CS",
+            "Charles Saunders"
+          ],
+          "title_anchor": ""
+        }
+      }
+    ],
+    "sentence": [
+      {
+        "node_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+        "score": 0.14666120933189042,
+        "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "metadata": {
+          "title": "Love in Pawn",
+          "chunk_id": "chunk:love_in_pawn_0",
+          "sentence_index": 0,
+          "document_index": 5,
+          "triples": [
+            {
+              "head": "Love in Pawn",
+              "relation": "is a",
+              "tail": "1953 British comedy film"
+            },
+            {
+              "head": "Love in Pawn",
+              "relation": "directed by",
+              "tail": "Charles Saunders"
+            },
+            {
+              "head": "Love in Pawn",
+              "relation": "starring",
+              "tail": "Bernard Braden"
+            },
+            {
+              "head": "Love in Pawn",
+              "relation": "starring",
+              "tail": "Barbara Kelly"
+            }
+          ],
+          "entities": [
+            "Love in Pawn",
+            "British",
+            "Charles Saunders",
+            "Bernard Braden",
+            "Barbara Kelly"
+          ],
+          "entity_ids": [
+            "entity:1953_british_comedy_film",
+            "entity:barbara_kelly",
+            "entity:bernard_braden",
+            "entity:british",
+            "entity:charles_saunders",
+            "entity:title_anchor_love_in_pawn"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:strange_planet_0_0_strange_planet_is_a_1999_australian_comedy_directed_by_emma_kate_croghan_and_sta",
+        "score": 0.07685095433399772,
+        "text": "Strange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan.",
+        "metadata": {
+          "title": "Strange Planet",
+          "chunk_id": "chunk:strange_planet_0",
+          "sentence_index": 0,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Strange Planet",
+              "relation": "is a",
+              "tail": "1999 Australian comedy"
+            },
+            {
+              "head": "Strange Planet",
+              "relation": "directed by",
+              "tail": "Emma-Kate Croghan"
+            },
+            {
+              "head": "Strange Planet",
+              "relation": "starring",
+              "tail": "Claudia Karvan"
+            }
+          ],
+          "entities": [
+            "Strange Planet",
+            "Emma-Kate Croghan",
+            "Claudia Karvan"
+          ],
+          "entity_ids": [
+            "entity:1999_australian_comedy",
+            "entity:claudia_karvan",
+            "entity:emma_kate_croghan",
+            "entity:title_anchor_strange_planet"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:b_and_b_0_0_b_and_b_was_a_british_sitcom_starring_bernard_braden_his_wife_barbara_kelly_and",
+        "score": 0.06818365933035439,
+        "text": "B-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden.",
+        "metadata": {
+          "title": "B-And-B",
+          "chunk_id": "chunk:b_and_b_0",
+          "sentence_index": 0,
+          "document_index": 12,
+          "triples": [
+            {
+              "head": "B-And-B",
+              "relation": "is a",
+              "tail": "British sitcom"
+            },
+            {
+              "head": "B-And-B",
+              "relation": "starring",
+              "tail": "Bernard Braden"
+            },
+            {
+              "head": "B-And-B",
+              "relation": "starring",
+              "tail": "Barbara Kelly"
+            },
+            {
+              "head": "B-And-B",
+              "relation": "starring",
+              "tail": "Kim Braden"
+            },
+            {
+              "head": "Bernard Braden",
+              "relation": "wife is",
+              "tail": "Barbara Kelly"
+            },
+            {
+              "head": "Bernard Braden",
+              "relation": "daughter is",
+              "tail": "Kim Braden"
+            }
+          ],
+          "entities": [
+            "B-And-B",
+            "Bernard Braden",
+            "Barbara Kelly",
+            "Kim Braden"
+          ],
+          "entity_ids": [
+            "entity:barbara_kelly",
+            "entity:bernard_braden",
+            "entity:british_sitcom",
+            "entity:kim_braden",
+            "entity:title_anchor_b_and_b"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:strange_planet_0_1_it_was_croghan_s_follow_up_to_love_and_other_catastrophes_and_used_many_of_the",
+        "score": 0.010203964640582335,
+        "text": "It was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew.",
+        "metadata": {
+          "title": "Strange Planet",
+          "chunk_id": "chunk:strange_planet_0",
+          "sentence_index": 1,
+          "document_index": 18,
+          "triples": [
+            {
+              "head": "Croghan",
+              "relation": "related_to",
+              "tail": "Love"
+            },
+            {
+              "head": "Love",
+              "relation": "related_to",
+              "tail": "Other Catastrophes"
+            }
+          ],
+          "entities": [
+            "Croghan",
+            "Love and Other Catastrophes"
+          ],
+          "entity_ids": [
+            "entity:croghan",
+            "entity:love",
+            "entity:love_and_other_catastrophes",
+            "entity:other_catastrophes"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:b_and_b_0_1_it_was_written_by_michael_pertwee_and_aired_for_a_pilot_and_one_series_in_1968",
+        "score": 0.006743173491179136,
+        "text": "It was written by Michael Pertwee, and aired for a pilot and one series in 1968.",
+        "metadata": {
+          "title": "B-And-B",
+          "chunk_id": "chunk:b_and_b_0",
+          "sentence_index": 1,
+          "document_index": 12,
+          "triples": [],
+          "entities": [
+            "Michael Pertwee"
+          ],
+          "entity_ids": [
+            "entity:michael_pertwee"
+          ]
+        }
+      },
+      {
+        "node_id": "sentence:don_t_wanna_fall_in_love_0_1_songwriter_s_jane_child_producer_s_jane_child_jane_child_singles_chronology",
+        "score": 0.001415651071985075,
+        "text": "Songwriter (s) Jane Child Producer (s) Jane Child Jane Child singles chronology`` Welcome to the Real World'' (1990) ``Do n't Wanna Fall in Love ''(1990)`` Welcome to the Real World (reissue)'' (1990) ``Welcome to the Real World ''(1990)`` Do n't Wanna Fall in Love'' (1990) ``Welcome to the Real World (reissue) ''(1990)",
+        "metadata": {
+          "title": "Don't Wanna Fall in Love",
+          "chunk_id": "chunk:don_t_wanna_fall_in_love_0",
+          "sentence_index": 1,
+          "document_index": 13,
+          "triples": [
+            {
+              "head": "Jane Child",
+              "relation": "is songwriter of",
+              "tail": "Welcome to the Real World"
+            },
+            {
+              "head": "Jane Child",
+              "relation": "is producer of",
+              "tail": "Welcome to the Real World"
+            },
+            {
+              "head": "Jane Child",
+              "relation": "is songwriter of",
+              "tail": "Don't Wanna Fall in Love"
+            },
+            {
+              "head": "Jane Child",
+              "relation": "is producer of",
+              "tail": "Don't Wanna Fall in Love"
+            }
+          ],
+          "entities": [
+            "Jane Child",
+            "Welcome to the Real World",
+            "Don't Wanna Fall in Love"
+          ],
+          "entity_ids": [
+            "entity:jane_child",
+            "entity:title_anchor_don_t_wanna_fall_in_love",
+            "entity:welcome_to_the_real_world"
+          ]
+        }
+      }
+    ],
+    "chunk": [
+      {
+        "node_id": "chunk:love_in_pawn_0",
+        "score": 0.037552507202225235,
+        "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "metadata": {
+          "title": "Love in Pawn",
+          "chunk_index": 0,
+          "document_index": 5,
+          "entity_ids": [
+            "entity:1953_british_comedy_film",
+            "entity:barbara_kelly",
+            "entity:bernard_braden",
+            "entity:british",
+            "entity:charles_saunders",
+            "entity:title_anchor_love_in_pawn"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:strange_planet_0",
+        "score": 0.01913598523983946,
+        "text": "Strange Planet\nStrange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan. It was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew.",
+        "metadata": {
+          "title": "Strange Planet",
+          "chunk_index": 0,
+          "document_index": 18,
+          "entity_ids": [
+            "entity:1999_australian_comedy",
+            "entity:claudia_karvan",
+            "entity:croghan",
+            "entity:emma_kate_croghan",
+            "entity:love",
+            "entity:love_and_other_catastrophes",
+            "entity:other_catastrophes",
+            "entity:title_anchor_strange_planet"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:b_and_b_0",
+        "score": 0.014863008084023657,
+        "text": "B-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden. It was written by Michael Pertwee, and aired for a pilot and one series in 1968.",
+        "metadata": {
+          "title": "B-And-B",
+          "chunk_index": 0,
+          "document_index": 12,
+          "entity_ids": [
+            "entity:barbara_kelly",
+            "entity:bernard_braden",
+            "entity:british_sitcom",
+            "entity:kim_braden",
+            "entity:michael_pertwee",
+            "entity:title_anchor_b_and_b"
+          ]
+        }
+      },
+      {
+        "node_id": "chunk:ex_on_the_beach_british_tv_series_0",
+        "score": 0.003218546985673533,
+        "text": "Ex on the Beach (British TV series)\nThe seventh series of the show began on 20 June 2017. This series was filmed on location on the island of Bali in Indonesia. The series was confirmed on 26 February 2017. The cast members for the series were confirmed on 23 May 2017 which include Geordie Shore stars Chloe Ferry and Marty McKenna, Love Island contestants Max Morley and Josh Ritchie, as well as Beauty School Cop Outs cast member Savannah Kemplay. Marty and Josh had previously appeared in the third and sixth series of the show respectively.",
+        "metadata": {
+          "title": "Ex on the Beach (British TV series)",
+          "chunk_index": 0,
+          "document_index": 9,
+          "entity_ids": [
+            "entity:20_june_2017",
+            "entity:bali",
+            "entity:beauty_school_cop_outs",
+            "entity:chloe_ferry",
+            "entity:february",
+            "entity:geordie_shore",
+            "entity:indonesia",
+            "entity:island_of_bali",
+            "entity:josh",
+            "entity:josh_ritchie",
+            "entity:love_island",
+            "entity:marty",
+            "entity:max_morley",
+            "entity:may",
+            "entity:savannah_kemplay"
+          ]
+        }
+      }
+    ],
+    "qa_context": "Love in Pawn\nLove in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.\n\nStrange Planet\nStrange Planet\nStrange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan. It was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew.\n\nB-And-B\nB-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden. It was written by Michael Pertwee, and aired for a pilot and one series in 1968.\n\nRichard Keith (actor)\nRichard Keith (actor)\nKeith Thibodeaux (born December 1, 1950) is a former American child actor of television and film and a musician, best known for playing Little Ricky on the television sitcoms I Love Lucy and The Lucy - Desi Comedy Hour. His last name, which was Cajun French, was changed by producer Desi Arnaz to ``Keith ''because`` Thibodeaux'' was too difficult to pronounce. He is the last living regular appearing cast member from I Love Lucy.\n\nColleen Ballinger\nColleen Ballinger\nBallinger then purchased a new home in Encino, California. Ballinger met actor Erik Stocklin in 2016 when she cast him to play Miranda's love interest in Haters Back Off. The couple began dating by early 2018 and confirmed the relationship publicly in June 2018. Later the same month, Ballinger announced that she and Stocklin are engaged and expecting their first child.\n\nLove in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.\n\nList of The Young and the Restless cast members\nMelody Thomas Scott and Eric Braeden, who portray Nikki and Victor Newman, are the second and third longest - running cast members, having joined in February 1979 and February 1980, respectively.\n\nB-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden.\n\nPromises Written in Water\nPromises Written in Water\nPromises Written in Water is a 2010 drama film written, directed, edited, and produced by Vincent Gallo. The cast includes Vincent Gallo, Delfine Bafort, Sage Stallone, Lisa Love and Hope Tomaselli.\n\nI Love Hong Kong 2012\nI Love Hong Kong 2012\nI Love Hong Kong 2012 is a Hong Kong comedy film produced by Eric Tsang and directed by Chung Shu Kai and Chin Kwok Wai. Film stars an ensemble cast of Tsang, Teresa Mo, Bosco Wong, Denise Ho, Stanley Fung, Siu Yam-yam, William So, Mak Cheung-ching, 6 Wing, Vivian Zhang and guest stars a star-studded cast of Hong Kong stars. This film is a sequel of the 2011 film \"I Love Hong Kong\" with a different storyline but similar theme.\n\nEx on the Beach (British TV series)\nEx on the Beach (British TV series)\nThe seventh series of the show began on 20 June 2017. This series was filmed on location on the island of Bali in Indonesia. The series was confirmed on 26 February 2017. The cast members for the series were confirmed on 23 May 2017 which include Geordie Shore stars Chloe Ferry and Marty McKenna, Love Island contestants Max Morley and Josh Ritchie, as well as Beauty School Cop Outs cast member Savannah Kemplay. Marty and Josh had previously appeared in the third and sixth series of the show respectively.",
+    "retrieved_passages": [
+      {
+        "node_id": "chunk:love_in_pawn_0",
+        "passage_index": 5,
+        "title": "Love in Pawn",
+        "score": 0.09914584659040562,
+        "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "score_breakdown": {
+          "dense": 0.05075345778577038,
+          "graph": 0.0599524576522113,
+          "fact": 0.3549713834171234
+        }
+      },
+      {
+        "node_id": "chunk:strange_planet_0",
+        "passage_index": 18,
+        "title": "Strange Planet",
+        "score": 0.09434885645796674,
+        "text": "Strange Planet\nStrange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan. It was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew.",
+        "score_breakdown": {
+          "dense": 0.04985172855254177,
+          "graph": 0.05499534677927798,
+          "fact": 0.33621201146856916
+        }
+      },
+      {
+        "node_id": "chunk:b_and_b_0",
+        "passage_index": 12,
+        "title": "B-And-B",
+        "score": 0.0900056175969109,
+        "text": "B-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden. It was written by Michael Pertwee, and aired for a pilot and one series in 1968.",
+        "score_breakdown": {
+          "dense": 0.049967551687697176,
+          "graph": 0.054003244671771145,
+          "fact": 0.3088166051143075
+        }
+      },
+      {
+        "node_id": "chunk:richard_keith_actor_0",
+        "passage_index": 3,
+        "title": "Richard Keith (actor)",
+        "score": 0.04228430255090579,
+        "text": "Richard Keith (actor)\nKeith Thibodeaux (born December 1, 1950) is a former American child actor of television and film and a musician, best known for playing Little Ricky on the television sitcoms I Love Lucy and The Lucy - Desi Comedy Hour. His last name, which was Cajun French, was changed by producer Desi Arnaz to ``Keith ''because`` Thibodeaux'' was too difficult to pronounce. He is the last living regular appearing cast member from I Love Lucy.",
+        "score_breakdown": {
+          "dense": 0.05020739980489738,
+          "graph": 0.04890077552737411,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:colleen_ballinger_0",
+        "passage_index": 6,
+        "title": "Colleen Ballinger",
+        "score": 0.042224231539239335,
+        "text": "Colleen Ballinger\nBallinger then purchased a new home in Encino, California. Ballinger met actor Erik Stocklin in 2016 when she cast him to play Miranda's love interest in Haters Back Off. The couple began dating by early 2018 and confirmed the relationship publicly in June 2018. Later the same month, Ballinger announced that she and Stocklin are engaged and expecting their first child.",
+        "score_breakdown": {
+          "dense": 0.050110245403160884,
+          "graph": 0.04887865522500283,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:frances_bean_cobain_0",
+        "passage_index": 2,
+        "title": "Frances Bean Cobain",
+        "score": 0.04222420831111243,
+        "text": "Frances Bean Cobain\nFrances Bean Cobain (born August 18, 1992) is an American visual artist and model. She is the only child of Nirvana frontman Kurt Cobain and Hole frontwoman Courtney Love.",
+        "score_breakdown": {
+          "dense": 0.05011817987285703,
+          "graph": 0.04886403127013688,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:i_love_hong_kong_2012_0",
+        "passage_index": 17,
+        "title": "I Love Hong Kong 2012",
+        "score": 0.04218717252206135,
+        "text": "I Love Hong Kong 2012\nI Love Hong Kong 2012 is a Hong Kong comedy film produced by Eric Tsang and directed by Chung Shu Kai and Chin Kwok Wai. Film stars an ensemble cast of Tsang, Teresa Mo, Bosco Wong, Denise Ho, Stanley Fung, Siu Yam-yam, William So, Mak Cheung-ching, 6 Wing, Vivian Zhang and guest stars a star-studded cast of Hong Kong stars. This film is a sequel of the 2011 film \"I Love Hong Kong\" with a different storyline but similar theme.",
+        "score_breakdown": {
+          "dense": 0.050026610082623324,
+          "graph": 0.04890845658872839,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_ghost_whisperer_characters_0",
+        "passage_index": 10,
+        "title": "List of Ghost Whisperer characters",
+        "score": 0.04218701960357794,
+        "text": "List of Ghost Whisperer characters\nJim Clancy, played by David Conrad is Melinda's (Jennifer Love Hewitt) husband. He is the only cast member other than Hewitt to appear in every episode.",
+        "score_breakdown": {
+          "dense": 0.05004725839746402,
+          "graph": 0.048870091616575746,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:christopher_masterson_0",
+        "passage_index": 7,
+        "title": "Christopher Masterson",
+        "score": 0.04218445409277504,
+        "text": "Christopher Masterson\nChristopher Kennedy Masterson (born January 22, 1980) is an American actor and disc jockey known best for his role as Francis on Malcolm in the Middle. He is the younger brother of That '70s Show cast member Danny Masterson, older brother of The Walking Dead cast member Alanna Masterson, and older brother of Last Man Standing cast member Jordan Masterson.",
+        "score_breakdown": {
+          "dense": 0.05003962870521016,
+          "graph": 0.04887552768303151,
+          "fact": 0.0
+        }
+      },
+      {
+        "node_id": "chunk:list_of_keeping_up_with_the_kardashians_episodes_0",
+        "passage_index": 19,
+        "title": "List of Keeping Up with the Kardashians episodes",
+        "score": 0.04217091947847156,
+        "text": "List of Keeping Up with the Kardashians episodes\nIt additionally places emphasis on their brother Rob Kardashian, their mother Kris Jenner, their step - parent Bruce Jenner (now known as Caitlyn Jenner), their half - sisters Kendall and Kylie Jenner, and Kourtney's now ex-boyfriend, Scott Disick. Khloé's ex-husband Lamar Odom developed a major position as part of the supporting cast in the fourth season, though he was not a regular cast member in following seasons, and rarely appeared in season eight while attempting to fix his marriage with Khloé. Along in season seven Kanye West became a recurring cast members after dating Kim then marrying her in season nine. In seasons eight and nine, Caitlyn's children Brody and Brandon, and Brandon's wife, Leah became recurring cast members.",
+        "score_breakdown": {
+          "dense": 0.05000707949121398,
+          "graph": 0.0488900858610129,
+          "fact": 0.0
+        }
+      }
+    ],
+    "reasoning_chain": [
+      {
+        "sub_question": "Who are the cast members of Love in Pawn?",
+        "resolved_sub_question": "Who are the cast members of Love in Pawn?",
+        "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+        "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "score": 0.4139390133751461,
+        "source_title": "Love in Pawn",
+        "hop_answer": "Bernard Braden, Barbara Kelly",
+        "hop_thought": "The evidence from the Wikipedia entry for \"Love in Pawn\" mentions Bernard Braden and Barbara Kelly as the starring cast members.",
+        "hop_raw_response": "The evidence from the Wikipedia entry for \"Love in Pawn\" mentions Bernard Braden and Barbara Kelly as the starring cast members.\nAnswer: Bernard Braden, Barbara Kelly",
+        "evidence_passages": [
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "List of The Young and the Restless cast members",
+            "text": "Melody Thomas Scott and Eric Braeden, who portray Nikki and Victor Newman, are the second and third longest - running cast members, having joined in February 1979 and February 1980, respectively."
+          }
+        ]
+      },
+      {
+        "sub_question": "Which of these cast members is an actor?",
+        "resolved_sub_question": "Which of these cast members is an actor? Context: Bernard Braden, Barbara Kelly.",
+        "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+        "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "score": 0.48471854672152187,
+        "source_title": "Love in Pawn",
+        "hop_answer": "Bernard Braden",
+        "hop_thought": "Both Bernard Braden and Barbara Kelly are mentioned as stars in the films and series described, indicating they are actors.",
+        "hop_raw_response": "Both Bernard Braden and Barbara Kelly are mentioned as stars in the films and series described, indicating they are actors.\nAnswer: Bernard Braden",
+        "evidence_passages": [
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "B-And-B",
+            "text": "B-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden."
+          }
+        ]
+      },
+      {
+        "sub_question": "Who is the child of this actor?",
+        "resolved_sub_question": "Who is the child of this actor? Context: Bernard Braden, Barbara Kelly; Bernard Braden.",
+        "sentence_id": "sentence:love_in_pawn_0_0_love_in_pawn_is_a_1953_british_comedy_film_directed_by_charles_saunders_and_star",
+        "sentence": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.",
+        "score": 0.47256254672152187,
+        "source_title": "Love in Pawn",
+        "hop_answer": "Kim Braden",
+        "hop_thought": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.",
+        "hop_raw_response": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.\nAnswer: Kim Braden",
+        "evidence_passages": [
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "Love in Pawn",
+            "text": "Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly."
+          },
+          {
+            "title": "B-And-B",
+            "text": "B-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden."
+          }
+        ]
+      }
+    ],
+    "qa_messages": [
+      {
+        "role": "system",
+        "content": "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. Concentrate only on the answer-bearing evidence that most directly resolves the question. If the draft answer is unsupported or incomplete, correct it using the passages. Keep the answer anchored to the entities established by the intermediate reasoning hints, and ignore nearby alternatives or competitors unless the passages explicitly connect them to the target. Start after 'Thought: ' with concise grounded reasoning focused on the minimal decisive clues. Conclude with 'Answer: ' followed by one short definitive answer span. Use 'Unknown' only when the passages do not support a single answer."
+      },
+      {
+        "role": "user",
+        "content": "Wikipedia Title: The Last Horse\nThe Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\nWikipedia Title: Southampton\nThe University of Southampton, which was founded in 1862 and received its Royal Charter as a university in 1952, has over 22,000 students. The university is ranked in the top 100 research universities in the world.\n\nWikipedia Title: Neville A. Stanton\nNeville A. Stanton is a British Professor of Human Factors and Ergonomics at the University of Southampton.\n\nQuestion: When was Neville A. Stanton's employer founded?\nThought: "
+      },
+      {
+        "role": "assistant",
+        "content": "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\nAnswer: 1862"
+      },
+      {
+        "role": "user",
+        "content": "Intermediate reasoning hints:\n1. Who are the cast members of Love in Pawn? => Bernard Braden, Barbara Kelly (source: Love in Pawn)\n2. Which of these cast members is an actor? => Bernard Braden (source: Love in Pawn)\n3. Who is the child of this actor? => Kim Braden (source: Love in Pawn)\n\nFact hints:\n- Bernard Braden daughter is Kim Braden\n- Love in Pawn starring Bernard Braden\n- Love in Pawn directed by Charles Saunders\n- Love in Pawn starring Barbara Kelly\n- Love in Pawn is a 1953 British comedy film\n\nWikipedia Title: Love in Pawn\nLove in Pawn is a 1953 British comedy film directed by Charles Saunders and starring Bernard Braden and Barbara Kelly.\n\nWikipedia Title: B-And-B\nB-And-B was a British sitcom starring Bernard Braden, his wife Barbara Kelly and their daughter Kim Braden.\n\nWikipedia Title: Strange Planet\nIt was Croghan's follow up to \"Love and Other Catastrophes\" and used many of the same cast and crew. Strange Planet Strange Planet is a 1999 Australian comedy directed by Emma-Kate Croghan and starring Claudia Karvan.\n\nWikipedia Title: Promises Written in Water\nThe cast includes Vincent Gallo, Delfine Bafort, Sage Stallone, Lisa Love and Hope Tomaselli. Promises Written in Water Promises Written in Water is a 2010 drama film written, directed, edited, and produced by Vincent Gallo.\n\nWikipedia Title: I Love Hong Kong 2012\nI Love Hong Kong 2012 I Love Hong Kong 2012 is a Hong Kong comedy film produced by Eric Tsang and directed by Chung Shu Kai and Chin Kwok Wai. This film is a sequel of the 2011 film \"I Love Hong Kong\" with a different storyline but similar theme.\n\nQuestion: Who is the child of the actor who is a cast member of Love in Pawn?\nDraft Answer: Kim Braden\nThought: "
+      }
+    ]
+  },
+  "qa_thought": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.",
+  "predicted_answer": "Kim Braden",
+  "qa_raw_response": "The context indicates that Bernard Braden and Barbara Kelly are a married couple, and their daughter is Kim Braden.\nAnswer: Kim Braden"
+}

@@ -55,6 +55,13 @@ class HoloRAG:
         self.triple_extractor = TripleExtractor(self.llm_client)
         self.intent_parser = IntentParser(self.llm_client)
         self.query_decomposer = QueryDecomposer(self.llm_client)
+
+        cache_dir = os.getenv("HOLORAG_CACHE_DIR", os.path.join(self.artifact_dir, "cache"))
+        if hasattr(self.triple_extractor, "set_cache_dir"):
+            self.triple_extractor.set_cache_dir(cache_dir)
+        if hasattr(self.query_decomposer, "set_cache_dir"):
+            self.query_decomposer.set_cache_dir(cache_dir)
+
         self.recognition_filter = RecognitionFilter(self.config, self.llm_client)
         self.seed_selector = SeedSelector()
         self.page_rank = GranularityBiasedPageRank(self.config)
@@ -107,8 +114,11 @@ class HoloRAG:
             initial_sub_questions = [query.strip()]
         query_entity_resolutions = self._resolve_query_entities(query, initial_sub_questions, graph, raw_query_entities)
         confident_entity_resolutions = [item for item in query_entity_resolutions if item.get("confident")]
-        sub_questions = self.query_decomposer.decompose(query, resolved_entities=confident_entity_resolutions)
-        if not sub_questions:
+        if confident_entity_resolutions:
+            sub_questions = self.query_decomposer.decompose(query, resolved_entities=confident_entity_resolutions)
+            if not sub_questions:
+                sub_questions = initial_sub_questions
+        else:
             sub_questions = initial_sub_questions
         query_entities = [item["resolved_text"] for item in confident_entity_resolutions] or raw_query_entities
         query_entity_node_ids = [item["node_id"] for item in confident_entity_resolutions]
@@ -159,7 +169,11 @@ class HoloRAG:
         evidence["reasoning_chain"] = reasoning_chain
         qa_result = self._generate_final_qa_answer(query, ranked_passages, reasoning_chain, ranked_facts)
         evidence["qa_messages"] = qa_result["messages"]
-        evidence["qa_context"] = self._build_passage_context(qa_result["selected_passages"], len(qa_result["selected_passages"]))
+        qa_context_passages = list(qa_result.get("focused_passages") or qa_result.get("selected_passages") or [])
+        evidence["qa_context"] = self._build_passage_context(
+            qa_context_passages,
+            min(len(qa_context_passages), self.config.qa_passage_top_k),
+        )
 
         result = {
             "query": query,
@@ -2823,7 +2837,7 @@ class HoloRAG:
             reasoning_chain=reasoning_chain,
             ranked_facts=ranked_facts,
             candidate_answer="",
-            budget=self.config.qa_passage_top_k + self.config.hop_answer_passage_top_k + 3,
+            budget=self.config.qa_passage_top_k + self.config.hop_answer_passage_top_k + 1,
         )
 
     def _build_passage_context(self, ranked_passages: List[Dict], top_k: int) -> str:

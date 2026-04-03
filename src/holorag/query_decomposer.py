@@ -1,5 +1,7 @@
+import pickle
 import re
-from typing import List, Optional, Sequence
+from pathlib import Path
+from typing import Dict, List, Optional, Sequence, Tuple
 
 from .llm_client import LocalLLMClient
 
@@ -19,19 +21,53 @@ META_REWRITE_PATTERNS = [
 class QueryDecomposer:
     def __init__(self, llm_client: LocalLLMClient) -> None:
         self.llm_client = llm_client
+        self._cache: Dict[Tuple[str, Tuple[Tuple[str, str], ...]], List[str]] = {}
+
+        self._cache_dir: Optional[Path] = None
+        self._cache_path: Optional[Path] = None
+        self._pending_updates = 0
+        self._flush_interval = 20
+
+    def set_cache_dir(self, cache_dir: str) -> None:
+        self._cache_dir = Path(cache_dir)
+        self._cache_dir.mkdir(parents=True, exist_ok=True)
+        self._cache_path = self._cache_dir / "query_decomposition_cache.pkl"
+        if self._cache_path.exists():
+            try:
+                payload = pickle.loads(self._cache_path.read_bytes())
+                if isinstance(payload, dict):
+                    self._cache.update(payload)
+            except Exception:
+                pass
+
+    def _persist_if_needed(self, force: bool = False) -> None:
+        if self._cache_path is None:
+            return
+        if not force and self._pending_updates < self._flush_interval:
+            return
+        try:
+            self._cache_path.write_bytes(pickle.dumps(self._cache, protocol=pickle.HIGHEST_PROTOCOL))
+            self._pending_updates = 0
+        except Exception:
+            pass
 
     def decompose(self, query: str, resolved_entities: Optional[Sequence[dict]] = None) -> List[str]:
-        fallback = {"sub_questions": self._heuristic_decompose(query)}
-        entity_context = ""
+        context_pairs: List[Tuple[str, str]] = []
         if resolved_entities:
-            lines = []
             for item in resolved_entities:
                 mention = str(item.get("mention", "")).strip()
                 resolved_text = str(item.get("resolved_text", "")).strip()
                 if mention and resolved_text:
-                    lines.append(f"- {mention} -> {resolved_text}")
-            if lines:
-                entity_context = "\n\nResolved entity context:\n" + "\n".join(lines)
+                    context_pairs.append((mention, resolved_text))
+        cache_key = ((query or "").strip(), tuple(sorted(context_pairs)))
+        if cache_key in self._cache:
+            return list(self._cache[cache_key])
+
+        fallback = {"sub_questions": self._heuristic_decompose(query)}
+        entity_context = ""
+        if context_pairs:
+            lines = [f"- {mention} -> {resolved_text}" for mention, resolved_text in context_pairs]
+            entity_context = "\n\nResolved entity context:\n" + "\n".join(lines)
         payload, _ = self.llm_client.infer_json(
             system_prompt=(
                 "Break the query into 1 to 4 atomic retrieval sub-questions. "
@@ -53,7 +89,11 @@ class QueryDecomposer:
         sub_questions = payload.get("sub_questions", [])
         cleaned = [str(question).strip() for question in sub_questions if str(question).strip()]
         sanitized = self._sanitize_sub_questions(query, cleaned)
-        return sanitized or fallback["sub_questions"]
+        resolved = sanitized or fallback["sub_questions"]
+        self._cache[cache_key] = list(resolved)
+        self._pending_updates += 1
+        self._persist_if_needed()
+        return resolved
 
     def _heuristic_decompose(self, query: str) -> List[str]:
         normalized = " ".join(query.strip().split())
