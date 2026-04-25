@@ -1,41 +1,0 @@
-/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-2026-04-03 15:55:36,866 INFO src.holorag.embedding_model: Loading embedding model: /data/xyh/models/NV-Embed-v2
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.67it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.61it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.34it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.00it/s]
-2026-04-03 15:55:45,855 INFO src.holorag.pipeline: Building HoloRAG hierarchical graph for 20 documents
-2026-04-03 15:55:52,826 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:55:54,175 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:55:55,414 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:55:55,466 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:05,683 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:12,968 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:13,019 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:15,369 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:20,505 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-03 15:56:25,462 INFO httpx: HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
-/home/xyh/miniconda3/envs/holorag-vllm/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
-  self.gen = func(*args, **kwds)
-2026-04-03 15:56:33,174 INFO src.holorag.pipeline: Saved HoloRAG index to /data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_01_10/sample_musique1/holorag_index.pkl
-{
-  "index_path": "/data/xyh/code/HoloRAG/outputs/qwen_72b_result/groups/musique_01_10/sample_musique1/holorag_index.pkl",
-  "stats": {
-    "nodes": 293,
-    "edges": 894,
-    "layer_counts": {
-      "entity": 204,
-      "sentence": 70,
-      "chunk": 19
-    }
-  },
-  "sample_metadata": {
-    "sample_id": "3hop1__22527_146265_68918",
-    "question": "When did the state in which the governor during the Civil War died, become a part of the U.S.?",
-    "answer": "November 21, 1789",
-    "answer_aliases": [],
-    "question_decomposition": [
-      "Who was the governor during the Civil War?",
-      "In what city did #1 die?",
-      "when did #2 become a part of the united states"
-    ]
-  }
-}

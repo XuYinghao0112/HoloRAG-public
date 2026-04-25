@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+import pickle
 import random
 import re
 import string
@@ -270,7 +271,96 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ppr_damping", type=float, default=0.5)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--passage_node_weight", type=float, default=0.05)
+    parser.add_argument(
+        "--reuse_indexes_dir",
+        type=str,
+        default=str(REPO_ROOT / "outputs" / "musique_eval" / "runs" / "indexes"),
+        help="Directory containing reusable per-sample indexes under <run_name>/<sample_id>/holorag_index.pkl.",
+    )
+    parser.add_argument(
+        "--reuse_indexes_run_name",
+        type=str,
+        default="",
+        help="Optional run name under --reuse_indexes_dir to restrict index lookup.",
+    )
+    parser.add_argument(
+        "--allow_reindex_fallback",
+        action="store_true",
+        help="If reusable index is missing for a sample, rebuild index on the fly. Disabled by default.",
+    )
+    parser.add_argument(
+        "--writeback_rebuilt_index",
+        action="store_true",
+        help="When --allow_reindex_fallback is enabled, persist rebuilt indexes into --reuse_indexes_dir.",
+    )
+    parser.add_argument(
+        "--writeback_run_name",
+        type=str,
+        default="",
+        help="Run folder name under --reuse_indexes_dir for rebuilt indexes. Defaults to --reuse_indexes_run_name.",
+    )
     return parser.parse_args()
+
+
+def _load_pickle_file(path: Path) -> Dict[str, Any]:
+    with path.open("rb") as handle:
+        return pickle.load(handle)
+
+
+def _dump_pickle_file(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("wb") as handle:
+        pickle.dump(payload, handle)
+
+
+def _parse_saved_at_key(value: str) -> Tuple[int, str]:
+    cleaned = str(value or "").strip()
+    if not cleaned:
+        return (0, "")
+    return (1, cleaned)
+
+
+def resolve_reusable_index_path(
+    reuse_root: Path,
+    sample_id: str,
+    question: str,
+    preferred_run_name: str = "",
+) -> Optional[Path]:
+    if not reuse_root.exists():
+        return None
+
+    candidate_metadata_paths: List[Path] = []
+    if preferred_run_name:
+        candidate = reuse_root / preferred_run_name / sample_id / "metadata.json"
+        if candidate.exists():
+            candidate_metadata_paths.append(candidate)
+    else:
+        candidate_metadata_paths.extend(reuse_root.glob(f"*/{sample_id}/metadata.json"))
+    if not candidate_metadata_paths:
+        return None
+
+    question_norm = " ".join(str(question or "").split())
+    candidate_records: List[Tuple[Tuple[int, str], Path]] = []
+    for metadata_path in candidate_metadata_paths:
+        try:
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        metadata_question = " ".join(str(metadata.get("question", "")).split())
+        if question_norm and metadata_question and metadata_question != question_norm:
+            continue
+        reusable_path = Path(str(metadata.get("reusable_index_path", "")).strip())
+        if not reusable_path.exists():
+            fallback_path = metadata_path.with_name("holorag_index.pkl")
+            reusable_path = fallback_path if fallback_path.exists() else reusable_path
+        if not reusable_path.exists():
+            continue
+        candidate_records.append((_parse_saved_at_key(metadata.get("saved_at", "")), reusable_path))
+
+    if not candidate_records:
+        return None
+    candidate_records.sort(key=lambda item: item[0], reverse=True)
+    return candidate_records[0][1]
 
 
 def main() -> None:
@@ -295,6 +385,10 @@ def main() -> None:
     per_example_path = run_dir / "per_example_results.jsonl"
     results_path = run_dir / "results.json"
     config_path = run_dir / "config.json"
+    samples_dump_dir = run_dir / "samples"
+    traces_dump_dir = run_dir / "query_traces"
+    samples_dump_dir.mkdir(parents=True, exist_ok=True)
+    traces_dump_dir.mkdir(parents=True, exist_ok=True)
 
     all_samples = load_jsonl(args.dataset_file)
     samples = maybe_filter_split(all_samples, args.split, logger)
@@ -323,6 +417,11 @@ def main() -> None:
         "temperature": args.temperature,
         "passage_node_weight": args.passage_node_weight,
         "retrieval_top_k": args.retrieval_top_k,
+        "reuse_indexes_dir": args.reuse_indexes_dir,
+        "reuse_indexes_run_name": args.reuse_indexes_run_name,
+        "allow_reindex_fallback": bool(args.allow_reindex_fallback),
+        "writeback_rebuilt_index": bool(args.writeback_rebuilt_index),
+        "writeback_run_name": args.writeback_run_name,
         "llm_base_url": args.llm_base_url,
         "llm_name": args.llm_name,
         "embedding_name": args.embedding_name,
@@ -350,6 +449,14 @@ def main() -> None:
     shared_workdir.mkdir(parents=True, exist_ok=True)
     holorag = HoloRAG(build_config(args, save_dir=str(shared_workdir)))
     logger.info("Initialized HoloRAG once and will reuse model weights for all samples.")
+    reuse_root = Path(args.reuse_indexes_dir).expanduser().resolve()
+    writeback_run_name = (
+        args.writeback_run_name.strip()
+        or args.reuse_indexes_run_name.strip()
+        or f"{run_name}_autofill_indexes"
+    )
+    logger.info("Reusable index root: %s", reuse_root)
+    logger.info("Writeback rebuilt indexes: %s (run=%s)", bool(args.writeback_rebuilt_index), writeback_run_name)
 
     for i, sample in enumerate(sampled_samples, start=1):
         sample_id = str(sample.get("id", f"sample_{i}"))
@@ -357,13 +464,53 @@ def main() -> None:
         if not question:
             logger.warning("Skip sample %s: empty question.", sample_id)
             continue
+        (samples_dump_dir / f"{sample_id}.json").write_text(
+            json.dumps(sample, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
         logger.info("[%d/%d] start sample %s", i, len(sampled_samples), sample_id)
 
         documents = convert_payload_to_documents(sample)
         llm_before_index = holorag.llm_client.get_stats()
         t_index_start = time.perf_counter()
-        holorag.index(documents)
+        reused_index_path = resolve_reusable_index_path(
+            reuse_root=reuse_root,
+            sample_id=sample_id,
+            question=question,
+            preferred_run_name=args.reuse_indexes_run_name.strip(),
+        )
+        index_mode = "reused"
+        if reused_index_path is not None:
+            holorag.state = _load_pickle_file(reused_index_path)
+            holorag.index_path = str(reused_index_path)
+        elif args.allow_reindex_fallback:
+            index_mode = "rebuilt"
+            holorag.index(documents)
+            if args.writeback_rebuilt_index and holorag.state is not None:
+                writeback_dir = reuse_root / writeback_run_name / sample_id
+                writeback_index_path = writeback_dir / "holorag_index.pkl"
+                _dump_pickle_file(writeback_index_path, holorag.state)
+                metadata_payload = {
+                    "run_name": writeback_run_name,
+                    "sample_id": sample_id,
+                    "question": question,
+                    "answer": sample.get("answer"),
+                    "answer_aliases": sample.get("answer_aliases", []),
+                    "saved_at": datetime.now().isoformat(timespec="seconds"),
+                    "source_index_path": str(holorag.index_path),
+                    "reusable_index_path": str(writeback_index_path),
+                }
+                (writeback_dir / "metadata.json").write_text(
+                    json.dumps(metadata_payload, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+                reused_index_path = writeback_index_path
+        else:
+            raise FileNotFoundError(
+                f"Reusable index not found for sample_id={sample_id}. "
+                f"Looked under {reuse_root}. Set --allow_reindex_fallback to permit rebuilding."
+            )
         index_latency = time.perf_counter() - t_index_start
         index_latencies.append(index_latency)
         llm_after_index = holorag.llm_client.get_stats()
@@ -374,6 +521,22 @@ def main() -> None:
         retrieval_latency = time.perf_counter() - t_retr_start
         llm_after_query = holorag.llm_client.get_stats()
         retrieval_latencies.append(retrieval_latency)
+        sample_trace_dir = traces_dump_dir / sample_id
+        sample_trace_dir.mkdir(parents=True, exist_ok=True)
+        trace_payload = dict(query_result)
+        trace_payload["_meta"] = {
+            "sample_id": sample_id,
+            "index_mode": index_mode,
+            "reused_index_path": str(reused_index_path) if reused_index_path else None,
+        }
+        (sample_trace_dir / "query_stdout.json").write_text(
+            json.dumps(trace_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        (sample_trace_dir / "last_query_result.json").write_text(
+            json.dumps(trace_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
         ranked_passages = query_result.get("ranked_passages", [])
         topk_passages = ranked_passages[: args.topk_passages]
@@ -420,6 +583,8 @@ def main() -> None:
             "latency_index": index_latency,
             "latency_retrieval": retrieval_latency,
             "latency_qa": qa_latency if args.eval_qa else None,
+            "index_mode": index_mode,
+            "reused_index_path": str(reused_index_path) if reused_index_path else None,
             "llm_calls_index": int(llm_after_index.get("completion_calls", 0) - llm_before_index.get("completion_calls", 0)),
             "llm_calls_query": int(llm_after_query.get("completion_calls", 0) - llm_before_query.get("completion_calls", 0)),
         }
@@ -477,6 +642,10 @@ def main() -> None:
     }
 
     results_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    sample_ids = [str(sample.get("id", f"sample_{index+1}")) for index, sample in enumerate(sampled_samples)]
+    manifest = {"num_samples": len(sample_ids), "sample_ids": sample_ids}
+    (samples_dump_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    (samples_dump_dir / "sample_ids.tsv").write_text("\n".join(sample_ids) + ("\n" if sample_ids else ""), encoding="utf-8")
     logger.info("Saved config: %s", config_path)
     logger.info("Saved sampled queries: %s", sampled_path)
     logger.info("Saved per-example results: %s", per_example_path)

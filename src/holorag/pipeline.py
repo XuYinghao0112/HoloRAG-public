@@ -15,6 +15,7 @@ from .evidence_extractor import EvidenceExtractor
 from .graph_builder import HierarchicalGraphBuilder
 from .intent_parser import IntentParser
 from .llm_client import LocalLLMClient
+from .passage_coverage_reranker import PassageCoverageReranker
 from .qa_reader import (
     build_answer_focus_messages,
     build_hipporag_hop_messages,
@@ -64,6 +65,11 @@ class HoloRAG:
 
         self.recognition_filter = RecognitionFilter(self.config, self.llm_client)
         self.seed_selector = SeedSelector()
+        self.passage_reranker = PassageCoverageReranker(
+            top_window=max(self.config.passage_output_top_k, 12),
+            anchor_keep=2,
+            overlap_threshold=0.12,
+        )
         self.page_rank = GranularityBiasedPageRank(self.config)
         self.evidence_extractor = EvidenceExtractor()
         self.graph_builder = HierarchicalGraphBuilder(
@@ -159,6 +165,7 @@ class HoloRAG:
             for node_id, score in sorted(ranked.items(), key=lambda item: item[1], reverse=True)
         ]
         ranked_passages = self._extract_ranked_passages(graph, ranked, dense_chunk_scores, graph_chunk_scores, ranked_facts)
+        ranked_passages = self._rerank_passages_for_subquestion_coverage(query, sub_questions, ranked_passages)
         evidence = self.evidence_extractor.extract(
             graph=graph,
             ranked_nodes=ranked_nodes,
@@ -503,30 +510,6 @@ class HoloRAG:
             filtered[layer] = normalize_scores(self.recognition_filter.rerank(query, scores, node_texts))
         return filtered
 
-    def _build_prior_scores(
-        self,
-        working_graph: nx.DiGraph,
-        filtered_scores: Dict[str, Dict[str, float]],
-        dense_chunk_scores: Dict[str, float],
-        graph_chunk_scores: Dict[str, float],
-        ranked_facts: Sequence[Dict],
-    ) -> Dict[str, float]:
-        priors: Dict[str, float] = defaultdict(float)
-        layer_weights = {"entity": 1.0, "sentence": 0.55, "chunk": 1.0}
-        for layer in ("entity", "sentence", "chunk"):
-            for node_id, score in filtered_scores.get(layer, {}).items():
-                if node_id in working_graph:
-                    priors[node_id] += layer_weights.get(layer, 1.0) * score
-        for chunk_scores in (dense_chunk_scores, graph_chunk_scores):
-            for chunk_id, score in chunk_scores.items():
-                if chunk_id in working_graph:
-                    priors[chunk_id] += self.config.passage_node_weight * score
-        for fact in ranked_facts[: self.config.fact_rerank_top_k]:
-            sentence_id = fact.get("sentence_id")
-            if sentence_id in working_graph:
-                priors[sentence_id] += float(fact["score"])
-        return dict(priors)
-
     def _build_reset_scores(
         self,
         graph: nx.DiGraph,
@@ -731,6 +714,19 @@ class HoloRAG:
                 aggregated_scores[chunk_id] = max(aggregated_scores.get(chunk_id, 0.0), weight * float(score))
         ranked = sorted(aggregated_scores.items(), key=lambda item: item[1], reverse=True)[: self.config.retrieval_top_k]
         return dict(ranked)
+
+    def _rerank_passages_for_subquestion_coverage(
+        self,
+        query: str,
+        sub_questions: Sequence[str],
+        ranked_passages: Sequence[Dict],
+    ) -> List[Dict]:
+        return self.passage_reranker.rerank(
+            query=query,
+            sub_questions=sub_questions,
+            ranked_passages=ranked_passages,
+            output_top_k=self.config.passage_output_top_k,
+        )
 
     def _title_anchor_chunk_scores(
         self,
@@ -1497,29 +1493,6 @@ class HoloRAG:
             query_text_type="sub_question",
         )
 
-    def _bridge_sentence_candidates(
-        self,
-        query: str,
-        sub_questions: Sequence[str],
-        bridge_entities: Sequence[str],
-        graph: nx.DiGraph,
-    ) -> Dict[str, float]:
-        scores: Dict[str, float] = {}
-        later_hop_queries = list(sub_questions[1:]) if len(sub_questions) > 1 else list(sub_questions)
-        hop_queries = later_hop_queries or [query]
-        for node_id, attrs in graph.nodes(data=True):
-            if attrs.get("node_type") != "sentence":
-                continue
-            score = self._bridge_relation_match_score(
-                text=attrs.get("text", ""),
-                metadata=attrs.get("metadata", {}),
-                bridge_entities=list(bridge_entities),
-                hop_queries=hop_queries,
-            )
-            if score > 0:
-                scores[node_id] = score
-        return normalize_scores(scores)
-
     def _extract_bridge_entities(
         self,
         graph: nx.DiGraph,
@@ -1957,6 +1930,48 @@ class HoloRAG:
             return False
         return True
 
+    def _repair_short_answer_from_evidence(self, answer: str, evidence_passages: Sequence[Dict]) -> str:
+        repaired = str(answer or "").strip().replace("\n", " ")
+        if not repaired or repaired.lower() == "unknown":
+            return "Unknown"
+        tokens = repaired.split()
+        if len(tokens) >= 2 and len(tokens) <= 3 and re.search(r"\b[A-Za-z]\.?$", repaired):
+            candidates: List[str] = []
+            for passage in evidence_passages:
+                title = str(passage.get("title", "")).strip()
+                text = str(passage.get("text", "")).strip()
+                combined = f"{title}\n{text}" if title else text
+                if not combined:
+                    continue
+                for match in re.finditer(re.escape(repaired), combined, flags=re.IGNORECASE):
+                    tail = combined[match.end() : match.end() + 80]
+                    suffix = re.match(r"(?:\s+[A-Za-z][A-Za-z0-9'.-]*){1,4}", tail)
+                    if not suffix:
+                        continue
+                    expanded = (combined[match.start() : match.end()] + suffix.group(0)).strip(" \t\n,.;:()[]{}\"'")
+                    if 2 <= len(expanded.split()) <= 8 and len(expanded) > len(repaired):
+                        candidates.append(expanded)
+            if candidates:
+                candidates.sort(key=lambda item: (len(item.split()), len(item)), reverse=True)
+                repaired = candidates[0]
+
+        if re.fullmatch(r"\d{1,2}", repaired):
+            number_words = {
+                "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five",
+                "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten", "11": "eleven",
+                "12": "twelve", "13": "thirteen", "14": "fourteen", "15": "fifteen", "16": "sixteen",
+                "17": "seventeen", "18": "eighteen", "19": "nineteen", "20": "twenty",
+            }
+            word = number_words.get(repaired)
+            if word:
+                corpus = " ".join(
+                    f"{str(item.get('title', '')).strip()} {str(item.get('text', '')).strip()}".lower()
+                    for item in evidence_passages
+                )
+                if re.search(rf"\\b{re.escape(word)}\\b", corpus) and not re.search(rf"\\b{re.escape(repaired)}\\b", corpus):
+                    repaired = word
+        return repaired
+
     def _normalize_short_answer(self, question: str, answer: str, evidence_passages: Sequence[Dict]) -> str:
         normalized = str(answer or "").strip()
         if not normalized:
@@ -1964,7 +1979,7 @@ class HoloRAG:
         if normalized.lower() == "unknown":
             return "Unknown"
         if self._is_atomic_answer(normalized):
-            return normalized
+            return self._repair_short_answer_from_evidence(normalized, evidence_passages)
         messages = build_short_answer_normalization_messages(
             question=question,
             candidate_answer=normalized,
@@ -1978,8 +1993,12 @@ class HoloRAG:
         )
         _, reduced_answer = parse_hipporag_qa_response(raw_response)
         if not self._is_atomic_answer(reduced_answer):
+            # Keep concise original answers that are evidence-grounded candidates.
+            flat_original = normalized.replace("\n", " ").strip()
+            if len(flat_original) <= 96 and len(flat_original.split()) <= 14:
+                return self._repair_short_answer_from_evidence(flat_original, evidence_passages)
             return "Unknown"
-        return reduced_answer
+        return self._repair_short_answer_from_evidence(reduced_answer, evidence_passages)
 
     def _answer_supported_by_evidence(self, answer: str, passages: Sequence[Dict]) -> bool:
         normalized = clean_entity_text(str(answer or "").strip())
@@ -1995,7 +2014,34 @@ class HoloRAG:
             passage_tokens = {token for token in re.findall(r"[a-z0-9]+", combined.lower()) if token}
             if answer_tokens and answer_tokens.issubset(passage_tokens):
                 return True
+            if answer_tokens and len(answer_tokens) >= 2:
+                overlap = answer_tokens & passage_tokens
+                overlap_ratio = len(overlap) / max(1, len(answer_tokens))
+                if len(overlap) >= 2 and overlap_ratio >= 0.70:
+                    return True
         return False
+
+    def _adopt_verified_answer(
+        self,
+        verified: Dict[str, object],
+        fallback_answer: str,
+        fallback_thought: str,
+        fallback_raw_response: str,
+    ) -> tuple[str, str, str, str]:
+        verified_answer = str(verified.get("answer", "") or "").strip()
+        if verified_answer and verified_answer.lower() != "unknown":
+            return (
+                verified_answer,
+                str(verified.get("thought", "") or fallback_thought),
+                str(verified.get("raw_response", "") or fallback_raw_response),
+                str(verified.get("support", "") or ""),
+            )
+        return (
+            fallback_answer,
+            fallback_thought,
+            fallback_raw_response,
+            "",
+        )
 
     def _support_span_in_passages(self, support: str, passages: Sequence[Dict]) -> bool:
         snippet = str(support or "").strip()
@@ -2720,9 +2766,6 @@ class HoloRAG:
         if terminal_answer.lower() == "unknown":
             return {"thought": "", "answer": "Unknown", "support": "", "raw_response": ""}
 
-        if not self._answer_supported_by_evidence(terminal_answer, evidence_pool or selected_passages):
-            return {"thought": "", "answer": "Unknown", "support": "", "raw_response": ""}
-
         verified = self._verify_answer_with_support(
             query=query,
             passages=evidence_pool or selected_passages,
@@ -2730,21 +2773,23 @@ class HoloRAG:
             draft_answer=terminal_answer,
             ranked_facts=ranked_facts,
         )
-        verified_answer = str(verified.get("answer", "") or "").strip()
-        if verified_answer and verified_answer.lower() != "unknown":
+        adopted_answer, adopted_thought, adopted_raw, adopted_support = self._adopt_verified_answer(
+            verified=verified,
+            fallback_answer=terminal_answer,
+            fallback_thought=str(last_hop.get("hop_thought", "") or ""),
+            fallback_raw_response=str(last_hop.get("hop_raw_response", "") or ""),
+        )
+        if adopted_answer.lower() != "unknown":
             return {
-                "thought": str(verified.get("thought", "") or ""),
-                "answer": verified_answer,
-                "support": str(verified.get("support", "") or ""),
-                "raw_response": str(verified.get("raw_response", "") or ""),
+                "thought": adopted_thought,
+                "answer": adopted_answer,
+                "support": adopted_support,
+                "raw_response": adopted_raw,
             }
+        if not self._answer_supported_by_evidence(adopted_answer, evidence_pool or selected_passages):
+            return {"thought": "", "answer": "Unknown", "support": "", "raw_response": ""}
 
-        return {
-            "thought": str(last_hop.get("hop_thought", "") or ""),
-            "answer": terminal_answer,
-            "support": "",
-            "raw_response": str(last_hop.get("hop_raw_response", "") or ""),
-        }
+        return {"thought": adopted_thought, "answer": adopted_answer, "support": adopted_support, "raw_response": adopted_raw}
 
     def _refine_final_answer(
         self,
@@ -2797,29 +2842,28 @@ class HoloRAG:
             answer=answer,
             evidence_passages=focused_passages,
         )
-        if not self._answer_supported_by_evidence(normalized_answer, focused_passages):
-            normalized_answer = "Unknown"
+        supported = self._answer_supported_by_evidence(normalized_answer, focused_passages)
         verified = self._verify_answer_with_support(
             query=query,
             passages=focused_passages,
             reasoning_chain=reasoning_chain,
-            draft_answer=normalized_answer or draft_answer,
+            draft_answer=normalized_answer if normalized_answer and normalized_answer.lower() != "unknown" else draft_answer,
             ranked_facts=ranked_facts,
         )
-        final_answer = normalized_answer
-        final_thought = thought
-        final_raw_response = raw_response
-        if str(verified.get("answer", "")).strip().lower() != "unknown":
-            final_answer = str(verified["answer"])
-            final_thought = str(verified.get("thought", "") or thought)
-            final_raw_response = str(verified.get("raw_response", "") or raw_response)
+        base_answer = normalized_answer if supported else "Unknown"
+        final_answer, final_thought, final_raw_response, final_support = self._adopt_verified_answer(
+            verified=verified,
+            fallback_answer=base_answer,
+            fallback_thought=thought,
+            fallback_raw_response=raw_response,
+        )
         return {
             "thought": final_thought,
             "answer": final_answer,
             "raw_response": final_raw_response,
             "messages": messages,
             "focused_passages": focused_passages,
-            "support": verified.get("support", ""),
+            "support": final_support,
         }
 
     def _select_qa_passages_for_reader(
@@ -2895,28 +2939,23 @@ class HoloRAG:
             answer=answer,
             evidence_passages=selected_passages,
         )
-        if not self._answer_supported_by_evidence(normalized_answer, selected_passages):
-            normalized_answer = "Unknown"
+        supported = self._answer_supported_by_evidence(normalized_answer, selected_passages)
 
         verified_result = self._verify_answer_with_support(
             query=query,
             passages=selected_passages,
             reasoning_chain=reasoning_chain,
-            draft_answer=normalized_answer,
+            draft_answer=normalized_answer if normalized_answer and normalized_answer.lower() != "unknown" else answer,
             ranked_facts=ranked_facts,
         )
-        verified_answer = str(verified_result.get("answer", "") or "").strip()
-        final_answer = normalized_answer
-        final_thought = thought
-        final_raw_response = raw_response
+        base_answer = normalized_answer if supported else "Unknown"
+        final_answer, final_thought, final_raw_response, final_support = self._adopt_verified_answer(
+            verified=verified_result,
+            fallback_answer=base_answer,
+            fallback_thought=thought,
+            fallback_raw_response=raw_response,
+        )
         final_messages = messages
-        final_support = ""
-
-        if verified_answer and verified_answer.lower() != "unknown":
-            final_answer = verified_answer
-            final_thought = str(verified_result.get("thought", "") or thought)
-            final_raw_response = str(verified_result.get("raw_response", "") or raw_response)
-            final_support = str(verified_result.get("support", "") or "")
 
         refined_result = self._refine_final_answer(
             query=query,
@@ -2949,6 +2988,23 @@ class HoloRAG:
             if terminal_support:
                 final_support = terminal_support
 
+        if not final_answer or final_answer.lower() == "unknown":
+            recovered = self._recover_unknown_answer_from_passages(
+                query=query,
+                selected_passages=selected_passages,
+                reasoning_chain=reasoning_chain,
+                ranked_facts=ranked_facts,
+            )
+            recovered_answer = str(recovered.get("answer", "") or "").strip()
+            if recovered_answer and recovered_answer.lower() != "unknown":
+                final_answer = recovered_answer
+                final_thought = str(recovered.get("thought", "") or final_thought)
+                final_raw_response = str(recovered.get("raw_response", "") or final_raw_response)
+                final_messages = recovered.get("messages", final_messages)
+                recovered_support = str(recovered.get("support", "") or "")
+                if recovered_support:
+                    final_support = recovered_support
+
         return {
             "thought": final_thought,
             "answer": final_answer,
@@ -2957,6 +3013,94 @@ class HoloRAG:
             "selected_passages": selected_passages,
             "focused_passages": refined_result.get("focused_passages", []),
             "support": final_support,
+        }
+
+    def _recover_unknown_answer_from_passages(
+        self,
+        query: str,
+        selected_passages: Sequence[Dict],
+        reasoning_chain: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+    ) -> Dict[str, object]:
+        passages = [passage for passage in selected_passages if str(passage.get("text", "")).strip()]
+        if not passages:
+            return {"thought": "", "answer": "Unknown", "raw_response": "", "messages": [], "support": ""}
+
+        fact_hints = self._select_fact_hints(
+            query=query,
+            ranked_facts=ranked_facts,
+            reasoning_chain=reasoning_chain,
+            candidate_answer="",
+            limit=min(5, self.config.fact_rerank_top_k),
+        )
+        messages = build_hipporag_qa_messages(
+            question=query,
+            ranked_passages=passages,
+            top_k=min(len(passages), self.config.qa_passage_top_k),
+            reasoning_chain=reasoning_chain,
+            fact_hints=fact_hints,
+        )
+        raw_response = self.llm_client.infer_messages_text(
+            messages=messages,
+            fallback="Answer: Unknown",
+            max_tokens=min(self.config.max_new_tokens, 128),
+        )
+        thought, answer = parse_hipporag_qa_response(raw_response)
+        normalized_answer = self._normalize_short_answer(
+            question=query,
+            answer=answer,
+            evidence_passages=passages,
+        )
+        if normalized_answer.lower() == "unknown":
+            candidate = str(answer or "").strip().splitlines()[0].strip()
+            if self._is_atomic_answer(candidate):
+                normalized_answer = candidate
+
+        if normalized_answer.lower() == "unknown":
+            return {
+                "thought": thought,
+                "answer": "Unknown",
+                "raw_response": raw_response,
+                "messages": messages,
+                "support": "",
+            }
+        supported = self._answer_supported_by_evidence(normalized_answer, passages)
+
+        verified = self._verify_answer_with_support(
+            query=query,
+            passages=passages,
+            reasoning_chain=reasoning_chain,
+            draft_answer=normalized_answer,
+            ranked_facts=ranked_facts,
+        )
+        adopted_answer, adopted_thought, adopted_raw, adopted_support = self._adopt_verified_answer(
+            verified=verified,
+            fallback_answer=normalized_answer,
+            fallback_thought=thought,
+            fallback_raw_response=raw_response,
+        )
+        if adopted_answer.lower() != "unknown":
+            return {
+                "thought": adopted_thought,
+                "answer": adopted_answer,
+                "raw_response": adopted_raw,
+                "messages": messages,
+                "support": adopted_support,
+            }
+        if not supported:
+            return {
+                "thought": thought,
+                "answer": "Unknown",
+                "raw_response": raw_response,
+                "messages": messages,
+                "support": "",
+            }
+        return {
+            "thought": thought,
+            "answer": normalized_answer,
+            "raw_response": raw_response,
+            "messages": messages,
+            "support": "",
         }
 
     def _ensure_fact_index(self, state: Dict, graph: nx.DiGraph) -> None:
