@@ -61,38 +61,47 @@ class HierarchicalGraphBuilder:
                 )
                 doc_chunks.append((chunk_id, {"title": title, "text": f"{title}\n{chunk_value}"}))
 
-                previous_sentence_id = None
                 sentences = self.sentence_segmenter.split(chunk_value)
                 sentence_extractions = self._extract_sentences_parallel(sentences)
+                previous_sentence_id = None
                 for sentence_index, sentence in enumerate(sentences):
-                    sentence_id = stable_node_id("sentence", title, str(chunk_index), str(sentence_index), sentence[:80])
-                    graph.add_node(
-                        sentence_id,
-                        node_type="sentence",
-                        text=sentence,
-                        metadata={
-                            "title": title,
-                            "chunk_id": chunk_id,
-                            "sentence_index": sentence_index,
-                            "document_index": doc_index,
-                        },
-                    )
-                    self._merge_edge(graph, sentence_id, chunk_id, 1.0, "sentence_chunk")
-                    self._merge_edge(graph, chunk_id, sentence_id, 1.0, "sentence_chunk")
-                    sentence_payloads.append((sentence_id, {"text": sentence}))
-                    if previous_sentence_id is not None:
-                        self._merge_edge(graph, previous_sentence_id, sentence_id, 0.95, "sentence_sequence")
-                        self._merge_edge(graph, sentence_id, previous_sentence_id, 0.95, "sentence_sequence")
-                    previous_sentence_id = sentence_id
-
                     extraction = sentence_extractions[sentence_index]
-                    graph.nodes[sentence_id]["metadata"]["triples"] = extraction["triples"]
-                    graph.nodes[sentence_id]["metadata"]["entities"] = extraction["entities"]
+                    sentence_id = ""
+                    if self.config.enable_sentence_layer:
+                        sentence_id = stable_node_id("sentence", title, str(chunk_index), str(sentence_index), sentence[:80])
+                        graph.add_node(
+                            sentence_id,
+                            node_type="sentence",
+                            text=sentence,
+                            metadata={
+                                "title": title,
+                                "chunk_id": chunk_id,
+                                "sentence_index": sentence_index,
+                                "document_index": doc_index,
+                            },
+                        )
+                        self._merge_edge(graph, sentence_id, chunk_id, 1.0, "sentence_chunk")
+                        self._merge_edge(graph, chunk_id, sentence_id, 1.0, "sentence_chunk")
+                        sentence_payloads.append((sentence_id, {"text": sentence}))
+                        if previous_sentence_id is not None:
+                            self._merge_edge(graph, previous_sentence_id, sentence_id, 0.95, "sentence_sequence")
+                            self._merge_edge(graph, sentence_id, previous_sentence_id, 0.95, "sentence_sequence")
+                        previous_sentence_id = sentence_id
+                        graph.nodes[sentence_id]["metadata"]["triples"] = extraction["triples"]
+                        graph.nodes[sentence_id]["metadata"]["entities"] = extraction["entities"]
+
                     for triple in extraction["triples"]:
                         head_id = self._add_entity_node(graph, triple["head"], title=title)
                         tail_id = self._add_entity_node(graph, triple["tail"], title=title)
                         fact_payloads.append({
-                            "fact_id": stable_node_id("fact", triple["head"], triple["relation"], triple["tail"], sentence_id),
+                            "fact_id": stable_node_id(
+                                "fact",
+                                triple["head"],
+                                triple["relation"],
+                                triple["tail"],
+                                sentence_id or chunk_id,
+                                str(sentence_index),
+                            ),
                             "text": f"{triple['head']} {triple['relation']} {triple['tail']}",
                             "head_id": head_id,
                             "tail_id": tail_id,
@@ -101,17 +110,19 @@ class HierarchicalGraphBuilder:
                             "document_index": doc_index,
                         })
                         self._merge_edge(graph, head_id, tail_id, 1.0, "entity_relation", relation=triple["relation"])
-                        self._merge_edge(graph, head_id, sentence_id, 1.0, "entity_sentence")
-                        self._merge_edge(graph, tail_id, sentence_id, 1.0, "entity_sentence")
-                        self._merge_edge(graph, sentence_id, head_id, 0.8, "entity_sentence")
-                        self._merge_edge(graph, sentence_id, tail_id, 0.8, "entity_sentence")
-                        sentence_entities[sentence_id].update([head_id, tail_id])
+                        if self.config.enable_sentence_layer and sentence_id:
+                            self._merge_edge(graph, head_id, sentence_id, 1.0, "entity_sentence")
+                            self._merge_edge(graph, tail_id, sentence_id, 1.0, "entity_sentence")
+                            self._merge_edge(graph, sentence_id, head_id, 0.8, "entity_sentence")
+                            self._merge_edge(graph, sentence_id, tail_id, 0.8, "entity_sentence")
+                            sentence_entities[sentence_id].update([head_id, tail_id])
                         chunk_entities[chunk_id].update([head_id, tail_id])
                     for entity_name in extraction["entities"]:
                         entity_id = self._add_entity_node(graph, entity_name, title=title)
-                        self._merge_edge(graph, entity_id, sentence_id, 0.8, "entity_sentence")
-                        self._merge_edge(graph, sentence_id, entity_id, 0.6, "entity_sentence")
-                        sentence_entities[sentence_id].add(entity_id)
+                        if self.config.enable_sentence_layer and sentence_id:
+                            self._merge_edge(graph, entity_id, sentence_id, 0.8, "entity_sentence")
+                            self._merge_edge(graph, sentence_id, entity_id, 0.6, "entity_sentence")
+                            sentence_entities[sentence_id].add(entity_id)
                         chunk_entities[chunk_id].add(entity_id)
 
         entity_nodes = [(node_id, attrs["text"]) for node_id, attrs in graph.nodes(data=True) if attrs.get("node_type") == "entity"]
@@ -124,7 +135,7 @@ class HierarchicalGraphBuilder:
             [payload["text"] for _, payload in sentence_payloads],
             instruction="Encode the sentence for retrieval.",
             text_type="sentence",
-        )
+        ) if sentence_payloads else np.zeros((0, 1), dtype=np.float32)
         chunk_embeddings = self.embedder.encode(
             [payload["text"] for _, payload in doc_chunks],
             instruction="Encode the chunk for retrieval.",
@@ -142,7 +153,8 @@ class HierarchicalGraphBuilder:
             self._link_chunk_bridges(graph, doc_chunks, chunk_embeddings, chunk_entities)
 
         for sentence_id, entities in sentence_entities.items():
-            graph.nodes[sentence_id]["metadata"]["entity_ids"] = sorted(entities)
+            if sentence_id in graph:
+                graph.nodes[sentence_id]["metadata"]["entity_ids"] = sorted(entities)
         for chunk_id, entities in chunk_entities.items():
             graph.nodes[chunk_id]["metadata"]["entity_ids"] = sorted(entities)
 

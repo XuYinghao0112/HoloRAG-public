@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+import pickle
 import random
 import re
 import string
@@ -237,15 +238,134 @@ def build_config(args: argparse.Namespace, save_dir: str, variant_flags: Dict[st
     )
 
 
+def prebuild_shared_indexes(
+    samples: Sequence[Dict[str, Any]],
+    args: argparse.Namespace,
+    run_dir: Path,
+    index_pool_name: str,
+    builder_flags: Dict[str, bool],
+    logger: logging.Logger,
+) -> Dict[str, Any]:
+    from main_holorag import convert_payload_to_documents
+    from src.holorag import HoloRAG
+
+    index_root = run_dir / f"shared_indexes_{index_pool_name}"
+    index_root.mkdir(parents=True, exist_ok=True)
+
+    cfg = build_config(
+        args,
+        save_dir=str(run_dir / f"shared_index_workdir_{index_pool_name}"),
+        variant_flags=builder_flags,
+    )
+    holorag = HoloRAG(cfg)
+
+    index_records: List[Dict[str, Any]] = []
+    index_latencies: List[float] = []
+    entity_counts: List[float] = []
+    sentence_counts: List[float] = []
+    chunk_counts: List[float] = []
+    edge_counts: List[float] = []
+
+    t_start = time.perf_counter()
+    for i, sample in enumerate(samples, start=1):
+        sample_id = str(sample.get("id", f"sample_{i}"))
+        question = str(sample.get("question", "")).strip()
+        sample_dir = index_root / sample_id
+        sample_dir.mkdir(parents=True, exist_ok=True)
+        index_path = sample_dir / "holorag_index.pkl"
+        stats_path = sample_dir / "index_stats.json"
+
+        if not question:
+            record = {
+                "sample_id": sample_id,
+                "valid": False,
+                "index_path": str(index_path),
+                "index_latency": 0.0,
+                "stats": {"edges": 0, "layer_counts": {"entity": 0, "sentence": 0, "chunk": 0}},
+            }
+            index_records.append(record)
+            continue
+
+        documents = convert_payload_to_documents(sample)
+        t_idx = time.perf_counter()
+        index_result = holorag.index(documents)
+        index_latency = time.perf_counter() - t_idx
+
+        with index_path.open("wb") as handle:
+            pickle.dump(holorag.state, handle)
+
+        stats = index_result.get("stats", {})
+        stats_payload = {
+            "sample_id": sample_id,
+            "index_latency": index_latency,
+            "stats": stats,
+        }
+        stats_path.write_text(json.dumps(stats_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        layer_counts = stats.get("layer_counts", {})
+        index_latencies.append(index_latency)
+        entity_counts.append(_safe_float(layer_counts.get("entity", 0)))
+        sentence_counts.append(_safe_float(layer_counts.get("sentence", 0)))
+        chunk_counts.append(_safe_float(layer_counts.get("chunk", 0)))
+        edge_counts.append(_safe_float(stats.get("edges", 0)))
+
+        record = {
+            "sample_id": sample_id,
+            "valid": True,
+            "index_path": str(index_path),
+            "index_latency": index_latency,
+            "stats": stats,
+        }
+        index_records.append(record)
+        logger.info(
+            "[shared-index][%d/%d] %s | idx=%.3fs | entity=%d sentence=%d chunk=%d edges=%d",
+            i,
+            len(samples),
+            sample_id,
+            index_latency,
+            int(layer_counts.get("entity", 0)),
+            int(layer_counts.get("sentence", 0)),
+            int(layer_counts.get("chunk", 0)),
+            int(stats.get("edges", 0)),
+        )
+
+    total_runtime = time.perf_counter() - t_start
+    shared_summary = {
+        "index_pool_name": index_pool_name,
+        "builder_flags": dict(builder_flags),
+        "num_samples": len(index_records),
+        "num_valid_samples": sum(1 for item in index_records if item.get("valid")),
+        "avg_index_latency": _avg(index_latencies),
+        "total_index_runtime": total_runtime,
+        "entity_nodes": _avg(entity_counts),
+        "sentence_nodes": _avg(sentence_counts),
+        "chunk_nodes": _avg(chunk_counts),
+        "edges": _avg(edge_counts),
+    }
+    (run_dir / f"shared_index_summary_{index_pool_name}.json").write_text(
+        json.dumps(shared_summary, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    (run_dir / f"shared_index_records_{index_pool_name}.json").write_text(
+        json.dumps(index_records, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return {
+        "records": index_records,
+        "summary": shared_summary,
+    }
+
+
 def run_variant(
     variant_name: str,
     variant_flags: Dict[str, bool],
     samples: Sequence[Dict[str, Any]],
+    index_records: Sequence[Dict[str, Any]],
+    shared_index_summary: Dict[str, Any],
     args: argparse.Namespace,
     run_dir: Path,
     logger: logging.Logger,
 ) -> Dict[str, Any]:
-    from main_holorag import convert_payload_to_documents
     from src.holorag import HoloRAG
 
     variant_dir = run_dir / variant_name
@@ -263,7 +383,7 @@ def run_variant(
     recalls_10: List[float] = []
     em_scores: List[float] = []
     f1_scores: List[float] = []
-    index_latencies: List[float] = []
+    index_latencies: List[float] = [_safe_float(shared_index_summary.get("avg_index_latency", 0.0))]
     retrieval_latencies: List[float] = []
     qa_latencies: List[float] = []
     retrieval_qa_latencies: List[float] = []
@@ -274,19 +394,33 @@ def run_variant(
     evidence_tokens: List[float] = []
 
     t_variant_start = time.perf_counter()
+    index_record_by_sample = {
+        str(item.get("sample_id", "")): item
+        for item in index_records
+        if str(item.get("sample_id", "")).strip()
+    }
     for i, sample in enumerate(samples, start=1):
         sample_id = str(sample.get("id", f"sample_{i}"))
         question = str(sample.get("question", "")).strip()
         if not question:
             continue
 
-        documents = convert_payload_to_documents(sample)
+        index_record = index_record_by_sample.get(sample_id)
+        if not index_record:
+            logger.warning("[%s] missing shared index record for sample %s; skip", variant_name, sample_id)
+            continue
+        if not index_record.get("valid"):
+            continue
+        index_path = Path(str(index_record.get("index_path", "")))
+        if not index_path.exists():
+            logger.warning("[%s] shared index path missing for %s: %s", variant_name, sample_id, index_path)
+            continue
+        with index_path.open("rb") as handle:
+            holorag.state = pickle.load(handle)
+        holorag.index_path = str(index_path)
 
-        t_index_start = time.perf_counter()
-        index_result = holorag.index(documents)
-        index_latency = time.perf_counter() - t_index_start
-        index_latencies.append(index_latency)
-        index_stats = index_result.get("stats", {})
+        index_latency = _safe_float(index_record.get("index_latency", 0.0))
+        index_stats = index_record.get("stats", {})
         layer_counts = index_stats.get("layer_counts", {})
         entity_counts.append(_safe_float(layer_counts.get("entity", 0)))
         sentence_counts.append(_safe_float(layer_counts.get("sentence", 0)))
@@ -331,6 +465,7 @@ def run_variant(
             "variant": variant_name,
             "sample_id": sample_id,
             "index_latency": index_latency,
+            "index_path": str(index_path),
             "retrieval_latency": retrieval_latency,
             "qa_latency": qa_latency,
             "query_total_latency": query_total_latency,
@@ -354,6 +489,7 @@ def run_variant(
             "F1": f1,
             "EM": em,
             "index_latency": index_latency,
+            "index_path": str(index_path),
             "retrieval_latency": retrieval_latency,
             "qa_latency": qa_latency,
             "retrieval_qa_latency": query_total_latency,
@@ -380,7 +516,9 @@ def run_variant(
             qa_latency,
         )
 
-    total_runtime = time.perf_counter() - t_variant_start
+    query_runtime = time.perf_counter() - t_variant_start
+    shared_index_runtime = _safe_float(shared_index_summary.get("total_index_runtime", 0.0))
+    total_runtime = query_runtime + shared_index_runtime
     metrics = {
         "variant": variant_name,
         "num_queries": len(recalls_5),
@@ -394,6 +532,8 @@ def run_variant(
         "retrieval_latency": _avg(retrieval_latencies),
         "qa_latency": _avg(qa_latencies),
         "retrieval_qa_latency": _avg(retrieval_qa_latencies),
+        "query_runtime": query_runtime,
+        "shared_index_runtime": shared_index_runtime,
         "total_runtime": total_runtime,
         "entity_nodes": _avg(entity_counts),
         "sentence_nodes": _avg(sentence_counts),
@@ -493,6 +633,43 @@ def main() -> None:
         ("wo_biased_transition", {"disable_biased_transition": True}),
     ]
 
+    logger.info("Prebuilding shared FULL indexes once (for baseline / wo_intent / wo_biased_transition)...")
+    shared_index_data_full = prebuild_shared_indexes(
+        samples=samples,
+        args=args,
+        run_dir=run_dir,
+        index_pool_name="full",
+        builder_flags={},
+        logger=logger,
+    )
+    logger.info("Prebuilding shared NO-SENTENCE indexes once (for wo_sentence_layer)...")
+    shared_index_data_no_sentence = prebuild_shared_indexes(
+        samples=samples,
+        args=args,
+        run_dir=run_dir,
+        index_pool_name="wo_sentence_layer",
+        builder_flags={"disable_sentence_layer": True},
+        logger=logger,
+    )
+    shared_index_records_full = shared_index_data_full["records"]
+    shared_index_summary_full = shared_index_data_full["summary"]
+    shared_index_records_no_sentence = shared_index_data_no_sentence["records"]
+    shared_index_summary_no_sentence = shared_index_data_no_sentence["summary"]
+    logger.info(
+        "Shared FULL index done | valid=%d/%d | avg_index_latency=%.3fs | total_index_runtime=%.2fs",
+        int(shared_index_summary_full.get("num_valid_samples", 0)),
+        int(shared_index_summary_full.get("num_samples", 0)),
+        float(shared_index_summary_full.get("avg_index_latency", 0.0)),
+        float(shared_index_summary_full.get("total_index_runtime", 0.0)),
+    )
+    logger.info(
+        "Shared NO-SENTENCE index done | valid=%d/%d | avg_index_latency=%.3fs | total_index_runtime=%.2fs",
+        int(shared_index_summary_no_sentence.get("num_valid_samples", 0)),
+        int(shared_index_summary_no_sentence.get("num_samples", 0)),
+        float(shared_index_summary_no_sentence.get("avg_index_latency", 0.0)),
+        float(shared_index_summary_no_sentence.get("total_index_runtime", 0.0)),
+    )
+
     (run_dir / "config.json").write_text(
         json.dumps(
             {
@@ -504,6 +681,9 @@ def main() -> None:
                 "llm_name": args.llm_name,
                 "embedding_name": args.embedding_name,
                 "embedding_device": args.embedding_device,
+                "index_mode": "two_shared_pools",
+                "shared_index_summary_full": shared_index_summary_full,
+                "shared_index_summary_wo_sentence_layer": shared_index_summary_no_sentence,
                 "variants": [{"name": name, "flags": flags} for name, flags in variants],
             },
             ensure_ascii=False,
@@ -515,14 +695,25 @@ def main() -> None:
     summary_rows: List[Dict[str, Any]] = []
     for variant_name, flags in variants:
         logger.info("Starting variant: %s", variant_name)
+        if variant_name == "wo_sentence_layer":
+            selected_index_records = shared_index_records_no_sentence
+            selected_index_summary = shared_index_summary_no_sentence
+            selected_index_pool = "wo_sentence_layer"
+        else:
+            selected_index_records = shared_index_records_full
+            selected_index_summary = shared_index_summary_full
+            selected_index_pool = "full"
         metrics = run_variant(
             variant_name=variant_name,
             variant_flags=flags,
             samples=samples,
+            index_records=selected_index_records,
+            shared_index_summary=selected_index_summary,
             args=args,
             run_dir=run_dir,
             logger=logger,
         )
+        metrics["index_pool"] = selected_index_pool
         summary_rows.append(metrics)
         logger.info(
             "Finished %s | R@5=%.4f | F1=%.4f | EM=%.4f | total_runtime=%.2fs",
@@ -538,6 +729,7 @@ def main() -> None:
 
     csv_headers = [
         "variant",
+        "index_pool",
         "num_queries",
         "recall@1",
         "recall@2",
@@ -549,6 +741,8 @@ def main() -> None:
         "retrieval_latency",
         "qa_latency",
         "retrieval_qa_latency",
+        "query_runtime",
+        "shared_index_runtime",
         "total_runtime",
         "entity_nodes",
         "sentence_nodes",
