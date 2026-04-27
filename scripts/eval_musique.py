@@ -155,17 +155,6 @@ def recall_at_k(
     return len(support_titles & retrieved_titles) / len(support_titles)
 
 
-def build_qa_context(passages: Sequence[Dict[str, Any]], topk_passages: int) -> str:
-    blocks = []
-    for rank, item in enumerate(passages[:topk_passages], start=1):
-        title = str(item.get("title", "")).strip()
-        text = str(item.get("text", "")).strip()
-        if not title and not text:
-            continue
-        blocks.append(f"[{rank}] Title: {title}\n{text}")
-    return "\n\n".join(blocks)
-
-
 def setup_logger(log_path: Path) -> logging.Logger:
     logger = logging.getLogger("musique_eval")
     logger.setLevel(logging.INFO)
@@ -246,6 +235,9 @@ def build_config(args: argparse.Namespace, save_dir: str) -> Any:
         pagerank_alpha=args.ppr_damping,
         temperature=args.temperature,
         passage_node_weight=args.passage_node_weight,
+        dense_passage_weight=args.dense_passage_weight,
+        graph_passage_weight=args.graph_passage_weight,
+        fact_passage_weight=args.fact_passage_weight,
     )
 
 
@@ -256,7 +248,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num_eval_queries", type=int, default=1000)
     parser.add_argument("--eval_qa", action="store_true", help="Enable QA generation/evaluation on top of retrieved passages.")
-    parser.add_argument("--output_dir", type=str, default=str(REPO_ROOT / "outputs" / "musique_eval"))
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default=str(REPO_ROOT / "outputs" / "musique_eval" / "runs"),
+        help=(
+            "Root directory for evaluation run artifacts. "
+            "Runs are written to <output_dir>/<run_name>. "
+            "For legacy compatibility, if output_dir does not end with 'runs', artifacts are redirected to <output_dir>/runs/<run_name>."
+        ),
+    )
     parser.add_argument("--run_name", type=str, default="")
 
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
@@ -271,6 +272,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ppr_damping", type=float, default=0.5)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--passage_node_weight", type=float, default=0.05)
+    parser.add_argument("--dense_passage_weight", type=float, default=0.55)
+    parser.add_argument("--graph_passage_weight", type=float, default=0.30)
+    parser.add_argument("--fact_passage_weight", type=float, default=0.15)
     parser.add_argument(
         "--reuse_indexes_dir",
         type=str,
@@ -372,7 +376,10 @@ def main() -> None:
     set_global_seed(args.seed)
 
     run_name = args.run_name.strip() or f"musique_{args.split}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    run_dir = Path(args.output_dir) / run_name
+    output_root = Path(args.output_dir)
+    if output_root.name != "runs":
+        output_root = output_root / "runs"
+    run_dir = output_root / run_name
     run_dir.mkdir(parents=True, exist_ok=True)
 
     log_path = run_dir / "run.log"
@@ -416,6 +423,9 @@ def main() -> None:
         "ppr_damping": args.ppr_damping,
         "temperature": args.temperature,
         "passage_node_weight": args.passage_node_weight,
+        "dense_passage_weight": args.dense_passage_weight,
+        "graph_passage_weight": args.graph_passage_weight,
+        "fact_passage_weight": args.fact_passage_weight,
         "retrieval_top_k": args.retrieval_top_k,
         "reuse_indexes_dir": args.reuse_indexes_dir,
         "reuse_indexes_run_name": args.reuse_indexes_run_name,
@@ -439,8 +449,6 @@ def main() -> None:
     f1_scores: List[float] = []
     index_latencies: List[float] = []
     retrieval_latencies: List[float] = []
-    qa_latencies: List[float] = []
-
     per_example_path.write_text("", encoding="utf-8")
 
     t_run_start = time.perf_counter()

@@ -30,6 +30,16 @@ class PassageCoverageReranker:
         text_overlap = lexical_overlap_score(query_text, text) if text else 0.0
         return max(title_overlap, text_overlap)
 
+    def _dedup_key(self, passage: Dict) -> tuple:
+        passage_index = passage.get("passage_index")
+        if passage_index is not None:
+            return ("passage_index", str(passage_index))
+        return (
+            "text",
+            str(passage.get("title", "")).strip(),
+            str(passage.get("text", "")).strip(),
+        )
+
     def rerank(
         self,
         query: str,
@@ -58,11 +68,7 @@ class PassageCoverageReranker:
         rest = list(head[primary_k:])
 
         def _key(passage: Dict) -> tuple:
-            return (
-                passage.get("passage_index"),
-                str(passage.get("title", "")).strip(),
-                str(passage.get("text", "")).strip(),
-            )
+            return self._dedup_key(passage)
 
         # Step 1: conservative de-dup in top-k only.
         used_keys = set()

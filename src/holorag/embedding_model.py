@@ -1,5 +1,4 @@
 import logging
-import gc
 from typing import List
 
 import numpy as np
@@ -105,11 +104,6 @@ class NVEmbedV2Encoder:
                 batch_array = np.asarray(embeddings)
             all_embeddings.append(np.asarray(batch_array, dtype=np.float32))
         return np.vstack(all_embeddings)
-
-    def _cleanup_cuda(self) -> None:
-        gc.collect()
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
 
     def _resolve_max_length(self, text_type: str) -> int:
         normalized = (text_type or "query").strip().lower()

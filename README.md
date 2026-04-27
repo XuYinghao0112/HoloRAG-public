@@ -1,7 +1,7 @@
 # HoloRAG
 
 HoloRAG is a hierarchical graph-based Retrieval-Augmented Generation (RAG) pipeline designed for multi-hop QA.
-It extends HippoRAG-style graph retrieval with a multi-granularity graph (entity / sentence / chunk), query decomposition, and evidence-aware answer generation.
+It extends HoloRAG-style graph retrieval with a multi-granularity graph (entity / sentence / chunk), query decomposition, and evidence-aware answer generation.
 
 This repository supports:
 - End-to-end indexing and querying via one CLI (`main_holorag.py`)
@@ -261,7 +261,7 @@ Use these to isolate module contributions under controlled settings.
 
 ## 10. Reproducibility Checklist
 
-For fair comparisons (e.g., vs HippoRAG):
+For fair comparisons (e.g., vs baseline methods):
 
 1. Use identical sample sets and ordering.
 2. Align LLM endpoint/model and embedding model.

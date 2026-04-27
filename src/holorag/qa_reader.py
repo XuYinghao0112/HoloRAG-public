@@ -1,7 +1,7 @@
 from typing import Dict, List, Sequence, Tuple
 
 
-HIPPORAG_QA_SYSTEM_PROMPT = (
+HOLORAG_QA_SYSTEM_PROMPT = (
     "As an advanced reading comprehension assistant, your task is to analyze text passages and corresponding questions meticulously. "
     "Your response must start after 'Thought: ' with concise reasoning grounded in the passages. "
     "Use the intermediate reasoning hints only as clues, and keep the final answer anchored to the entities established by those hints. "
@@ -11,7 +11,7 @@ HIPPORAG_QA_SYSTEM_PROMPT = (
     "Do not list multiple alternatives. Use 'Unknown' only when the passages truly do not support a single answer."
 )
 
-HIPPORAG_HOP_SYSTEM_PROMPT = (
+HOLORAG_HOP_SYSTEM_PROMPT = (
     "As an advanced reading comprehension assistant, answer the current sub-question using the provided evidence. "
     "Start after 'Thought: ' with brief grounded reasoning. Then write 'Answer: ' followed by one short atomic answer span. "
     "Return a single entity, date, place, organization, number, or attribute phrase rather than a sentence or a list. "
@@ -19,14 +19,14 @@ HIPPORAG_HOP_SYSTEM_PROMPT = (
     "Use 'Unknown' only when the evidence does not support a single answer."
 )
 
-HIPPORAG_NORMALIZE_SYSTEM_PROMPT = (
+HOLORAG_NORMALIZE_SYSTEM_PROMPT = (
     "You are given a question, evidence passages, and a candidate answer. "
     "Rewrite the candidate as one short atomic answer span that is directly supported by the evidence and fits the question. "
     "Do not output a sentence, explanation, or multiple alternatives. "
     "If the candidate cannot be reduced to one supported answer span, output 'Unknown'."
 )
 
-HIPPORAG_FOCUS_SYSTEM_PROMPT = (
+HOLORAG_FOCUS_SYSTEM_PROMPT = (
     "You are given a question, a draft answer, intermediate reasoning hints, and evidence passages. "
     "Concentrate only on the answer-bearing evidence that most directly resolves the question. "
     "If the draft answer is unsupported or incomplete, correct it using the passages. "
@@ -36,7 +36,7 @@ HIPPORAG_FOCUS_SYSTEM_PROMPT = (
     "Use 'Unknown' only when the passages do not support a single answer."
 )
 
-HIPPORAG_QA_EXAMPLE_USER = (
+HOLORAG_QA_EXAMPLE_USER = (
     "Wikipedia Title: The Last Horse\n"
     "The Last Horse (Spanish:El ultimo caballo) is a 1950 Spanish comedy film directed by Edgar Neville starring Fernando Fernan Gomez.\n\n"
     "Wikipedia Title: Southampton\n"
@@ -48,12 +48,12 @@ HIPPORAG_QA_EXAMPLE_USER = (
     "Thought: "
 )
 
-HIPPORAG_QA_EXAMPLE_ASSISTANT = (
+HOLORAG_QA_EXAMPLE_ASSISTANT = (
     "Neville A. Stanton's employer is the University of Southampton. The University of Southampton was founded in 1862.\n"
     "Answer: 1862"
 )
 
-HIPPORAG_NORMALIZE_EXAMPLE_USER = (
+HOLORAG_NORMALIZE_EXAMPLE_USER = (
     "Wikipedia Title: Charles Smith Olden\n"
     "Charles Smith Olden (February 19, 1799April 7, 1876) was an American Republican Party politician, who served as the 19th Governor of New Jersey from 1860 to 1863 during the first part of the American Civil War.\n\n"
     "Question: Which state was this governor from?\n"
@@ -61,7 +61,7 @@ HIPPORAG_NORMALIZE_EXAMPLE_USER = (
     "Thought: "
 )
 
-HIPPORAG_NORMALIZE_EXAMPLE_ASSISTANT = (
+HOLORAG_NORMALIZE_EXAMPLE_ASSISTANT = (
     "The candidate answer refers to the state associated with the governor. The supported short answer is New Jersey.\n"
     "Answer: New Jersey"
 )
@@ -98,7 +98,7 @@ def format_reasoning_chain(reasoning_chain: Sequence[Dict]) -> str:
     return "\n".join(lines)
 
 
-def build_hipporag_qa_messages(
+def build_holorag_qa_messages(
     question: str,
     ranked_passages: Sequence[Dict],
     top_k: int,
@@ -119,14 +119,14 @@ def build_hipporag_qa_messages(
     user_parts.append(f"Question: {question}\nThought: ")
     user_prompt = "\n\n".join(part.strip() for part in user_parts if part.strip())
     return [
-        {"role": "system", "content": HIPPORAG_QA_SYSTEM_PROMPT},
-        {"role": "user", "content": HIPPORAG_QA_EXAMPLE_USER},
-        {"role": "assistant", "content": HIPPORAG_QA_EXAMPLE_ASSISTANT},
+        {"role": "system", "content": HOLORAG_QA_SYSTEM_PROMPT},
+        {"role": "user", "content": HOLORAG_QA_EXAMPLE_USER},
+        {"role": "assistant", "content": HOLORAG_QA_EXAMPLE_ASSISTANT},
         {"role": "user", "content": user_prompt},
     ]
 
 
-def build_hipporag_hop_messages(
+def build_holorag_hop_messages(
     sub_question: str,
     evidence_passages: Sequence[Dict],
     previous_hops: Sequence[Dict] | None = None,
@@ -141,9 +141,9 @@ def build_hipporag_hop_messages(
         user_parts.append(evidence_block)
     user_parts.append(f"Question: {sub_question}\nThought: ")
     return [
-        {"role": "system", "content": HIPPORAG_HOP_SYSTEM_PROMPT},
-        {"role": "user", "content": HIPPORAG_QA_EXAMPLE_USER},
-        {"role": "assistant", "content": HIPPORAG_QA_EXAMPLE_ASSISTANT},
+        {"role": "system", "content": HOLORAG_HOP_SYSTEM_PROMPT},
+        {"role": "user", "content": HOLORAG_QA_EXAMPLE_USER},
+        {"role": "assistant", "content": HOLORAG_QA_EXAMPLE_ASSISTANT},
         {"role": "user", "content": "\n\n".join(user_parts)},
     ]
 
@@ -169,9 +169,9 @@ def build_answer_focus_messages(
         user_parts.append(passage_block)
     user_parts.append(f"Question: {question}\nDraft Answer: {candidate_answer}\nThought: ")
     return [
-        {"role": "system", "content": HIPPORAG_FOCUS_SYSTEM_PROMPT},
-        {"role": "user", "content": HIPPORAG_QA_EXAMPLE_USER},
-        {"role": "assistant", "content": HIPPORAG_QA_EXAMPLE_ASSISTANT},
+        {"role": "system", "content": HOLORAG_FOCUS_SYSTEM_PROMPT},
+        {"role": "user", "content": HOLORAG_QA_EXAMPLE_USER},
+        {"role": "assistant", "content": HOLORAG_QA_EXAMPLE_ASSISTANT},
         {"role": "user", "content": "\n\n".join(user_parts)},
     ]
 
@@ -192,14 +192,14 @@ def build_short_answer_normalization_messages(
         if part
     )
     return [
-        {"role": "system", "content": HIPPORAG_NORMALIZE_SYSTEM_PROMPT},
-        {"role": "user", "content": HIPPORAG_NORMALIZE_EXAMPLE_USER},
-        {"role": "assistant", "content": HIPPORAG_NORMALIZE_EXAMPLE_ASSISTANT},
+        {"role": "system", "content": HOLORAG_NORMALIZE_SYSTEM_PROMPT},
+        {"role": "user", "content": HOLORAG_NORMALIZE_EXAMPLE_USER},
+        {"role": "assistant", "content": HOLORAG_NORMALIZE_EXAMPLE_ASSISTANT},
         {"role": "user", "content": user_prompt},
     ]
 
 
-def parse_hipporag_qa_response(raw_text: str) -> Tuple[str, str]:
+def parse_holorag_qa_response(raw_text: str) -> Tuple[str, str]:
     text = str(raw_text or "").strip()
     if not text:
         return "", "Unknown"

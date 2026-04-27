@@ -36,7 +36,7 @@ class GranularityBiasedPageRank:
                 target,
                 weight=weighted_score,
             )
-            # HippoRAG runs PPR on an undirected graph. We preserve the granularity-biased
+            # HoloRAG runs PPR on an undirected graph. We preserve the granularity-biased
             # edge weighting but symmetrize the propagation graph so relevance can travel
             # across alias/relation chains even when the original graph is directional.
             reverse_attrs = graph.get_edge_data(target, source)

@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import re
+import time
 from collections import defaultdict
 from typing import Dict, List, Optional, Sequence, Tuple
 
@@ -18,14 +19,13 @@ from .llm_client import LocalLLMClient
 from .passage_coverage_reranker import PassageCoverageReranker
 from .qa_reader import (
     build_answer_focus_messages,
-    build_hipporag_hop_messages,
-    build_hipporag_qa_messages,
+    build_holorag_hop_messages,
+    build_holorag_qa_messages,
     build_short_answer_normalization_messages,
-    parse_hipporag_qa_response,
+    parse_holorag_qa_response,
 )
 from .query_decomposer import QueryDecomposer
 from .recognition_filter import RecognitionFilter
-from .seed_selector import SeedSelector
 from .sentence_segmenter import SentenceSegmenter
 from .triple_extractor import TripleExtractor
 from .utils import (
@@ -64,7 +64,6 @@ class HoloRAG:
             self.query_decomposer.set_cache_dir(cache_dir)
 
         self.recognition_filter = RecognitionFilter(self.config, self.llm_client)
-        self.seed_selector = SeedSelector()
         self.passage_reranker = PassageCoverageReranker(
             top_window=max(self.config.passage_output_top_k, 12),
             anchor_keep=2,
@@ -108,6 +107,7 @@ class HoloRAG:
         return {"nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(), "layer_counts": counts}
 
     def query(self, query: str, query_hints: Optional[Dict] = None) -> Dict:
+        t_query_start = time.perf_counter()
         state = self.load()
         graph: nx.DiGraph = state["graph"]
         self._ensure_fact_index(state, graph)
@@ -129,7 +129,7 @@ class HoloRAG:
         query_entities = [item["resolved_text"] for item in confident_entity_resolutions] or raw_query_entities
         query_entity_node_ids = [item["node_id"] for item in confident_entity_resolutions]
 
-        ranked_facts, dense_chunk_scores, graph_chunk_scores = self._hipporag_backbone(
+        ranked_facts, dense_chunk_scores, graph_chunk_scores = self._holorag_backbone(
             query=query,
             sub_questions=sub_questions,
             query_entities=query_entities,
@@ -174,7 +174,9 @@ class HoloRAG:
         )
         evidence["retrieved_passages"] = ranked_passages[: self.config.passage_output_top_k]
         evidence["reasoning_chain"] = reasoning_chain
+        t_qa_start = time.perf_counter()
         qa_result = self._generate_final_qa_answer(query, ranked_passages, reasoning_chain, ranked_facts)
+        t_query_end = time.perf_counter()
         evidence["qa_messages"] = qa_result["messages"]
         qa_context_passages = list(qa_result.get("focused_passages") or qa_result.get("selected_passages") or [])
         evidence["qa_context"] = self._build_passage_context(
@@ -182,6 +184,11 @@ class HoloRAG:
             min(len(qa_context_passages), self.config.qa_passage_top_k),
         )
 
+        query_timing = {
+            "retrieval_latency": float(max(0.0, t_qa_start - t_query_start)),
+            "qa_latency": float(max(0.0, t_query_end - t_qa_start)),
+            "query_total_latency": float(max(0.0, t_query_end - t_query_start)),
+        }
         result = {
             "query": query,
             "alpha": alpha,
@@ -200,6 +207,7 @@ class HoloRAG:
             "qa_thought": qa_result["thought"],
             "predicted_answer": qa_result["answer"],
             "qa_raw_response": qa_result["raw_response"],
+            "query_timing": query_timing,
         }
         result_path = os.path.join(self.artifact_dir, "last_query_result.json")
         with open(result_path, "w", encoding="utf-8") as handle:
@@ -222,7 +230,7 @@ class HoloRAG:
             ) if cache["fact_node_ids"] else np.zeros((0, 1), dtype=np.float32)
         state.setdefault("query_to_embedding", {"fact": {}, "passage": {}, "entity": {}, "sentence": {}})
 
-    def _hipporag_backbone(
+    def _holorag_backbone(
         self,
         query: str,
         sub_questions: Sequence[str],
@@ -233,7 +241,7 @@ class HoloRAG:
     ) -> Tuple[List[Dict], Dict[str, float], Dict[str, float]]:
         retrieval_queries = [query] + [item for item in sub_questions if item]
         self._get_query_embeddings(retrieval_queries, state)
-        # Keep the retrieval backbone query-first like HippoRAG, but let decomposed hops
+        # Keep the retrieval backbone query-first in HoloRAG, but let decomposed hops
         # contribute to fact linking and passage association instead of treating them as
         # reader-only hints. This helps bridge completion without per-question rules.
         fact_scores = self._get_multi_query_fact_scores(query, sub_questions, state)
@@ -266,15 +274,18 @@ class HoloRAG:
         graph_chunk_scores: Dict[str, float],
     ) -> Tuple[Dict[str, Dict[str, float]], Dict[str, List[List[Dict]]], List[Dict], List[str]]:
         entity_scores = self._entity_candidates(query_entities, query_entity_node_ids, graph, state, ranked_facts)
-        sentence_scores, reasoning_chain, bridge_entities = self._sentence_candidates(
-            query=query,
-            sub_questions=sub_questions,
-            graph=graph,
-            state=state,
-            ranked_facts=ranked_facts,
-            query_entities=query_entities,
-            query_entity_node_ids=query_entity_node_ids,
-        )
+        if self.config.enable_sentence_layer:
+            sentence_scores, reasoning_chain, bridge_entities = self._sentence_candidates(
+                query=query,
+                sub_questions=sub_questions,
+                graph=graph,
+                state=state,
+                ranked_facts=ranked_facts,
+                query_entities=query_entities,
+                query_entity_node_ids=query_entity_node_ids,
+            )
+        else:
+            sentence_scores, reasoning_chain, bridge_entities = {}, [], []
         chunk_scores = self._chunk_candidates(graph, dense_chunk_scores, graph_chunk_scores, entity_scores, sentence_scores, ranked_facts)
         layer_scores = {
             "entity": entity_scores,
@@ -964,10 +975,10 @@ class HoloRAG:
         merged: List[Dict] = []
         seen_fact_ids = set()
         # Use the LLM as a filter, but keep deterministic high-utility facts in the loop.
-        # This is closer to HippoRAG's fact-first retrieval while being more stable with weaker local models.
+        # This is closer to HoloRAG's fact-first retrieval while being more stable with weaker local models.
         deterministic_limit = max(1, min(2, selection_budget))
         deterministic_records = deterministic_records[:deterministic_limit]
-        # Stay query-first like HippoRAG: use sub-question coverage only as a light supplement.
+        # Stay query-first in HoloRAG: use sub-question coverage only as a light supplement.
         coverage_limit = max(0, min(1, selection_budget // 2))
         coverage_records = coverage_records[:coverage_limit]
         for record in selected_records + deterministic_records + coverage_records:
@@ -1630,28 +1641,6 @@ class HoloRAG:
             )
         return normalize_scores(boosted_scores)
 
-    def _bridge_relation_match_score(
-        self,
-        text: str,
-        metadata: Dict,
-        bridge_entities: List[str],
-        hop_queries: List[str],
-    ) -> float:
-        if not any(text_contains_entity(text, entity) for entity in bridge_entities):
-            return 0.0
-        relation_match = 0.0
-        for triple in metadata.get("triples", []):
-            head = str(triple.get("head", "")).strip()
-            tail = str(triple.get("tail", "")).strip()
-            bridge_match = any(
-                entity_match_score(entity, head) >= 1.0 or entity_match_score(entity, tail) >= 1.0
-                for entity in bridge_entities
-            )
-            if bridge_match:
-                relation_match = max(relation_match, 0.35)
-        lexical = max(lexical_overlap_score(question, text) for question in hop_queries) if hop_queries else 0.0
-        return relation_match + 0.45 * lexical
-
     def _score_bridge_candidate(
         self,
         candidate: str,
@@ -1890,7 +1879,7 @@ class HoloRAG:
             previous_hops=previous_hops,
             sub_question=sub_question,
         )
-        messages = build_hipporag_hop_messages(
+        messages = build_holorag_hop_messages(
             sub_question=sub_question,
             evidence_passages=evidence_passages,
             previous_hops=previous_hops,
@@ -1901,7 +1890,7 @@ class HoloRAG:
             fallback="Answer: Unknown",
             max_tokens=min(self.config.max_new_tokens, 192),
         )
-        thought, answer = parse_hipporag_qa_response(raw_response)
+        thought, answer = parse_holorag_qa_response(raw_response)
         normalized_answer = self._normalize_short_answer(
             question=sub_question,
             answer=answer,
@@ -1991,7 +1980,7 @@ class HoloRAG:
             fallback="Answer: Unknown",
             max_tokens=min(self.config.max_new_tokens, 96),
         )
-        _, reduced_answer = parse_hipporag_qa_response(raw_response)
+        _, reduced_answer = parse_holorag_qa_response(raw_response)
         if not self._is_atomic_answer(reduced_answer):
             # Keep concise original answers that are evidence-grounded candidates.
             flat_original = normalized.replace("\n", " ").strip()
@@ -2836,7 +2825,7 @@ class HoloRAG:
             fallback="Answer: Unknown",
             max_tokens=min(self.config.max_new_tokens, 192),
         )
-        thought, answer = parse_hipporag_qa_response(raw_response)
+        thought, answer = parse_holorag_qa_response(raw_response)
         normalized_answer = self._normalize_short_answer(
             question=query,
             answer=answer,
@@ -2921,7 +2910,7 @@ class HoloRAG:
             candidate_answer="",
             limit=min(5, self.config.fact_rerank_top_k),
         )
-        messages = build_hipporag_qa_messages(
+        messages = build_holorag_qa_messages(
             question=query,
             ranked_passages=qa_reader_passages,
             top_k=len(qa_reader_passages),
@@ -2933,7 +2922,7 @@ class HoloRAG:
             fallback="Answer: Unknown",
             max_tokens=min(self.config.max_new_tokens, 256),
         )
-        thought, answer = parse_hipporag_qa_response(raw_response)
+        thought, answer = parse_holorag_qa_response(raw_response)
         normalized_answer = self._normalize_short_answer(
             question=query,
             answer=answer,
@@ -3033,7 +3022,7 @@ class HoloRAG:
             candidate_answer="",
             limit=min(5, self.config.fact_rerank_top_k),
         )
-        messages = build_hipporag_qa_messages(
+        messages = build_holorag_qa_messages(
             question=query,
             ranked_passages=passages,
             top_k=min(len(passages), self.config.qa_passage_top_k),
@@ -3045,7 +3034,7 @@ class HoloRAG:
             fallback="Answer: Unknown",
             max_tokens=min(self.config.max_new_tokens, 128),
         )
-        thought, answer = parse_hipporag_qa_response(raw_response)
+        thought, answer = parse_holorag_qa_response(raw_response)
         normalized_answer = self._normalize_short_answer(
             question=query,
             answer=answer,
