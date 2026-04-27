@@ -1,13 +1,13 @@
 # HoloRAG
 
-HoloRAG is a hierarchical graph-based Retrieval-Augmented Generation (RAG) pipeline designed for multi-hop QA.
-It extends HoloRAG-style graph retrieval with a multi-granularity graph (entity / sentence / chunk), query decomposition, and evidence-aware answer generation.
+HoloRAG is a hierarchical graph-based Retrieval-Augmented Generation (RAG) pipeline for multi-hop QA and evidence-grounded reasoning.
 
-This repository supports:
-- End-to-end indexing and querying via one CLI (`main_holorag.py`)
-- MuSiQue single-sample and grouped evaluation workflows
-- Retrieval and QA metric evaluation with JSON outputs
-- Ablation toggles for fair component-level analysis
+Current implementation highlights:
+- Multi-granularity graph: `entity / sentence / chunk`
+- Hybrid retrieval: dense retrieval + graph propagation + fact-level signals
+- Query decomposition + hop reasoning chain
+- OpenAI-compatible LLM endpoint integration (local vLLM or compatible services)
+- Single CLI for indexing and querying (`main_holorag.py`)
 
 ---
 
@@ -18,26 +18,25 @@ This repository supports:
 - [3. Environment Setup](#3-environment-setup)
 - [4. Data Format](#4-data-format)
 - [5. Quick Start](#5-quick-start)
-- [6. MuSiQue Grouped Runs](#6-musique-grouped-runs)
-- [7. Evaluation](#7-evaluation)
-- [8. Key Parameters](#8-key-parameters)
-- [9. Ablation Switches](#9-ablation-switches)
-- [10. Reproducibility Checklist](#10-reproducibility-checklist)
-- [11. Troubleshooting](#11-troubleshooting)
-- [12. Citation](#12-citation)
+- [6. Outputs](#6-outputs)
+- [7. Key Parameters](#7-key-parameters)
+- [8. Ablation Switches](#8-ablation-switches)
+- [9. Evaluation & Experiment Scripts](#9-evaluation--experiment-scripts)
+- [10. Troubleshooting](#10-troubleshooting)
+- [11. License](#11-license)
 
 ---
 
 ## 1. Features
 
-- Hierarchical graph indexing across different text granularities.
-- Hybrid retrieval signals:
-  - dense similarity
-  - graph propagation (biased transition / PageRank-style)
-  - fact-level scoring
-- Multi-hop reasoning support through sub-question decomposition.
-- OpenAI-compatible LLM endpoint integration (e.g., local vLLM).
-- Structured output artifacts for debugging and evaluation.
+- Hierarchical graph indexing from raw documents.
+- Entity-relation extraction and fact graph construction.
+- Query-aware intent routing over granularity preferences.
+- Retrieval backbone with:
+  - dense passage retrieval
+  - fact retrieval and reranking
+  - granularity-biased PageRank propagation
+- Multi-step QA with intermediate reasoning chain and focused final answer generation.
 
 ---
 
@@ -46,35 +45,40 @@ This repository supports:
 ```text
 HoloRAG/
 ├── main_holorag.py                      # Main CLI: index/query
-├── eval_holorag_musique.py              # MuSiQue-style evaluator
-├── extract_musique_sample.py            # Extract dataset samples
+├── eval_holorag_musique.py              # Grouped-output evaluator (can be adapted to other datasets)
+├── extract_musique_sample.py            # Dataset sample extractor utility (optional)
 ├── requirements.txt
 ├── setup.py
 ├── README.md
 ├── bin/
-│   └── run_qwen72b_musique_samples.sh   # Grouped batch runner
+│   └── run_qwen72b_musique_samples.sh   # Batch runner example (script name is historical)
+├── scripts/
+│   ├── eval_musique.py                  # End-to-end eval script example
+│   ├── run_seed42_ablation_eval.py      # Ablation experiment runner example
+│   └── musique_case_study.py            # Case study script example
 ├── src/holorag/
-│   ├── pipeline.py                      # End-to-end orchestration
-│   ├── config.py                        # Config dataclass/defaults
-│   ├── graph_builder.py                 # Graph construction
-│   ├── biased_pagerank.py               # Biased propagation
+│   ├── pipeline.py                      # Core HoloRAG pipeline
+│   ├── config.py                        # HoloRAGConfig defaults
+│   ├── graph_builder.py                 # Multi-granularity graph construction
+│   ├── biased_pagerank.py               # Granularity-biased PageRank
 │   ├── query_decomposer.py              # Sub-question decomposition
-│   ├── seed_selector.py                 # Seed selection
-│   ├── intent_parser.py                 # Query intent/layer routing
-│   ├── recognition_filter.py            # Optional filter/judge
+│   ├── intent_parser.py                 # Query intent/granularity routing
+│   ├── recognition_filter.py            # Evidence relevance filtering
+│   ├── passage_coverage_reranker.py     # Passage diversity/coverage reranking
 │   ├── evidence_extractor.py            # Evidence packaging
-│   ├── qa_reader.py                     # Reader prompting/parsing
-│   ├── embedding_model.py               # Embedding wrapper
-│   └── llm_client.py                    # OpenAI-compatible client
+│   ├── qa_reader.py                     # QA prompting/response parsing
+│   ├── triple_extractor.py              # Triple/entity extraction
+│   ├── sentence_segmenter.py            # Sentence splitting
+│   ├── embedding_model.py               # Embedding encoder wrapper
+│   ├── llm_client.py                    # OpenAI-compatible LLM client
+│   └── utils.py
 ├── reproduce/
-│   ├── dataset/                         # Original datasets
-│   └── test/groups/                     # Grouped test samples
+│   ├── dataset/
+│   └── test/
 └── outputs/
-    └── qwen_72b_result/
-        ├── groups/                      # Per-sample runtime outputs
-        ├── eval/                        # Aggregated eval JSONs
-        └── logs/                        # Run logs
 ```
+
+> Note: Some script filenames are historical, but core `main_holorag.py` + `src/holorag` are dataset-agnostic.
 
 ---
 
@@ -83,8 +87,8 @@ HoloRAG/
 ### 3.1 Requirements
 
 - Python `>=3.10`
-- CUDA-capable GPU (recommended)
-- OpenAI-compatible chat completion endpoint
+- CUDA-capable GPU recommended
+- OpenAI-compatible Chat Completions endpoint
 
 Install dependencies:
 
@@ -98,154 +102,141 @@ Optional editable install:
 pip install -e .
 ```
 
-### 3.2 Typical Local Serving Configuration
+### 3.2 Typical Serving Configuration
 
 - `llm_base_url`: `http://127.0.0.1:8000/v1`
-- `llm_name`: `/data/xyh/models/Qwen2.5-72B-Instruct`
-- `embedding_name`: `/data/xyh/models/NV-Embed-v2`
+- `llm_name`: your chat model identifier/path
+- `embedding_name`: your embedding model identifier/path
 
-Quick health check:
+Health check:
 
 ```bash
-curl http://127.0.0.1:8000/v1/models
+curl -fsS http://127.0.0.1:8000/v1/models
 ```
 
 ---
 
 ## 4. Data Format
 
-### 4.1 General Corpus Input
+`main_holorag.py --corpus_file` accepts JSON in these forms:
 
-`main_holorag.py index` expects a corpus JSON (or MuSiQue single-sample JSON).
+1. Document list (`list[dict]`):
+- each item supports `title`
+- text field can be `text` / `content` / `paragraph_text`
 
-### 4.2 MuSiQue Single-Sample Input
+2. Plain text list (`list[str]`):
+- each string is treated as one document (`title` auto-generated)
 
-Expected fields include:
-- `paragraphs`
-- `question`
-- `answer` / `answer_aliases`
+3. Single QA sample object (`dict` with `paragraphs`):
+- each paragraph supports `title` + `paragraph_text`/`text`
+- if `query` mode omits `--query_text`, `question` field is used automatically
 
-In query mode, if `--query_text` is omitted, the sample `question` is used automatically.
+Minimal recommended document list example:
+
+```json
+[
+  {
+    "title": "Doc A",
+    "text": "Your passage text here."
+  },
+  {
+    "title": "Doc B",
+    "text": "Another passage."
+  }
+]
+```
 
 ---
 
 ## 5. Quick Start
 
-### 5.1 Index
+### 5.1 Build Index
 
 ```bash
 python main_holorag.py index \
-  --corpus_file reproduce/dataset/sample_corpus.json \
+  --corpus_file reproduce/test/sample_corpus.json \
   --output_dir outputs/holorag_demo \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
-  --embedding_name /data/xyh/models/NV-Embed-v2 \
+  --llm_name /path/to/your/chat-model \
+  --embedding_name /path/to/your/embedding-model \
   --embedding_device cuda:0
 ```
 
-### 5.2 Query
+### 5.2 Run Query
 
 ```bash
 python main_holorag.py query \
+  --corpus_file reproduce/test/sample_corpus.json \
   --output_dir outputs/holorag_demo \
-  --query_text "Which Stanford neuroscientist is also a CEO and what context connects him to the others?" \
+  --query_text "Your multi-hop question here" \
   --llm_base_url http://127.0.0.1:8000/v1 \
-  --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
-  --embedding_name /data/xyh/models/NV-Embed-v2
+  --llm_name /path/to/your/chat-model \
+  --embedding_name /path/to/your/embedding-model \
+  --embedding_device cuda:0
 ```
 
-### 5.3 Main Output Files
-
-- `holorag_index.pkl`: built index/graph artifacts
-- `last_query_result.json`: final retrieval + reasoning + answer output
+For single-sample QA JSON with a `question` field, `--query_text` can be omitted.
 
 ---
 
-## 6. MuSiQue Grouped Runs
+## 6. Outputs
 
-Use grouped folders under:
-`reproduce/test/groups/musique_XX_YY/`
+Main artifacts written to `--output_dir`:
 
-Run a full group with the provided script:
+- `holorag_index.pkl`
+  - graph + embeddings + fact structures for retrieval
+- `last_query_result.json`
+  - retrieval ranking, reasoning chain, evidence bundle, predicted answer, and timing
 
-```bash
-SAMPLES_GROUP=musique_31_40 \
-LLM_BASE_URL=http://127.0.0.1:8000/v1 \
-LLM_NAME=/data/xyh/models/Qwen2.5-72B-Instruct \
-EMBEDDING_NAME=/data/xyh/models/NV-Embed-v2 \
-EMBEDDING_VISIBLE_DEVICES=2 \
-EMBEDDING_DEVICE=cuda:0 \
-bash bin/run_qwen72b_musique_samples.sh
-```
-
-Common script environment variables:
-- `SAMPLES_GROUP` (e.g. `musique_01_10`, `musique_11_20`)
-- `LLM_BASE_URL`, `LLM_NAME`, `EMBEDDING_NAME`
-- `EMBEDDING_VISIBLE_DEVICES`, `EMBEDDING_DEVICE`
-- `SKIP_EXISTING` (reuse existing sample outputs)
-- `WAIT_TIMEOUT_SECONDS` (service readiness timeout)
-
-Outputs go to:
-- per-sample: `outputs/qwen_72b_result/groups/<group>/<sample>/`
-- group eval: `outputs/qwen_72b_result/eval/`
-- logs: `outputs/qwen_72b_result/logs/`
+The query output includes useful fields such as:
+- `ranked_passages`
+- `ranked_facts`
+- `query_entity_resolutions`
+- `sub_questions`
+- `reasoning_chain`
+- `predicted_answer`
+- `query_timing`
 
 ---
 
-## 7. Evaluation
+## 7. Key Parameters
 
-Run evaluation manually:
+CLI entrypoint: `main_holorag.py` (also mapped into `HoloRAGConfig`).
 
-```bash
-python eval_holorag_musique.py \
-  --samples_glob reproduce/test/groups/musique_31_40/sample_musique*.json \
-  --outputs_dir outputs/qwen_72b_result/groups/musique_31_40 \
-  --result_filename last_query_result.json \
-  --retrieval_k 5 \
-  --output_json outputs/qwen_72b_result/eval/holorag_eval_musique_samples_31_40.json
-```
+High-impact settings:
 
-### 7.1 Metric Definitions
+- Retrieval budget:
+  - `--retrieval_top_k`
+  - `--fact_top_k`
+  - `--fact_rerank_top_k`
+  - `--passage_output_top_k`
+  - `--qa_passage_top_k`
 
-- `passage_recall_at_k`:
-  proportion of supporting titles covered in top-k retrieved titles.
+- Embedding/runtime:
+  - `--embedding_device`
+  - `--embedding_batch_size`
+  - `--embedding_max_seq_len`
+  - `--embedding_dtype`
 
-- `passage_hit_at_k`:
-  binary per-sample metric, 1 if at least one supporting title appears in top-k.
+- Scoring weights:
+  - `--dense_passage_weight`
+  - `--graph_passage_weight`
+  - `--fact_passage_weight`
+  - `--fact_entity_spread_weight`
+  - `--passage_node_weight`
 
-- `qa_exact_match`, `qa_f1`:
-  final answer quality against gold answers.
+- Link/bridge controls:
+  - `--linking_top_k`
+  - `--fact_candidate_top_k`
+  - `--bridge_entity_top_k`
 
-### 7.2 Important Interpretation
-
-`passage_hit_at_5 = 1.0` can still be realistic if every sample hits at least one support title in top-5.
-It does not imply all support evidence was retrieved. Always interpret it with:
-- `passage_recall_at_5`
-- QA metrics (`qa_exact_match`, `qa_f1`)
-
----
-
-## 8. Key Parameters
-
-Parameter entry points:
-- `src/holorag/config.py` (global defaults)
-- `main_holorag.py` (CLI override layer)
-
-High-impact runtime settings include:
-- Retrieval budget (`retrieval_top_k` / eval `--retrieval_k`)
-- Decomposition depth and reasoning chain count
-- Graph propagation behavior (biased transition switches)
-- Final evidence packaging size for reader prompt
-- LLM endpoint/model and decoding settings
-
-Recommendation:
-Record exact CLI commands in experiment logs for reproducibility.
+Suggestion: keep a log of the exact command + config per run for reproducibility.
 
 ---
 
-## 9. Ablation Switches
+## 8. Ablation Switches
 
-Available CLI switches (depending on branch/version):
+`main_holorag.py` supports:
 
 - `--disable_sentence_layer`
 - `--disable_recognition_filter`
@@ -255,48 +246,47 @@ Available CLI switches (depending on branch/version):
 - `--disable_biased_transition`
 - `--enable_llm_judge`
 
-Use these to isolate module contributions under controlled settings.
+These are useful for component contribution analysis.
 
 ---
 
-## 10. Reproducibility Checklist
+## 9. Evaluation & Experiment Scripts
 
-For fair comparisons (e.g., vs baseline methods):
+Core pipeline usage for any dataset should be based on `main_holorag.py`.
 
-1. Use identical sample sets and ordering.
-2. Align LLM endpoint/model and embedding model.
-3. Align retrieval budget and final evidence budget.
-4. Align prompt templates and decoding policy.
-5. Report both quality and cost:
-   - latency
-   - LLM call count
-   - token usage
-6. Keep all ablation toggles documented.
+This repo also contains experiment scripts under `scripts/` and root-level evaluators. Some script names and defaults are dataset-specific (historical naming), but they can be adapted by changing:
 
----
+- input dataset paths
+- split/sampling logic
+- metric adapters
+- output directory layout assumptions
 
-## 11. Troubleshooting
-
-- LLM service unavailable:
-  verify `curl <LLM_BASE_URL>/models`.
-
-- GPU process persists after `kill`:
-  terminate parent `nohup bash -lc` process first, then child python PIDs.
-
-- Eval cannot find outputs:
-  ensure `--outputs_dir` points to the directory containing per-sample result folders.
-
-- `passage_hit_at_k` appears too high:
-  inspect `passage_recall_at_k` and per-sample `matched_support_titles` to validate retrieval depth.
+For custom datasets, treat these scripts as templates rather than fixed evaluation standards.
 
 ---
 
-## 12. Citation
+## 10. Troubleshooting
 
-If you use this codebase, please cite the corresponding project/paper and include commit hash + configuration summary in your appendix.
+- LLM service unreachable:
+  - check `curl -fsS <LLM_BASE_URL>/models`
+  - ensure endpoint is OpenAI-compatible chat completions API
+
+- Embedding OOM:
+  - reduce `--embedding_batch_size`
+  - reduce max lengths (`--chunk_max_length`, etc.)
+  - select a smaller embedding model or use a lower-memory device
+
+- Missing index at query time:
+  - run `index` first in the same `--output_dir`
+  - verify `<output_dir>/holorag_index.pkl` exists
+
+- Unexpectedly weak retrieval:
+  - increase retrieval budgets (`--retrieval_top_k`, `--passage_output_top_k`)
+  - tune dense/graph/fact weight mix
+  - inspect `last_query_result.json` fields (`ranked_passages`, `reasoning_chain`, `query_entity_resolutions`)
 
 ---
 
-## License
+## 11. License
 
 See `LICENSE`.
