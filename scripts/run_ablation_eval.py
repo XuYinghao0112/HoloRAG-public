@@ -201,6 +201,15 @@ def _safe_float(value: Any, default: float = 0.0) -> float:
 def build_config(args: argparse.Namespace, save_dir: str, variant_flags: Dict[str, bool]) -> "HoloRAGConfig":
     from src.holorag import HoloRAGConfig
 
+    # Keep legacy eval semantics: topk_triples/topk_passages are the primary knobs
+    # for reproducibility with the strong baseline runs.
+    retrieval_top_k = max(args.retrieval_top_k, args.topk_passages)
+    fact_top_k = args.fact_top_k if args.fact_top_k is not None else args.topk_triples
+    fact_rerank_top_k = args.fact_rerank_top_k if args.fact_rerank_top_k is not None else args.topk_triples
+    fact_output_top_k = args.fact_output_top_k if args.fact_output_top_k is not None else args.topk_triples
+    passage_output_top_k = args.passage_output_top_k if args.passage_output_top_k is not None else max(args.topk_passages, 10)
+    qa_passage_top_k = args.qa_passage_top_k if args.qa_passage_top_k is not None else args.topk_passages
+
     return HoloRAGConfig(
         llm_base_url=args.llm_base_url,
         llm_model_name=args.llm_name,
@@ -216,12 +225,15 @@ def build_config(args: argparse.Namespace, save_dir: str, variant_flags: Dict[st
         query_max_length=args.query_max_length,
         linking_top_k=args.linking_top_k,
         fact_candidate_top_k=args.fact_candidate_top_k,
-        retrieval_top_k=args.retrieval_top_k,
-        fact_top_k=args.fact_top_k,
-        fact_rerank_top_k=args.fact_rerank_top_k,
-        fact_output_top_k=args.fact_output_top_k,
-        passage_output_top_k=args.passage_output_top_k,
-        qa_passage_top_k=args.qa_passage_top_k,
+        retrieval_top_k=retrieval_top_k,
+        fact_top_k=fact_top_k,
+        fact_rerank_top_k=fact_rerank_top_k,
+        fact_output_top_k=fact_output_top_k,
+        passage_output_top_k=passage_output_top_k,
+        qa_passage_top_k=qa_passage_top_k,
+        entity_alias_threshold=args.synonym_threshold,
+        pagerank_alpha=args.ppr_damping,
+        temperature=args.temperature,
         dense_passage_weight=args.dense_passage_weight,
         graph_passage_weight=args.graph_passage_weight,
         fact_passage_weight=args.fact_passage_weight,
@@ -561,7 +573,7 @@ def setup_logger(log_path: Path) -> logging.Logger:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run baseline + ablations on MuSiQue seed42 samples.")
+    parser = argparse.ArgumentParser(description="Run baseline + ablations on MuSiQue samples.")
     parser.add_argument("--dataset_file", type=str, default=str(REPO_ROOT / "reproduce" / "dataset" / "musique_ans_v1.0_dev.jsonl"))
     parser.add_argument("--split", type=str, default="dev")
     parser.add_argument("--seed", type=int, default=42)
@@ -583,18 +595,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--query_max_length", type=int, default=128)
     parser.add_argument("--linking_top_k", type=int, default=5)
     parser.add_argument("--fact_candidate_top_k", type=int, default=24)
+    parser.add_argument("--topk_triples", type=int, default=5)
+    parser.add_argument("--topk_passages", type=int, default=5)
     parser.add_argument("--retrieval_top_k", type=int, default=20)
-    parser.add_argument("--fact_top_k", type=int, default=12)
-    parser.add_argument("--fact_rerank_top_k", type=int, default=8)
-    parser.add_argument("--fact_output_top_k", type=int, default=8)
-    parser.add_argument("--passage_output_top_k", type=int, default=10)
-    parser.add_argument("--qa_passage_top_k", type=int, default=3)
-    parser.add_argument("--dense_passage_weight", type=float, default=0.55)
-    parser.add_argument("--graph_passage_weight", type=float, default=0.30)
-    parser.add_argument("--fact_passage_weight", type=float, default=0.15)
+    parser.add_argument("--fact_top_k", type=int, default=None)
+    parser.add_argument("--fact_rerank_top_k", type=int, default=None)
+    parser.add_argument("--fact_output_top_k", type=int, default=None)
+    parser.add_argument("--passage_output_top_k", type=int, default=None)
+    parser.add_argument("--qa_passage_top_k", type=int, default=None)
+    parser.add_argument("--synonym_threshold", type=float, default=0.8)
+    parser.add_argument("--ppr_damping", type=float, default=0.5)
+    parser.add_argument("--temperature", type=float, default=0.0)
+    parser.add_argument("--dense_passage_weight", type=float, default=0.9)
+    parser.add_argument("--graph_passage_weight", type=float, default=0.1)
+    parser.add_argument("--fact_passage_weight", type=float, default=0.0)
     parser.add_argument("--fact_entity_spread_weight", type=float, default=0.30)
     parser.add_argument("--bridge_entity_top_k", type=int, default=6)
-    parser.add_argument("--passage_node_weight", type=float, default=0.10)
+    parser.add_argument("--passage_node_weight", type=float, default=0.05)
     parser.add_argument("--disable_recognition_filter", action="store_true")
     parser.add_argument("--disable_chunk_bridges", action="store_true")
     parser.add_argument("--disable_alias_linking", action="store_true")
@@ -681,6 +698,20 @@ def main() -> None:
                 "llm_name": args.llm_name,
                 "embedding_name": args.embedding_name,
                 "embedding_device": args.embedding_device,
+                "qa_passage_top_k": args.qa_passage_top_k,
+                "topk_triples": args.topk_triples,
+                "topk_passages": args.topk_passages,
+                "synonym_threshold": args.synonym_threshold,
+                "ppr_damping": args.ppr_damping,
+                "temperature": args.temperature,
+                "passage_node_weight": args.passage_node_weight,
+                "dense_passage_weight": args.dense_passage_weight,
+                "graph_passage_weight": args.graph_passage_weight,
+                "fact_passage_weight": args.fact_passage_weight,
+                "effective_fact_top_k": args.fact_top_k if args.fact_top_k is not None else args.topk_triples,
+                "effective_fact_rerank_top_k": args.fact_rerank_top_k if args.fact_rerank_top_k is not None else args.topk_triples,
+                "effective_fact_output_top_k": args.fact_output_top_k if args.fact_output_top_k is not None else args.topk_triples,
+                "effective_qa_passage_top_k": args.qa_passage_top_k if args.qa_passage_top_k is not None else args.topk_passages,
                 "index_mode": "two_shared_pools",
                 "shared_index_summary_full": shared_index_summary_full,
                 "shared_index_summary_wo_sentence_layer": shared_index_summary_no_sentence,

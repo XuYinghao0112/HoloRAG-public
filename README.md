@@ -54,7 +54,7 @@ HoloRAG/
 │   └── run_qwen72b_musique_samples.sh   # Batch runner example (script name is historical)
 ├── scripts/
 │   ├── eval_musique.py                  # End-to-end eval script example
-│   ├── run_seed42_ablation_eval.py      # Ablation experiment runner example
+│   ├── run_ablation_eval.py             # Ablation experiment runner example
 │   └── musique_case_study.py            # Case study script example
 ├── src/holorag/
 │   ├── pipeline.py                      # Core HoloRAG pipeline
