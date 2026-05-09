@@ -368,6 +368,19 @@ def prebuild_shared_indexes(
     }
 
 
+def load_shared_index_data_from_dir(index_root: Path, index_pool_name: str) -> Dict[str, Any]:
+    records_path = index_root / f"shared_index_records_{index_pool_name}.json"
+    summary_path = index_root / f"shared_index_summary_{index_pool_name}.json"
+    if not records_path.exists() or not summary_path.exists():
+        raise FileNotFoundError(
+            f"Missing shared index metadata for pool={index_pool_name} under {index_root}. "
+            f"Expected {records_path} and {summary_path}."
+        )
+    records = json.loads(records_path.read_text(encoding="utf-8"))
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    return {"records": records, "summary": summary}
+
+
 def run_variant(
     variant_name: str,
     variant_flags: Dict[str, bool],
@@ -616,6 +629,33 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--disable_chunk_bridges", action="store_true")
     parser.add_argument("--disable_alias_linking", action="store_true")
     parser.add_argument("--enable_llm_judge", action="store_true")
+    parser.add_argument(
+        "--variants",
+        type=str,
+        default="",
+        help=(
+            "Optional comma-separated variant names to run. "
+            "Available: baseline, wo_sentence_layer, wo_intent_and_biased_transition"
+        ),
+    )
+    parser.add_argument(
+        "--reuse_shared_indexes_root",
+        type=str,
+        default="",
+        help=(
+            "Optional existing run directory that already contains "
+            "shared_index_records_*.json and shared_index_summary_*.json. "
+            "If set, shared indexes are reused instead of rebuilt."
+        ),
+    )
+    parser.add_argument(
+        "--reuse_full_only",
+        action="store_true",
+        help=(
+            "When --reuse_shared_indexes_root is set, reuse only full indexes and "
+            "rebuild wo_sentence_layer indexes in this run."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -643,31 +683,50 @@ def main() -> None:
     }
     (run_dir / "sampled_queries.json").write_text(json.dumps(sampled_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    variants: List[Tuple[str, Dict[str, bool]]] = [
+    all_variants: List[Tuple[str, Dict[str, bool]]] = [
         ("baseline", {}),
         ("wo_sentence_layer", {"disable_sentence_layer": True}),
-        ("wo_intent", {"disable_intent_routing": True}),
-        ("wo_biased_transition", {"disable_biased_transition": True}),
+        ("wo_intent_and_biased_transition", {"disable_intent_routing": True, "disable_biased_transition": True}),
     ]
+    if args.variants.strip():
+        selected_names = [name.strip() for name in args.variants.split(",") if name.strip()]
+        selected_set = set(selected_names)
+        variants = [item for item in all_variants if item[0] in selected_set]
+        if not variants:
+            raise ValueError(
+                "No valid variants selected. Available: baseline, wo_sentence_layer, wo_intent_and_biased_transition"
+            )
+    else:
+        variants = list(all_variants)
 
-    logger.info("Prebuilding shared FULL indexes once (for baseline / wo_intent / wo_biased_transition)...")
-    shared_index_data_full = prebuild_shared_indexes(
-        samples=samples,
-        args=args,
-        run_dir=run_dir,
-        index_pool_name="full",
-        builder_flags={},
-        logger=logger,
-    )
-    logger.info("Prebuilding shared NO-SENTENCE indexes once (for wo_sentence_layer)...")
-    shared_index_data_no_sentence = prebuild_shared_indexes(
-        samples=samples,
-        args=args,
-        run_dir=run_dir,
-        index_pool_name="wo_sentence_layer",
-        builder_flags={"disable_sentence_layer": True},
-        logger=logger,
-    )
+    reuse_root = Path(args.reuse_shared_indexes_root).expanduser().resolve() if args.reuse_shared_indexes_root else None
+    if reuse_root is not None:
+        logger.info("Reusing shared FULL indexes from: %s", reuse_root)
+        shared_index_data_full = load_shared_index_data_from_dir(reuse_root, "full")
+    else:
+        logger.info("Prebuilding shared FULL indexes once (for baseline / wo_intent / wo_biased_transition)...")
+        shared_index_data_full = prebuild_shared_indexes(
+            samples=samples,
+            args=args,
+            run_dir=run_dir,
+            index_pool_name="full",
+            builder_flags={},
+            logger=logger,
+        )
+
+    if reuse_root is not None and not args.reuse_full_only:
+        logger.info("Reusing shared NO-SENTENCE indexes from: %s", reuse_root)
+        shared_index_data_no_sentence = load_shared_index_data_from_dir(reuse_root, "wo_sentence_layer")
+    else:
+        logger.info("Prebuilding shared NO-SENTENCE indexes once (for wo_sentence_layer)...")
+        shared_index_data_no_sentence = prebuild_shared_indexes(
+            samples=samples,
+            args=args,
+            run_dir=run_dir,
+            index_pool_name="wo_sentence_layer",
+            builder_flags={"disable_sentence_layer": True},
+            logger=logger,
+        )
     shared_index_records_full = shared_index_data_full["records"]
     shared_index_summary_full = shared_index_data_full["summary"]
     shared_index_records_no_sentence = shared_index_data_no_sentence["records"]
