@@ -133,12 +133,17 @@ def build_config(args: argparse.Namespace) -> "HoloRAGConfig":
         fact_output_top_k=args.fact_output_top_k,
         passage_output_top_k=args.passage_output_top_k,
         qa_passage_top_k=args.qa_passage_top_k,
+        qa_evidence_max_tokens=args.qa_evidence_max_tokens,
         dense_passage_weight=args.dense_passage_weight,
         graph_passage_weight=args.graph_passage_weight,
         fact_passage_weight=args.fact_passage_weight,
         fact_entity_spread_weight=args.fact_entity_spread_weight,
         bridge_entity_top_k=args.bridge_entity_top_k,
         passage_node_weight=args.passage_node_weight,
+        task_profile=args.task_profile,
+        intent_query_weight=args.intent_query_weight,
+        min_intent_confidence=args.min_intent_confidence,
+        enable_terminal_hop_override=not args.disable_terminal_hop_override,
         enable_recognition_filter=not args.disable_recognition_filter,
         enable_intent_routing=not args.disable_intent_routing,
         enable_sentence_layer=not args.disable_sentence_layer,
@@ -174,18 +179,23 @@ def main() -> None:
     parser.add_argument("--fact_output_top_k", type=int, default=8)
     parser.add_argument("--passage_output_top_k", type=int, default=10)
     parser.add_argument("--qa_passage_top_k", type=int, default=3)
+    parser.add_argument("--qa_evidence_max_tokens", type=int, default=400)
     parser.add_argument("--dense_passage_weight", type=float, default=0.55)
     parser.add_argument("--graph_passage_weight", type=float, default=0.30)
     parser.add_argument("--fact_passage_weight", type=float, default=0.15)
     parser.add_argument("--fact_entity_spread_weight", type=float, default=0.30)
     parser.add_argument("--bridge_entity_top_k", type=int, default=6)
     parser.add_argument("--passage_node_weight", type=float, default=0.10)
+    parser.add_argument("--task_profile", type=str, default="auto", choices=["auto", "single_hop", "multi_hop", "long_context"])
+    parser.add_argument("--intent_query_weight", type=float, default=0.7)
+    parser.add_argument("--min_intent_confidence", type=float, default=0.35)
     parser.add_argument("--disable_sentence_layer", action="store_true")
     parser.add_argument("--disable_recognition_filter", action="store_true")
     parser.add_argument("--disable_intent_routing", action="store_true")
     parser.add_argument("--disable_chunk_bridges", action="store_true")
     parser.add_argument("--disable_alias_linking", action="store_true")
     parser.add_argument("--disable_biased_transition", action="store_true")
+    parser.add_argument("--disable_terminal_hop_override", action="store_true")
     parser.add_argument("--enable_llm_judge", action="store_true")
     args = parser.parse_args()
 

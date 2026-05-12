@@ -62,6 +62,8 @@ class HierarchicalGraphBuilder:
                 doc_chunks.append((chunk_id, {"title": title, "text": f"{title}\n{chunk_value}"}))
 
                 sentences = self.sentence_segmenter.split(chunk_value)
+                # Even when sentence layer is disabled, we still extract entities/triples
+                # so entity/relation layers remain available for ablations.
                 sentence_extractions = self._extract_sentences_parallel(sentences)
                 previous_sentence_id = None
                 for sentence_index, sentence in enumerate(sentences):

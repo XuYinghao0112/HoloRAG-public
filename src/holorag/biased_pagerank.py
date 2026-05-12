@@ -26,8 +26,8 @@ class GranularityBiasedPageRank:
             edge_kinds = attrs.get("edge_kinds", [attrs.get("edge_type", "default")])
             edge_factor = max(self.config.edge_type_weights.get(kind, 1.0) for kind in edge_kinds)
             target_type = graph.nodes[target].get("node_type", "chunk")
-            target_bias = math.exp(
-                self.config.transition_lambda * alpha.get(target_type, 0.0)
+            target_bias = (
+                1.0 + self.config.transition_lambda * alpha.get(target_type, 0.0)
             ) if self.config.enable_granularity_biased_transition else 1.0
             hub_scale = 1.0 / (1.0 + self.config.hub_penalty * math.log1p(graph.degree(target)))
             weighted_score = float(attrs.get("weight", 1.0) * edge_factor * target_bias * hub_scale)
@@ -47,8 +47,8 @@ class GranularityBiasedPageRank:
                 reverse_kinds = reverse_attrs.get("edge_kinds", [reverse_attrs.get("edge_type", "default")])
                 reverse_factor = max(self.config.edge_type_weights.get(kind, 1.0) for kind in reverse_kinds)
             source_type = graph.nodes[source].get("node_type", "chunk")
-            reverse_bias = math.exp(
-                self.config.transition_lambda * alpha.get(source_type, 0.0)
+            reverse_bias = (
+                1.0 + self.config.transition_lambda * alpha.get(source_type, 0.0)
             ) if self.config.enable_granularity_biased_transition else 1.0
             reverse_hub_scale = 1.0 / (1.0 + self.config.hub_penalty * math.log1p(graph.degree(source)))
             reverse_weight = float(attrs.get("weight", 1.0) * reverse_factor * reverse_bias * reverse_hub_scale)

@@ -49,6 +49,81 @@ def load_jsonl(path: str) -> List[Dict[str, Any]]:
     return rows
 
 
+def load_json(path: str) -> Any:
+    with open(path, "r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def convert_2wiki_item(item: Dict[str, Any], fallback_idx: int) -> Dict[str, Any]:
+    supporting_titles = {
+        str(x[0])
+        for x in item.get("supporting_facts", [])
+        if isinstance(x, list) and x
+    }
+    paragraphs: List[Dict[str, Any]] = []
+    idx = 0
+    for entry in item.get("context", []):
+        if not (isinstance(entry, list) and len(entry) >= 2):
+            continue
+        title = str(entry[0])
+        sentences = entry[1] if isinstance(entry[1], list) else []
+        paragraph_text = " ".join(str(s) for s in sentences)
+        paragraphs.append(
+            {
+                "idx": idx,
+                "title": title,
+                "paragraph_text": paragraph_text,
+                "is_supporting": title in supporting_titles,
+            }
+        )
+        idx += 1
+
+    sample_id = str(item.get("_id") or item.get("id") or f"2wiki_{fallback_idx:04d}")
+    return {
+        "id": sample_id,
+        "question": str(item.get("question", "")),
+        "answer": str(item.get("answer", "")),
+        "answer_aliases": [],
+        "paragraphs": paragraphs,
+    }
+
+
+def detect_dataset_format(dataset_file: str, explicit_format: str) -> str:
+    if explicit_format != "auto":
+        return explicit_format
+    if dataset_file.endswith(".jsonl"):
+        return "musique_jsonl"
+
+    payload = load_json(dataset_file)
+    if isinstance(payload, list) and payload:
+        first = payload[0]
+        if isinstance(first, dict):
+            if "context" in first and "supporting_facts" in first:
+                return "2wiki_json"
+            if "paragraphs" in first and "question" in first:
+                return "canonical_json"
+    raise ValueError(
+        "Cannot auto-detect dataset format. Set --dataset_format explicitly."
+    )
+
+
+def load_samples(dataset_file: str, dataset_format: str) -> List[Dict[str, Any]]:
+    if dataset_format == "musique_jsonl":
+        return load_jsonl(dataset_file)
+
+    payload = load_json(dataset_file)
+    if not isinstance(payload, list):
+        raise ValueError(f"Expected top-level list in dataset file: {dataset_file}")
+
+    if dataset_format == "2wiki_json":
+        return [convert_2wiki_item(item, i) for i, item in enumerate(payload, start=1)]
+    if dataset_format == "canonical_json":
+        return payload
+    raise ValueError(
+        "Unsupported dataset_format. Use one of: auto, musique_jsonl, 2wiki_json, canonical_json"
+    )
+
+
 def maybe_filter_split(samples: Sequence[Dict[str, Any]], split: str) -> List[Dict[str, Any]]:
     if not split:
         return list(samples)
@@ -179,6 +254,48 @@ def word_token_count(text: str) -> int:
     return len(re.findall(r"\S+", str(text or "")))
 
 
+def format_qa_evidence(passages: Sequence[Dict[str, Any]], top_k: int) -> str:
+    parts: List[str] = []
+    for passage in list(passages)[:top_k]:
+        title = str(passage.get("title", "")).strip()
+        text = str(passage.get("text", "")).strip()
+        if not text:
+            continue
+        if title:
+            parts.append(f"Wikipedia Title: {title}\n{text}")
+        else:
+            parts.append(f"Wikipedia Title:\n{text}")
+    return "\n\n".join(parts).strip()
+
+
+_HF_TOKENIZER = None
+_HF_TOKENIZER_NAME = ""
+_HF_TOKENIZER_FALLBACK = False
+
+
+def hf_token_count(text: str, tokenizer_name: str) -> int:
+    global _HF_TOKENIZER, _HF_TOKENIZER_NAME, _HF_TOKENIZER_FALLBACK
+    content = str(text or "")
+    if not content:
+        return 0
+    if _HF_TOKENIZER_FALLBACK:
+        return word_token_count(content)
+    try:
+        if _HF_TOKENIZER is None or _HF_TOKENIZER_NAME != tokenizer_name:
+            from transformers import AutoTokenizer
+
+            _HF_TOKENIZER = AutoTokenizer.from_pretrained(
+                tokenizer_name,
+                trust_remote_code=True,
+            )
+            _HF_TOKENIZER_NAME = tokenizer_name
+        token_ids = _HF_TOKENIZER.encode(content, add_special_tokens=False)
+        return int(len(token_ids))
+    except Exception:
+        _HF_TOKENIZER_FALLBACK = True
+        return word_token_count(content)
+
+
 def sample_queries(samples: Sequence[Dict[str, Any]], seed: int, num_eval_queries: int) -> List[Dict[str, Any]]:
     rng = random.Random(seed)
     available = list(samples)
@@ -231,6 +348,7 @@ def build_config(args: argparse.Namespace, save_dir: str, variant_flags: Dict[st
         fact_output_top_k=fact_output_top_k,
         passage_output_top_k=passage_output_top_k,
         qa_passage_top_k=qa_passage_top_k,
+        qa_evidence_max_tokens=args.qa_evidence_max_tokens,
         entity_alias_threshold=args.synonym_threshold,
         pagerank_alpha=args.ppr_damping,
         temperature=args.temperature,
@@ -240,6 +358,10 @@ def build_config(args: argparse.Namespace, save_dir: str, variant_flags: Dict[st
         fact_entity_spread_weight=args.fact_entity_spread_weight,
         bridge_entity_top_k=args.bridge_entity_top_k,
         passage_node_weight=args.passage_node_weight,
+        task_profile=args.task_profile,
+        intent_query_weight=args.intent_query_weight,
+        min_intent_confidence=args.min_intent_confidence,
+        enable_terminal_hop_override=not args.disable_terminal_hop_override,
         enable_sentence_layer=not variant_flags.get("disable_sentence_layer", False),
         enable_intent_routing=not variant_flags.get("disable_intent_routing", False),
         enable_granularity_biased_transition=not variant_flags.get("disable_biased_transition", False),
@@ -417,6 +539,7 @@ def run_variant(
     chunk_counts: List[float] = []
     edge_counts: List[float] = []
     evidence_tokens: List[float] = []
+    evidence_tokens_word: List[float] = []
 
     t_variant_start = time.perf_counter()
     index_record_by_sample = {
@@ -482,7 +605,9 @@ def run_variant(
         f1_scores.append(f1)
 
         qa_context = str(query_result.get("evidence", {}).get("qa_context", ""))
-        evidence_token_cnt = word_token_count(qa_context)
+        evidence_token_cnt_word = word_token_count(qa_context)
+        evidence_token_cnt = hf_token_count(qa_context, args.evidence_tokenizer_name)
+        evidence_tokens_word.append(float(evidence_token_cnt_word))
         evidence_tokens.append(float(evidence_token_cnt))
 
         trace_payload = dict(query_result)
@@ -495,6 +620,7 @@ def run_variant(
             "qa_latency": qa_latency,
             "query_total_latency": query_total_latency,
             "evidence_tokens": evidence_token_cnt,
+            "evidence_tokens_word": evidence_token_cnt_word,
         }
         (trace_dir / f"{sample_id}.json").write_text(
             json.dumps(trace_payload, ensure_ascii=False, indent=2),
@@ -523,19 +649,26 @@ def run_variant(
             "chunk_nodes": int(layer_counts.get("chunk", 0)),
             "edges": int(index_stats.get("edges", 0)),
             "final_evidence_tokens": evidence_token_cnt,
+            "final_evidence_tokens_word": evidence_token_cnt_word,
+            "final_evidence_tokenizer": (
+                "word_token_count" if _HF_TOKENIZER_FALLBACK else args.evidence_tokenizer_name
+            ),
         }
         with per_example_path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(per_item, ensure_ascii=False) + "\n")
 
         logger.info(
-            "[%s][%d/%d] %s | R@5=%.4f | F1=%.4f | EM=%.4f | idx=%.3fs | retr=%.3fs | qa=%.3fs",
+            "[%s][%d/%d] %s | r2=%.4f f1=%.4f em=%.4f | running_r2=%.4f running_f1=%.4f running_em=%.4f | idx=%.3fs retr=%.3fs qa=%.3fs",
             variant_name,
             i,
             len(samples),
             sample_id,
-            r5,
+            r2,
             f1,
             em,
+            _avg(recalls_2),
+            _avg(f1_scores),
+            _avg(em_scores),
             index_latency,
             retrieval_latency,
             qa_latency,
@@ -565,6 +698,10 @@ def run_variant(
         "chunk_nodes": _avg(chunk_counts),
         "edges": _avg(edge_counts),
         "final_evidence_tokens": _avg(evidence_tokens),
+        "final_evidence_tokens_word": _avg(evidence_tokens_word),
+        "final_evidence_tokenizer": (
+            "word_token_count" if _HF_TOKENIZER_FALLBACK else args.evidence_tokenizer_name
+        ),
         "variant_flags": variant_flags,
     }
     (variant_dir / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -588,16 +725,38 @@ def setup_logger(log_path: Path) -> logging.Logger:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run baseline + ablations on MuSiQue samples.")
     parser.add_argument("--dataset_file", type=str, default=str(REPO_ROOT / "reproduce" / "dataset" / "musique_ans_v1.0_dev.jsonl"))
+    parser.add_argument(
+        "--dataset_format",
+        type=str,
+        default="auto",
+        choices=["auto", "musique_jsonl", "2wiki_json", "canonical_json"],
+        help="Input dataset format. auto will infer from file content/name.",
+    )
     parser.add_argument("--split", type=str, default="dev")
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--num_eval_queries", type=int, default=1000)
+    parser.add_argument("--num_eval_queries", type=int, default=200)
     parser.add_argument("--output_dir", type=str, default=str(REPO_ROOT / "outputs" / "musique_eval" / "ablation_runs"))
+    parser.add_argument(
+        "--shared_index_root",
+        type=str,
+        default="",
+        help=(
+            "Optional fixed directory for shared indexes and metadata. "
+            "Use this to persist/reuse indexes across different runs and sweeps."
+        ),
+    )
     parser.add_argument("--run_name", type=str, default="")
 
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
     parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-72B-Instruct")
     parser.add_argument("--embedding_name", type=str, default="/data/xyh/models/NV-Embed-v2")
     parser.add_argument("--embedding_device", type=str, default="cuda:0")
+    parser.add_argument(
+        "--evidence_tokenizer_name",
+        type=str,
+        default="/data/xyh/models/Qwen2.5-72B-Instruct",
+        help="Tokenizer used to count final evidence tokens for fair cross-system comparison.",
+    )
 
     parser.add_argument("--embedding_batch_size", type=int, default=4)
     parser.add_argument("--embedding_max_seq_len", type=int, default=2048)
@@ -616,6 +775,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fact_output_top_k", type=int, default=None)
     parser.add_argument("--passage_output_top_k", type=int, default=None)
     parser.add_argument("--qa_passage_top_k", type=int, default=None)
+    parser.add_argument("--qa_evidence_max_tokens", type=int, default=400)
     parser.add_argument("--synonym_threshold", type=float, default=0.8)
     parser.add_argument("--ppr_damping", type=float, default=0.5)
     parser.add_argument("--temperature", type=float, default=0.0)
@@ -625,6 +785,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fact_entity_spread_weight", type=float, default=0.30)
     parser.add_argument("--bridge_entity_top_k", type=int, default=6)
     parser.add_argument("--passage_node_weight", type=float, default=0.05)
+    parser.add_argument("--task_profile", type=str, default="auto", choices=["auto", "single_hop", "multi_hop", "long_context"])
+    parser.add_argument("--intent_query_weight", type=float, default=0.7)
+    parser.add_argument("--min_intent_confidence", type=float, default=0.35)
+    parser.add_argument("--disable_terminal_hop_override", action="store_true")
     parser.add_argument("--disable_recognition_filter", action="store_true")
     parser.add_argument("--disable_chunk_bridges", action="store_true")
     parser.add_argument("--disable_alias_linking", action="store_true")
@@ -668,7 +832,8 @@ def main() -> None:
     run_dir.mkdir(parents=True, exist_ok=True)
     logger = setup_logger(run_dir / "run.log")
 
-    all_samples = load_jsonl(args.dataset_file)
+    detected_dataset_format = detect_dataset_format(args.dataset_file, args.dataset_format)
+    all_samples = load_samples(args.dataset_file, detected_dataset_format)
     filtered_samples = maybe_filter_split(all_samples, args.split)
     if not filtered_samples:
         raise ValueError("No samples available after split filtering.")
@@ -699,6 +864,13 @@ def main() -> None:
     else:
         variants = list(all_variants)
 
+    index_meta_root = (
+        Path(args.shared_index_root).expanduser().resolve()
+        if args.shared_index_root
+        else run_dir
+    )
+    index_meta_root.mkdir(parents=True, exist_ok=True)
+
     reuse_root = Path(args.reuse_shared_indexes_root).expanduser().resolve() if args.reuse_shared_indexes_root else None
     if reuse_root is not None:
         logger.info("Reusing shared FULL indexes from: %s", reuse_root)
@@ -708,7 +880,7 @@ def main() -> None:
         shared_index_data_full = prebuild_shared_indexes(
             samples=samples,
             args=args,
-            run_dir=run_dir,
+            run_dir=index_meta_root,
             index_pool_name="full",
             builder_flags={},
             logger=logger,
@@ -722,7 +894,7 @@ def main() -> None:
         shared_index_data_no_sentence = prebuild_shared_indexes(
             samples=samples,
             args=args,
-            run_dir=run_dir,
+            run_dir=index_meta_root,
             index_pool_name="wo_sentence_layer",
             builder_flags={"disable_sentence_layer": True},
             logger=logger,
@@ -751,13 +923,17 @@ def main() -> None:
             {
                 "dataset_file": args.dataset_file,
                 "split": args.split,
+                "dataset_format": detected_dataset_format,
                 "seed": args.seed,
                 "num_eval_queries": args.num_eval_queries,
+                "shared_index_root": str(index_meta_root),
                 "llm_base_url": args.llm_base_url,
                 "llm_name": args.llm_name,
+                "evidence_tokenizer_name": args.evidence_tokenizer_name,
                 "embedding_name": args.embedding_name,
                 "embedding_device": args.embedding_device,
                 "qa_passage_top_k": args.qa_passage_top_k,
+                "qa_evidence_max_tokens": args.qa_evidence_max_tokens,
                 "topk_triples": args.topk_triples,
                 "topk_passages": args.topk_passages,
                 "synonym_threshold": args.synonym_threshold,
@@ -839,6 +1015,8 @@ def main() -> None:
         "chunk_nodes",
         "edges",
         "final_evidence_tokens",
+        "final_evidence_tokens_word",
+        "final_evidence_tokenizer",
     ]
     summary_csv_path = run_dir / "metrics_summary.csv"
     csv_lines = [",".join(csv_headers)]

@@ -36,6 +36,7 @@ class HoloRAGConfig:
     chunk_top_k: int = 10
     passage_output_top_k: int = 10
     qa_passage_top_k: int = 3
+    qa_evidence_max_tokens: int = 400
     hop_answer_passage_top_k: int = 1
     entity_resolution_score_threshold: float = 0.68
     entity_resolution_margin_threshold: float = 0.10
@@ -48,6 +49,10 @@ class HoloRAGConfig:
     hub_penalty: float = 0.15
     pagerank_alpha: float = 0.85
     transition_lambda: float = 1.2
+    task_profile: str = "auto"
+    intent_query_weight: float = 0.7
+    min_intent_confidence: float = 0.35
+    enable_terminal_hop_override: bool = True
     enable_sentence_layer: bool = True
     enable_recognition_filter: bool = True
     enable_intent_routing: bool = True
@@ -73,6 +78,11 @@ class HoloRAGConfig:
         "sentence_dep": 1.1,
         "sentence_chunk": 1.1,
         "chunk_bridge": 0.9,
+    })
+    task_profile_alpha_priors: Dict[str, Dict[str, float]] = field(default_factory=lambda: {
+        "single_hop": {"entity": 0.50, "sentence": 0.30, "chunk": 0.20},
+        "multi_hop": {"entity": 0.25, "sentence": 0.50, "chunk": 0.25},
+        "long_context": {"entity": 0.15, "sentence": 0.30, "chunk": 0.55},
     })
     query_instruction: str = (
         "Represent the question for retrieval across entity, sentence, and discourse evidence."

@@ -3,6 +3,7 @@ import logging
 import os
 import re
 import time
+import unicodedata
 from collections import defaultdict
 from typing import Dict, List, Optional, Sequence, Tuple
 
@@ -78,6 +79,9 @@ class HoloRAG:
             embedder=self.embedder,
         )
         self.state: Optional[Dict] = None
+        self._active_alpha_for_fact: Dict[str, float] = self._fallback_alpha()
+        self._qa_tokenizer = None
+        self._qa_tokenizer_failed = False
 
     def index(self, documents: List[Dict[str, str]]) -> Dict:
         self.llm_client.reset_stats()
@@ -113,21 +117,50 @@ class HoloRAG:
         self._ensure_fact_index(state, graph)
         self._prepare_retrieval_objects(state, graph)
 
-        alpha = self.intent_parser.predict(query) if self.config.enable_intent_routing else self._fallback_alpha()
         raw_query_entities = self.triple_extractor.extract_query_entities(query)
-        initial_sub_questions = self.query_decomposer.decompose(query)
-        if not initial_sub_questions:
-            initial_sub_questions = [query.strip()]
-        query_entity_resolutions = self._resolve_query_entities(query, initial_sub_questions, graph, raw_query_entities)
-        confident_entity_resolutions = [item for item in query_entity_resolutions if item.get("confident")]
-        if confident_entity_resolutions:
-            sub_questions = self.query_decomposer.decompose(query, resolved_entities=confident_entity_resolutions)
-            if not sub_questions:
+        if self.config.enable_intent_routing:
+            predicted_alpha = self.intent_parser.predict(query)
+            intent_confidence = self._intent_confidence(predicted_alpha)
+            profile = self._resolve_task_profile(query, query_hints)
+            alpha = self._compose_alpha_with_profile_prior(
+                predicted_alpha,
+                profile=profile,
+                confidence=intent_confidence,
+            )
+            self._active_alpha_for_fact = dict(alpha)
+            initial_sub_questions = self.query_decomposer.decompose(query)
+            if not initial_sub_questions:
+                initial_sub_questions = [query.strip()]
+            query_entity_resolutions = self._resolve_query_entities(query, initial_sub_questions, graph, raw_query_entities)
+            confident_entity_resolutions = [item for item in query_entity_resolutions if item.get("confident")]
+            if confident_entity_resolutions:
+                sub_questions = self.query_decomposer.decompose(query, resolved_entities=confident_entity_resolutions)
+                if not sub_questions:
+                    sub_questions = initial_sub_questions
+            else:
                 sub_questions = initial_sub_questions
+            query_entities = [item["resolved_text"] for item in confident_entity_resolutions] or raw_query_entities
+            query_entity_node_ids = [item["node_id"] for item in confident_entity_resolutions]
         else:
-            sub_questions = initial_sub_questions
-        query_entities = [item["resolved_text"] for item in confident_entity_resolutions] or raw_query_entities
-        query_entity_node_ids = [item["node_id"] for item in confident_entity_resolutions]
+            # Keep wo_intent as a strict single-query ablation without decomposition
+            # and entity-resolution compensation paths.
+            alpha = self._fallback_alpha()
+            intent_confidence = 0.0
+            profile = self._resolve_task_profile(query, query_hints)
+            self._active_alpha_for_fact = dict(alpha)
+            query_entity_resolutions = []
+            sub_questions = [query.strip()] if query.strip() else [query]
+            query_entities = raw_query_entities
+            query_entity_node_ids = []
+
+        if profile == "single_hop":
+            sub_questions = [query.strip()] if query.strip() else [query]
+        elif profile == "long_context" and len(sub_questions) > 2:
+            sub_questions = list(sub_questions[:2])
+        elif self.config.enable_intent_routing and intent_confidence < self.config.min_intent_confidence and len(sub_questions) > 2:
+            sub_questions = [query.strip()] if query.strip() else [query]
+            alpha = self._fallback_alpha()
+            self._active_alpha_for_fact = dict(alpha)
 
         ranked_facts, dense_chunk_scores, graph_chunk_scores = self._holorag_backbone(
             query=query,
@@ -192,6 +225,8 @@ class HoloRAG:
         result = {
             "query": query,
             "alpha": alpha,
+            "task_profile": profile,
+            "intent_confidence": intent_confidence,
             "query_entities": query_entities,
             "raw_query_entities": raw_query_entities,
             "query_entity_resolutions": query_entity_resolutions,
@@ -493,6 +528,7 @@ class HoloRAG:
         ranked_facts: Sequence[Dict],
     ) -> Dict[str, float]:
         chunk_scores: Dict[str, float] = dict(graph_chunk_scores)
+        fact_chunk_scale = 0.55 if not self.config.enable_sentence_layer else 1.0
         for chunk_id, score in dense_chunk_scores.items():
             chunk_scores[chunk_id] = max(chunk_scores.get(chunk_id, 0.0), score)
         for sentence_id, score in sentence_scores.items():
@@ -506,7 +542,7 @@ class HoloRAG:
         for fact in ranked_facts[: self.config.fact_rerank_top_k]:
             chunk_id = fact.get("chunk_id")
             if chunk_id:
-                chunk_scores[chunk_id] = max(chunk_scores.get(chunk_id, 0.0), float(fact["score"]))
+                chunk_scores[chunk_id] = max(chunk_scores.get(chunk_id, 0.0), fact_chunk_scale * float(fact["score"]))
         return normalize_scores(chunk_scores)
 
     def _apply_recognition_filter(
@@ -531,6 +567,9 @@ class HoloRAG:
         query_entity_node_ids: Sequence[str],
     ) -> Dict[str, float]:
         reset_scores: Dict[str, float] = defaultdict(float)
+        fact_sentence_scale = 0.65 if not self.config.enable_sentence_layer else 1.0
+        fact_chunk_scale = 0.55 if not self.config.enable_sentence_layer else 1.0
+        fact_entity_scale = 0.50 if not self.config.enable_sentence_layer else 1.0
 
         fact_entity_occurs: Dict[str, int] = defaultdict(int)
         for fact in ranked_facts[: self.config.fact_rerank_top_k]:
@@ -543,21 +582,21 @@ class HoloRAG:
             sentence_id = fact.get("sentence_id")
             chunk_id = fact.get("chunk_id")
             if sentence_id in graph:
-                reset_scores[sentence_id] += 0.40 * fact_score
+                reset_scores[sentence_id] += fact_sentence_scale * 0.40 * fact_score
             if chunk_id in graph:
-                reset_scores[chunk_id] += 0.20 * fact_score
+                reset_scores[chunk_id] += fact_chunk_scale * 0.20 * fact_score
             for entity_id in (fact.get("head_id"), fact.get("tail_id")):
                 if entity_id not in graph:
                     continue
                 weighted_fact_score = fact_score / max(1, fact_entity_occurs.get(entity_id, 1))
-                reset_scores[entity_id] += weighted_fact_score
+                reset_scores[entity_id] += fact_entity_scale * weighted_fact_score
                 for neighbor in list(graph.successors(entity_id)) + list(graph.predecessors(entity_id)):
                     if neighbor not in graph or graph.nodes[neighbor].get("node_type") != "entity":
                         continue
                     edge_data = graph.get_edge_data(entity_id, neighbor) or graph.get_edge_data(neighbor, entity_id) or {}
                     if "entity_alias" not in edge_data.get("edge_kinds", []):
                         continue
-                    reset_scores[neighbor] += 0.60 * weighted_fact_score
+                    reset_scores[neighbor] += fact_entity_scale * 0.60 * weighted_fact_score
 
         for entity_id in query_entity_node_ids:
             if entity_id in graph:
@@ -832,6 +871,9 @@ class HoloRAG:
         relation_score = self._fact_relation_compatibility(query, sub_questions, record, graph)
         structural_score = self._fact_structure_score(record, graph)
         terminal_penalty = self._fact_terminal_penalty(query, sub_questions, record, graph)
+        alpha = self._normalize_alpha(getattr(self, "_active_alpha_for_fact", self._fallback_alpha()))
+        fact_granularity_weight = 1.0 + 0.45 * alpha.get("entity", 0.0) + 0.35 * alpha.get("sentence", 0.0) - 0.20 * alpha.get("chunk", 0.0)
+        fact_granularity_weight = max(0.70, min(1.35, fact_granularity_weight))
         concrete_bonus = 0.0
         for key in ("head_id", "tail_id"):
             node_id = str(record.get(key, ""))
@@ -845,7 +887,7 @@ class HoloRAG:
             + concrete_bonus
             - terminal_penalty
         )
-        return max(0.0, score)
+        return max(0.0, score * fact_granularity_weight)
 
     def _rank_fact_candidates(
         self,
@@ -1989,6 +2031,47 @@ class HoloRAG:
             return "Unknown"
         return self._repair_short_answer_from_evidence(reduced_answer, evidence_passages)
 
+    def _canonicalize_answer(self, text: str) -> str:
+        value = str(text or "").strip()
+        if not value:
+            return ""
+        value = unicodedata.normalize("NFKD", value)
+        value = "".join(ch for ch in value if not unicodedata.combining(ch))
+        value = re.sub(r"\s+", " ", value).strip(" \t\n\r.,;:()[]{}\"'")
+        return value
+
+    def _is_yesno_question(self, query: str) -> bool:
+        lowered = str(query or "").strip().lower()
+        return lowered.startswith(("is ", "are ", "do ", "does ", "did ", "was ", "were ", "can ", "could ", "has ", "have ", "had "))
+
+    def _normalize_yesno_answer(self, answer: str) -> str:
+        lowered = self._canonicalize_answer(answer).lower()
+        if lowered in {"yes", "no", "unknown"}:
+            return lowered.capitalize() if lowered in {"yes", "no"} else "Unknown"
+        if re.search(r"\b(yes|same|true|both|share)\b", lowered):
+            return "Yes"
+        if re.search(r"\b(no|not|different|false)\b", lowered):
+            return "No"
+        return "Unknown"
+
+    def _classify_yesno_answer(self, query: str, passages: Sequence[Dict], fallback_answer: str) -> str:
+        fallback = self._normalize_yesno_answer(fallback_answer)
+        evidence = self._build_passage_context(list(passages), len(passages))
+        if not evidence:
+            return fallback
+        payload, _ = self.llm_client.infer_json(
+            system_prompt=(
+                "Decide whether the evidence entails or contradicts the yes/no question. "
+                "Return JSON with key answer set to exactly Yes, No, or Unknown. "
+                "Use Unknown only when the evidence is insufficient or conflicting."
+            ),
+            user_prompt=f"Evidence:\n{evidence}\n\nQuestion: {query}",
+            fallback={"answer": fallback},
+            max_tokens=64,
+        )
+        answer = self._normalize_yesno_answer(str(payload.get("answer", fallback)))
+        return answer if answer != "Unknown" or fallback == "Unknown" else fallback
+
     def _answer_supported_by_evidence(self, answer: str, passages: Sequence[Dict]) -> bool:
         normalized = clean_entity_text(str(answer or "").strip())
         if not normalized or normalized.lower() == "unknown":
@@ -2863,7 +2946,7 @@ class HoloRAG:
         ranked_facts: Sequence[Dict],
     ) -> List[Dict]:
         base_passages = list(ranked_passages[: self.config.qa_passage_top_k])
-        return self._expand_reasoning_support_passages(
+        expanded = self._expand_reasoning_support_passages(
             query=query,
             base_passages=base_passages,
             ranked_passages=ranked_passages,
@@ -2872,6 +2955,35 @@ class HoloRAG:
             candidate_answer="",
             budget=self.config.qa_passage_top_k + self.config.hop_answer_passage_top_k + 1,
         )
+        fact_hints = self._select_fact_hints(
+            query=query,
+            ranked_facts=ranked_facts,
+            reasoning_chain=reasoning_chain,
+            candidate_answer="",
+            limit=min(5, self.config.fact_rerank_top_k),
+        )
+        ranked = sorted(
+            enumerate(expanded),
+            key=lambda item: (
+                self._count_passage_alignment_hits(item[1], reasoning_chain, "", fact_hints),
+                self._score_passage_for_answer_focus(query, item[1], reasoning_chain, "", fact_hints),
+                -item[0],
+            ),
+            reverse=True,
+        )
+        ordered: List[Dict] = []
+        seen_titles = set()
+        deferred: List[Dict] = []
+        for _, passage in ranked:
+            title = str(passage.get("title", "")).strip()
+            if title and title in seen_titles:
+                deferred.append(passage)
+                continue
+            ordered.append(passage)
+            if title:
+                seen_titles.add(title)
+        ordered.extend(deferred)
+        return ordered
 
     def _build_passage_context(self, ranked_passages: List[Dict], top_k: int) -> str:
         parts = []
@@ -2879,8 +2991,171 @@ class HoloRAG:
             title = str(passage.get("title", "")).strip()
             text = str(passage.get("text", "")).strip()
             if text:
-                parts.append(f"{title}\n{text}" if title else text)
+                if title:
+                    parts.append(f"Wikipedia Title: {title}\n{text}")
+                else:
+                    parts.append(f"Wikipedia Title:\n{text}")
         return "\n\n".join(parts)
+
+    def _count_qa_evidence_tokens(self, text: str) -> int:
+        content = str(text or "")
+        if not content:
+            return 0
+        if not self._qa_tokenizer_failed:
+            try:
+                if self._qa_tokenizer is None:
+                    from transformers import AutoTokenizer
+
+                    self._qa_tokenizer = AutoTokenizer.from_pretrained(
+                        self.config.llm_model_name,
+                        trust_remote_code=True,
+                    )
+                return int(len(self._qa_tokenizer.encode(content, add_special_tokens=False)))
+            except Exception:
+                self._qa_tokenizer_failed = True
+        return len(re.findall(r"\S+", content))
+
+    def _truncate_passages_by_evidence_budget(self, passages: Sequence[Dict], max_tokens: int) -> List[Dict]:
+        candidates = [passage for passage in passages if str(passage.get("text", "")).strip()]
+        if max_tokens <= 0 or not candidates:
+            return list(candidates)
+        kept: List[Dict] = []
+        for passage in candidates:
+            trial = kept + [passage]
+            trial_context = self._build_passage_context(trial, len(trial))
+            if self._count_qa_evidence_tokens(trial_context) <= max_tokens:
+                kept.append(passage)
+                continue
+            if kept:
+                break
+            kept.append(passage)
+            break
+        return kept
+
+    def _score_answer_candidate(
+        self,
+        query: str,
+        answer: str,
+        candidate_texts: Sequence[str],
+        selected_passages: Sequence[Dict],
+        reasoning_chain: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+    ) -> float:
+        normalized = clean_entity_text(str(answer or "").strip())
+        normalized = self._canonicalize_answer(normalized)
+        if not normalized or normalized.lower() == "unknown":
+            return -0.5
+        candidate_match = self._snap_answer_to_candidates(normalized, candidate_texts)
+        candidate_supported = bool(candidate_match)
+        supported = self._answer_supported_by_evidence(normalized, selected_passages)
+        score = (0.68 if supported else 0.0) + (0.18 if candidate_supported else 0.0)
+        score += 0.25 * max(
+            lexical_overlap_score(query, normalized),
+            lexical_overlap_score(query.lower(), normalized.lower()),
+        )
+        anchor_bonus = 0.0
+        for hop in reasoning_chain:
+            hop_answer = clean_entity_text(str(hop.get("hop_answer", "")).strip())
+            if hop_answer and hop_answer.lower() != "unknown" and entity_match_score(hop_answer, normalized) >= 0.85:
+                anchor_bonus = max(anchor_bonus, 0.18)
+        score += anchor_bonus
+        fact_bonus = 0.0
+        for fact in ranked_facts[: max(3, self.config.fact_output_top_k)]:
+            fact_text = str(fact.get("text", "")).strip()
+            if fact_text and text_contains_entity(fact_text, normalized):
+                fact_bonus = max(fact_bonus, 0.22)
+        score += fact_bonus
+        if len(normalized.split()) > 10:
+            score -= 0.12
+        if not supported and not candidate_supported:
+            score -= 0.20
+        return score
+
+    def _collect_answer_candidates(
+        self,
+        passages: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+        reasoning_chain: Sequence[Dict],
+    ) -> List[str]:
+        candidates: List[str] = []
+        seen = set()
+
+        def maybe_add(text: str) -> None:
+            value = clean_entity_text(str(text or "").strip())
+            if not value or value.lower() == "unknown":
+                return
+            if len(value.split()) > 10:
+                return
+            key = value.lower()
+            if key in seen:
+                return
+            seen.add(key)
+            candidates.append(value)
+
+        for passage in passages:
+            title = str(passage.get("title", "")).strip()
+            if title:
+                maybe_add(title)
+            text = str(passage.get("text", "")).strip()
+            for match in re.findall(r"\b[A-Z][A-Za-z0-9'.-]*(?:\s+[A-Z][A-Za-z0-9'.-]*){0,5}\b", text):
+                maybe_add(match)
+            for match in re.findall(r"\b(?:\d{1,2}\s+)?(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b|\b\d{4}\b", text):
+                maybe_add(match)
+        for fact in ranked_facts[: max(6, self.config.fact_output_top_k)]:
+            maybe_add(str(fact.get("head_text", "") or ""))
+            maybe_add(str(fact.get("tail_text", "") or ""))
+        for hop in reasoning_chain:
+            maybe_add(str(hop.get("hop_answer", "") or ""))
+        return candidates[:80]
+
+    def _snap_answer_to_candidates(self, answer: str, candidate_texts: Sequence[str]) -> str:
+        normalized = clean_entity_text(str(answer or "").strip())
+        normalized = self._canonicalize_answer(normalized)
+        if not normalized or not candidate_texts:
+            return ""
+        best = ""
+        best_score = 0.0
+        for candidate in candidate_texts:
+            canonical_candidate = self._canonicalize_answer(candidate)
+            score = max(
+                entity_match_score(normalized, canonical_candidate),
+                entity_match_score(canonical_candidate, normalized),
+            )
+            if score >= 0.82 and score > best_score:
+                best = candidate
+                best_score = score
+        return best
+
+    def _choose_best_answer_candidate(
+        self,
+        query: str,
+        candidates: Sequence[Dict[str, object]],
+        candidate_texts: Sequence[str],
+        selected_passages: Sequence[Dict],
+        reasoning_chain: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+    ) -> Dict[str, object]:
+        best: Optional[Dict[str, object]] = None
+        best_score = float("-inf")
+        for candidate in candidates:
+            answer = str(candidate.get("answer", "") or "").strip()
+            snapped = self._snap_answer_to_candidates(answer, candidate_texts)
+            if snapped:
+                answer = snapped
+            score = self._score_answer_candidate(
+                query=query,
+                answer=answer,
+                candidate_texts=candidate_texts,
+                selected_passages=selected_passages,
+                reasoning_chain=reasoning_chain,
+                ranked_facts=ranked_facts,
+            )
+            score += float(candidate.get("prior", 0.0) or 0.0)
+            if score > best_score:
+                best = dict(candidate)
+                best["answer"] = answer
+                best_score = score
+        return best or {"answer": "Unknown", "thought": "", "raw_response": "", "messages": [], "support": ""}
 
     def _generate_final_qa_answer(
         self,
@@ -2902,7 +3177,17 @@ class HoloRAG:
             ranked_facts=ranked_facts,
             candidate_answer="",
         )
-        qa_reader_passages = aligned_passages or selected_passages
+        qa_reader_passages = self._truncate_passages_by_evidence_budget(
+            aligned_passages or selected_passages,
+            self.config.qa_evidence_max_tokens,
+        )
+        if not qa_reader_passages:
+            qa_reader_passages = list((aligned_passages or selected_passages)[:1])
+        answer_candidates = self._collect_answer_candidates(
+            passages=qa_reader_passages,
+            ranked_facts=ranked_facts,
+            reasoning_chain=reasoning_chain,
+        )
         qa_fact_hints = self._select_fact_hints(
             query=query,
             ranked_facts=ranked_facts,
@@ -2945,6 +3230,16 @@ class HoloRAG:
             fallback_raw_response=raw_response,
         )
         final_messages = messages
+        candidate_pool: List[Dict[str, object]] = [
+            {
+                "answer": final_answer,
+                "thought": final_thought,
+                "raw_response": final_raw_response,
+                "messages": final_messages,
+                "support": final_support,
+                "prior": 0.10,
+            }
+        ]
 
         refined_result = self._refine_final_answer(
             query=query,
@@ -2961,46 +3256,111 @@ class HoloRAG:
             final_raw_response = str(refined_result.get("raw_response", "") or final_raw_response)
             final_messages = refined_result.get("messages", messages)
             final_support = str(refined_result.get("support", "") or final_support)
+            candidate_pool.append(
+                {
+                    "answer": final_answer,
+                    "thought": final_thought,
+                    "raw_response": final_raw_response,
+                    "messages": final_messages,
+                    "support": final_support,
+                    "prior": 0.16,
+                }
+            )
 
-        terminal_hop_result = self._get_terminal_hop_answer(
-            query=query,
-            selected_passages=selected_passages,
-            reasoning_chain=reasoning_chain,
-            ranked_facts=ranked_facts,
-        )
-        terminal_hop_answer = str(terminal_hop_result.get("answer", "") or "").strip()
-        if terminal_hop_answer and terminal_hop_answer.lower() != "unknown":
-            final_answer = terminal_hop_answer
-            final_thought = str(terminal_hop_result.get("thought", "") or final_thought)
-            final_raw_response = str(terminal_hop_result.get("raw_response", "") or final_raw_response)
-            terminal_support = str(terminal_hop_result.get("support", "") or "")
-            if terminal_support:
-                final_support = terminal_support
-
-        if not final_answer or final_answer.lower() == "unknown":
-            recovered = self._recover_unknown_answer_from_passages(
+        if self.config.enable_sentence_layer:
+            terminal_hop_result = self._get_terminal_hop_answer(
                 query=query,
                 selected_passages=selected_passages,
                 reasoning_chain=reasoning_chain,
                 ranked_facts=ranked_facts,
             )
-            recovered_answer = str(recovered.get("answer", "") or "").strip()
-            if recovered_answer and recovered_answer.lower() != "unknown":
-                final_answer = recovered_answer
-                final_thought = str(recovered.get("thought", "") or final_thought)
-                final_raw_response = str(recovered.get("raw_response", "") or final_raw_response)
-                final_messages = recovered.get("messages", final_messages)
-                recovered_support = str(recovered.get("support", "") or "")
-                if recovered_support:
-                    final_support = recovered_support
+            terminal_hop_answer = str(terminal_hop_result.get("answer", "") or "").strip()
+            terminal_supported = (
+                terminal_hop_answer
+                and terminal_hop_answer.lower() != "unknown"
+                and self._answer_supported_by_evidence(terminal_hop_answer, selected_passages)
+            )
+            if terminal_supported and self.config.enable_terminal_hop_override:
+                candidate_pool.append(
+                    {
+                        "answer": terminal_hop_answer,
+                        "thought": str(terminal_hop_result.get("thought", "") or final_thought),
+                        "raw_response": str(terminal_hop_result.get("raw_response", "") or final_raw_response),
+                        "messages": final_messages,
+                        "support": str(terminal_hop_result.get("support", "") or ""),
+                        "prior": 0.08,
+                    }
+                )
+
+            if not final_answer or final_answer.lower() == "unknown":
+                recovered = self._recover_unknown_answer_from_passages(
+                    query=query,
+                    selected_passages=selected_passages,
+                    reasoning_chain=reasoning_chain,
+                    ranked_facts=ranked_facts,
+                )
+                recovered_answer = str(recovered.get("answer", "") or "").strip()
+                if recovered_answer and recovered_answer.lower() != "unknown":
+                    final_answer = recovered_answer
+                    final_thought = str(recovered.get("thought", "") or final_thought)
+                    final_raw_response = str(recovered.get("raw_response", "") or final_raw_response)
+                    final_messages = recovered.get("messages", final_messages)
+                    recovered_support = str(recovered.get("support", "") or "")
+                    if recovered_support:
+                        final_support = recovered_support
+                    candidate_pool.append(
+                        {
+                            "answer": final_answer,
+                            "thought": final_thought,
+                            "raw_response": final_raw_response,
+                            "messages": final_messages,
+                            "support": final_support,
+                            "prior": 0.04,
+                        }
+                    )
+
+        best_candidate = self._choose_best_answer_candidate(
+            query=query,
+            candidates=candidate_pool,
+            candidate_texts=answer_candidates,
+            selected_passages=selected_passages,
+            reasoning_chain=reasoning_chain,
+            ranked_facts=ranked_facts,
+        )
+        final_answer = str(best_candidate.get("answer", final_answer) or final_answer)
+        final_thought = str(best_candidate.get("thought", final_thought) or final_thought)
+        final_raw_response = str(best_candidate.get("raw_response", final_raw_response) or final_raw_response)
+        final_messages = best_candidate.get("messages", final_messages)
+        final_support = str(best_candidate.get("support", final_support) or final_support)
+        snapped_final = self._snap_answer_to_candidates(final_answer, answer_candidates)
+        if snapped_final:
+            final_answer = snapped_final
+        elif not self._answer_supported_by_evidence(final_answer, selected_passages):
+            if self._score_answer_candidate(
+                query=query,
+                answer=final_answer,
+                candidate_texts=answer_candidates,
+                selected_passages=selected_passages,
+                reasoning_chain=reasoning_chain,
+                ranked_facts=ranked_facts,
+            ) < 0.15:
+                final_answer = "Unknown"
+
+        if self._is_yesno_question(query):
+            final_answer = self._classify_yesno_answer(query, qa_reader_passages, final_answer)
+
+        focused_passages = self._truncate_passages_by_evidence_budget(
+            list(refined_result.get("focused_passages", []) or []),
+            self.config.qa_evidence_max_tokens,
+        )
 
         return {
             "thought": final_thought,
             "answer": final_answer,
             "raw_response": final_raw_response,
             "messages": final_messages,
-            "selected_passages": selected_passages,
-            "focused_passages": refined_result.get("focused_passages", []),
+            "selected_passages": qa_reader_passages,
+            "focused_passages": focused_passages,
             "support": final_support,
         }
 
@@ -3160,3 +3520,45 @@ class HoloRAG:
 
     def _fallback_alpha(self) -> Dict[str, float]:
         return {"entity": 0.33, "sentence": 0.34, "chunk": 0.33}
+
+    def _normalize_alpha(self, alpha: Dict[str, float]) -> Dict[str, float]:
+        values = {
+            "entity": max(0.0, float(alpha.get("entity", 0.0))),
+            "sentence": max(0.0, float(alpha.get("sentence", 0.0))),
+            "chunk": max(0.0, float(alpha.get("chunk", 0.0))),
+        }
+        total = sum(values.values()) or 1.0
+        return {key: value / total for key, value in values.items()}
+
+    def _intent_confidence(self, alpha: Dict[str, float]) -> float:
+        normalized = self._normalize_alpha(alpha)
+        values = sorted(normalized.values(), reverse=True)
+        margin = values[0] - values[1]
+        return max(0.0, min(1.0, margin * 2.0))
+
+    def _resolve_task_profile(self, query: str, query_hints: Optional[Dict]) -> str:
+        explicit = str((query_hints or {}).get("task_profile", "")).strip().lower()
+        if explicit in {"single_hop", "multi_hop", "long_context"}:
+            return explicit
+        configured = str(self.config.task_profile or "auto").strip().lower()
+        if configured in {"single_hop", "multi_hop", "long_context"}:
+            return configured
+        lowered = (query or "").lower()
+        if any(token in lowered for token in ["compare", "earlier", "later", "older", "younger", "before", "after"]):
+            return "multi_hop"
+        if len((query or "").split()) >= 20 or any(token in lowered for token in ["summary", "overview", "context", "describe"]):
+            return "long_context"
+        return "single_hop"
+
+    def _compose_alpha_with_profile_prior(self, alpha: Dict[str, float], profile: str, confidence: float) -> Dict[str, float]:
+        normalized_alpha = self._normalize_alpha(alpha)
+        prior_raw = self.config.task_profile_alpha_priors.get(profile, self._fallback_alpha())
+        prior = self._normalize_alpha(prior_raw)
+        min_conf = max(0.0, min(1.0, float(self.config.min_intent_confidence)))
+        effective_conf = max(min_conf, confidence)
+        query_weight = max(0.0, min(1.0, float(self.config.intent_query_weight) * effective_conf))
+        mixed = {
+            key: query_weight * normalized_alpha[key] + (1.0 - query_weight) * prior[key]
+            for key in ("entity", "sentence", "chunk")
+        }
+        return self._normalize_alpha(mixed)
