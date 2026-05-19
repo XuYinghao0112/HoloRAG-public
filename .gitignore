@@ -1,27 +1,42 @@
-# Experiment outputs
-outputs/
-
-# Python bytecode/cache
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Tool/test caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
+.coverage
+htmlcov/
 
-# Runtime logs and process metadata
-*.log
-*.pid
-*.nohup.log
-
-# Local virtual environments
+# Virtual environments and local environment files
 .venv/
 venv/
+env/
+ENV/
+.env
+.env.*
 
-# Editor/OS files
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Experiment caches, logs, and generated indexes
+outputs/*/shared_indexes*/
+outputs/logs/
+logs/
+*.out
+*.err
+*.pkl
+*.pickle
+*.faiss
+*.index
+
+# Notebook and editor noise
+.ipynb_checkpoints/
 .vscode/
 .idea/
+
+# OS files
 .DS_Store
+Thumbs.db
