@@ -20,19 +20,17 @@ class NaiveHoloRAGConfig:
     query_max_length: int = 128
     llm_context_window: int = 8192
     qa_max_input_tokens: int = 7000
-    qa_max_passage_tokens: int = 900
-    qa_max_fact_tokens: int = 700
     # Keep final QA evidence below the HippoRAG comparison budget while still
     # leaving room for the question and compact retrieval hints.
     qa_evidence_token_budget: int = 620
-    qa_retry_on_unknown: bool = True
     max_new_tokens: int = 512
     temperature: float = 0.0
 
-    chunk_size_words: int = 180
-    chunk_overlap_words: int = 40
+    chunk_size_words: int = 256
+    chunk_overlap_words: int = 64
     use_paragraph_as_chunk: bool = True
     index_extraction_mode: str = "heuristic"
+    spacy_model_name: str = "en_core_web_sm"
     task_profile: str = "auto"
     enable_intent_routing: bool = True
     intent_use_llm: bool = False

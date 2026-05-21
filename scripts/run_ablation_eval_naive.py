@@ -321,16 +321,14 @@ def build_config(args: argparse.Namespace, save_dir: str):
         use_paragraph_as_chunk=not args.disable_paragraph_as_chunk,
         index_extraction_mode=args.index_extraction_mode,
         qa_max_input_tokens=args.qa_max_input_tokens,
-        qa_max_passage_tokens=args.qa_max_passage_tokens,
-        qa_max_fact_tokens=args.qa_max_fact_tokens,
         qa_evidence_token_budget=args.qa_evidence_token_budget,
-        qa_retry_on_unknown=not args.disable_qa_retry_on_unknown,
         intent_use_llm=args.intent_use_llm,
         enable_entity_similarity_edges=not args.disable_entity_similarity_edges,
         entity_similarity_threshold=args.entity_similarity_threshold,
         entity_similarity_top_k=args.entity_similarity_top_k,
         chunk_size_words=args.chunk_size_words,
         chunk_overlap_words=args.chunk_overlap_words,
+        spacy_model_name=args.spacy_model_name,
         passage_output_top_k=max(args.topk_passages, args.passage_output_top_k),
         qa_passage_top_k=args.topk_passages,
     )
@@ -491,12 +489,17 @@ def run_eval(
     em_scores: List[float] = []
     f1_scores: List[float] = []
     retrieval_latencies: List[float] = []
+    retrieval_pipeline_latencies: List[float] = []
+    qa_latencies: List[float] = []
     query_total_latencies: List[float] = []
     entity_counts: List[float] = []
+    fact_counts: List[float] = []
     sentence_counts: List[float] = []
     chunk_counts: List[float] = []
+    node_counts: List[float] = []
     edge_counts: List[float] = []
     evidence_tokens: List[float] = []
+    qa_failures = 0
 
     t_start = time.perf_counter()
     for i, sample in enumerate(samples, start=1):
@@ -518,8 +521,13 @@ def run_eval(
         t_query = time.perf_counter()
         result = rag.query(question)
         query_elapsed = time.perf_counter() - t_query
+        query_timing = result.get("query_timing", {}) or {}
         query_total_latencies.append(query_elapsed)
-        retrieval_latencies.append(float(result.get("query_timing", {}).get("query_total_latency", query_elapsed)))
+        retrieval_latencies.append(float(query_timing.get("retrieval_latency", query_elapsed)))
+        if "retrieval_pipeline_latency" in query_timing:
+            retrieval_pipeline_latencies.append(float(query_timing.get("retrieval_pipeline_latency", 0.0)))
+        if "qa_latency" in query_timing:
+            qa_latencies.append(float(query_timing.get("qa_latency", 0.0)))
 
         ranked_passages = result.get("ranked_passages", []) or []
         qa_messages = result.get("qa_messages", []) or []
@@ -538,8 +546,10 @@ def run_eval(
         stats = index_record.get("stats", {}) or {}
         layers = stats.get("layer_counts", {}) or {}
         entity_counts.append(float(layers.get("entity", 0)))
+        fact_counts.append(float(layers.get("fact", 0)))
         sentence_counts.append(float(layers.get("sentence", 0)))
         chunk_counts.append(float(layers.get("chunk", 0)))
+        node_counts.append(float(stats.get("nodes", 0)))
         edge_counts.append(float(stats.get("edges", 0)))
 
         row = {
@@ -550,15 +560,22 @@ def run_eval(
             "F1": f1,
             "EM": em,
             "index_path": str(index_path),
+            "index_latency": float(index_record.get("index_latency", 0.0) or 0.0),
+            "index_reused": bool(index_record.get("reused", False)),
             "query_total_latency": query_elapsed,
+            "retrieval_latency": query_timing.get("retrieval_latency"),
+            "retrieval_pipeline_latency": query_timing.get("retrieval_pipeline_latency"),
+            "qa_latency": query_timing.get("qa_latency"),
+            "query_timing": query_timing,
             "entity_nodes": int(layers.get("entity", 0)),
+            "fact_nodes": int(layers.get("fact", 0)),
             "sentence_nodes": int(layers.get("sentence", 0)),
             "chunk_nodes": int(layers.get("chunk", 0)),
+            "nodes": int(stats.get("nodes", 0)),
             "edges": int(stats.get("edges", 0)),
             "final_evidence_tokens": int(final_evidence_tokens),
             "final_evidence_tokenizer": token_counter.method,
-            "qa_retry_used": bool(result.get("qa_retry_used", False)),
-            "qa_retry_mode": result.get("qa_retry_mode", "none"),
+            "qa_answer_mode": result.get("qa_answer_mode", ""),
         }
         with per_example_path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
@@ -581,10 +598,15 @@ def run_eval(
         "num_queries": len(f1_scores),
         "F1": _avg(f1_scores),
         "EM": _avg(em_scores),
+        "qa_failures": qa_failures,
         "retrieval_latency": _avg(retrieval_latencies),
+        "retrieval_pipeline_latency": _avg(retrieval_pipeline_latencies),
+        "qa_latency": _avg(qa_latencies),
         "retrieval_qa_latency": _avg(query_total_latencies),
         "query_runtime": time.perf_counter() - t_start,
+        "nodes": _avg(node_counts),
         "entity_nodes": _avg(entity_counts),
+        "fact_nodes": _avg(fact_counts),
         "sentence_nodes": _avg(sentence_counts),
         "chunk_nodes": _avg(chunk_counts),
         "edges": _avg(edge_counts),
@@ -611,8 +633,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--embedding_batch_size", type=int, default=8)
     parser.add_argument("--embedding_max_seq_len", type=int, default=2048)
     parser.add_argument("--embedding_dtype", type=str, default="bfloat16")
-    parser.add_argument("--chunk_size_words", type=int, default=180)
-    parser.add_argument("--chunk_overlap_words", type=int, default=40)
+    parser.add_argument("--chunk_size_words", type=int, default=256)
+    parser.add_argument("--chunk_overlap_words", type=int, default=64)
+    parser.add_argument("--spacy_model_name", type=str, default="en_core_web_sm")
     parser.add_argument("--disable_paragraph_as_chunk", action="store_true")
     parser.add_argument("--index_extraction_mode", type=str, default="heuristic", choices=["heuristic", "llm"])
     parser.add_argument("--intent_use_llm", action="store_true")
@@ -622,10 +645,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--topk_passages", type=int, default=5)
     parser.add_argument("--passage_output_top_k", type=int, default=10)
     parser.add_argument("--qa_max_input_tokens", type=int, default=7000)
-    parser.add_argument("--qa_max_passage_tokens", type=int, default=900)
-    parser.add_argument("--qa_max_fact_tokens", type=int, default=700)
     parser.add_argument("--qa_evidence_token_budget", type=int, default=620)
-    parser.add_argument("--disable_qa_retry_on_unknown", action="store_true")
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
@@ -674,13 +694,13 @@ def main() -> None:
             (run_dir / "shared_index_records.json").write_text(json.dumps(index_data["records"], ensure_ascii=False, indent=2), encoding="utf-8")
             (run_dir / "shared_index_summary.json").write_text(json.dumps(index_data["summary"], ensure_ascii=False, indent=2), encoding="utf-8")
         per_example_filename = "per_example.jsonl"
-        metrics_variant = "baseline_naive"
+        metrics_variant = "holorag_naive"
     else:
         index_data = prebuild_or_reuse_indexes(rag, samples, shared_index_root, logger)
         (run_dir / "shared_index_records.json").write_text(json.dumps(index_data["records"], ensure_ascii=False, indent=2), encoding="utf-8")
         (run_dir / "shared_index_summary.json").write_text(json.dumps(index_data["summary"], ensure_ascii=False, indent=2), encoding="utf-8")
         per_example_filename = "per_example.jsonl"
-        metrics_variant = "baseline_naive"
+        metrics_variant = "holorag_naive"
 
     metrics = run_eval(
         rag,
@@ -697,31 +717,37 @@ def main() -> None:
     metrics["shared_index_runtime"] = float(index_data["summary"].get("total_index_runtime", 0.0))
     metrics["total_runtime"] = metrics["query_runtime"] + metrics["shared_index_runtime"]
     metrics["index_pool"] = "shared"
-
-    summary_rows = [metrics]
-    metrics_json_name = "metrics_summary.json"
-    metrics_csv_name = "metrics_summary.csv"
-    (run_dir / metrics_json_name).write_text(json.dumps(summary_rows, ensure_ascii=False, indent=2), encoding="utf-8")
-    csv_headers = [
+    metric_headers = [
         "variant",
-        "index_pool",
         "num_queries",
         "F1",
         "EM",
+        "qa_failures",
         "index_latency",
         "retrieval_latency",
+        "retrieval_pipeline_latency",
+        "qa_latency",
         "retrieval_qa_latency",
         "query_runtime",
         "shared_index_runtime",
         "total_runtime",
+        "final_evidence_tokens",
+        "final_evidence_tokenizer",
+        "index_pool",
+        "nodes",
         "entity_nodes",
+        "fact_nodes",
         "sentence_nodes",
         "chunk_nodes",
         "edges",
-        "final_evidence_tokens",
-        "final_evidence_tokenizer",
     ]
-    lines = [",".join(csv_headers), ",".join(str(metrics.get(k, "")) for k in csv_headers)]
+    ordered_metrics = {key: metrics.get(key, "") for key in metric_headers}
+
+    summary_rows = [ordered_metrics]
+    metrics_json_name = "metrics_summary.json"
+    metrics_csv_name = "metrics_summary.csv"
+    (run_dir / metrics_json_name).write_text(json.dumps(summary_rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    lines = [",".join(metric_headers), ",".join(str(ordered_metrics.get(k, "")) for k in metric_headers)]
     (run_dir / metrics_csv_name).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     (run_dir / "config.json").write_text(
@@ -736,6 +762,7 @@ def main() -> None:
                 "llm_name": args.llm_name,
                 "embedding_name": args.embedding_name,
                 "embedding_device": args.embedding_device,
+                "spacy_model_name": args.spacy_model_name,
                 "task_profile": args.task_profile,
                 "use_paragraph_as_chunk": not args.disable_paragraph_as_chunk,
                 "index_extraction_mode": args.index_extraction_mode,
@@ -745,10 +772,7 @@ def main() -> None:
                 "entity_similarity_top_k": args.entity_similarity_top_k,
                 "topk_passages": args.topk_passages,
                 "qa_max_input_tokens": args.qa_max_input_tokens,
-                "qa_max_passage_tokens": args.qa_max_passage_tokens,
-                "qa_max_fact_tokens": args.qa_max_fact_tokens,
                 "qa_evidence_token_budget": args.qa_evidence_token_budget,
-                "qa_retry_on_unknown": not args.disable_qa_retry_on_unknown,
                 "shared_index_root": str(shared_index_root),
             },
             ensure_ascii=False,

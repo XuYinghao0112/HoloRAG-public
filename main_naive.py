@@ -100,6 +100,7 @@ def build_config(args: argparse.Namespace):
         embedding_dtype=args.embedding_dtype,
         chunk_size_words=args.chunk_size_words,
         chunk_overlap_words=args.chunk_overlap_words,
+        spacy_model_name=args.spacy_model_name,
         use_paragraph_as_chunk=not args.disable_paragraph_as_chunk,
         task_profile=args.task_profile,
         enable_intent_routing=not args.disable_intent_routing,
@@ -133,8 +134,9 @@ def main() -> None:
     parser.add_argument("--embedding_batch_size", type=int, default=8)
     parser.add_argument("--embedding_max_seq_len", type=int, default=2048)
     parser.add_argument("--embedding_dtype", type=str, default="bfloat16")
-    parser.add_argument("--chunk_size_words", type=int, default=180)
-    parser.add_argument("--chunk_overlap_words", type=int, default=40)
+    parser.add_argument("--chunk_size_words", type=int, default=256)
+    parser.add_argument("--chunk_overlap_words", type=int, default=64)
+    parser.add_argument("--spacy_model_name", type=str, default="en_core_web_sm")
     parser.add_argument("--disable_paragraph_as_chunk", action="store_true")
     parser.add_argument("--task_profile", type=str, default="auto", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--disable_intent_routing", action="store_true")

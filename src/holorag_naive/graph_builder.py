@@ -102,6 +102,8 @@ class NaiveGraphBuilder:
                             "head": triple["head"],
                             "relation": relation,
                             "tail": triple["tail"],
+                            "confidence": float(triple.get("confidence", 1.0) or 1.0),
+                            "extractor": str(triple.get("extractor", "")),
                             "head_id": head_id,
                             "tail_id": tail_id,
                             "sentence_id": sentence_id,

@@ -13,5 +13,6 @@ setup(
         "transformers",
         "openai",
         "httpx",
+        "spacy",
     ],
 )

@@ -135,7 +135,9 @@ class NaiveRetriever:
         ranked_facts: Sequence[Dict],
         ranked_passages: Sequence[Dict],
         profile: str,
+        query: str = "",
         sub_questions: Sequence[str] = (),
+        token_budget: int = 620,
     ) -> Dict:
         sentence_scores = self._combined_sentence_scores(graph, pagerank_scores, channel_scores, ranked_facts)
         ranked_sentences = [
@@ -173,9 +175,9 @@ class NaiveRetriever:
             # bridge or answer span often lives outside the extracted sentence set.
             # The reader enforces the global evidence budget, so this remains
             # generic and bounded across datasets.
-            chunks = list(ranked_passages[: min(2, self.config.qa_passage_top_k)])
+            chunks = list(ranked_passages[: min(3, self.config.qa_passage_top_k)])
 
-        return {
+        result = {
             "profile": profile,
             "facts": facts,
             "sentences": sentences,
@@ -183,6 +185,19 @@ class NaiveRetriever:
             "evidence_groups": evidence_groups,
             "fallback_passages": list(ranked_passages[: self.config.qa_passage_top_k]),
         }
+        packed = self._pack_profile_evidence(
+            profile=profile,
+            query=query,
+            facts=facts,
+            sentences=sentences,
+            chunks=chunks,
+            evidence_groups=evidence_groups,
+            fallback_passages=result["fallback_passages"],
+            sub_questions=sub_questions,
+            token_budget=token_budget,
+        )
+        result.update(packed)
+        return result
 
     def _retrieve_entities(self, query_entities: Sequence[str], state: Dict) -> Dict[str, float]:
         embeddings = state.get("embeddings", {}).get("entity", {})
@@ -418,6 +433,210 @@ class NaiveRetriever:
             seen.add(value)
             deduped.append(record)
         return deduped
+
+    def _pack_profile_evidence(
+        self,
+        profile: str,
+        query: str,
+        facts: Sequence[Dict],
+        sentences: Sequence[Dict],
+        chunks: Sequence[Dict],
+        evidence_groups: Sequence[Dict],
+        fallback_passages: Sequence[Dict],
+        sub_questions: Sequence[str],
+        token_budget: int,
+    ) -> Dict:
+        budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
+        candidates: List[Dict] = []
+        seen_sentence_ids = set()
+
+        for group in evidence_groups:
+            label = str(group.get("label", "Evidence")).strip() or "Evidence"
+            group_question = str(group.get("question", "")).strip()
+            for row in list(group.get("items", []) or []):
+                node_id = row.get("node_id")
+                if node_id in seen_sentence_ids:
+                    continue
+                seen_sentence_ids.add(node_id)
+                candidates.append(self._packed_candidate(
+                    kind="sentence",
+                    text=str(row.get("text", "")),
+                    title=str(row.get("title", "")),
+                    score=float(row.get("score", 0.0)),
+                    label=label,
+                    node_id=node_id,
+                    question=group_question,
+                    query=query,
+                    sub_questions=sub_questions,
+                ))
+
+        for row in sentences:
+            node_id = row.get("node_id")
+            if node_id in seen_sentence_ids:
+                continue
+            seen_sentence_ids.add(node_id)
+            candidates.append(self._packed_candidate(
+                kind="sentence",
+                text=str(row.get("text", "")),
+                title=str(row.get("title", "")),
+                score=float(row.get("score", 0.0)),
+                label="Evidence",
+                node_id=node_id,
+                query=query,
+                sub_questions=sub_questions,
+            ))
+
+        for fact in facts:
+            candidates.append(self._packed_candidate(
+                kind="fact",
+                text=str(fact.get("text", "")),
+                title=str(fact.get("title", "")),
+                score=float(fact.get("score", 0.0)),
+                label="Fact",
+                node_id=str(fact.get("fact_id", "")),
+                query=query,
+                sub_questions=sub_questions,
+            ))
+
+        for passage in list(chunks) or list(fallback_passages):
+            text = self._passage_excerpt(str(passage.get("text", "")), query, max(80, budget // 3))
+            candidates.append(self._packed_candidate(
+                kind="chunk",
+                text=text,
+                title=str(passage.get("title", "")),
+                score=float(passage.get("score", 0.0)),
+                label="Passage",
+                node_id=str(passage.get("chunk_id", passage.get("node_id", ""))),
+                query=query,
+                sub_questions=sub_questions,
+            ))
+
+        weights = {
+            "single_hop": {"fact": 1.45, "sentence": 1.25, "chunk": 0.65},
+            "multi_hop": {"sentence": 1.45, "fact": 1.20, "chunk": 0.80},
+            "long_context": {"chunk": 1.45, "sentence": 1.00, "fact": 0.75},
+        }.get(profile, {"sentence": 1.2, "fact": 1.0, "chunk": 0.9})
+        for item in candidates:
+            item["pack_score"] = (
+                weights.get(item["kind"], 1.0) * float(item.get("score", 0.0))
+                + 0.35 * float(item.get("coverage", 0.0))
+            )
+
+        selected = []
+        selected_ids = set()
+        title_counts: Dict[str, int] = defaultdict(int)
+        used = 0
+        for item in sorted(candidates, key=lambda row: row.get("pack_score", 0.0), reverse=True):
+            node_id = item.get("node_id")
+            if node_id and node_id in selected_ids:
+                continue
+            title_key = str(item.get("title", "")).strip().lower()
+            if title_key and title_counts[title_key] >= 3:
+                continue
+            line = str(item.get("line", "")).strip()
+            cost = self._token_count(line)
+            remaining = budget - used
+            if remaining <= 0:
+                break
+            if cost > remaining:
+                if item["kind"] != "chunk" and remaining < 24:
+                    continue
+                line = self._truncate_words(line, remaining)
+                cost = self._token_count(line)
+            if cost <= 0:
+                continue
+            selected.append({**item, "line": line, "tokens": cost})
+            used += cost
+            if node_id:
+                selected_ids.add(node_id)
+            if title_key:
+                title_counts[title_key] += 1
+
+        packed_text = "\n".join(item["line"] for item in selected).strip()
+        return {
+            "packed_text": packed_text,
+            "packed_records": selected,
+            "packed_token_budget": budget,
+            "packed_token_count": self._token_count(packed_text),
+        }
+
+    def _packed_candidate(
+        self,
+        kind: str,
+        text: str,
+        title: str,
+        score: float,
+        label: str,
+        node_id: str = "",
+        question: str = "",
+        query: str = "",
+        sub_questions: Sequence[str] = (),
+    ) -> Dict:
+        text = " ".join(str(text or "").split())
+        title = str(title or "").strip()
+        if not text:
+            return {"kind": kind, "line": "", "score": 0.0}
+        prefix = label
+        if question:
+            prefix += f" ({question})"
+        if title:
+            prefix += f": [{title}] "
+        else:
+            prefix += ": "
+        coverage = max([self._coverage_text_score(item, f"{title} {text}") for item in sub_questions] or [0.0])
+        if not coverage:
+            coverage = self._coverage_text_score(query, f"{title} {text}")
+        return {
+            "kind": kind,
+            "line": prefix + text,
+            "score": float(score),
+            "coverage": float(coverage),
+            "title": title,
+            "node_id": node_id,
+        }
+
+    def _passage_excerpt(self, text: str, query: str, max_tokens: int) -> str:
+        text = " ".join(str(text or "").split())
+        if self._token_count(text) <= max_tokens:
+            return text
+        terms = self._content_terms(query)
+        sentences = [item.strip() for item in re.split(r"(?<=[.!?])\s+", text) if item.strip()]
+        scored = []
+        for index, sentence in enumerate(sentences or [text]):
+            words = self._content_terms(sentence)
+            scored.append((len(terms & words), -index, sentence))
+        selected = []
+        used = 0
+        for _, _, sentence in sorted(scored, reverse=True):
+            cost = self._token_count(sentence)
+            if cost <= 0:
+                continue
+            if selected and used + cost > max_tokens:
+                continue
+            if cost > max_tokens:
+                sentence = self._truncate_words(sentence, max_tokens - used)
+                cost = self._token_count(sentence)
+            selected.append(sentence)
+            used += cost
+            if used >= max_tokens:
+                break
+        return " ".join(selected) if selected else self._truncate_words(text, max_tokens)
+
+    def _coverage_text_score(self, question: str, text: str) -> float:
+        q_terms = self._content_terms(question)
+        t_terms = self._content_terms(text)
+        if not q_terms or not t_terms:
+            return 0.0
+        return len(q_terms & t_terms) / max(1, len(q_terms))
+
+    def _token_count(self, text: str) -> int:
+        return len(re.findall(r"\S+", str(text or "")))
+
+    def _truncate_words(self, text: str, max_tokens: int) -> str:
+        tokens = re.findall(r"\S+", str(text or ""))
+        if len(tokens) <= max_tokens:
+            return str(text or "").strip()
+        return " ".join(tokens[:max(0, max_tokens)]).strip()
 
     def _title_key(self, record: Dict) -> str:
         return str(record.get("title", "")).strip().lower()

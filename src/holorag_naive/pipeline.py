@@ -78,15 +78,19 @@ class NaiveHoloRAG:
         state = self.load()
         graph: nx.DiGraph = state["graph"]
         self.llm_client.reset_stats()
+        after_load = time.perf_counter()
 
         route = self.intent_router.route(normalized_query, forced_profile=(query_hints or {}).get("task_profile", self.config.task_profile))
         profile = route["profile"]
         alpha = route["alpha"]
+        after_route = time.perf_counter()
         query_parse = self.triple_extractor.extract_query(normalized_query)
+        after_query_parse = time.perf_counter()
         if self._should_decompose(profile):
             sub_questions = self.query_decomposer.decompose(normalized_query)
         else:
             sub_questions = [normalized_query]
+        after_decomposition = time.perf_counter()
 
         retrieval = self.retriever.retrieve(
             query=normalized_query,
@@ -97,7 +101,9 @@ class NaiveHoloRAG:
             state=state,
             alpha=alpha,
         )
+        after_retrieval = time.perf_counter()
         pagerank_scores = self.page_rank.run(graph, alpha=alpha, seed_scores=retrieval["seed_scores"])
+        after_pagerank = time.perf_counter()
         ranked_nodes = self._rank_nodes(graph, pagerank_scores)
         ranked_passages = self.retriever.rank_passages(
             graph=graph,
@@ -112,8 +118,11 @@ class NaiveHoloRAG:
             ranked_facts=retrieval["ranked_facts"],
             ranked_passages=ranked_passages,
             profile=profile,
+            query=normalized_query,
             sub_questions=sub_questions,
+            token_budget=self.config.qa_evidence_token_budget,
         )
+        after_ranking = time.perf_counter()
         qa_result = self.reader.answer(
             normalized_query,
             ranked_passages,
@@ -121,6 +130,7 @@ class NaiveHoloRAG:
             sub_questions,
             evidence=ranked_evidence,
         )
+        after_qa = time.perf_counter()
         result = {
             "query": normalized_query,
             "task_profile": profile,
@@ -143,10 +153,20 @@ class NaiveHoloRAG:
             "qa_thought": qa_result["thought"],
             "qa_raw_response": qa_result["raw_response"],
             "qa_messages": qa_result["messages"],
-            "qa_retry_used": bool(qa_result.get("retry_used", False)),
-            "qa_retry_mode": qa_result.get("retry_mode", "none"),
+            "qa_answer_mode": qa_result.get("answer_mode", ""),
             "llm_stats": self.llm_client.get_stats(),
-            "query_timing": {"query_total_latency": float(time.perf_counter() - start)},
+            "query_timing": {
+                "query_total_latency": float(after_qa - start),
+                "load_latency": float(after_load - start),
+                "intent_latency": float(after_route - after_load),
+                "query_parse_latency": float(after_query_parse - after_route),
+                "decomposition_latency": float(after_decomposition - after_query_parse),
+                "retrieval_latency": float(after_retrieval - after_decomposition),
+                "pagerank_latency": float(after_pagerank - after_retrieval),
+                "evidence_ranking_latency": float(after_ranking - after_pagerank),
+                "retrieval_pipeline_latency": float(after_ranking - after_load),
+                "qa_latency": float(after_qa - after_ranking),
+            },
         }
         dump_json(os.path.join(self.artifact_dir, "last_query_result.json"), result)
         return result
