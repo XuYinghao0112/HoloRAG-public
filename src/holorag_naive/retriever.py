@@ -163,7 +163,7 @@ class NaiveRetriever:
                 {"label": "High-signal sentences", "items": sentences},
             ]
         else:
-            facts = list(ranked_facts[: min(self.config.fact_top_k, 12)])
+            facts = list(ranked_facts[: min(self.config.fact_top_k, 8)])
             source_sentences = self._source_sentences_for_facts(graph, facts)
             evidence_groups, sentences = self._multi_hop_sentence_groups(
                 graph=graph,
@@ -171,11 +171,9 @@ class NaiveRetriever:
                 source_sentences=source_sentences,
                 sub_questions=sub_questions,
             )
-            # Multi-hop QA needs a small amount of passage context because the
-            # bridge or answer span often lives outside the extracted sentence set.
-            # The reader enforces the global evidence budget, so this remains
-            # generic and bounded across datasets.
-            chunks = list(ranked_passages[: min(3, self.config.qa_passage_top_k)])
+            # Multi-hop QA needs a little passage context, but long chunks tend
+            # to crowd out the second-hop answer sentence on 2Wiki-style tasks.
+            chunks = list(ranked_passages[: min(1, self.config.qa_passage_top_k)])
 
         result = {
             "profile": profile,
@@ -498,8 +496,9 @@ class NaiveRetriever:
                 sub_questions=sub_questions,
             ))
 
+        passage_limit = max(80, min(120, budget // 5)) if profile == "multi_hop" else max(80, budget // 3)
         for passage in list(chunks) or list(fallback_passages):
-            text = self._passage_excerpt(str(passage.get("text", "")), query, max(80, budget // 3))
+            text = self._passage_excerpt(str(passage.get("text", "")), query, passage_limit)
             candidates.append(self._packed_candidate(
                 kind="chunk",
                 text=text,
@@ -577,8 +576,6 @@ class NaiveRetriever:
         if not text:
             return {"kind": kind, "line": "", "score": 0.0}
         prefix = label
-        if question:
-            prefix += f" ({question})"
         if title:
             prefix += f": [{title}] "
         else:
