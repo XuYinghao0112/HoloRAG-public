@@ -7,13 +7,15 @@ import numpy as np
 
 from .config import NaiveHoloRAGConfig
 from .embedding_model import NVEmbedV2Encoder
+from .llm_client import LocalLLMClient
 from .utils import cosine_similarity_matrix, lexical_overlap_score, merge_weighted_scores, normalize_alpha, normalize_scores, top_k
 
 
 class NaiveRetriever:
-    def __init__(self, config: NaiveHoloRAGConfig, embedder: NVEmbedV2Encoder) -> None:
+    def __init__(self, config: NaiveHoloRAGConfig, embedder: NVEmbedV2Encoder, llm_client: LocalLLMClient = None) -> None:
         self.config = config
         self.embedder = embedder
+        self.llm_client = llm_client
 
     def retrieve(
         self,
@@ -108,6 +110,8 @@ class NaiveRetriever:
             chunk_id = fact.get("chunk_id")
             if chunk_id:
                 chunk_scores[chunk_id] += 0.15 * float(fact.get("score", 0.0))
+                if getattr(self.config, "enable_fact_chunk_boost", False):
+                    chunk_scores[chunk_id] += float(getattr(self.config, "fact_chunk_boost", 0.35)) * float(fact.get("score", 0.0))
 
         passages = []
         for chunk_id, score in sorted(chunk_scores.items(), key=lambda item: item[1], reverse=True):
@@ -165,15 +169,35 @@ class NaiveRetriever:
         else:
             facts = list(ranked_facts[: min(self.config.fact_top_k, 8)])
             source_sentences = self._source_sentences_for_facts(graph, facts)
-            evidence_groups, sentences = self._multi_hop_sentence_groups(
-                graph=graph,
-                ranked_sentences=ranked_sentences,
-                source_sentences=source_sentences,
-                sub_questions=sub_questions,
-            )
+            if getattr(self.config, "enable_fact_source_first_evidence", False):
+                evidence_groups, sentences = self._fact_source_first_sentence_groups(
+                    graph=graph,
+                    ranked_sentences=ranked_sentences,
+                    source_sentences=source_sentences,
+                    ranked_facts=facts,
+                    sub_questions=sub_questions,
+                )
+            else:
+                evidence_groups, sentences = self._multi_hop_sentence_groups(
+                    graph=graph,
+                    ranked_sentences=ranked_sentences,
+                    source_sentences=source_sentences,
+                    sub_questions=sub_questions,
+                )
+            if getattr(self.config, "enable_fair_sentence_context", False):
+                evidence_groups, sentences = self._add_fair_ranked_sentence_context(
+                    evidence_groups=evidence_groups,
+                    selected_sentences=sentences,
+                    ranked_sentences=ranked_sentences,
+                    query=query,
+                    sub_questions=sub_questions,
+                )
             # Multi-hop QA needs a little passage context, but long chunks tend
             # to crowd out the second-hop answer sentence on 2Wiki-style tasks.
-            chunks = list(ranked_passages[: min(1, self.config.qa_passage_top_k)])
+            if getattr(self.config, "enable_fair_sentence_context", False):
+                chunks = self._diverse_passage_context(ranked_passages)
+            else:
+                chunks = list(ranked_passages[: min(1, self.config.qa_passage_top_k)])
 
         result = {
             "profile": profile,
@@ -294,6 +318,10 @@ class NaiveRetriever:
         ranked = sorted(fact_scores.items(), key=lambda item: item[1], reverse=True)
         candidates = ranked[: max(1, self.config.fact_rerank_top_k)]
         kept_count = min(len(candidates), max(1, self.config.fact_rerank_keep_k))
+        if getattr(self.config, "fact_rerank_use_llm", False):
+            llm_scores, meta = self._llm_filter_facts(query, candidates, state)
+            if llm_scores:
+                return llm_scores, meta
 
         # Lightweight lexical rerank by query overlap with fact text.
         scored = []
@@ -309,6 +337,85 @@ class NaiveRetriever:
             "candidate_count": len(candidates),
             "kept_count": len(selected),
             "mode": "lexical_rerank",
+        }
+
+    def _llm_filter_facts(self, query: str, candidates: Sequence[Tuple[str, float]], state: Dict) -> Tuple[Dict[str, float], Dict]:
+        candidate_limit = max(1, int(getattr(self.config, "fact_rerank_llm_candidate_k", 12)))
+        keep_k = max(1, int(getattr(self.config, "fact_rerank_llm_keep_k", 5)))
+        rows = []
+        for index, (fact_id, dense_score) in enumerate(list(candidates)[:candidate_limit], start=1):
+            fact = self._fact_by_id(state, fact_id)
+            if not fact:
+                continue
+            rows.append({
+                "id": index,
+                "fact_id": fact_id,
+                "fact": str(fact.get("text", "")),
+                "title": str(fact.get("title", "")),
+                "score": float(dense_score),
+            })
+        if not rows:
+            return {}, {"candidate_count": 0, "kept_count": 0, "mode": "llm_fact_filter_empty"}
+        if self.llm_client is None:
+            return {}, {"candidate_count": len(rows), "kept_count": 0, "mode": "llm_fact_filter_no_client"}
+        compact_rows = [
+            {
+                "id": row["id"],
+                "fact": row["fact"],
+                "title": row["title"],
+            }
+            for row in rows
+        ]
+        fallback = {"selected_ids": [row["id"] for row in rows[:keep_k]]}
+        payload, raw = self.llm_client.infer_json(
+            system_prompt=(
+                "You filter factual triples for multi-hop question answering. "
+                "Select only facts that are directly useful for answering the question or for linking to the next hop. "
+                "Prefer facts that identify bridge entities and final-answer attributes. "
+                "Return JSON only with key selected_ids, a list of integer ids. "
+                f"Select at most {keep_k} facts."
+            ),
+            user_prompt=(
+                f"Question:\n{query}\n\n"
+                f"Candidate facts:\n{compact_rows}\n\n"
+                f"Return JSON: {{\"selected_ids\": [ids...]}}"
+            ),
+            fallback=fallback,
+            max_tokens=128,
+        )
+        raw_ids = payload.get("selected_ids", []) if isinstance(payload, dict) else []
+        selected_ids = []
+        for value in raw_ids:
+            try:
+                int_value = int(value)
+            except (TypeError, ValueError):
+                continue
+            if int_value not in selected_ids:
+                selected_ids.append(int_value)
+            if len(selected_ids) >= keep_k:
+                break
+        if not selected_ids:
+            selected_ids = fallback["selected_ids"]
+        row_by_id = {row["id"]: row for row in rows}
+        selected_scores = {}
+        for rank, selected_id in enumerate(selected_ids):
+            row = row_by_id.get(selected_id)
+            if not row:
+                continue
+            dense_score = float(row.get("score", 0.0))
+            selected_scores[row["fact_id"]] = dense_score * (1.0 + 0.05 * (len(selected_ids) - rank))
+        if not selected_scores:
+            return {}, {
+                "candidate_count": len(rows),
+                "kept_count": 0,
+                "mode": "llm_fact_filter_empty_selection",
+                "raw_response": raw,
+            }
+        return normalize_scores(selected_scores), {
+            "candidate_count": len(rows),
+            "kept_count": len(selected_scores),
+            "mode": "llm_fact_filter",
+            "selected_ids": selected_ids,
         }
 
     def _combined_sentence_scores(
@@ -421,6 +528,167 @@ class NaiveRetriever:
             groups.append({"label": "Retrieved sentences", "items": selected[:12]})
         return groups, selected[:14]
 
+    def _fact_source_first_sentence_groups(
+        self,
+        graph: nx.DiGraph,
+        ranked_sentences: Sequence[Dict],
+        source_sentences: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+        sub_questions: Sequence[str],
+    ) -> Tuple[List[Dict], List[Dict]]:
+        selected: List[Dict] = []
+        title_counts: Dict[str, int] = defaultdict(int)
+
+        def add(record: Dict, title_limit: int = 3) -> bool:
+            node_id = record.get("node_id")
+            if not node_id or any(item.get("node_id") == node_id for item in selected):
+                return False
+            title_key = self._title_key(record)
+            if title_key and title_counts[title_key] >= title_limit:
+                return False
+            selected.append(record)
+            if title_key:
+                title_counts[title_key] += 1
+            return True
+
+        fact_sources = []
+        for record in source_sentences:
+            if add(record, title_limit=3):
+                fact_sources.append(record)
+            if len(fact_sources) >= 5:
+                break
+
+        chunk_context = []
+        for fact in ranked_facts[:5]:
+            for record in self._chunk_sentences_around_fact(graph, fact):
+                if add(record, title_limit=3):
+                    chunk_context.append(record)
+                if len(chunk_context) >= 5:
+                    break
+            if len(chunk_context) >= 5:
+                break
+
+        subquestion_sentences = []
+        for sub_question in sub_questions:
+            candidates = sorted(
+                ranked_sentences,
+                key=lambda item: (
+                    self._coverage_score(str(sub_question), item),
+                    float(item.get("score", 0.0)),
+                ),
+                reverse=True,
+            )
+            for candidate in candidates:
+                if add(candidate, title_limit=3):
+                    subquestion_sentences.append(candidate)
+                    break
+            if len(subquestion_sentences) >= 4:
+                break
+
+        if len(selected) < 10:
+            for record in ranked_sentences:
+                add(record, title_limit=3)
+                if len(selected) >= 12:
+                    break
+
+        groups = []
+        if fact_sources:
+            groups.append({"label": "Filtered fact source sentences", "items": fact_sources})
+        if chunk_context:
+            groups.append({"label": "Local sentence context", "items": chunk_context})
+        if subquestion_sentences:
+            groups.append({"label": "Sub-question evidence", "items": subquestion_sentences})
+        if not groups:
+            groups.append({"label": "Retrieved sentences", "items": selected[:12]})
+        return groups, selected[:14]
+
+    def _add_fair_ranked_sentence_context(
+        self,
+        evidence_groups: Sequence[Dict],
+        selected_sentences: Sequence[Dict],
+        ranked_sentences: Sequence[Dict],
+        query: str,
+        sub_questions: Sequence[str],
+    ) -> Tuple[List[Dict], List[Dict]]:
+        groups = list(evidence_groups)
+        selected = list(selected_sentences)
+        selected_ids = {item.get("node_id") for item in selected if item.get("node_id")}
+        title_limit = max(1, int(getattr(self.config, "evidence_title_limit", 3)))
+        max_sentences = max(len(selected), int(getattr(self.config, "evidence_max_sentences", 18)))
+        extra_k = max(0, int(getattr(self.config, "evidence_extra_ranked_sentence_k", 6)))
+        title_counts: Dict[str, int] = defaultdict(int)
+        for record in selected:
+            title_key = self._title_key(record)
+            if title_key:
+                title_counts[title_key] += 1
+
+        def fair_score(record: Dict) -> float:
+            coverage = max(
+                [self._coverage_score(str(item), record) for item in sub_questions if str(item or "").strip()]
+                or [self._coverage_score(query, record)]
+            )
+            return float(record.get("score", 0.0)) + 0.35 * coverage
+
+        additions: List[Dict] = []
+        for record in sorted(ranked_sentences, key=fair_score, reverse=True):
+            if len(additions) >= extra_k or len(selected) >= max_sentences:
+                break
+            node_id = record.get("node_id")
+            if not node_id or node_id in selected_ids:
+                continue
+            title_key = self._title_key(record)
+            if title_key and title_counts[title_key] >= title_limit:
+                continue
+            additions.append(record)
+            selected.append(record)
+            selected_ids.add(node_id)
+            if title_key:
+                title_counts[title_key] += 1
+
+        if additions:
+            groups.append({"label": "Additional ranked sentences", "items": additions})
+        return groups, selected[:max_sentences]
+
+    def _diverse_passage_context(self, ranked_passages: Sequence[Dict]) -> List[Dict]:
+        limit = max(1, int(getattr(self.config, "evidence_passage_context_k", 2)))
+        limit = min(limit, max(1, self.config.qa_passage_top_k))
+        selected: List[Dict] = []
+        seen_titles = set()
+        for passage in ranked_passages:
+            title = str(passage.get("title", "")).strip().lower()
+            if title and title in seen_titles:
+                continue
+            selected.append(passage)
+            if title:
+                seen_titles.add(title)
+            if len(selected) >= limit:
+                break
+        if not selected:
+            return list(ranked_passages[:limit])
+        return selected
+
+    def _chunk_sentences_around_fact(self, graph: nx.DiGraph, fact: Dict) -> List[Dict]:
+        sentence_id = fact.get("sentence_id")
+        if sentence_id not in graph:
+            return []
+        attrs = graph.nodes[sentence_id]
+        metadata = attrs.get("metadata", {})
+        chunk_id = metadata.get("chunk_id")
+        if not chunk_id:
+            return []
+        sentence_index = metadata.get("sentence_index")
+        rows = []
+        for candidate_id in graph.successors(chunk_id):
+            if candidate_id not in graph or graph.nodes[candidate_id].get("node_type") != "sentence":
+                continue
+            candidate_meta = graph.nodes[candidate_id].get("metadata", {})
+            candidate_index = candidate_meta.get("sentence_index")
+            if isinstance(sentence_index, int) and isinstance(candidate_index, int) and abs(candidate_index - sentence_index) > 1:
+                continue
+            record = self._sentence_record(graph, candidate_id, float(fact.get("score", 0.0)) * 0.82)
+            rows.append(record)
+        return sorted(rows, key=lambda row: row.get("metadata", {}).get("sentence_index", 0))
+
     def _dedupe_records(self, records: Sequence[Dict], key: str) -> List[Dict]:
         deduped = []
         seen = set()
@@ -496,7 +764,10 @@ class NaiveRetriever:
                 sub_questions=sub_questions,
             ))
 
-        passage_limit = max(80, min(120, budget // 5)) if profile == "multi_hop" else max(80, budget // 3)
+        if profile == "multi_hop" and getattr(self.config, "enable_fair_sentence_context", False):
+            passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 150)))
+        else:
+            passage_limit = max(80, min(120, budget // 5)) if profile == "multi_hop" else max(80, budget // 3)
         for passage in list(chunks) or list(fallback_passages):
             text = self._passage_excerpt(str(passage.get("text", "")), query, passage_limit)
             candidates.append(self._packed_candidate(
@@ -515,10 +786,22 @@ class NaiveRetriever:
             "multi_hop": {"sentence": 1.45, "fact": 1.20, "chunk": 0.80},
             "long_context": {"chunk": 1.45, "sentence": 1.00, "fact": 0.75},
         }.get(profile, {"sentence": 1.2, "fact": 1.0, "chunk": 0.9})
+        if getattr(self.config, "enable_fact_source_first_evidence", False) and profile == "multi_hop":
+            weights = {"sentence": 1.55, "fact": 1.35, "chunk": 0.75}
+        if getattr(self.config, "enable_fact_chunk_boost", False) and profile == "multi_hop":
+            weights = {**weights, "chunk": max(weights.get("chunk", 0.8), 1.05)}
         for item in candidates:
+            label = str(item.get("label", "")).lower()
+            source_bonus = 0.0
+            if getattr(self.config, "enable_fact_source_first_evidence", False):
+                if "filtered fact source" in label:
+                    source_bonus += 0.22
+                elif "local sentence context" in label:
+                    source_bonus += 0.12
             item["pack_score"] = (
                 weights.get(item["kind"], 1.0) * float(item.get("score", 0.0))
                 + 0.35 * float(item.get("coverage", 0.0))
+                + source_bonus
             )
 
         selected = []
@@ -590,6 +873,7 @@ class NaiveRetriever:
             "coverage": float(coverage),
             "title": title,
             "node_id": node_id,
+            "label": label,
         }
 
     def _passage_excerpt(self, text: str, query: str, max_tokens: int) -> str:

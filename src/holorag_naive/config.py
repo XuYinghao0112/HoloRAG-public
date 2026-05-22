@@ -53,6 +53,17 @@ class NaiveHoloRAGConfig:
     fact_rerank_top_k: int = 24
     fact_rerank_keep_k: int = 12
     fact_rerank_use_llm: bool = False
+    fact_rerank_llm_candidate_k: int = 12
+    fact_rerank_llm_keep_k: int = 5
+    enable_fact_source_first_evidence: bool = False
+    enable_fact_chunk_boost: bool = False
+    fact_chunk_boost: float = 0.35
+    enable_fair_sentence_context: bool = False
+    evidence_extra_ranked_sentence_k: int = 6
+    evidence_max_sentences: int = 18
+    evidence_title_limit: int = 3
+    evidence_passage_context_k: int = 2
+    evidence_passage_excerpt_tokens: int = 150
     enable_no_fact_fallback: bool = True
     entity_hub_suppression: float = 1.0
 

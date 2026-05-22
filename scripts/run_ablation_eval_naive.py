@@ -331,6 +331,18 @@ def build_config(args: argparse.Namespace, save_dir: str):
         spacy_model_name=args.spacy_model_name,
         passage_output_top_k=max(args.topk_passages, args.passage_output_top_k),
         qa_passage_top_k=args.topk_passages,
+        fact_rerank_use_llm=args.fact_rerank_use_llm,
+        fact_rerank_llm_candidate_k=args.fact_rerank_llm_candidate_k,
+        fact_rerank_llm_keep_k=args.fact_rerank_llm_keep_k,
+        enable_fact_source_first_evidence=args.enable_fact_source_first_evidence,
+        enable_fact_chunk_boost=args.enable_fact_chunk_boost,
+        fact_chunk_boost=args.fact_chunk_boost,
+        enable_fair_sentence_context=args.enable_fair_sentence_context,
+        evidence_extra_ranked_sentence_k=args.evidence_extra_ranked_sentence_k,
+        evidence_max_sentences=args.evidence_max_sentences,
+        evidence_title_limit=args.evidence_title_limit,
+        evidence_passage_context_k=args.evidence_passage_context_k,
+        evidence_passage_excerpt_tokens=args.evidence_passage_excerpt_tokens,
     )
 
 
@@ -646,6 +658,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--passage_output_top_k", type=int, default=10)
     parser.add_argument("--qa_max_input_tokens", type=int, default=7000)
     parser.add_argument("--qa_evidence_token_budget", type=int, default=620)
+    parser.add_argument("--fact_rerank_use_llm", action="store_true")
+    parser.add_argument("--fact_rerank_llm_candidate_k", type=int, default=12)
+    parser.add_argument("--fact_rerank_llm_keep_k", type=int, default=5)
+    parser.add_argument("--enable_fact_source_first_evidence", action="store_true")
+    parser.add_argument("--enable_fact_chunk_boost", action="store_true")
+    parser.add_argument("--fact_chunk_boost", type=float, default=0.35)
+    parser.add_argument("--enable_fair_sentence_context", action="store_true")
+    parser.add_argument("--evidence_extra_ranked_sentence_k", type=int, default=6)
+    parser.add_argument("--evidence_max_sentences", type=int, default=18)
+    parser.add_argument("--evidence_title_limit", type=int, default=3)
+    parser.add_argument("--evidence_passage_context_k", type=int, default=2)
+    parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=150)
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
@@ -773,6 +797,18 @@ def main() -> None:
                 "topk_passages": args.topk_passages,
                 "qa_max_input_tokens": args.qa_max_input_tokens,
                 "qa_evidence_token_budget": args.qa_evidence_token_budget,
+                "fact_rerank_use_llm": rag.config.fact_rerank_use_llm,
+                "fact_rerank_llm_candidate_k": rag.config.fact_rerank_llm_candidate_k,
+                "fact_rerank_llm_keep_k": rag.config.fact_rerank_llm_keep_k,
+                "enable_fact_source_first_evidence": rag.config.enable_fact_source_first_evidence,
+                "enable_fact_chunk_boost": rag.config.enable_fact_chunk_boost,
+                "fact_chunk_boost": rag.config.fact_chunk_boost,
+                "enable_fair_sentence_context": rag.config.enable_fair_sentence_context,
+                "evidence_extra_ranked_sentence_k": rag.config.evidence_extra_ranked_sentence_k,
+                "evidence_max_sentences": rag.config.evidence_max_sentences,
+                "evidence_title_limit": rag.config.evidence_title_limit,
+                "evidence_passage_context_k": rag.config.evidence_passage_context_k,
+                "evidence_passage_excerpt_tokens": rag.config.evidence_passage_excerpt_tokens,
                 "shared_index_root": str(shared_index_root),
             },
             ensure_ascii=False,

@@ -37,7 +37,7 @@ class NaiveHoloRAG:
             triple_extractor=self.triple_extractor,
             embedder=self.embedder,
         )
-        self.retriever = NaiveRetriever(self.config, self.embedder)
+        self.retriever = NaiveRetriever(self.config, self.embedder, self.llm_client)
         self.page_rank = GranularityPageRank(self.config)
         self.reader = NaiveQAReader(self.config, self.llm_client)
         self.state: Optional[Dict] = None
