@@ -35,22 +35,41 @@ class NaiveRetriever:
         chunk_scores = self._retrieve_chunks(query, state)
 
         seed_scores: Dict[str, float] = defaultdict(float)
-        merge_weighted_scores(seed_scores, entity_scores, alpha["entity"])
-        merge_weighted_scores(seed_scores, sentence_scores, alpha["sentence"])
-        merge_weighted_scores(seed_scores, chunk_scores, alpha["chunk"])
-        for fact_id, score in fact_scores.items():
-            fact = self._fact_by_id(state, fact_id)
-            if not fact:
-                continue
-            weighted = alpha["fact"] * float(score)
-            for node_id, scale in [
-                (fact.get("head_id", ""), 0.35),
-                (fact.get("tail_id", ""), 0.35),
-                (fact.get("sentence_id", ""), 0.20),
-                (fact.get("chunk_id", ""), 0.10),
-            ]:
+        seed_mode = str(getattr(self.config, "ppr_seed_mode", "mixed") or "mixed")
+        if seed_mode == "hippo_entity_passage":
+            # Match HippoRAG's reset distribution more closely: the random walk
+            # starts from reranked fact endpoints plus a light dense-passage prior.
+            for fact_id, score in fact_scores.items():
+                fact = self._fact_by_id(state, fact_id)
+                if not fact:
+                    continue
+                for node_id in [fact.get("head_id", ""), fact.get("tail_id", "")]:
+                    if node_id not in graph:
+                        continue
+                    weighted_score = float(score)
+                    if getattr(self.config, "enable_entity_occurrence_penalty", False):
+                        weighted_score /= max(1.0, float(self._entity_chunk_count(graph, node_id)))
+                    seed_scores[node_id] += weighted_score
+            for node_id, score in chunk_scores.items():
                 if node_id in graph:
-                    seed_scores[node_id] += weighted * scale
+                    seed_scores[node_id] += max(float(score), 0.0) * max(alpha.get("chunk", 0.0), 0.05)
+        else:
+            merge_weighted_scores(seed_scores, entity_scores, alpha["entity"])
+            merge_weighted_scores(seed_scores, sentence_scores, alpha["sentence"])
+            merge_weighted_scores(seed_scores, chunk_scores, alpha["chunk"])
+            for fact_id, score in fact_scores.items():
+                fact = self._fact_by_id(state, fact_id)
+                if not fact:
+                    continue
+                weighted = alpha["fact"] * float(score)
+                for node_id, scale in [
+                    (fact.get("head_id", ""), 0.35),
+                    (fact.get("tail_id", ""), 0.35),
+                    (fact.get("sentence_id", ""), 0.20),
+                    (fact.get("chunk_id", ""), 0.10),
+                ]:
+                    if node_id in graph:
+                        seed_scores[node_id] += weighted * scale
 
         # Reduce hub entities before normalization to avoid over-seeding generic nodes.
         seed_scores = self._apply_entity_hub_suppression(graph, seed_scores)
@@ -169,7 +188,16 @@ class NaiveRetriever:
         else:
             facts = list(ranked_facts[: min(self.config.fact_top_k, 8)])
             source_sentences = self._source_sentences_for_facts(graph, facts)
-            if getattr(self.config, "enable_fact_source_first_evidence", False):
+            if str(getattr(self.config, "evidence_selection_mode", "ranked") or "ranked") == "chain":
+                evidence_groups, sentences = self._chain_sentence_groups(
+                    graph=graph,
+                    ranked_sentences=ranked_sentences,
+                    source_sentences=source_sentences,
+                    ranked_facts=facts,
+                    sub_questions=sub_questions,
+                    query=query,
+                )
+            elif getattr(self.config, "enable_fact_source_first_evidence", False):
                 evidence_groups, sentences = self._fact_source_first_sentence_groups(
                     graph=graph,
                     ranked_sentences=ranked_sentences,
@@ -367,14 +395,26 @@ class NaiveRetriever:
             for row in rows
         ]
         fallback = {"selected_ids": [row["id"] for row in rows[:keep_k]]}
-        payload, raw = self.llm_client.infer_json(
-            system_prompt=(
+        if str(getattr(self.config, "fact_rerank_prompt_mode", "default") or "default") == "chain":
+            system_prompt = (
+                "You filter factual triples for multi-hop question answering. "
+                "Select only facts that are directly useful for answering the question or for linking to the next hop. "
+                "Prefer a compact reasoning chain: one fact that identifies the bridge entity and one fact that states the final-answer attribute. "
+                "Avoid near-miss family, spouse, date, place, or title facts unless their relation exactly matches the question. "
+                "When possible, keep evidence from different relevant titles instead of many facts from the same title. "
+                "Return JSON only with key selected_ids, a list of integer ids. "
+                f"Select at most {keep_k} facts."
+            )
+        else:
+            system_prompt = (
                 "You filter factual triples for multi-hop question answering. "
                 "Select only facts that are directly useful for answering the question or for linking to the next hop. "
                 "Prefer facts that identify bridge entities and final-answer attributes. "
                 "Return JSON only with key selected_ids, a list of integer ids. "
                 f"Select at most {keep_k} facts."
-            ),
+            )
+        payload, raw = self.llm_client.infer_json(
+            system_prompt=system_prompt,
             user_prompt=(
                 f"Question:\n{query}\n\n"
                 f"Candidate facts:\n{compact_rows}\n\n"
@@ -601,6 +641,110 @@ class NaiveRetriever:
         if not groups:
             groups.append({"label": "Retrieved sentences", "items": selected[:12]})
         return groups, selected[:14]
+
+    def _chain_sentence_groups(
+        self,
+        graph: nx.DiGraph,
+        ranked_sentences: Sequence[Dict],
+        source_sentences: Sequence[Dict],
+        ranked_facts: Sequence[Dict],
+        sub_questions: Sequence[str],
+        query: str,
+    ) -> Tuple[List[Dict], List[Dict]]:
+        selected: List[Dict] = []
+        title_counts: Dict[str, int] = defaultdict(int)
+        max_sentences = max(8, int(getattr(self.config, "evidence_max_sentences", 14)))
+        per_subquestion = max(1, int(getattr(self.config, "chain_evidence_per_subquestion", 2)))
+        extra_k = max(0, int(getattr(self.config, "chain_evidence_extra_k", 3)))
+
+        def add(record: Dict, title_limit: int = 2) -> bool:
+            node_id = record.get("node_id")
+            if not node_id or any(item.get("node_id") == node_id for item in selected):
+                return False
+            title_key = self._title_key(record)
+            if title_key and title_counts[title_key] >= title_limit:
+                return False
+            selected.append(record)
+            if title_key:
+                title_counts[title_key] += 1
+            return True
+
+        relation_terms = self._relation_terms(query)
+        fact_source_by_sentence = {item.get("node_id"): item for item in source_sentences if item.get("node_id")}
+
+        bridge_items = []
+        for fact in ranked_facts[: max(3, self.config.fact_top_k)]:
+            sentence_id = fact.get("sentence_id")
+            if sentence_id not in graph:
+                continue
+            record = fact_source_by_sentence.get(sentence_id) or self._sentence_record(graph, sentence_id, float(fact.get("score", 0.0)))
+            record = dict(record)
+            record["score"] = float(record.get("score", 0.0)) + 0.25 * self._relation_match_score(relation_terms, fact)
+            if add(record, title_limit=2):
+                bridge_items.append(record)
+            if len(bridge_items) >= min(4, max_sentences // 2):
+                break
+
+        subquestion_items = []
+        for sub_question in sub_questions:
+            candidates = sorted(
+                ranked_sentences,
+                key=lambda item: (
+                    self._coverage_score(str(sub_question), item),
+                    self._relation_text_score(relation_terms, item),
+                    float(item.get("score", 0.0)),
+                ),
+                reverse=True,
+            )
+            added_for_subquestion = 0
+            for candidate in candidates:
+                if add(candidate, title_limit=2):
+                    subquestion_items.append(candidate)
+                    added_for_subquestion += 1
+                if added_for_subquestion >= per_subquestion:
+                    break
+            if len(selected) >= max_sentences - extra_k:
+                break
+
+        local_context = []
+        for fact in ranked_facts[:4]:
+            for record in self._chunk_sentences_around_fact(graph, fact):
+                if add(record, title_limit=2):
+                    local_context.append(record)
+                if len(local_context) >= 3 or len(selected) >= max_sentences:
+                    break
+            if len(local_context) >= 3 or len(selected) >= max_sentences:
+                break
+
+        extras = []
+        if len(selected) < max_sentences:
+            candidates = sorted(
+                ranked_sentences,
+                key=lambda item: (
+                    self._relation_text_score(relation_terms, item),
+                    self._coverage_score(query, item),
+                    float(item.get("score", 0.0)),
+                ),
+                reverse=True,
+            )
+            for candidate in candidates:
+                if add(candidate, title_limit=2):
+                    extras.append(candidate)
+                if len(extras) >= extra_k or len(selected) >= max_sentences:
+                    break
+
+        groups = []
+        if bridge_items:
+            groups.append({"label": "Chain facts", "items": bridge_items})
+        if subquestion_items:
+            groups.append({"label": "Chain sub-question evidence", "items": subquestion_items})
+        if local_context:
+            groups.append({"label": "Chain local context", "items": local_context})
+        if extras:
+            groups.append({"label": "Chain extras", "items": extras})
+        if not groups:
+            groups.append({"label": "Retrieved sentences", "items": selected[:max_sentences]})
+        return groups, selected[:max_sentences]
 
     def _add_fair_ranked_sentence_context(
         self,
@@ -938,6 +1082,43 @@ class NaiveRetriever:
             "do", "this", "that", "its", "his", "her", "their", "has", "have", "had", "film", "song",
         }
         return {term for term in re.findall(r"[A-Za-z0-9']+", str(text or "").lower()) if len(term) > 2 and term not in stopwords}
+
+    def _relation_terms(self, text: str) -> set:
+        relation_vocab = {
+            "father", "mother", "grandfather", "grandmother", "parent", "parents", "spouse", "wife", "husband",
+            "child", "grandchild", "uncle", "aunt", "director", "performer", "composer", "producer", "writer",
+            "born", "birth", "died", "death", "place", "date", "cause", "country", "work", "graduate",
+            "established", "released", "earlier", "later", "older", "younger", "award",
+        }
+        return {term for term in re.findall(r"[A-Za-z0-9']+", str(text or "").lower()) if term in relation_vocab}
+
+    def _relation_text_score(self, relation_terms: set, record: Dict) -> float:
+        if not relation_terms:
+            return 0.0
+        text = f"{record.get('title', '')} {record.get('text', '')}".lower()
+        hits = sum(1 for term in relation_terms if term in text)
+        return hits / max(1, len(relation_terms))
+
+    def _relation_match_score(self, relation_terms: set, fact: Dict) -> float:
+        if not relation_terms:
+            return 0.0
+        text = f"{fact.get('relation', '')} {fact.get('text', '')}".lower()
+        hits = sum(1 for term in relation_terms if term in text)
+        return hits / max(1, len(relation_terms))
+
+    def _entity_chunk_count(self, graph: nx.DiGraph, entity_id: str) -> int:
+        chunks = set()
+        for neighbor in list(graph.successors(entity_id)) + list(graph.predecessors(entity_id)):
+            if neighbor not in graph:
+                continue
+            attrs = graph.nodes[neighbor]
+            if attrs.get("node_type") == "chunk":
+                chunks.add(neighbor)
+            elif attrs.get("node_type") == "sentence":
+                chunk_id = attrs.get("metadata", {}).get("chunk_id")
+                if chunk_id:
+                    chunks.add(chunk_id)
+        return max(1, len(chunks))
 
     def _apply_entity_hub_suppression(self, graph: nx.DiGraph, seed_scores: Dict[str, float]) -> Dict[str, float]:
         gamma = max(float(self.config.entity_hub_suppression), 0.0)

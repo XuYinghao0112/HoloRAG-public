@@ -334,6 +334,7 @@ def build_config(args: argparse.Namespace, save_dir: str):
         fact_rerank_use_llm=args.fact_rerank_use_llm,
         fact_rerank_llm_candidate_k=args.fact_rerank_llm_candidate_k,
         fact_rerank_llm_keep_k=args.fact_rerank_llm_keep_k,
+        fact_rerank_prompt_mode=args.fact_rerank_prompt_mode,
         enable_fact_source_first_evidence=args.enable_fact_source_first_evidence,
         enable_fact_chunk_boost=args.enable_fact_chunk_boost,
         fact_chunk_boost=args.fact_chunk_boost,
@@ -343,6 +344,11 @@ def build_config(args: argparse.Namespace, save_dir: str):
         evidence_title_limit=args.evidence_title_limit,
         evidence_passage_context_k=args.evidence_passage_context_k,
         evidence_passage_excerpt_tokens=args.evidence_passage_excerpt_tokens,
+        ppr_seed_mode=args.ppr_seed_mode,
+        enable_entity_occurrence_penalty=args.enable_entity_occurrence_penalty,
+        evidence_selection_mode=args.evidence_selection_mode,
+        chain_evidence_per_subquestion=args.chain_evidence_per_subquestion,
+        chain_evidence_extra_k=args.chain_evidence_extra_k,
     )
 
 
@@ -661,6 +667,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fact_rerank_use_llm", action="store_true")
     parser.add_argument("--fact_rerank_llm_candidate_k", type=int, default=12)
     parser.add_argument("--fact_rerank_llm_keep_k", type=int, default=5)
+    parser.add_argument("--fact_rerank_prompt_mode", type=str, default="default", choices=["default", "chain"])
     parser.add_argument("--enable_fact_source_first_evidence", action="store_true")
     parser.add_argument("--enable_fact_chunk_boost", action="store_true")
     parser.add_argument("--fact_chunk_boost", type=float, default=0.35)
@@ -670,6 +677,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence_title_limit", type=int, default=3)
     parser.add_argument("--evidence_passage_context_k", type=int, default=2)
     parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=150)
+    parser.add_argument("--ppr_seed_mode", type=str, default="mixed", choices=["mixed", "hippo_entity_passage"])
+    parser.add_argument("--enable_entity_occurrence_penalty", action="store_true")
+    parser.add_argument("--evidence_selection_mode", type=str, default="ranked", choices=["ranked", "chain"])
+    parser.add_argument("--chain_evidence_per_subquestion", type=int, default=2)
+    parser.add_argument("--chain_evidence_extra_k", type=int, default=3)
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
@@ -800,6 +812,7 @@ def main() -> None:
                 "fact_rerank_use_llm": rag.config.fact_rerank_use_llm,
                 "fact_rerank_llm_candidate_k": rag.config.fact_rerank_llm_candidate_k,
                 "fact_rerank_llm_keep_k": rag.config.fact_rerank_llm_keep_k,
+                "fact_rerank_prompt_mode": rag.config.fact_rerank_prompt_mode,
                 "enable_fact_source_first_evidence": rag.config.enable_fact_source_first_evidence,
                 "enable_fact_chunk_boost": rag.config.enable_fact_chunk_boost,
                 "fact_chunk_boost": rag.config.fact_chunk_boost,
@@ -809,6 +822,11 @@ def main() -> None:
                 "evidence_title_limit": rag.config.evidence_title_limit,
                 "evidence_passage_context_k": rag.config.evidence_passage_context_k,
                 "evidence_passage_excerpt_tokens": rag.config.evidence_passage_excerpt_tokens,
+                "ppr_seed_mode": rag.config.ppr_seed_mode,
+                "enable_entity_occurrence_penalty": rag.config.enable_entity_occurrence_penalty,
+                "evidence_selection_mode": rag.config.evidence_selection_mode,
+                "chain_evidence_per_subquestion": rag.config.chain_evidence_per_subquestion,
+                "chain_evidence_extra_k": rag.config.chain_evidence_extra_k,
                 "shared_index_root": str(shared_index_root),
             },
             ensure_ascii=False,
