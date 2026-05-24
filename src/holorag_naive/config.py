@@ -55,7 +55,6 @@ class NaiveHoloRAGConfig:
     fact_rerank_use_llm: bool = False
     fact_rerank_llm_candidate_k: int = 12
     fact_rerank_llm_keep_k: int = 5
-    fact_rerank_prompt_mode: str = "default"
     enable_fact_source_first_evidence: bool = False
     enable_fact_chunk_boost: bool = False
     fact_chunk_boost: float = 0.35
@@ -67,11 +66,6 @@ class NaiveHoloRAGConfig:
     evidence_passage_excerpt_tokens: int = 150
     enable_no_fact_fallback: bool = True
     entity_hub_suppression: float = 1.0
-    ppr_seed_mode: str = "mixed"
-    enable_entity_occurrence_penalty: bool = False
-    evidence_selection_mode: str = "ranked"
-    chain_evidence_per_subquestion: int = 2
-    chain_evidence_extra_k: int = 3
 
     edge_type_weights: Dict[str, float] = field(default_factory=lambda: {
         "entity_relation": 1.0,

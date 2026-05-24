@@ -1,495 +1,206 @@
-2026-05-21 20:37:53,517 INFO Run directory: /data/xyh/code/HoloRAG/outputs/musique_eval/ablation_runs/v1
-2026-05-21 20:37:53,517 INFO Python executable: /home/xyh/miniconda3/envs/holorag-dev/bin/python
-2026-05-21 20:37:53,530 INFO LLM server reachable: http://127.0.0.1:8000/v1/models
-2026-05-21 20:37:53,907 INFO Loading embedding model: /data/xyh/models/NV-Embed-v2 on cuda:3
-2026-05-21 20:38:07,529 INFO [index][1/200] start 4c114f84ca41284c0845705943adc10b70a4fd3e8d0ca295
-2026-05-21 20:38:07,529 INFO Building naive HoloRAG index for 14 documents
-2026-05-21 20:38:11,943 INFO Embedding graph layers: 1576 entities, 2467 facts, 662 sentences, 61 chunks
-2026-05-21 20:39:45,272 INFO [index][1/200] 4c114f84ca41284c0845705943adc10b70a4fd3e8d0ca295 | 97.743s
-2026-05-21 20:39:45,272 INFO [index][2/200] start 4606a3d2fbbd29e034c815d51bd05e8d5481860ad8c1e7ef
-2026-05-21 20:39:45,272 INFO Building naive HoloRAG index for 3 documents
-2026-05-21 20:39:49,506 INFO Embedding graph layers: 932 entities, 1696 facts, 646 sentences, 62 chunks
-2026-05-21 20:40:50,824 INFO [index][2/200] 4606a3d2fbbd29e034c815d51bd05e8d5481860ad8c1e7ef | 65.552s
-2026-05-21 20:40:50,825 INFO [index][3/200] start b5e26a0b0703d3a7b6b9ae4fd8627043ee84005137f515cd
-2026-05-21 20:40:50,825 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 20:40:59,466 INFO Embedding graph layers: 1470 entities, 2802 facts, 644 sentences, 65 chunks
-2026-05-21 20:42:36,113 INFO [index][3/200] b5e26a0b0703d3a7b6b9ae4fd8627043ee84005137f515cd | 105.287s
-2026-05-21 20:42:36,113 INFO [index][4/200] start e9a0c409564baa2cadde3aa638d789031755b0ca9b72c63b
-2026-05-21 20:42:36,113 INFO Building naive HoloRAG index for 11 documents
-2026-05-21 20:42:40,568 INFO Embedding graph layers: 1532 entities, 2799 facts, 753 sentences, 62 chunks
-2026-05-21 20:44:20,365 INFO [index][4/200] e9a0c409564baa2cadde3aa638d789031755b0ca9b72c63b | 104.251s
-2026-05-21 20:44:20,365 INFO [index][5/200] start b129c8e6a0b184509c1a36a6b8b5703c924ee965727e79bc
-2026-05-21 20:44:20,366 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 20:44:24,870 INFO Embedding graph layers: 1535 entities, 2622 facts, 710 sentences, 66 chunks
-2026-05-21 20:46:00,423 INFO [index][5/200] b129c8e6a0b184509c1a36a6b8b5703c924ee965727e79bc | 100.057s
-2026-05-21 20:46:00,424 INFO [index][6/200] start 685f8561239902c340fcf6b70d5ddc919b62aaf2b543ae3f
-2026-05-21 20:46:00,424 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 20:46:04,791 INFO Embedding graph layers: 1498 entities, 2871 facts, 707 sentences, 61 chunks
-2026-05-21 20:47:45,659 INFO [index][6/200] 685f8561239902c340fcf6b70d5ddc919b62aaf2b543ae3f | 105.235s
-2026-05-21 20:47:45,659 INFO [index][7/200] start 32b91f4d1aef1cc3c103e544e4fca9025ed7e6d677dbe380
-2026-05-21 20:47:45,659 INFO Building naive HoloRAG index for 17 documents
-2026-05-21 20:47:49,775 INFO Embedding graph layers: 1385 entities, 2188 facts, 655 sentences, 65 chunks
-2026-05-21 20:49:11,894 INFO [index][7/200] 32b91f4d1aef1cc3c103e544e4fca9025ed7e6d677dbe380 | 86.234s
-2026-05-21 20:49:11,894 INFO [index][8/200] start 936ced65be306aaccf844e11a0e0ef544d44a2a7edec8f14
-2026-05-21 20:49:11,894 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 20:49:15,872 INFO Embedding graph layers: 1320 entities, 2030 facts, 588 sentences, 63 chunks
-2026-05-21 20:50:35,145 INFO [index][8/200] 936ced65be306aaccf844e11a0e0ef544d44a2a7edec8f14 | 83.237s
-2026-05-21 20:50:35,145 INFO [index][9/200] start e3d8c2e853ea5a5ce78f9285d01c0b9b6ba832bd1027699d
-2026-05-21 20:50:35,146 INFO Building naive HoloRAG index for 11 documents
-2026-05-21 20:50:43,393 INFO Embedding graph layers: 1552 entities, 1995 facts, 591 sentences, 56 chunks
-2026-05-21 20:52:10,978 INFO [index][9/200] e3d8c2e853ea5a5ce78f9285d01c0b9b6ba832bd1027699d | 95.832s
-2026-05-21 20:52:10,979 INFO [index][10/200] start fa5051512fcaa4d026335b0dc206addf60f317d85cc8998b
-2026-05-21 20:52:10,979 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 20:52:14,982 INFO Embedding graph layers: 1367 entities, 2156 facts, 640 sentences, 60 chunks
-2026-05-21 20:53:40,461 INFO [index][10/200] fa5051512fcaa4d026335b0dc206addf60f317d85cc8998b | 89.482s
-2026-05-21 20:53:40,461 INFO [index][11/200] start 220004b7b3836d023f1e416666c0d8d43ae75a77c1a8bdd0
-2026-05-21 20:53:40,462 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 20:53:46,417 INFO Embedding graph layers: 1563 entities, 2486 facts, 776 sentences, 66 chunks
-2026-05-21 20:55:21,779 INFO [index][11/200] 220004b7b3836d023f1e416666c0d8d43ae75a77c1a8bdd0 | 101.317s
-2026-05-21 20:55:21,779 INFO [index][12/200] start 7d7eb390be7dc75ca61b5eda6a9d9b36372273d1bd42646a
-2026-05-21 20:55:21,779 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 20:55:25,352 INFO Embedding graph layers: 1705 entities, 1802 facts, 488 sentences, 56 chunks
-2026-05-21 20:57:00,456 INFO [index][12/200] 7d7eb390be7dc75ca61b5eda6a9d9b36372273d1bd42646a | 98.677s
-2026-05-21 20:57:00,456 INFO [index][13/200] start 70a325ff2a0681bc4f6fd064f47bf88b4551447ac97dea96
-2026-05-21 20:57:00,456 INFO Building naive HoloRAG index for 14 documents
-2026-05-21 20:57:04,961 INFO Embedding graph layers: 1440 entities, 2544 facts, 803 sentences, 63 chunks
-2026-05-21 20:58:35,881 INFO [index][13/200] 70a325ff2a0681bc4f6fd064f47bf88b4551447ac97dea96 | 95.424s
-2026-05-21 20:58:35,881 INFO [index][14/200] start a148671baac67e52fbe07df27c3b4293f351a1d1b5d9a517
-2026-05-21 20:58:35,881 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 20:58:40,420 INFO Embedding graph layers: 1569 entities, 2659 facts, 702 sentences, 62 chunks
-2026-05-21 21:00:16,680 INFO [index][14/200] a148671baac67e52fbe07df27c3b4293f351a1d1b5d9a517 | 100.798s
-2026-05-21 21:00:16,680 INFO [index][15/200] start 26bd6d08ea272ac11bebcf5250b16ff90f92352cdac405c1
-2026-05-21 21:00:16,680 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 21:00:19,676 INFO Embedding graph layers: 993 entities, 1410 facts, 449 sentences, 52 chunks
-2026-05-21 21:01:13,493 INFO [index][15/200] 26bd6d08ea272ac11bebcf5250b16ff90f92352cdac405c1 | 56.813s
-2026-05-21 21:01:13,493 INFO [index][16/200] start 1f4b2eebc578880d3f401476be8e933f743e77a865a31902
-2026-05-21 21:01:13,493 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 21:01:17,290 INFO Embedding graph layers: 1212 entities, 1910 facts, 634 sentences, 59 chunks
-2026-05-21 21:02:34,970 INFO [index][16/200] 1f4b2eebc578880d3f401476be8e933f743e77a865a31902 | 81.476s
-2026-05-21 21:02:34,970 INFO [index][17/200] start 606e28838e5641e3dab2482d21f65cf2915cacdf6d63b454
-2026-05-21 21:02:34,970 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:02:39,274 INFO Embedding graph layers: 1811 entities, 3001 facts, 760 sentences, 60 chunks
-2026-05-21 21:04:33,070 INFO [index][17/200] 606e28838e5641e3dab2482d21f65cf2915cacdf6d63b454 | 118.099s
-2026-05-21 21:04:33,070 INFO [index][18/200] start 8fc8fb567703000eb6065c007e97841b11c9595b8862197b
-2026-05-21 21:04:33,073 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:04:39,334 INFO Embedding graph layers: 1279 entities, 2499 facts, 666 sentences, 63 chunks
-2026-05-21 21:05:59,958 INFO [index][18/200] 8fc8fb567703000eb6065c007e97841b11c9595b8862197b | 86.887s
-2026-05-21 21:05:59,958 INFO [index][19/200] start 30dac2419bdedc98a7dac06e6d4c8046262c2d0197c2b7f9
-2026-05-21 21:05:59,958 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 21:06:04,476 INFO Embedding graph layers: 1246 entities, 1632 facts, 715 sentences, 68 chunks
-2026-05-21 21:07:12,458 INFO [index][19/200] 30dac2419bdedc98a7dac06e6d4c8046262c2d0197c2b7f9 | 72.500s
-2026-05-21 21:07:12,458 INFO [index][20/200] start 936a34800c73e9d077b058fda4576fc45f8cb03bfae99c04
-2026-05-21 21:07:12,458 INFO Building naive HoloRAG index for 15 documents
-2026-05-21 21:07:16,309 INFO Embedding graph layers: 1490 entities, 2331 facts, 670 sentences, 64 chunks
-2026-05-21 21:08:43,504 INFO [index][20/200] 936a34800c73e9d077b058fda4576fc45f8cb03bfae99c04 | 91.045s
-2026-05-21 21:08:43,505 INFO [index][21/200] start e956e4868d588132bd2de1926dc446d0975c2d7a45090cad
-2026-05-21 21:08:43,505 INFO Building naive HoloRAG index for 15 documents
-2026-05-21 21:08:48,683 INFO Embedding graph layers: 1627 entities, 2276 facts, 694 sentences, 64 chunks
-2026-05-21 21:10:18,562 INFO [index][21/200] e956e4868d588132bd2de1926dc446d0975c2d7a45090cad | 95.056s
-2026-05-21 21:10:18,562 INFO [index][22/200] start 8f9aa7e502ca3fcd999cb05b87a6aa78ef4c4af96cbe3199
-2026-05-21 21:10:18,562 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 21:10:22,596 INFO Embedding graph layers: 1442 entities, 2063 facts, 606 sentences, 62 chunks
-2026-05-21 21:11:40,653 INFO [index][22/200] 8f9aa7e502ca3fcd999cb05b87a6aa78ef4c4af96cbe3199 | 82.091s
-2026-05-21 21:11:40,654 INFO [index][23/200] start 865a174ebe32ad81f573feb122198c1f16e6f2fd6c3fdda5
-2026-05-21 21:11:40,654 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:11:45,174 INFO Embedding graph layers: 962 entities, 1644 facts, 639 sentences, 67 chunks
-2026-05-21 21:12:43,613 INFO [index][23/200] 865a174ebe32ad81f573feb122198c1f16e6f2fd6c3fdda5 | 62.958s
-2026-05-21 21:12:43,613 INFO [index][24/200] start 177dde027032c5c71bf88fd4676536c0bef7d79d43c32659
-2026-05-21 21:12:43,613 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:12:47,470 INFO Embedding graph layers: 1183 entities, 1975 facts, 524 sentences, 61 chunks
-2026-05-21 21:14:02,666 INFO [index][24/200] 177dde027032c5c71bf88fd4676536c0bef7d79d43c32659 | 79.052s
-2026-05-21 21:14:02,666 INFO [index][25/200] start 78b24e393c76b4fcd88852e310548721c5eea12bb8848aca
-2026-05-21 21:14:02,666 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 21:14:07,503 INFO Embedding graph layers: 1391 entities, 2724 facts, 698 sentences, 67 chunks
-2026-05-21 21:15:45,488 INFO [index][25/200] 78b24e393c76b4fcd88852e310548721c5eea12bb8848aca | 102.821s
-2026-05-21 21:15:45,488 INFO [index][26/200] start 096c9e28af3c91a52463c424203181b2a9c114c3b782dbf5
-2026-05-21 21:15:45,488 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 21:15:49,279 INFO Embedding graph layers: 914 entities, 1863 facts, 656 sentences, 51 chunks
-2026-05-21 21:16:57,292 INFO [index][26/200] 096c9e28af3c91a52463c424203181b2a9c114c3b782dbf5 | 71.804s
-2026-05-21 21:16:57,293 INFO [index][27/200] start ecfec467704be2a08675527e8f1733d9fbb51309454145ef
-2026-05-21 21:16:57,293 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:17:04,328 INFO Embedding graph layers: 1316 entities, 2368 facts, 600 sentences, 65 chunks
-2026-05-21 21:18:28,493 INFO [index][27/200] ecfec467704be2a08675527e8f1733d9fbb51309454145ef | 91.199s
-2026-05-21 21:18:28,493 INFO [index][28/200] start 9724776e8c8210a47eae48302b73a9e2603c238d417a63f2
-2026-05-21 21:18:28,493 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 21:18:32,856 INFO Embedding graph layers: 1185 entities, 1943 facts, 661 sentences, 63 chunks
-2026-05-21 21:19:47,167 INFO [index][28/200] 9724776e8c8210a47eae48302b73a9e2603c238d417a63f2 | 78.673s
-2026-05-21 21:19:47,167 INFO [index][29/200] start 2df2586b40a9e5928817855c3b3a44c45b0809376372f38d
-2026-05-21 21:19:47,168 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 21:19:49,472 INFO Embedding graph layers: 1182 entities, 1987 facts, 519 sentences, 62 chunks
-2026-05-21 21:21:00,804 INFO [index][29/200] 2df2586b40a9e5928817855c3b3a44c45b0809376372f38d | 73.630s
-2026-05-21 21:21:00,806 INFO [index][30/200] start f4f04befbe7bb6e1ca4055ffd495356951166e116a15b3de
-2026-05-21 21:21:00,806 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 21:21:09,547 INFO Embedding graph layers: 1520 entities, 2550 facts, 627 sentences, 62 chunks
-2026-05-21 21:22:40,889 INFO [index][30/200] f4f04befbe7bb6e1ca4055ffd495356951166e116a15b3de | 100.084s
-2026-05-21 21:22:40,890 INFO [index][31/200] start 94e583be9e34ba8c8cec05546807a1516b652c80be180e9b
-2026-05-21 21:22:40,890 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 21:22:43,485 INFO Embedding graph layers: 989 entities, 1568 facts, 455 sentences, 45 chunks
-2026-05-21 21:23:38,116 INFO [index][31/200] 94e583be9e34ba8c8cec05546807a1516b652c80be180e9b | 57.226s
-2026-05-21 21:23:38,117 INFO [index][32/200] start 334f6b3c862e350efb163f95dd0e7f59e2928309909f66e7
-2026-05-21 21:23:38,117 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 21:23:42,513 INFO Embedding graph layers: 1412 entities, 2154 facts, 553 sentences, 63 chunks
-2026-05-21 21:25:09,589 INFO [index][32/200] 334f6b3c862e350efb163f95dd0e7f59e2928309909f66e7 | 91.472s
-2026-05-21 21:25:09,589 INFO [index][33/200] start 8cad76dd1dfee0d4847e99f55e46c401a1087fde2aee2cc8
-2026-05-21 21:25:09,589 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 21:25:13,795 INFO Embedding graph layers: 1288 entities, 2341 facts, 609 sentences, 62 chunks
-2026-05-21 21:26:35,021 INFO [index][33/200] 8cad76dd1dfee0d4847e99f55e46c401a1087fde2aee2cc8 | 85.431s
-2026-05-21 21:26:35,022 INFO [index][34/200] start a9233be5f19b456544331e69848af8bbf56256ce9ed0da78
-2026-05-21 21:26:35,022 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 21:26:40,606 INFO Embedding graph layers: 1548 entities, 2077 facts, 546 sentences, 61 chunks
-2026-05-21 21:28:07,750 INFO [index][34/200] a9233be5f19b456544331e69848af8bbf56256ce9ed0da78 | 92.728s
-2026-05-21 21:28:07,751 INFO [index][35/200] start 102eaee0943270c43f63b7d45a0088f6a8515e51a126d925
-2026-05-21 21:28:07,751 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 21:28:15,886 INFO Embedding graph layers: 1450 entities, 2267 facts, 601 sentences, 66 chunks
-2026-05-21 21:29:45,796 INFO [index][35/200] 102eaee0943270c43f63b7d45a0088f6a8515e51a126d925 | 98.045s
-2026-05-21 21:29:45,797 INFO [index][36/200] start de9c2fbc33bc6136a3a0598a7a1ad678882b4a8613f3900b
-2026-05-21 21:29:45,797 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 21:29:48,539 INFO Embedding graph layers: 1465 entities, 1862 facts, 386 sentences, 50 chunks
-2026-05-21 21:31:08,349 INFO [index][36/200] de9c2fbc33bc6136a3a0598a7a1ad678882b4a8613f3900b | 82.552s
-2026-05-21 21:31:08,350 INFO [index][37/200] start 74528b7f4e2b5d4c1667751615829ad5e7dfd81f9eb55e0c
-2026-05-21 21:31:08,350 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:31:13,072 INFO Embedding graph layers: 1156 entities, 1598 facts, 691 sentences, 65 chunks
-2026-05-21 21:32:22,500 INFO [index][37/200] 74528b7f4e2b5d4c1667751615829ad5e7dfd81f9eb55e0c | 74.150s
-2026-05-21 21:32:22,501 INFO [index][38/200] start 5c835b4c358e5f2e8c577dbc38c4857599539968e593a322
-2026-05-21 21:32:22,501 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 21:32:25,099 INFO Embedding graph layers: 1209 entities, 1443 facts, 354 sentences, 42 chunks
-2026-05-21 21:33:25,173 INFO [index][38/200] 5c835b4c358e5f2e8c577dbc38c4857599539968e593a322 | 62.672s
-2026-05-21 21:33:25,174 INFO [index][39/200] start 7e5b1ed484b4c095dbb201b8edc746f9f6e6202d1809a2f2
-2026-05-21 21:33:25,174 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:33:25,588 INFO Embedding graph layers: 1201 entities, 1846 facts, 468 sentences, 59 chunks
-2026-05-21 21:34:37,476 INFO [index][39/200] 7e5b1ed484b4c095dbb201b8edc746f9f6e6202d1809a2f2 | 72.302s
-2026-05-21 21:34:37,477 INFO [index][40/200] start 70444bcfcd30c497b730b5b408990ea2c672ec03caa5235f
-2026-05-21 21:34:37,477 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:34:40,795 INFO Embedding graph layers: 1169 entities, 2073 facts, 667 sentences, 66 chunks
-2026-05-21 21:35:53,672 INFO [index][40/200] 70444bcfcd30c497b730b5b408990ea2c672ec03caa5235f | 76.195s
-2026-05-21 21:35:53,673 INFO [index][41/200] start e62b87ef31160a755763a2c665a516dbcbcf1f116050019b
-2026-05-21 21:35:53,673 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 21:35:57,386 INFO Embedding graph layers: 1402 entities, 2124 facts, 602 sentences, 59 chunks
-2026-05-21 21:37:18,989 INFO [index][41/200] e62b87ef31160a755763a2c665a516dbcbcf1f116050019b | 85.316s
-2026-05-21 21:37:18,989 INFO [index][42/200] start 442e302cee202c213a085d6aa1caf87e3aebf6b954c690b0
-2026-05-21 21:37:18,989 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:37:23,622 INFO Embedding graph layers: 1335 entities, 2478 facts, 605 sentences, 62 chunks
-2026-05-21 21:38:52,516 INFO [index][42/200] 442e302cee202c213a085d6aa1caf87e3aebf6b954c690b0 | 93.526s
-2026-05-21 21:38:52,516 INFO [index][43/200] start 0f4da7d5be33010bcfb9197d3d910cc40bb8abc0ecc3bd32
-2026-05-21 21:38:52,516 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 21:38:55,129 INFO Embedding graph layers: 645 entities, 2450 facts, 661 sentences, 58 chunks
-2026-05-21 21:39:53,478 INFO [index][43/200] 0f4da7d5be33010bcfb9197d3d910cc40bb8abc0ecc3bd32 | 60.961s
-2026-05-21 21:39:53,478 INFO [index][44/200] start 17b78fd666e796626d85eb44cacd4bd767b9b6fd2f35c86a
-2026-05-21 21:39:53,478 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 21:39:57,503 INFO Embedding graph layers: 1146 entities, 1894 facts, 575 sentences, 64 chunks
-2026-05-21 21:41:11,017 INFO [index][44/200] 17b78fd666e796626d85eb44cacd4bd767b9b6fd2f35c86a | 77.539s
-2026-05-21 21:41:11,018 INFO [index][45/200] start 97d4194eb1fc6ee16c04f46d93fd5df5fd2ff5c60056799f
-2026-05-21 21:41:11,018 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 21:41:15,120 INFO Embedding graph layers: 1448 entities, 2501 facts, 678 sentences, 63 chunks
-2026-05-21 21:42:46,097 INFO [index][45/200] 97d4194eb1fc6ee16c04f46d93fd5df5fd2ff5c60056799f | 95.078s
-2026-05-21 21:42:46,097 INFO [index][46/200] start 338a13d60af61b3eeb099758086e6b1522a9adcd8f6cb207
-2026-05-21 21:42:46,097 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 21:42:48,076 INFO Embedding graph layers: 1093 entities, 1779 facts, 676 sentences, 64 chunks
-2026-05-21 21:43:53,829 INFO [index][46/200] 338a13d60af61b3eeb099758086e6b1522a9adcd8f6cb207 | 67.731s
-2026-05-21 21:43:53,829 INFO [index][47/200] start 73b7efc9538e65dda454b5be9d9b84a35decf082cd4091be
-2026-05-21 21:43:53,829 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 21:43:54,492 INFO Embedding graph layers: 1309 entities, 2409 facts, 672 sentences, 61 chunks
-2026-05-21 21:45:18,865 INFO [index][47/200] 73b7efc9538e65dda454b5be9d9b84a35decf082cd4091be | 85.035s
-2026-05-21 21:45:18,865 INFO [index][48/200] start 6cbb382cf679c0cf091fbf0d3c6d9638bffbc8ea039ca8b2
-2026-05-21 21:45:18,865 INFO Building naive HoloRAG index for 3 documents
-2026-05-21 21:45:23,181 INFO Embedding graph layers: 1108 entities, 2208 facts, 661 sentences, 65 chunks
-2026-05-21 21:46:33,434 INFO [index][48/200] 6cbb382cf679c0cf091fbf0d3c6d9638bffbc8ea039ca8b2 | 74.568s
-2026-05-21 21:46:33,435 INFO [index][49/200] start 96dfe963511d7bdd2daeda35b9fab72c44dcca15fbb91fba
-2026-05-21 21:46:33,435 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 21:46:37,383 INFO Embedding graph layers: 1330 entities, 2553 facts, 640 sentences, 64 chunks
-2026-05-21 21:48:05,091 INFO [index][49/200] 96dfe963511d7bdd2daeda35b9fab72c44dcca15fbb91fba | 91.656s
-2026-05-21 21:48:05,092 INFO [index][50/200] start f6ab8327fd10a883614cd3f571224c82f1cb7073de8a1143
-2026-05-21 21:48:05,092 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 21:48:09,433 INFO Embedding graph layers: 1294 entities, 2130 facts, 668 sentences, 63 chunks
-2026-05-21 21:49:28,583 INFO [index][50/200] f6ab8327fd10a883614cd3f571224c82f1cb7073de8a1143 | 83.491s
-2026-05-21 21:49:28,583 INFO [index][51/200] start 61193402df0b1548ecd9c722ee89b4354d336ded37b4cf49
-2026-05-21 21:49:28,583 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 21:49:29,671 INFO Embedding graph layers: 1359 entities, 2407 facts, 717 sentences, 63 chunks
-2026-05-21 21:50:50,885 INFO [index][51/200] 61193402df0b1548ecd9c722ee89b4354d336ded37b4cf49 | 82.301s
-2026-05-21 21:50:50,885 INFO [index][52/200] start 074cbee8a17dcc448865addb33f8269d21c814d1c0b73e84
-2026-05-21 21:50:50,885 INFO Building naive HoloRAG index for 14 documents
-2026-05-21 21:50:58,532 INFO Embedding graph layers: 1580 entities, 1657 facts, 386 sentences, 52 chunks
-2026-05-21 21:52:20,368 INFO [index][52/200] 074cbee8a17dcc448865addb33f8269d21c814d1c0b73e84 | 89.483s
-2026-05-21 21:52:20,369 INFO [index][53/200] start 0da7802e47b081fc2cc573f1d9559abcdd232d4733081512
-2026-05-21 21:52:20,369 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 21:52:22,097 INFO Embedding graph layers: 846 entities, 1388 facts, 365 sentences, 38 chunks
-2026-05-21 21:53:07,201 INFO [index][53/200] 0da7802e47b081fc2cc573f1d9559abcdd232d4733081512 | 46.832s
-2026-05-21 21:53:07,202 INFO [index][54/200] start ce2f0aec72fade99a1be4add19d9e6364caf398a4586c902
-2026-05-21 21:53:07,202 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 21:53:11,372 INFO Embedding graph layers: 1519 entities, 2272 facts, 613 sentences, 63 chunks
-2026-05-21 21:54:41,968 INFO [index][54/200] ce2f0aec72fade99a1be4add19d9e6364caf398a4586c902 | 94.766s
-2026-05-21 21:54:41,969 INFO [index][55/200] start 0b0b3547496ed078cb19ec901a35f071b7b3cf138fdf2e60
-2026-05-21 21:54:41,969 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:54:46,159 INFO Embedding graph layers: 1281 entities, 2209 facts, 575 sentences, 62 chunks
-2026-05-21 21:56:05,573 INFO [index][55/200] 0b0b3547496ed078cb19ec901a35f071b7b3cf138fdf2e60 | 83.604s
-2026-05-21 21:56:05,573 INFO [index][56/200] start 0942aa56c94ac545c00849686583273efd664347084e9682
-2026-05-21 21:56:05,573 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 21:56:09,463 INFO Embedding graph layers: 1196 entities, 2064 facts, 537 sentences, 59 chunks
-2026-05-21 21:57:19,340 INFO [index][56/200] 0942aa56c94ac545c00849686583273efd664347084e9682 | 73.766s
-2026-05-21 21:57:19,340 INFO [index][57/200] start 16db4ccc32ee8b04e3daee094ef5e8cfb985a4f0c2c999d5
-2026-05-21 21:57:19,340 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 21:57:22,861 INFO Embedding graph layers: 1129 entities, 1603 facts, 580 sentences, 56 chunks
-2026-05-21 21:58:24,454 INFO [index][57/200] 16db4ccc32ee8b04e3daee094ef5e8cfb985a4f0c2c999d5 | 65.113s
-2026-05-21 21:58:24,454 INFO [index][58/200] start 8267f95a2928cb63203d20da0079d98138d4f58281fc4e9e
-2026-05-21 21:58:24,454 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 21:58:25,875 INFO Embedding graph layers: 1784 entities, 2987 facts, 752 sentences, 57 chunks
-2026-05-21 22:00:19,134 INFO [index][58/200] 8267f95a2928cb63203d20da0079d98138d4f58281fc4e9e | 114.679s
-2026-05-21 22:00:19,134 INFO [index][59/200] start 9f271f822294cc528b1f20904bb7694884af4084e086d20f
-2026-05-21 22:00:19,134 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 22:00:23,787 INFO Embedding graph layers: 1345 entities, 2292 facts, 701 sentences, 66 chunks
-2026-05-21 22:01:45,475 INFO [index][59/200] 9f271f822294cc528b1f20904bb7694884af4084e086d20f | 86.340s
-2026-05-21 22:01:45,475 INFO [index][60/200] start 92a5f365ee7514ded1c6f5dac8470281083060c3e6ec7594
-2026-05-21 22:01:45,475 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 22:01:49,877 INFO Embedding graph layers: 1283 entities, 2364 facts, 700 sentences, 66 chunks
-2026-05-21 22:03:13,417 INFO [index][60/200] 92a5f365ee7514ded1c6f5dac8470281083060c3e6ec7594 | 87.942s
-2026-05-21 22:03:13,418 INFO [index][61/200] start a4d8d097bd76b3030a954d9943fd96cdbb51393ce75c43a5
-2026-05-21 22:03:13,418 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 22:03:15,019 INFO Embedding graph layers: 1084 entities, 1429 facts, 461 sentences, 44 chunks
-2026-05-21 22:04:08,859 INFO [index][61/200] a4d8d097bd76b3030a954d9943fd96cdbb51393ce75c43a5 | 55.441s
-2026-05-21 22:04:08,860 INFO [index][62/200] start 8e2a26fbfbcf2d28b9873a39bac21802372e822d41cdaa2b
-2026-05-21 22:04:08,860 INFO Building naive HoloRAG index for 17 documents
-2026-05-21 22:04:14,217 INFO Embedding graph layers: 1325 entities, 1806 facts, 500 sentences, 57 chunks
-2026-05-21 22:05:30,236 INFO [index][62/200] 8e2a26fbfbcf2d28b9873a39bac21802372e822d41cdaa2b | 81.376s
-2026-05-21 22:05:30,237 INFO [index][63/200] start 0140a933eed826f1c48d9a9c5c4717965cf982f1d749be6a
-2026-05-21 22:05:30,237 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 22:05:34,598 INFO Embedding graph layers: 1451 entities, 2723 facts, 745 sentences, 64 chunks
-2026-05-21 22:07:07,850 INFO [index][63/200] 0140a933eed826f1c48d9a9c5c4717965cf982f1d749be6a | 97.613s
-2026-05-21 22:07:07,850 INFO [index][64/200] start 64bae1eefc192258c2e5d8ecab71b8a02fc5a3d104c0fc21
-2026-05-21 22:07:07,850 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:07:10,593 INFO Embedding graph layers: 1410 entities, 2748 facts, 656 sentences, 63 chunks
-2026-05-21 22:08:43,703 INFO [index][64/200] 64bae1eefc192258c2e5d8ecab71b8a02fc5a3d104c0fc21 | 95.853s
-2026-05-21 22:08:43,704 INFO [index][65/200] start e935f6dea75d4f17c5f98b7e255950372a22ab83f9632876
-2026-05-21 22:08:43,704 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 22:08:47,970 INFO Embedding graph layers: 1022 entities, 1502 facts, 592 sentences, 69 chunks
-2026-05-21 22:09:47,101 INFO [index][65/200] e935f6dea75d4f17c5f98b7e255950372a22ab83f9632876 | 63.397s
-2026-05-21 22:09:47,102 INFO [index][66/200] start fe052f64d5c1f66bd84e1f2dc6df342b1ea10d2763c22a90
-2026-05-21 22:09:47,102 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 22:09:51,344 INFO Embedding graph layers: 906 entities, 1743 facts, 658 sentences, 62 chunks
-2026-05-21 22:10:52,342 INFO [index][66/200] fe052f64d5c1f66bd84e1f2dc6df342b1ea10d2763c22a90 | 65.240s
-2026-05-21 22:10:52,343 INFO [index][67/200] start 02bd004f6306542bfdf5e166da61b306b5cf5f2faf50f796
-2026-05-21 22:10:52,343 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 22:10:57,245 INFO Embedding graph layers: 1602 entities, 2390 facts, 669 sentences, 65 chunks
-2026-05-21 22:12:30,964 INFO [index][67/200] 02bd004f6306542bfdf5e166da61b306b5cf5f2faf50f796 | 98.621s
-2026-05-21 22:12:30,965 INFO [index][68/200] start e42937544d09a6051fc8507e1d3f89fe49b68d1300a44aa7
-2026-05-21 22:12:30,965 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:12:33,801 INFO Embedding graph layers: 1058 entities, 2612 facts, 743 sentences, 62 chunks
-2026-05-21 22:13:51,092 INFO [index][68/200] e42937544d09a6051fc8507e1d3f89fe49b68d1300a44aa7 | 80.127s
-2026-05-21 22:13:51,092 INFO [index][69/200] start 05f1867336770bf201cf9a88de60e2b9bdd893efe98d9593
-2026-05-21 22:13:51,092 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 22:13:52,215 INFO Embedding graph layers: 695 entities, 543 facts, 115 sentences, 23 chunks
-2026-05-21 22:14:18,414 INFO [index][69/200] 05f1867336770bf201cf9a88de60e2b9bdd893efe98d9593 | 27.321s
-2026-05-21 22:14:18,414 INFO [index][70/200] start ebaefb7e8412f8323769c1e4ee596d5135b609ae76514273
-2026-05-21 22:14:18,414 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 22:14:22,575 INFO Embedding graph layers: 1063 entities, 1418 facts, 644 sentences, 64 chunks
-2026-05-21 22:15:19,026 INFO [index][70/200] ebaefb7e8412f8323769c1e4ee596d5135b609ae76514273 | 60.611s
-2026-05-21 22:15:19,027 INFO [index][71/200] start e5d8a267444a8532a875af8cfb8b07e6f6d02d6e85148540
-2026-05-21 22:15:19,027 INFO Building naive HoloRAG index for 18 documents
-2026-05-21 22:15:22,794 INFO Embedding graph layers: 1226 entities, 1902 facts, 609 sentences, 63 chunks
-2026-05-21 22:16:33,596 INFO [index][71/200] e5d8a267444a8532a875af8cfb8b07e6f6d02d6e85148540 | 74.569s
-2026-05-21 22:16:33,596 INFO [index][72/200] start 648de9dea3ad81e8ac733acd312913385129ab16dd091834
-2026-05-21 22:16:33,596 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 22:16:34,517 INFO Embedding graph layers: 1149 entities, 2015 facts, 539 sentences, 63 chunks
-2026-05-21 22:17:41,022 INFO [index][72/200] 648de9dea3ad81e8ac733acd312913385129ab16dd091834 | 67.425s
-2026-05-21 22:17:41,022 INFO [index][73/200] start 3fb64043e4ebb85b0e1d08ca7112c56185d90becb1f4ad11
-2026-05-21 22:17:41,022 INFO Building naive HoloRAG index for 15 documents
-2026-05-21 22:17:45,602 INFO Embedding graph layers: 1585 entities, 2483 facts, 650 sentences, 62 chunks
-2026-05-21 22:19:14,498 INFO [index][73/200] 3fb64043e4ebb85b0e1d08ca7112c56185d90becb1f4ad11 | 93.476s
-2026-05-21 22:19:14,499 INFO [index][74/200] start c341a480cb5616540b22eb1018953ba04aa96dac5e286674
-2026-05-21 22:19:14,499 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:19:18,415 INFO Embedding graph layers: 1355 entities, 2302 facts, 525 sentences, 63 chunks
-2026-05-21 22:20:33,362 INFO [index][74/200] c341a480cb5616540b22eb1018953ba04aa96dac5e286674 | 78.863s
-2026-05-21 22:20:33,363 INFO [index][75/200] start f6564f948dc28ef7be445d610eb42c1a6a6042d47e62e7a6
-2026-05-21 22:20:33,363 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:20:37,602 INFO Embedding graph layers: 1468 entities, 2799 facts, 718 sentences, 62 chunks
-2026-05-21 22:22:10,123 INFO [index][75/200] f6564f948dc28ef7be445d610eb42c1a6a6042d47e62e7a6 | 96.759s
-2026-05-21 22:22:10,123 INFO [index][76/200] start 7ac9fed94844e0922433d13032d684b7336219240499d6c1
-2026-05-21 22:22:10,123 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 22:22:14,283 INFO Embedding graph layers: 1564 entities, 2111 facts, 630 sentences, 60 chunks
-2026-05-21 22:23:48,254 INFO [index][76/200] 7ac9fed94844e0922433d13032d684b7336219240499d6c1 | 98.130s
-2026-05-21 22:23:48,255 INFO [index][77/200] start 0675535ed1dda2d20a6a2d41fb4e8d2a6cacd6c6d953cafd
-2026-05-21 22:23:48,255 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 22:23:53,523 INFO Embedding graph layers: 1376 entities, 1883 facts, 572 sentences, 53 chunks
-2026-05-21 22:25:05,920 INFO [index][77/200] 0675535ed1dda2d20a6a2d41fb4e8d2a6cacd6c6d953cafd | 77.664s
-2026-05-21 22:25:05,920 INFO [index][78/200] start f182c6355042dd18a7d42f9275c46f1ee0c985e5ae5c6001
-2026-05-21 22:25:05,920 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 22:25:15,363 INFO Embedding graph layers: 1690 entities, 2727 facts, 768 sentences, 65 chunks
-2026-05-21 22:26:52,870 INFO [index][78/200] f182c6355042dd18a7d42f9275c46f1ee0c985e5ae5c6001 | 106.949s
-2026-05-21 22:26:52,870 INFO [index][79/200] start 7a9091fd0314d17f4fb7683cc0a078b04501e3fbc1f64b42
-2026-05-21 22:26:52,871 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 22:26:56,143 INFO Embedding graph layers: 1568 entities, 2586 facts, 720 sentences, 63 chunks
-2026-05-21 22:28:26,339 INFO [index][79/200] 7a9091fd0314d17f4fb7683cc0a078b04501e3fbc1f64b42 | 93.468s
-2026-05-21 22:28:26,339 INFO [index][80/200] start c44fa02fb87c848c0ab4d0a254787e29540715ef86fff95a
-2026-05-21 22:28:26,339 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 22:28:30,480 INFO Embedding graph layers: 1348 entities, 1999 facts, 673 sentences, 62 chunks
-2026-05-21 22:29:45,635 INFO [index][80/200] c44fa02fb87c848c0ab4d0a254787e29540715ef86fff95a | 79.295s
-2026-05-21 22:29:45,635 INFO [index][81/200] start e1be2d43c39ecba4174621ae6f571ae04eac92cfd209b786
-2026-05-21 22:29:45,635 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 22:29:48,039 INFO Embedding graph layers: 934 entities, 1618 facts, 655 sentences, 61 chunks
-2026-05-21 22:30:39,767 INFO [index][81/200] e1be2d43c39ecba4174621ae6f571ae04eac92cfd209b786 | 54.132s
-2026-05-21 22:30:39,767 INFO [index][82/200] start 59f0697aa3d51324795d9f102b93756a0f7bc68f5ebf4922
-2026-05-21 22:30:39,768 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 22:30:44,783 INFO Embedding graph layers: 1307 entities, 2452 facts, 684 sentences, 61 chunks
-2026-05-21 22:31:56,590 INFO [index][82/200] 59f0697aa3d51324795d9f102b93756a0f7bc68f5ebf4922 | 76.822s
-2026-05-21 22:31:56,591 INFO [index][83/200] start b4a033f133679fb6a0a2351544933c5537546d947ad50c8f
-2026-05-21 22:31:56,591 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:32:01,183 INFO Embedding graph layers: 1449 entities, 2538 facts, 693 sentences, 62 chunks
-2026-05-21 22:33:16,885 INFO [index][83/200] b4a033f133679fb6a0a2351544933c5537546d947ad50c8f | 80.292s
-2026-05-21 22:33:16,885 INFO [index][84/200] start aa614fdaaaefd5d4baa2796deb3b5f0067e79500b88427e5
-2026-05-21 22:33:16,886 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 22:33:21,265 INFO Embedding graph layers: 1381 entities, 2246 facts, 700 sentences, 67 chunks
-2026-05-21 22:34:34,135 INFO [index][84/200] aa614fdaaaefd5d4baa2796deb3b5f0067e79500b88427e5 | 77.249s
-2026-05-21 22:34:34,135 INFO [index][85/200] start 8bfb0eda3aaa2bad57532c81e874d3a974843ffd3ef0778c
-2026-05-21 22:34:34,135 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:34:35,923 INFO Embedding graph layers: 1199 entities, 2172 facts, 640 sentences, 61 chunks
-2026-05-21 22:35:40,677 INFO [index][85/200] 8bfb0eda3aaa2bad57532c81e874d3a974843ffd3ef0778c | 66.542s
-2026-05-21 22:35:40,678 INFO [index][86/200] start 0efe9b8bd5ade04ff3030e3d944b21b0ac4aa9527e17bde6
-2026-05-21 22:35:40,678 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 22:35:42,791 INFO Embedding graph layers: 1345 entities, 1790 facts, 577 sentences, 58 chunks
-2026-05-21 22:36:44,134 INFO [index][86/200] 0efe9b8bd5ade04ff3030e3d944b21b0ac4aa9527e17bde6 | 63.456s
-2026-05-21 22:36:44,134 INFO [index][87/200] start 027361f7300c0643dc5b5eb887d180e4917f12f6c1418ccb
-2026-05-21 22:36:44,134 INFO Building naive HoloRAG index for 15 documents
-2026-05-21 22:36:48,366 INFO Embedding graph layers: 1019 entities, 1752 facts, 584 sentences, 62 chunks
-2026-05-21 22:37:43,165 INFO [index][87/200] 027361f7300c0643dc5b5eb887d180e4917f12f6c1418ccb | 59.031s
-2026-05-21 22:37:43,166 INFO [index][88/200] start 011cb0e253041c568db1d0b01a34fa26ff951bbbdebbd887
-2026-05-21 22:37:43,166 INFO Building naive HoloRAG index for 12 documents
-2026-05-21 22:37:47,473 INFO Embedding graph layers: 1450 entities, 2586 facts, 753 sentences, 62 chunks
-2026-05-21 22:39:04,683 INFO [index][88/200] 011cb0e253041c568db1d0b01a34fa26ff951bbbdebbd887 | 81.517s
-2026-05-21 22:39:04,683 INFO [index][89/200] start 79669636487de3810792f2a9a1b4a7c253da580013d1d2fb
-2026-05-21 22:39:04,683 INFO Building naive HoloRAG index for 8 documents
-2026-05-21 22:39:09,709 INFO Embedding graph layers: 1235 entities, 2265 facts, 648 sentences, 67 chunks
-2026-05-21 22:40:15,323 INFO [index][89/200] 79669636487de3810792f2a9a1b4a7c253da580013d1d2fb | 70.639s
-2026-05-21 22:40:15,323 INFO [index][90/200] start bb809fb19df4d4c9b91facb813364d3590aeee692296fcfd
-2026-05-21 22:40:15,323 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:40:17,962 INFO Embedding graph layers: 1365 entities, 2684 facts, 622 sentences, 64 chunks
-2026-05-21 22:41:32,780 INFO [index][90/200] bb809fb19df4d4c9b91facb813364d3590aeee692296fcfd | 77.456s
-2026-05-21 22:41:32,780 INFO [index][91/200] start db14f1320cc3442cb2416f65c437cd0ee74449baf687602b
-2026-05-21 22:41:32,781 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:41:34,977 INFO Embedding graph layers: 835 entities, 2313 facts, 582 sentences, 61 chunks
-2026-05-21 22:42:32,487 INFO [index][91/200] db14f1320cc3442cb2416f65c437cd0ee74449baf687602b | 59.706s
-2026-05-21 22:42:32,487 INFO [index][92/200] start 037dbe8ccac208d33dfbd28d6fdc319f88b1c2c2bd4ba060
-2026-05-21 22:42:32,487 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 22:42:34,002 INFO Embedding graph layers: 1016 entities, 1828 facts, 597 sentences, 58 chunks
-2026-05-21 22:43:29,039 INFO [index][92/200] 037dbe8ccac208d33dfbd28d6fdc319f88b1c2c2bd4ba060 | 56.551s
-2026-05-21 22:43:29,039 INFO [index][93/200] start 0da908a928c375084638f1e0ab10c329679eaacae7e4ffe0
-2026-05-21 22:43:29,039 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:43:34,646 INFO Embedding graph layers: 1731 entities, 2888 facts, 707 sentences, 63 chunks
-2026-05-21 22:45:12,361 INFO [index][93/200] 0da908a928c375084638f1e0ab10c329679eaacae7e4ffe0 | 103.321s
-2026-05-21 22:45:12,361 INFO [index][94/200] start f9a50652b4e5d7000c42ae27b2477a54d2a88cfceec0ec3b
-2026-05-21 22:45:12,362 INFO Building naive HoloRAG index for 18 documents
-2026-05-21 22:45:17,833 INFO Embedding graph layers: 1603 entities, 2367 facts, 628 sentences, 59 chunks
-2026-05-21 22:46:38,672 INFO [index][94/200] f9a50652b4e5d7000c42ae27b2477a54d2a88cfceec0ec3b | 86.310s
-2026-05-21 22:46:38,673 INFO [index][95/200] start a4c716e09434218a16bdfed465322e369606bd38f23d815a
-2026-05-21 22:46:38,673 INFO Building naive HoloRAG index for 14 documents
-2026-05-21 22:46:42,788 INFO Embedding graph layers: 1210 entities, 1600 facts, 725 sentences, 65 chunks
-2026-05-21 22:47:41,625 INFO [index][95/200] a4c716e09434218a16bdfed465322e369606bd38f23d815a | 62.952s
-2026-05-21 22:47:41,626 INFO [index][96/200] start b2aec8a779fa030aae7a64520ebfdf3461750764aa79eb93
-2026-05-21 22:47:41,626 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 22:47:46,112 INFO Embedding graph layers: 1040 entities, 1385 facts, 763 sentences, 65 chunks
-2026-05-21 22:48:38,133 INFO [index][96/200] b2aec8a779fa030aae7a64520ebfdf3461750764aa79eb93 | 56.507s
-2026-05-21 22:48:38,134 INFO [index][97/200] start efa92baf3840922c7dc00ba73ad729345a2b12035fa39071
-2026-05-21 22:48:38,134 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 22:48:42,715 INFO Embedding graph layers: 1429 entities, 2234 facts, 578 sentences, 62 chunks
-2026-05-21 22:49:57,781 INFO [index][97/200] efa92baf3840922c7dc00ba73ad729345a2b12035fa39071 | 79.647s
-2026-05-21 22:49:57,782 INFO [index][98/200] start 5188d3c87c6fead7f796c62c3f1bd13ea8576bab724ea06d
-2026-05-21 22:49:57,782 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:50:01,533 INFO Embedding graph layers: 1128 entities, 1833 facts, 544 sentences, 60 chunks
-2026-05-21 22:50:58,968 INFO [index][98/200] 5188d3c87c6fead7f796c62c3f1bd13ea8576bab724ea06d | 61.186s
-2026-05-21 22:50:58,968 INFO [index][99/200] start 046a6c5856736e4dc6f532658038afabde83e9c71507832f
-2026-05-21 22:50:58,968 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 22:51:03,207 INFO Embedding graph layers: 1454 entities, 2408 facts, 660 sentences, 64 chunks
-2026-05-21 22:52:20,069 INFO [index][99/200] 046a6c5856736e4dc6f532658038afabde83e9c71507832f | 81.100s
-2026-05-21 22:52:20,069 INFO [index][100/200] start 296a82255560704f3fd8c8ea411827192d0eceddbf38ce4c
-2026-05-21 22:52:20,069 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:52:20,298 INFO Embedding graph layers: 1383 entities, 2708 facts, 646 sentences, 62 chunks
-2026-05-21 22:53:37,443 INFO [index][100/200] 296a82255560704f3fd8c8ea411827192d0eceddbf38ce4c | 77.373s
-2026-05-21 22:53:37,443 INFO [index][101/200] start 38da792d05c3f8c7220c951b8d66f7400debb80114932a80
-2026-05-21 22:53:37,443 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:53:40,403 INFO Embedding graph layers: 752 entities, 2667 facts, 701 sentences, 66 chunks
-2026-05-21 22:54:40,362 INFO [index][101/200] 38da792d05c3f8c7220c951b8d66f7400debb80114932a80 | 62.918s
-2026-05-21 22:54:40,362 INFO [index][102/200] start 458b3f8687920863190957c08123f885c60989f59bf40681
-2026-05-21 22:54:40,362 INFO Building naive HoloRAG index for 15 documents
-2026-05-21 22:54:43,979 INFO Embedding graph layers: 1368 entities, 2316 facts, 716 sentences, 65 chunks
-2026-05-21 22:55:55,987 INFO [index][102/200] 458b3f8687920863190957c08123f885c60989f59bf40681 | 75.624s
-2026-05-21 22:55:55,987 INFO [index][103/200] start 5a79dda7bfdfb77d539fe80abea20ca003c2fe0496b89c02
-2026-05-21 22:55:55,987 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:56:00,305 INFO Embedding graph layers: 1563 entities, 2752 facts, 732 sentences, 62 chunks
-2026-05-21 22:57:26,284 INFO [index][103/200] 5a79dda7bfdfb77d539fe80abea20ca003c2fe0496b89c02 | 90.297s
-2026-05-21 22:57:26,285 INFO [index][104/200] start 0b0d46b9b937c43da535ef8109b75a460051e57f97a3f7a2
-2026-05-21 22:57:26,285 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 22:57:30,631 INFO Embedding graph layers: 1199 entities, 2171 facts, 612 sentences, 66 chunks
-2026-05-21 22:58:34,696 INFO [index][104/200] 0b0d46b9b937c43da535ef8109b75a460051e57f97a3f7a2 | 68.411s
-2026-05-21 22:58:34,697 INFO [index][105/200] start 34145b6ab1de0faafa932494ca91bdfdf740ba41ecb21879
-2026-05-21 22:58:34,697 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 22:58:38,948 INFO Embedding graph layers: 1071 entities, 1979 facts, 740 sentences, 66 chunks
-2026-05-21 22:59:38,956 INFO [index][105/200] 34145b6ab1de0faafa932494ca91bdfdf740ba41ecb21879 | 64.259s
-2026-05-21 22:59:38,957 INFO [index][106/200] start ea32ca3702e3eedd278c8c77153712c07dbb5dd7025d8c3d
-2026-05-21 22:59:38,957 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 22:59:43,021 INFO Embedding graph layers: 1694 entities, 2479 facts, 628 sentences, 58 chunks
-2026-05-21 23:01:07,851 INFO [index][106/200] ea32ca3702e3eedd278c8c77153712c07dbb5dd7025d8c3d | 88.894s
-2026-05-21 23:01:07,851 INFO [index][107/200] start 3fe817c10d1006cd821b07586f51302a3263884e83211ba8
-2026-05-21 23:01:07,852 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 23:01:09,098 INFO Embedding graph layers: 1477 entities, 2547 facts, 684 sentences, 65 chunks
-2026-05-21 23:02:28,375 INFO [index][107/200] 3fe817c10d1006cd821b07586f51302a3263884e83211ba8 | 80.524s
-2026-05-21 23:02:28,376 INFO [index][108/200] start 1335c327548140bd1173eba9b1270d67dd4f7aafce0560a4
-2026-05-21 23:02:28,376 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 23:02:30,147 INFO Embedding graph layers: 1303 entities, 2066 facts, 652 sentences, 61 chunks
-2026-05-21 23:03:36,578 INFO [index][108/200] 1335c327548140bd1173eba9b1270d67dd4f7aafce0560a4 | 68.202s
-2026-05-21 23:03:36,579 INFO [index][109/200] start 517b237e011625d9c5ea0be465bdc9dcd38ef548cfd1a74e
-2026-05-21 23:03:36,579 INFO Building naive HoloRAG index for 20 documents
-2026-05-21 23:03:37,969 INFO Embedding graph layers: 645 entities, 829 facts, 327 sentences, 40 chunks
-2026-05-21 23:04:05,120 INFO [index][109/200] 517b237e011625d9c5ea0be465bdc9dcd38ef548cfd1a74e | 28.541s
-2026-05-21 23:04:05,121 INFO [index][110/200] start d1dd79fae1af699056a39a08906166201387b89c3f596266
-2026-05-21 23:04:05,121 INFO Building naive HoloRAG index for 7 documents
-2026-05-21 23:04:09,520 INFO Embedding graph layers: 1595 entities, 2491 facts, 712 sentences, 62 chunks
-2026-05-21 23:05:29,809 INFO [index][110/200] d1dd79fae1af699056a39a08906166201387b89c3f596266 | 84.688s
-2026-05-21 23:05:29,810 INFO [index][111/200] start 3b133029d40cc58823d90a6f9176ea531c8c30fb88c31736
-2026-05-21 23:05:29,810 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 23:05:31,742 INFO Embedding graph layers: 1564 entities, 2403 facts, 647 sentences, 59 chunks
-2026-05-21 23:06:50,540 INFO [index][111/200] 3b133029d40cc58823d90a6f9176ea531c8c30fb88c31736 | 80.730s
-2026-05-21 23:06:50,540 INFO [index][112/200] start 163a438b614948528acdb5901ad522af7911b4e43c7a656a
-2026-05-21 23:06:50,540 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 23:06:50,868 INFO Embedding graph layers: 1169 entities, 1916 facts, 491 sentences, 59 chunks
-2026-05-21 23:07:50,696 INFO [index][112/200] 163a438b614948528acdb5901ad522af7911b4e43c7a656a | 60.156s
-2026-05-21 23:07:50,697 INFO [index][113/200] start 7f312e928558afc3dff5d7cc445ea322ace2d93b1762ff98
-2026-05-21 23:07:50,697 INFO Building naive HoloRAG index for 13 documents
-2026-05-21 23:07:54,913 INFO Embedding graph layers: 1201 entities, 2644 facts, 819 sentences, 65 chunks
-2026-05-21 23:09:06,311 INFO [index][113/200] 7f312e928558afc3dff5d7cc445ea322ace2d93b1762ff98 | 75.614s
-2026-05-21 23:09:06,312 INFO [index][114/200] start a8db3b0b50151b8616d23b55f0f359f2ef9ba8fff740c3f2
-2026-05-21 23:09:06,312 INFO Building naive HoloRAG index for 11 documents
-2026-05-21 23:09:08,150 INFO Embedding graph layers: 1560 entities, 2352 facts, 665 sentences, 62 chunks
-2026-05-21 23:10:27,372 INFO [index][114/200] a8db3b0b50151b8616d23b55f0f359f2ef9ba8fff740c3f2 | 81.059s
-2026-05-21 23:10:27,372 INFO [index][115/200] start c858bf26a171d617a8decbb3a67e082b577a5a1166ca15b2
-2026-05-21 23:10:27,372 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 23:10:30,609 INFO Embedding graph layers: 1396 entities, 1992 facts, 621 sentences, 57 chunks
-2026-05-21 23:11:40,095 INFO [index][115/200] c858bf26a171d617a8decbb3a67e082b577a5a1166ca15b2 | 72.723s
-2026-05-21 23:11:40,096 INFO [index][116/200] start afc0480fd5bd6216e2a3d23c5e65a198b98e9730c5a26471
-2026-05-21 23:11:40,096 INFO Building naive HoloRAG index for 4 documents
-2026-05-21 23:11:41,409 INFO Embedding graph layers: 1282 entities, 2199 facts, 625 sentences, 66 chunks
-2026-05-21 23:12:50,072 INFO [index][116/200] afc0480fd5bd6216e2a3d23c5e65a198b98e9730c5a26471 | 69.976s
-2026-05-21 23:12:50,073 INFO [index][117/200] start d1ff18285ee3c6148bb4f8466a3d65d965432b694aba3ac7
-2026-05-21 23:12:50,073 INFO Building naive HoloRAG index for 10 documents
-2026-05-21 23:12:51,595 INFO Embedding graph layers: 1542 entities, 2500 facts, 615 sentences, 61 chunks
-2026-05-21 23:14:10,693 INFO [index][117/200] d1ff18285ee3c6148bb4f8466a3d65d965432b694aba3ac7 | 80.620s
-2026-05-21 23:14:10,693 INFO [index][118/200] start 19e28bddd1e5817780ebfba2ff23817578fb6e01289caa3a
-2026-05-21 23:14:10,694 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 23:14:14,405 INFO Embedding graph layers: 1152 entities, 2418 facts, 623 sentences, 59 chunks
-2026-05-21 23:15:20,239 INFO [index][118/200] 19e28bddd1e5817780ebfba2ff23817578fb6e01289caa3a | 69.545s
-2026-05-21 23:15:20,240 INFO [index][119/200] start ab8516f170dcda1b95db028a8c4f8ee112c157548f800484
-2026-05-21 23:15:20,240 INFO Building naive HoloRAG index for 5 documents
-2026-05-21 23:15:24,634 INFO Embedding graph layers: 1318 entities, 2332 facts, 636 sentences, 60 chunks
-2026-05-21 23:16:36,455 INFO [index][119/200] ab8516f170dcda1b95db028a8c4f8ee112c157548f800484 | 76.215s
-2026-05-21 23:16:36,456 INFO [index][120/200] start 8daaf871ac6117a987a5461e5a0cfc553ef30e1f47800200
-2026-05-21 23:16:36,456 INFO Building naive HoloRAG index for 6 documents
-2026-05-21 23:16:39,831 INFO Embedding graph layers: 1111 entities, 2559 facts, 787 sentences, 66 chunks
-2026-05-21 23:17:49,851 INFO [index][120/200] 8daaf871ac6117a987a5461e5a0cfc553ef30e1f47800200 | 73.394s
-2026-05-21 23:17:49,851 INFO [index][121/200] start a6005b1ac2dec9c661b1dec2b0d4e27939a56dff3d049992
-2026-05-21 23:17:49,851 INFO Building naive HoloRAG index for 16 documents
-2026-05-21 23:17:53,189 INFO Embedding graph layers: 1339 entities, 1917 facts, 475 sentences, 48 chunks
-2026-05-21 23:18:54,550 INFO [index][121/200] a6005b1ac2dec9c661b1dec2b0d4e27939a56dff3d049992 | 64.699s
-2026-05-21 23:18:54,551 INFO [index][122/200] start 3770e097bb92f794adf6bd2a09ec1f40441a5d76820f71f7
-2026-05-21 23:18:54,551 INFO Building naive HoloRAG index for 9 documents
-2026-05-21 23:18:58,168 INFO Embedding graph layers: 1353 entities, 2164 facts, 537 sentences, 57 chunks
-2026-05-21 23:20:05,417 INFO [index][122/200] 3770e097bb92f794adf6bd2a09ec1f40441a5d76820f71f7 | 70.866s
-2026-05-21 23:20:05,418 INFO [index][123/200] start 88d9867cb4a10c547384a02cb1758981b8989081fd1bba53
-2026-05-21 23:20:05,418 INFO Building naive HoloRAG index for 19 documents
-2026-05-21 23:20:07,151 INFO Embedding graph layers: 988 entities, 1493 facts, 407 sentences, 46 chunks
+2026-05-23 13:33:51,621 INFO Run directory: /data/xyh/code/HoloRAG/outputs/musique_eval/ablation_runs/v8a_hippo_ppr_musique_gpu4
+2026-05-23 13:33:51,622 INFO Python executable: /home/xyh/miniconda3/envs/holorag-dev/bin/python
+2026-05-23 13:33:51,634 INFO LLM server reachable: http://127.0.0.1:8000/v1/models
+2026-05-23 13:33:51,995 INFO Loading embedding model: /data/xyh/models/NV-Embed-v2 on cuda:4
+2026-05-23 13:34:19,019 INFO [dataset][1/200] 4c114f84ca41284c0845705943adc10b70a4fd3e8d0ca295 | f1=0.0000 em=0.0000 | running_f1=0.0000 running_em=0.0000 | q=11.773s
+2026-05-23 13:34:28,703 INFO [dataset][2/200] 4606a3d2fbbd29e034c815d51bd05e8d5481860ad8c1e7ef | f1=0.0000 em=0.0000 | running_f1=0.0000 running_em=0.0000 | q=9.179s
+2026-05-23 13:34:38,431 INFO [dataset][3/200] b5e26a0b0703d3a7b6b9ae4fd8627043ee84005137f515cd | f1=1.0000 em=1.0000 | running_f1=0.3333 running_em=0.3333 | q=9.451s
+2026-05-23 13:34:51,718 INFO [dataset][4/200] e9a0c409564baa2cadde3aa638d789031755b0ca9b72c63b | f1=1.0000 em=1.0000 | running_f1=0.5000 running_em=0.5000 | q=13.070s
+2026-05-23 13:35:05,586 INFO [dataset][5/200] b129c8e6a0b184509c1a36a6b8b5703c924ee965727e79bc | f1=0.0000 em=0.0000 | running_f1=0.4000 running_em=0.4000 | q=13.681s
+2026-05-23 13:35:21,515 INFO [dataset][6/200] 685f8561239902c340fcf6b70d5ddc919b62aaf2b543ae3f | f1=0.0000 em=0.0000 | running_f1=0.3333 running_em=0.3333 | q=15.741s
+2026-05-23 13:35:35,899 INFO [dataset][7/200] 32b91f4d1aef1cc3c103e544e4fca9025ed7e6d677dbe380 | f1=1.0000 em=1.0000 | running_f1=0.4286 running_em=0.4286 | q=14.228s
+2026-05-23 13:35:48,540 INFO [dataset][8/200] 936ced65be306aaccf844e11a0e0ef544d44a2a7edec8f14 | f1=0.0000 em=0.0000 | running_f1=0.3750 running_em=0.3750 | q=12.462s
+2026-05-23 13:35:57,137 INFO [dataset][9/200] e3d8c2e853ea5a5ce78f9285d01c0b9b6ba832bd1027699d | f1=1.0000 em=1.0000 | running_f1=0.4444 running_em=0.4444 | q=8.398s
+2026-05-23 13:36:07,642 INFO [dataset][10/200] fa5051512fcaa4d026335b0dc206addf60f317d85cc8998b | f1=1.0000 em=1.0000 | running_f1=0.5000 running_em=0.5000 | q=10.368s
+2026-05-23 13:36:16,896 INFO [dataset][11/200] 220004b7b3836d023f1e416666c0d8d43ae75a77c1a8bdd0 | f1=1.0000 em=1.0000 | running_f1=0.5455 running_em=0.5455 | q=9.068s
+2026-05-23 13:36:29,440 INFO [dataset][12/200] 7d7eb390be7dc75ca61b5eda6a9d9b36372273d1bd42646a | f1=0.2857 em=0.0000 | running_f1=0.5238 running_em=0.5000 | q=12.046s
+2026-05-23 13:36:36,138 INFO [dataset][13/200] 70a325ff2a0681bc4f6fd064f47bf88b4551447ac97dea96 | f1=1.0000 em=1.0000 | running_f1=0.5604 running_em=0.5385 | q=6.557s
+2026-05-23 13:36:46,429 INFO [dataset][14/200] a148671baac67e52fbe07df27c3b4293f351a1d1b5d9a517 | f1=0.0000 em=0.0000 | running_f1=0.5204 running_em=0.5000 | q=10.135s
+2026-05-23 13:36:55,129 INFO [dataset][15/200] 26bd6d08ea272ac11bebcf5250b16ff90f92352cdac405c1 | f1=0.0000 em=0.0000 | running_f1=0.4857 running_em=0.4667 | q=8.223s
+2026-05-23 13:37:08,427 INFO [dataset][16/200] 1f4b2eebc578880d3f401476be8e933f743e77a865a31902 | f1=1.0000 em=1.0000 | running_f1=0.5179 running_em=0.5000 | q=13.149s
+2026-05-23 13:37:25,409 INFO [dataset][17/200] 606e28838e5641e3dab2482d21f65cf2915cacdf6d63b454 | f1=0.0000 em=0.0000 | running_f1=0.4874 running_em=0.4706 | q=16.761s
+2026-05-23 13:37:33,207 INFO [dataset][18/200] 8fc8fb567703000eb6065c007e97841b11c9595b8862197b | f1=0.0000 em=0.0000 | running_f1=0.4603 running_em=0.4444 | q=7.331s
+2026-05-23 13:37:44,430 INFO [dataset][19/200] 30dac2419bdedc98a7dac06e6d4c8046262c2d0197c2b7f9 | f1=0.8000 em=0.0000 | running_f1=0.4782 running_em=0.4211 | q=11.036s
+2026-05-23 13:37:53,379 INFO [dataset][20/200] 936a34800c73e9d077b058fda4576fc45f8cb03bfae99c04 | f1=1.0000 em=1.0000 | running_f1=0.5043 running_em=0.4500 | q=8.895s
+2026-05-23 13:38:01,797 INFO [dataset][21/200] e956e4868d588132bd2de1926dc446d0975c2d7a45090cad | f1=0.0000 em=0.0000 | running_f1=0.4803 running_em=0.4286 | q=8.220s
+2026-05-23 13:38:09,490 INFO [dataset][22/200] 8f9aa7e502ca3fcd999cb05b87a6aa78ef4c4af96cbe3199 | f1=0.0000 em=0.0000 | running_f1=0.4584 running_em=0.4091 | q=7.227s
+2026-05-23 13:38:19,256 INFO [dataset][23/200] 865a174ebe32ad81f573feb122198c1f16e6f2fd6c3fdda5 | f1=0.0000 em=0.0000 | running_f1=0.4385 running_em=0.3913 | q=9.598s
+2026-05-23 13:38:34,534 INFO [dataset][24/200] 177dde027032c5c71bf88fd4676536c0bef7d79d43c32659 | f1=0.0000 em=0.0000 | running_f1=0.4202 running_em=0.3750 | q=15.113s
+2026-05-23 13:38:47,093 INFO [dataset][25/200] 78b24e393c76b4fcd88852e310548721c5eea12bb8848aca | f1=0.0000 em=0.0000 | running_f1=0.4034 running_em=0.3600 | q=12.389s
+2026-05-23 13:38:55,805 INFO [dataset][26/200] 096c9e28af3c91a52463c424203181b2a9c114c3b782dbf5 | f1=0.5000 em=0.0000 | running_f1=0.4071 running_em=0.3462 | q=8.581s
+2026-05-23 13:39:05,024 INFO [dataset][27/200] ecfec467704be2a08675527e8f1733d9fbb51309454145ef | f1=0.0000 em=0.0000 | running_f1=0.3921 running_em=0.3333 | q=9.056s
+2026-05-23 13:39:17,301 INFO [dataset][28/200] 9724776e8c8210a47eae48302b73a9e2603c238d417a63f2 | f1=0.0000 em=0.0000 | running_f1=0.3781 running_em=0.3214 | q=12.113s
+2026-05-23 13:39:32,500 INFO [dataset][29/200] 2df2586b40a9e5928817855c3b3a44c45b0809376372f38d | f1=0.0000 em=0.0000 | running_f1=0.3650 running_em=0.3103 | q=14.742s
+2026-05-23 13:39:41,365 INFO [dataset][30/200] f4f04befbe7bb6e1ca4055ffd495356951166e116a15b3de | f1=0.5714 em=0.0000 | running_f1=0.3719 running_em=0.3000 | q=8.627s
+2026-05-23 13:39:55,013 INFO [dataset][31/200] 94e583be9e34ba8c8cec05546807a1516b652c80be180e9b | f1=0.0000 em=0.0000 | running_f1=0.3599 running_em=0.2903 | q=13.474s
+2026-05-23 13:40:05,193 INFO [dataset][32/200] 334f6b3c862e350efb163f95dd0e7f59e2928309909f66e7 | f1=0.8182 em=0.0000 | running_f1=0.3742 running_em=0.2812 | q=9.930s
+2026-05-23 13:40:15,708 INFO [dataset][33/200] 8cad76dd1dfee0d4847e99f55e46c401a1087fde2aee2cc8 | f1=1.0000 em=1.0000 | running_f1=0.3932 running_em=0.3030 | q=9.996s
+2026-05-23 13:40:26,016 INFO [dataset][34/200] a9233be5f19b456544331e69848af8bbf56256ce9ed0da78 | f1=0.0000 em=0.0000 | running_f1=0.3816 running_em=0.2941 | q=10.109s
+2026-05-23 13:40:35,404 INFO [dataset][35/200] 102eaee0943270c43f63b7d45a0088f6a8515e51a126d925 | f1=0.0000 em=0.0000 | running_f1=0.3707 running_em=0.2857 | q=9.185s
+2026-05-23 13:40:44,096 INFO [dataset][36/200] de9c2fbc33bc6136a3a0598a7a1ad678882b4a8613f3900b | f1=0.0000 em=0.0000 | running_f1=0.3604 running_em=0.2778 | q=8.499s
+2026-05-23 13:40:54,790 INFO [dataset][37/200] 74528b7f4e2b5d4c1667751615829ad5e7dfd81f9eb55e0c | f1=0.0000 em=0.0000 | running_f1=0.3507 running_em=0.2703 | q=10.546s
+2026-05-23 13:41:05,614 INFO [dataset][38/200] 5c835b4c358e5f2e8c577dbc38c4857599539968e593a322 | f1=1.0000 em=1.0000 | running_f1=0.3678 running_em=0.2895 | q=10.679s
+2026-05-23 13:41:18,805 INFO [dataset][39/200] 7e5b1ed484b4c095dbb201b8edc746f9f6e6202d1809a2f2 | f1=0.0000 em=0.0000 | running_f1=0.3583 running_em=0.2821 | q=12.994s
+2026-05-23 13:41:32,406 INFO [dataset][40/200] 70444bcfcd30c497b730b5b408990ea2c672ec03caa5235f | f1=0.0000 em=0.0000 | running_f1=0.3494 running_em=0.2750 | q=13.452s
+2026-05-23 13:41:44,574 INFO [dataset][41/200] e62b87ef31160a755763a2c665a516dbcbcf1f116050019b | f1=0.0000 em=0.0000 | running_f1=0.3409 running_em=0.2683 | q=11.708s
+2026-05-23 13:41:52,768 INFO [dataset][42/200] 442e302cee202c213a085d6aa1caf87e3aebf6b954c690b0 | f1=1.0000 em=1.0000 | running_f1=0.3566 running_em=0.2857 | q=8.039s
+2026-05-23 13:42:05,678 INFO [dataset][43/200] 0f4da7d5be33010bcfb9197d3d910cc40bb8abc0ecc3bd32 | f1=0.0000 em=0.0000 | running_f1=0.3483 running_em=0.2791 | q=12.764s
+2026-05-23 13:42:20,297 INFO [dataset][44/200] 17b78fd666e796626d85eb44cacd4bd767b9b6fd2f35c86a | f1=0.0000 em=0.0000 | running_f1=0.3403 running_em=0.2727 | q=14.462s
+2026-05-23 13:42:37,906 INFO [dataset][45/200] 97d4194eb1fc6ee16c04f46d93fd5df5fd2ff5c60056799f | f1=0.0000 em=0.0000 | running_f1=0.3328 running_em=0.2667 | q=17.116s
+2026-05-23 13:42:50,641 INFO [dataset][46/200] 338a13d60af61b3eeb099758086e6b1522a9adcd8f6cb207 | f1=0.0000 em=0.0000 | running_f1=0.3256 running_em=0.2609 | q=12.600s
+2026-05-23 13:43:00,585 INFO [dataset][47/200] 73b7efc9538e65dda454b5be9d9b84a35decf082cd4091be | f1=0.0000 em=0.0000 | running_f1=0.3186 running_em=0.2553 | q=9.742s
+2026-05-23 13:43:10,758 INFO [dataset][48/200] 6cbb382cf679c0cf091fbf0d3c6d9638bffbc8ea039ca8b2 | f1=0.5333 em=0.0000 | running_f1=0.3231 running_em=0.2500 | q=9.647s
+2026-05-23 13:43:21,711 INFO [dataset][49/200] 96dfe963511d7bdd2daeda35b9fab72c44dcca15fbb91fba | f1=0.3333 em=0.0000 | running_f1=0.3233 running_em=0.2449 | q=10.760s
+2026-05-23 13:43:34,259 INFO [dataset][50/200] f6ab8327fd10a883614cd3f571224c82f1cb7073de8a1143 | f1=0.0000 em=0.0000 | running_f1=0.3168 running_em=0.2400 | q=12.350s
+2026-05-23 13:43:45,253 INFO [dataset][51/200] 61193402df0b1548ecd9c722ee89b4354d336ded37b4cf49 | f1=1.0000 em=1.0000 | running_f1=0.3302 running_em=0.2549 | q=10.771s
+2026-05-23 13:43:54,405 INFO [dataset][52/200] 074cbee8a17dcc448865addb33f8269d21c814d1c0b73e84 | f1=0.0000 em=0.0000 | running_f1=0.3239 running_em=0.2500 | q=8.688s
+2026-05-23 13:44:01,727 INFO [dataset][53/200] 0da7802e47b081fc2cc573f1d9559abcdd232d4733081512 | f1=0.0000 em=0.0000 | running_f1=0.3178 running_em=0.2453 | q=7.206s
+2026-05-23 13:44:14,573 INFO [dataset][54/200] ce2f0aec72fade99a1be4add19d9e6364caf398a4586c902 | f1=0.0000 em=0.0000 | running_f1=0.3119 running_em=0.2407 | q=12.694s
+2026-05-23 13:44:32,168 INFO [dataset][55/200] 0b0b3547496ed078cb19ec901a35f071b7b3cf138fdf2e60 | f1=0.9091 em=0.0000 | running_f1=0.3227 running_em=0.2364 | q=17.398s
+2026-05-23 13:44:43,235 INFO [dataset][56/200] 0942aa56c94ac545c00849686583273efd664347084e9682 | f1=0.0000 em=0.0000 | running_f1=0.3170 running_em=0.2321 | q=10.891s
+2026-05-23 13:44:51,979 INFO [dataset][57/200] 16db4ccc32ee8b04e3daee094ef5e8cfb985a4f0c2c999d5 | f1=0.6667 em=0.0000 | running_f1=0.3231 running_em=0.2281 | q=8.601s
+2026-05-23 13:45:07,163 INFO [dataset][58/200] 8267f95a2928cb63203d20da0079d98138d4f58281fc4e9e | f1=0.0000 em=0.0000 | running_f1=0.3175 running_em=0.2241 | q=14.982s
+2026-05-23 13:45:20,208 INFO [dataset][59/200] 9f271f822294cc528b1f20904bb7694884af4084e086d20f | f1=0.1538 em=0.0000 | running_f1=0.3148 running_em=0.2203 | q=12.598s
+2026-05-23 13:45:35,790 INFO [dataset][60/200] 92a5f365ee7514ded1c6f5dac8470281083060c3e6ec7594 | f1=1.0000 em=1.0000 | running_f1=0.3262 running_em=0.2333 | q=15.422s
+2026-05-23 13:45:46,791 INFO [dataset][61/200] a4d8d097bd76b3030a954d9943fd96cdbb51393ce75c43a5 | f1=0.0000 em=0.0000 | running_f1=0.3208 running_em=0.2295 | q=10.883s
+2026-05-23 13:46:03,093 INFO [dataset][62/200] 8e2a26fbfbcf2d28b9873a39bac21802372e822d41cdaa2b | f1=0.0000 em=0.0000 | running_f1=0.3157 running_em=0.2258 | q=16.159s
+2026-05-23 13:46:11,276 INFO [dataset][63/200] 0140a933eed826f1c48d9a9c5c4717965cf982f1d749be6a | f1=1.0000 em=1.0000 | running_f1=0.3265 running_em=0.2381 | q=7.664s
+2026-05-23 13:46:23,490 INFO [dataset][64/200] 64bae1eefc192258c2e5d8ecab71b8a02fc5a3d104c0fc21 | f1=0.0000 em=0.0000 | running_f1=0.3214 running_em=0.2344 | q=12.035s
+2026-05-23 13:46:32,100 INFO [dataset][65/200] e935f6dea75d4f17c5f98b7e255950372a22ab83f9632876 | f1=1.0000 em=1.0000 | running_f1=0.3319 running_em=0.2462 | q=8.455s
+2026-05-23 13:46:40,482 INFO [dataset][66/200] fe052f64d5c1f66bd84e1f2dc6df342b1ea10d2763c22a90 | f1=0.4000 em=0.0000 | running_f1=0.3329 running_em=0.2424 | q=8.138s
+2026-05-23 13:46:49,126 INFO [dataset][67/200] 02bd004f6306542bfdf5e166da61b306b5cf5f2faf50f796 | f1=0.0000 em=0.0000 | running_f1=0.3279 running_em=0.2388 | q=8.465s
+2026-05-23 13:47:03,901 INFO [dataset][68/200] e42937544d09a6051fc8507e1d3f89fe49b68d1300a44aa7 | f1=1.0000 em=1.0000 | running_f1=0.3378 running_em=0.2500 | q=14.633s
+2026-05-23 13:47:17,654 INFO [dataset][69/200] 05f1867336770bf201cf9a88de60e2b9bdd893efe98d9593 | f1=0.5000 em=0.0000 | running_f1=0.3402 running_em=0.2464 | q=13.668s
+2026-05-23 13:47:28,028 INFO [dataset][70/200] ebaefb7e8412f8323769c1e4ee596d5135b609ae76514273 | f1=0.6667 em=0.0000 | running_f1=0.3448 running_em=0.2429 | q=10.200s
+2026-05-23 13:47:39,594 INFO [dataset][71/200] e5d8a267444a8532a875af8cfb8b07e6f6d02d6e85148540 | f1=0.2222 em=0.0000 | running_f1=0.3431 running_em=0.2394 | q=11.116s
+2026-05-23 13:47:56,319 INFO [dataset][72/200] 648de9dea3ad81e8ac733acd312913385129ab16dd091834 | f1=0.0000 em=0.0000 | running_f1=0.3383 running_em=0.2361 | q=16.533s
+2026-05-23 13:48:04,690 INFO [dataset][73/200] 3fb64043e4ebb85b0e1d08ca7112c56185d90becb1f4ad11 | f1=0.0000 em=0.0000 | running_f1=0.3337 running_em=0.2329 | q=8.175s
+2026-05-23 13:48:15,537 INFO [dataset][74/200] c341a480cb5616540b22eb1018953ba04aa96dac5e286674 | f1=0.0000 em=0.0000 | running_f1=0.3292 running_em=0.2297 | q=10.279s
+2026-05-23 13:48:24,866 INFO [dataset][75/200] f6564f948dc28ef7be445d610eb42c1a6a6042d47e62e7a6 | f1=0.5000 em=0.0000 | running_f1=0.3315 running_em=0.2267 | q=9.081s
+2026-05-23 13:48:36,500 INFO [dataset][76/200] 7ac9fed94844e0922433d13032d684b7336219240499d6c1 | f1=1.0000 em=1.0000 | running_f1=0.3403 running_em=0.2368 | q=11.420s
+2026-05-23 13:48:45,024 INFO [dataset][77/200] 0675535ed1dda2d20a6a2d41fb4e8d2a6cacd6c6d953cafd | f1=1.0000 em=1.0000 | running_f1=0.3488 running_em=0.2468 | q=8.386s
+2026-05-23 13:48:53,991 INFO [dataset][78/200] f182c6355042dd18a7d42f9275c46f1ee0c985e5ae5c6001 | f1=0.5714 em=0.0000 | running_f1=0.3517 running_em=0.2436 | q=8.366s
+2026-05-23 13:49:14,606 INFO [dataset][79/200] 7a9091fd0314d17f4fb7683cc0a078b04501e3fbc1f64b42 | f1=0.5000 em=0.0000 | running_f1=0.3536 running_em=0.2405 | q=20.390s
+2026-05-23 13:49:25,414 INFO [dataset][80/200] c44fa02fb87c848c0ab4d0a254787e29540715ef86fff95a | f1=0.0000 em=0.0000 | running_f1=0.3491 running_em=0.2375 | q=10.651s
+2026-05-23 13:49:35,931 INFO [dataset][81/200] e1be2d43c39ecba4174621ae6f571ae04eac92cfd209b786 | f1=1.0000 em=1.0000 | running_f1=0.3572 running_em=0.2469 | q=10.066s
+2026-05-23 13:49:47,270 INFO [dataset][82/200] 59f0697aa3d51324795d9f102b93756a0f7bc68f5ebf4922 | f1=0.0000 em=0.0000 | running_f1=0.3528 running_em=0.2439 | q=11.279s
+2026-05-23 13:50:04,089 INFO [dataset][83/200] b4a033f133679fb6a0a2351544933c5537546d947ad50c8f | f1=0.9524 em=0.0000 | running_f1=0.3601 running_em=0.2410 | q=16.761s
+2026-05-23 13:50:13,304 INFO [dataset][84/200] aa614fdaaaefd5d4baa2796deb3b5f0067e79500b88427e5 | f1=1.0000 em=1.0000 | running_f1=0.3677 running_em=0.2500 | q=9.158s
+2026-05-23 13:50:25,089 INFO [dataset][85/200] 8bfb0eda3aaa2bad57532c81e874d3a974843ffd3ef0778c | f1=0.0000 em=0.0000 | running_f1=0.3633 running_em=0.2471 | q=11.715s
+2026-05-23 13:50:34,201 INFO [dataset][86/200] 0efe9b8bd5ade04ff3030e3d944b21b0ac4aa9527e17bde6 | f1=1.0000 em=1.0000 | running_f1=0.3707 running_em=0.2558 | q=9.071s
+2026-05-23 13:50:46,136 INFO [dataset][87/200] 027361f7300c0643dc5b5eb887d180e4917f12f6c1418ccb | f1=0.6667 em=0.0000 | running_f1=0.3741 running_em=0.2529 | q=11.889s
+2026-05-23 13:50:59,023 INFO [dataset][88/200] 011cb0e253041c568db1d0b01a34fa26ff951bbbdebbd887 | f1=0.0000 em=0.0000 | running_f1=0.3699 running_em=0.2500 | q=12.573s
+2026-05-23 13:51:11,272 INFO [dataset][89/200] 79669636487de3810792f2a9a1b4a7c253da580013d1d2fb | f1=1.0000 em=1.0000 | running_f1=0.3770 running_em=0.2584 | q=12.194s
+2026-05-23 13:51:26,781 INFO [dataset][90/200] bb809fb19df4d4c9b91facb813364d3590aeee692296fcfd | f1=0.0000 em=0.0000 | running_f1=0.3728 running_em=0.2556 | q=15.444s
+2026-05-23 13:51:40,126 INFO [dataset][91/200] db14f1320cc3442cb2416f65c437cd0ee74449baf687602b | f1=0.0000 em=0.0000 | running_f1=0.3687 running_em=0.2527 | q=13.305s
+2026-05-23 13:51:52,590 INFO [dataset][92/200] 037dbe8ccac208d33dfbd28d6fdc319f88b1c2c2bd4ba060 | f1=0.5000 em=0.0000 | running_f1=0.3701 running_em=0.2500 | q=11.934s
+2026-05-23 13:52:05,084 INFO [dataset][93/200] 0da908a928c375084638f1e0ab10c329679eaacae7e4ffe0 | f1=0.0000 em=0.0000 | running_f1=0.3661 running_em=0.2473 | q=12.429s
+2026-05-23 13:52:13,672 INFO [dataset][94/200] f9a50652b4e5d7000c42ae27b2477a54d2a88cfceec0ec3b | f1=1.0000 em=1.0000 | running_f1=0.3729 running_em=0.2553 | q=8.530s
+2026-05-23 13:52:26,150 INFO [dataset][95/200] a4c716e09434218a16bdfed465322e369606bd38f23d815a | f1=0.6000 em=0.0000 | running_f1=0.3753 running_em=0.2526 | q=11.971s
+2026-05-23 13:52:38,331 INFO [dataset][96/200] b2aec8a779fa030aae7a64520ebfdf3461750764aa79eb93 | f1=0.0000 em=0.0000 | running_f1=0.3714 running_em=0.2500 | q=12.052s
+2026-05-23 13:52:49,426 INFO [dataset][97/200] efa92baf3840922c7dc00ba73ad729345a2b12035fa39071 | f1=1.0000 em=1.0000 | running_f1=0.3778 running_em=0.2577 | q=10.883s
+2026-05-23 13:53:03,173 INFO [dataset][98/200] 5188d3c87c6fead7f796c62c3f1bd13ea8576bab724ea06d | f1=0.0000 em=0.0000 | running_f1=0.3740 running_em=0.2551 | q=13.608s
+2026-05-23 13:53:21,428 INFO [dataset][99/200] 046a6c5856736e4dc6f532658038afabde83e9c71507832f | f1=0.0000 em=0.0000 | running_f1=0.3702 running_em=0.2525 | q=17.700s
+2026-05-23 13:53:35,256 INFO [dataset][100/200] 296a82255560704f3fd8c8ea411827192d0eceddbf38ce4c | f1=0.0000 em=0.0000 | running_f1=0.3665 running_em=0.2500 | q=13.648s
+2026-05-23 13:53:45,892 INFO [dataset][101/200] 38da792d05c3f8c7220c951b8d66f7400debb80114932a80 | f1=1.0000 em=1.0000 | running_f1=0.3728 running_em=0.2574 | q=10.432s
+2026-05-23 13:53:54,584 INFO [dataset][102/200] 458b3f8687920863190957c08123f885c60989f59bf40681 | f1=1.0000 em=1.0000 | running_f1=0.3789 running_em=0.2647 | q=8.458s
+2026-05-23 13:54:09,542 INFO [dataset][103/200] 5a79dda7bfdfb77d539fe80abea20ca003c2fe0496b89c02 | f1=0.0000 em=0.0000 | running_f1=0.3753 running_em=0.2621 | q=14.494s
+2026-05-23 13:54:18,993 INFO [dataset][104/200] 0b0d46b9b937c43da535ef8109b75a460051e57f97a3f7a2 | f1=1.0000 em=1.0000 | running_f1=0.3813 running_em=0.2692 | q=9.287s
+2026-05-23 13:54:31,913 INFO [dataset][105/200] 34145b6ab1de0faafa932494ca91bdfdf740ba41ecb21879 | f1=1.0000 em=1.0000 | running_f1=0.3872 running_em=0.2762 | q=12.762s
+2026-05-23 13:54:41,949 INFO [dataset][106/200] ea32ca3702e3eedd278c8c77153712c07dbb5dd7025d8c3d | f1=0.8000 em=0.0000 | running_f1=0.3910 running_em=0.2736 | q=9.492s
+2026-05-23 13:54:56,511 INFO [dataset][107/200] 3fe817c10d1006cd821b07586f51302a3263884e83211ba8 | f1=1.0000 em=1.0000 | running_f1=0.3967 running_em=0.2804 | q=14.333s
+2026-05-23 13:55:09,164 INFO [dataset][108/200] 1335c327548140bd1173eba9b1270d67dd4f7aafce0560a4 | f1=1.0000 em=1.0000 | running_f1=0.4023 running_em=0.2870 | q=12.502s
+2026-05-23 13:55:19,310 INFO [dataset][109/200] 517b237e011625d9c5ea0be465bdc9dcd38ef548cfd1a74e | f1=1.0000 em=1.0000 | running_f1=0.4078 running_em=0.2936 | q=10.039s
+2026-05-23 13:55:37,115 INFO [dataset][110/200] d1dd79fae1af699056a39a08906166201387b89c3f596266 | f1=0.0000 em=0.0000 | running_f1=0.4041 running_em=0.2909 | q=17.274s
+2026-05-23 13:55:53,998 INFO [dataset][111/200] 3b133029d40cc58823d90a6f9176ea531c8c30fb88c31736 | f1=0.0000 em=0.0000 | running_f1=0.4005 running_em=0.2883 | q=16.648s
+2026-05-23 13:56:09,610 INFO [dataset][112/200] 163a438b614948528acdb5901ad522af7911b4e43c7a656a | f1=0.0000 em=0.0000 | running_f1=0.3969 running_em=0.2857 | q=15.384s
+2026-05-23 13:56:20,733 INFO [dataset][113/200] 7f312e928558afc3dff5d7cc445ea322ace2d93b1762ff98 | f1=0.5000 em=0.0000 | running_f1=0.3978 running_em=0.2832 | q=10.628s
+2026-05-23 13:56:33,861 INFO [dataset][114/200] a8db3b0b50151b8616d23b55f0f359f2ef9ba8fff740c3f2 | f1=1.0000 em=1.0000 | running_f1=0.4031 running_em=0.2895 | q=12.897s
+2026-05-23 13:56:43,702 INFO [dataset][115/200] c858bf26a171d617a8decbb3a67e082b577a5a1166ca15b2 | f1=0.0000 em=0.0000 | running_f1=0.3996 running_em=0.2870 | q=9.692s
+2026-05-23 13:56:52,849 INFO [dataset][116/200] afc0480fd5bd6216e2a3d23c5e65a198b98e9730c5a26471 | f1=0.0000 em=0.0000 | running_f1=0.3961 running_em=0.2845 | q=9.028s
+2026-05-23 13:57:01,557 INFO [dataset][117/200] d1ff18285ee3c6148bb4f8466a3d65d965432b694aba3ac7 | f1=0.0000 em=0.0000 | running_f1=0.3927 running_em=0.2821 | q=8.519s
+2026-05-23 13:57:12,505 INFO [dataset][118/200] 19e28bddd1e5817780ebfba2ff23817578fb6e01289caa3a | f1=0.0000 em=0.0000 | running_f1=0.3894 running_em=0.2797 | q=10.809s
+2026-05-23 13:57:21,682 INFO [dataset][119/200] ab8516f170dcda1b95db028a8c4f8ee112c157548f800484 | f1=0.0000 em=0.0000 | running_f1=0.3861 running_em=0.2773 | q=9.044s
+2026-05-23 13:57:32,733 INFO [dataset][120/200] 8daaf871ac6117a987a5461e5a0cfc553ef30e1f47800200 | f1=0.0000 em=0.0000 | running_f1=0.3829 running_em=0.2750 | q=10.552s
+2026-05-23 13:57:47,381 INFO [dataset][121/200] a6005b1ac2dec9c661b1dec2b0d4e27939a56dff3d049992 | f1=0.8235 em=0.0000 | running_f1=0.3866 running_em=0.2727 | q=14.518s
+2026-05-23 13:57:58,858 INFO [dataset][122/200] 3770e097bb92f794adf6bd2a09ec1f40441a5d76820f71f7 | f1=0.0000 em=0.0000 | running_f1=0.3834 running_em=0.2705 | q=11.295s
+2026-05-23 13:58:07,686 INFO [dataset][123/200] 88d9867cb4a10c547384a02cb1758981b8989081fd1bba53 | f1=0.0000 em=0.0000 | running_f1=0.3803 running_em=0.2683 | q=8.706s
+2026-05-23 13:58:19,444 INFO [dataset][124/200] 22129e25d4587923fcde7881c2d6d6ea393fe1a5615db2bd | f1=1.0000 em=1.0000 | running_f1=0.3853 running_em=0.2742 | q=11.244s
+2026-05-23 13:58:30,547 INFO [dataset][125/200] fefac36b35cb4347cc12c1f4b449f55f907eb074ff9bd548 | f1=0.0000 em=0.0000 | running_f1=0.3822 running_em=0.2720 | q=10.992s
+2026-05-23 13:58:41,233 INFO [dataset][126/200] 7b7acfdf920adc600a78d5e07adbb139447a4f4c05cdeb97 | f1=1.0000 em=1.0000 | running_f1=0.3871 running_em=0.2778 | q=10.515s
+2026-05-23 13:58:55,842 INFO [dataset][127/200] 51cd91435004d29ca0defa249c04567792bba4ae689bcaff | f1=0.7273 em=0.0000 | running_f1=0.3898 running_em=0.2756 | q=14.399s
+2026-05-23 13:59:08,957 INFO [dataset][128/200] 73c99907f8558b45cbd409c4453f2b005668503f8dd77cb1 | f1=0.0000 em=0.0000 | running_f1=0.3867 running_em=0.2734 | q=12.934s
+2026-05-23 13:59:24,596 INFO [dataset][129/200] 80eb4cdc289c327a7ce40633b12e1a144052165599d2521a | f1=0.0000 em=0.0000 | running_f1=0.3837 running_em=0.2713 | q=15.439s
+2026-05-23 13:59:36,299 INFO [dataset][130/200] 0531724f1691e4d2a1e819d1e68c14edb61a1036ee25a862 | f1=0.0000 em=0.0000 | running_f1=0.3808 running_em=0.2692 | q=11.543s
+2026-05-23 13:59:46,213 INFO [dataset][131/200] d93d09390c108e43314b165e4eb32b63bee4bd289164c233 | f1=1.0000 em=1.0000 | running_f1=0.3855 running_em=0.2748 | q=9.411s
+2026-05-23 13:59:55,222 INFO [dataset][132/200] 2b182c3ce4bb7bb2c28fc1f86d7a76591488e7d2aef1bb35 | f1=0.0000 em=0.0000 | running_f1=0.3826 running_em=0.2727 | q=8.784s
+2026-05-23 14:00:02,495 INFO [dataset][133/200] 6d57f1e891250f9822eaef55f6f86661ba65ea90141fdb3f | f1=1.0000 em=1.0000 | running_f1=0.3872 running_em=0.2782 | q=7.059s
+2026-05-23 14:00:14,745 INFO [dataset][134/200] d38330e71e4ccaf9dacb5743005ac48880a86ad157c0e89d | f1=0.0000 em=0.0000 | running_f1=0.3843 running_em=0.2761 | q=11.774s
+2026-05-23 14:00:22,640 INFO [dataset][135/200] ce71ae05a05aa362e3dbea2e924d208ae29dd534690e3018 | f1=0.0000 em=0.0000 | running_f1=0.3815 running_em=0.2741 | q=7.692s
+2026-05-23 14:00:36,194 INFO [dataset][136/200] df9f245c11ea8e93377a4587fc28c07c08b6f43bb7cd5cd4 | f1=0.2222 em=0.0000 | running_f1=0.3803 running_em=0.2721 | q=13.456s
+2026-05-23 14:00:47,554 INFO [dataset][137/200] 6ce26ac59b2882dc391635da186779e5b8ed5a0b0354da10 | f1=0.0000 em=0.0000 | running_f1=0.3775 running_em=0.2701 | q=11.099s
+2026-05-23 14:00:59,718 INFO [dataset][138/200] c48373896fd9da5b8e7f7565c18ffa921992f00d45147aeb | f1=1.0000 em=1.0000 | running_f1=0.3821 running_em=0.2754 | q=11.625s
+2026-05-23 14:01:07,263 INFO [dataset][139/200] 6e64c9c62d8e1170c6341cde12aa2fe75a35762012ab8d30 | f1=0.0000 em=0.0000 | running_f1=0.3793 running_em=0.2734 | q=7.359s
+2026-05-23 14:01:17,270 INFO [dataset][140/200] 554fd0d8696f182e7802bf42d669102e4227ba40f8a6bd4f | f1=1.0000 em=1.0000 | running_f1=0.3837 running_em=0.2786 | q=9.869s
+2026-05-23 14:01:28,440 INFO [dataset][141/200] 1ce9a8820397755fa8fd2d5add9bdb9edea86671fa14468c | f1=0.0000 em=0.0000 | running_f1=0.3810 running_em=0.2766 | q=10.789s
+2026-05-23 14:01:45,545 INFO [dataset][142/200] 9ad33ca0b5a3f7c880fc6f40db3d7de9c369111c302c9dfd | f1=1.0000 em=1.0000 | running_f1=0.3854 running_em=0.2817 | q=17.054s
+2026-05-23 14:01:55,047 INFO [dataset][143/200] 236a7ebf10d9e19269a51d46f62df7d301f6a475aed06dd8 | f1=0.0000 em=0.0000 | running_f1=0.3827 running_em=0.2797 | q=9.445s
+2026-05-23 14:02:08,806 INFO [dataset][144/200] 16de423a865eb739d3ec248429096218820feb176cb1b5af | f1=0.8235 em=0.0000 | running_f1=0.3857 running_em=0.2778 | q=13.662s
+2026-05-23 14:02:14,989 INFO [dataset][145/200] 37fb18d72ff590a69ba9588553a36989161f9b48c72dfe29 | f1=0.4000 em=0.0000 | running_f1=0.3858 running_em=0.2759 | q=6.132s
+2026-05-23 14:02:28,959 INFO [dataset][146/200] 034a82714302b4b4a869310daace9e08bb18dc7fc3a81206 | f1=1.0000 em=1.0000 | running_f1=0.3901 running_em=0.2808 | q=13.805s
+2026-05-23 14:02:42,363 INFO [dataset][147/200] e21823470386531b4456eec33d0709c7eb82b63bc394f6fa | f1=0.0000 em=0.0000 | running_f1=0.3874 running_em=0.2789 | q=13.336s
+2026-05-23 14:02:52,899 INFO [dataset][148/200] f11250d4b392a30f6d22566d5167dee1464544f525c2975c | f1=0.0000 em=0.0000 | running_f1=0.3848 running_em=0.2770 | q=10.166s
+2026-05-23 14:03:03,396 INFO [dataset][149/200] 9aea23787e6ee6df485a6b02ad5e2c185b44b9611ce8b921 | f1=0.0000 em=0.0000 | running_f1=0.3822 running_em=0.2752 | q=10.438s
+2026-05-23 14:03:12,627 INFO [dataset][150/200] ede452592bbb410b3678e75fc6aaaeeda204fffc69034041 | f1=1.0000 em=1.0000 | running_f1=0.3863 running_em=0.2800 | q=9.172s
+2026-05-23 14:03:31,330 INFO [dataset][151/200] 6c52099d688bcf9f3be62de4417112635370c9d72b748084 | f1=0.0000 em=0.0000 | running_f1=0.3838 running_em=0.2781 | q=18.335s
+2026-05-23 14:03:40,890 INFO [dataset][152/200] a621901602313fe0bb3278547bfd2dc7a7eeb93905d04b78 | f1=0.0000 em=0.0000 | running_f1=0.3812 running_em=0.2763 | q=9.479s
+2026-05-23 14:03:53,012 INFO [dataset][153/200] efa29c58c4ed7403a39deb68f6f52c1fdcc617e0fbdd9a5c | f1=0.0000 em=0.0000 | running_f1=0.3787 running_em=0.2745 | q=12.065s
+2026-05-23 14:04:01,998 INFO [dataset][154/200] abfa7716b861cb828af918cd5b406139e40afec4dfe84446 | f1=0.0000 em=0.0000 | running_f1=0.3763 running_em=0.2727 | q=8.931s
+2026-05-23 14:04:17,125 INFO [dataset][155/200] 6b6d8f1f4a1c7ecab4f8c3f8205f8bfc531627d12c21a3c4 | f1=0.0000 em=0.0000 | running_f1=0.3739 running_em=0.2710 | q=15.011s
+2026-05-23 14:04:30,331 INFO [dataset][156/200] 2e723619f6cb5b2fe9cffb3e419841f96bbfd79a13f07f18 | f1=1.0000 em=1.0000 | running_f1=0.3779 running_em=0.2756 | q=13.157s
+2026-05-23 14:04:39,215 INFO [dataset][157/200] 704dd451c50a536eb50a9d580b8a57aa8203bd76d1862ef6 | f1=0.0000 em=0.0000 | running_f1=0.3755 running_em=0.2739 | q=8.836s
+2026-05-23 14:04:46,313 INFO [dataset][158/200] d51c30bc9bcc9c9daace1edac5bc07ded7df39ad346f4c04 | f1=0.0000 em=0.0000 | running_f1=0.3731 running_em=0.2722 | q=7.035s
+2026-05-23 14:04:55,459 INFO [dataset][159/200] f1ae33d3867ac32d4bf685be6b8eadd99847853869184186 | f1=0.0000 em=0.0000 | running_f1=0.3707 running_em=0.2704 | q=9.093s
+2026-05-23 14:05:05,654 INFO [dataset][160/200] 7478cc3ae7b060de1b7b2a1c61c1354a0b6a822b61349cad | f1=0.5000 em=0.0000 | running_f1=0.3715 running_em=0.2687 | q=10.135s
+2026-05-23 14:05:15,307 INFO [dataset][161/200] afd66c76fbcbd6fd65cfccf021882c773e57478071afaa65 | f1=0.0000 em=0.0000 | running_f1=0.3692 running_em=0.2671 | q=9.588s
+2026-05-23 14:05:27,356 INFO [dataset][162/200] b15f31c4855a276dae1e56de0784c6eab14eb4621012cc10 | f1=0.4000 em=0.0000 | running_f1=0.3694 running_em=0.2654 | q=11.988s
+2026-05-23 14:05:41,137 INFO [dataset][163/200] 3601e9951ec350c2c121a537f60a7347d545f015663316d5 | f1=0.6154 em=0.0000 | running_f1=0.3709 running_em=0.2638 | q=13.719s
+2026-05-23 14:05:51,075 INFO [dataset][164/200] 9747157702dd161d08b47a241d23256b0055cd503ee4dadf | f1=1.0000 em=1.0000 | running_f1=0.3748 running_em=0.2683 | q=9.881s
+2026-05-23 14:06:04,353 INFO [dataset][165/200] e349bd0727c841c1b6a985bbf6c1b043efcad758e078e1df | f1=1.0000 em=1.0000 | running_f1=0.3786 running_em=0.2727 | q=13.224s
+2026-05-23 14:06:15,074 INFO [dataset][166/200] 04c783fe592055e55b17ada8341007b7125bf0a326f9c58b | f1=0.0000 em=0.0000 | running_f1=0.3763 running_em=0.2711 | q=10.647s
+2026-05-23 14:06:25,319 INFO [dataset][167/200] 8a986323dbd4e14655caf5775eb54c222bc8081f890cadb6 | f1=0.0000 em=0.0000 | running_f1=0.3740 running_em=0.2695 | q=9.934s
+2026-05-23 14:06:35,418 INFO [dataset][168/200] ac92ae6728bdfb340f9270a188da65795eec3273550ca498 | f1=0.8889 em=0.0000 | running_f1=0.3771 running_em=0.2679 | q=10.048s
+2026-05-23 14:06:43,628 INFO [dataset][169/200] ebd4b995b91cadca20e7b463a7eeb03130f2aa06a4ac30a8 | f1=0.5000 em=0.0000 | running_f1=0.3778 running_em=0.2663 | q=8.159s
+2026-05-23 14:06:52,248 INFO [dataset][170/200] a39f4cbf6b6f7cb942cd2ce0e1234cae29855f2eaffc1be9 | f1=1.0000 em=1.0000 | running_f1=0.3815 running_em=0.2706 | q=8.567s
+2026-05-23 14:07:05,586 INFO [dataset][171/200] bfcfaa4a93f27ba34411adfc4a326e54fa373314b0ba15ab | f1=1.0000 em=1.0000 | running_f1=0.3851 running_em=0.2749 | q=13.281s
+2026-05-23 14:07:18,857 INFO [dataset][172/200] fd437e73a2d708b551e27a13db723a6aa13ca01f70d63cd1 | f1=1.0000 em=1.0000 | running_f1=0.3887 running_em=0.2791 | q=13.220s
+2026-05-23 14:07:29,849 INFO [dataset][173/200] fe8275738f337cc423752bea9b254da45cecdf2559f38352 | f1=0.0000 em=0.0000 | running_f1=0.3864 running_em=0.2775 | q=10.939s
+2026-05-23 14:07:37,631 INFO [dataset][174/200] c6fe007044674795d280bb474e2adc9dc8bacd8853a9cef5 | f1=1.0000 em=1.0000 | running_f1=0.3900 running_em=0.2816 | q=7.433s
+2026-05-23 14:07:47,890 INFO [dataset][175/200] ccbb33282bd009f7844ad8305fadb84e7ede51932fc6a36d | f1=1.0000 em=1.0000 | running_f1=0.3934 running_em=0.2857 | q=10.214s
+2026-05-23 14:08:05,142 INFO [dataset][176/200] b6f4cf7f8c262ad66ad3a336c1b5f0dc86e9c8c308b86180 | f1=0.0000 em=0.0000 | running_f1=0.3912 running_em=0.2841 | q=17.206s
+2026-05-23 14:08:14,933 INFO [dataset][177/200] cb9b4679117faad98b982edb6bb06b9a24ec472f8542da17 | f1=1.0000 em=1.0000 | running_f1=0.3946 running_em=0.2881 | q=9.732s
+2026-05-23 14:08:24,607 INFO [dataset][178/200] 251bc5c07407b64179dd8add58471e71c3433c6f7efc073a | f1=1.0000 em=1.0000 | running_f1=0.3980 running_em=0.2921 | q=9.274s
+2026-05-23 14:08:35,764 INFO [dataset][179/200] 9cf11c3026ea59b7e28ae4488918a9822f86c5efc4db5883 | f1=1.0000 em=1.0000 | running_f1=0.4014 running_em=0.2961 | q=11.103s
+2026-05-23 14:08:44,567 INFO [dataset][180/200] 72265eb89876baa2a8ab23c14ad61073f5d9f26c471e1ff9 | f1=1.0000 em=1.0000 | running_f1=0.4047 running_em=0.3000 | q=8.754s
+2026-05-23 14:08:55,902 INFO [dataset][181/200] d79a4697ef5b7302ea7cb8a81107a462d699843688a3050d | f1=1.0000 em=1.0000 | running_f1=0.4080 running_em=0.3039 | q=10.953s
+2026-05-23 14:09:14,081 INFO [dataset][182/200] a3854b7b279e499bd9263a9c581a5efb025fea9efefa00e6 | f1=0.3750 em=0.0000 | running_f1=0.4078 running_em=0.3022 | q=18.122s
+2026-05-23 14:09:25,862 INFO [dataset][183/200] dc7a928fdebf66b8a407ec96057d15ff1fc3a243bb3d87f1 | f1=0.4000 em=0.0000 | running_f1=0.4078 running_em=0.3005 | q=11.715s
+2026-05-23 14:09:38,066 INFO [dataset][184/200] 1c37a1eea570e7c4746847d7c009499ef543fa2bc6df0eb3 | f1=1.0000 em=1.0000 | running_f1=0.4110 running_em=0.3043 | q=12.156s
+2026-05-23 14:09:49,163 INFO [dataset][185/200] 09a0e0e18bb78cacdb1e7ec97e97e72798517afc88bed4c1 | f1=0.0000 em=0.0000 | running_f1=0.4088 running_em=0.3027 | q=11.057s
+2026-05-23 14:09:59,370 INFO [dataset][186/200] 77351e24c1b3474414472073259cea34aa2b7c63234264a6 | f1=1.0000 em=1.0000 | running_f1=0.4120 running_em=0.3065 | q=10.153s
+2026-05-23 14:10:09,641 INFO [dataset][187/200] 40e8c816ba317d696267cad7f758b7be88c0c90eccd2d3ce | f1=0.0000 em=0.0000 | running_f1=0.4098 running_em=0.3048 | q=10.219s
+2026-05-23 14:10:26,537 INFO [dataset][188/200] a6e0032c62ece331c56364ced53e1c4076c303e4ae287074 | f1=0.0000 em=0.0000 | running_f1=0.4076 running_em=0.3032 | q=16.540s
+2026-05-23 14:10:35,166 INFO [dataset][189/200] 28e93095b912403dad071f2821bcf6c6bef250f5c506ccc7 | f1=1.0000 em=1.0000 | running_f1=0.4107 running_em=0.3069 | q=8.576s
+2026-05-23 14:10:44,648 INFO [dataset][190/200] 45b3ff5fd17fddc64c647566139dadd2693cf4488c0e6ec7 | f1=1.0000 em=1.0000 | running_f1=0.4138 running_em=0.3105 | q=9.436s
+2026-05-23 14:10:59,723 INFO [dataset][191/200] 6448aa2df921d10654846a32887ee601b9456dd05da18428 | f1=0.6667 em=0.0000 | running_f1=0.4151 running_em=0.3089 | q=15.025s
+2026-05-23 14:11:13,169 INFO [dataset][192/200] 0d59b836b70226e7bbd830db4030b09426a37d8543da426d | f1=0.0000 em=0.0000 | running_f1=0.4130 running_em=0.3073 | q=13.421s
+2026-05-23 14:11:21,879 INFO [dataset][193/200] 64219602b22a98429c3bc6a9c49ae282dd39e6a1b29debe7 | f1=1.0000 em=1.0000 | running_f1=0.4160 running_em=0.3109 | q=8.649s
+2026-05-23 14:11:35,349 INFO [dataset][194/200] 7e74ad75b51dd675970fecb014631c801252981eb2a657d1 | f1=0.6667 em=0.0000 | running_f1=0.4173 running_em=0.3093 | q=13.419s
+2026-05-23 14:11:45,057 INFO [dataset][195/200] 170fdcb3bc67d3485e1d9119c94ecb4accbd49d1a5b342ee | f1=1.0000 em=1.0000 | running_f1=0.4203 running_em=0.3128 | q=9.643s
+2026-05-23 14:11:53,948 INFO [dataset][196/200] a3ba409a8a3c8bad40a1fa415b981a8227c7d21936a06f17 | f1=0.0000 em=0.0000 | running_f1=0.4182 running_em=0.3112 | q=8.843s
+2026-05-23 14:12:02,850 INFO [dataset][197/200] e34d03a801bfa0de0ee1f5ecd06dbee378a6410d5555f7fe | f1=1.0000 em=1.0000 | running_f1=0.4211 running_em=0.3147 | q=8.840s
+2026-05-23 14:12:11,987 INFO [dataset][198/200] 1c5e70656ffbd6ba33bd853ce406b5efd495e16a3610ed9f | f1=0.0000 em=0.0000 | running_f1=0.4190 running_em=0.3131 | q=9.086s
+2026-05-23 14:12:25,873 INFO [dataset][199/200] 665c0eff8918d3eeecbdd3439e19c078253bde37c2977f2c | f1=0.0000 em=0.0000 | running_f1=0.4169 running_em=0.3116 | q=13.493s
+2026-05-23 14:12:34,890 INFO [dataset][200/200] 1f2d53ab7c6e9f6ae863e4bedf1091966ccc1cfb68374b35 | f1=1.0000 em=1.0000 | running_f1=0.4198 running_em=0.3150 | q=8.970s
+2026-05-23 14:12:34,892 INFO Saved metrics: /data/xyh/code/HoloRAG/outputs/musique_eval/ablation_runs/v8a_hippo_ppr_musique_gpu4/metrics_summary.json
+2026-05-23 14:12:34,892 INFO Run complete | F1=0.4198 EM=0.3150 N=200
