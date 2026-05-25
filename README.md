@@ -1,6 +1,6 @@
-# HoloRAG-naive
+# HoloRAG
 
-This is a clean baseline for testing the core HoloRAG idea without the later-stage tricks in the main `HoloRAG` repository.
+This is a clean implementation for testing the core HoloRAG idea.
 
 Core mapping:
 
@@ -37,9 +37,9 @@ It reuses the same local LLM/OpenAI-compatible endpoint and NV-Embed style encod
 Index:
 
 ```bash
-python main_naive.py index \
-  --corpus_file ../HoloRAG/reproduce/test/groups/musique_01_10/sample_musique1.json \
-  --output_dir outputs/sample_musique1 \
+python main.py index \
+  --corpus_file data/corpus.json \
+  --output_dir outputs/demo \
   --llm_base_url http://127.0.0.1:8000/v1 \
   --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \
   --embedding_name /data/xyh/models/NV-Embed-v2 \
@@ -49,9 +49,10 @@ python main_naive.py index \
 Query:
 
 ```bash
-python main_naive.py query \
-  --corpus_file ../HoloRAG/reproduce/test/groups/musique_01_10/sample_musique1.json \
-  --output_dir outputs/sample_musique1 \
+python main.py query \
+  --corpus_file data/corpus.json \
+  --query_text "What question should HoloRAG answer?" \
+  --output_dir outputs/demo \
   --task_profile multi_hop \
   --llm_base_url http://127.0.0.1:8000/v1 \
   --llm_name /data/xyh/models/Qwen2.5-72B-Instruct \

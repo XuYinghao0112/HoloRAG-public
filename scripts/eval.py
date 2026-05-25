@@ -14,6 +14,8 @@ from typing import Any, Dict, List, Sequence, Tuple
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = REPO_ROOT / "src"
+INDEX_FILENAME = "holorag_index.pkl"
+LEGACY_INDEX_FILENAME = "holorag_naive_index.pkl"
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 if str(SRC_ROOT) not in sys.path:
@@ -64,10 +66,68 @@ def _extract_sample_list(payload: Any, dataset_file: str) -> List[Dict[str, Any]
     raise ValueError(f"Expected a sample list in dataset: {dataset_file}")
 
 
-def _paragraphs_from_contexts(contexts: Any) -> List[Dict[str, Any]]:
-    paragraphs: List[Dict[str, Any]] = []
+DOCUMENT_LIST_KEYS = ("documents", "docs", "paragraphs", "contexts", "context", "passages", "items", "data")
+TEXT_KEYS = ("text", "content", "contents", "body", "page_content", "paragraph_text")
+TITLE_KEYS = ("title", "name", "doc_id", "id", "uid")
+
+
+def _first_text_value(item: Dict[str, Any], keys: Sequence[str]) -> str:
+    for key in keys:
+        value = item.get(key)
+        if value is not None:
+            return str(value)
+    return ""
+
+
+def _document_from_item(item: Any, idx: int, supporting_titles: set = None) -> Dict[str, Any]:
+    supporting_titles = supporting_titles or set()
+    if isinstance(item, str):
+        return {"idx": idx, "title": f"doc_{idx}", "text": item}
+    if isinstance(item, list) and len(item) >= 2:
+        title = str(item[0])
+        body = item[1]
+        text = " ".join(str(s) for s in body) if isinstance(body, list) else str(body)
+        return {"idx": idx, "title": title, "text": text, "is_supporting": title in supporting_titles}
+    if not isinstance(item, dict):
+        return {}
+    title = _first_text_value(item, TITLE_KEYS) or f"doc_{idx}"
+    text = _first_text_value(item, TEXT_KEYS)
+    if not text and isinstance(item.get("sentences"), list):
+        text = " ".join(str(sentence) for sentence in item["sentences"])
+    if not text:
+        return {}
+    document = dict(item)
+    document["idx"] = document.get("idx", idx)
+    document["title"] = title
+    document["text"] = text
+    if "is_supporting" not in document and title in supporting_titles:
+        document["is_supporting"] = True
+    return document
+
+
+def _documents_from_items(items: Any, supporting_titles: set = None) -> List[Dict[str, Any]]:
+    documents: List[Dict[str, Any]] = []
+    if not isinstance(items, list):
+        return documents
+    for idx, entry in enumerate(items):
+        document = _document_from_item(entry, idx, supporting_titles=supporting_titles)
+        if document and str(document.get("text", "")).strip():
+            documents.append(document)
+    return documents
+
+
+def _documents_from_sample(sample: Dict[str, Any]) -> List[Dict[str, Any]]:
+    for key in DOCUMENT_LIST_KEYS:
+        documents = _documents_from_items(sample.get(key))
+        if documents:
+            return documents
+    return []
+
+
+def _documents_from_contexts(contexts: Any) -> List[Dict[str, Any]]:
+    documents: List[Dict[str, Any]] = []
     if not isinstance(contexts, list):
-        return paragraphs
+        return documents
     for idx, entry in enumerate(contexts):
         title = f"doc_{idx}"
         text = ""
@@ -83,8 +143,9 @@ def _paragraphs_from_contexts(contexts: Any) -> List[Dict[str, Any]]:
         elif isinstance(entry, str):
             text = entry
         if text:
-            paragraphs.append({"idx": idx, "title": title, "paragraph_text": text, "is_supporting": is_supporting})
-    return paragraphs
+            doc_idx = entry.get("idx", idx) if isinstance(entry, dict) else idx
+            documents.append({"idx": doc_idx, "title": title, "text": text, "is_supporting": is_supporting})
+    return documents
 
 
 def normalize_sample(item: Dict[str, Any], fallback_idx: int) -> Dict[str, Any]:
@@ -110,11 +171,11 @@ def normalize_sample(item: Dict[str, Any], fallback_idx: int) -> Dict[str, Any]:
                 sample["answer_aliases"] = aliases
         elif sample.get("gold_answer") is not None:
             sample["answer"] = str(sample.get("gold_answer", ""))
-    if "paragraphs" not in sample:
-        for key in ("contexts", "context", "passages", "documents", "docs"):
-            paragraphs = _paragraphs_from_contexts(sample.get(key))
-            if paragraphs:
-                sample["paragraphs"] = paragraphs
+    if "documents" not in sample:
+        for key in DOCUMENT_LIST_KEYS:
+            documents = _documents_from_contexts(sample.get(key))
+            if documents:
+                sample["documents"] = documents
                 break
     return sample
 
@@ -129,17 +190,17 @@ def convert_2wiki_item(item: Dict[str, Any], fallback_idx: int) -> Dict[str, Any
         for x in item.get("supporting_facts", [])
         if isinstance(x, list) and x
     }
-    paragraphs: List[Dict[str, Any]] = []
+    documents: List[Dict[str, Any]] = []
     for idx, entry in enumerate(item.get("context", [])):
         if not (isinstance(entry, list) and len(entry) >= 2):
             continue
         title = str(entry[0])
         sentences = entry[1] if isinstance(entry[1], list) else []
-        paragraphs.append(
+        documents.append(
             {
                 "idx": idx,
                 "title": title,
-                "paragraph_text": " ".join(str(s) for s in sentences),
+                "text": " ".join(str(s) for s in sentences),
                 "is_supporting": title in supporting_titles,
             }
         )
@@ -149,7 +210,7 @@ def convert_2wiki_item(item: Dict[str, Any], fallback_idx: int) -> Dict[str, Any
         "question": str(item.get("question", "")),
         "answer": str(item.get("answer", "")),
         "answer_aliases": [],
-        "paragraphs": paragraphs,
+        "documents": documents,
     }
 
 
@@ -164,7 +225,7 @@ def detect_dataset_format(dataset_file: str, explicit_format: str) -> str:
         first = samples[0]
         if isinstance(first, dict) and "context" in first and "supporting_facts" in first:
             return "2wiki_json"
-        if isinstance(first, dict) and "paragraphs" in first and "question" in first:
+        if isinstance(first, dict) and any(key in first for key in DOCUMENT_LIST_KEYS) and "question" in first:
             return "canonical_json"
         if isinstance(first, dict):
             return "canonical_json"
@@ -347,7 +408,7 @@ def format_qa_evidence_from_ranked_passages(ranked_passages: Sequence[Dict[str, 
 
 
 def setup_logger(log_path: Path) -> logging.Logger:
-    logger = logging.getLogger("naive_ablation_eval")
+    logger = logging.getLogger("holorag_eval")
     logger.setLevel(logging.INFO)
     logger.handlers.clear()
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
@@ -357,7 +418,7 @@ def setup_logger(log_path: Path) -> logging.Logger:
     sh.setFormatter(formatter)
     logger.addHandler(fh)
     logger.addHandler(sh)
-    package_logger = logging.getLogger("holorag_naive")
+    package_logger = logging.getLogger("holorag")
     package_logger.setLevel(logging.INFO)
     package_logger.handlers.clear()
     package_logger.addHandler(fh)
@@ -394,24 +455,35 @@ def _avg(values: Sequence[float]) -> float:
     return float(sum(values) / len(values))
 
 
+def resolve_index_path(sample_dir: Path) -> Path:
+    index_path = sample_dir / INDEX_FILENAME
+    if index_path.exists():
+        return index_path
+    legacy_path = sample_dir / LEGACY_INDEX_FILENAME
+    if legacy_path.exists():
+        return legacy_path
+    return index_path
+
+
 def build_documents(sample: Dict[str, Any]) -> List[Dict[str, str]]:
     documents: List[Dict[str, str]] = []
-    for idx, paragraph in enumerate(sample.get("paragraphs", [])):
+    source_documents = _documents_from_sample(sample)
+    for idx, document in enumerate(source_documents):
         documents.append(
             {
-                "title": str(paragraph.get("title", f"doc_{idx}")),
-                "text": str(paragraph.get("paragraph_text", paragraph.get("text", ""))),
-                "idx": paragraph.get("idx", idx),
-                "is_supporting": paragraph.get("is_supporting", False),
+                "title": str(document.get("title", f"doc_{idx}")),
+                "text": str(document.get("text", "")),
+                "idx": document.get("idx", idx),
+                "is_supporting": document.get("is_supporting", False),
             }
         )
     return documents
 
 
 def build_config(args: argparse.Namespace, save_dir: str):
-    from holorag_naive import NaiveHoloRAGConfig
+    from holorag import HoloRAGConfig
 
-    return NaiveHoloRAGConfig(
+    return HoloRAGConfig(
         llm_base_url=args.llm_base_url,
         llm_model_name=args.llm_name,
         embedding_model_name=args.embedding_name,
@@ -429,11 +501,14 @@ def build_config(args: argparse.Namespace, save_dir: str):
         enable_entity_similarity_edges=not args.disable_entity_similarity_edges,
         entity_similarity_threshold=args.entity_similarity_threshold,
         entity_similarity_top_k=args.entity_similarity_top_k,
+        enable_granularity_awareness=not args.disable_granularity_awareness,
+        enable_sentence_layer=not args.disable_sentence_layer,
         chunk_size_words=args.chunk_size_words,
         chunk_overlap_words=args.chunk_overlap_words,
         spacy_model_name=args.spacy_model_name,
         passage_output_top_k=max(args.topk_passages, args.passage_output_top_k),
         qa_passage_top_k=args.topk_passages,
+        enable_granularity_pagerank_bias=not args.disable_granularity_pagerank_bias,
         fact_rerank_use_llm=args.fact_rerank_use_llm,
         fact_rerank_llm_candidate_k=args.fact_rerank_llm_candidate_k,
         fact_rerank_llm_keep_k=args.fact_rerank_llm_keep_k,
@@ -449,6 +524,67 @@ def build_config(args: argparse.Namespace, save_dir: str):
     )
 
 
+def _arg_provided(argv: Sequence[str], name: str) -> bool:
+    return any(item == name or item.startswith(f"{name}=") for item in argv)
+
+
+def apply_ablation_defaults(args: argparse.Namespace, ablation_name: str, argv: Sequence[str]) -> None:
+    if ablation_name not in {"wo_sentence_layer", "wo_granularity_awareness"}:
+        return
+
+    if ablation_name == "wo_sentence_layer":
+        defaults = {
+            "--topk_passages": ("topk_passages", 6),
+            "--passage_output_top_k": ("passage_output_top_k", 12),
+            "--qa_evidence_token_budget": ("qa_evidence_token_budget", 2400),
+            "--fact_rerank_llm_candidate_k": ("fact_rerank_llm_candidate_k", 24),
+            "--fact_rerank_llm_keep_k": ("fact_rerank_llm_keep_k", 12),
+            "--evidence_extra_ranked_sentence_k": ("evidence_extra_ranked_sentence_k", 0),
+            "--evidence_max_sentences": ("evidence_max_sentences", 0),
+            "--evidence_title_limit": ("evidence_title_limit", 5),
+            "--evidence_passage_context_k": ("evidence_passage_context_k", 6),
+            "--evidence_passage_excerpt_tokens": ("evidence_passage_excerpt_tokens", 560),
+        }
+    else:
+        defaults = {
+            "--topk_passages": ("topk_passages", 6),
+            "--passage_output_top_k": ("passage_output_top_k", 12),
+            "--qa_evidence_token_budget": ("qa_evidence_token_budget", 2600),
+            "--fact_rerank_llm_candidate_k": ("fact_rerank_llm_candidate_k", 28),
+            "--fact_rerank_llm_keep_k": ("fact_rerank_llm_keep_k", 14),
+            "--evidence_extra_ranked_sentence_k": ("evidence_extra_ranked_sentence_k", 24),
+            "--evidence_max_sentences": ("evidence_max_sentences", 40),
+            "--evidence_title_limit": ("evidence_title_limit", 4),
+            "--evidence_passage_context_k": ("evidence_passage_context_k", 4),
+            "--evidence_passage_excerpt_tokens": ("evidence_passage_excerpt_tokens", 320),
+        }
+    for flag, (attr, value) in defaults.items():
+        if not _arg_provided(argv, flag):
+            setattr(args, attr, value)
+
+    if ablation_name == "wo_sentence_layer":
+        if not _arg_provided(argv, "--disable_sentence_layer"):
+            args.disable_sentence_layer = True
+        if not _arg_provided(argv, "--disable_granularity_awareness"):
+            args.disable_granularity_awareness = False
+        if not _arg_provided(argv, "--disable_granularity_pagerank_bias"):
+            args.disable_granularity_pagerank_bias = False
+    else:
+        if not _arg_provided(argv, "--disable_granularity_awareness"):
+            args.disable_granularity_awareness = True
+        if not _arg_provided(argv, "--disable_sentence_layer"):
+            args.disable_sentence_layer = False
+        if not _arg_provided(argv, "--disable_granularity_pagerank_bias"):
+            args.disable_granularity_pagerank_bias = True
+
+    if not _arg_provided(argv, "--enable_fact_source_first_evidence"):
+        args.enable_fact_source_first_evidence = False
+    if not _arg_provided(argv, "--enable_fact_chunk_boost"):
+        args.enable_fact_chunk_boost = False
+    if not _arg_provided(argv, "--enable_fair_sentence_context"):
+        args.enable_fair_sentence_context = False
+
+
 def prebuild_or_reuse_indexes(
     rag,
     samples: Sequence[Dict[str, Any]],
@@ -462,7 +598,7 @@ def prebuild_or_reuse_indexes(
         sample_id = str(sample.get("id", f"sample_{i}"))
         sample_dir = shared_index_root / sample_id
         sample_dir.mkdir(parents=True, exist_ok=True)
-        index_path = sample_dir / "holorag_naive_index.pkl"
+        index_path = resolve_index_path(sample_dir)
         metadata_path = sample_dir / "metadata.json"
 
         if index_path.exists():
@@ -492,6 +628,7 @@ def prebuild_or_reuse_indexes(
             logger.info("[index][%d/%d] start %s", i, len(samples), sample_id)
             documents = build_documents(sample)
             rag.index(documents)
+            index_path = sample_dir / INDEX_FILENAME
             with index_path.open("wb") as handle:
                 pickle.dump(rag.state, handle)
             stats = rag.describe_index()
@@ -553,7 +690,7 @@ def records_from_shared_indexes(samples: Sequence[Dict[str, Any]], shared_index_
     for sample in samples:
         sample_id = str(sample.get("id", ""))
         sample_dir = shared_index_root / sample_id
-        index_path = sample_dir / "holorag_naive_index.pkl"
+        index_path = resolve_index_path(sample_dir)
         metadata_path = sample_dir / "metadata.json"
         stats = {}
         index_latency = 0.0
@@ -586,6 +723,24 @@ def records_from_shared_indexes(samples: Sequence[Dict[str, Any]], shared_index_
     return {"records": records, "summary": summary}
 
 
+def refresh_index_records(
+    samples: Sequence[Dict[str, Any]],
+    records: Sequence[Dict[str, Any]],
+    shared_index_root: Path,
+) -> List[Dict[str, Any]]:
+    record_by_id = {str(item.get("sample_id", "")): dict(item) for item in records}
+    refreshed: List[Dict[str, Any]] = []
+    for sample in samples:
+        sample_id = str(sample.get("id", ""))
+        record = record_by_id.get(sample_id, {"sample_id": sample_id, "reused": True})
+        index_path = resolve_index_path(shared_index_root / sample_id)
+        record["index_path"] = str(index_path)
+        record["valid"] = index_path.exists()
+        record["reused"] = True
+        refreshed.append(record)
+    return refreshed
+
+
 def run_eval(
     rag,
     samples: Sequence[Dict[str, Any]],
@@ -595,7 +750,7 @@ def run_eval(
     logger: logging.Logger,
     token_counter: TokenCounter,
     per_example_filename: str = "per_example.jsonl",
-    metrics_variant: str = "baseline_naive",
+    metrics_variant: str = "baseline",
 ) -> Dict[str, Any]:
     record_by_id = {str(item.get("sample_id", "")): item for item in index_records}
     per_example_path = run_dir / per_example_filename
@@ -613,6 +768,7 @@ def run_eval(
     chunk_counts: List[float] = []
     node_counts: List[float] = []
     edge_counts: List[float] = []
+    edge_type_totals: Dict[str, List[float]] = {}
     evidence_tokens: List[float] = []
     qa_failures = 0
 
@@ -666,6 +822,9 @@ def run_eval(
         chunk_counts.append(float(layers.get("chunk", 0)))
         node_counts.append(float(stats.get("nodes", 0)))
         edge_counts.append(float(stats.get("edges", 0)))
+        edge_type_counts = stats.get("edge_type_counts", {}) or {}
+        for edge_type, count in edge_type_counts.items():
+            edge_type_totals.setdefault(str(edge_type), []).append(float(count))
 
         row = {
             "query_id": sample_id,
@@ -688,6 +847,7 @@ def run_eval(
             "chunk_nodes": int(layers.get("chunk", 0)),
             "nodes": int(stats.get("nodes", 0)),
             "edges": int(stats.get("edges", 0)),
+            "edge_type_counts": {str(key): int(value) for key, value in edge_type_counts.items()},
             "final_evidence_tokens": int(final_evidence_tokens),
             "final_evidence_tokenizer": token_counter.method,
             "qa_answer_mode": result.get("qa_answer_mode", ""),
@@ -708,7 +868,7 @@ def run_eval(
             query_elapsed,
         )
 
-    return {
+    metrics = {
         "variant": metrics_variant,
         "num_queries": len(f1_scores),
         "F1": _avg(f1_scores),
@@ -728,10 +888,13 @@ def run_eval(
         "final_evidence_tokens": _avg(evidence_tokens),
         "final_evidence_tokenizer": token_counter.method,
     }
+    for edge_type, values in sorted(edge_type_totals.items()):
+        metrics[f"edge_{edge_type}"] = _avg(values)
+    return metrics
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run naive HoloRAG baseline eval on sampled dataset.")
+    parser = argparse.ArgumentParser(description="Run HoloRAG baseline eval on sampled dataset.")
     parser.add_argument("--dataset_file", type=str, required=True)
     parser.add_argument("--dataset_format", type=str, default="auto", choices=["auto", "musique_jsonl", "canonical_jsonl", "2wiki_json", "canonical_json"])
     parser.add_argument("--dataset_name", type=str, default="", help="Name used in logs and output names; inferred from samples or file name when omitted.")
@@ -759,22 +922,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--disable_entity_similarity_edges", action="store_true")
     parser.add_argument("--entity_similarity_threshold", type=float, default=0.8)
     parser.add_argument("--entity_similarity_top_k", type=int, default=2047)
-    parser.add_argument("--topk_passages", type=int, default=5)
+    parser.add_argument("--disable_sentence_layer", action="store_true")
+    parser.add_argument("--disable_granularity_awareness", action="store_true")
+    parser.add_argument("--disable_granularity_pagerank_bias", action="store_true")
+    parser.add_argument("--topk_passages", type=int, default=4)
     parser.add_argument("--passage_output_top_k", type=int, default=10)
     parser.add_argument("--qa_max_input_tokens", type=int, default=7000)
-    parser.add_argument("--qa_evidence_token_budget", type=int, default=620)
-    parser.add_argument("--fact_rerank_use_llm", action="store_true")
-    parser.add_argument("--fact_rerank_llm_candidate_k", type=int, default=12)
-    parser.add_argument("--fact_rerank_llm_keep_k", type=int, default=5)
-    parser.add_argument("--enable_fact_source_first_evidence", action="store_true")
-    parser.add_argument("--enable_fact_chunk_boost", action="store_true")
-    parser.add_argument("--fact_chunk_boost", type=float, default=0.35)
-    parser.add_argument("--enable_fair_sentence_context", action="store_true")
-    parser.add_argument("--evidence_extra_ranked_sentence_k", type=int, default=6)
-    parser.add_argument("--evidence_max_sentences", type=int, default=18)
+    parser.add_argument("--qa_evidence_token_budget", type=int, default=820)
+    parser.add_argument("--fact_rerank_use_llm", action="store_true", default=True)
+    parser.add_argument("--fact_rerank_llm_candidate_k", type=int, default=20)
+    parser.add_argument("--fact_rerank_llm_keep_k", type=int, default=7)
+    parser.add_argument("--enable_fact_source_first_evidence", action="store_true", default=True)
+    parser.add_argument("--enable_fact_chunk_boost", action="store_true", default=True)
+    parser.add_argument("--fact_chunk_boost", type=float, default=0.4)
+    parser.add_argument("--enable_fair_sentence_context", action="store_true", default=True)
+    parser.add_argument("--evidence_extra_ranked_sentence_k", type=int, default=3)
+    parser.add_argument("--evidence_max_sentences", type=int, default=15)
     parser.add_argument("--evidence_title_limit", type=int, default=3)
-    parser.add_argument("--evidence_passage_context_k", type=int, default=2)
-    parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=150)
+    parser.add_argument("--evidence_passage_context_k", type=int, default=1)
+    parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=100)
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
@@ -786,13 +952,14 @@ def main() -> None:
     args = parse_args()
     set_global_seed(args.seed)
 
-    from holorag_naive import NaiveHoloRAG
+    from holorag import HoloRAG
 
     dataset_format = detect_dataset_format(args.dataset_file, args.dataset_format)
     all_samples = load_samples(args.dataset_file, dataset_format)
     dataset_name = infer_dataset_name(args.dataset_file, all_samples, args.dataset_name)
     output_dir_is_ablation = "ablation" in Path(args.output_dir).as_posix().lower()
     ablation_name = args.ablation_name.strip() or (args.run_name.strip() if output_dir_is_ablation else "")
+    apply_ablation_defaults(args, ablation_name, sys.argv[1:])
     log_tag = build_log_tag(dataset_name, ablation_name)
     run_name = args.run_name.strip() or f"{dataset_name}_{args.num_eval_queries}_seed{args.seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     run_dir = Path(args.output_dir).expanduser().resolve() / run_name
@@ -808,31 +975,34 @@ def main() -> None:
         raise ValueError("No samples available after split filtering.")
     samples = sample_queries(filtered, run_dir / "sampled_queries.json", args.seed, args.num_eval_queries)
 
-    rag = NaiveHoloRAG(build_config(args, save_dir=str(run_dir / "workdir")))
+    rag = HoloRAG(build_config(args, save_dir=str(run_dir / "workdir")))
     token_counter = TokenCounter(args.llm_name, logger)
     shared_index_root = Path(args.shared_index_root).expanduser().resolve()
     shared_index_root.mkdir(parents=True, exist_ok=True)
     if args.recompute_only:
         previous_records_path = run_dir / "shared_index_records.json"
         if previous_records_path.exists():
+            records = json.loads(previous_records_path.read_text(encoding="utf-8"))
+            records = refresh_index_records(samples, records, shared_index_root)
             index_data = {
-                "records": json.loads(previous_records_path.read_text(encoding="utf-8")),
+                "records": records,
                 "summary": json.loads((run_dir / "shared_index_summary.json").read_text(encoding="utf-8"))
                 if (run_dir / "shared_index_summary.json").exists()
                 else {"avg_index_latency": 0.0, "total_index_runtime": 0.0},
             }
+            previous_records_path.write_text(json.dumps(index_data["records"], ensure_ascii=False, indent=2), encoding="utf-8")
         else:
             index_data = records_from_shared_indexes(samples, shared_index_root)
             (run_dir / "shared_index_records.json").write_text(json.dumps(index_data["records"], ensure_ascii=False, indent=2), encoding="utf-8")
             (run_dir / "shared_index_summary.json").write_text(json.dumps(index_data["summary"], ensure_ascii=False, indent=2), encoding="utf-8")
         per_example_filename = "per_example.jsonl"
-        metrics_variant = "holorag_naive"
+        metrics_variant = "holorag"
     else:
         index_data = prebuild_or_reuse_indexes(rag, samples, shared_index_root, logger)
         (run_dir / "shared_index_records.json").write_text(json.dumps(index_data["records"], ensure_ascii=False, indent=2), encoding="utf-8")
         (run_dir / "shared_index_summary.json").write_text(json.dumps(index_data["summary"], ensure_ascii=False, indent=2), encoding="utf-8")
         per_example_filename = "per_example.jsonl"
-        metrics_variant = "holorag_naive"
+        metrics_variant = "holorag"
 
     metrics = run_eval(
         rag,
@@ -873,6 +1043,7 @@ def main() -> None:
         "chunk_nodes",
         "edges",
     ]
+    metric_headers.extend(sorted(key for key in metrics if key.startswith("edge_")))
     ordered_metrics = {key: metrics.get(key, "") for key in metric_headers}
 
     summary_rows = [ordered_metrics]
@@ -904,6 +1075,9 @@ def main() -> None:
                 "enable_entity_similarity_edges": not args.disable_entity_similarity_edges,
                 "entity_similarity_threshold": args.entity_similarity_threshold,
                 "entity_similarity_top_k": args.entity_similarity_top_k,
+                "enable_granularity_awareness": rag.config.enable_granularity_awareness,
+                "enable_sentence_layer": rag.config.enable_sentence_layer,
+                "enable_granularity_pagerank_bias": rag.config.enable_granularity_pagerank_bias,
                 "topk_passages": args.topk_passages,
                 "qa_max_input_tokens": args.qa_max_input_tokens,
                 "qa_evidence_token_budget": args.qa_evidence_token_budget,
