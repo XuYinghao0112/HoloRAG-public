@@ -529,60 +529,26 @@ def _arg_provided(argv: Sequence[str], name: str) -> bool:
 
 
 def apply_ablation_defaults(args: argparse.Namespace, ablation_name: str, argv: Sequence[str]) -> None:
-    if ablation_name not in {"wo_sentence_layer", "wo_granularity_awareness"}:
-        return
+    """Hook for dedicated ablation entrypoints to override.
 
+    The generic evaluator keeps full/baseline defaults untouched. Ablations
+    with tuned defaults live in their own scripts.
+    """
     if ablation_name == "wo_sentence_layer":
-        defaults = {
-            "--topk_passages": ("topk_passages", 6),
-            "--passage_output_top_k": ("passage_output_top_k", 12),
-            "--qa_evidence_token_budget": ("qa_evidence_token_budget", 2400),
-            "--fact_rerank_llm_candidate_k": ("fact_rerank_llm_candidate_k", 24),
-            "--fact_rerank_llm_keep_k": ("fact_rerank_llm_keep_k", 12),
-            "--evidence_extra_ranked_sentence_k": ("evidence_extra_ranked_sentence_k", 0),
-            "--evidence_max_sentences": ("evidence_max_sentences", 0),
-            "--evidence_title_limit": ("evidence_title_limit", 5),
-            "--evidence_passage_context_k": ("evidence_passage_context_k", 6),
-            "--evidence_passage_excerpt_tokens": ("evidence_passage_excerpt_tokens", 560),
-        }
-    else:
-        defaults = {
-            "--topk_passages": ("topk_passages", 6),
-            "--passage_output_top_k": ("passage_output_top_k", 12),
-            "--qa_evidence_token_budget": ("qa_evidence_token_budget", 2600),
-            "--fact_rerank_llm_candidate_k": ("fact_rerank_llm_candidate_k", 28),
-            "--fact_rerank_llm_keep_k": ("fact_rerank_llm_keep_k", 14),
-            "--evidence_extra_ranked_sentence_k": ("evidence_extra_ranked_sentence_k", 24),
-            "--evidence_max_sentences": ("evidence_max_sentences", 40),
-            "--evidence_title_limit": ("evidence_title_limit", 4),
-            "--evidence_passage_context_k": ("evidence_passage_context_k", 4),
-            "--evidence_passage_excerpt_tokens": ("evidence_passage_excerpt_tokens", 320),
-        }
-    for flag, (attr, value) in defaults.items():
+        raise ValueError("Use scripts/eval_wo_sentence_layer.py for the wo_sentence_layer ablation.")
+    return
+
+
+def apply_task_profile_defaults(args: argparse.Namespace, argv: Sequence[str]) -> None:
+    if args.task_profile != "single_hop":
+        return
+    single_hop_defaults = {
+        "--topk_passages": ("topk_passages", 0),
+        "--qa_evidence_token_budget": ("qa_evidence_token_budget", 340),
+    }
+    for flag, (attr, value) in single_hop_defaults.items():
         if not _arg_provided(argv, flag):
             setattr(args, attr, value)
-
-    if ablation_name == "wo_sentence_layer":
-        if not _arg_provided(argv, "--disable_sentence_layer"):
-            args.disable_sentence_layer = True
-        if not _arg_provided(argv, "--disable_granularity_awareness"):
-            args.disable_granularity_awareness = False
-        if not _arg_provided(argv, "--disable_granularity_pagerank_bias"):
-            args.disable_granularity_pagerank_bias = False
-    else:
-        if not _arg_provided(argv, "--disable_granularity_awareness"):
-            args.disable_granularity_awareness = True
-        if not _arg_provided(argv, "--disable_sentence_layer"):
-            args.disable_sentence_layer = False
-        if not _arg_provided(argv, "--disable_granularity_pagerank_bias"):
-            args.disable_granularity_pagerank_bias = True
-
-    if not _arg_provided(argv, "--enable_fact_source_first_evidence"):
-        args.enable_fact_source_first_evidence = False
-    if not _arg_provided(argv, "--enable_fact_chunk_boost"):
-        args.enable_fact_chunk_boost = False
-    if not _arg_provided(argv, "--enable_fair_sentence_context"):
-        args.enable_fair_sentence_context = False
 
 
 def prebuild_or_reuse_indexes(
@@ -960,6 +926,7 @@ def main() -> None:
     output_dir_is_ablation = "ablation" in Path(args.output_dir).as_posix().lower()
     ablation_name = args.ablation_name.strip() or (args.run_name.strip() if output_dir_is_ablation else "")
     apply_ablation_defaults(args, ablation_name, sys.argv[1:])
+    apply_task_profile_defaults(args, sys.argv[1:])
     log_tag = build_log_tag(dataset_name, ablation_name)
     run_name = args.run_name.strip() or f"{dataset_name}_{args.num_eval_queries}_seed{args.seed}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     run_dir = Path(args.output_dir).expanduser().resolve() / run_name

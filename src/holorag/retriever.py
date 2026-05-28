@@ -192,9 +192,7 @@ class Retriever:
             # Multi-hop QA needs a little passage context, but long chunks tend
             # to crowd out the second-hop answer sentence on 2Wiki-style tasks.
             use_expanded_passage_context = int(getattr(self.config, "evidence_passage_context_k", 1)) > 1
-            if use_expanded_passage_context and self._uses_ablation_context_expansion():
-                chunks = self._ablation_passage_context(ranked_passages)
-            elif getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context:
+            if getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context:
                 chunks = self._diverse_passage_context(ranked_passages)
             else:
                 chunks = list(ranked_passages[: min(1, self.config.qa_passage_top_k)])
@@ -668,32 +666,6 @@ class Retriever:
             return list(ranked_passages[:limit])
         return selected
 
-    def _uses_ablation_context_expansion(self) -> bool:
-        return (
-            not getattr(self.config, "enable_sentence_layer", True)
-            or not getattr(self.config, "enable_granularity_awareness", True)
-        )
-
-    def _ablation_passage_context(self, ranked_passages: Sequence[Dict]) -> List[Dict]:
-        limit = max(1, int(getattr(self.config, "evidence_passage_context_k", 2)))
-        ranked = list(ranked_passages)
-        if not ranked:
-            return []
-        anchor = ranked[:1]
-        candidates = ranked[1:] or ranked
-        selected: List[Dict] = []
-        seen_titles = {str(passage.get("title", "")).strip().lower() for passage in anchor}
-        for passage in candidates:
-            title = str(passage.get("title", "")).strip().lower()
-            if title and title in seen_titles:
-                continue
-            selected.append(passage)
-            if title:
-                seen_titles.add(title)
-            if len(selected) >= max(0, limit - len(anchor)):
-                break
-        return (anchor + selected)[:limit]
-
     def _chunk_sentences_around_fact(self, graph: nx.DiGraph, fact: Dict) -> List[Dict]:
         sentence_id = fact.get("sentence_id")
         if sentence_id not in graph:
@@ -742,7 +714,7 @@ class Retriever:
         budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
         candidates: List[Dict] = []
         seen_sentence_ids = set()
-
+        use_expanded_passage_context = profile == "multi_hop" and int(getattr(self.config, "evidence_passage_context_k", 1)) > 1
         for group in evidence_groups:
             label = str(group.get("label", "Evidence")).strip() or "Evidence"
             group_question = str(group.get("question", "")).strip()
@@ -791,7 +763,6 @@ class Retriever:
                 sub_questions=sub_questions,
             ))
 
-        use_expanded_passage_context = profile == "multi_hop" and int(getattr(self.config, "evidence_passage_context_k", 1)) > 1
         if not getattr(self.config, "enable_granularity_awareness", True):
             if profile == "multi_hop" and (getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context):
                 passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 180)))
