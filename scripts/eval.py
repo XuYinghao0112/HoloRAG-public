@@ -717,6 +717,7 @@ def run_eval(
     token_counter: TokenCounter,
     per_example_filename: str = "per_example.jsonl",
     metrics_variant: str = "baseline",
+    source_base_config: bool = False,
 ) -> Dict[str, Any]:
     record_by_id = {str(item.get("sample_id", "")): item for item in index_records}
     per_example_path = run_dir / per_example_filename
@@ -754,6 +755,8 @@ def run_eval(
         with index_path.open("rb") as handle:
             rag.state = pickle.load(handle)
         rag.index_path = str(index_path)
+        if source_base_config:
+            apply_source_base_config(rag.config, sample)
 
         t_query = time.perf_counter()
         result = rag.query(question)
@@ -817,6 +820,9 @@ def run_eval(
             "final_evidence_tokens": int(final_evidence_tokens),
             "final_evidence_tokenizer": token_counter.method,
             "qa_answer_mode": result.get("qa_answer_mode", ""),
+            "source_dataset": sample.get("source_dataset", sample.get("dataset", "")),
+            "applied_source_base_config": source_base_config,
+            "source_base_config": source_base_overrides(sample) if source_base_config else {},
         }
         with per_example_path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
@@ -857,6 +863,59 @@ def run_eval(
     for edge_type, values in sorted(edge_type_totals.items()):
         metrics[f"edge_{edge_type}"] = _avg(values)
     return metrics
+
+
+def _source_name(sample: Dict[str, Any]) -> str:
+    return str(sample.get("source_dataset") or sample.get("dataset") or "").strip()
+
+
+def source_base_overrides(sample: Dict[str, Any]) -> Dict[str, Any]:
+    source = _source_name(sample)
+    common = {
+        "passage_output_top_k": 10,
+        "fact_rerank_llm_candidate_k": 20,
+        "fact_rerank_llm_keep_k": 7,
+        "enable_fact_source_first_evidence": True,
+        "enable_fact_chunk_boost": True,
+        "fact_chunk_boost": 0.4,
+        "enable_fair_sentence_context": True,
+        "evidence_extra_ranked_sentence_k": 3,
+        "evidence_max_sentences": 15,
+        "evidence_title_limit": 3,
+        "evidence_passage_context_k": 1,
+        "evidence_passage_excerpt_tokens": 100,
+        "chunk_size_words": 256,
+        "chunk_overlap_words": 64,
+        "use_paragraph_as_chunk": True,
+    }
+    if source == "naturalquestions":
+        return {
+            **common,
+            "qa_passage_top_k": 0,
+            "qa_evidence_token_budget": 340,
+        }
+    if source == "narrativeqa":
+        return {
+            **common,
+            "qa_passage_top_k": 5,
+            "qa_evidence_token_budget": 2700,
+            "fact_rerank_llm_candidate_k": 32,
+            "fact_rerank_llm_keep_k": 5,
+            "chunk_size_words": 1024,
+            "chunk_overlap_words": 128,
+            "use_paragraph_as_chunk": False,
+        }
+    return {
+        **common,
+        "qa_passage_top_k": 4,
+        "qa_evidence_token_budget": 820,
+    }
+
+
+def apply_source_base_config(config, sample: Dict[str, Any]) -> None:
+    for key, value in source_base_overrides(sample).items():
+        if hasattr(config, key):
+            setattr(config, key, value)
 
 
 def parse_args() -> argparse.Namespace:
@@ -908,6 +967,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence_passage_context_k", type=int, default=1)
     parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=100)
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
+    parser.add_argument("--source_base_config", action="store_true", help="Apply source_dataset-specific base retrieval/reader settings per query while leaving the configured task_profile router intact.")
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
     parser.add_argument("--llm_health_timeout", type=float, default=10.0)
@@ -981,6 +1041,7 @@ def main() -> None:
         token_counter=token_counter,
         per_example_filename=per_example_filename,
         metrics_variant=metrics_variant,
+        source_base_config=args.source_base_config,
     )
     metrics["index_latency"] = float(index_data["summary"].get("avg_index_latency", 0.0))
     metrics["shared_index_runtime"] = float(index_data["summary"].get("total_index_runtime", 0.0))
@@ -1036,6 +1097,7 @@ def main() -> None:
                 "embedding_device": args.embedding_device,
                 "spacy_model_name": args.spacy_model_name,
                 "task_profile": args.task_profile,
+                "source_base_config": args.source_base_config,
                 "use_paragraph_as_chunk": not args.disable_paragraph_as_chunk,
                 "index_extraction_mode": args.index_extraction_mode,
                 "intent_use_llm": args.intent_use_llm,

@@ -1,6 +1,6 @@
 from collections import defaultdict
 import re
-from typing import Dict, List, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple
 
 import networkx as nx
 import numpy as np
@@ -82,7 +82,9 @@ class Retriever:
         pagerank_scores: Dict[str, float],
         channel_scores: Dict[str, Dict[str, float]],
         ranked_facts: Sequence[Dict],
+        alpha: Optional[Dict[str, float]] = None,
     ) -> List[Dict]:
+        alpha_weights = self._alpha_passage_weights(alpha) if self._use_llm_alpha_evidence(alpha) else {}
         chunk_scores: Dict[str, float] = defaultdict(float)
         for node_id, score in pagerank_scores.items():
             if node_id not in graph:
@@ -90,23 +92,23 @@ class Retriever:
             attrs = graph.nodes[node_id]
             node_type = attrs.get("node_type")
             if node_type == "chunk":
-                chunk_scores[node_id] += 0.70 * float(score)
+                chunk_scores[node_id] += alpha_weights.get("chunk_pagerank", 0.70) * float(score)
             elif node_type == "sentence":
                 chunk_id = attrs.get("metadata", {}).get("chunk_id")
                 if chunk_id:
-                    chunk_scores[chunk_id] += 0.20 * float(score)
+                    chunk_scores[chunk_id] += alpha_weights.get("sentence_to_chunk", 0.20) * float(score)
             elif node_type == "entity":
                 for neighbor in list(graph.successors(node_id)) + list(graph.predecessors(node_id)):
                     if neighbor in graph and graph.nodes[neighbor].get("node_type") == "sentence":
                         chunk_id = graph.nodes[neighbor].get("metadata", {}).get("chunk_id")
                         if chunk_id:
-                            chunk_scores[chunk_id] += 0.05 * float(score)
+                            chunk_scores[chunk_id] += alpha_weights.get("entity_to_chunk", 0.05) * float(score)
         for chunk_id, score in channel_scores.get("chunk", {}).items():
-            chunk_scores[chunk_id] += 0.30 * float(score)
+            chunk_scores[chunk_id] += alpha_weights.get("chunk_dense", 0.30) * float(score)
         for fact in ranked_facts[: self.config.fact_top_k]:
             chunk_id = fact.get("chunk_id")
             if chunk_id:
-                chunk_scores[chunk_id] += 0.15 * float(fact.get("score", 0.0))
+                chunk_scores[chunk_id] += alpha_weights.get("fact_to_chunk", 0.15) * float(fact.get("score", 0.0))
                 if getattr(self.config, "enable_granularity_awareness", True) and getattr(self.config, "enable_fact_chunk_boost", False):
                     chunk_scores[chunk_id] += float(getattr(self.config, "fact_chunk_boost", 0.35)) * float(fact.get("score", 0.0))
 
@@ -139,7 +141,9 @@ class Retriever:
         query: str = "",
         sub_questions: Sequence[str] = (),
         token_budget: int = 620,
+        alpha: Optional[Dict[str, float]] = None,
     ) -> Dict:
+        use_alpha_evidence = self._use_llm_alpha_evidence(alpha)
         sentence_scores = self._combined_sentence_scores(graph, pagerank_scores, channel_scores, ranked_facts)
         ranked_sentences = [
             self._sentence_record(graph, sentence_id, score)
@@ -148,7 +152,17 @@ class Retriever:
         ]
         ranked_sentences = [item for item in ranked_sentences if item]
 
-        if profile == "single_hop":
+        if use_alpha_evidence:
+            facts, sentences, chunks, evidence_groups = self._alpha_guided_evidence(
+                graph=graph,
+                ranked_facts=ranked_facts,
+                ranked_sentences=ranked_sentences,
+                ranked_passages=ranked_passages,
+                alpha=alpha or {},
+                query=query,
+                sub_questions=sub_questions,
+            )
+        elif profile == "single_hop":
             facts = list(ranked_facts[: min(self.config.fact_top_k, 10)])
             source_sentences = self._source_sentences_for_facts(graph, facts)
             sentences = self._dedupe_records(source_sentences + ranked_sentences[:4], "node_id")[:6]
@@ -215,9 +229,52 @@ class Retriever:
             fallback_passages=result["fallback_passages"],
             sub_questions=sub_questions,
             token_budget=token_budget,
+            alpha=alpha if use_alpha_evidence else None,
         )
         result.update(packed)
         return result
+
+    def _use_llm_alpha_evidence(self, alpha: Optional[Dict[str, float]]) -> bool:
+        return bool(
+            alpha
+            and getattr(self.config, "enable_granularity_awareness", True)
+            and getattr(self.config, "enable_intent_routing", True)
+            and getattr(self.config, "intent_use_llm", False)
+            and getattr(self.config, "task_profile", "auto") == "auto"
+        )
+
+    def _alpha_guided_evidence(
+        self,
+        graph: nx.DiGraph,
+        ranked_facts: Sequence[Dict],
+        ranked_sentences: Sequence[Dict],
+        ranked_passages: Sequence[Dict],
+        alpha: Dict[str, float],
+        query: str,
+        sub_questions: Sequence[str],
+    ) -> Tuple[List[Dict], List[Dict], List[Dict], List[Dict]]:
+        alpha = normalize_alpha(alpha)
+        fact_limit = max(3, min(self.config.fact_top_k, int(round(3 + alpha.get("fact", 0.0) * self.config.fact_top_k))))
+        sentence_limit = max(3, min(self.config.sentence_top_k, int(round(3 + alpha.get("sentence", 0.0) * 14))))
+        chunk_limit = max(1, min(self.config.qa_passage_top_k, int(round(1 + alpha.get("chunk", 0.0) * self.config.qa_passage_top_k))))
+
+        facts = list(ranked_facts[:fact_limit])
+        source_sentences = self._source_sentences_for_facts(graph, facts)
+        source_take = max(1, int(round(sentence_limit * min(0.75, 0.25 + alpha.get("fact", 0.0)))))
+        dense_take = max(1, sentence_limit - source_take)
+        sentences = self._dedupe_records(source_sentences[:source_take] + list(ranked_sentences[:dense_take]), "node_id")[:sentence_limit]
+        chunks = list(ranked_passages[:chunk_limit])
+        evidence_groups = [
+            {
+                "label": "LLM-alpha fact source evidence",
+                "items": source_sentences[:source_take],
+            },
+            {
+                "label": "LLM-alpha sentence evidence",
+                "items": ranked_sentences[:dense_take],
+            },
+        ]
+        return facts, sentences, chunks, evidence_groups
 
     def _retrieve_entities(self, query_entities: Sequence[str], state: Dict) -> Dict[str, float]:
         embeddings = state.get("embeddings", {}).get("entity", {})
@@ -710,6 +767,7 @@ class Retriever:
         fallback_passages: Sequence[Dict],
         sub_questions: Sequence[str],
         token_budget: int,
+        alpha: Optional[Dict[str, float]] = None,
     ) -> Dict:
         budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
         candidates: List[Dict] = []
@@ -763,7 +821,10 @@ class Retriever:
                 sub_questions=sub_questions,
             ))
 
-        if not getattr(self.config, "enable_granularity_awareness", True):
+        use_alpha_evidence = self._use_llm_alpha_evidence(alpha)
+        if use_alpha_evidence:
+            passage_limit = self._alpha_passage_limit(alpha or {}, budget)
+        elif not getattr(self.config, "enable_granularity_awareness", True):
             if profile == "multi_hop" and (getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context):
                 passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 180)))
             else:
@@ -785,7 +846,9 @@ class Retriever:
                 sub_questions=sub_questions,
             ))
 
-        if getattr(self.config, "enable_granularity_awareness", True):
+        if use_alpha_evidence:
+            weights = self._alpha_pack_weights(alpha or {}, ("fact", "sentence", "chunk"))
+        elif getattr(self.config, "enable_granularity_awareness", True):
             weights = {
                 "single_hop": {"fact": 1.45, "sentence": 1.25, "chunk": 0.65},
                 "multi_hop": {"sentence": 1.45, "fact": 1.20, "chunk": 0.80},
@@ -849,6 +912,25 @@ class Retriever:
             "packed_token_budget": budget,
             "packed_token_count": self._token_count(packed_text),
         }
+
+    def _alpha_pack_weights(self, alpha: Dict[str, float], kinds: Sequence[str]) -> Dict[str, float]:
+        alpha = normalize_alpha(alpha)
+        return {kind: 0.75 + 2.0 * float(alpha.get(kind, 0.0)) for kind in kinds}
+
+    def _alpha_passage_weights(self, alpha: Optional[Dict[str, float]]) -> Dict[str, float]:
+        alpha = normalize_alpha(alpha or {})
+        return {
+            "chunk_pagerank": 0.35 + 0.90 * alpha.get("chunk", 0.0),
+            "sentence_to_chunk": 0.08 + 0.55 * alpha.get("sentence", 0.0),
+            "entity_to_chunk": 0.02 + 0.25 * alpha.get("entity", 0.0),
+            "chunk_dense": 0.12 + 0.70 * alpha.get("chunk", 0.0),
+            "fact_to_chunk": 0.06 + 0.45 * alpha.get("fact", 0.0),
+        }
+
+    def _alpha_passage_limit(self, alpha: Dict[str, float], budget: int) -> int:
+        alpha = normalize_alpha(alpha)
+        chunk_weight = float(alpha.get("chunk", 0.0))
+        return max(80, min(max(80, budget // 2), int(80 + chunk_weight * max(80, budget // 2))))
 
     def _packed_candidate(
         self,

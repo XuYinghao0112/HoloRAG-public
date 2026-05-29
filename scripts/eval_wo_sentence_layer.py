@@ -13,7 +13,7 @@ from __future__ import annotations
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List, Sequence
+from typing import Dict, List, Optional, Sequence
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = REPO_ROOT / "src"
@@ -56,7 +56,9 @@ class WoSentenceProfileRetriever(Retriever):
         pagerank_scores: Dict[str, float],
         channel_scores: Dict[str, Dict[str, float]],
         ranked_facts: Sequence[Dict],
+        alpha: Optional[Dict[str, float]] = None,
     ) -> List[Dict]:
+        alpha_weights = self._alpha_passage_weights(alpha) if self._use_llm_alpha_evidence(alpha) else {}
         chunk_scores: Dict[str, float] = defaultdict(float)
         for node_id, score in pagerank_scores.items():
             if node_id not in graph:
@@ -64,18 +66,18 @@ class WoSentenceProfileRetriever(Retriever):
             attrs = graph.nodes[node_id]
             node_type = attrs.get("node_type")
             if node_type == "chunk":
-                chunk_scores[node_id] += 0.70 * float(score)
+                chunk_scores[node_id] += alpha_weights.get("chunk_pagerank", 0.70) * float(score)
             elif node_type == "entity":
                 for neighbor in list(graph.successors(node_id)) + list(graph.predecessors(node_id)):
                     if neighbor in graph and graph.nodes[neighbor].get("node_type") == "chunk":
-                        chunk_scores[neighbor] += 0.08 * float(score)
+                        chunk_scores[neighbor] += alpha_weights.get("entity_to_chunk", 0.08) * float(score)
 
         for chunk_id, score in channel_scores.get("chunk", {}).items():
-            chunk_scores[chunk_id] += 0.30 * float(score)
+            chunk_scores[chunk_id] += alpha_weights.get("chunk_dense", 0.30) * float(score)
         for fact in ranked_facts[: self.config.fact_top_k]:
             chunk_id = fact.get("chunk_id")
             if chunk_id:
-                chunk_scores[chunk_id] += 0.15 * float(fact.get("score", 0.0))
+                chunk_scores[chunk_id] += alpha_weights.get("fact_to_chunk", 0.15) * float(fact.get("score", 0.0))
                 if getattr(self.config, "enable_granularity_awareness", True) and getattr(self.config, "enable_fact_chunk_boost", False):
                     chunk_scores[chunk_id] += float(getattr(self.config, "fact_chunk_boost", 0.35)) * float(fact.get("score", 0.0))
 
@@ -108,8 +110,9 @@ class WoSentenceProfileRetriever(Retriever):
         query: str = "",
         sub_questions: Sequence[str] = (),
         token_budget: int = 620,
+        alpha: Optional[Dict[str, float]] = None,
     ) -> Dict:
-        allocation = self._renormalized_non_sentence_allocation(profile)
+        allocation = self._renormalized_non_sentence_allocation(profile, alpha=alpha)
         facts = self._rank_fact_evidence(graph, pagerank_scores, ranked_facts)
         entities = self._rank_entity_evidence(graph, pagerank_scores, channel_scores, facts)
         chunks = list(ranked_passages[: self.config.qa_passage_top_k])
@@ -142,8 +145,11 @@ class WoSentenceProfileRetriever(Retriever):
         result.update(packed)
         return result
 
-    def _renormalized_non_sentence_allocation(self, profile: str) -> Dict[str, float]:
-        priors = dict(self.config.profile_alpha_priors.get(profile) or self.config.profile_alpha_priors.get("multi_hop", {}))
+    def _renormalized_non_sentence_allocation(self, profile: str, alpha: Optional[Dict[str, float]] = None) -> Dict[str, float]:
+        if self._use_llm_alpha_evidence(alpha):
+            priors = dict(alpha or {})
+        else:
+            priors = dict(self.config.profile_alpha_priors.get(profile) or self.config.profile_alpha_priors.get("multi_hop", {}))
         kept = {kind: max(float(priors.get(kind, 0.0)), 0.0) for kind in NON_SENTENCE_TYPES}
         total = sum(kept.values())
         if total <= 0:

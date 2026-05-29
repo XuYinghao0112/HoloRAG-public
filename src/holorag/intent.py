@@ -38,10 +38,7 @@ class IntentRouter:
             self._cache[cache_key] = alpha
             return alpha
         payload, _ = self.llm_client.infer_json(
-            system_prompt=(
-                "Predict retrieval granularity weights for the question. "
-                "Return JSON with numeric keys entity, fact, sentence, chunk that sum to 1."
-            ),
+            system_prompt=self._granularity_prompt(),
             user_prompt=f"Question:\n{query}",
             fallback=fallback,
             max_tokens=96,
@@ -54,6 +51,19 @@ class IntentRouter:
         })
         self._cache[cache_key] = alpha
         return alpha
+
+    def _granularity_prompt(self) -> str:
+        return (
+            "Predict retrieval granularity weights for the question.\n"
+            "Return only JSON with numeric keys entity, fact, sentence, chunk. Values must be non-negative and sum to 1.\n"
+            "Interpret the granularities as follows: entity supports exact named-entity lookup, fact supports relation or constraint matching, "
+            "sentence supports localized textual evidence, and chunk supports broad passage or long-context evidence.\n"
+            "Direct lookup questions should emphasize entity and fact evidence. "
+            "Questions requiring linked facts, comparisons, temporal constraints, or multi-step reasoning should emphasize fact and sentence evidence. "
+            "Summary, overview, narrative, background, or broad context questions should emphasize chunk evidence.\n"
+            "Choose a smooth continuous distribution that reflects the question, rather than selecting a fixed template. "
+            "If unsure, prefer a balanced fact-and-sentence-oriented distribution."
+        )
 
     def _resolve_profile(self, query: str, forced_profile: str) -> str:
         if forced_profile in {"single_hop", "multi_hop", "long_context"}:

@@ -121,6 +121,7 @@ class HoloRAG:
             pagerank_scores=pagerank_scores,
             channel_scores=retrieval["channel_scores"],
             ranked_facts=retrieval["ranked_facts"],
+            alpha=alpha,
         )
         ranked_evidence = self.retriever.rank_evidence(
             graph=graph,
@@ -132,6 +133,7 @@ class HoloRAG:
             query=normalized_query,
             sub_questions=sub_questions,
             token_budget=self.config.qa_evidence_token_budget,
+            alpha=alpha,
         )
         after_ranking = time.perf_counter()
         qa_result = self.reader.answer(
