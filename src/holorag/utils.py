@@ -161,8 +161,16 @@ def merge_weighted_scores(target: Dict[str, float], scores: Dict[str, float], we
 
 
 def normalize_alpha(alpha: Dict[str, float]) -> Dict[str, float]:
-    keys = ["entity", "fact", "sentence", "chunk"]
-    values = {key: max(float(alpha.get(key, 0.0)), 0.0) for key in keys}
+    """Normalize the public granularity profile to fact/sentence/chunk.
+
+    Legacy four-way configs may still contain entity/alpha_E. Entity remains a
+    graph anchor, so its old mass is folded into fact rather than kept as a
+    final evidence granularity.
+    """
+    keys = ["fact", "sentence", "chunk"]
+    values = {key: max(float(alpha.get(key, alpha.get(f"alpha_{key[0].upper()}", 0.0))), 0.0) for key in keys}
+    legacy_entity = max(float(alpha.get("entity", alpha.get("alpha_E", 0.0))), 0.0)
+    values["fact"] += legacy_entity
     total = sum(values.values()) or 1.0
     return {key: values[key] / total for key in keys}
 
@@ -172,4 +180,4 @@ def entropy_confidence(alpha: Dict[str, float]) -> float:
     if not values:
         return 0.0
     entropy = -sum(value * math.log(value) for value in values)
-    return max(0.0, 1.0 - entropy / math.log(4))
+    return max(0.0, 1.0 - entropy / math.log(3))

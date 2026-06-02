@@ -5,7 +5,8 @@ This entrypoint reuses scripts/eval.py for sampling, indexing, logging,
 prediction serialization, metrics, and QA. The ablation-specific behavior is
 limited to query-time retrieval: graph construction and all granularity layers
 are kept, but PageRank/random-walk propagation is skipped and final evidence is
-formed from direct entity/fact/sentence/chunk retrieval scores only.
+formed from direct fact/sentence/chunk retrieval scores only; entities remain
+graph anchors but are not packed as a separate final evidence granularity.
 """
 
 from __future__ import annotations
@@ -13,7 +14,6 @@ from __future__ import annotations
 import os
 import sys
 import time
-from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence
 
@@ -55,6 +55,7 @@ class DirectOnlyRetriever(Retriever):
         alpha: Optional[Dict[str, float]] = None,
     ) -> List[Dict]:
         passages = []
+        direct_limit = max(1, int(getattr(self.config, "qa_passage_top_k", 4)))
         for chunk_id, score in sorted(channel_scores.get("chunk", {}).items(), key=lambda item: item[1], reverse=True):
             if chunk_id not in graph:
                 continue
@@ -68,7 +69,7 @@ class DirectOnlyRetriever(Retriever):
                 "text": attrs.get("text", ""),
                 "metadata": metadata,
             })
-            if len(passages) >= self.config.passage_output_top_k:
+            if len(passages) >= direct_limit:
                 break
         return passages
 
@@ -86,7 +87,6 @@ class DirectOnlyRetriever(Retriever):
         alpha: Optional[Dict[str, float]] = None,
     ) -> Dict:
         use_alpha_evidence = self._use_llm_alpha_evidence(alpha)
-        entities = self._direct_entity_records(graph, channel_scores)
         ranked_sentences = [
             self._sentence_record(graph, sentence_id, float(score))
             for sentence_id, score in sorted(channel_scores.get("sentence", {}).items(), key=lambda item: item[1], reverse=True)
@@ -95,10 +95,9 @@ class DirectOnlyRetriever(Retriever):
         ranked_sentences = [item for item in ranked_sentences if item]
 
         if use_alpha_evidence:
-            alpha_norm = self._normalize_alpha_for_direct(alpha or {})
-            facts = list(ranked_facts[: max(3, min(self.config.fact_top_k, int(round(3 + alpha_norm.get("fact", 0.0) * self.config.fact_top_k))))])
-            sentences = ranked_sentences[: max(3, min(self.config.sentence_top_k, int(round(3 + alpha_norm.get("sentence", 0.0) * 14))))]
-            chunks = list(ranked_passages[: max(1, min(self.config.qa_passage_top_k, int(round(1 + alpha_norm.get("chunk", 0.0) * self.config.qa_passage_top_k))))])
+            facts = list(ranked_facts[: self.config.fact_top_k])
+            sentences = ranked_sentences[: self.config.sentence_top_k]
+            chunks = list(ranked_passages[: self.config.passage_output_top_k])
             evidence_groups = [{"label": "Direct LLM-alpha sentence evidence", "items": sentences}]
         elif profile == "single_hop":
             facts = list(ranked_facts[: min(self.config.fact_top_k, 10)])
@@ -134,21 +133,20 @@ class DirectOnlyRetriever(Retriever):
 
         result = {
             "profile": profile,
-            "allocation_mode": "direct_retrieval_without_graph_propagation",
-            "entities": entities,
+            "allocation_mode": "strict_direct_retrieval_without_graph_propagation",
             "facts": facts,
             "sentences": sentences,
             "chunks": chunks,
             "evidence_groups": evidence_groups,
             "fallback_passages": list(ranked_passages[: self.config.qa_passage_top_k]),
         }
-        packed = self._pack_direct_profile_evidence(
+        packed = self._pack_profile_evidence(
             profile=profile,
             query=query,
-            entities=entities,
             facts=facts,
             sentences=sentences,
             chunks=chunks,
+            evidence_groups=evidence_groups,
             fallback_passages=result["fallback_passages"],
             sub_questions=sub_questions,
             token_budget=token_budget,
@@ -156,157 +154,6 @@ class DirectOnlyRetriever(Retriever):
         )
         result.update(packed)
         return result
-
-    def _direct_entity_records(self, graph: nx.DiGraph, channel_scores: Dict[str, Dict[str, float]]) -> List[Dict]:
-        records = []
-        for node_id, score in sorted(channel_scores.get("entity", {}).items(), key=lambda item: item[1], reverse=True):
-            if node_id not in graph:
-                continue
-            attrs = graph.nodes[node_id]
-            records.append({
-                "node_id": node_id,
-                "score": float(score),
-                "title": "",
-                "text": attrs.get("text", ""),
-                "metadata": attrs.get("metadata", {}),
-            })
-            if len(records) >= self.config.entity_top_k:
-                break
-        return records
-
-    def _pack_direct_profile_evidence(
-        self,
-        profile: str,
-        query: str,
-        entities: Sequence[Dict],
-        facts: Sequence[Dict],
-        sentences: Sequence[Dict],
-        chunks: Sequence[Dict],
-        fallback_passages: Sequence[Dict],
-        sub_questions: Sequence[str],
-        token_budget: int,
-        alpha: Optional[Dict[str, float]] = None,
-    ) -> Dict:
-        budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
-        passage_limit = self._direct_alpha_passage_limit(alpha or {}, budget) if self._use_llm_alpha_evidence(alpha) else self._direct_passage_limit(profile, budget)
-        candidates: List[Dict] = []
-
-        for row in entities:
-            candidates.append(self._packed_candidate(
-                kind="entity",
-                text=str(row.get("text", "")),
-                title=str(row.get("title", "")),
-                score=float(row.get("score", 0.0)),
-                label="Entity",
-                node_id=str(row.get("node_id", "")),
-                query=query,
-                sub_questions=sub_questions,
-            ))
-        for fact in facts:
-            candidates.append(self._packed_candidate(
-                kind="fact",
-                text=str(fact.get("text", "")),
-                title=str(fact.get("title", "")),
-                score=float(fact.get("score", 0.0)),
-                label="Fact",
-                node_id=str(fact.get("fact_id", "")),
-                query=query,
-                sub_questions=sub_questions,
-            ))
-        for row in sentences:
-            candidates.append(self._packed_candidate(
-                kind="sentence",
-                text=str(row.get("text", "")),
-                title=str(row.get("title", "")),
-                score=float(row.get("score", 0.0)),
-                label="Evidence",
-                node_id=str(row.get("node_id", "")),
-                query=query,
-                sub_questions=sub_questions,
-            ))
-        for passage in list(chunks) or list(fallback_passages):
-            candidates.append(self._packed_candidate(
-                kind="chunk",
-                text=self._passage_excerpt(str(passage.get("text", "")), query, passage_limit),
-                title=str(passage.get("title", "")),
-                score=float(passage.get("score", 0.0)),
-                label="Passage",
-                node_id=str(passage.get("chunk_id", passage.get("node_id", ""))),
-                query=query,
-                sub_questions=sub_questions,
-            ))
-
-        weights = self._direct_alpha_weights(alpha or {}) if self._use_llm_alpha_evidence(alpha) else self._direct_profile_weights(profile)
-        for item in candidates:
-            item["pack_score"] = weights.get(item.get("kind"), 1.0) * float(item.get("score", 0.0)) + 0.35 * float(item.get("coverage", 0.0))
-
-        selected = []
-        selected_ids = set()
-        title_counts: Dict[str, int] = defaultdict(int)
-        title_limit = max(1, int(getattr(self.config, "evidence_title_limit", 3)))
-        used = 0
-        for item in sorted(candidates, key=lambda row: row.get("pack_score", 0.0), reverse=True):
-            if used >= budget:
-                break
-            node_id = item.get("node_id")
-            if node_id and node_id in selected_ids:
-                continue
-            title_key = str(item.get("title", "")).strip().lower()
-            if title_key and title_counts[title_key] >= title_limit:
-                continue
-            line = str(item.get("line", "")).strip()
-            cost = self._token_count(line)
-            if cost > budget - used:
-                if budget - used < 24:
-                    continue
-                line = self._truncate_words(line, budget - used)
-                cost = self._token_count(line)
-            if cost <= 0:
-                continue
-            selected.append({**item, "line": line, "tokens": cost})
-            used += cost
-            if node_id:
-                selected_ids.add(node_id)
-            if title_key:
-                title_counts[title_key] += 1
-
-        packed_text = "\n".join(item["line"] for item in selected).strip()
-        return {
-            "packed_text": packed_text,
-            "packed_records": selected,
-            "packed_token_budget": budget,
-            "packed_token_count": self._token_count(packed_text),
-        }
-
-    def _direct_profile_weights(self, profile: str) -> Dict[str, float]:
-        if not getattr(self.config, "enable_granularity_awareness", True):
-            return {"entity": 1.0, "fact": 1.0, "sentence": 1.0, "chunk": 1.0}
-        return {
-            "single_hop": {"entity": 1.35, "fact": 1.45, "sentence": 1.20, "chunk": 0.65},
-            "multi_hop": {"entity": 1.05, "fact": 1.20, "sentence": 1.45, "chunk": 0.80},
-            "long_context": {"entity": 0.70, "fact": 0.75, "sentence": 1.00, "chunk": 1.45},
-        }.get(profile, {"entity": 1.0, "fact": 1.0, "sentence": 1.2, "chunk": 0.9})
-
-    def _direct_passage_limit(self, profile: str, budget: int) -> int:
-        if profile == "multi_hop" and int(getattr(self.config, "evidence_passage_context_k", 1)) > 1:
-            return max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 150)))
-        if profile == "multi_hop":
-            return max(80, min(120, budget // 5))
-        return max(80, budget // 3)
-
-    def _normalize_alpha_for_direct(self, alpha: Dict[str, float]) -> Dict[str, float]:
-        total = sum(max(float(alpha.get(kind, 0.0)), 0.0) for kind in ("entity", "fact", "sentence", "chunk"))
-        if total <= 0:
-            return {"entity": 0.25, "fact": 0.25, "sentence": 0.25, "chunk": 0.25}
-        return {kind: max(float(alpha.get(kind, 0.0)), 0.0) / total for kind in ("entity", "fact", "sentence", "chunk")}
-
-    def _direct_alpha_weights(self, alpha: Dict[str, float]) -> Dict[str, float]:
-        alpha = self._normalize_alpha_for_direct(alpha)
-        return {kind: 0.75 + 2.0 * float(alpha.get(kind, 0.0)) for kind in ("entity", "fact", "sentence", "chunk")}
-
-    def _direct_alpha_passage_limit(self, alpha: Dict[str, float], budget: int) -> int:
-        alpha = self._normalize_alpha_for_direct(alpha)
-        return max(80, min(max(80, budget // 2), int(80 + float(alpha.get("chunk", 0.0)) * max(80, budget // 2))))
 
 
 class WoGraphPropagationHoloRAG(BaseHoloRAG):
@@ -368,7 +215,7 @@ class WoGraphPropagationHoloRAG(BaseHoloRAG):
             profile=profile,
             query=normalized_query,
             sub_questions=sub_questions,
-            token_budget=self.config.qa_evidence_token_budget,
+            token_budget=0,
             alpha=alpha,
         )
         after_ranking = time.perf_counter()

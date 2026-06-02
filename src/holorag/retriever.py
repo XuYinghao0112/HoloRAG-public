@@ -43,7 +43,11 @@ class Retriever:
             for node_id in [fact.get("head_id", ""), fact.get("tail_id", "")]:
                 if node_id not in graph:
                     continue
-                weighted_score = float(score) / max(1.0, float(self._entity_chunk_count(graph, node_id)))
+                weighted_score = (
+                    float(score)
+                    * max(alpha.get("fact", 0.0), 0.05)
+                    / max(1.0, float(self._entity_chunk_count(graph, node_id)))
+                )
                 seed_scores[node_id] += weighted_score
         for node_id, score in chunk_scores.items():
             if node_id in graph:
@@ -109,7 +113,7 @@ class Retriever:
             chunk_id = fact.get("chunk_id")
             if chunk_id:
                 chunk_scores[chunk_id] += alpha_weights.get("fact_to_chunk", 0.15) * float(fact.get("score", 0.0))
-                if getattr(self.config, "enable_granularity_awareness", True) and getattr(self.config, "enable_fact_chunk_boost", False):
+                if getattr(self.config, "enable_fact_chunk_boost", False):
                     chunk_scores[chunk_id] += float(getattr(self.config, "fact_chunk_boost", 0.35)) * float(fact.get("score", 0.0))
 
         passages = []
@@ -152,7 +156,16 @@ class Retriever:
         ]
         ranked_sentences = [item for item in ranked_sentences if item]
 
-        if use_alpha_evidence:
+        if not getattr(self.config, "enable_granularity_awareness", True):
+            facts = list(ranked_facts[: self.config.fact_top_k])
+            source_sentences = self._source_sentences_for_facts(graph, facts)
+            sentences = self._dedupe_records(source_sentences + ranked_sentences[: self.config.sentence_top_k], "node_id")
+            chunks = list(ranked_passages[: self.config.passage_output_top_k])
+            evidence_groups = [
+                {"label": "Uniform fact source evidence", "items": source_sentences},
+                {"label": "Uniform sentence evidence", "items": ranked_sentences[: self.config.sentence_top_k]},
+            ]
+        elif use_alpha_evidence:
             facts, sentences, chunks, evidence_groups = self._alpha_guided_evidence(
                 graph=graph,
                 ranked_facts=ranked_facts,
@@ -238,9 +251,7 @@ class Retriever:
         return bool(
             alpha
             and getattr(self.config, "enable_granularity_awareness", True)
-            and getattr(self.config, "enable_intent_routing", True)
-            and getattr(self.config, "intent_use_llm", False)
-            and getattr(self.config, "task_profile", "auto") == "auto"
+            and getattr(self.config, "evidence_use_alpha_weights", True)
         )
 
     def _alpha_guided_evidence(
@@ -254,24 +265,18 @@ class Retriever:
         sub_questions: Sequence[str],
     ) -> Tuple[List[Dict], List[Dict], List[Dict], List[Dict]]:
         alpha = normalize_alpha(alpha)
-        fact_limit = max(3, min(self.config.fact_top_k, int(round(3 + alpha.get("fact", 0.0) * self.config.fact_top_k))))
-        sentence_limit = max(3, min(self.config.sentence_top_k, int(round(3 + alpha.get("sentence", 0.0) * 14))))
-        chunk_limit = max(1, min(self.config.qa_passage_top_k, int(round(1 + alpha.get("chunk", 0.0) * self.config.qa_passage_top_k))))
-
-        facts = list(ranked_facts[:fact_limit])
+        facts = list(ranked_facts[: self.config.fact_top_k])
         source_sentences = self._source_sentences_for_facts(graph, facts)
-        source_take = max(1, int(round(sentence_limit * min(0.75, 0.25 + alpha.get("fact", 0.0)))))
-        dense_take = max(1, sentence_limit - source_take)
-        sentences = self._dedupe_records(source_sentences[:source_take] + list(ranked_sentences[:dense_take]), "node_id")[:sentence_limit]
-        chunks = list(ranked_passages[:chunk_limit])
+        sentences = self._dedupe_records(source_sentences + list(ranked_sentences[: self.config.sentence_top_k]), "node_id")
+        chunks = list(ranked_passages[: self.config.passage_output_top_k])
         evidence_groups = [
             {
-                "label": "LLM-alpha fact source evidence",
-                "items": source_sentences[:source_take],
+                "label": "Fact source evidence",
+                "items": source_sentences,
             },
             {
-                "label": "LLM-alpha sentence evidence",
-                "items": ranked_sentences[:dense_take],
+                "label": "Sentence evidence",
+                "items": ranked_sentences[: self.config.sentence_top_k],
             },
         ]
         return facts, sentences, chunks, evidence_groups
@@ -769,10 +774,16 @@ class Retriever:
         token_budget: int,
         alpha: Optional[Dict[str, float]] = None,
     ) -> Dict:
-        budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
+        packing_mode = str(getattr(self.config, "evidence_packing_mode", "alpha_count")).strip().lower()
+        use_alpha_count = packing_mode in {"alpha_count", "count", "count_first"}
+        soft_budget = int(getattr(self.config, "evidence_soft_token_budget", 0) or 0)
+        budget = 0
+        if soft_budget > 0:
+            budget = max(128, soft_budget)
+        elif not use_alpha_count:
+            budget = max(128, int(token_budget or self.config.qa_max_input_tokens))
         candidates: List[Dict] = []
         seen_sentence_ids = set()
-        use_expanded_passage_context = profile == "multi_hop" and int(getattr(self.config, "evidence_passage_context_k", 1)) > 1
         for group in evidence_groups:
             label = str(group.get("label", "Evidence")).strip() or "Evidence"
             group_question = str(group.get("question", "")).strip()
@@ -823,17 +834,19 @@ class Retriever:
 
         use_alpha_evidence = self._use_llm_alpha_evidence(alpha)
         if use_alpha_evidence:
-            passage_limit = self._alpha_passage_limit(alpha or {}, budget)
-        elif not getattr(self.config, "enable_granularity_awareness", True):
-            if profile == "multi_hop" and (getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context):
-                passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 180)))
-            else:
-                passage_limit = max(80, min(180, budget // 3))
-        elif profile == "multi_hop" and (getattr(self.config, "enable_fair_sentence_context", False) or use_expanded_passage_context):
-            passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 150)))
+            pack_alpha = self._packing_alpha(alpha or {})
+        elif getattr(self.config, "enable_granularity_awareness", True):
+            pack_alpha = normalize_alpha(self.config.profile_alpha_priors.get(profile, {}))
         else:
-            passage_limit = max(80, min(120, budget // 5)) if profile == "multi_hop" else max(80, budget // 3)
+            pack_alpha = normalize_alpha({"fact": 1.0, "sentence": 1.0, "chunk": 1.0})
+
         for passage in list(chunks) or list(fallback_passages):
+            passage_limit = self._dynamic_passage_limit(
+                passage=passage,
+                query=query,
+                alpha=pack_alpha,
+                budget=budget,
+            )
             text = self._passage_excerpt(str(passage.get("text", "")), query, passage_limit)
             candidates.append(self._packed_candidate(
                 kind="chunk",
@@ -847,19 +860,12 @@ class Retriever:
             ))
 
         if use_alpha_evidence:
-            weights = self._alpha_pack_weights(alpha or {}, ("fact", "sentence", "chunk"))
+            weights = self._alpha_pack_weights(pack_alpha, ("fact", "sentence", "chunk"))
         elif getattr(self.config, "enable_granularity_awareness", True):
-            weights = {
-                "single_hop": {"fact": 1.45, "sentence": 1.25, "chunk": 0.65},
-                "multi_hop": {"sentence": 1.45, "fact": 1.20, "chunk": 0.80},
-                "long_context": {"chunk": 1.45, "sentence": 1.00, "fact": 0.75},
-            }.get(profile, {"sentence": 1.2, "fact": 1.0, "chunk": 0.9})
-            if getattr(self.config, "enable_fact_source_first_evidence", False) and profile == "multi_hop":
-                weights = {"sentence": 1.55, "fact": 1.35, "chunk": 0.75}
-            if getattr(self.config, "enable_fact_chunk_boost", False) and profile == "multi_hop":
-                weights = {**weights, "chunk": max(weights.get("chunk", 0.8), 1.05)}
+            weights = self._alpha_pack_weights(self.config.profile_alpha_priors.get(profile, {}), ("fact", "sentence", "chunk"))
         else:
             weights = {"sentence": 1.0, "fact": 1.0, "chunk": 1.0}
+        candidates = [item for item in candidates if str(item.get("line", "")).strip()]
         for item in candidates:
             label = str(item.get("label", "")).lower()
             source_bonus = 0.0
@@ -876,53 +882,100 @@ class Retriever:
 
         selected = []
         selected_ids = set()
+        selected_texts: List[str] = []
         title_counts: Dict[str, int] = defaultdict(int)
         title_limit = max(1, int(getattr(self.config, "evidence_title_limit", 3)))
-        used = 0
-        for item in sorted(candidates, key=lambda row: row.get("pack_score", 0.0), reverse=True):
-            node_id = item.get("node_id")
-            if node_id and node_id in selected_ids:
-                continue
-            title_key = str(item.get("title", "")).strip().lower()
-            if title_key and title_counts[title_key] >= title_limit:
-                continue
-            line = str(item.get("line", "")).strip()
-            cost = self._token_count(line)
-            remaining = budget - used
-            if remaining <= 0:
-                break
-            if cost > remaining:
-                if item["kind"] != "chunk" and remaining < 24:
+        min_score = float(getattr(self.config, "evidence_min_score", 0.0))
+        redundancy_threshold = float(getattr(self.config, "evidence_redundancy_threshold", 0.85))
+        count_limits = self._alpha_count_limits(pack_alpha) if use_alpha_count else {}
+        if use_alpha_count:
+            for kind in ("fact", "sentence", "chunk"):
+                self._select_count_limited_kind(
+                    kind=kind,
+                    candidates=candidates,
+                    limit=int(count_limits.get(kind, 0)),
+                    selected=selected,
+                    selected_ids=selected_ids,
+                    selected_texts=selected_texts,
+                    title_counts=title_counts,
+                    title_limit=title_limit,
+                    min_score=min_score,
+                    redundancy_threshold=redundancy_threshold,
+                )
+        else:
+            used = 0
+            for item in sorted(candidates, key=lambda row: row.get("pack_score", 0.0), reverse=True):
+                if float(item.get("pack_score", 0.0)) < min_score:
                     continue
-                line = self._truncate_words(line, remaining)
-                cost = self._token_count(line)
-            if cost <= 0:
-                continue
-            selected.append({**item, "line": line, "tokens": cost})
-            used += cost
-            if node_id:
-                selected_ids.add(node_id)
-            if title_key:
-                title_counts[title_key] += 1
+                remaining = budget - used
+                if remaining <= 0:
+                    break
+                prepared = self._prepare_selected_item(
+                    item=item,
+                    selected_ids=selected_ids,
+                    selected_texts=selected_texts,
+                    title_counts=title_counts,
+                    title_limit=title_limit,
+                    redundancy_threshold=redundancy_threshold,
+                    remaining=remaining,
+                )
+                if not prepared:
+                    continue
+                selected.append(prepared)
+                selected_texts.append(prepared["line"])
+                used += int(prepared.get("tokens", 0) or 0)
 
         packed_text = "\n".join(item["line"] for item in selected).strip()
+        used_by_kind: Dict[str, int] = defaultdict(int)
+        count_by_kind: Dict[str, int] = defaultdict(int)
+        for item in selected:
+            kind = str(item.get("kind", ""))
+            used_by_kind[kind] += int(item.get("tokens", 0) or 0)
+            count_by_kind[kind] += 1
         return {
             "packed_text": packed_text,
             "packed_records": selected,
             "packed_token_budget": budget,
             "packed_token_count": self._token_count(packed_text),
+            "evidence_count_limits_by_granularity": {
+                "fact": int(count_limits.get("fact", 0)),
+                "sentence": int(count_limits.get("sentence", 0)),
+                "chunk": int(count_limits.get("chunk", 0)),
+            },
+            "used_tokens_by_granularity": {
+                "fact": int(used_by_kind.get("fact", 0)),
+                "sentence": int(used_by_kind.get("sentence", 0)),
+                "chunk": int(used_by_kind.get("chunk", 0)),
+            },
+            "evidence_counts_by_granularity": {
+                "fact": int(count_by_kind.get("fact", 0)),
+                "sentence": int(count_by_kind.get("sentence", 0)),
+                "chunk": int(count_by_kind.get("chunk", 0)),
+            },
         }
 
     def _alpha_pack_weights(self, alpha: Dict[str, float], kinds: Sequence[str]) -> Dict[str, float]:
         alpha = normalize_alpha(alpha)
-        return {kind: 0.75 + 2.0 * float(alpha.get(kind, 0.0)) for kind in kinds}
+        return {kind: 0.05 + 3.0 * float(alpha.get(kind, 0.0)) for kind in kinds}
+
+    def _packing_alpha(self, alpha: Dict[str, float]) -> Dict[str, float]:
+        alpha = normalize_alpha(alpha)
+        mix = max(0.0, min(1.0, float(getattr(self.config, "evidence_alpha_uniform_mix", 0.0) or 0.0)))
+        if mix <= 0.0:
+            return alpha
+        uniform = normalize_alpha({"fact": 1.0, "sentence": 1.0, "chunk": 1.0})
+        return normalize_alpha({
+            "fact": (1.0 - mix) * float(alpha.get("fact", 0.0)) + mix * uniform["fact"],
+            "sentence": (1.0 - mix) * float(alpha.get("sentence", 0.0)) + mix * uniform["sentence"],
+            "chunk": (1.0 - mix) * float(alpha.get("chunk", 0.0)) + mix * uniform["chunk"],
+        })
 
     def _alpha_passage_weights(self, alpha: Optional[Dict[str, float]]) -> Dict[str, float]:
         alpha = normalize_alpha(alpha or {})
         return {
             "chunk_pagerank": 0.35 + 0.90 * alpha.get("chunk", 0.0),
             "sentence_to_chunk": 0.08 + 0.55 * alpha.get("sentence", 0.0),
-            "entity_to_chunk": 0.02 + 0.25 * alpha.get("entity", 0.0),
+            "entity_to_chunk": 0.02 + 0.25 * alpha.get("fact", 0.0),
             "chunk_dense": 0.12 + 0.70 * alpha.get("chunk", 0.0),
             "fact_to_chunk": 0.06 + 0.45 * alpha.get("fact", 0.0),
         }
@@ -931,6 +984,138 @@ class Retriever:
         alpha = normalize_alpha(alpha)
         chunk_weight = float(alpha.get("chunk", 0.0))
         return max(80, min(max(80, budget // 2), int(80 + chunk_weight * max(80, budget // 2))))
+
+    def _dynamic_passage_limit(self, passage: Dict, query: str, alpha: Dict[str, float], budget: int) -> int:
+        legacy_limit = int(getattr(self.config, "evidence_passage_excerpt_tokens", 0) or 0)
+        configured_max = int(getattr(self.config, "evidence_chunk_max_tokens", 0) or 0)
+        max_tokens = max(80, configured_max or legacy_limit or 256)
+        min_tokens = min(80, max_tokens)
+        span = max(0, max_tokens - min_tokens)
+        title = str(passage.get("title", ""))
+        text = str(passage.get("text", ""))
+        score_signal = max(0.0, min(1.0, float(passage.get("score", 0.0))))
+        coverage_signal = self._coverage_text_score(query, f"{title} {text}")
+        evidence_signal = max(score_signal, coverage_signal)
+        chunk_alpha = max(0.0, min(1.0, float(normalize_alpha(alpha).get("chunk", 0.0))))
+        dynamic = min_tokens + span * (0.85 * chunk_alpha + 0.15 * evidence_signal)
+        budget_cap = max_tokens if budget <= 0 else max(1, budget)
+        return max(min_tokens, min(max_tokens, budget_cap, int(round(dynamic))))
+
+    def _alpha_count_limits(self, alpha: Dict[str, float]) -> Dict[str, int]:
+        alpha = normalize_alpha(alpha)
+        kinds = ("fact", "sentence", "chunk")
+        total = max(1, int(getattr(self.config, "evidence_alpha_total_units", 20)))
+        caps = {
+            "fact": max(0, int(getattr(self.config, "fact_top_k", 0))),
+            "sentence": max(0, int(getattr(self.config, "sentence_top_k", 0))),
+            "chunk": max(0, int(getattr(self.config, "passage_output_top_k", 0))),
+        }
+        raw = {kind: total * float(alpha.get(kind, 0.0)) for kind in kinds}
+        limits = {kind: min(caps[kind], int(raw[kind])) for kind in kinds}
+        remaining = total - sum(limits.values())
+        remainders = sorted(
+            kinds,
+            key=lambda kind: (raw[kind] - int(raw[kind]), float(alpha.get(kind, 0.0))),
+            reverse=True,
+        )
+        while remaining > 0:
+            changed = False
+            for kind in remainders:
+                if limits[kind] >= caps[kind]:
+                    continue
+                limits[kind] += 1
+                remaining -= 1
+                changed = True
+                if remaining <= 0:
+                    break
+            if not changed:
+                break
+        return {kind: int(limits.get(kind, 0)) for kind in kinds}
+
+    def _select_count_limited_kind(
+        self,
+        kind: str,
+        candidates: Sequence[Dict],
+        limit: int,
+        selected: List[Dict],
+        selected_ids: set,
+        selected_texts: List[str],
+        title_counts: Dict[str, int],
+        title_limit: int,
+        min_score: float,
+        redundancy_threshold: float,
+    ) -> None:
+        if limit <= 0:
+            return
+        ranked = sorted(
+            [row for row in candidates if row.get("kind") == kind],
+            key=lambda row: row.get("pack_score", 0.0),
+            reverse=True,
+        )
+        kind_selected = 0
+        title_pass_limits = [1]
+        if title_limit > 1:
+            title_pass_limits.append(title_limit)
+        for pass_title_limit in title_pass_limits:
+            for item in ranked:
+                if kind_selected >= limit:
+                    return
+                if float(item.get("pack_score", 0.0)) < min_score:
+                    continue
+                prepared = self._prepare_selected_item(
+                    item=item,
+                    selected_ids=selected_ids,
+                    selected_texts=selected_texts,
+                    title_counts=title_counts,
+                    title_limit=pass_title_limit,
+                    redundancy_threshold=redundancy_threshold,
+                    remaining=0,
+                )
+                if not prepared:
+                    continue
+                selected.append(prepared)
+                selected_texts.append(prepared["line"])
+                kind_selected += 1
+
+    def _prepare_selected_item(
+        self,
+        item: Dict,
+        selected_ids: set,
+        selected_texts: Sequence[str],
+        title_counts: Dict[str, int],
+        title_limit: int,
+        redundancy_threshold: float,
+        remaining: int = 0,
+    ) -> Optional[Dict]:
+        node_id = item.get("node_id")
+        if node_id and node_id in selected_ids:
+            return None
+        title_key = self._title_count_key(item)
+        if title_key and title_counts[title_key] >= title_limit:
+            return None
+        line = str(item.get("line", "")).strip()
+        if not line or self._is_redundant(line, selected_texts, redundancy_threshold):
+            return None
+        cost = self._token_count(line)
+        if remaining > 0 and cost > remaining:
+            if item["kind"] != "chunk" and remaining < 24:
+                return None
+            line = self._truncate_words(line, remaining)
+            cost = self._token_count(line)
+        if cost <= 0:
+            return None
+        if node_id:
+            selected_ids.add(node_id)
+        if title_key:
+            title_counts[title_key] += 1
+        return {**item, "line": line, "tokens": cost}
+
+    def _title_count_key(self, item: Dict) -> str:
+        title = str(item.get("title", "")).strip().lower()
+        if not title:
+            return ""
+        kind = str(item.get("kind", "")).strip().lower() or "unknown"
+        return f"{kind}\t{title}"
 
     def _packed_candidate(
         self,
@@ -999,6 +1184,21 @@ class Retriever:
         if not q_terms or not t_terms:
             return 0.0
         return len(q_terms & t_terms) / max(1, len(q_terms))
+
+    def _is_redundant(self, line: str, selected_lines: Sequence[str], threshold: float) -> bool:
+        if threshold <= 0 or threshold >= 1.0:
+            return False
+        terms = self._content_terms(line)
+        if not terms:
+            return False
+        for selected in selected_lines:
+            other_terms = self._content_terms(selected)
+            if not other_terms:
+                continue
+            overlap = len(terms & other_terms) / max(1, len(terms | other_terms))
+            if overlap >= threshold:
+                return True
+        return False
 
     def _token_count(self, text: str) -> int:
         return len(re.findall(r"\S+", str(text or "")))

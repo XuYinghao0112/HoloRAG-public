@@ -132,7 +132,7 @@ class HoloRAG:
             profile=profile,
             query=normalized_query,
             sub_questions=sub_questions,
-            token_budget=self.config.qa_evidence_token_budget,
+            token_budget=0,
             alpha=alpha,
         )
         after_ranking = time.perf_counter()

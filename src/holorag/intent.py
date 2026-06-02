@@ -14,7 +14,7 @@ class IntentRouter:
     def route(self, query: str, forced_profile: str = "auto") -> Dict:
         profile = self._resolve_profile(query, forced_profile)
         if not self.config.enable_granularity_awareness:
-            alpha = normalize_alpha({"entity": 0.25, "fact": 0.25, "sentence": 0.25, "chunk": 0.25})
+            alpha = normalize_alpha({"fact": 1.0, "sentence": 1.0, "chunk": 1.0})
             if profile == "auto":
                 profile = self._profile_from_alpha(self._heuristic_alpha(query))
             return {"profile": profile, "alpha": alpha, "confidence": 1.0}
@@ -44,25 +44,26 @@ class IntentRouter:
             max_tokens=96,
         )
         alpha = normalize_alpha({
-            "entity": payload.get("entity", fallback["entity"]),
-            "fact": payload.get("fact", fallback["fact"]),
-            "sentence": payload.get("sentence", fallback["sentence"]),
-            "chunk": payload.get("chunk", fallback["chunk"]),
+            "fact": payload.get("alpha_F", payload.get("fact", fallback["fact"])),
+            "sentence": payload.get("alpha_S", payload.get("sentence", fallback["sentence"])),
+            "chunk": payload.get("alpha_C", payload.get("chunk", fallback["chunk"])),
         })
         self._cache[cache_key] = alpha
         return alpha
 
     def _granularity_prompt(self) -> str:
         return (
-            "Predict retrieval granularity weights for the question.\n"
-            "Return only JSON with numeric keys entity, fact, sentence, chunk. Values must be non-negative and sum to 1.\n"
-            "Interpret the granularities as follows: entity supports exact named-entity lookup, fact supports relation or constraint matching, "
-            "sentence supports localized textual evidence, and chunk supports broad passage or long-context evidence.\n"
-            "Direct lookup questions should emphasize entity and fact evidence. "
-            "Questions requiring linked facts, comparisons, temporal constraints, or multi-step reasoning should emphasize fact and sentence evidence. "
-            "Summary, overview, narrative, background, or broad context questions should emphasize chunk evidence.\n"
-            "Choose a smooth continuous distribution that reflects the question, rather than selecting a fixed template. "
-            "If unsure, prefer a balanced fact-and-sentence-oriented distribution."
+            "Predict retrieval granularity weights from the question text only.\n"
+            "Return only JSON with numeric keys alpha_F, alpha_S, alpha_C. Values must be non-negative and sum to 1.\n"
+            "Do not infer or use any dataset name, source, benchmark, domain label, or metadata.\n"
+            "alpha_F favors compact factual evidence: entities, relations, attributes, constraints, dates, and counts. "
+            "alpha_S favors localized textual evidence: one or a few sentences that connect the question terms and justify the answer. "
+            "alpha_C favors broader passage context: questions whose answer may require surrounding context, multiple mentions, narrative/background information, or avoiding ambiguity among related entities.\n"
+            "Assign higher alpha_F when the question is likely answerable by a precise fact. "
+            "Assign higher alpha_S when the question requires connecting or comparing pieces of evidence in nearby text. "
+            "Assign higher alpha_C when the question needs broader context than isolated facts or sentences. "
+            "Keep the distribution smooth and calibrated; avoid extreme weights unless the question strongly indicates one granularity. "
+            "For mixed or uncertain cases, prefer a balanced distribution rather than over-committing to one source of evidence."
         )
 
     def _resolve_profile(self, query: str, forced_profile: str) -> str:
@@ -85,4 +86,4 @@ class IntentRouter:
             return self.config.profile_alpha_priors["multi_hop"]
         if any(token in lowered for token in ["who", "when", "where", "name"]):
             return self.config.profile_alpha_priors["single_hop"]
-        return {"entity": 0.25, "fact": 0.25, "sentence": 0.30, "chunk": 0.20}
+        return {"fact": 0.40, "sentence": 0.40, "chunk": 0.20}

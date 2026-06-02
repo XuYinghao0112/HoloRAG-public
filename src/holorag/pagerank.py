@@ -21,7 +21,15 @@ class GranularityPageRank:
             edge_factor = max(self.config.edge_type_weights.get(kind, 1.0) for kind in edge_kinds)
             target_type = graph.nodes[target].get("node_type", "chunk")
             if self.config.enable_granularity_awareness and self.config.enable_granularity_pagerank_bias:
-                target_bias = 1.0 + self.config.transition_lambda * alpha.get(target_type, 0.0)
+                if target_type == "entity":
+                    granularity_weight = alpha.get("fact", 0.0)
+                elif target_type == "sentence":
+                    granularity_weight = alpha.get("sentence", 0.0)
+                elif target_type == "chunk":
+                    granularity_weight = alpha.get("chunk", 0.0)
+                else:
+                    granularity_weight = 0.0
+                target_bias = 1.0 + self.config.transition_lambda * granularity_weight
             else:
                 target_bias = 1.0
             hub_scale = 1.0 / (1.0 + self.config.hub_penalty * math.log1p(graph.degree(target)))

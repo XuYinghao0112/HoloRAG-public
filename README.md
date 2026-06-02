@@ -12,12 +12,16 @@ Core mapping:
 The final PageRank personalization is controlled by a granularity vector:
 
 ```text
-alpha = {entity, fact, sentence, chunk}
+alpha = {fact, sentence, chunk}
 ```
+
+Entity nodes are still used as graph anchors for entity recognition,
+normalization, fact endpoints, and PageRank propagation. Legacy four-way alpha
+configs are accepted by folding entity mass into fact.
 
 Recommended task profiles:
 
-- `single_hop`: entity/fact focused
+- `single_hop`: fact focused
 - `multi_hop`: fact/sentence focused, enables query decomposition
 - `long_context`: chunk focused
 - `auto`: ask the intent router to predict alpha

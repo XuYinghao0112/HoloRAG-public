@@ -496,7 +496,7 @@ def build_config(args: argparse.Namespace, save_dir: str):
         use_paragraph_as_chunk=not args.disable_paragraph_as_chunk,
         index_extraction_mode=args.index_extraction_mode,
         qa_max_input_tokens=args.qa_max_input_tokens,
-        qa_evidence_token_budget=args.qa_evidence_token_budget,
+        max_new_tokens=args.max_new_tokens,
         intent_use_llm=args.intent_use_llm,
         enable_entity_similarity_edges=not args.disable_entity_similarity_edges,
         entity_similarity_threshold=args.entity_similarity_threshold,
@@ -521,6 +521,15 @@ def build_config(args: argparse.Namespace, save_dir: str):
         evidence_title_limit=args.evidence_title_limit,
         evidence_passage_context_k=args.evidence_passage_context_k,
         evidence_passage_excerpt_tokens=args.evidence_passage_excerpt_tokens,
+        evidence_chunk_max_tokens=args.evidence_chunk_max_tokens,
+        evidence_packing_mode=args.evidence_packing_mode,
+        evidence_alpha_total_units=args.evidence_alpha_total_units,
+        evidence_alpha_uniform_mix=getattr(args, "evidence_alpha_uniform_mix", 0.0),
+        evidence_soft_token_budget=args.evidence_soft_token_budget,
+        evidence_allow_underfill=args.evidence_allow_underfill,
+        evidence_min_score=args.evidence_min_score,
+        evidence_redundancy_threshold=args.evidence_redundancy_threshold,
+        evidence_use_alpha_weights=not args.disable_evidence_alpha_weights,
     )
 
 
@@ -544,11 +553,89 @@ def apply_task_profile_defaults(args: argparse.Namespace, argv: Sequence[str]) -
         return
     single_hop_defaults = {
         "--topk_passages": ("topk_passages", 0),
-        "--qa_evidence_token_budget": ("qa_evidence_token_budget", 340),
     }
     for flag, (attr, value) in single_hop_defaults.items():
         if not _arg_provided(argv, flag):
             setattr(args, attr, value)
+
+
+def _alpha_row(alpha: Dict[str, Any]) -> Dict[str, float]:
+    from holorag.utils import normalize_alpha
+
+    normalized = normalize_alpha(alpha or {})
+    return {
+        "alpha_F": float(normalized.get("fact", 0.0)),
+        "alpha_S": float(normalized.get("sentence", 0.0)),
+        "alpha_C": float(normalized.get("chunk", 0.0)),
+    }
+
+
+def _evidence_granularity_row(result: Dict[str, Any], final_evidence_tokens: int) -> Dict[str, int]:
+    evidence = result.get("ranked_evidence", {}) or {}
+    tokens = evidence.get("used_tokens_by_granularity", {}) or {}
+    counts = evidence.get("evidence_counts_by_granularity", {}) or {}
+    limits = evidence.get("evidence_count_limits_by_granularity", {}) or {}
+    return {
+        "used_tokens_F": int(tokens.get("fact", 0) or 0),
+        "used_tokens_S": int(tokens.get("sentence", 0) or 0),
+        "used_tokens_C": int(tokens.get("chunk", 0) or 0),
+        "num_fact_evidence": int(counts.get("fact", 0) or 0),
+        "num_sentence_evidence": int(counts.get("sentence", 0) or 0),
+        "num_chunk_evidence": int(counts.get("chunk", 0) or 0),
+        "limit_fact_evidence": int(limits.get("fact", 0) or 0),
+        "limit_sentence_evidence": int(limits.get("sentence", 0) or 0),
+        "limit_chunk_evidence": int(limits.get("chunk", 0) or 0),
+        "final_evidence_tokens": int(evidence.get("packed_token_count", 0) or final_evidence_tokens),
+    }
+
+
+def fairness_config_view(args: argparse.Namespace) -> Dict[str, Any]:
+    packing_mode = str(args.evidence_packing_mode).strip().lower()
+    return {
+        "generator_model": args.llm_name,
+        "embedding_model": args.embedding_name,
+        "chunk_size_words": args.chunk_size_words,
+        "chunk_overlap_words": args.chunk_overlap_words,
+        "retriever": "HoloRAG",
+        "evaluation_script": "scripts/eval.py",
+        "evidence_packing_mode": args.evidence_packing_mode,
+        "global_evidence_soft_budget": (
+            args.evidence_soft_token_budget
+            if args.evidence_soft_token_budget
+            else (None if packing_mode in {"alpha_count", "count", "count_first"} else args.qa_max_input_tokens)
+        ),
+        "evidence_min_score": args.evidence_min_score,
+        "evidence_redundancy_threshold": args.evidence_redundancy_threshold,
+        "evidence_use_alpha_weights": not args.disable_evidence_alpha_weights,
+        "topk_passages": args.topk_passages,
+        "passage_output_top_k": args.passage_output_top_k,
+        "evidence_passage_excerpt_tokens": args.evidence_passage_excerpt_tokens,
+        "evidence_chunk_max_tokens": args.evidence_chunk_max_tokens,
+        "evidence_alpha_total_units": args.evidence_alpha_total_units,
+        "fact_rerank_llm_candidate_k": args.fact_rerank_llm_candidate_k,
+        "fact_rerank_llm_keep_k": args.fact_rerank_llm_keep_k,
+        "evidence_max_sentences": args.evidence_max_sentences,
+        "sample_set": f"{args.dataset_file}|split={args.split}|n={args.num_eval_queries}",
+        "random_seed": args.seed,
+        "answer_generation_prompt": "QAReader.answer",
+    }
+
+
+def log_fairness_config_diff(logger: logging.Logger, args: argparse.Namespace, ablation_name: str) -> None:
+    if not ablation_name:
+        return
+    view = fairness_config_view(args)
+    allowed_by_ablation = {
+        "wo_granularity_awareness": {
+            "enable_granularity_awareness": False,
+            "enable_granularity_pagerank_bias": False,
+            "evidence_use_alpha_weights": False,
+        },
+        "wo_sentence_layer": {"enable_sentence_layer": False},
+        "wo_graph_propagation": {"graph_propagation": False},
+    }.get(ablation_name, {})
+    logger.info("Fairness config view for %s: %s", ablation_name, json.dumps(view, ensure_ascii=False, sort_keys=True))
+    logger.info("Allowed ablation switches for %s: %s", ablation_name, json.dumps(allowed_by_ablation, ensure_ascii=False, sort_keys=True))
 
 
 def prebuild_or_reuse_indexes(
@@ -737,6 +824,18 @@ def run_eval(
     edge_counts: List[float] = []
     edge_type_totals: Dict[str, List[float]] = {}
     evidence_tokens: List[float] = []
+    alpha_f_values: List[float] = []
+    alpha_s_values: List[float] = []
+    alpha_c_values: List[float] = []
+    used_tokens_f: List[float] = []
+    used_tokens_s: List[float] = []
+    used_tokens_c: List[float] = []
+    num_fact_evidence_values: List[float] = []
+    num_sentence_evidence_values: List[float] = []
+    num_chunk_evidence_values: List[float] = []
+    limit_fact_evidence_values: List[float] = []
+    limit_sentence_evidence_values: List[float] = []
+    limit_chunk_evidence_values: List[float] = []
     qa_failures = 0
 
     t_start = time.perf_counter()
@@ -777,7 +876,22 @@ def run_eval(
         if not evidence_text:
             evidence_text = format_qa_evidence_from_ranked_passages(ranked_passages, rag.config.qa_passage_top_k)
         final_evidence_tokens = token_counter.count(evidence_text)
+        alpha_values = _alpha_row(result.get("alpha", {}) or {})
+        evidence_values = _evidence_granularity_row(result, final_evidence_tokens)
+        final_evidence_tokens = int(evidence_values["final_evidence_tokens"])
         evidence_tokens.append(float(final_evidence_tokens))
+        alpha_f_values.append(alpha_values["alpha_F"])
+        alpha_s_values.append(alpha_values["alpha_S"])
+        alpha_c_values.append(alpha_values["alpha_C"])
+        used_tokens_f.append(float(evidence_values["used_tokens_F"]))
+        used_tokens_s.append(float(evidence_values["used_tokens_S"]))
+        used_tokens_c.append(float(evidence_values["used_tokens_C"]))
+        num_fact_evidence_values.append(float(evidence_values["num_fact_evidence"]))
+        num_sentence_evidence_values.append(float(evidence_values["num_sentence_evidence"]))
+        num_chunk_evidence_values.append(float(evidence_values["num_chunk_evidence"]))
+        limit_fact_evidence_values.append(float(evidence_values["limit_fact_evidence"]))
+        limit_sentence_evidence_values.append(float(evidence_values["limit_sentence_evidence"]))
+        limit_chunk_evidence_values.append(float(evidence_values["limit_chunk_evidence"]))
         predicted_answer = str(result.get("predicted_answer", "")).strip()
         em, f1 = best_em_f1(build_gold_answers(sample), predicted_answer)
         em_scores.append(em)
@@ -824,6 +938,8 @@ def run_eval(
             "applied_source_base_config": source_base_config,
             "source_base_config": source_base_overrides(sample) if source_base_config else {},
         }
+        row.update(alpha_values)
+        row.update(evidence_values)
         with per_example_path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
@@ -859,6 +975,19 @@ def run_eval(
         "edges": _avg(edge_counts),
         "final_evidence_tokens": _avg(evidence_tokens),
         "final_evidence_tokenizer": token_counter.method,
+        "avg_alpha_F": _avg(alpha_f_values),
+        "avg_alpha_S": _avg(alpha_s_values),
+        "avg_alpha_C": _avg(alpha_c_values),
+        "avg_used_tokens_F": _avg(used_tokens_f),
+        "avg_used_tokens_S": _avg(used_tokens_s),
+        "avg_used_tokens_C": _avg(used_tokens_c),
+        "avg_num_fact_evidence": _avg(num_fact_evidence_values),
+        "avg_num_sentence_evidence": _avg(num_sentence_evidence_values),
+        "avg_num_chunk_evidence": _avg(num_chunk_evidence_values),
+        "avg_limit_fact_evidence": _avg(limit_fact_evidence_values),
+        "avg_limit_sentence_evidence": _avg(limit_sentence_evidence_values),
+        "avg_limit_chunk_evidence": _avg(limit_chunk_evidence_values),
+        "avg_final_evidence_tokens": _avg(evidence_tokens),
     }
     for edge_type, values in sorted(edge_type_totals.items()):
         metrics[f"edge_{edge_type}"] = _avg(values)
@@ -884,6 +1013,9 @@ def source_base_overrides(sample: Dict[str, Any]) -> Dict[str, Any]:
         "evidence_title_limit": 3,
         "evidence_passage_context_k": 1,
         "evidence_passage_excerpt_tokens": 100,
+        "evidence_chunk_max_tokens": 256,
+        "evidence_packing_mode": "alpha_count",
+        "evidence_alpha_total_units": 20,
         "chunk_size_words": 256,
         "chunk_overlap_words": 64,
         "use_paragraph_as_chunk": True,
@@ -892,13 +1024,11 @@ def source_base_overrides(sample: Dict[str, Any]) -> Dict[str, Any]:
         return {
             **common,
             "qa_passage_top_k": 0,
-            "qa_evidence_token_budget": 340,
         }
     if source == "narrativeqa":
         return {
             **common,
             "qa_passage_top_k": 5,
-            "qa_evidence_token_budget": 2700,
             "fact_rerank_llm_candidate_k": 32,
             "fact_rerank_llm_keep_k": 5,
             "chunk_size_words": 1024,
@@ -908,7 +1038,6 @@ def source_base_overrides(sample: Dict[str, Any]) -> Dict[str, Any]:
     return {
         **common,
         "qa_passage_top_k": 4,
-        "qa_evidence_token_budget": 820,
     }
 
 
@@ -953,7 +1082,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--topk_passages", type=int, default=4)
     parser.add_argument("--passage_output_top_k", type=int, default=10)
     parser.add_argument("--qa_max_input_tokens", type=int, default=7000)
-    parser.add_argument("--qa_evidence_token_budget", type=int, default=820)
+    parser.add_argument("--max_new_tokens", type=int, default=512)
     parser.add_argument("--fact_rerank_use_llm", action="store_true", default=True)
     parser.add_argument("--fact_rerank_llm_candidate_k", type=int, default=20)
     parser.add_argument("--fact_rerank_llm_keep_k", type=int, default=7)
@@ -966,6 +1095,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence_title_limit", type=int, default=3)
     parser.add_argument("--evidence_passage_context_k", type=int, default=1)
     parser.add_argument("--evidence_passage_excerpt_tokens", type=int, default=100)
+    parser.add_argument("--evidence_chunk_max_tokens", type=int, default=256)
+    parser.add_argument("--evidence_packing_mode", type=str, default="alpha_count")
+    parser.add_argument("--evidence_alpha_total_units", type=int, default=20)
+    parser.add_argument("--evidence_soft_token_budget", type=int, default=0)
+    parser.add_argument("--evidence_allow_underfill", action="store_true", default=True)
+    parser.add_argument("--evidence_min_score", type=float, default=0.0)
+    parser.add_argument("--evidence_redundancy_threshold", type=float, default=0.85)
+    parser.add_argument("--disable_evidence_alpha_weights", action="store_true")
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
     parser.add_argument("--source_base_config", action="store_true", help="Apply source_dataset-specific base retrieval/reader settings per query while leaving the configured task_profile router intact.")
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
@@ -994,6 +1131,7 @@ def main() -> None:
     logger = setup_logger(run_dir / "run.log")
     logger.info("Run directory: %s", run_dir)
     logger.info("Python executable: %s", sys.executable)
+    log_fairness_config_diff(logger, args, ablation_name)
     if not args.skip_llm_health_check:
         check_llm_server(args.llm_base_url, args.llm_name, args.llm_health_timeout, logger)
 
@@ -1063,6 +1201,19 @@ def main() -> None:
         "total_runtime",
         "final_evidence_tokens",
         "final_evidence_tokenizer",
+        "avg_alpha_F",
+        "avg_alpha_S",
+        "avg_alpha_C",
+        "avg_used_tokens_F",
+        "avg_used_tokens_S",
+        "avg_used_tokens_C",
+        "avg_num_fact_evidence",
+        "avg_num_sentence_evidence",
+        "avg_num_chunk_evidence",
+        "avg_limit_fact_evidence",
+        "avg_limit_sentence_evidence",
+        "avg_limit_chunk_evidence",
+        "avg_final_evidence_tokens",
         "index_pool",
         "nodes",
         "entity_nodes",
@@ -1109,7 +1260,7 @@ def main() -> None:
                 "enable_granularity_pagerank_bias": rag.config.enable_granularity_pagerank_bias,
                 "topk_passages": args.topk_passages,
                 "qa_max_input_tokens": args.qa_max_input_tokens,
-                "qa_evidence_token_budget": args.qa_evidence_token_budget,
+                "max_new_tokens": rag.config.max_new_tokens,
                 "fact_rerank_use_llm": rag.config.fact_rerank_use_llm,
                 "fact_rerank_llm_candidate_k": rag.config.fact_rerank_llm_candidate_k,
                 "fact_rerank_llm_keep_k": rag.config.fact_rerank_llm_keep_k,
@@ -1122,6 +1273,14 @@ def main() -> None:
                 "evidence_title_limit": rag.config.evidence_title_limit,
                 "evidence_passage_context_k": rag.config.evidence_passage_context_k,
                 "evidence_passage_excerpt_tokens": rag.config.evidence_passage_excerpt_tokens,
+                "evidence_chunk_max_tokens": rag.config.evidence_chunk_max_tokens,
+                "evidence_packing_mode": rag.config.evidence_packing_mode,
+                "evidence_alpha_total_units": rag.config.evidence_alpha_total_units,
+                "evidence_soft_token_budget": rag.config.evidence_soft_token_budget,
+                "evidence_allow_underfill": rag.config.evidence_allow_underfill,
+                "evidence_min_score": rag.config.evidence_min_score,
+                "evidence_redundancy_threshold": rag.config.evidence_redundancy_threshold,
+                "evidence_use_alpha_weights": rag.config.evidence_use_alpha_weights,
                 "shared_index_root": str(shared_index_root),
             },
             ensure_ascii=False,

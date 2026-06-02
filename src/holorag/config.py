@@ -20,9 +20,6 @@ class HoloRAGConfig:
     query_max_length: int = 128
     llm_context_window: int = 8192
     qa_max_input_tokens: int = 7000
-    # Keep final QA evidence compact while still leaving room for the question
-    # and retrieval hints.
-    qa_evidence_token_budget: int = 620
     max_new_tokens: int = 512
     temperature: float = 0.0
 
@@ -67,6 +64,15 @@ class HoloRAGConfig:
     evidence_title_limit: int = 3
     evidence_passage_context_k: int = 2
     evidence_passage_excerpt_tokens: int = 150
+    evidence_chunk_max_tokens: int = 256
+    evidence_packing_mode: str = "alpha_count"
+    evidence_alpha_total_units: int = 20
+    evidence_alpha_uniform_mix: float = 0.0
+    evidence_soft_token_budget: int = 0
+    evidence_allow_underfill: bool = True
+    evidence_min_score: float = 0.0
+    evidence_redundancy_threshold: float = 0.85
+    evidence_use_alpha_weights: bool = True
     enable_no_fact_fallback: bool = True
     entity_hub_suppression: float = 1.0
 
@@ -79,9 +85,9 @@ class HoloRAGConfig:
         "sentence_sequence": 0.6,
     })
     profile_alpha_priors: Dict[str, Dict[str, float]] = field(default_factory=lambda: {
-        "single_hop": {"entity": 0.40, "fact": 0.35, "sentence": 0.15, "chunk": 0.10},
-        "multi_hop": {"entity": 0.15, "fact": 0.30, "sentence": 0.40, "chunk": 0.15},
-        "long_context": {"entity": 0.08, "fact": 0.12, "sentence": 0.20, "chunk": 0.60},
+        "single_hop": {"fact": 0.60, "sentence": 0.30, "chunk": 0.10},
+        "multi_hop": {"fact": 0.40, "sentence": 0.40, "chunk": 0.20},
+        "long_context": {"fact": 0.10, "sentence": 0.20, "chunk": 0.70},
     })
 
     query_instruction: str = "Represent the question for retrieval."

@@ -187,7 +187,7 @@ class QAReader:
     ) -> List[Dict]:
         evidence_text = str(evidence.get("packed_text", "")).strip()
         if not evidence_text:
-            per_passage_budget = max(80, self._evidence_budget() // max(1, min(self.config.qa_passage_top_k, 2)))
+            per_passage_budget = max(80, min(512, int(self.config.qa_max_input_tokens) // max(1, min(self.config.qa_passage_top_k, 2))))
             evidence_text = format_passages(
                 ranked_passages,
                 min(self.config.qa_passage_top_k, 2),
@@ -213,11 +213,8 @@ class QAReader:
             {"role": "user", "content": user_content},
         ]
 
-    def _evidence_budget(self) -> int:
-        return max(256, int(getattr(self.config, "qa_evidence_token_budget", 620)))
-
     def _fit_user_content(self, content: str) -> str:
-        budget = max(256, min(int(self.config.qa_max_input_tokens), self._evidence_budget() + 96))
+        budget = max(256, int(self.config.qa_max_input_tokens))
         if _token_count(content) <= budget:
             return content
         return _truncate_words(content, budget)

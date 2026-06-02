@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Evaluate the wo_sentence_layer ablation with profile-renormalized evidence.
+"""Evaluate the clean wo_sentence_layer ablation.
 
 This entrypoint intentionally reuses scripts/eval.py for sampling, indexing,
 metrics, logging, and QA. The only behavioral change is the ablation itself:
 sentence nodes are removed from the runtime graph, and final evidence is packed
-from entity/fact/chunk candidates according to the task profile after the
-sentence prior is renormalized away.
+from fact/chunk candidates while entities remain graph anchors.
 """
 
 from __future__ import annotations
@@ -44,7 +43,7 @@ except ModuleNotFoundError as exc:
         return scores
 
 
-NON_SENTENCE_TYPES = ("entity", "fact", "chunk")
+NON_SENTENCE_TYPES = ("fact", "chunk")
 
 
 class WoSentenceProfileRetriever(Retriever):
@@ -78,7 +77,7 @@ class WoSentenceProfileRetriever(Retriever):
             chunk_id = fact.get("chunk_id")
             if chunk_id:
                 chunk_scores[chunk_id] += alpha_weights.get("fact_to_chunk", 0.15) * float(fact.get("score", 0.0))
-                if getattr(self.config, "enable_granularity_awareness", True) and getattr(self.config, "enable_fact_chunk_boost", False):
+                if getattr(self.config, "enable_fact_chunk_boost", False):
                     chunk_scores[chunk_id] += float(getattr(self.config, "fact_chunk_boost", 0.35)) * float(fact.get("score", 0.0))
 
         passages = []
@@ -114,29 +113,24 @@ class WoSentenceProfileRetriever(Retriever):
     ) -> Dict:
         allocation = self._renormalized_non_sentence_allocation(profile, alpha=alpha)
         facts = self._rank_fact_evidence(graph, pagerank_scores, ranked_facts)
-        entities = self._rank_entity_evidence(graph, pagerank_scores, channel_scores, facts)
-        chunks = list(ranked_passages[: self.config.qa_passage_top_k])
+        chunks = list(ranked_passages[: self.config.passage_output_top_k])
 
         packed = self._pack_non_sentence_evidence(
             allocation=allocation,
             query=query,
-            entities=entities,
             facts=facts,
             chunks=chunks,
             fallback_passages=ranked_passages,
             sub_questions=sub_questions,
-            token_budget=token_budget,
         )
         result = {
             "profile": profile,
             "allocation_mode": "profile_renormalized_without_sentence",
             "allocation": allocation,
-            "entities": entities,
             "facts": facts,
             "sentences": [],
             "chunks": chunks,
             "evidence_groups": [
-                {"label": "Profile-renormalized entity evidence", "items": entities},
                 {"label": "Profile-renormalized fact evidence", "items": facts},
                 {"label": "Profile-renormalized chunk evidence", "items": chunks},
             ],
@@ -150,10 +144,13 @@ class WoSentenceProfileRetriever(Retriever):
             priors = dict(alpha or {})
         else:
             priors = dict(self.config.profile_alpha_priors.get(profile) or self.config.profile_alpha_priors.get("multi_hop", {}))
-        kept = {kind: max(float(priors.get(kind, 0.0)), 0.0) for kind in NON_SENTENCE_TYPES}
+        kept = {
+            "fact": max(float(priors.get("fact", 0.0)), 0.0),
+            "chunk": max(float(priors.get("chunk", 0.0)), 0.0) + max(float(priors.get("sentence", 0.0)), 0.0),
+        }
         total = sum(kept.values())
         if total <= 0:
-            kept = {"entity": 0.25, "fact": 0.50, "chunk": 0.25}
+            kept = {"fact": 0.40, "chunk": 0.60}
             total = 1.0
         return {kind: value / total for kind, value in kept.items()}
 
@@ -221,83 +218,139 @@ class WoSentenceProfileRetriever(Retriever):
         self,
         allocation: Dict[str, float],
         query: str,
-        entities: Sequence[Dict],
         facts: Sequence[Dict],
         chunks: Sequence[Dict],
         fallback_passages: Sequence[Dict],
         sub_questions: Sequence[str],
-        token_budget: int,
     ) -> Dict:
-        budget = max(128, int(token_budget or self.config.qa_evidence_token_budget))
-        quotas = {kind: max(24, int(budget * allocation.get(kind, 0.0))) for kind in NON_SENTENCE_TYPES}
+        count_limits = self._non_sentence_count_limits(allocation)
         candidates_by_kind = {
-            "entity": self._entity_candidates(entities, query, sub_questions),
             "fact": self._fact_candidates(facts, query, sub_questions),
-            "chunk": self._chunk_candidates(list(chunks) or list(fallback_passages), query, sub_questions),
+            "chunk": self._chunk_candidates(list(chunks) or list(fallback_passages), query, sub_questions, allocation),
         }
 
         selected: List[Dict] = []
         used_ids = set()
+        selected_texts: List[str] = []
         title_counts: Dict[str, int] = defaultdict(int)
-        used = 0
+        candidates = [item for items in candidates_by_kind.values() for item in items]
+        title_limit = max(1, int(getattr(self.config, "evidence_title_limit", 3)))
+        min_score = float(getattr(self.config, "evidence_min_score", 0.0))
+        redundancy_threshold = float(getattr(self.config, "evidence_redundancy_threshold", 0.85))
 
         for kind in NON_SENTENCE_TYPES:
-            kind_used = 0
-            for item in candidates_by_kind[kind]:
-                accepted, cost = self._try_add_packed_item(
-                    item=item,
-                    selected=selected,
-                    used_ids=used_ids,
-                    title_counts=title_counts,
-                    budget=min(budget - used, quotas[kind] - kind_used),
-                )
-                if not accepted:
-                    continue
-                used += cost
-                kind_used += cost
-                if used >= budget or kind_used >= quotas[kind]:
-                    break
-
-        leftovers = []
-        for kind in NON_SENTENCE_TYPES:
-            leftovers.extend(candidates_by_kind[kind])
-        for item in sorted(leftovers, key=lambda row: row.get("pack_score", 0.0), reverse=True):
-            if used >= budget:
-                break
-            accepted, cost = self._try_add_packed_item(
-                item=item,
+            self._select_count_limited_kind(
+                kind=kind,
+                candidates=candidates,
+                limit=int(count_limits.get(kind, 0)),
                 selected=selected,
-                used_ids=used_ids,
+                selected_ids=used_ids,
+                selected_texts=selected_texts,
                 title_counts=title_counts,
-                budget=budget - used,
+                title_limit=title_limit,
+                min_score=min_score,
+                redundancy_threshold=redundancy_threshold,
             )
-            if accepted:
-                used += cost
+        self._fill_non_sentence_underflow_with_chunks(
+            candidates=candidates,
+            count_limits=count_limits,
+            selected=selected,
+            used_ids=used_ids,
+            selected_texts=selected_texts,
+            title_counts=title_counts,
+            title_limit=title_limit,
+            min_score=min_score,
+            redundancy_threshold=redundancy_threshold,
+        )
 
         packed_text = "\n".join(item["line"] for item in selected).strip()
+        used_by_kind: Dict[str, int] = defaultdict(int)
+        count_by_kind: Dict[str, int] = defaultdict(int)
+        for item in selected:
+            kind = str(item.get("kind", ""))
+            used_by_kind[kind] += int(item.get("tokens", 0) or 0)
+            count_by_kind[kind] += 1
         return {
             "packed_text": packed_text,
             "packed_records": selected,
-            "packed_token_budget": budget,
+            "packed_token_budget": 0,
             "packed_token_count": self._token_count(packed_text),
-            "packed_token_quotas": quotas,
+            "evidence_count_limits_by_granularity": {
+                "fact": int(count_limits.get("fact", 0)),
+                "sentence": 0,
+                "chunk": int(count_limits.get("chunk", 0)),
+            },
+            "used_tokens_by_granularity": {
+                "fact": int(used_by_kind.get("fact", 0)),
+                "sentence": 0,
+                "chunk": int(used_by_kind.get("chunk", 0)),
+            },
+            "evidence_counts_by_granularity": {
+                "fact": int(count_by_kind.get("fact", 0)),
+                "sentence": 0,
+                "chunk": int(count_by_kind.get("chunk", 0)),
+            },
         }
 
-    def _entity_candidates(self, entities: Sequence[Dict], query: str, sub_questions: Sequence[str]) -> List[Dict]:
-        return [
-            self._candidate(
-                kind="entity",
-                label="Entity",
-                text=str(row.get("text", "")),
-                title="",
-                score=float(row.get("score", 0.0)),
-                node_id=str(row.get("node_id", "")),
-                query=query,
-                sub_questions=sub_questions,
-                weight=1.0,
-            )
-            for row in entities
-        ]
+    def _fill_non_sentence_underflow_with_chunks(
+        self,
+        candidates: Sequence[Dict],
+        count_limits: Dict[str, int],
+        selected: List[Dict],
+        used_ids: set,
+        selected_texts: List[str],
+        title_counts: Dict[str, int],
+        title_limit: int,
+        min_score: float,
+        redundancy_threshold: float,
+    ) -> None:
+        target_total = min(
+            max(1, int(getattr(self.config, "evidence_alpha_total_units", 20))),
+            int(count_limits.get("fact", 0)) + int(getattr(self.config, "passage_output_top_k", 0)),
+        )
+        remaining = target_total - len(selected)
+        if remaining <= 0:
+            return
+        self._select_count_limited_kind(
+            kind="chunk",
+            candidates=candidates,
+            limit=remaining,
+            selected=selected,
+            selected_ids=used_ids,
+            selected_texts=selected_texts,
+            title_counts=title_counts,
+            title_limit=title_limit,
+            min_score=min_score,
+            redundancy_threshold=redundancy_threshold,
+        )
+
+    def _non_sentence_count_limits(self, allocation: Dict[str, float]) -> Dict[str, int]:
+        total = max(1, int(getattr(self.config, "evidence_alpha_total_units", 20)))
+        raw = {kind: total * max(float(allocation.get(kind, 0.0)), 0.0) for kind in NON_SENTENCE_TYPES}
+        caps = {
+            "fact": max(0, int(getattr(self.config, "fact_top_k", 0))),
+            "chunk": max(0, int(getattr(self.config, "passage_output_top_k", 0))),
+        }
+        limits = {kind: min(caps[kind], int(raw[kind])) for kind in NON_SENTENCE_TYPES}
+        remaining = total - sum(limits.values())
+        remainders = sorted(
+            NON_SENTENCE_TYPES,
+            key=lambda kind: (raw[kind] - int(raw[kind]), float(allocation.get(kind, 0.0))),
+            reverse=True,
+        )
+        while remaining > 0:
+            changed = False
+            for kind in remainders:
+                if limits[kind] >= caps[kind]:
+                    continue
+                limits[kind] += 1
+                remaining -= 1
+                changed = True
+                if remaining <= 0:
+                    break
+            if not changed:
+                break
+        return {kind: int(limits.get(kind, 0)) for kind in NON_SENTENCE_TYPES}
 
     def _fact_candidates(self, facts: Sequence[Dict], query: str, sub_questions: Sequence[str]) -> List[Dict]:
         return [
@@ -315,13 +368,23 @@ class WoSentenceProfileRetriever(Retriever):
             for row in facts
         ]
 
-    def _chunk_candidates(self, chunks: Sequence[Dict], query: str, sub_questions: Sequence[str]) -> List[Dict]:
-        passage_limit = max(80, int(getattr(self.config, "evidence_passage_excerpt_tokens", 260)))
+    def _chunk_candidates(
+        self,
+        chunks: Sequence[Dict],
+        query: str,
+        sub_questions: Sequence[str],
+        allocation: Dict[str, float],
+    ) -> List[Dict]:
+        alpha = {"fact": allocation.get("fact", 0.0), "sentence": 0.0, "chunk": allocation.get("chunk", 0.0)}
         return [
             self._candidate(
                 kind="chunk",
                 label="Passage",
-                text=self._passage_excerpt(str(row.get("text", "")), query, passage_limit),
+                text=self._passage_excerpt(
+                    str(row.get("text", "")),
+                    query,
+                    self._dynamic_passage_limit(row, query, alpha, 0),
+                ),
                 title=str(row.get("title", "")),
                 score=float(row.get("score", 0.0)),
                 node_id=str(row.get("chunk_id", row.get("node_id", ""))),
@@ -365,8 +428,6 @@ class WoSentenceProfileRetriever(Retriever):
         title_counts: Dict[str, int],
         budget: int,
     ) -> tuple[bool, int]:
-        if budget <= 0:
-            return False, 0
         node_id = item.get("node_id")
         if node_id and node_id in used_ids:
             return False, 0
@@ -376,7 +437,7 @@ class WoSentenceProfileRetriever(Retriever):
             return False, 0
         line = str(item.get("line", "")).strip()
         cost = self._token_count(line)
-        if cost > budget:
+        if budget > 0 and cost > budget:
             if item.get("kind") != "chunk" and budget < 24:
                 return False, 0
             line = self._truncate_words(line, budget)
@@ -445,6 +506,14 @@ class WoSentenceLayerHoloRAG(BaseHoloRAG):
 
 
 _ORIGINAL_BUILD_CONFIG = eval_base.build_config
+_ORIGINAL_PARSE_ARGS = eval_base.parse_args
+
+
+def parse_args_with_ablation_name():
+    args = _ORIGINAL_PARSE_ARGS()
+    if not args.ablation_name:
+        args.ablation_name = "wo_sentence_layer"
+    return args
 
 
 def build_wo_sentence_config(args, save_dir: str):
@@ -456,18 +525,6 @@ def build_wo_sentence_config(args, save_dir: str):
 
 
 def apply_wo_sentence_defaults(args, ablation_name: str, argv: Sequence[str]) -> None:
-    defaults = {
-        "--topk_passages": ("topk_passages", 6),
-        "--passage_output_top_k": ("passage_output_top_k", 16),
-        "--qa_evidence_token_budget": ("qa_evidence_token_budget", 1200),
-        "--fact_rerank_llm_candidate_k": ("fact_rerank_llm_candidate_k", 20),
-        "--fact_rerank_llm_keep_k": ("fact_rerank_llm_keep_k", 7),
-        "--evidence_title_limit": ("evidence_title_limit", 3),
-        "--evidence_passage_excerpt_tokens": ("evidence_passage_excerpt_tokens", 260),
-    }
-    for flag, (attr, value) in defaults.items():
-        if not eval_base._arg_provided(argv, flag):
-            setattr(args, attr, value)
     if not eval_base._arg_provided(argv, "--disable_sentence_layer"):
         args.disable_sentence_layer = True
     if not eval_base._arg_provided(argv, "--disable_granularity_awareness"):
@@ -482,6 +539,7 @@ def main() -> None:
             eval_base.parse_args()
             return
         raise _IMPORT_ERROR
+    eval_base.parse_args = parse_args_with_ablation_name
     eval_base.build_config = build_wo_sentence_config
     eval_base.apply_ablation_defaults = apply_wo_sentence_defaults
     holorag.HoloRAG = WoSentenceLayerHoloRAG
