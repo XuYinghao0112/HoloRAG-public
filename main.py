@@ -155,6 +155,9 @@ def build_config(args: argparse.Namespace):
         pagerank_alpha=args.pagerank_alpha,
         transition_lambda=args.transition_lambda,
         hub_penalty=args.hub_penalty,
+        execution_mode=args.execution_mode,
+        num_workers=args.num_workers,
+        multi_worker_embedding_devices=args.multi_worker_embedding_devices,
     )
 
 
@@ -191,6 +194,9 @@ def main() -> None:
     parser.add_argument("--pagerank_alpha", type=float, default=0.5)
     parser.add_argument("--transition_lambda", type=float, default=1.2)
     parser.add_argument("--hub_penalty", type=float, default=0.08)
+    parser.add_argument("--execution_mode", type=str, default="sequential", choices=["sequential", "multi_worker"])
+    parser.add_argument("--num_workers", type=int, default=3)
+    parser.add_argument("--multi_worker_embedding_devices", type=str, default="", help="Comma-separated devices for optional multi-worker retrieval encoders, e.g. cuda:0,cuda:3.")
     args = parser.parse_args()
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"

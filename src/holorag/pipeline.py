@@ -149,11 +149,15 @@ class HoloRAG:
             "task_profile": profile,
             "alpha": alpha,
             "intent_confidence": route["confidence"],
+            "granularity_intent": route.get("granularity_intent", profile),
             "query_entities": query_parse["entities"],
             "query_facts": query_parse["triples"],
             "sub_questions": sub_questions,
             "channel_scores": self._trim_channel_scores(retrieval["channel_scores"]),
             "retrieval_meta": {
+                "execution_mode": str(getattr(self.config, "execution_mode", "sequential") or "sequential"),
+                "num_workers": int(getattr(self.config, "num_workers", 3) or 3),
+                "multi_worker_embedding_devices": str(getattr(self.config, "multi_worker_embedding_devices", "") or ""),
                 "fallback_used": bool(retrieval.get("fallback_used", False)),
                 "fact_rerank": retrieval.get("rerank_meta", {}),
             },
@@ -169,6 +173,7 @@ class HoloRAG:
             "qa_answer_mode": qa_result.get("answer_mode", ""),
             "llm_stats": self.llm_client.get_stats(),
             "query_timing": {
+                "execution_mode": str(getattr(self.config, "execution_mode", "sequential") or "sequential"),
                 "query_total_latency": float(after_qa - start),
                 "load_latency": float(after_load - start),
                 "intent_latency": float(after_route - after_load),

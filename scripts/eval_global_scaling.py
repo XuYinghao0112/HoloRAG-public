@@ -514,6 +514,7 @@ def evaluate_on_global_index(
             "retrieval_latency": query_timing.get("retrieval_latency"),
             "retrieval_pipeline_latency": query_timing.get("retrieval_pipeline_latency"),
             "qa_latency": query_timing.get("qa_latency"),
+            "execution_mode": query_timing.get("execution_mode", getattr(rag.config, "execution_mode", "sequential")),
             "final_evidence_tokens": final_evidence_tokens,
             "final_evidence_tokenizer": token_counter.method,
             "qa_answer_mode": result.get("qa_answer_mode", ""),
@@ -548,6 +549,9 @@ def evaluate_on_global_index(
         "retrieval_pipeline_latency": _avg(retrieval_pipeline_latencies),
         "qa_latency": _avg(qa_latencies),
         "retrieval_qa_latency": _avg(query_total_latencies),
+        "execution_mode": str(getattr(rag.config, "execution_mode", "sequential") or "sequential"),
+        "avg_retrieval_latency": _avg(retrieval_latencies),
+        "avg_total_latency": _avg(query_total_latencies),
         "query_runtime": time.perf_counter() - t_start,
         "total_runtime": float(index_record.get("index_latency", 0.0) or 0.0) + (time.perf_counter() - t_start),
         "nodes": int(stats.get("nodes", 0)),
@@ -648,6 +652,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence_redundancy_threshold", type=float, default=0.85)
     parser.add_argument("--disable_evidence_alpha_weights", action="store_true")
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
+    parser.add_argument("--execution_mode", type=str, default="sequential", choices=["sequential", "multi_worker"])
+    parser.add_argument("--num_workers", type=int, default=3)
+    parser.add_argument("--multi_worker_embedding_devices", type=str, default="", help="Comma-separated devices for optional multi-worker retrieval encoders, e.g. cuda:0,cuda:3.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
     parser.add_argument("--llm_health_timeout", type=float, default=10.0)
     return parser.parse_args()
@@ -802,6 +809,9 @@ def main() -> None:
         "embedding_name": args.embedding_name,
         "embedding_device": args.embedding_device,
         "task_profile": args.task_profile,
+        "execution_mode": args.execution_mode,
+        "num_workers": args.num_workers,
+        "multi_worker_embedding_devices": args.multi_worker_embedding_devices,
         "use_paragraph_as_chunk": not args.disable_paragraph_as_chunk,
         "index_extraction_mode": args.index_extraction_mode,
         "enable_entity_similarity_edges": not args.disable_entity_similarity_edges,

@@ -1,4 +1,5 @@
 import logging
+import threading
 from typing import List, Optional
 
 import numpy as np
@@ -13,6 +14,7 @@ logger = logging.getLogger(__name__)
 class NVEmbedV2Encoder:
     def __init__(self, config: HoloRAGConfig) -> None:
         self.config = config
+        self._encode_lock = threading.RLock()
         self.embedding_device = self._normalize_device(config.embedding_device)
         self.torch_dtype = self._resolve_dtype(config.embedding_dtype, self.embedding_device)
         logger.info("Loading embedding model: %s on %s", config.embedding_model_name, self.embedding_device)
@@ -41,7 +43,11 @@ class NVEmbedV2Encoder:
             return np.zeros((0, 1), dtype=np.float32)
         resolved_max_length = max_length or self._resolve_max_length(text_type)
         prompt_instruction = f"Instruct: {instruction}\nQuery: " if instruction else ""
-        embeddings = self._encode_with_backoff(texts, prompt_instruction, self.config.embedding_batch_size, resolved_max_length)
+        # NV-Embed-v2 uses a fast tokenizer inside model.encode; the tokenizer
+        # mutates truncation/padding state and is not safe to enter from
+        # multiple Python threads at once.
+        with self._encode_lock:
+            embeddings = self._encode_with_backoff(texts, prompt_instruction, self.config.embedding_batch_size, resolved_max_length)
         if isinstance(embeddings, torch.Tensor):
             embeddings = embeddings.detach().cpu().numpy()
         array = np.asarray(embeddings, dtype=np.float32)

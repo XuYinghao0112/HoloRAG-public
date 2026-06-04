@@ -530,6 +530,9 @@ def build_config(args: argparse.Namespace, save_dir: str):
         evidence_min_score=args.evidence_min_score,
         evidence_redundancy_threshold=args.evidence_redundancy_threshold,
         evidence_use_alpha_weights=not args.disable_evidence_alpha_weights,
+        execution_mode=getattr(args, "execution_mode", "sequential"),
+        num_workers=getattr(args, "num_workers", 3),
+        multi_worker_embedding_devices=getattr(args, "multi_worker_embedding_devices", ""),
     )
 
 
@@ -598,6 +601,9 @@ def fairness_config_view(args: argparse.Namespace) -> Dict[str, Any]:
         "chunk_overlap_words": args.chunk_overlap_words,
         "retriever": "HoloRAG",
         "evaluation_script": "scripts/eval.py",
+        "execution_mode": getattr(args, "execution_mode", "sequential"),
+        "num_workers": getattr(args, "num_workers", 3),
+        "multi_worker_embedding_devices": getattr(args, "multi_worker_embedding_devices", ""),
         "evidence_packing_mode": args.evidence_packing_mode,
         "global_evidence_soft_budget": (
             args.evidence_soft_token_budget
@@ -923,6 +929,7 @@ def run_eval(
             "retrieval_latency": query_timing.get("retrieval_latency"),
             "retrieval_pipeline_latency": query_timing.get("retrieval_pipeline_latency"),
             "qa_latency": query_timing.get("qa_latency"),
+            "execution_mode": query_timing.get("execution_mode", getattr(rag.config, "execution_mode", "sequential")),
             "query_timing": query_timing,
             "entity_nodes": int(layers.get("entity", 0)),
             "fact_nodes": int(layers.get("fact", 0)),
@@ -966,6 +973,9 @@ def run_eval(
         "retrieval_pipeline_latency": _avg(retrieval_pipeline_latencies),
         "qa_latency": _avg(qa_latencies),
         "retrieval_qa_latency": _avg(query_total_latencies),
+        "execution_mode": str(getattr(rag.config, "execution_mode", "sequential") or "sequential"),
+        "avg_retrieval_latency": _avg(retrieval_latencies),
+        "avg_total_latency": _avg(query_total_latencies),
         "query_runtime": time.perf_counter() - t_start,
         "nodes": _avg(node_counts),
         "entity_nodes": _avg(entity_counts),
@@ -1104,6 +1114,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence_redundancy_threshold", type=float, default=0.85)
     parser.add_argument("--disable_evidence_alpha_weights", action="store_true")
     parser.add_argument("--task_profile", type=str, default="multi_hop", choices=["auto", "single_hop", "multi_hop", "long_context"])
+    parser.add_argument("--execution_mode", type=str, default="sequential", choices=["sequential", "multi_worker"])
+    parser.add_argument("--num_workers", type=int, default=3)
+    parser.add_argument("--multi_worker_embedding_devices", type=str, default="", help="Comma-separated devices for optional multi-worker retrieval encoders, e.g. cuda:0,cuda:3.")
     parser.add_argument("--source_base_config", action="store_true", help="Apply source_dataset-specific base retrieval/reader settings per query while leaving the configured task_profile router intact.")
     parser.add_argument("--recompute_only", action="store_true", help="Skip indexing and recompute metrics from existing shared indexes only.")
     parser.add_argument("--skip_llm_health_check", action="store_true")
@@ -1196,6 +1209,9 @@ def main() -> None:
         "retrieval_pipeline_latency",
         "qa_latency",
         "retrieval_qa_latency",
+        "execution_mode",
+        "avg_retrieval_latency",
+        "avg_total_latency",
         "query_runtime",
         "shared_index_runtime",
         "total_runtime",
@@ -1248,6 +1264,9 @@ def main() -> None:
                 "embedding_device": args.embedding_device,
                 "spacy_model_name": args.spacy_model_name,
                 "task_profile": args.task_profile,
+                "execution_mode": rag.config.execution_mode,
+                "num_workers": rag.config.num_workers,
+                "multi_worker_embedding_devices": rag.config.multi_worker_embedding_devices,
                 "source_base_config": args.source_base_config,
                 "use_paragraph_as_chunk": not args.disable_paragraph_as_chunk,
                 "index_extraction_mode": args.index_extraction_mode,

@@ -93,3 +93,7 @@ class HoloRAGConfig:
     query_instruction: str = "Represent the question for retrieval."
     query_instruction_fact: str = "Represent the question for matching factual triples and constraints."
     query_instruction_text: str = "Represent the question for matching sentence and chunk evidence."
+
+    execution_mode: str = "sequential"
+    num_workers: int = 3
+    multi_worker_embedding_devices: str = ""

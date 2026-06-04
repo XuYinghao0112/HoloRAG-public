@@ -1,4 +1,7 @@
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import replace
+import logging
 import re
 from typing import Dict, List, Optional, Sequence, Tuple
 
@@ -10,12 +13,15 @@ from .embedding_model import NVEmbedV2Encoder
 from .llm_client import LocalLLMClient
 from .utils import cosine_similarity_matrix, lexical_overlap_score, normalize_alpha, normalize_scores, top_k
 
+logger = logging.getLogger(__name__)
+
 
 class Retriever:
     def __init__(self, config: HoloRAGConfig, embedder: NVEmbedV2Encoder, llm_client: LocalLLMClient = None) -> None:
         self.config = config
         self.embedder = embedder
         self.llm_client = llm_client
+        self._device_retrievers: Dict[str, "Retriever"] = {}
 
     def retrieve(
         self,
@@ -28,11 +34,28 @@ class Retriever:
         alpha: Dict[str, float],
     ) -> Dict:
         alpha = normalize_alpha(alpha)
-        entity_scores = self._retrieve_entities(query_entities, state)
-        fact_scores_pre = self._retrieve_facts(query, query_facts, state)
-        fact_scores, rerank_meta = self._rerank_facts(query, fact_scores_pre, state)
-        sentence_scores = self._retrieve_sentences(sub_questions, state)
-        chunk_scores = self._retrieve_chunks(query, state)
+        mode = self._execution_mode()
+        if mode == "sequential":
+            entity_scores = self._retrieve_entities(query_entities, state)
+            fact_scores_pre = self._retrieve_facts(query, query_facts, state)
+            fact_scores, rerank_meta = self._rerank_facts(query, fact_scores_pre, state)
+            sentence_scores = self._retrieve_sentences(sub_questions, state)
+            chunk_scores = self._retrieve_chunks(query, state)
+            candidate_meta = {"execution_mode": "sequential", "num_workers": 1}
+        else:
+            candidates = self.retrieve_candidates_multi_worker(
+                query=query,
+                query_entities=query_entities,
+                query_facts=query_facts,
+                sub_questions=sub_questions,
+                state=state,
+            )
+            entity_scores = candidates["entity"]
+            fact_scores_pre = candidates["fact_pre"]
+            fact_scores, rerank_meta = self._rerank_facts(query, fact_scores_pre, state)
+            sentence_scores = candidates["sentence"]
+            chunk_scores = candidates["chunk"]
+            candidate_meta = candidates.get("meta", {})
 
         seed_scores: Dict[str, float] = defaultdict(float)
         # v1 reset distribution: reranked fact endpoints plus a light dense-passage prior.
@@ -76,9 +99,155 @@ class Retriever:
                 "chunk": chunk_scores,
             },
             "ranked_facts": self._rank_facts(fact_scores, state),
-            "rerank_meta": rerank_meta,
+            "rerank_meta": {
+                **rerank_meta,
+                "candidate_retrieval": candidate_meta,
+            },
             "fallback_used": fallback_used,
         }
+
+    def retrieve_candidates(
+        self,
+        query: str,
+        query_entities: Sequence[str],
+        query_facts: Sequence[Dict],
+        sub_questions: Sequence[str],
+        state: Dict,
+    ) -> Dict:
+        mode = self._execution_mode()
+        if mode == "multi_worker":
+            return self.retrieve_candidates_multi_worker(query, query_entities, query_facts, sub_questions, state)
+        return self.retrieve_candidates_sequential(query, query_entities, query_facts, sub_questions, state)
+
+    def _execution_mode(self) -> str:
+        mode = str(getattr(self.config, "execution_mode", "sequential") or "sequential").strip().lower()
+        if mode not in {"sequential", "multi_worker"}:
+            raise ValueError(f"Unsupported HoloRAG execution_mode={mode!r}; expected 'sequential' or 'multi_worker'.")
+        return mode
+
+    def retrieve_candidates_sequential(
+        self,
+        query: str,
+        query_entities: Sequence[str],
+        query_facts: Sequence[Dict],
+        sub_questions: Sequence[str],
+        state: Dict,
+    ) -> Dict:
+        return {
+            "entity": self._retrieve_entities(query_entities, state),
+            "fact_pre": self._retrieve_facts(query, query_facts, state),
+            "sentence": self._retrieve_sentences(sub_questions, state),
+            "chunk": self._retrieve_chunks(query, state),
+            "meta": {"execution_mode": "sequential", "num_workers": 1},
+        }
+
+    def retrieve_candidates_multi_worker(
+        self,
+        query: str,
+        query_entities: Sequence[str],
+        query_facts: Sequence[Dict],
+        sub_questions: Sequence[str],
+        state: Dict,
+    ) -> Dict:
+        tasks = [
+            ("fact_entity", (query, query_entities, query_facts, state)),
+            ("sentence", (sub_questions, state)),
+            ("chunk", (query, state)),
+        ]
+        task_specs = [
+            (name, self._multi_worker_task_fn(name, index), args)
+            for index, (name, args) in enumerate(tasks)
+        ]
+        max_workers = max(1, int(getattr(self.config, "num_workers", 3) or 3))
+        max_workers = min(max_workers, len(task_specs))
+        results: Dict[str, Dict[str, float]] = {}
+        with ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="holorag-retrieval") as executor:
+            future_to_name = {
+                executor.submit(fn, *args): name
+                for name, fn, args in task_specs
+            }
+            for future in as_completed(future_to_name):
+                name = future_to_name[future]
+                try:
+                    result = future.result()
+                    if name == "fact_entity":
+                        entity_scores, fact_scores = result
+                        results["entity"] = entity_scores
+                        results["fact_pre"] = fact_scores
+                    else:
+                        results[name] = result
+                except Exception as exc:
+                    raise RuntimeError(f"HoloRAG multi_worker retrieval branch failed: {name}") from exc
+
+        return {
+            "entity": results.get("entity", {}),
+            "fact_pre": results.get("fact_pre", {}),
+            "sentence": results.get("sentence", {}),
+            "chunk": results.get("chunk", {}),
+            "meta": {
+                "execution_mode": "multi_worker",
+                "num_workers": max_workers,
+                "embedding_devices": self._multi_worker_task_devices(),
+            },
+        }
+
+    def _multi_worker_task_fn(self, task_name: str, task_index: int):
+        retriever = self._retriever_for_multi_worker_task(task_index)
+        if task_name == "fact_entity":
+            return retriever._retrieve_fact_entity_candidates
+        if task_name == "sentence":
+            return retriever._retrieve_sentences
+        if task_name == "chunk":
+            return retriever._retrieve_chunks
+        raise ValueError(f"Unknown multi_worker retrieval task: {task_name}")
+
+    def _multi_worker_task_devices(self) -> Dict[str, str]:
+        task_names = ["fact_entity", "sentence", "chunk"]
+        devices = self._configured_multi_worker_devices()
+        if not devices:
+            current = getattr(self.embedder, "embedding_device", str(getattr(self.config, "embedding_device", "")))
+            return {name: current for name in task_names}
+        return {name: devices[index % len(devices)] for index, name in enumerate(task_names)}
+
+    def _retriever_for_multi_worker_task(self, task_index: int) -> "Retriever":
+        devices = self._configured_multi_worker_devices()
+        if not devices:
+            return self
+        return self._retriever_for_device(devices[task_index % len(devices)])
+
+    def _configured_multi_worker_devices(self) -> List[str]:
+        raw = str(getattr(self.config, "multi_worker_embedding_devices", "") or "").strip()
+        if not raw:
+            return []
+        devices = [item.strip() for item in raw.split(",") if item.strip()]
+        return devices
+
+    def _retriever_for_device(self, raw_device: str) -> "Retriever":
+        normalized = self.embedder._normalize_device(raw_device)
+        current = getattr(self.embedder, "embedding_device", "")
+        if normalized == current:
+            return self
+        if normalized not in self._device_retrievers:
+            branch_config = replace(
+                self.config,
+                embedding_device=normalized,
+                multi_worker_embedding_devices="",
+            )
+            logger.info("Loading multi_worker retrieval encoder on %s", normalized)
+            branch_embedder = NVEmbedV2Encoder(branch_config)
+            self._device_retrievers[normalized] = Retriever(branch_config, branch_embedder, self.llm_client)
+        return self._device_retrievers[normalized]
+
+    def _retrieve_fact_entity_candidates(
+        self,
+        query: str,
+        query_entities: Sequence[str],
+        query_facts: Sequence[Dict],
+        state: Dict,
+    ) -> Tuple[Dict[str, float], Dict[str, float]]:
+        entity_scores = self._retrieve_entities(query_entities, state)
+        fact_scores = self._retrieve_facts(query, query_facts, state)
+        return entity_scores, fact_scores
 
     def rank_passages(
         self,
