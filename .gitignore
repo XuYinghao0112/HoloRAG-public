@@ -1,14 +1,10 @@
-# Python bytecode and caches
+# Byte-compiled files and Python caches
 __pycache__/
 *.py[cod]
 *$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
+*.so
 
-# Virtual environments and local environment files
+# Virtual environments and local environment variables
 .venv/
 venv/
 env/
@@ -20,23 +16,60 @@ ENV/
 build/
 dist/
 *.egg-info/
+*.egg
+pip-wheel-metadata/
 
-# Experiment caches, logs, and generated indexes
-outputs/*/shared_indexes*/
-outputs/logs/
+# Test, lint, and coverage caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and runtime files
 logs/
+*.log
 *.out
 *.err
+nohup.out
+
+# Generated experiment outputs
+outputs/
+results/
+figures/experiments/
+
+# Generated indexes and retrieval caches
 *.pkl
 *.pickle
 *.faiss
 *.index
+*.sqlite
+*.db
 
-# Notebook and editor noise
-.ipynb_checkpoints/
+# Model checkpoints and large model artifacts
+models/
+checkpoints/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Large raw datasets; keep small canonical JSON files tracked
+dataset/hotpotqa_full/
+*.parquet
+*.arrow
+
+# Editor and OS files
 .vscode/
 .idea/
-
-# OS files
 .DS_Store
 Thumbs.db
