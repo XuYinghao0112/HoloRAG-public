@@ -609,8 +609,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--prepare_only", action="store_true", help="Only resolve samples, corpus, and scales; do not load models, index, or query.")
 
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
-    parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-72B-Instruct")
-    parser.add_argument("--embedding_name", type=str, default="/data/xyh/models/NV-Embed-v2")
+    parser.add_argument("--llm_name", type=str, default="Qwen2.5-72B-Instruct")
+    parser.add_argument("--embedding_name", type=str, default="nvidia/NV-Embed-v2")
     parser.add_argument("--embedding_device", type=str, default="cuda:0")
     parser.add_argument("--embedding_batch_size", type=int, default=8)
     parser.add_argument("--embedding_max_seq_len", type=int, default=2048)

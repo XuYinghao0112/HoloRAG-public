@@ -5,7 +5,7 @@ from typing import Dict
 @dataclass
 class HoloRAGConfig:
     llm_base_url: str = "http://127.0.0.1:8000/v1"
-    llm_model_name: str = "/data/xyh/models/Qwen2.5-72B-Instruct"
+    llm_model_name: str = "Qwen2.5-72B-Instruct"
     embedding_model_name: str = "nvidia/NV-Embed-v2"
     save_dir: str = "outputs/holorag"
     embedding_device: str = "cuda:1"

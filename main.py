@@ -168,7 +168,7 @@ def main() -> None:
     parser.add_argument("--query_text", type=str, default=None)
     parser.add_argument("--output_dir", type=str, default="outputs/holorag_demo")
     parser.add_argument("--llm_base_url", type=str, default="http://127.0.0.1:8000/v1")
-    parser.add_argument("--llm_name", type=str, default="/data/xyh/models/Qwen2.5-72B-Instruct")
+    parser.add_argument("--llm_name", type=str, default="Qwen2.5-72B-Instruct")
     parser.add_argument("--embedding_name", type=str, default="nvidia/NV-Embed-v2")
     parser.add_argument("--embedding_device", type=str, default="gpu1")
     parser.add_argument("--embedding_batch_size", type=int, default=8)

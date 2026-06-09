@@ -6,7 +6,7 @@
 
 **A query-aligned RAG framework that reasons over entities, sentences, and chunks instead of relying on one fixed retrieval granularity.**
 
-[![Paper](https://img.shields.io/badge/Paper-HoloRAG-red)](figures/HoloRAG.pdf)
+![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-red)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![RAG](https://img.shields.io/badge/Task-RAG%20%7C%20QA-green)
 ![Graph](https://img.shields.io/badge/Method-Multi--granularity%20Graph-purple)
@@ -61,7 +61,7 @@ For each query, HoloRAG routes retrieval toward the most suitable granularity an
 ## 🚀 Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/XuYinghao0112/HoloRAG.git
 cd HoloRAG
 python -m venv .venv
 source .venv/bin/activate
@@ -165,7 +165,7 @@ HoloRAG/
 
 ## 📄 Paper
 
-The paper draft is available at [figures/HoloRAG.pdf](figures/HoloRAG.pdf).
+The paper draft will be released soon.
 
 ## 📝 License
 
