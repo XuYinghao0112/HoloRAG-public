@@ -1,0 +1,32 @@
+{
+  "gpu0_gpu3_gpu4_limit200_workers3": {
+    "metrics": [
+      {
+        "execution_mode": "sequential",
+        "num_queries": 200,
+        "F1": 0.5124190221543165,
+        "EM": 0.405,
+        "retrieval_latency": 1.8219574258977083,
+        "qa_latency": 0.9152785436506383,
+        "total_latency": 9.750417986745015,
+        "avg_retrieval_latency": 1.8219574258977083,
+        "avg_total_latency": 9.750417986745015,
+        "final_evidence_tokens": 679.89,
+        "final_evidence_tokenizer": "hf_tokenizer"
+      },
+      {
+        "execution_mode": "multi_worker",
+        "num_queries": 200,
+        "F1": 0.5124190221543165,
+        "EM": 0.405,
+        "retrieval_latency": 1.898410508299712,
+        "qa_latency": 0.9187004319601693,
+        "total_latency": 2.930998365812702,
+        "avg_retrieval_latency": 1.898410508299712,
+        "avg_total_latency": 2.930998365812702,
+        "final_evidence_tokens": 679.89,
+        "final_evidence_tokenizer": "hf_tokenizer"
+      }
+    ]
+  }
+}
