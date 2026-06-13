@@ -39,7 +39,9 @@ alpha = {entity, sentence, chunk}
 Fixed-granularity retrieval can return evidence that is relevant but poorly aligned with the question's semantic scope.
 
 <p align="center">
-  <img src="figures/granularity_mismatch.JPG" alt="Granularity mismatch" width="85%">
+  <a href="figures/granularity_mismatch.pdf">
+    <img src="figures/granularity_mismatch.png" alt="Granularity mismatch" width="85%">
+  </a>
 </p>
 
 ### Multi-granularity Graph Construction
@@ -47,7 +49,9 @@ Fixed-granularity retrieval can return evidence that is relevant but poorly alig
 HoloRAG organizes entities, sentences, chunks, and their cross-granularity connections into a unified graph.
 
 <p align="center">
-  <img src="figures/graph_construction.JPG" alt="Graph construction" width="85%">
+  <a href="figures/graph_construction.pdf">
+    <img src="figures/graph_construction.png" alt="Graph construction" width="85%">
+  </a>
 </p>
 
 ### Question-aware Reasoning
@@ -55,8 +59,12 @@ HoloRAG organizes entities, sentences, chunks, and their cross-granularity conne
 For each query, HoloRAG routes retrieval toward the most suitable granularity and composes compact evidence for answer generation.
 
 <p align="center">
-  <img src="figures/question_reasoning.JPG" alt="Question reasoning" width="85%">
+  <a href="figures/question_reasoning.pdf">
+    <img src="figures/question_reasoning.png" alt="Question reasoning" width="85%">
+  </a>
 </p>
+
+Click any figure to open the high-resolution PDF version.
 
 ## 🚀 Installation
 
